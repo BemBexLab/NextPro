@@ -1,0 +1,33 @@
+export const partnersData = [
+    {
+        id:1,
+        link:"",
+        src:"/images/shapes/comy-logo2-1.png",
+    },
+    {
+        id:2,
+        link:"",
+        src:"/images/shapes/comy-logo2-2.png",
+    },
+    {
+        id:3,
+        link:"",
+        src:"/images/shapes/comy-logo2-3.png",
+    },
+    {
+        id:4,
+        link:"",
+        src:"/images/shapes/comy-logo2-4.png",
+    },
+    {
+        id:5,
+        link:"",
+        src:"/images/shapes/comy-logo2-1.png",
+    },
+    {
+        id:6,
+        link:"",
+        src:"/images/shapes/comy-logo2-2.png",
+    },
+
+]

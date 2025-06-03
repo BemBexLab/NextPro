@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  :root {
+    --background: #fff;
+    --foreground: #5C6671;
+
+    --primary: #2E4DFE;
+    --primary-foreground: #2E4DFE;
+
+    --secondary: #6495ED;
+    --secondary-foreground: #fff;
+
+    --muted: #001F3F;
+    --muted-foreground: #001F3F;
+
+    --accent: #E2E7FF;
+    /* --accent-foreground: 0 0% 9%; */
+
+    --destructive: #F2F4FB;
+    /* --destructive-foreground: 0 0% 98%; */
+
+    --green: #32A552;
+    /* --green-foreground:"" */
+
+    --purple: #A22EFE;
+    /* --purple-foreground:"" */
+
+    --red: #FE2E2E;
+    /* --red-foreground:"" */
+    --background-linear: linear-gradient(180deg, #fff 0%, rgba(226, 231, 255, 0.3) 100%);
+    --gray: rgba(46, 77, 254, 0.05);
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 20px;
+  }
+
+  .dark {
+    --background: #191F25;
+    --foreground: #717A83;
+
+    --primary: #2E4DFE;
+    --primary-foreground: #2E4DFE;
+
+    --secondary: #6495ED;
+    --secondary-foreground: #000;
+
+    --muted: #E2E7FF;
+    --muted-foreground: rgb(202, 212, 225);
+
+    --accent: #202932;
+
+    --destructive: #F2F4FB;
+
+    --green: #32A552;
+
+    --purple: #A22EFE;
+
+    --red: #FE2E2E;
+    
+    --background-linear: linear-gradient(180deg, rgba(25, 31, 37, 1) 0%, rgba(32, 41, 50, 0.3) 100%);
+    --gray: #202932;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--plus-jakarta-sans);
+    font-size: 18px;
+    line-height: 160%;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .linear-text {
+    background: linear-gradient(rgba(46, 77, 254, 0.1) 0%, rgba(28, 46, 152, 0.01) 100%) text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hover-underline::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -4px;
+    width: 0px;
+    transition: all 0.3s;
+    height: 2px;
+    background-color: var(--primary);
+  }
+
+  .hover-underline:hover::after {
+    width: 100%;
+  }
+
+  .multiline-hover {
+    background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95% / 0px 1px no-repeat;
+    transition: all 500ms ease;
+  }
+
+  .multiline-hover:hover {
+    background-size: 100% 1px;
+  }
+
+  .landing-bg {
+    background-image: linear-gradient(to right bottom, rgba(46, 77, 254, .05), rgba(46, 77, 254, .05)), url('/images/demos/hero-landing-bg.png'), url('/images/demos/hero-landing-bg2.png');
+    background-blend-mode: multiply;
+
+  }
+}
+
+
+/* ----- style for counter ---- */
+.index-module_slot__DpPgW {
+  margin-bottom: 9px;
+}
+
+.rating-platform .index-module_slot__DpPgW {
+  margin-bottom: 0px;
+}
+
+/* ----- style for counter ----- */
+
+/* ----- testimonial two slider ---- */
+.slick-current .slider__img {
+  animation-name: transform2;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+.slider__img {
+  animation-name: transform;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes transform {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-400px);
+  }
+}
+
+@keyframes transform2 {
+  0% {
+    transform: translateY(-0px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ----- testimonial two slider ---- */
+
+/* ----- testimonnial three scroll start ----- */
+[data-dir="top"] {
+  --animation-dir: forwards;
+}
+
+[data-speed="fast"] {
+  --animation-duration: 75s;
+}
+
+.scroll-area {
+  transition: all .5s ease-in;
+  animation: scrollTop var(--animation-duration) var(--animation-dir) linear infinite;
+
+}
+
+.scroll-area:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollTop {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* ----- testimonnial three scroll end ----- */
+
+/* ----- landing page animation  */
+.fadeinRight-animated {
+  visibility: visible;
+  animation-delay: 0ms;
+  animation-duration: 2s;
+  animation-name: fadeInRight;
+}
+
+.fadeinUp-animated{
+  visibility: visible;
+  animation-delay: 0ms;
+  animation-duration: 2s;
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(20%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d( 0, 20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 340px) {
+  .container {
+    max-width: 100%
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1680px;
+  }
+}

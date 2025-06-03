@@ -1,0 +1,1 @@
+lg:pt-[303px] pt-40 lg:pb-[213px] pb-32
