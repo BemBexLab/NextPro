@@ -33,7 +33,7 @@ const HeroTwo = () => {
                     </div>
                 </div>
                 <div className='lg:mt-25 mt-16 rounded-[30px] relative'>
-                    <Image src={'images/banner/hero2-1.jpg'} width={1320} height={604} alt='background image' className='mx-auto lg:rounded-[30px] rounded-2xl min-h-[400px] w-auto object-cover' />
+                    <Image src={'/images/banner/hero2-1.jpg'} width={1320} height={604} alt='background image' className='mx-auto lg:rounded-[30px] rounded-2xl min-h-[400px] w-auto object-cover' />
                     <PlayIcon playOne={true}/>
                 </div>
 

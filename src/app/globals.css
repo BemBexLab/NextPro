@@ -11,10 +11,10 @@ html {
     --background: #fff;
     --foreground: #5C6671;
 
-    --primary: #2E4DFE;
-    --primary-foreground: #2E4DFE;
+    --primary: #072d7f;
+    --primary-foreground: #072d7f;
 
-    --secondary: #6495ED;
+    --secondary: #bf0b30;
     --secondary-foreground: #fff;
 
     --muted: #001F3F;
@@ -48,10 +48,10 @@ html {
     --background: #191F25;
     --foreground: #717A83;
 
-    --primary: #2E4DFE;
-    --primary-foreground: #2E4DFE;
+    --primary: #072d7f;
+    --primary-foreground: #072d7f;
 
-    --secondary: #6495ED;
+    --secondary: #bf0b30;
     --secondary-foreground: #000;
 
     --muted: #E2E7FF;
