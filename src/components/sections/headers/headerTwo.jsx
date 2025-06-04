@@ -1,22 +1,28 @@
 "use client"
 import React from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation';
-import { IoIosArrowDown } from 'react-icons/io'
+import { usePathname } from 'next/navigation'
 
 import Logo from '@/components/ui/logo'
 import { Button } from '@/components/ui/button'
-import { menuList } from '@/lib/fackData/menuList'
-import MegaMenu from './megaMenu'
-import DropDownMenu from './dropDownMenu'
+// REMOVE this line: import { menuList } from '@/lib/fackData/menuList'
 import MobileMenu from './mobileMenu'
 import HeaderShortInfo from './headerShortInfo'
 import { Offcanvas, OffcanvasContent, OffcanvasOverlay, OffcanvasTrigger, OffcanvasClose } from '@/components/ui/offcanvas';
 import StickyHeader from '@/components/ui/stickyHeader';
 import TopHeader from './topHeader';
 
+// Define your flat navigation here
+const navigationLinks = [
+    { id: 1, path: "/", lable: "Home" },
+    { id: 2, path: "/about-us", lable: "About Us" },
+    { id: 3, path: "/services", lable: "Services" },
+    { id: 4, path: "/portfolio", lable: "Portfolio" },
+    { id: 5, path: "/career", lable: "Career" },
+    { id: 6, path: "/packages", lable: "Packages" },
+];
+
 const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
-    // haveOvcanvsIcon and haveShadow true prosp come from home page two
     const pathName = usePathname()
     return (
         <StickyHeader>
@@ -32,34 +38,24 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                                 <div className='py-5'>
                                     <Logo />
                                 </div>
-
                                 <nav className='xl:block hidden'>
                                     <ul className='flex items-center 2xl:gap-12.5 gap-7'>
-                                        {
-                                            menuList.map(({ id, lable, path, dropDown, megaMenu }) => {
-                                                return (
-                                                    <li className='pt-[43px] pb-[42px] group' key={id}>
-                                                        <Link href={path} className='font-semibold leading-[22px] flex items-center gap-1 text-muted-foreground relative transition-all duration-500 group-hover:text-primary-foreground'>
-                                                            {lable}
-                                                            <span className='group-hover:rotate-180 group-hover:text-primary-foreground transition-all duration-500 '><IoIosArrowDown /></span>
-                                                        </Link>
-                                                        {
-                                                            megaMenu.length && <MegaMenu data={megaMenu} />
-                                                        }
-                                                        {
-                                                            dropDown.length && <DropDownMenu data={dropDown} />
-                                                        }
-                                                    </li>
-                                                )
-                                            })
-                                        }
+                                        {navigationLinks.map(({ id, lable, path }) => (
+                                            <li className='pt-[43px] pb-[42px]' key={id}>
+                                                <Link
+                                                    href={path}
+                                                    className='font-semibold leading-[22px] flex items-center gap-1 text-muted-foreground relative transition-all duration-500 hover:text-primary-foreground'
+                                                >
+                                                    {lable}
+                                                </Link>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </nav>
                                 <div className='hidden xl:flex items-center gap-5'>
                                     <Button asChild size="xl">
                                         <Link href={"/contact-us"}>  Let’s Talk </Link>
                                     </Button>
-
                                     <Offcanvas>
                                         <OffcanvasTrigger>
                                             <div className={`${haveOvcanvsIcon ? "flex flex-col gap-3 cursor-pointer" : "hidden"}`}>
@@ -74,7 +70,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                                         </OffcanvasContent>
                                     </Offcanvas>
                                 </div>
-                                <MobileMenu data={menuList} />
+                                <MobileMenu data={navigationLinks} /> {/* Pass new links to mobile too */}
                             </div>
                         </div>
                     </div>

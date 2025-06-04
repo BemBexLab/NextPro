@@ -7,7 +7,7 @@ const Logo = () => {
         <div className='w-auto h-auto'>
             <Link href={"/"} className='relative'>
                 <Image src={"/images/logo-light.png"} width={500} height={200} unoptimized="true" alt='logo-white' className={`w-full h-full dark:block hidden`} />
-                <Image src={"/images/logo-next.png"} width={500} height={200} unoptimized="true" alt='logo-original' className='w-full h-full block dark:hidden' />
+                <Image src={"/images/image (1).png"} width={500} height={200} unoptimized="true" alt='logo-original' className='w-full h-full block dark:hidden' />
             </Link>
         </div>
     )
