@@ -1,72 +1,132 @@
 "use client"
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image';
-import { Button } from '@/components/ui/button'
-import Title from '@/components/ui/title'
-import useMoveMentAnimation from '@/hooks/useMoveMentAnimation';
-import PlayIcon from '@/components/ui/playIcon';
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { ArrowRight, Play, CheckCircle, Code, Database, Smartphone, Monitor, Cloud, Layers, PlayIcon } from "lucide-react"
 
-const HeroFour = () => {
-    const [mousPositionX, mousPositionY] = useMoveMentAnimation()
-
-    return (
-        <section className='container pb-15'>
-            <div className='bg-[rgba(226,231,255,0.4)] dark:bg-[#1c232a] rounded-[30px] lg:pl-[52px] lg:pr-0 pl-4 pr-4 border-2 border-[rgba(0,31,63,0.05)] overflow-y-hidden overflow-x-hidden'>
-                <div className='grid lg:grid-cols-2 grid-cols-1'>
-                    {/* ----- left side start */}
-                    <div className='lg:pt-[132px] lg:pb-[120px] pt-12 pb-12'>
-                        <Title size={'7.5xl'} className={"max-w-[754px]"}>Transforming Visions into Digital Excellence</Title>
-                        <p className='font-semibold max-w-[689px] pt-7.5'>Choose RankFlow as your digital marketing agency and propel ur business to new heights with our award-winning digital marketing services.</p>
-                        <div className='flex sm:flex-row flex-col sm:items-center gap-[32px] pt-[55px] pb-[22px]'>
-                            <Button asChild>
-                                <Link href="/pricing"> Start Free Trial </Link>
-                            </Button>
-                            <div className='flex items-center gap-2'>
-                                <PlayIcon playOne={false} />
-                                <p className='font-semibold'>How It works?</p>
-                            </div>
-                        </div>
-                        <span className='inline-block h-[1px] w-full max-w-[491px] bg-[#C0C0C0]'></span>
-                        <ul className='pt-4 flex sm:flex-row flex-col sm:items-center gap-8'>
-                            <li className='flex items-center gap-2'> <Image src="/images/shapes/check-icon-blue.svg" width={"20"} height={"20"} alt='check icon' /> <span className='text-sm'>7 Days Free trial</span> </li>
-                            <li className='flex items-center gap-2'> <Image src="/images/shapes/check-icon-blue.svg" width={"20"} height={"20"} alt='check icon' /> <span className='text-sm'>Credit card required</span> </li>
-                            <li className='flex items-center gap-2'> <Image src="/images/shapes/check-icon-blue.svg" width={"20"} height={"20"} alt='check icon' /> <span className='text-sm'>Cancel anytime</span> </li>
-                        </ul>
-                    </div>
-                    {/* ----- left side end */}
-
-                    <div className='relative '>
-                        <div className='absolute -top-[21px] -left-[21px] xl:inline-block hidden' style={{ transform: `translate(-${mousPositionX}px, -${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-1.png"} width={330} height={194} alt='mobius-strip-1' />
-                        </div>
-                        <div className='relative lg:absolute xl:top-[62px] lg:top-[30%] xl:right-[136px] lg:right-14 lg:z-[2]' style={{ transform: `translate(-${mousPositionX}px, -${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-4.png"} width={600} height={600} alt='mobius-strip-4' style={{ width: "100%" }} className='max-h-[420px] lg:max-h-full object-cover' />
-                        </div>
-                        <div className='absolute top-0 md:right-5 right-0 z-[1] sm:max-w-full max-w-[190px]' style={{ transform: `translate(${mousPositionX}px, ${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-3.png"} width={288} height={267} alt='mobius-strip-3' style={{ width: "100%" }} />
-                        </div>
-                        <div className='absolute md:bottom-[138px] bottom-12 md:-left-2 left-0 z-[3] sm:max-w-full max-w-[190px]' style={{ transform: `translate(${mousPositionX}px, ${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-2.png"} width={300} height={300} alt='mobius-strip-2 ' style={{ width: "100%" }} />
-                        </div>
-                        <div className='absolute bottom-0 left-0 lg:block hidden' >
-                            <Image src={"/images/shapes/mobius-strip4-5.png"} width={434} height={188} alt='mobius-strip-5' />
-                        </div>
-                        <div className='absolute -bottom-[6px] right-[70px] blur-[7px]' style={{ transform: `translate(-${mousPositionX}px, -${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-6.png"} width={382} height={164} alt='mobius-strip-6' />
-                        </div>
-                        <div className='absolute lg:bottom-[210px] bottom-25 xl:right-[94px] right-0 z-[7] md:block hidden' style={{ transform: `translate(${mousPositionX}px, ${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-7.png"} width={160} height={160} alt='mobius-strip-7' />
-                        </div>
-                        <div className='absolute bottom-0 right-0 xl:inline-block hidden' style={{ transform: `translate(${mousPositionX}px, ${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-8.png"} width={276} height={246} alt='mobius-strip-8' />
-                        </div>
-                    </div>
-
-                </div>
+const SoftwareAgencyHero = () => {
+  return (
+    <section className="container py-20">
+      <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 rounded-3xl px-8 lg:px-16 py-16 border border-blue-100 dark:border-gray-700 overflow-hidden relative">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 items-center relative z-10">
+          {/* Left side content */}
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
+                Transforming
+                <span className="text-blue-600 block">Ideas into</span>
+                <span className="text-indigo-600">Software Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed">
+                We build custom web applications, mobile apps, and enterprise software that solve real business problems
+                and drive growth for companies worldwide.
+              </p>
             </div>
-        </section>
-    )
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+              <Button
+                size="lg"
+                className="group bg-blue-600  text-blue-100 group-hover:bg-blue-100 group-hover:text-blue-600 px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <Link href="/contact" className="flex items-center gap-2">
+                  Start Your Project
+                  <ArrowRight className="w-5 h-5 text-blue-100 transition-colors duration-300 group-hover:text-blue-600" />
+                </Link>
+              </Button>
+
+              <Button
+                variant="outline"
+                size="lg"
+                className="group border-2 border-gray-300 hover:border-blue-500 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                    {/* The icon color will change when the button (group) is hovered */}
+                    <Play className="w-5 h-5 text-blue-600 group-hover:text-white transition-colors duration-300 ml-1" />
+                  </div>
+                  <span>View Our Work</span>
+                </div>
+              </Button>
+
+            </div>
+
+            {/* Trust indicators */}
+            <div className="pt-8 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex flex-col sm:flex-row gap-6 text-sm text-gray-600 dark:text-gray-400">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span>Free Consultation</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span>Agile Development</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span>24/7 Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - MUCH LARGER geometric shapes with individual hover effects */}
+          <div className="relative h-96 lg:h-[600px]">
+            {/* Main 3D cube with Code icon - Individual hover effect */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 group cursor-pointer">
+              <div className="relative">
+                {/* Cube faces */}
+                <div className="w-64 h-64 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl shadow-2xl transform rotate-12 transition-all duration-500 flex items-center justify-center group-hover:rotate-6 group-hover:scale-110 group-hover:shadow-3xl">
+                  <Code className="w-28 h-28 text-white transition-all duration-500 group-hover:scale-110" />
+                </div>
+                {/* Cube shadow/depth */}
+                <div className="absolute top-4 left-4 w-64 h-64 bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl -z-10 transform rotate-12 transition-all duration-500 group-hover:top-6 group-hover:left-6"></div>
+              </div>
+            </div>
+
+            {/* Smartphone Circle - Individual hover effect */}
+            <div className="absolute top-0 right-0 group cursor-pointer">
+              <div className="w-48 h-48 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full shadow-lg flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:translate-x-2">
+                <Smartphone className="w-20 h-20 text-white transition-all duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+
+            {/* Database Square - Individual hover effect */}
+            <div className="absolute bottom-0 left-0 group cursor-pointer">
+              <div className="w-44 h-44 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-lg transform rotate-45 flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-2xl group-hover:rotate-[50deg] group-hover:translate-x-2 group-hover:-translate-y-2">
+                <Database className="w-20 h-20 text-white transform -rotate-45 transition-all duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+
+            {/* Monitor Rectangle - Individual hover effect */}
+            <div className="absolute top-0 left-0 group cursor-pointer">
+              <div className="w-40 h-40 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl shadow-lg flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-2xl group-hover:translate-x-2 group-hover:translate-y-2">
+                <Monitor className="w-16 h-16 text-white transition-all duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+
+            {/* Cloud Rectangle - Individual hover effect */}
+            <div className="absolute bottom-0 right-0 group cursor-pointer">
+              <div className="w-52 h-52 bg-gradient-to-br from-pink-400 to-rose-500 rounded-3xl shadow-lg transform -rotate-12 flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-2xl group-hover:-rotate-6 group-hover:-translate-x-2 group-hover:-translate-y-2">
+                <Cloud className="w-24 h-24 text-white transition-all duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+
+            {/* Layers Rectangle - Individual hover effect */}
+            <div className="absolute top-1/2 right-0 group cursor-pointer">
+              <div className="w-36 h-36 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl shadow-lg flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-2xl group-hover:-translate-x-2">
+                <Layers className="w-16 h-16 text-white transition-all duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+
+            {/* Connecting lines/dots - Static */}
+            <div className="absolute top-1/3 left-1/3 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
+            <div className="absolute bottom-1/3 right-1/3 w-4 h-4 bg-indigo-400 rounded-full animate-pulse animation-delay-1000"></div>
+            <div className="absolute top-2/3 right-1/4 w-4 h-4 bg-purple-400 rounded-full animate-pulse animation-delay-2000"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
 
-export default HeroFour
+export default SoftwareAgencyHero
