@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  output: "export",
+  // output: "standalone",
   trailingSlash: true,
   images: {
-    unoptimized: true, // <--- this disables image optimization for static export
+    domains: ['localhost', 'olive-peafowl-546702.hostingersite.com'],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 

@@ -19,7 +19,6 @@ const navigationLinks = [
     { id: 3, path: "/services", lable: "Services" },
     { id: 4, path: "/portfolio", lable: "Portfolio" },
     { id: 5, path: "/career", lable: "Career" },
-    { id: 6, path: "/packages", lable: "Packages" },
 ];
 
 const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {

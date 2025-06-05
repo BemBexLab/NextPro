@@ -12,9 +12,9 @@ html {
     --foreground: #5C6671;
 
     --primary: #072d7f;
-    --primary-foreground: #072d7f;
-
     --secondary: #bf0b30;
+
+    --primary-foreground: #072d7f;
     --secondary-foreground: #fff;
 
     --muted: #001F3F;
@@ -48,10 +48,11 @@ html {
     --background: #191F25;
     --foreground: #717A83;
 
-    --primary: #072d7f;
-    --primary-foreground: #072d7f;
+    --primary: #a8c0ff;   /* Soft Light Blue for contrast on dark bg */
+    --secondary: #ff6b81; /* Warm Light Red/Pinkish tone for contrast */
 
-    --secondary: #bf0b30;
+    
+    --primary-foreground: #072d7f;
     --secondary-foreground: #000;
 
     --muted: #E2E7FF;
