@@ -6,6 +6,7 @@ import CountryProvider from "@/contextApi/countryProvider";
 import ScrollCircle from "@/components/ui/scrollCircle";
 import FooterFour from "@/components/sections/footers/footerFour";
 import HeaderTwo from "@/components/sections/headers/headerTwo";
+import ContactFormTwo from "@/components/sections/ContactFormTwo";
 const CustomCursor = dynamic(() => import("@/components/ui/customCursor"), {
   ssr: false,
 });
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
           <CountryProvider>
             <HeaderTwo haveOvcanvsIcon={false} haveShadow={false} />
             {children}
+            <ContactFormTwo />
             <FooterFour />
             <Setting />
             <ScrollCircle />

@@ -12,18 +12,18 @@ import Solutions from '@/components/sections/solutions'
 export const metadata = {
     title: "NextPro | Services",
     description: "NextPro is a modern Next.js and Tailwind CSS Template there features General Marketing, Social Media Marketing, AI in Marketing, Paid Advertising, Video Marketing, Analytics and Reporting, Industry news & Trends, E-commerce Marketing",
-  };
+};
 const Services = () => {
     return (
         <main>
-            <PageTitle pageName={"Services"} breadcrumbLink={"Services"}/>
-            <StoryFour/>
-            <ServiceTwo/>
-            <Approach/>
-            <CountDown/>
-            <ProvideOne/>
-            <Solutions/>
-            <PriceThree/>
+            <PageTitle pageName={"Services"} breadcrumbLink={"Services"} />
+            <StoryFour />
+            <ServiceTwo />
+            <Approach />
+            <CountDown />
+            <ProvideOne />
+            <Solutions />
+            <PriceThree />
             <ContactForm color={"text-white"} inputColor={"bg-transparent border-white border text-white placeholder:text-white"} />
         </main>
     )

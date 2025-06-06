@@ -9,7 +9,7 @@ html {
 @layer base {
   :root {
     --background: #fff;
-    --foreground: #5C6671;
+    --foreground: #5c6671;
 
     --primary: #072d7f;
     --secondary: #bf0b30;
@@ -17,24 +17,28 @@ html {
     --primary-foreground: #072d7f;
     --secondary-foreground: #fff;
 
-    --muted: #001F3F;
-    --muted-foreground: #001F3F;
+    --muted: #001f3f;
+    --muted-foreground: #001f3f;
 
-    --accent: #E2E7FF;
+    --accent: #e2e7ff;
     /* --accent-foreground: 0 0% 9%; */
 
-    --destructive: #F2F4FB;
+    --destructive: #f2f4fb;
     /* --destructive-foreground: 0 0% 98%; */
 
-    --green: #32A552;
+    --green: #32a552;
     /* --green-foreground:"" */
 
-    --purple: #A22EFE;
+    --purple: #a22efe;
     /* --purple-foreground:"" */
 
-    --red: #FE2E2E;
+    --red: #fe2e2e;
     /* --red-foreground:"" */
-    --background-linear: linear-gradient(180deg, #fff 0%, rgba(226, 231, 255, 0.3) 100%);
+    --background-linear: linear-gradient(
+      180deg,
+      #fff 0%,
+      rgba(226, 231, 255, 0.3) 100%
+    );
     --gray: rgba(46, 77, 254, 0.05);
 
     --border: 0 0% 89.8%;
@@ -42,38 +46,53 @@ html {
     --ring: 0 0% 3.9%;
 
     --radius: 20px;
+    --text-color: #000000;
   }
 
   .dark {
-    --background: #191F25;
-    --foreground: #717A83;
+    --background: #191f25;
+    --foreground: #717a83;
 
-    --primary: #a8c0ff;   /* Soft Light Blue for contrast on dark bg */
+    --primary: #a8c0ff; /* Soft Light Blue for contrast on dark bg */
     --secondary: #ff6b81; /* Warm Light Red/Pinkish tone for contrast */
 
-    
     --primary-foreground: #072d7f;
     --secondary-foreground: #000;
 
-    --muted: #E2E7FF;
+    --muted: #e2e7ff;
     --muted-foreground: rgb(202, 212, 225);
 
     --accent: #202932;
 
-    --destructive: #F2F4FB;
+    --destructive: #f2f4fb;
 
-    --green: #32A552;
+    --green: #32a552;
 
-    --purple: #A22EFE;
+    --purple: #a22efe;
 
-    --red: #FE2E2E;
-    
-    --background-linear: linear-gradient(180deg, rgba(25, 31, 37, 1) 0%, rgba(32, 41, 50, 0.3) 100%);
+    --red: #fe2e2e;
+
+    --background-linear: linear-gradient(
+      180deg,
+      rgba(25, 31, 37, 1) 0%,
+      rgba(32, 41, 50, 0.3) 100%
+    );
     --gray: #202932;
 
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
+
+    /* Dark mode overrides */
+    --primary: #a8c0ff;
+    --secondary: #ff6b81;
+
+    --background: #0d1117;
+    --text-color: #f0f6fc;
+
+    --heading-color: #a8c0ff;
+    --link-color: #58a6ff;
+    --border-color: #30363d;
   }
 }
 
@@ -85,6 +104,7 @@ html {
   body {
     @apply bg-background text-foreground;
     font-family: var(--plus-jakarta-sans);
+    color: var(--text-color);
     font-size: 18px;
     line-height: 160%;
   }
@@ -101,7 +121,11 @@ html {
   }
 
   .linear-text {
-    background: linear-gradient(rgba(46, 77, 254, 0.1) 0%, rgba(28, 46, 152, 0.01) 100%) text;
+    background: linear-gradient(
+        rgba(46, 77, 254, 0.1) 0%,
+        rgba(28, 46, 152, 0.01) 100%
+      )
+      text;
     -webkit-text-fill-color: transparent;
   }
 
@@ -121,7 +145,8 @@ html {
   }
 
   .multiline-hover {
-    background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95% / 0px 1px no-repeat;
+    background: linear-gradient(to right, currentcolor 0%, currentcolor 100%)
+      0px 95% / 0px 1px no-repeat;
     transition: all 500ms ease;
   }
 
@@ -130,12 +155,16 @@ html {
   }
 
   .landing-bg {
-    background-image: linear-gradient(to right bottom, rgba(46, 77, 254, .05), rgba(46, 77, 254, .05)), url('/images/demos/hero-landing-bg.png'), url('/images/demos/hero-landing-bg2.png');
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(46, 77, 254, 0.05),
+        rgba(46, 77, 254, 0.05)
+      ),
+      url("/images/demos/hero-landing-bg.png"),
+      url("/images/demos/hero-landing-bg2.png");
     background-blend-mode: multiply;
-
   }
 }
-
 
 /* ----- style for counter ---- */
 .index-module_slot__DpPgW {
@@ -195,9 +224,9 @@ html {
 }
 
 .scroll-area {
-  transition: all .5s ease-in;
-  animation: scrollTop var(--animation-duration) var(--animation-dir) linear infinite;
-
+  transition: all 0.5s ease-in;
+  animation: scrollTop var(--animation-duration) var(--animation-dir) linear
+    infinite;
 }
 
 .scroll-area:hover {
@@ -224,7 +253,7 @@ html {
   animation-name: fadeInRight;
 }
 
-.fadeinUp-animated{
+.fadeinUp-animated {
   visibility: visible;
   animation-delay: 0ms;
   animation-duration: 2s;
@@ -245,7 +274,7 @@ html {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translate3d( 0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
   }
 
   100% {
@@ -264,11 +293,9 @@ html {
 
 @media (min-width: 340px) {
   .container {
-    max-width: 100%
+    max-width: 100%;
   }
-
 }
-
 
 @media (min-width: 1200px) {
   .container {

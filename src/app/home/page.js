@@ -29,8 +29,7 @@ const HomeFour = () => {
       <TestimonialThree />
       <div className="mt-[-80px]"></div>
       <SubscribeTwo />
-      <BlogOne />
-      <ContactFormTwo />
+      {/* <BlogOne /> */}
     </main>
   );
 };

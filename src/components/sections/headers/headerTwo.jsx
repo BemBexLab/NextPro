@@ -53,7 +53,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                                 </nav>
                                 <div className='hidden xl:flex items-center gap-5'>
                                     <Button asChild size="xl">
-                                        <Link href={"/contact-us"}>  Let’s Talk </Link>
+                                        <Link className='text-foreground' href={"/contact-us"}>  Let’s Talk </Link>
                                     </Button>
                                     <Offcanvas>
                                         <OffcanvasTrigger>
