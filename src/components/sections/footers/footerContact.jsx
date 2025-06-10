@@ -1,4 +1,5 @@
 import Logo from '@/components/ui/logo'
+import Logo2 from '@/components/ui/logo2'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,7 +13,7 @@ const FooterContact = ({ bgColor, color, white_logo }) => {
                     white_logo ?
                         <Image src={"/images/logo-light2.png"} width={500} height={200} alt='logo-white' className={`w-full h-full`} />
                         :
-                        <Logo />
+                        <Logo2 />
                 }
             </div>
             <div className='flex md:flex-row flex-col justify-between gap-8'>

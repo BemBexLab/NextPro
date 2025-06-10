@@ -21,7 +21,7 @@ const HomeFour = () => {
     <main>
       <HeroFour />
       <ServiceTwo />
-      <StoryOne />
+      {/* <StoryOne /> */}
       <Approach />
       <CountDown />
       <ChooseUs />
