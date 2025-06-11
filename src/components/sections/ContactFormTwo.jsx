@@ -60,7 +60,7 @@ const ContactFormTwo = () => {
                                 </div>
                             </div>
                             <div className='mb-3'>
-                                <Textarea name={"massage"} placeholder={"Massage"} />
+                                <Textarea name={"message"} placeholder={"Message"} />
                             </div>
                             <div className='flex justify-end w-full'>
                                 <Button>Send request</Button>

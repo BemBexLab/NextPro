@@ -12,49 +12,49 @@ export const servicesDataTwo = [
         id: 1,
         icon_1: <Activity height={36} width={35}/>,
         service_name: "Search Engine Optimization",
-        description: "Identify relevant and high-impact keywords for your industry. "
+        description: "Optimize your website using focused, high-value keywords. "
     },
     {
         id: 2,
         icon_1: <Send/>,
         service_name: "Social Media Marketing",
-        description: "Identify relevant and high-impact keywords for your industry. "
+        description: "Develop targeted campaigns to increase brand visibility. "
     },
     {
         id: 3,
         icon_1: <Document/>,
         service_name: "Content Writing",
-        description: "Identify relevant and high-impact keywords for your industry. "
+        description: "Craft compelling, original content tailored to your brand’s audience. "
     },
     {
         id: 4,
         icon_1: <Shield height={36} width={29}/>,
         service_name: "Affiliate Marketing",
-        description: "Identify relevant and high-impact keywords for your industry. "
+        description: "Promote trusted products to earn commissions and grow revenue. "
     },
     {
         id: 5,
         icon_1: <Message/>,
         service_name: "Email Marketing",
-        description: "Identify relevant and high-impact keywords for your industry. "
+        description: "Launch ads to drive traffic and maximize conversions. "
     },
     {
         id: 6,
         icon_1: <Scan/>,
         service_name: "Pay-Per-Click Advertising",
-        description: "Identify relevant and high-impact keywords for your industry. "
+        description: "Launch targeted ads to drive traffic and maximize conversions. "
     },
     {
         id: 7,
         icon_1: <Discount height={35} width={35} />,
         service_name: "Conversion Rate Optimization",
-        description: "Identify relevant and high-impact keywords for your industry. "
+        description: "Test and refine site elements to improve outcomes. "
     },
     {
         id: 8,
         icon_1: <Buy/>,
         service_name: "E-commerce Marketing",
-        description: "Identify relevant and high-impact keywords for your industry. "
+        description: "Boost online sales with targeted strategies for your digital store. "
     },
 
 ]
