@@ -36,13 +36,13 @@ const PriceThree = () => {
           </div>
         </SlideUp>
         <div className="pt-12.5">
-          <div>
+          {/* <div>
             <SwipeButton
               isChecked={isChecked}
               setChecked={setChecked}
               togglePricing={togglePricing}
             />
-          </div>
+          </div> */}
           <div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7.5 pt-12.5">
               {pricingData.map(

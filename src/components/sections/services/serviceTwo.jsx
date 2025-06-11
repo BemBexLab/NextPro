@@ -7,7 +7,7 @@ import { servicesDataTwo } from '@/lib/fackData/servicesDataTwo'
 
 const ServiceTwo = () => {
     return (
-        <section className='lg:pt-[120px] pt-16 lg:pb-15 pb-9'>
+        <section className='lg:pt-[80px] pt-16 lg:pb-15 pb-9'>
             <div className='max-w-[1350px] mx-auto px-[15px]'>
                 <SlideUp>
                     <div className='flex flex-col items-center'>

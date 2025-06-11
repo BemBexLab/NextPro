@@ -33,7 +33,7 @@ const PriceTwo = () => {
                     </div>
                 </SlideUp>
                 <div className='pt-[54px]'>
-                    <div>
+                    {/* <div>
                         <SlideUp>
                             <div className='flex items-center justify-center md:gap-7.5 gap-4'>
                                 <span className={`font-semibold text-xl lg:text-1xl ${isChecked ? "" : "text-muted-foreground"}`}>Billed Monthly</span>
@@ -42,7 +42,7 @@ const PriceTwo = () => {
                             </div>
                             <p className='text-center pt-7.5 text-sm'> <span className='text-red font-bold'>Save 30%</span> {" "} on Yearly Plan</p>
                         </SlideUp>
-                    </div>
+                    </div> */}
                     <div>
                         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7.5 pt-12.5'>
                             {pricingData.map(({ additionalAdds, id, info, isTag, link, plan_name, price, services }) =>

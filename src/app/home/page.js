@@ -9,6 +9,8 @@ import TestimonialThree from "@/components/sections/testimonials/testimonialThre
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 import ServiceTwo from "@/components/sections/services/serviceTwo";
 import StoryOne from "@/components/sections/ourStories/storyOne";
+import PriceTwo from '@/components/sections/pricing/priceTwo'
+import CompaniesSlideer from "@/components/sections/companiesslide/slider";
 
 export const metadata = {
   title: "WebFounder USA | Home",
@@ -20,14 +22,16 @@ const HomeFour = () => {
   return (
     <main>
       <HeroFour />
+      <CompaniesSlideer />
       <ServiceTwo />
       {/* <StoryOne /> */}
       <Approach />
       <CountDown />
-      <ChooseUs />
+      {/* <ChooseUs /> */}
       <Study />
-      <TestimonialThree />
-      <div className="mt-[-80px]"></div>
+      {/* <TestimonialThree /> */}
+      {/* <div className="mt-[-80px]"></div> */}
+      <PriceTwo />
       <SubscribeTwo />
       {/* <BlogOne /> */}
     </main>

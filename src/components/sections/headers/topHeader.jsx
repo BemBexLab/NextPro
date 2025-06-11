@@ -35,12 +35,12 @@ const TopHeader = ({ color, bgColor, darkBg }) => {
                     <div className='flex items-center gap-7.5'>
                         <p className={cn(`flex items-center gap-4 ${color}`)}>
                             <Email />
-                            <Link href={"mailto:contact@nextpro.com"} className='multiline-hover'>hello@webfounder.com</Link>
+                            <Link href={"mailto:info@webfoundersusa.com"} className='multiline-hover'>info@webfoundersusa.com</Link>
                         </p>
                         <p className='h-7.5 w-[1px] bg-accent dark:bg-[#717A83]'></p>
                         <p className={cn(`flex items-center gap-4 ${color}`)}>
                             <Call />
-                            <Link href={"tel:+17186385000"}><span className='font-semibold'>Call us:</span> <span className='multiline-hover'>+1 470-469-7096 </span> </Link>
+                            <Link href={"tel:(470) 205-2274"}><span className='font-semibold'>Call us:</span> <span className='multiline-hover'>(470) 205-2274</span> </Link>
                         </p>
                     </div>
                     {/*  left side end */}

@@ -24,7 +24,7 @@ const Services = () => {
             <ProvideOne />
             <Solutions />
             <PriceThree />
-            <ContactForm color={"text-white"} inputColor={"bg-transparent border-white border text-white placeholder:text-white"} />
+            {/* <ContactForm color={"text-white"} inputColor={"bg-transparent border-white border text-white placeholder:text-white"} /> */}
         </main>
     )
 }

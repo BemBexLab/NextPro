@@ -20,7 +20,7 @@ const About = () => {
         <Mission/>
         <TeamGrid/>
         <TestimonialTwo/>
-        <FaqTwo/>
+        {/* <FaqTwo/> */}
         <SubscribeTwo/>
     </main>
   )
