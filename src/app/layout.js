@@ -31,9 +31,9 @@ const dm_sans = DM_Sans({
 });
 
 export const metadata = {
-  title: "NextPro",
+  title: "WebFounder USA",
   description:
-    "NextPro is a modern Next.js and Tailwind CSS Template there features General Marketing, Social Media Marketing, AI in Marketing, Paid Advertising, Video Marketing, Analytics and Reporting, Industry news & Trends, E-commerce Marketing",
+    "WebFounder USA is a leading web development company that provides custom web development services to businesses of all sizes. We are a team of experienced web developers who are dedicated to providing the best possible web development services to our clients.",
 };
 
 export default function RootLayout({ children }) {
