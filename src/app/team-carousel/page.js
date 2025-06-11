@@ -5,7 +5,7 @@ import TeamGrid from '@/components/sections/teams/teamGrid'
 import TeamSlider from '@/components/sections/teams/teamSlider'
 
 export const metadata = {
-  title: "NextPro | Team-Carousel",
+  title: "WebFoundersUSA",
   description: "NextPro is a modern Next.js and Tailwind CSS Template there features General Marketing, Social Media Marketing, AI in Marketing, Paid Advertising, Video Marketing, Analytics and Reporting, Industry news & Trends, E-commerce Marketing",
 };
 const TeamCarousel = () => {

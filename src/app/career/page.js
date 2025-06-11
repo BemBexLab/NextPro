@@ -6,7 +6,7 @@ import SubscribeTwo from '@/components/sections/subscribes/subscribeTwo'
 import TeamOne from '@/components/sections/teams/teamOne'
 
 export const metadata = {
-    title: "NextPro | Career",
+    title: "WebFoundersUSA",
     description: "NextPro is a modern Next.js and Tailwind CSS Template there features General Marketing, Social Media Marketing, AI in Marketing, Paid Advertising, Video Marketing, Analytics and Reporting, Industry news & Trends, E-commerce Marketing",
   };
   

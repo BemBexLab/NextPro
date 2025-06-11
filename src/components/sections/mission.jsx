@@ -48,7 +48,7 @@ const Mission = () => {
                                 <Title size={"5xl"} className="pt-6">Our Mission</Title>
                             </div>
                             <p className='font-semibold text-muted-foreground'>
-                                At Next Agency, our mission is to empower businesses to thrive in the digital age by providing innovative and results-driven marketing solutions.
+                                At Web Founders USA, our mission is to empower businesses to thrive in the digital age by providing innovative and results-driven marketing solutions.
                             </p>
                             <p className='text-muted-foreground pt-7.5'>With a focus on transparency, integrity, and continuous improvement, we strive to be the trusted partner our clients rely on to achieve their goals and surpass their expectations.</p>
                         </SlideLeft>

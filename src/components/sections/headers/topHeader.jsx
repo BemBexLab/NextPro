@@ -52,7 +52,7 @@ const TopHeader = ({ color, bgColor, darkBg }) => {
                                 <SocialIcons color={color} />
                             </div>
                             {/* dark and light btn */}
-                            <div className='flex items-center gap-2'>
+                            {/* <div className='flex items-center gap-2'>
                                 <div className={cn(`flex gap-3 bg-[#ccd2d9] dark:bg-[#2d343b] rounded-[29px] px-1 py-1`, darkBg)}>
                                     <div onClick={() => setTheme("light")} className='w-[26px] h-[26px] rounded-full flex justify-center items-center p-1 bg-background dark:bg-transparent text-muted-foreground cursor-pointer'>
                                         <IoSunnyOutline />
@@ -64,8 +64,8 @@ const TopHeader = ({ color, bgColor, darkBg }) => {
                                 {
                                     theme === "dark" ? <span className={cn(`font-semibold ${color}`)}>Dark</span> : <span className={cn(`font-semibold ${color}`)}>Light</span>
                                 }
-                            </div>
-                            {/* dark and light btn */}
+                            </div> */}
+                            
                         </div>
                         <p className='h-7.5 w-[1px] bg-accent dark:bg-[#717A83]'></p>
                         {/* language select option */}

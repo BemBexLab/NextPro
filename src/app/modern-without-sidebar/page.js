@@ -4,7 +4,7 @@ import PageTitle from '@/components/sections/pageTitle'
 import { blogData } from '@/lib/fackData/blogData'
 
 export const metadata = {
-    title: "NextPro | Blog-Grid",
+    title: "WebFoundersUSA",
     description: "NextPro is a modern Next.js and Tailwind CSS Template there features General Marketing, Social Media Marketing, AI in Marketing, Paid Advertising, Video Marketing, Analytics and Reporting, Industry news & Trends, E-commerce Marketing",
 };
 

@@ -13,7 +13,7 @@ import PriceTwo from '@/components/sections/pricing/priceTwo'
 import CompaniesSlideer from "@/components/sections/companiesslide/slider";
 
 export const metadata = {
-  title: "WebFounder USA | Home",
+  title: "WebFoundersUSA",
   description:
     "WebFounder USA is a leading web development company that provides custom web development services to businesses of all sizes. We are a team of experienced web developers who are dedicated to providing the best possible web development services to our clients.",
 };

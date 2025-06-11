@@ -1,18 +1,20 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Logo = () => {
   return (
-    <div className="w-auto h-auto">
+    <div className="w-[240px] h-[96px]">
       <Link href={"/"} className="relative">
-        <Image
-          src={"/images/image (1).png"}
-          width={500}
-          height={200}
-          unoptimized="true"
-          alt="logo-original"
-          className="w-full h-full block"
+        <video
+          src="/videos/web founder logo animate 1.mp4"
+          width={240}
+          height={96}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full block object-contain"
+          aria-label="logo-original"
         />
       </Link>
     </div>

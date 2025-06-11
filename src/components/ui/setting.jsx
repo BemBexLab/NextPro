@@ -47,7 +47,7 @@ const Setting = () => {
             </Link>
 
             {/* Theme Toggle */}
-            <div className='w-7 h-7 rounded-full flex justify-center items-center p-[5px] bg-background text-muted-foreground cursor-pointer'>
+            {/* <div className='w-7 h-7 rounded-full flex justify-center items-center p-[5px] bg-background text-muted-foreground cursor-pointer'>
                 {
                     theme === 'dark' ?
                         <div onClick={() => setTheme("light")}>
@@ -58,7 +58,7 @@ const Setting = () => {
                             <BsMoonStars />
                         </div>
                 }
-            </div>
+            </div> */}
 
             {/* Country Selector */}
             <Select value={selectCountry} onValueChange={value => setSelectCountry(value)}>
