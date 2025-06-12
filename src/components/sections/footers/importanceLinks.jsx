@@ -10,20 +10,19 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
             links: [
                 { id: 1, path: "/about-us", label: "About Us" },
                 { id: 2, path: "/career", label: "Careers" },
-                { id: 3, path: "#", label: "News" },
-                { id: 4, path: "/contact-us", label: "Contact" },
+                { id: 3, path: "/contact-us", label: "Contact" },
             ]
         },
-        {
-            id: 2,
-            title: "Resources",
-            links: [
-                { id: 1, path: "/blog", label: "Blog" },
-                { id: 2, path: "#", label: "Help Center" },
-                { id: 3, path: "#", label: "Support" },
-                { id: 4, path: "#", label: "Tutorial" },
-            ]
-        },
+        // {
+        //     id: 2,
+        //     title: "Resources",
+        //     links: [
+        //         { id: 1, path: "/blog", label: "Blog" },
+        //         { id: 2, path: "#", label: "Help Center" },
+        //         { id: 3, path: "#", label: "Support" },
+        //         { id: 4, path: "#", label: "Tutorial" },
+        //     ]
+        // },
         {
             id: 3,
             title: "Social",

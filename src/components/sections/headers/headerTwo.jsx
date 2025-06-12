@@ -10,7 +10,7 @@ import MobileMenu from './mobileMenu'
 import HeaderShortInfo from './headerShortInfo'
 import { Offcanvas, OffcanvasContent, OffcanvasOverlay, OffcanvasTrigger, OffcanvasClose } from '@/components/ui/offcanvas';
 import StickyHeader from '@/components/ui/stickyHeader';
-import TopHeader from './topHeader';
+
 
 // Define your flat navigation here
 const navigationLinks = [
@@ -27,9 +27,9 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
         <StickyHeader>
             <header id='header' className='sticky top-0 w-full transition-[top] duration-300 z-40 bg-background'>
                 <div id='header-container' className={`${haveShadow ? "dark:shadow-[0px_14px_21px_0px_rgba(0,0,0,0.3)] shadow-3xl" : ""}`}>
-                    <div id='top-header'>
+                    {/* <div id='top-header'>
                         <TopHeader />
-                    </div>
+                    </div> */}
                     <div className={`${pathName !== '/home-2' ? '[.header-pinned_&]:shadow-3xl dark:[.header-pinned_&]:shadow-[0px_14px_21px_0px_rgba(0,0,0,0.3)]' : null}`}>
                         <div className='container mx-auto relative'>
                             <span className='border-t border-accent block'></span>

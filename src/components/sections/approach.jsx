@@ -95,7 +95,7 @@ const Approach = () => {
                             <Title size={"4xl"}>{heading}</Title>
                             <p className='pt-5 pb-7.5'>{description}</p>
                             <Button asChild variant='outline'>
-                                <Link href={"/services"}> Discover more </Link>
+                                <Link href={"/contact-us"}> Discover more </Link>
                             </Button>
                         </div>
                         <div className='pr-7.5 pl-7.5 lg:pl-0 lg:max-w-[540px] w-full pt-7.5 lg:pt-0'>

@@ -50,31 +50,56 @@ const Form = () => {
                     <DialogClose></DialogClose>
                 </div>
                 <form className='p-4 pt-0'>
-                    <div className='flex md:flex-row flex-col justify-between gap-5'>
-                        <Input type={"text"} placeholder={"Name"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
-                        <Input type={"text"} placeholder={"LastName"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
-                    </div>
-                    <div className='flex md:flex-row flex-col justify-between gap-5 mt-4'>
-                        <Input type={"text"} placeholder={"Country"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
-                        <Input type={"text"} placeholder={"Phone Number"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
-                    </div>
-                    <div className='flex md:flex-row flex-col justify-between gap-5 mt-4'>
-                        <Input
-  type="email"
-  placeholder="Email"
-  className="bg-primary font-medium placeholder:text-white text-white w-full md:basis-1/2 md:w-1/2"
-/>
-<div className="hidden md:block md:basis-1/2 md:w-1/2"></div>
+    <div className='flex md:flex-row flex-col justify-between gap-5'>
+        <Input
+            type="text"
+            placeholder="Name"
+            className="bg-primary font-medium placeholder:text-white text-white w-full"
+        />
+        <Input
+            type="email"
+            placeholder="Email"
+            className="bg-primary font-medium placeholder:text-white text-white w-full"
+        />
+    </div>
+    <div className='flex md:flex-row flex-col justify-between gap-5 mt-4'>
+        <Input
+            type="text"
+            placeholder="Website"
+            className="bg-primary font-medium placeholder:text-white text-white w-full"
+        />
+        <div className="w-full">
+            {/* Replace this Select component with your dropdown */}
+            <select
+                className="bg-primary font-medium placeholder:text-white text-white w-full h-[48px] rounded px-3"
+                defaultValue=""
+            >
+                <option value="" disabled>Select a Service</option>
+                <option value="SEO">Search Engine Optimization</option>
+                <option value="SMM">Social Media Marketing</option>
+                <option value="Content">Content Writing</option>
+                <option value="Affiliate">Affiliate Marketing</option>
+                <option value="Email">Email Marketing</option>
+            </select>
+        </div>
+    </div>
+    <div className='mt-4'>
+        <textarea
+            placeholder="Message"
+            className="bg-primary font-medium placeholder:text-white text-white w-full rounded px-3 py-2 min-h-[120px] resize-none"
+        />
+    </div>
+    <div className='mt-5 flex items-start'>
+        <input type='checkbox' id='checkbox' className='w-4 h-4' />
+        <label htmlFor="checkbox" className='pl-3 -mt-2 w-[94%] font-medium'>
+            By using this form you agree with the storage and handling of your data policies of WebFounders USA.
+        </label>
+    </div>
+    <div className='mt-8 flex justify-end pb-8'>
+        <Button>Send request</Button>
+    </div>
+</form>
 
-                    </div>
-                    <div className='mt-5 flex items-start'>
-                        <input type='checkbox' id='checkbox' className='w-4 h-4' />
-                        <label htmlFor="checkbox" className='pl-3 -mt-2 w-[94%] font-medium'>By using this form you agree with the storage and handling of your data policies of WebFounders USA.</label>
-                    </div>
-                    <div className='mt-8 flex justify-end pb-8'>
-                        <Button>Send request</Button>
-                    </div>
-                </form>
             </DialogContent>
         </Dialog>
     )
