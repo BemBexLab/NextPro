@@ -50,7 +50,7 @@ const ContactMap = () => {
                                     <Popup>
                                         <div className='border border-border rounded-2xl p-4'>
                                             <h5 className='text-lg font-bold text-muted-foreground'>NextPro USA</h5>
-                                            <b className='text-muted-foreground inline-block pt-2'>NextMarketing Inc.</b>
+                                            <b className='text-muted-foreground inline-block pt-2'>WebFounders USA Inc.</b>
 
                                             <p>243, Eastern Parkway, Brooklyn, New York, USA</p>
                                         </div>

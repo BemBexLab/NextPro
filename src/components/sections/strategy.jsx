@@ -22,7 +22,7 @@ const Strategy = () => {
                             <Button variant="secondary">Our Strategy</Button>
                             <Title size={"5xl"} className="lg:max-w-[642px] max-w-full pt-6">Scalable marketing for every stage of your funnel.</Title>
                             <p className='pt-7.5 font-semibold text-muted-foreground'>Discover the power of streamlined operations and enhanced performance through our integration solutions.</p>
-                            <p className='pt-7.5  font-medium'> <strong>NextMarketing</strong> seamlessly integrates with a variety of industry-leading tools, ensuring a cohesive and efficient digital ecosystem for your business.</p>
+                            <p className='pt-7.5  font-medium'> <strong>WebFounders USA</strong> seamlessly integrates with a variety of industry-leading tools, ensuring a cohesive and efficient digital ecosystem for your business.</p>
                             <Button asChild className="mt-10">
                                 <Link href={"/about-us"}>Get Started</Link>
                             </Button>
