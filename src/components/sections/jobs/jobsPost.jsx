@@ -23,7 +23,9 @@ const JobsPost = () => {
                                             <Card icon={job_nature.icon} name={job_nature.nature} title={"Job Nature"} />
                                             <Card icon={location.icon} name={location.location} title={"Location"} />
                                             <div className='lg:max-w-64 lg:w-full w-[45%] basis-auto flex lg:justify-end'>
-                                                <Button asChild className={"px-12.5"}><Link href={"/career-details"}>View Details</Link></Button>
+                                                <Button asChild className={"px-12.5"}>
+                                                    <Link href={`/career-details/${id}`}>View Details</Link>
+                                                </Button>
                                             </div>
                                         </div>
                                     </SlideUp>
@@ -38,7 +40,6 @@ const JobsPost = () => {
 }
 
 export default JobsPost
-
 
 const Card = ({ icon, title, name }) => {
     return (

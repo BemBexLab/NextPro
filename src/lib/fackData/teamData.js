@@ -8,7 +8,7 @@ export const teamData = [
     {
         id:2,
         src:"/images/resource/team-about1-2.jpg",
-        name:" Jeffrey Reed",
+        name:" Scott Anderson",
         position:"COO",
     },
     {
@@ -26,19 +26,19 @@ export const teamData = [
     {
         id:5,
         src:"/images/resource/team-about1-5.jpg",
-        name:"Kristin Watson",
+        name:"Robert Wilson",
         position:"Social Media Expert",
     },
     {
         id:6,
         src:"/images/resource/team-about1-6.jpg",
-        name:"Courtney Henry",
+        name:"Bryan dodson",
         position:"Paid Ad ",
     },
     {
         id:7,
         src:"/images/resource/team-about1-7.jpg",
-        name:"Devon Lane",
+        name:"Steven Marshall",
         position:"President of Sales",
     },
     {

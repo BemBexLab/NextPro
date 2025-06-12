@@ -18,34 +18,44 @@ const tabList = [
         id: "development",
         tab_name: "Strategy Development",
         tab_icon: icon_1,
-        tab_content: "/images/resource/approach-image4-1.jpg"
+        tab_content: "/images/resource/approach-image4-1.jpg",
+        heading: "Strategic Planning",
+        description: "Our strategic planning process begins with a deep dive into your business objectives, target audience, and competitive landscape. We meticulously analyze market trends and consumer insights to craft customized strategies.",
     },
     {
         id: "partnership",
         tab_name: "Collaborative Partnership",
         tab_icon: icon_2,
-        tab_content: "/images/resource/approach-image4-2.jpg"
+        tab_content: "/images/resource/approach-image4-2.jpg",
+        heading: "Collaborative Partnership",
+        description: "We foster close collaboration with our clients, ensuring your voice is heard at every stage. Our team works alongside you, sharing insights and knowledge to create truly impactful solutions.",
     },
     {
         id: "decisions",
         tab_name: "Data-Driven Decisions",
         tab_icon: icon_3,
-        tab_content: "/images/resource/approach-image4-1.jpg"
+        tab_content: "/images/resource/approach-image4-1.jpg",
+        heading: "Data-Driven Decisions",
+        description: "We leverage real-time analytics and data insights to guide every decision, maximizing results and minimizing guesswork for your business.",
     },
     {
         id: "execution",
         tab_name: "Agile Execution",
         tab_icon: icon_4,
-        tab_content: "/images/resource/approach-image4-2.jpg"
+        tab_content: "/images/resource/approach-image4-2.jpg",
+        heading: "Agile Execution",
+        description: "Our agile workflows empower us to adapt quickly, respond to changes, and deliver high-quality outcomes on time and within budget.",
     },
     {
         id: "communication",
         tab_name: "Transparent Communication",
         tab_icon: icon_5,
-        tab_content: "/images/resource/approach-image4-1.jpg"
+        tab_content: "/images/resource/approach-image4-1.jpg",
+        heading: "Transparent Communication",
+        description: "We prioritize open, honest communication, keeping you updated every step of the way so there are never any surprises.",
     },
-
 ]
+
 const Approach = () => {
     const [tab, setTab] = useState("development");
     const onTabChange = (value) => {
@@ -76,29 +86,28 @@ const Approach = () => {
                             }
                         </TabsList>
                         {
-                            tabList.map(({ id, tab_content }) => {
-                                return (
-                                    <TabsContent key={id} value={id} className={"lg:pt-7.5 md:pt-[110px] sm:pt-[190px] pt-[360px]"}>
-                                        <SlideUp>
-                                            <div className='flex lg:flex-row flex-col justify-between bg-[#F4F6FF] dark:bg-[#1c242b] py-7.5 rounded-[30px]'>
-                                                <div className='lg:pl-[86px] pl-7.5 pr-7.5 lg:pr-0 xl:max-w-[660px] lg:max-w-[550px] '>
-                                                    <Title size={"4xl"}>Strategic Planning Tailored to Your Vision</Title>
-                                                    <p className='pt-5 pb-7.5'>Our strategic planning process begins with a deep dive into your business objectives, target audience, and competitive landscape. We meticulously analyze market trends and consumer insights to craft customized strategies.</p>
-                                                    <Button asChild variant='outline'>
-                                                        <Link href={"/services"}> Discover more </Link>
-                                                    </Button>
+    tabList.map(({ id, tab_content, heading, description }) => {
+        return (
+            <TabsContent key={id} value={id} className={"lg:pt-7.5 md:pt-[110px] sm:pt-[190px] pt-[360px]"}>
+                <SlideUp>
+                    <div className='flex lg:flex-row flex-col justify-between bg-[#F4F6FF] dark:bg-[#1c242b] py-7.5 rounded-[30px]'>
+                        <div className='lg:pl-[86px] pl-7.5 pr-7.5 lg:pr-0 xl:max-w-[660px] lg:max-w-[550px] '>
+                            <Title size={"4xl"}>{heading}</Title>
+                            <p className='pt-5 pb-7.5'>{description}</p>
+                            <Button asChild variant='outline'>
+                                <Link href={"/services"}> Discover more </Link>
+                            </Button>
+                        </div>
+                        <div className='pr-7.5 pl-7.5 lg:pl-0 lg:max-w-[540px] w-full pt-7.5 lg:pt-0'>
+                            <Image src={tab_content} width={540} height={361} alt='bg' style={{ width: "100%" }} className='rounded-2.5xl' />
+                        </div>
+                    </div>
+                </SlideUp>
+            </TabsContent>
+        )
+    })
+}
 
-                                                </div>
-                                                <div className='pr-7.5 pl-7.5 lg:pl-0 lg:max-w-[540px] w-full pt-7.5 lg:pt-0'>
-
-                                                    <Image src={tab_content} width={540} height={361} alt='bg' style={{ width: "100%" }} className='rounded-2.5xl' />
-                                                </div>
-                                            </div>
-                                        </SlideUp>
-                                    </TabsContent>
-                                )
-                            })
-                        }
                     </Tabs>
                 </div>
             </div>

@@ -51,15 +51,15 @@ const Form = () => {
                 </div>
                 <form className='p-4 pt-0'>
                     <div className='flex md:flex-row flex-col justify-between gap-5'>
-                        <Input type={"text"} placeholder={"Your Name"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
-                        <Input type={"text"} placeholder={"Your SurName"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
+                        <Input type={"text"} placeholder={"Name"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
+                        <Input type={"text"} placeholder={"LastName"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
                     </div>
                     <div className='flex md:flex-row flex-col justify-between gap-5 mt-4'>
-                        <Input type={"text"} placeholder={"Your Country"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
-                        <Input type={"text"} placeholder={"Your Number"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
+                        <Input type={"text"} placeholder={"Country"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
+                        <Input type={"text"} placeholder={"Number"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
                     </div>
                     <div className='flex md:flex-row flex-col justify-between gap-5 mt-4'>
-                        <Input type={"email"} placeholder={"Your Country"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
+                        <Input type={"email"} placeholder={"Email"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
                         <Input type={"time"} placeholder={"Your Number"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
                     </div>
                     <div className='mt-5 flex items-start'>

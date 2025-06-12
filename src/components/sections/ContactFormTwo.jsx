@@ -34,7 +34,7 @@ const ContactFormTwo = () => {
                         <form >
                             <div className='flex sm:flex-row flex-col items-center gap-4 mb-3'>
                                 <div className='w-full'>
-                                    <Input type={"text"} placeholder={"Your Name"} className={`w-full border-2 border-[#C0C0C0]`} />
+                                    <Input type={"text"} placeholder={"Name"} className={`w-full border-2 border-[#C0C0C0]`} />
                                 </div>
                                 <div className='w-full'>
                                     <Input type={"email"} placeholder={"Email"} className={`w-full border-2 border-[#C0C0C0]`} />
