@@ -61,7 +61,7 @@ const Setting = () => {
             </div> */}
 
             {/* Country Selector */}
-            <Select value={selectCountry} onValueChange={value => setSelectCountry(value)}>
+            {/* <Select value={selectCountry} onValueChange={value => setSelectCountry(value)}>
                 <SelectTrigger isArrow={false} className={cn(`p-0 h-auto font-semibold text-lg border-none bg-transparent [&_.icon-flag]:hidden`)}>
                     <div className='w-7 h-7 rounded-full flex justify-center items-center p-[5px] bg-background dark:text-muted-foreground cursor-pointer'>
                         <SelectValue placeholder={<CiGlobe className='text-xl ' />} />
@@ -77,7 +77,7 @@ const Setting = () => {
                         ))
                     }
                 </SelectContent>
-            </Select>
+            </Select> */}
 
 
             {/* Help/Question Icon */}
@@ -93,8 +93,8 @@ const Setting = () => {
                         <h3 className='text-2xl font-extrabold text-muted-foreground pb-2'>Connect for more information</h3>
                         <p>I'm here, ready to answer any types of questions</p>
                         <ul className='py-4'>
-                            <li><Link href={"mailto:contact@nextpro.com"} className='multiline-hover'>contact@nextpro.com</Link></li>
-                            <li><Link href={"tel:+17186385000"}><span className='font-semibold'>Call us:</span> <span className='multiline-hover'>+1 718-638-5000 </span> </Link></li>
+                            <li><Link href={"mailto:info@webfoundersusa.com"} className='multiline-hover'>info@webfoundersusa.com</Link></li>
+                            <li><Link href={"tel: (470) 205-2274"}><span className='font-semibold'>Call us:</span> <span className='multiline-hover'> (470) 205-2274 </span> </Link></li>
                         </ul>
                         <SocialIcons />
                     </div>

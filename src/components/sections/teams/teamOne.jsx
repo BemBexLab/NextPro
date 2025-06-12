@@ -22,13 +22,13 @@ const shortInfo = [
         id: 2,
         icon: skills_icon,
         title: "Extraordinary skills",
-        desc: "Receive comprehensive reports detailing the impact of our efforts"
+        desc: "Benefit from our team’s wide-ranging expertise in digital marketing."
     },
     {
         id: 3,
         icon: content_icon,
         title: "Customer focused",
-        desc: "Receive comprehensive reports detailing the impact of our efforts"
+        desc: "Enjoy personalized service with your goals at the center of everything we do."
     },
 
 ]

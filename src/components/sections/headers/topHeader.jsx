@@ -69,7 +69,7 @@ const TopHeader = ({ color, bgColor, darkBg }) => {
                         </div>
                         <p className='h-7.5 w-[1px] bg-accent dark:bg-[#717A83]'></p>
                         {/* language select option */}
-                        <div className='w-[75px]'>
+                        {/* <div className='w-[75px]'>
                             <Select value={selectCountry} onValueChange={value => setSelectCountry(value)}>
                                 <SelectTrigger className={cn(`p-0 h-auto font-semibold text-lg border-none bg-transparent ${color}`)}>
                                     <div className='flex items-center gap-1'>
@@ -90,7 +90,7 @@ const TopHeader = ({ color, bgColor, darkBg }) => {
                                     }
                                 </SelectContent>
                             </Select>
-                        </div>
+                        </div> */}
                         {/* language select option */}
                     </div>
                 </div>

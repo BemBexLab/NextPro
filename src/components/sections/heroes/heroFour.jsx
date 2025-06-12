@@ -20,7 +20,7 @@ const HeroFour = () => {
                         <p className='font-semibold max-w-[689px] pt-7.5'>Choose RankFlow as your digital marketing agency and propel ur business to new heights with our award-winning digital marketing services.</p>
                         <div className='flex sm:flex-row flex-col sm:items-center gap-[32px] pt-[55px] pb-[22px]'>
                             <Button asChild>
-                                <Link href="/pricing"> Start Free Trial </Link>
+                                <Link href="/contact-us"> Contact Us </Link>
                             </Button>
                             <div className='flex items-center gap-2'>
                                 <PlayIcon playOne={false} />

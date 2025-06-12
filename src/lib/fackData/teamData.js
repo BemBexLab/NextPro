@@ -9,7 +9,7 @@ export const teamData = [
         id:2,
         src:"/images/resource/team-about1-2.jpg",
         name:" Scott Anderson",
-        position:"COO",
+        position:"CO-Founder",
     },
     {
         id:3,
@@ -20,7 +20,7 @@ export const teamData = [
     {
         id:4,
         src:"/images/resource/team-about1-4.jpg",
-        name:"Jenny Wilson",
+        name:"Sara Smith",
         position:"Marketing Strategiest",
     },
     {

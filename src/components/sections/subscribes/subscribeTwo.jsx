@@ -56,15 +56,20 @@ const Form = () => {
                     </div>
                     <div className='flex md:flex-row flex-col justify-between gap-5 mt-4'>
                         <Input type={"text"} placeholder={"Country"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
-                        <Input type={"text"} placeholder={"Number"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
+                        <Input type={"text"} placeholder={"Phone Number"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
                     </div>
                     <div className='flex md:flex-row flex-col justify-between gap-5 mt-4'>
-                        <Input type={"email"} placeholder={"Email"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
-                        <Input type={"time"} placeholder={"Your Number"} className={"bg-primary font-medium placeholder:text-white text-white w-full"} />
+                        <Input
+  type="email"
+  placeholder="Email"
+  className="bg-primary font-medium placeholder:text-white text-white w-full md:basis-1/2 md:w-1/2"
+/>
+<div className="hidden md:block md:basis-1/2 md:w-1/2"></div>
+
                     </div>
                     <div className='mt-5 flex items-start'>
                         <input type='checkbox' id='checkbox' className='w-4 h-4' />
-                        <label htmlFor="checkbox" className='pl-3 -mt-2 w-[94%] font-medium'>By using this form you agree with the storage and handling of your data policies of NextPro Marketing.</label>
+                        <label htmlFor="checkbox" className='pl-3 -mt-2 w-[94%] font-medium'>By using this form you agree with the storage and handling of your data policies of WebFounders USA.</label>
                     </div>
                     <div className='mt-8 flex justify-end pb-8'>
                         <Button>Send request</Button>

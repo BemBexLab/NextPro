@@ -11,7 +11,7 @@ const StoryContentOne = () => {
         <div >
             <SlideUp>
                 <Title size={"5xl"} className={"xl:leading-[140%] lg:max-w-[645px]"}>
-                    Discover Our Story: Redefine Digital Excellence at NextMarketing.
+                    Discover Our Story: Redefine Digital Excellence at WebFounders USA.
                 </Title>
 
                 <div className='lg:max-w-[645px]'>

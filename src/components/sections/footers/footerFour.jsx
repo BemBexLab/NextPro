@@ -17,7 +17,7 @@ const FooterFour = () => {
 
                             <h3 className='text-1xl font-semibold text-muted-foreground lg:pb-7.5 pb-3 text-white'>About</h3>
 
-                            <p className='pb-[38px] text-white'>NextMarketing seamlessly integrates with a variety of industry-leading tools, ensuring a cohesive and efficient digital ecosystem for your business.</p>
+                            <p className='pb-[38px] text-white'>WebFounders USA seamlessly integrates with a variety of industry-leading tools, ensuring a cohesive and efficient digital ecosystem for your business.</p>
                             <SocialIcons color={"text-white"} hoverColor={"hover:text-white"} />
                         </div>
                         <div>
@@ -28,8 +28,8 @@ const FooterFour = () => {
             </div>
             <div className='bg-muted dark:bg-accent mt-[54px] relative z-10'>
                 <div className='max-w-[1350px] mx-auto px-[15px] flex xl:flex-row flex-col justify-between items-center py-7.5 text-white'>
-                    <p>Designed and Developed By <Link href={"https://themeforest.net/user/themeperch"} className='text-primary-foreground font-medium relative hover-underline after:h-[1px]'>Themeperch</Link></p>
-                    <p>Copyright: © 2024. All Rights Reserved</p>
+                    <p>Designed and Developed By <Link href={""} className='text-primary-foreground font-medium relative hover-underline after:h-[1px]'>WebFounders USA</Link></p>
+                    <p>Copyright: © 2025. All Rights Reserved</p>
                 </div>
             </div>
         </footer>

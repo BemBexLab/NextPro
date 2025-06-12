@@ -21,7 +21,7 @@ const ProvideOne = () => {
                             <Title size={"5xl"} className="max-w-[703px] pt-6">Integration Solutions: Connect Seamlessly with Leading Tools</Title>
                             <div className='max-w-[563px]'>
                                 <p className='font-semibold text-muted-foreground pt-6'>Discover the power of streamlined operations and enhanced performance through our integration solutions.</p>
-                                <p className=' font-semibold pt-7.5'> <strong>NextMarketing</strong> seamlessly integrates with a variety of industry-leading tools, ensuring a cohesive and efficient digital ecosystem for your business.</p>
+                                <p className=' font-semibold pt-7.5'> <strong>WebFounders USA</strong> seamlessly integrates with a variety of industry-leading tools, ensuring a cohesive and efficient digital ecosystem for your business.</p>
                             </div>
                             <div className='flex md:flex-row flex-col gap-6 xl:mt-10 mt-8 pb-12.5'>
                                 <Card bgColor={"after:bg-green"} color={"text-green"} icon={<Category />} title={"Seamless Connectivity"} />
