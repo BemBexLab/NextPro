@@ -37,8 +37,8 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
             id: 5,
             title: "Other links",
             links: [
-                { id: 1, path: "#", label: "Terms" },
-                { id: 2, path: "#", label: "Privacy" },
+                { id: 1, path: "/terms", label: "Terms" },
+                { id: 2, path: "/privacy", label: "Privacy" },
             ]
         },
     ]
