@@ -1,5 +1,6 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import Title from '@/components/ui/title'
 import {
@@ -9,7 +10,6 @@ import {
     DialogTrigger,
     DialogClose
 } from "@/components/ui/dialog"
-import Input from '@/components/ui/input'
 import SlideUp from '@/components/animations/slideUp'
 
 const SubscribeTwo = () => {
@@ -37,69 +37,119 @@ const SubscribeTwo = () => {
 
 export default SubscribeTwo
 
-
 const Form = () => {
+    // State for form fields
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [website, setWebsite] = useState('');
+    const [service, setService] = useState('');
+    const [message, setMessage] = useState('');
+    const [status, setStatus] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('Sending...');
+        const res = await fetch('/api/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name,
+                email,
+                website,
+                service,
+                message,
+            }),
+        });
+        if (res.ok) {
+            setStatus('Message sent!');
+            setName('');
+            setEmail('');
+            setWebsite('');
+            setService('');
+            setMessage('');
+        } else {
+            setStatus('Error sending message.');
+        }
+    };
+
     return (
         <Dialog>
             <DialogTrigger>
-                <span className="group rounded-full px-[38px] py-[18px] border-2 border-[#BF0B30] font-bold max-h-12.5 bg-[#BF0B30] text-secondary-foreground dark:text-muted-foreground flex justify-center items-center gap-2.5 transition-all duration-500 hover:bg-transparent hover:text-[#BF0B30]"> Schedule a Meeting</span>
+                <span className="group rounded-full px-[38px] py-[18px] border-2 border-[#BF0B30] font-bold max-h-12.5 bg-[#BF0B30] text-secondary-foreground dark:text-muted-foreground flex justify-center items-center gap-2.5 transition-all duration-500 hover:bg-transparent hover:text-[#BF0B30]">
+                    Schedule a Meeting
+                </span>
             </DialogTrigger>
             <DialogContent className="max-w-[700px] p-0">
                 <div className='flex items-center justify-between py-6 border-b border-b-[#dee2e6]'>
-                    <DialogTitle className="pl-4"><h6 className='text-2xl font-bold text-muted-foreground'>Schedule a Meeting</h6></DialogTitle>
-                    <DialogClose></DialogClose>
+                    <DialogTitle className="pl-4">
+                        <h6 className='text-2xl font-bold text-muted-foreground'>Schedule a Meeting</h6>
+                    </DialogTitle>
+                    <DialogClose />
                 </div>
-                <form className='p-4 pt-0'>
-    <div className='flex md:flex-row flex-col justify-between gap-5'>
-        <Input
-            type="text"
-            placeholder="Name"
-            className="bg-primary font-medium placeholder:text-white text-white w-full"
-        />
-        <Input
-            type="email"
-            placeholder="Email"
-            className="bg-primary font-medium placeholder:text-white text-white w-full"
-        />
-    </div>
-    <div className='flex md:flex-row flex-col justify-between gap-5 mt-4'>
-        <Input
-            type="text"
-            placeholder="Website"
-            className="bg-primary font-medium placeholder:text-white text-white w-full"
-        />
-        <div className="w-full">
-            {/* Replace this Select component with your dropdown */}
-            <select
-                className="bg-primary font-medium placeholder:text-white text-white w-full h-[48px] rounded px-3"
-                defaultValue=""
-            >
-                <option value="" disabled>Select a Service</option>
-                <option value="SEO">Search Engine Optimization</option>
-                <option value="SMM">Social Media Marketing</option>
-                <option value="Content">Content Writing</option>
-                <option value="Affiliate">Affiliate Marketing</option>
-                <option value="Email">Email Marketing</option>
-            </select>
-        </div>
-    </div>
-    <div className='mt-4'>
-        <textarea
-            placeholder="Message"
-            className="bg-primary font-medium placeholder:text-white text-white w-full rounded px-3 py-2 min-h-[120px] resize-none"
-        />
-    </div>
-    <div className='mt-5 flex items-start'>
-        <input type='checkbox' id='checkbox' className='w-4 h-4' />
-        <label htmlFor="checkbox" className='pl-3 -mt-2 w-[94%] font-medium'>
-            By using this form you agree with the storage and handling of your data policies of WebFounders USA.
-        </label>
-    </div>
-    <div className='mt-8 flex justify-end pb-8'>
-        <Button>Send request</Button>
-    </div>
-</form>
-
+                <form className='p-4 pt-0' onSubmit={handleSubmit}>
+                    <div className='flex md:flex-row flex-col justify-between gap-5'>
+                        <input
+                            type="text"
+                            placeholder="Name"
+                            className="bg-primary font-medium placeholder:text-white text-white w-full rounded px-3 py-2"
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                            required
+                        />
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            className="bg-primary font-medium placeholder:text-white text-white w-full rounded px-3 py-2"
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className='flex md:flex-row flex-col justify-between gap-5 mt-4'>
+                        <input
+                            type="text"
+                            placeholder="Website"
+                            className="bg-primary font-medium placeholder:text-white text-white w-full rounded px-3 py-2"
+                            value={website}
+                            onChange={e => setWebsite(e.target.value)}
+                            required
+                        />
+                        <div className="w-full">
+                            <select
+                                className="bg-primary font-medium placeholder:text-white text-white w-full h-[48px] rounded px-3"
+                                value={service}
+                                onChange={e => setService(e.target.value)}
+                                required
+                            >
+                                <option value="" disabled>Select a Service</option>
+                                <option value="Search Engine Optimization">Search Engine Optimization</option>
+                                <option value="Social Media Marketing">Social Media Marketing</option>
+                                <option value="Content Writing">Content Writing</option>
+                                <option value="Affiliate Marketing">Affiliate Marketing</option>
+                                <option value="Email Marketing">Email Marketing</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className='mt-4'>
+                        <textarea
+                            placeholder="Message"
+                            className="bg-primary font-medium placeholder:text-white text-white w-full rounded px-3 py-2 min-h-[120px] resize-none"
+                            value={message}
+                            onChange={e => setMessage(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className='mt-5 flex items-start'>
+                        <input type='checkbox' id='checkbox' className='w-4 h-4' required />
+                        <label htmlFor="checkbox" className='pl-3 -mt-2 w-[94%] font-medium'>
+                            By using this form you agree with the storage and handling of your data policies of WebFounders USA.
+                        </label>
+                    </div>
+                    <div className='mt-8 flex justify-end pb-8'>
+                        <Button type="submit">Send request</Button>
+                    </div>
+                    {status && <div className="mt-2">{status}</div>}
+                </form>
             </DialogContent>
         </Dialog>
     )
