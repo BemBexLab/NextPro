@@ -32,7 +32,7 @@ const StoryContentFour = () => {
             </div>
 
             <Button asChild variant="outline" className="dark:text-muted-foreground">
-                <Link href={"/services"}> Discover more </Link>
+                <Link href={"/contact-us"}> Discover more </Link>
             </Button>
         </SlideUp >
 

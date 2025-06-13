@@ -29,7 +29,7 @@ const ProvideOne = () => {
                                 <Card bgColor={"after:bg-red"} color={"text-red"} icon={<Shield />} title={"Optimized Performance"} />
                             </div>
                             <Button variant="outline" size="lg" asChild className="max-h-[64px] group">
-                                <Link href={"/about-us"}>  See all Integrations <span className='-rotate-45 group-hover:rotate-0 transition-all duration-75 ' ><RightArrow /></span></Link>
+                                <Link href={"/portfolio"}>  See all Integrations <span className='-rotate-45 group-hover:rotate-0 transition-all duration-75 ' ><RightArrow /></span></Link>
                             </Button>
                         </SlideUp>
                     </div>

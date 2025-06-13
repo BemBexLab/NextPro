@@ -47,7 +47,7 @@ const Solutions = () => {
                             <Title size={"5xl"} className="max-w-[638px] pt-6">Smart solutions Real-time Results</Title>
                             <p className='font-semibold text-muted-foreground pt-7.5  max-w-[638px]'>RankFlow seamlessly integrates with a variety of industry-leading tools, ensuring a cohesive and efficient digital ecosystem for your business.</p>
                             <Button asChild variant="outline" size="lg" className="max-h-[64px] rounded-full group lg:mt-20 mt-8">
-                                <Link href={"/services"}> View all Services <span className='-rotate-45 group-hover:rotate-0 transition-all duration-75' ><RightArrow /></span></Link>
+                                <Link href={"#services"}> View all Services <span className='-rotate-45 group-hover:rotate-0 transition-all duration-75' ><RightArrow /></span></Link>
                             </Button>
                         </SlideUp>
                     </div>

@@ -7,25 +7,25 @@ const counterData = [
         id: 1,
         number: 5,
         endPoint: "k+",
-        title: "Website Optimized"
+        title: "Projects Delivered"
     },
     {
         id: 2,
         number: 4.9,
         endPoint: "k+",
-        title: "Website Optimized"
+        title: "Happy Clients"
     },
     {
         id: 3,
         number: 95,
         endPoint: "%",
-        title: "Website Optimized"
+        title: "Success Rate"
     },
     {
         id: 4,
         number: 15,
         endPoint: "x",
-        title: "Website Optimized"
+        title: "Growth in Performance"
     },
 
 ]
