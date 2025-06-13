@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function AdminDashboard() {
   const [submissions, setSubmissions] = useState([]);
+  const [selected, setSelected] = useState([]); // <-- selected IDs
   const [loading, setLoading] = useState(true);
   const [apiError, setApiError] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -15,13 +16,11 @@ export default function AdminDashboard() {
     setHasMounted(true);
   }, []);
 
-  useEffect(() => {
-    if (!isAuthenticated) return;
+  const fetchData = () => {
     setLoading(true);
     fetch("/api/get-form-data")
       .then((res) => res.json())
       .then((json) => {
-        console.log("Fetched submissions (frontend):", json); // Debug
         if (json.error) {
           setApiError(json.error);
           setSubmissions([]);
@@ -31,11 +30,15 @@ export default function AdminDashboard() {
         }
       })
       .catch((error) => {
-        console.error("Error fetching submissions:", error);
         setApiError(error.message);
         setSubmissions([]);
       })
       .finally(() => setLoading(false));
+  };
+
+  useEffect(() => {
+    if (!isAuthenticated) return;
+    fetchData();
   }, [isAuthenticated]);
 
   const handleLogin = async (e) => {
@@ -53,6 +56,53 @@ export default function AdminDashboard() {
     } else {
       const data = await res.json();
       setErrorMsg(data.message || "Login failed");
+    }
+  };
+
+  // Handle checkbox toggle
+  const handleCheckbox = (id) => {
+    setSelected((prev) =>
+      prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
+    );
+  };
+
+  // Handle select all rows
+  const handleSelectAll = (e) => {
+    if (e.target.checked) {
+      setSelected(submissions.map((s) => s.id));
+    } else {
+      setSelected([]);
+    }
+  };
+
+  // Delete selected submissions
+  const handleDeleteSelected = async () => {
+    if (!selected.length) return;
+    if (!window.confirm("Delete selected submissions?")) return;
+    const res = await fetch("/api/delete-submissions", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ids: selected }),
+    });
+    if (res.ok) {
+      fetchData();
+      setSelected([]);
+    } else {
+      alert("Error deleting selected rows");
+    }
+  };
+
+  // Delete all submissions
+  const handleDeleteAll = async () => {
+    if (!window.confirm("Delete ALL submissions? This cannot be undone.")) return;
+    const res = await fetch("/api/delete-all-submissions", {
+      method: "POST"
+    });
+    if (res.ok) {
+      fetchData();
+      setSelected([]);
+    } else {
+      alert("Error deleting all data");
     }
   };
 
@@ -98,6 +148,24 @@ export default function AdminDashboard() {
       {apiError && (
         <div className="mb-4 text-red-400 font-semibold">{apiError}</div>
       )}
+      <div className="mb-4 flex items-center gap-2">
+        <button
+          onClick={handleDeleteSelected}
+          disabled={selected.length === 0}
+          className={`bg-red-600 text-white px-3 py-2 rounded hover:bg-red-700 transition disabled:bg-gray-300 disabled:text-gray-600`}
+        >
+          Delete Selected
+        </button>
+        <button
+          onClick={handleDeleteAll}
+          className="bg-red-800 text-white px-3 py-2 rounded hover:bg-red-900 transition"
+        >
+          Delete All
+        </button>
+        <span className="ml-2 text-xs text-gray-500">
+          {selected.length > 0 && `(${selected.length} selected)`}
+        </span>
+      </div>
       {loading ? (
         <p>Loading submissions...</p>
       ) : (
@@ -105,6 +173,13 @@ export default function AdminDashboard() {
           <table className="min-w-[800px] w-full text-left border border-black text-xs sm:text-sm">
             <thead>
               <tr className="bg-white">
+                <th className="p-2 border border-white">
+                  <input
+                    type="checkbox"
+                    checked={selected.length === submissions.length && submissions.length > 0}
+                    onChange={handleSelectAll}
+                  />
+                </th>
                 <th className="p-2 border border-white">Name</th>
                 <th className="p-2 border border-white">Email</th>
                 <th className="p-2 border border-white">Website</th>
@@ -116,6 +191,13 @@ export default function AdminDashboard() {
             <tbody>
               {submissions.map((s, idx) => (
                 <tr key={s.id || idx} className="hover:bg-gray-300 transition">
+                  <td className="p-2 border border-white">
+                    <input
+                      type="checkbox"
+                      checked={selected.includes(s.id)}
+                      onChange={() => handleCheckbox(s.id)}
+                    />
+                  </td>
                   <td className="p-2 border border-white">{s.name}</td>
                   <td className="p-2 border border-white">{s.email}</td>
                   <td className="p-2 border border-white">{s.website}</td>
