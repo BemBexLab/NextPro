@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import Logo from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
-// REMOVE this line: import { menuList } from '@/lib/fackData/menuList'
 import MobileMenu from "./mobileMenu";
 import HeaderShortInfo from "./headerShortInfo";
 import {
@@ -17,18 +16,32 @@ import {
 } from "@/components/ui/offcanvas";
 import StickyHeader from "@/components/ui/stickyHeader";
 
-// Define your flat navigation here
+import { serviceDetailsData } from "@/lib/fackData/serviceDetailsData";
+
 const navigationLinks = [
   { id: 1, path: "/", lable: "Home" },
   { id: 2, path: "/about-us", lable: "About Us" },
-  { id: 3, path: "/services", lable: "Services We Offer" }, // The dropdown!
+  { id: 3, path: "/services", lable: "Services We Offer" },
   { id: 4, path: "/portfolio", lable: "Our Work" },
   { id: 5, path: "/pricing", lable: "Pricing Plans" },
   { id: 6, path: "/career", lable: "Career" },
 ];
 
+const serviceCategories = Object.keys(serviceDetailsData);
+
 const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
   const pathName = usePathname();
+  const router = useRouter();
+
+  // Handler for instant scroll if already on /service-details
+  const handleServiceCategoryClick = (cat) => {
+    router.push(`/service-details?category=${encodeURIComponent(cat)}`);
+    setTimeout(() => {
+      const target = document.getElementById("service-detail-main");
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
+
   return (
     <StickyHeader>
       <header
@@ -59,7 +72,6 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                 <nav className="xl:block hidden">
                   <ul className="flex items-center 2xl:gap-12.5 gap-7">
                     {navigationLinks.map(({ id, lable, path }) => {
-                      // Handle dropdown for Services We Offer
                       if (lable === "Services We Offer") {
                         return (
                           <li
@@ -89,13 +101,45 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                                     Services
                                   </Link>
                                 </li>
-                                <li>
+                                <li className="relative group/submenu">
                                   <Link
                                     href="/service-details"
-                                    className="block px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
+                                    className="block px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors cursor-pointer flex justify-between items-center"
                                   >
                                     Service Details
+                                    <svg
+                                      className="ml-2 w-4 h-4"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      strokeWidth={2}
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path d="M9 5l7 7-7 7" />
+                                    </svg>
                                   </Link>
+                                  {/* Sub-menu: All service categories */}
+                                  <ul className="absolute left-full top-0 w-72 rounded-xl shadow-2xl bg-white z-40 opacity-0 group-hover/submenu:opacity-100 group-hover/submenu:translate-x-0 transition-all duration-200 -translate-x-4 pointer-events-none group-hover/submenu:pointer-events-auto">
+                                    {serviceCategories.map((cat, i) => (
+                                      <li key={i}>
+                                        {pathName === "/service-details" ? (
+                                          <button
+                                            type="button"
+                                            onClick={() => handleServiceCategoryClick(cat)}
+                                            className="block px-6 py-2 w-full text-left text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
+                                          >
+                                            {cat}
+                                          </button>
+                                        ) : (
+                                          <Link
+                                            href={`/service-details?category=${encodeURIComponent(cat)}`}
+                                            className="block px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
+                                          >
+                                            {cat}
+                                          </Link>
+                                        )}
+                                      </li>
+                                    ))}
+                                  </ul>
                                 </li>
                               </ul>
                             </div>
@@ -143,8 +187,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                     </OffcanvasContent>
                   </Offcanvas>
                 </div>
-                <MobileMenu data={navigationLinks} />{" "}
-                {/* Pass new links to mobile too */}
+                <MobileMenu data={navigationLinks} />
               </div>
             </div>
           </div>

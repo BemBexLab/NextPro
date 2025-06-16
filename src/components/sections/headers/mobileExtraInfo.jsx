@@ -25,11 +25,11 @@ const MobileExtraInfo = () => {
                 <ul className='mb-[26px]'>
                     <li className='flex items-center gap-3'>
                         <span className='mt-[3px]'><FaRegEnvelope /></span>
-                        <Link href={"mailto:contact@nextmarketing.com"} className='text-base'>contact@nextpro.com</Link>
+                        <Link href={"mailto: info@webfoundersusa.com"} className='text-base'> info@webfoundersusa.com</Link>
                     </li>
                     <li className='flex items-center gap-3 mt-[9px]'>
                         <span><FaPhoneFlip /></span>
-                        <Link href={"tel:17186385000"} className='text-base'>+1.718.638.5000</Link>
+                        <Link href={"tel:(470) 205-2274"} className='text-base'> (470) 205-2274</Link>
                     </li>
                 </ul>
                 <SocialIcons />
