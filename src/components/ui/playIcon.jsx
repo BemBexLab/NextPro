@@ -28,13 +28,13 @@ const PlayIcon = ({ playOne, color }) => {
                     </div>
             }
 
-            <ModalVideo
+            {/* <ModalVideo
                 channel="youtube"
                 youtube={{ mute: 0, autoplay: 0 }}
                 isOpen={isOpen}
                 videoId="TKnufs85hXk"
                 onClose={() => setOpen(false)}
-            />
+            /> */}
         </>
     )
 }

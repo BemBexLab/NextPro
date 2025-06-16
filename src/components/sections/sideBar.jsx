@@ -6,8 +6,8 @@ import { FiSearch } from "react-icons/fi";
 import Image from 'next/image';
 import { blogData } from '@/lib/fackData/blogData';
 
-
-const SideBar = ({ search, blog }) => {
+const SideBar = ({ search, blog, onCategorySelect, selectedCategory }) => {
+  // Collect all unique categories from blogData
   const uniqueCategorys = []
   blogData.forEach(({ category }) => {
     category.forEach((item) => {
@@ -37,16 +37,20 @@ const SideBar = ({ search, blog }) => {
         <ul className='bg-[rgba(46,77,254,0.05)] lg:p-5 p-3 rounded-lg flex flex-col gap-[15px]'>
           {
             uniqueCategorys.map((category, index) => {
+              const isActive = selectedCategory === category;
               return (
-                <li key={index} className=''>
-                  <Link href={""} className={`lg:text-1xl text-lg font-semibold block bg-background rounded-lg lg:px-6 px-3 lg:pt-[18px] lg:pb-[22px] py-3 relative z-[1]  after:absolute after:z-[-1] after:left-0 after:top-0 after:w-0 hover:after:w-full after:h-full after:bg-primary after:text-white after:rounded-lg after:transition-all after:duration-500 hover:text-white transition-all duration-500 overflow-hidden ${index == 0 ? "bg-primary text-white":""}`}>
+                <li key={index}>
+                  <button
+                    type="button"
+                    onClick={() => onCategorySelect(category)}
+                    className={`w-full text-left lg:text-1xl text-lg font-semibold block bg-background rounded-lg lg:px-6 px-3 lg:pt-[18px] lg:pb-[22px] py-3 relative z-[1] after:absolute after:z-[-1] after:left-0 after:top-0 after:w-0 hover:after:w-full after:h-full after:bg-primary after:text-white after:rounded-lg after:transition-all after:duration-500 hover:text-white transition-all duration-500 overflow-hidden ${isActive ? "bg-primary text-white" : ""}`}
+                  >
                     {category}
-                  </Link>
+                  </button>
                 </li>
               )
             })
           }
-
         </ul>
       </div>
       {

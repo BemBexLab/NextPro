@@ -15,7 +15,10 @@ export const metadata = {
 const About = () => {
   return (
     <main>
-        <PageTitle pageName={"About"} breadcrumbLink={"About us"}/>
+        <PageTitle PageTitle pageName="About Us"
+  breadcrumbLink="About Us"
+  breadcrumbCurrent=""
+  bgImage="/images/servicebanner/website-creatives-and-images.jpg"/>
         <StoryFive counter={false}/>
         <Mission/>
         <TeamGrid/>

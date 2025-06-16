@@ -11,10 +11,13 @@ export const metadata = {
 const ServicesDetails = () => {
   return (
     <main>
-      <PageTitle pageName={"Social Media Marketing"} breadcrumbLink={"services"} breadcrumbCurrent={"Social Media Marketing"} />
+      <PageTitle pageName="Services"
+  breadcrumbLink="Services"
+  breadcrumbCurrent=""
+  bgImage="/images/servicebanner/services-image.jpg"  />
       <ServiceArtical />
-      <ContactForm color={"text-white"} inputColor={"bg-transparent border-white border text-white placeholder:text-white"} />
-      <div className='lg:pb-15 pb-9'></div>
+      {/* <ContactForm color={"text-white"} inputColor={"bg-transparent border-white border text-white placeholder:text-white"} />
+      <div className='lg:pb-15 pb-9'></div> */}
     </main>
   )
 }

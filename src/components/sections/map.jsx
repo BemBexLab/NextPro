@@ -37,26 +37,25 @@ const ContactMap = () => {
                     <div className='lg:pt-12.5 pt-7.5 relative z-[1] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[calc(100%-160px)] after:bg-gray after:rounded-[30px] after:z-[-1]'>
                         <div className='shadow-[0px_4px_46.9px_0px_rgba(9,25,40,0.1)] rounded-[30px] max-w-[1320px] mx-auto relative'>
                             <MapContainer
-                                className="w-full max-w-[1320px] min-h-[510px] h-full rounded-[30px]"
-                                center={[40.6716917, -73.9631364]}
-                                zoom={18}
+    className="w-full max-w-[1320px] min-h-[510px] h-full rounded-[30px]"
+    center={[33.8525416, -84.127224]} // <-- updated
+    zoom={18}
+>
+    <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    />
+    <Marker position={[33.8525416, -84.127224]} icon={icon}> {/* updated */}
+        <Popup>
+            <div className='border border-border rounded-2xl p-4'>
+                <h5 className='text-lg font-bold text-muted-foreground'>1014A Garner Rd SW</h5>
+                <b className='text-muted-foreground inline-block pt-2'>Lilburn, GA 30047, USA</b>
+                <p>Find us here for a visit or inquiry!</p>
+            </div>
+        </Popup>
+    </Marker>
+</MapContainer>
 
-                            >
-                                <TileLayer
-                                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                                />
-                                <Marker position={[40.6716917, -73.9631364]} icon={icon}>
-                                    <Popup>
-                                        <div className='border border-border rounded-2xl p-4'>
-                                            <h5 className='text-lg font-bold text-muted-foreground'>NextPro USA</h5>
-                                            <b className='text-muted-foreground inline-block pt-2'>WebFounders USA Inc.</b>
-
-                                            <p>243, Eastern Parkway, Brooklyn, New York, USA</p>
-                                        </div>
-                                    </Popup>
-                                </Marker>
-                            </MapContainer>
                         </div>
                         <div className='lg:pt-[46px] pt-4 flex lg:flex-row flex-col justify-between max-w-[1320px] mx-auto pb-12.5 px-3 lg:px-0'>
                             <Card icon={team_icon} title={'Address'} isIcon={false} desc={'1014 Garner Rd SW, Lilburn,GA 30047, USA'} />

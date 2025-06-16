@@ -116,4 +116,30 @@ export const blogData = [
         category: ["E-commerce Marketing"],
         thumb: "/images/blog/blog-post3-6.png",
     },
+    {
+        id: 10,
+        title: "Creative Ways That Non-Profits Can Increase Donations Via Social Media During the Holidays.",
+        date: "30 January 2024",
+        author: {
+            author_img: "",
+            author_name: "by John Doe",
+            social_link: [""],
+            description: ""
+        },
+        category: ["Digital Marketing"],
+        thumb: "/images/blog/blog-post3-6.png",
+    },
+    {
+        id: 11,
+        title: "Creative Ways That Non-Profits Can Increase Donations Via Social Media During the Holidays.",
+        date: "30 January 2024",
+        author: {
+            author_img: "",
+            author_name: "by John Doe",
+            social_link: [""],
+            description: ""
+        },
+        category: ["Web Development"],
+        thumb: "/images/blog/blog-post3-6.png",
+    },
 ]
