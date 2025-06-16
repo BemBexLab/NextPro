@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import Title from '../ui/title'
 import Input from '../ui/input'
