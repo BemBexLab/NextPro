@@ -57,7 +57,7 @@ export default function ContactPopup() {
         {/* Left Side - Full Cover Image */}
         <div className="relative w-1/2 h-full hidden md:block">
           <Image
-            src="/images/banner/POPPUP (1).png"
+            src="/images/banner/POPPUP.png"
             alt="Promo"
             fill
             className="object-cover"

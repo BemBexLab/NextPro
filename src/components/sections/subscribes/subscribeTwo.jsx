@@ -87,53 +87,61 @@ const Form = () => {
                     <DialogClose />
                 </div>
                 <form className='p-4 pt-0' onSubmit={handleSubmit}>
-                    <div className='flex md:flex-row flex-col justify-between gap-5'>
-                        <input
-                            type="text"
-                            placeholder="Name"
-                            className="bg-primary font-medium placeholder:text-white text-white w-full rounded px-3 py-2"
-                            value={name}
-                            onChange={e => setName(e.target.value)}
-                            required
-                        />
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            className="bg-primary font-medium placeholder:text-white text-white w-full rounded px-3 py-2"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className='flex md:flex-row flex-col justify-between gap-5 mt-4'>
-                        <input
-                            type="text"
-                            placeholder="Website"
-                            className="bg-primary font-medium placeholder:text-white text-white w-full rounded px-3 py-2"
-                            value={website}
-                            onChange={e => setWebsite(e.target.value)}
-                            required
-                        />
-                        <div className="w-full">
-                            <select
-                                className="bg-primary font-medium placeholder:text-white text-white w-full h-[48px] rounded px-3"
-                                value={service}
-                                onChange={e => setService(e.target.value)}
-                                required
-                            >
-                                <option value="" disabled>Select a Service</option>
-                                <option value="Search Engine Optimization">Search Engine Optimization</option>
-                                <option value="Social Media Marketing">Social Media Marketing</option>
-                                <option value="Content Writing">Content Writing</option>
-                                <option value="Affiliate Marketing">Affiliate Marketing</option>
-                                <option value="Email Marketing">Email Marketing</option>
-                            </select>
-                        </div>
-                    </div>
+                  <div className="flex md:flex-row flex-col justify-between gap-5">
+  <div className="w-full">
+    <input
+      type="text"
+      placeholder="Name"
+      className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-3 py-2 h-12"
+      value={name}
+      onChange={e => setName(e.target.value)}
+      required
+    />
+  </div>
+  <div className="w-full">
+    <input
+      type="email"
+      placeholder="Email"
+      className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-3 py-2 h-12"
+      value={email}
+      onChange={e => setEmail(e.target.value)}
+      required
+    />
+  </div>
+</div>
+<div className="flex md:flex-row flex-col justify-between gap-5 mt-4">
+  <div className="w-full">
+    <input
+      type="text"
+      placeholder="Website"
+      className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-3 py-2 h-12"
+      value={website}
+      onChange={e => setWebsite(e.target.value)}
+      required
+    />
+  </div>
+  <div className="w-full">
+    <select
+      className="bg-white border-2 border-gray-300 font-medium text-black w-full rounded px-3 py-2 h-12"
+      value={service}
+      onChange={e => setService(e.target.value)}
+      required
+    >
+      <option value="" disabled>Select a Service</option>
+      <option value="Search Engine Optimization">Search Engine Optimization</option>
+      <option value="Social Media Marketing">Social Media Marketing</option>
+      <option value="Content Writing">Content Writing</option>
+      <option value="Affiliate Marketing">Affiliate Marketing</option>
+      <option value="Email Marketing">Email Marketing</option>
+    </select>
+  </div>
+</div>
+
+
                     <div className='mt-4'>
                         <textarea
                             placeholder="Message"
-                            className="bg-primary font-medium placeholder:text-white text-white w-full rounded px-3 py-2 min-h-[120px] resize-none"
+                            className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-3 py-2"
                             value={message}
                             onChange={e => setMessage(e.target.value)}
                             required
