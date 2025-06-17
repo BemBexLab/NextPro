@@ -1,4 +1,4 @@
-"use client"
+
 // /app/service-details/page.jsx
 
 import React from 'react';
