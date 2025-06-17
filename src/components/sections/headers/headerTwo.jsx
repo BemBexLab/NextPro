@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -33,8 +33,14 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
   const pathName = usePathname();
   const router = useRouter();
 
+  // Dropdown/submenu state
+  const [openDropdown, setOpenDropdown] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState(false);
+
   // Handler for instant scroll if already on /service-details
   const handleServiceCategoryClick = (cat) => {
+    setOpenDropdown(false);
+    setOpenSubmenu(false);
     router.push(`/service-details?category=${encodeURIComponent(cat)}`);
     setTimeout(() => {
       const target = document.getElementById("service-detail-main");
@@ -75,10 +81,19 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                       if (lable === "Services We Offer") {
                         return (
                           <li
-                            className="pt-[43px] pb-[42px] relative group"
+                            className="pt-[43px] pb-[42px] relative"
                             key={id}
+                            onMouseEnter={() => setOpenDropdown(true)}
+                            onMouseLeave={() => {
+                              setOpenDropdown(false);
+                              setOpenSubmenu(false);
+                            }}
                           >
-                            <span className="font-semibold leading-[22px] flex items-center gap-1 text-muted-foreground relative transition-all duration-500 hover:text-primary-foreground cursor-pointer">
+                            <span
+                              className="font-semibold leading-[22px] flex items-center gap-1 text-muted-foreground relative transition-all duration-500 hover:text-primary-foreground cursor-pointer"
+                              tabIndex={0}
+                              onClick={() => setOpenDropdown((v) => !v)}
+                            >
                               {lable}
                               <svg
                                 className="ml-1 w-5 h-5"
@@ -91,34 +106,56 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                               </svg>
                             </span>
                             {/* Dropdown */}
-                            <div className="absolute left-0 top-full w-56 rounded-xl shadow-2xl bg-white z-30 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 translate-y-2 pointer-events-none group-hover:pointer-events-auto">
+                            <div
+                              className={`absolute left-0 top-full w-56 rounded-xl shadow-2xl bg-white z-30 transition-all duration-200 ${
+                                openDropdown
+                                  ? "opacity-100 pointer-events-auto translate-y-0"
+                                  : "opacity-0 pointer-events-none translate-y-2"
+                              }`}
+                            >
                               <ul className="py-3">
                                 <li>
                                   <Link
                                     href="/services"
                                     className="block px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
+                                    onClick={() => setOpenDropdown(false)}
                                   >
                                     Services
                                   </Link>
                                 </li>
-                                <li className="relative group/submenu">
+                                <li
+                                  className="relative"
+                                  onMouseEnter={() => setOpenSubmenu(true)}
+                                  onMouseLeave={() => setOpenSubmenu(false)}
+                                >
                                   <Link
-                                    href="/service-details"
-                                    className="block px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors cursor-pointer flex justify-between items-center"
+  href="/service-details"
+  className="block px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors cursor-pointer flex justify-between items-center"
+  onClick={() => {
+    setOpenDropdown(false);
+    setOpenSubmenu(false);
+  }}
+>
+  Service Details
+  <svg
+    className="ml-2 w-4 h-4"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+  >
+    <path d="M9 5l7 7-7 7" />
+  </svg>
+</Link>
+
+                                  {/* Sub-menu */}
+                                  <ul
+                                    className={`absolute left-full top-0 w-72 rounded-xl shadow-2xl bg-white z-40 transition-all duration-200 ${
+                                      openSubmenu
+                                        ? "opacity-100 pointer-events-auto translate-x-0"
+                                        : "opacity-0 pointer-events-none -translate-x-4"
+                                    }`}
                                   >
-                                    Service Details
-                                    <svg
-                                      className="ml-2 w-4 h-4"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      strokeWidth={2}
-                                      viewBox="0 0 24 24"
-                                    >
-                                      <path d="M9 5l7 7-7 7" />
-                                    </svg>
-                                  </Link>
-                                  {/* Sub-menu: All service categories */}
-                                  <ul className="absolute left-full top-0 w-72 rounded-xl shadow-2xl bg-white z-40 opacity-0 group-hover/submenu:opacity-100 group-hover/submenu:translate-x-0 transition-all duration-200 -translate-x-4 pointer-events-none group-hover/submenu:pointer-events-auto">
                                     {serviceCategories.map((cat, i) => (
                                       <li key={i}>
                                         {pathName === "/service-details" ? (
@@ -133,6 +170,10 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                                           <Link
                                             href={`/service-details?category=${encodeURIComponent(cat)}`}
                                             className="block px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
+                                            onClick={() => {
+                                              setOpenDropdown(false);
+                                              setOpenSubmenu(false);
+                                            }}
                                           >
                                             {cat}
                                           </Link>
