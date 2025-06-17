@@ -57,7 +57,7 @@ export default function ContactPopup() {
         {/* Left Side - Full Cover Image */}
         <div className="relative w-1/2 h-full hidden md:block">
           <Image
-            src="/images/banner/ChatGPT Image Jun 13, 2025, 11_36_46 AM.png"
+            src="/images/banner/POPPUP (1).png"
             alt="Promo"
             fill
             className="object-cover"

@@ -1,18 +1,13 @@
 // /app/service-details/page.jsx
 
-import React, { Suspense } from 'react';
+import React from 'react';
 import PageTitle from '@/components/sections/pageTitle';
-// DO NOT mark this file with "use client"
-
-const ServiceArtical = React.lazy(() =>
-  import('@/components/sections/services/serviceArtical')
-);
-// or just import directly if it's already a client component
-// import ServiceArtical from '@/components/sections/services/serviceArtical';
+import ServiceArtical from '@/components/sections/services/serviceArtical';
+// import ContactForm from '@/components/sections/contactForm'; // Uncomment if needed
 
 export const metadata = {
   title: "WebFoundersUSA",
-  description: "NextPro is a modern Next.js and Tailwind CSS Template that features General Marketing, Social Media Marketing, AI in Marketing, Paid Advertising, Video Marketing, Analytics and Reporting, Industry news & Trends, E-commerce Marketing",
+  description: "WebFoundersUSA is a modern Next.js and Tailwind CSS Template that features General Marketing, Social Media Marketing, AI in Marketing, Paid Advertising, Video Marketing, Analytics and Reporting, Industry news & Trends, E-commerce Marketing",
 };
 
 const ServicesDetails = () => {
@@ -25,11 +20,9 @@ const ServicesDetails = () => {
         bgImage="/images/servicebanner/services-image.jpg"
       />
 
-      <Suspense fallback={<div className="py-20 text-center text-lg text-primary">Loading service details...</div>}>
-        <ServiceArtical />
-      </Suspense>
+      <ServiceArtical />
 
-      {/* 
+      {/*
       <ContactForm 
         color={"text-white"} 
         inputColor={"bg-transparent border-white border text-white placeholder:text-white"} 
