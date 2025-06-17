@@ -1,37 +1,17 @@
-"use client"; // Mark the whole page as a client component!
+"use client"; // Make this a client component
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PageTitle from '@/components/sections/pageTitle';
 import ServiceArtical from '@/components/sections/services/serviceArtical';
 // import ContactForm from '@/components/sections/contactForm'; // Uncomment if needed
 
+// If you want metadata, you can uncomment/update these lines:
+// export const metadata = {
+//   title: "WebFoundersUSA",
+//   description: "NextPro is a modern Next.js and Tailwind CSS Template that features General Marketing, Social Media Marketing, AI in Marketing, Paid Advertising, Video Marketing, Analytics and Reporting, Industry news & Trends, E-commerce Marketing",
+// };
+
 const ServicesDetails = () => {
-  // If you need to fetch WordPress or other CMS data, do it here.
-  // For now, I'm not fetching posts since your ServiceArtical uses local data (serviceDetailsData).
-  // If you want to fetch posts, see commented section below.
-
-  // Example: Fetch WordPress posts here (optional)
-  /*
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      setLoading(true);
-      try {
-        const res = await fetch("/api/posts", { cache: "no-store" });
-        const data = await res.json();
-        setPosts(data);
-      } catch (err) {
-        console.error("Error fetching posts", err);
-        setPosts([]);
-      }
-      setLoading(false);
-    };
-    fetchPosts();
-  }, []);
-  */
-
   return (
     <main>
       <PageTitle
@@ -41,14 +21,6 @@ const ServicesDetails = () => {
         bgImage="/images/servicebanner/services-image.jpg"
       />
 
-      {/* If you want to pass fetched posts: */}
-      {/* {loading ? (
-        <div className="py-20 text-center text-lg text-primary">Loading service details...</div>
-      ) : (
-        <ServiceArtical posts={posts} />
-      )} */}
-
-      {/* Your local-data version: */}
       <ServiceArtical />
 
       {/* 
@@ -63,3 +35,6 @@ const ServicesDetails = () => {
 };
 
 export default ServicesDetails;
+
+// This tells Next.js not to statically generate this page
+export const dynamic = "force-dynamic";
