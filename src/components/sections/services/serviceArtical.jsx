@@ -1,58 +1,58 @@
-'use client'
-import React, { useState, useEffect, useRef } from 'react'
-import { useSearchParams, useRouter } from 'next/navigation'
-import Image from 'next/image'
-import Title from '@/components/ui/title'
-import Highlight from '@/components/ui/highlight'
-import SlideUp from '@/components/animations/slideUp'
-import SideBar from '../sideBar'
-import { faqData } from '@/lib/fackData/faqData'
-import { serviceDetailsData } from "@/lib/fackData/serviceDetailsData"
+'use client';
+import React, { useState, useEffect, useRef } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
+import Image from 'next/image';
+import Title from '@/components/ui/title';
+import Highlight from '@/components/ui/highlight';
+import SlideUp from '@/components/animations/slideUp';
+import SideBar from '../sideBar';
+import { faqData } from '@/lib/fackData/faqData';
+import { serviceDetailsData } from "@/lib/fackData/serviceDetailsData";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
-import Document from '../../../../public/icons/document'
-import Shield from '../../../../public/icons/shield'
-import Discount from '../../../../public/icons/discount'
-import Buy from '../../../../public/icons/buy'
-import Send from '../../../../public/icons/send'
-import Activity from '../../../../public/icons/activity'
+} from "@/components/ui/accordion";
+import Document from '../../../../public/icons/document';
+import Shield from '../../../../public/icons/shield';
+import Discount from '../../../../public/icons/discount';
+import Buy from '../../../../public/icons/buy';
+import Send from '../../../../public/icons/send';
+import Activity from '../../../../public/icons/activity';
 
 // Default: first service
-const defaultCategory = Object.keys(serviceDetailsData)[0]
+const defaultCategory = Object.keys(serviceDetailsData)[0];
 
 const ServiceArtical = () => {
-  const searchParams = useSearchParams()
-  const router = useRouter()
-  const [selectedCategory, setSelectedCategory] = useState(defaultCategory)
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
 
   // Ref for main section scroll
-  const detailSectionRef = useRef(null)
+  const detailSectionRef = useRef(null);
 
   // Sync with ?category= from the URL
   useEffect(() => {
-    const catFromUrl = searchParams.get('category')
+    const catFromUrl = searchParams.get('category');
     if (catFromUrl && serviceDetailsData[catFromUrl]) {
-      setSelectedCategory(catFromUrl)
+      setSelectedCategory(catFromUrl);
       // Scroll to section when param changes (short timeout for smoother UX)
       setTimeout(() => {
-        detailSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
-      }, 50)
+        detailSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
     } else {
-      setSelectedCategory(defaultCategory)
+      setSelectedCategory(defaultCategory);
     }
     // eslint-disable-next-line
-  }, [searchParams])
+  }, [searchParams]);
 
   // On sidebar click, update the URL (will trigger effect above)
   const handleCategorySelect = (cat) => {
-    router.push(`/service-details?category=${encodeURIComponent(cat)}`)
-  }
+    router.push(`/service-details?category=${encodeURIComponent(cat)}`);
+  };
 
-  const mainData = serviceDetailsData[selectedCategory]
+  const mainData = serviceDetailsData[selectedCategory];
 
   return (
     <div className='lg:py-15 py-9' id="service-detail-main">
@@ -132,10 +132,10 @@ const ServiceArtical = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ServiceArtical
+export default ServiceArtical;
 
 const Card = ({ icon, title, desc }) => (
   <div className='grid grid-cols-[83px_auto] items-start gap-7.5'>
@@ -147,4 +147,4 @@ const Card = ({ icon, title, desc }) => (
       <p>{desc}</p>
     </div>
   </div>
-)
+);
