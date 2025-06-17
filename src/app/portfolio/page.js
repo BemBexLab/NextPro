@@ -11,7 +11,7 @@ export const metadata = {
 const Portfolio = () => {
   return (
     <main>
-      <PageTitle pageName={"Portfolio"} breadcrumbLink={"Portfolio"} />
+      {/* <PageTitle pageName={"Portfolio"} breadcrumbLink={"Portfolio"} /> */}
       <ProjectsTab />
     </main>
   );

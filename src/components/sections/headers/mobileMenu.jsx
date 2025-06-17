@@ -3,11 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../../ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { MdMenu } from "react-icons/md";
 import MobileExtraInfo from "./mobileExtraInfo";
 import { usePathname } from "next/navigation";
@@ -37,7 +33,7 @@ const MobileMenu = ({ data }) => {
             <div className="flex justify-start mt-7">
               <Link href={"/"}>
                 <Image
-                  src={"/images/logo-light.png"}
+                  src={"/images/image123.png"}
                   width={179}
                   height={53}
                   alt="logo-white"
@@ -55,42 +51,28 @@ const MobileMenu = ({ data }) => {
                         className="flex justify-between items-center w-full text-secondary-foreground dark:text-muted-foreground text-base leading-[100%] py-[11px] px-4 font-semibold"
                       >
                         {lable}
-                        {openSubMenu ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                        {openSubMenu ? (
+                          <ChevronUp size={18} />
+                        ) : (
+                          <ChevronDown size={18} />
+                        )}
                       </button>
 
                       {openSubMenu && (
                         <ul className="pl-6 space-y-1">
-                          <li>
-                            <Link
-                              href="/services"
-                              className="block py-2 px-2 text-sm text-white hover:text-primary-foreground"
-                              onClick={() => setOpen(false)}
-                            >
-                              All Services
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-    href="/service-details"
-    className="block py-2 px-2 text-sm font-semibold text-white hover:text-primary-foreground"
-    onClick={() => setOpen(false)}
-  >
-    Service Details
-  </Link>
-                            <ul className="pl-2">
-                              {serviceCategories.map((cat, i) => (
-                                <li key={i}>
-                                  <Link
-                                    href={`/service-details?category=${encodeURIComponent(cat)}`}
-                                    className="block py-2 px-2 text-sm text-white hover:text-primary-foreground"
-                                    onClick={() => setOpen(false)}
-                                  >
-                                    {cat}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </li>
+                          {serviceCategories.map((cat, i) => (
+                            <li key={i}>
+                              <Link
+                                href={`/service-details?category=${encodeURIComponent(
+                                  cat
+                                )}`}
+                                className="block py-2 px-2 text-sm text-white hover:text-primary-foreground"
+                                onClick={() => setOpen(false)}
+                              >
+                                {cat}
+                              </Link>
+                            </li>
+                          ))}
                         </ul>
                       )}
                     </li>

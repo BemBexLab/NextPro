@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { IoCall } from "react-icons/io5";
 
 import Logo from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
@@ -24,7 +25,7 @@ const navigationLinks = [
   { id: 3, path: "/services", lable: "Services We Offer" },
   { id: 4, path: "/portfolio", lable: "Our Work" },
   { id: 5, path: "/pricing", lable: "Pricing Plans" },
-  { id: 6, path: "/career", lable: "Career" },
+  { id: 6, path: "/blog-single-no-siderbar", lable: "Blog" },
 ];
 
 const serviceCategories = Object.keys(serviceDetailsData);
@@ -33,14 +34,12 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
   const pathName = usePathname();
   const router = useRouter();
 
-  // Dropdown/submenu state
+  // Dropdown state
   const [openDropdown, setOpenDropdown] = useState(false);
-  const [openSubmenu, setOpenSubmenu] = useState(false);
 
-  // Handler for instant scroll if already on /service-details
+  // Direct category click handler
   const handleServiceCategoryClick = (cat) => {
     setOpenDropdown(false);
-    setOpenSubmenu(false);
     router.push(`/service-details?category=${encodeURIComponent(cat)}`);
     setTimeout(() => {
       const target = document.getElementById("service-detail-main");
@@ -84,10 +83,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                             className="pt-[43px] pb-[42px] relative"
                             key={id}
                             onMouseEnter={() => setOpenDropdown(true)}
-                            onMouseLeave={() => {
-                              setOpenDropdown(false);
-                              setOpenSubmenu(false);
-                            }}
+                            onMouseLeave={() => setOpenDropdown(false)}
                           >
                             <span
                               className="font-semibold leading-[22px] flex items-center gap-1 text-muted-foreground relative transition-all duration-500 hover:text-primary-foreground cursor-pointer"
@@ -105,83 +101,28 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                                 <path d="M19 9l-7 7-7-7" />
                               </svg>
                             </span>
-                            {/* Dropdown */}
+                            {/* Simple dropdown: just categories */}
                             <div
-                              className={`absolute left-0 top-full w-56 rounded-xl shadow-2xl bg-white z-30 transition-all duration-200 ${
+                              className={`absolute left-0 top-full w-72 rounded-xl shadow-2xl bg-white z-30 transition-all duration-200 ${
                                 openDropdown
                                   ? "opacity-100 pointer-events-auto translate-y-0"
                                   : "opacity-0 pointer-events-none translate-y-2"
                               }`}
                             >
                               <ul className="py-3">
-                                <li>
-                                  <Link
-                                    href="/services"
-                                    className="block px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
-                                    onClick={() => setOpenDropdown(false)}
-                                  >
-                                    Services
-                                  </Link>
-                                </li>
-                                <li
-                                  className="relative"
-                                  onMouseEnter={() => setOpenSubmenu(true)}
-                                  onMouseLeave={() => setOpenSubmenu(false)}
-                                >
-                                  <Link
-  href="/service-details"
-  className="block px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors cursor-pointer flex justify-between items-center"
-  onClick={() => {
-    setOpenDropdown(false);
-    setOpenSubmenu(false);
-  }}
->
-  Service Details
-  <svg
-    className="ml-2 w-4 h-4"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    viewBox="0 0 24 24"
-  >
-    <path d="M9 5l7 7-7 7" />
-  </svg>
-</Link>
-
-                                  {/* Sub-menu */}
-                                  <ul
-                                    className={`absolute left-full top-0 w-72 rounded-xl shadow-2xl bg-white z-40 transition-all duration-200 ${
-                                      openSubmenu
-                                        ? "opacity-100 pointer-events-auto translate-x-0"
-                                        : "opacity-0 pointer-events-none -translate-x-4"
-                                    }`}
-                                  >
-                                    {serviceCategories.map((cat, i) => (
-                                      <li key={i}>
-                                        {pathName === "/service-details" ? (
-                                          <button
-                                            type="button"
-                                            onClick={() => handleServiceCategoryClick(cat)}
-                                            className="block px-6 py-2 w-full text-left text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
-                                          >
-                                            {cat}
-                                          </button>
-                                        ) : (
-                                          <Link
-                                            href={`/service-details?category=${encodeURIComponent(cat)}`}
-                                            className="block px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
-                                            onClick={() => {
-                                              setOpenDropdown(false);
-                                              setOpenSubmenu(false);
-                                            }}
-                                          >
-                                            {cat}
-                                          </Link>
-                                        )}
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </li>
+                                {serviceCategories.map((cat, i) => (
+                                  <li key={i}>
+                                    <button
+                                      type="button"
+                                      onClick={() =>
+                                        handleServiceCategoryClick(cat)
+                                      }
+                                      className="block w-full text-left px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
+                                    >
+                                      {cat}
+                                    </button>
+                                  </li>
+                                ))}
                               </ul>
                             </div>
                           </li>
@@ -202,6 +143,14 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                   </ul>
                 </nav>
                 <div className="hidden xl:flex items-center gap-5">
+                  <button className="rounded-full bg-primary border-primary w-14 h-14 flex items-center justify-center animate-shake-pause">
+  <Link className="text-white flex items-center justify-center" href={"/contact-us"}>
+    <IoCall size={30} />
+  </Link>
+</button>
+
+
+
                   <Button asChild size="xl">
                     <Link className="text-foreground" href={"/contact-us"}>
                       {" "}

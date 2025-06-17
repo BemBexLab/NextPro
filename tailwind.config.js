@@ -130,7 +130,13 @@ module.exports = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-15px)" },
         },
-
+        // NEW: shake-pause for 1s shake, 1s pause, shake is now faster
+        "shake-pause": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "5%, 15%, 25%, 35%": { transform: "translateX(-8px)" },
+          "10%, 20%, 30%, 40%": { transform: "translateX(8px)" },
+          "41%, 100%": { transform: "translateX(0)" }
+        }
       },
       animation: {
         "spring-one": "spring 3s ease-in-out 0s infinite",
@@ -141,7 +147,9 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "custom-cussor": "custom-cussor 2s ease-out 0.5s infinite",
         "up-down": "up-down 1.1s infinite alternate",
-        "left-right": "left-right 1.1s infinite alternate"
+        "left-right": "left-right 1.1s infinite alternate",
+        // Use this for 1s fast shake, 1s pause
+        "shake-pause": "shake-pause 2s cubic-bezier(.36,.07,.19,.97) infinite"
       },
     },
   },

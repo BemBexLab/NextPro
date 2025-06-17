@@ -10,7 +10,7 @@ export const metadata = {
 const BLogSIngle2 = () => {
     return (
         <main>
-            <PageTitle pageName={"Blog"} breadcrumbLink={"Blog"} breadcrumbCurrent={"New Study: Instagram Reels Outperform TikTok & Facebook Videos."}  />
+            {/* <PageTitle pageName={"Blog"} breadcrumbLink={"Blog"} breadcrumbCurrent={"New Study: Instagram Reels Outperform TikTok & Facebook Videos."}  /> */}
             <BlogArtical sidebarShow={false}/>
         </main>
     )

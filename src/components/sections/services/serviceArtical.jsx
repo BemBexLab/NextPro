@@ -6,7 +6,6 @@ import Title from '@/components/ui/title'
 import Highlight from '@/components/ui/highlight'
 import SlideUp from '@/components/animations/slideUp'
 import SideBar from '../sideBar'
-import { faqData } from '@/lib/fackData/faqData'
 import { serviceDetailsData } from "@/lib/fackData/serviceDetailsData"
 import {
   Accordion,
@@ -20,6 +19,16 @@ import Discount from '../../../../public/icons/discount'
 import Buy from '../../../../public/icons/buy'
 import Send from '../../../../public/icons/send'
 import Activity from '../../../../public/icons/activity'
+
+// Icons array for cycling through or customizing per step
+const icons = [
+  <Document width={42} height={45} />,
+  <Shield width={42} height={45} />,
+  <Discount width={42} height={45} />,
+  <Buy width={42} height={45} />,
+  <Activity width={42} height={45} />,
+  <Send width={42} height={45} />
+]
 
 // Default: first service
 const defaultCategory = Object.keys(serviceDetailsData)[0]
@@ -37,7 +46,6 @@ const ServiceArtical = () => {
     const catFromUrl = searchParams.get('category')
     if (catFromUrl && serviceDetailsData[catFromUrl]) {
       setSelectedCategory(catFromUrl)
-      // Scroll to section when param changes (short timeout for smoother UX)
       setTimeout(() => {
         detailSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
       }, 50)
@@ -95,32 +103,35 @@ const ServiceArtical = () => {
                 </div>
               </div>
             </div>
-            {/* ---- KEEP ALL YOUR STATIC/DYNAMIC BOTTOM SECTIONS ---- */}
+
+            {/* --- STRATEGIC APPROACH (DYNAMIC) --- */}
             <div className='pt-12.5'>
               <Title size={"4xl"}>Strategic Approach</Title>
-              <p className='pt-7.5'>
-                We believe in taking a strategic approach to digital marketing that focuses on delivering tangible results for our clients. Our methodology is built on a foundation of data-driven insights, industry expertise, and innovative techniques to ensure maximum impact and ROI.
-              </p>
               <div className='grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12.5 pt-12.5'>
-                <Card icon={<Document width={42} height={45} />} title={"Data-Driven Insights"} desc={"Through thorough analysis of key metrics and market trends, we uncover valuable insights."} />
-                <Card icon={<Shield width={42} height={45} />} title={"Customized Strategies"} desc={"We develop customized plans that align with your specific goals and budget."} />
-                <Card icon={<Discount width={42} height={45} />} title={"Better ROI"} desc={"Maximize returns with optimized campaigns and budget allocation."} />
-                <Card icon={<Buy width={42} height={45} />} title={"Conversion Focused"} desc={"Every tactic is designed to convert visitors into leads and customers."} />
-                <Card icon={<Activity width={42} height={45} />} title={"Continuous Improvement"} desc={"We constantly test, analyze, and refine our strategies."} />
-                <Card icon={<Send width={42} height={45} />} title={"Proactive Communication"} desc={"You stay informed and in control at every stage."} />
+                {(mainData.strategicApproach || []).map((item, i) => (
+                  <Card
+                    key={i}
+                    icon={icons[i % icons.length]}
+                    title={item.title}
+                    desc={item.desc}
+                  />
+                ))}
               </div>
             </div>
+
+            {/* --- FAQ (DYNAMIC) --- */}
             <div className='pt-12.5'>
-              <Title size={"4xl"}>Your Digital Journey Clarified (FAQ)</Title>
-              <p className='pt-7.5'>Explore essential information about Next Agency and our services. Find quick answers to common queries in our FAQ section, ensuring a clear understanding of your digital journey with us.</p>
+              <Title size={"4xl"}>Frequently Asked Questions</Title>
               <div className='pt-15'>
                 <Accordion type="single" defaultValue="one" collapsible>
-                  {faqData.slice(0, 5).map(({ ans, id, question }) => (
-                    <SlideUp key={id} id={id}>
-                      <AccordionItem value={id} className='mb-2.5 bg-gray rounded-[15px] border-none'>
-                        <AccordionTrigger className="font-semibold text-primary-foreground border-none lg:px-7.5 px-4 lg:py-7.5 py-4 text-left">{question}</AccordionTrigger>
+                  {(mainData.faqs || []).map(({ question, answer }, idx) => (
+                    <SlideUp key={idx} id={idx}>
+                      <AccordionItem value={String(idx)} className='mb-2.5 bg-gray rounded-[15px] border-none'>
+                        <AccordionTrigger className="font-semibold text-primary-foreground border-none lg:px-7.5 px-4 lg:py-7.5 py-4 text-left">
+                          {question}
+                        </AccordionTrigger>
                         <AccordionContent className="lg:px-7.5 px-4 text-muted-foreground">
-                          {ans}
+                          {answer}
                         </AccordionContent>
                       </AccordionItem>
                     </SlideUp>

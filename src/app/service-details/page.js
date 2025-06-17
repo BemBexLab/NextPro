@@ -14,12 +14,12 @@ import ServiceArtical from '@/components/sections/services/serviceArtical';
 const ServicesDetails = () => {
   return (
     <main>
-      <PageTitle
+      {/* <PageTitle
         pageName="Services"
         breadcrumbLink="Services"
         breadcrumbCurrent=""
         bgImage="/images/servicebanner/services-image.jpg"
-      />
+      /> */}
 
       <ServiceArtical />
 

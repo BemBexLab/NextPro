@@ -11,7 +11,7 @@ export const metadata = {
 const PortfolioDetails = () => {
   return (
     <main>
-      <PageTitle pageName={"Project Details"} breadcrumbLink={"Project Details"}/>
+      {/* <PageTitle pageName={"Project Details"} breadcrumbLink={"Project Details"}/> */}
       <ProjectArtical/>
       <SubscribeTwo/>
     </main>
