@@ -6,7 +6,7 @@ import SocialIcons from '../../ui/socialIcons';
 const MobileExtraInfo = () => {
     return (
         <div>
-            <ul className='px-4 mt-3'>
+            {/* <ul className='px-4 mt-3'>
                 {
                     headerExtraInfo.map(({ icon, id, label, link }) => {
                         return (
@@ -20,7 +20,7 @@ const MobileExtraInfo = () => {
                     })
                 }
 
-            </ul>
+            </ul> */}
             <div className='text-secondary-foreground dark:text-muted-foreground px-4 mt-10'>
                 <ul className='mb-[26px]'>
                     <li className='flex items-center gap-3'>
