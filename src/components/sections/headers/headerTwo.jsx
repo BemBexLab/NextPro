@@ -75,7 +75,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                   <Logo />
                 </div>
                 <nav className="xl:block hidden">
-                  <ul className="flex items-center 2xl:gap-12.5 gap-7">
+                  <ul className="flex items-center 2xl:gap-10 gap-7">
                     {navigationLinks.map(({ id, lable, path }) => {
                       if (lable === "Services We Offer") {
                         return (
@@ -143,13 +143,19 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                   </ul>
                 </nav>
                 <div className="hidden xl:flex items-center gap-5">
-                  <button className="rounded-full bg-primary border-primary w-14 h-14 flex items-center justify-center animate-shake-pause">
-  <Link className="text-white flex items-center justify-center" href={"/contact-us"}>
-    <IoCall size={30} />
-  </Link>
-</button>
-
-
+                  <a
+                    href="tel:4702052274"
+                    className="flex items-center gap-3 group"
+                  >
+                    <div className="rounded-full bg-primary border-primary w-14 h-14 flex items-center justify-center animate-shake-pause group-hover:bg-primary/80 transition">
+                      <div className="text-white flex items-center justify-center">
+                        <IoCall size={30} />
+                      </div>
+                    </div>
+                    <span className="text-base font-semibold text-primary group-hover:underline">
+                      (470) 205-2274
+                    </span>
+                  </a>
 
                   <Button asChild size="xl">
                     <Link className="text-foreground" href={"/contact-us"}>
