@@ -191,4 +191,5 @@ export const pricingData = [
         ],
         info: "Large businesses and complex web applications"
     },
+    
 ]

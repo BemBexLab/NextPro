@@ -14,7 +14,7 @@ export const metadata = {
 const ContactUs = () => {
   return (
     <main>
-      <PageTitle pageName={"Contact Us"} breadcrumbLink={"Contact"} />
+      {/* <PageTitle pageName={"Contact Us"} breadcrumbLink={"Contact"} /> */}
       <ContactMap />
       {/* <ContactForm color={"text-white"} inputColor={"bg-transparent border-white border text-white placeholder:text-white"} /> */}
       {/* <div className='lg:pt-15 pt-9'></div> */}
