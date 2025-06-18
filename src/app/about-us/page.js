@@ -21,7 +21,7 @@ const About = () => {
   bgImage="/images/servicebanner/website-creatives-and-images.jpg"/> */}
         <StoryFive counter={false}/>
         <Mission/>
-        <TeamGrid/>
+        {/* <TeamGrid/> */}
         <TestimonialTwo/>
         {/* <FaqTwo/> */}
         <SubscribeTwo/>

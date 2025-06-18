@@ -9,7 +9,7 @@ import TestimonialThree from "@/components/sections/testimonials/testimonialThre
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 import ServiceTwo from "@/components/sections/services/serviceTwo";
 import StoryOne from "@/components/sections/ourStories/storyOne";
-import PriceTwo from '@/components/sections/pricing/priceTwo'
+import PriceThree from '@/components/sections/pricing/priceThree'
 import CompaniesSlideer from "@/components/sections/companiesslide/slider";
 
 export const metadata = {
@@ -31,7 +31,7 @@ const HomeFour = () => {
       <Study />
       {/* <TestimonialThree /> */}
       {/* <div className="mt-[-80px]"></div> */}
-      <PriceTwo />
+      <PriceThree />
       <SubscribeTwo />
       {/* <BlogOne /> */}
     </main>

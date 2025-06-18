@@ -72,7 +72,7 @@ export const pricingData = [
   },
   {
     id: 4,
-    plan_name: "IDENTITY WEBSITE PACKAGE",
+    plan_name: "IDENTITY WEBSITE PREMIUM PACKAGE",
     category: "Website Design",
     price: "1599",
     services: [
