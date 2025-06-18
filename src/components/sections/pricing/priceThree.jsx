@@ -55,7 +55,7 @@ const PriceThree = () => {
                   className={`px-4 py-2 rounded-md text-sm font-bold uppercase tracking-wide border transition ${
                     activeCategory === cat
                       ? "bg-primary text-white border-primary shadow"
-                      : "bg-white text-primary border-transparent hover:bg-blue-400 hover:text-white"
+                      : "bg-white text-primary border-transparent hover:bg-[#E2E7FF] hover:text-primary"
                   }`}
                   style={{ minWidth: 110 }}
                 >
