@@ -1,97 +1,80 @@
-import React from 'react'
-import Image from "next/image"
-import Link from "next/link"
-import RightArrow from "../../../../public/icons/rightArrow"
-import { Button } from '@/components/ui/button'
-import SlideUp from '@/components/animations/slideUp'
+import React from "react";
+import Link from "next/link";
 
-const PriceCardTwo = ({ id, plan_name, isTag, price, link, services, additionalAdds, info, cardThree, isAnimating }) => {
-    return (
-        <SlideUp id={id}>
-            <div className={`bg-gray rounded-2.5xl py-12.5 transition-all duration-300 transform ${isAnimating ? "translate-y-[50px] opacity-0" : "translate-y-0 opacity-100"} h-full flex flex-col`}>
-                {/* Card Main Content */}
-                <div className="flex-1 flex flex-col">
-                    <div className='px-7.5'>
-                        <div className='flex justify-between items-center'>
-                            <h5 className='text-2xl font-extrabold text-muted-foreground'>{plan_name}</h5>
-                        </div>
-                        {cardThree && <p className='pt-2'>{info}</p>}
-                        <div className='flex items-start py-2.5'>
-                            <h2 className='xl:text-7.5xl md:text-5.5xl text-4.5xl font-extrabold text-muted-foreground leading-[120%] relative overflow-hidden'>
-                                <span className='relative opacity-100 visible'>
-                                    <sub className='lg:text-4xl text-2xl top-[-0.1em]'>$</sub>{price}
-                                    <span className='lg:font-semibold font-medium lg:text-1xl text-base text-foreground'> one-time</span>
-                                </span>
-                            </h2>
-                        </div>
-                        {!cardThree && <hr className="text-[#B0C2E2] pb-7.5" />}
-                        {!cardThree && (
-                            <p className='text-muted-foreground lg:text-1xl text-base'><span className='font-semibold'>Perfect for: </span>{info}</p>
-                        )}
-                        <div className='pt-9'>
-                            <h5 className='lg:text-1xl text-xl font-semibold text-muted-foreground'>What's Included:</h5>
-                            <ul className='flex flex-col gap-2 pt-2'>
-                                {services.map(({ id, service, isavailable }) => (
-                                    <li key={id} className='flex items-center gap-2'>
-                                        {isavailable ?
-                                            <Image src={"/images/shapes/check-icon-blue.svg"} width={20} height={20} alt="check icon" />
-                                            :
-                                            <Image src={"/images/shapes/check-icon-gray.svg"} width={20} height={20} alt="check icon" className='dark:brightness-50' />
-                                        }
-                                        <span className='lg:text-lg text-base'>{service}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        {additionalAdds && additionalAdds.length > 0 && (
-                            <div className='pt-6'>
-                                <h5 className='lg:text-1xl text-xl font-semibold text-muted-foreground'>Optional Add-ons:</h5>
-                                <ul className='flex flex-col gap-2 pt-2'>
-                                    {additionalAdds.map(({ id, additional }) => (
-                                        <li key={id} className='flex items-center gap-2'>
-                                            <div className='w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center'>
-                                                <div className='w-2 h-2 bg-primary rounded-full'></div>
-                                            </div>
-                                            <div className='lg:text-base text-sm' dangerouslySetInnerHTML={{ __html: additional }} />
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        )}
-                    </div>
-                </div>
-                {/* Bottom Button Area */}
-                <div className="px-7.5 mt-6">
-                    {cardThree ? (
-                        <>
-                            {id === 2 ? (
-                                <Button asChild size={"lg"} className='max-h-[64px] w-full group'>
-                                    <Link href="/contact-us">Get Started <span className='-rotate-45 group-hover:rotate-0 transition-all duration-75' ><RightArrow /></span></Link>
-                                </Button>
-                            ) : (
-                                <Button asChild variant="outline" size={"lg"} className='max-h-[64px] w-full group'>
-                                    <Link href="/contact-us">Get Started <span className='-rotate-45 group-hover:rotate-0 transition-all duration-75' ><RightArrow /></span></Link>
-                                </Button>
-                            )}
-                            <small className='text-center block pt-2'>*Free consultation included</small>
-                        </>
-                    ) : (
-                        <div className="w-full">
-                            {id === 2 ? (
-                                <Button asChild size={"lg"} className='max-h-[64px] w-full group'>
-                                    <Link href="/contact-us">Get Started <span className='-rotate-45 group-hover:rotate-0 transition-all duration-75'><RightArrow /></span></Link>
-                                </Button>
-                            ) : (
-                                <Button asChild variant="outline" size={"lg"} className='max-h-[64px] w-full group'>
-                                    <Link href="/contact-us">Get Started <span className='-rotate-45 group-hover:rotate-0 transition-all duration-75'><RightArrow /></span></Link>
-                                </Button>
-                            )}
-                        </div>
-                    )}
-                </div>
+const PriceCardTwo = ({ plan_name, price, services }) => {
+  return (
+    <div className="bg-white border-2 border-black rounded-[22px] flex flex-col justify-between p-8 min-h-[600px] w-[350px] transition mx-auto shadow-sm hover:shadow-md relative">
+      {/* Plan Name */}
+      <div>
+        <div className="text-lg font-bold text-primary uppercase mb-6 tracking-wider leading-tight">
+          {plan_name}
+        </div>
+        <div className="text-5xl font-extrabold text-black mb-5">${price}</div>
+        {/* Service List with custom scrollbar */}
+        <ul
+          className="
+            text-base text-black space-y-3 mb-8 min-h-[210px] max-h-[210px] overflow-y-auto pr-1
+            [&::-webkit-scrollbar]:w-1
+            [&::-webkit-scrollbar-thumb]:bg-[#101129]
+            [&::-webkit-scrollbar-thumb]:rounded-full
+            [&::-webkit-scrollbar-track]:bg-[#e5e7eb]
+            scrollbar-thin
+            scrollbar-thumb-[#101129]
+            scrollbar-track-[#e5e7eb]
+          "
+        >
+          {services.map((service, idx) => (
+            <li
+              key={idx}
+              className="flex items-start gap-3 leading-tight text-gray-900"
+            >
+              <span className="mt-1 w-4 h-4 rounded-full bg-primary inline-block flex-shrink-0" />
+              <span>
+                {typeof service === "string" ? service : service.service}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <hr className="border-t border-gray-300 mb-4" />
+      </div>
+      {/* Footer Area */}
+      <div className="flex flex-col relative pb-12">
+        <div className="flex items-end justify-between mb-3 w-full">
+          <div>
+            <div className="text-[14px] font-bold text-primary leading-none mb-1">
+              Speak with us
             </div>
-        </SlideUp>
-    )
-}
+            <a
+              href="tel:+14702052274"
+              className="text-[16px] font-medium text-black leading-none hover:text-primary transition"
+            >
+              +1 (470) 205-2274
+            </a>
+          </div>
 
-export default PriceCardTwo
+          <Link href="/contact-us">
+            <span className="text-[18px] font-extrabold text-primary leading-none hover:underline cursor-pointer">
+              Chat Now
+            </span>
+          </Link>
+        </div>
+        {/* Overlapping Button */}
+        <Link
+          href="/contact-us"
+          className="
+  w-[90%] left-1/2 -translate-x-1/2
+  bg-primary text-white rounded-[7px] px-4 py-3 font-bold text-lg
+  transition hover:bg-blue-900/90 absolute
+  -bottom-14
+  shadow-md flex justify-center items-center
+"
+          style={{ zIndex: 10 }}
+        >
+          Place Your Order
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default PriceCardTwo;

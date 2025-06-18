@@ -15,8 +15,8 @@ const Pricing = () => {
         <min>
             {/* <PageTitle pageName={"Pricing Plan"} breadcrumbLink={"Pricing Plan"} /> */}
             <PriceThree/>
-            <PriceOne/>
-            <FaqTwo/>
+            {/* <PriceOne/>
+            <FaqTwo/> */}
             <SubscribeTwo/>
         </min>
     )
