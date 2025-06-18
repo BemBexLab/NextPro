@@ -20,9 +20,9 @@ import StickyHeader from "@/components/ui/stickyHeader";
 import { serviceDetailsData } from "@/lib/fackData/serviceDetailsData";
 
 const navigationLinks = [
-  { id: 1, path: "/", lable: "Home" },
+  { id: 1, path: "/home", lable: "Home" },
   { id: 2, path: "/about-us", lable: "About Us" },
-  { id: 3, path: "/services", lable: "Services We Offer" },
+  { id: 3, path: "/service-details", lable: "Services" },
   { id: 4, path: "/portfolio", lable: "Our Work" },
   { id: 5, path: "/pricing", lable: "Pricing Plans" },
   { id: 6, path: "/blog-single-no-siderbar", lable: "Blog" },
@@ -36,6 +36,12 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
 
   // Dropdown state
   const [openDropdown, setOpenDropdown] = useState(false);
+
+  // Helper: is link active (also supports subroutes)
+  const isActive = (path) => {
+    if (path === "/") return pathName === "/";
+    return pathName.startsWith(path);
+  };
 
   // Direct category click handler
   const handleServiceCategoryClick = (cat) => {
@@ -75,9 +81,10 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                   <Logo />
                 </div>
                 <nav className="xl:block hidden">
-                  <ul className="flex items-center 2xl:gap-10 gap-7">
+                  <ul className="flex items-center text-[17px] 2xl:gap-10 gap-6">
                     {navigationLinks.map(({ id, lable, path }) => {
-                      if (lable === "Services We Offer") {
+                      const active = isActive(path);
+                      if (lable === "Services") {
                         return (
                           <li
                             className="pt-[43px] pb-[42px] relative"
@@ -86,7 +93,12 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                             onMouseLeave={() => setOpenDropdown(false)}
                           >
                             <span
-                              className="font-semibold leading-[22px] flex items-center gap-1 text-muted-foreground relative transition-all duration-500 hover:text-primary-foreground cursor-pointer"
+                              className={`
+                                font-semibold leading-[22px] flex items-center gap-1 cursor-pointer
+                                relative transition-all duration-500
+                                ${active ? "text-blue-900 underline" : "text-muted-foreground"}
+                                hover:text-primary-foreground
+                              `}
                               tabIndex={0}
                               onClick={() => setOpenDropdown((v) => !v)}
                             >
@@ -133,7 +145,12 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                         <li className="pt-[43px] pb-[42px]" key={id}>
                           <Link
                             href={path}
-                            className="font-semibold leading-[22px] flex items-center gap-1 text-muted-foreground relative transition-all duration-500 hover:text-primary-foreground"
+                            className={`
+                              font-semibold leading-[22px] flex items-center gap-1
+                              relative transition-all duration-500
+                              ${active ? "text-primary underline underline-offset-4" : "text-muted-foreground"}
+                              hover:text-primary-foreground
+                            `}
                           >
                             {lable}
                           </Link>
