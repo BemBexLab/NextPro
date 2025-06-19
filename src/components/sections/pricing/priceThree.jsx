@@ -14,6 +14,7 @@ const categories = [
   "SEO",
   "Logo",
   "Maintenance",
+  "Branding",
 ];
 
 const PriceThree = () => {

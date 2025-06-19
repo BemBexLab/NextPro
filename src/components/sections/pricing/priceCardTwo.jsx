@@ -24,7 +24,7 @@ const PriceCardTwo = ({ plan_name, price, services, old_price }) => {
         {/* <span className="absolute -top-4 -right-12 text-xs font-semibold text-gray-400 tracking-wide">
           WAS
         </span> */}
-        <span className="absolute top-1 -right-12 text-lg text-black/90 font-bold line-through">
+        <span className="absolute top-1 -right-15 text-lg text-black/90 font-bold line-through">
           ${old_price}
         </span>
       </>
