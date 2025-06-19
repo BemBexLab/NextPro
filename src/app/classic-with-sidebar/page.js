@@ -16,7 +16,7 @@ const Blog2 = () => {
                 <div className='max-w-[1350px] mx-auto px-[15px]'>
                     {/* Optional: <PageTitle title="Our Blog" /> */}
                     <div className='grid grid-cols-1'>
-                        <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-7.5'>
+                        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7.5'>
                             {blogData.map(({ id, author, date, thumb, title, category }) => (
                                 <Link key={id} href={`/blog-dynamic/${id}`} className="block h-full">
                                     <CardOne
