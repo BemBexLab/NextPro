@@ -12,49 +12,49 @@ export const servicesDataTwo = [
         id: 1,
         icon_1: <Activity height={36} width={35}/>,
         service_name: "Search Engine Optimization",
-        description: "Optimize your website using focused, high-value keywords. "
+        description: "Strengthen your website’s presence on Google with high-impact, targeted keywords that attract the right traffic."
     },
     {
         id: 2,
         icon_1: <Send/>,
         service_name: "Social Media Marketing",
-        description: "Develop targeted campaigns to increase brand visibility. "
+        description: "Create engaging, goal-driven campaigns that grow your audience and increase brand recognition across platforms."
     },
     {
         id: 3,
         icon_1: <Document/>,
         service_name: "Content Writing",
-        description: "Craft compelling, original content tailored to your brand’s audience. "
+        description: "Deliver powerful, original content that connects with your audience and clearly reflects your brand’s voice."
     },
     {
         id: 4,
         icon_1: <Shield height={36} width={29}/>,
         service_name: "Affiliate Marketing",
-        description: "Promote trusted products to earn commissions and grow revenue. "
+        description: "Partner with trusted brands and products to generate new revenue streams through performance-based marketing."
     },
     {
         id: 5,
         icon_1: <Message/>,
         service_name: "Email Marketing",
-        description: "Launch ads to drive traffic and maximize conversions. "
+        description: "Build smart, results-focused email campaigns that nurture leads and convert visitors into loyal customers."
     },
     {
         id: 6,
         icon_1: <Scan/>,
         service_name: "Pay-Per-Click Advertising",
-        description: "Launch targeted ads to drive traffic and maximize conversions. "
+        description: "Run laser-focused ad campaigns that drive quality traffic and deliver measurable ROI."
     },
     {
         id: 7,
         icon_1: <Discount height={35} width={35} />,
         service_name: "Conversion Rate Optimization",
-        description: "Test and refine site elements to improve outcomes. "
+        description: "Improve user experience and boost conversions through continuous testing, insights, and smart refinements."
     },
     {
         id: 8,
         icon_1: <Buy/>,
         service_name: "E-commerce Marketing",
-        description: "Boost online sales with targeted strategies for your digital store. "
+        description: "Drive more sales and visibility for your online store with tailored marketing strategies built for growth."
     },
 
 ]

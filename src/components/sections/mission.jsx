@@ -20,19 +20,19 @@ const ourItems = [
         id: 2,
         title: "Innovation and Excellence",
         icon: <Shield height={"36"} width={"36"} />,
-        desc: "We stay ahead in the digital landscape, exploring new technologies for client success."
+        desc: "We stay ahead of the curve by exploring the latest technologies, making sure our clients succeed in today’s digital world."
     },
     {
         id: 3,
         title: "Collaborative Partnership",
         icon: <Discount height={"36"} width={"36"} />,
-        desc: "We work closely with clients, building trust through transparent communication."
+        desc: "We team up with our clients, staying transparent and communicative every step of the way to build real trust."
     },
     {
         id: 4,
         title: "Social Responsibility",
         icon: <Buy height={"36"} width={"36"} />,
-        desc: "We conduct business ethically, supporting sustainability and community initiatives."
+        desc: "We build websites with purpose following ethical practices, supporting sustainability, and contributing to positive change in the tech and local communities"
     },
 
 ]
@@ -48,9 +48,11 @@ const Mission = () => {
                                 <Title size={"5xl"} className="pt-6">Our Mission</Title>
                             </div>
                             <p className='font-semibold text-muted-foreground'>
-                                At Web Founders USA, our mission is to empower businesses to thrive in the digital age by providing innovative and results-driven marketing solutions.
+                                At Web Founders USA, our mission is to help businesses thrive in the digital age through tailored, high-impact marketing and web solutions.
                             </p>
-                            <p className='text-muted-foreground pt-7.5'>With a focus on transparency, integrity, and continuous improvement, we strive to be the trusted partner our clients rely on to achieve their goals and surpass their expectations.</p>
+                            <p className='text-muted-foreground pt-7.5'>We combine strategic thinking with creative execution and cutting-edge technology to build user-friendly websites, generate qualified leads, and increase conversions for small businesses, startups, and growing brands.</p>
+                            <br />
+                            <p>Rooted in transparency, integrity, and continuous improvement, we strive to be more than just a service provider—we’re a trusted growth partner invested in your long-term success.</p>
                         </SlideLeft>
                     </div>
                     <div className='pt-3 lg:pt-0'>
