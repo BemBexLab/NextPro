@@ -1,6 +1,6 @@
 export const serviceDetailsData = {
   "Social Media Marketing": {
-    image: '/images/resource/sergices-details1-1.jpg',
+    image: '/images/resource/Social-Meida-Marketing.png',
     title: "Why choose WebFounders USA as your Marketing Partner",
     paragraphs: [
       "At WebFounders USA, we understand the importance of having a strong online presence and ranking well in search engine results.",
@@ -50,7 +50,7 @@ export const serviceDetailsData = {
     ]
   },
   "Marketing Strategy": {
-    image: '/images/resource/sergices-details1-1.jpg',
+    image: '/images/resource/marketingstrategy.png',
     title: "Marketing Strategy That Delivers",
     paragraphs: [
       "Unlock business growth with data-driven strategy.",
@@ -203,7 +203,7 @@ export const serviceDetailsData = {
     ]
   },
   "Pay-Per-Click Advertising": {
-    image: '/images/resource/sergices-details1-1.jpg',
+    image: '/images/resource/Pay-Per-Click-Advertising.jpg',
     title: "PPC Campaigns That Deliver Results",
     paragraphs: [
       "Get instant visibility and quality leads with targeted PPC advertising.",
@@ -241,7 +241,7 @@ export const serviceDetailsData = {
     ]
   },
   "Conversion Optimization": {
-    image: '/images/resource/sergices-details1-1.jpg',
+    image: '/images/resource/Conversion-Optimization.jpg',
     title: "Conversion Optimization That Delivers",
     paragraphs: [
       "Turn more visitors into customers with data-driven conversion strategies.",
@@ -279,7 +279,7 @@ export const serviceDetailsData = {
     ]
   },
   "E-commerce Marketing": {
-    image: '/images/resource/sergices-details1-1.jpg',
+    image: '/images/resource/E-commerce-marketing.jpg',
     title: "E-commerce Marketing That Drives Sales",
     paragraphs: [
       "Accelerate your online store’s growth with proven e-commerce marketing strategies.",
@@ -317,7 +317,7 @@ export const serviceDetailsData = {
     ]
   },
   "Digital Marketing": {
-    image: '/images/servicesimages/digital-marketing.jpg',
+    image: '/images/resource/digital-marketing2.jpg',
     title: "Digital Marketing That Gets Results",
     paragraphs: [
       "Supercharge your business growth with comprehensive digital marketing strategies.",
@@ -393,7 +393,7 @@ export const serviceDetailsData = {
     ]
   },
   "Custom Website Design": {
-    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    image: '/images/resource/Custom-Website-Design-1.jpg',
     title: "Web Development That Accelerates Growth",
     paragraphs: [
       "Build a powerful online presence with high-performing, visually stunning websites.",
@@ -435,7 +435,7 @@ export const serviceDetailsData = {
     ]
   },
   "ECommerce Website": {
-    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    image: '/images/resource/E-commerce-marketing.2.jpg',
     title: "Web Development That Accelerates Growth",
     paragraphs: [
       "Build a powerful online presence with high-performing, visually stunning websites.",
@@ -477,7 +477,7 @@ export const serviceDetailsData = {
     ]
   },
   "Logo Design": {
-    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    image: '/images/resource/Logo-Design.jpg-2.jpg',
     title: "Web Development That Accelerates Growth",
     paragraphs: [
       "Build a powerful online presence with high-performing, visually stunning websites.",
@@ -519,7 +519,7 @@ export const serviceDetailsData = {
     ]
   },
   "SEO": {
-    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    image: '/images/resource/SEO.jpg',
     title: "Web Development That Accelerates Growth",
     paragraphs: [
       "Build a powerful online presence with high-performing, visually stunning websites.",
@@ -561,7 +561,7 @@ export const serviceDetailsData = {
     ]
   },
   "Branding": {
-    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    image: '/images/resource/Branding.jpg',
     title: "Web Development That Accelerates Growth",
     paragraphs: [
       "Build a powerful online presence with high-performing, visually stunning websites.",
@@ -603,7 +603,7 @@ export const serviceDetailsData = {
     ]
   },
   "Maintenance": {
-    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    image: '/images/resource/maintenance.jpg',
     title: "Web Development That Accelerates Growth",
     paragraphs: [
       "Build a powerful online presence with high-performing, visually stunning websites.",
@@ -645,7 +645,7 @@ export const serviceDetailsData = {
     ]
   },
   "Video Animation": {
-    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    image: '/images/resource/Video-Animation.jpg',
     title: "Web Development That Accelerates Growth",
     paragraphs: [
       "Build a powerful online presence with high-performing, visually stunning websites.",

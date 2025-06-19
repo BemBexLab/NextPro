@@ -9,7 +9,7 @@ const PriceCardTwo = ({ plan_name, price, services, old_price }) => {
       {/* Plan Name */}
       <div>
         <div>
-  <div className="text-lg font-bold text-[#BF0B30] uppercase mb-6 tracking-wider leading-tight">
+  <div className="text-lg font-bold text-[#BF0B30] bg-gray-300 rounded-2xl uppercase mb-6 tracking-wider leading-tight">
     {plan_name}
   </div>
   <div className="relative inline-block mb-5">
