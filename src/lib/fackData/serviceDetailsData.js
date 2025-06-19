@@ -1,7 +1,7 @@
 export const serviceDetailsData = {
   "Social Media Marketing": {
     image: '/images/resource/sergices-details1-1.jpg',
-    title: "Why choose Next Agency as your Marketing Partner",
+    title: "Why choose WebFounders USA as your Marketing Partner",
     paragraphs: [
       "At WebFounders USA, we understand the importance of having a strong online presence and ranking well in search engine results.",
       "Choosing us as your digital marketing partner means selecting a team committed to your success. With a proven track record, tailored solutions, and industry expertise, we prioritize your unique goals and objectives."
@@ -87,44 +87,7 @@ export const serviceDetailsData = {
       }
     ]
   },
-  "Social Media": {
-    image: '/images/resource/sergices-details1-1.jpg',
-    title: "Social Media Strategy That Delivers",
-    paragraphs: [
-      "Ignite your brand’s presence across every platform with targeted social media campaigns.",
-      "We craft custom strategies, define your audience, and plan engaging content that boosts awareness and drives results."
-    ],
-    features: [
-      "In-depth audience research",
-      "Platform-specific content plans",
-      "Real-time performance tracking"
-    ],
-    outro: "Let’s grow your community and maximize engagement with a social strategy built for today’s digital world.",
-    strategicApproach: [
-      {
-        title: "Audience Research",
-        desc: "Identify and profile your ideal customers."
-      },
-      {
-        title: "Content Calendar",
-        desc: "Plan platform-specific posts for consistency."
-      },
-      {
-        title: "Live Monitoring",
-        desc: "Adjust strategies based on audience reaction."
-      }
-    ],
-    faqs: [
-      {
-        question: "Do you handle influencer outreach?",
-        answer: "Yes, we can integrate influencer campaigns as part of your strategy."
-      },
-      {
-        question: "Can you create branded graphics?",
-        answer: "Absolutely, all visual content is custom-branded for your business."
-      }
-    ]
-  },
+  
   "Content Writing": {
     image: '/images/servicesimages/content-writing.jpg',
     title: "Content That Converts",
@@ -430,6 +393,258 @@ export const serviceDetailsData = {
     ]
   },
   "Custom Website Design": {
+    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    title: "Web Development That Accelerates Growth",
+    paragraphs: [
+      "Build a powerful online presence with high-performing, visually stunning websites.",
+      "We design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward.",
+      "Whether you're a startup or an established business, our team crafts fully tailored digital experiences that reflect your brand identity and support your specific goals."
+    ],
+    features: [
+      "Responsive & user-friendly design for all devices",
+      "Custom-coded solutions tailored to your business model",
+      "CMS integration (WordPress, Webflow, or Headless CMS)",
+      "On-page SEO & speed optimization",
+      "Conversion-focused UX/UI design",
+      "Scalable architecture for future growth"
+    ],
+    outro: "Let us build you a website that doesn’t just look amazing—but actively grows your business, builds trust with visitors, and outperforms your competition online.",
+    strategicApproach: [
+      {
+        title: "Consultation & Branding",
+        desc: "We learn your goals and design preferences."
+      },
+      {
+        title: "Wireframing & Mockups",
+        desc: "Visual blueprints ensure everyone’s on the same page."
+      },
+      {
+        title: "Custom Build",
+        desc: "Hand-coded websites with scalable architecture."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can I request revisions?",
+        answer: "Yes, you get multiple rounds of feedback and revisions."
+      },
+      {
+        question: "Do you integrate with WordPress or Webflow?",
+        answer: "Absolutely! We work with all major CMS platforms."
+      }
+    ]
+  },
+  "ECommerce Website": {
+    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    title: "Web Development That Accelerates Growth",
+    paragraphs: [
+      "Build a powerful online presence with high-performing, visually stunning websites.",
+      "We design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward.",
+      "Whether you're a startup or an established business, our team crafts fully tailored digital experiences that reflect your brand identity and support your specific goals."
+    ],
+    features: [
+      "Responsive & user-friendly design for all devices",
+      "Custom-coded solutions tailored to your business model",
+      "CMS integration (WordPress, Webflow, or Headless CMS)",
+      "On-page SEO & speed optimization",
+      "Conversion-focused UX/UI design",
+      "Scalable architecture for future growth"
+    ],
+    outro: "Let us build you a website that doesn’t just look amazing—but actively grows your business, builds trust with visitors, and outperforms your competition online.",
+    strategicApproach: [
+      {
+        title: "Consultation & Branding",
+        desc: "We learn your goals and design preferences."
+      },
+      {
+        title: "Wireframing & Mockups",
+        desc: "Visual blueprints ensure everyone’s on the same page."
+      },
+      {
+        title: "Custom Build",
+        desc: "Hand-coded websites with scalable architecture."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can I request revisions?",
+        answer: "Yes, you get multiple rounds of feedback and revisions."
+      },
+      {
+        question: "Do you integrate with WordPress or Webflow?",
+        answer: "Absolutely! We work with all major CMS platforms."
+      }
+    ]
+  },
+  "Logo Design": {
+    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    title: "Web Development That Accelerates Growth",
+    paragraphs: [
+      "Build a powerful online presence with high-performing, visually stunning websites.",
+      "We design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward.",
+      "Whether you're a startup or an established business, our team crafts fully tailored digital experiences that reflect your brand identity and support your specific goals."
+    ],
+    features: [
+      "Responsive & user-friendly design for all devices",
+      "Custom-coded solutions tailored to your business model",
+      "CMS integration (WordPress, Webflow, or Headless CMS)",
+      "On-page SEO & speed optimization",
+      "Conversion-focused UX/UI design",
+      "Scalable architecture for future growth"
+    ],
+    outro: "Let us build you a website that doesn’t just look amazing—but actively grows your business, builds trust with visitors, and outperforms your competition online.",
+    strategicApproach: [
+      {
+        title: "Consultation & Branding",
+        desc: "We learn your goals and design preferences."
+      },
+      {
+        title: "Wireframing & Mockups",
+        desc: "Visual blueprints ensure everyone’s on the same page."
+      },
+      {
+        title: "Custom Build",
+        desc: "Hand-coded websites with scalable architecture."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can I request revisions?",
+        answer: "Yes, you get multiple rounds of feedback and revisions."
+      },
+      {
+        question: "Do you integrate with WordPress or Webflow?",
+        answer: "Absolutely! We work with all major CMS platforms."
+      }
+    ]
+  },
+  "SEO": {
+    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    title: "Web Development That Accelerates Growth",
+    paragraphs: [
+      "Build a powerful online presence with high-performing, visually stunning websites.",
+      "We design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward.",
+      "Whether you're a startup or an established business, our team crafts fully tailored digital experiences that reflect your brand identity and support your specific goals."
+    ],
+    features: [
+      "Responsive & user-friendly design for all devices",
+      "Custom-coded solutions tailored to your business model",
+      "CMS integration (WordPress, Webflow, or Headless CMS)",
+      "On-page SEO & speed optimization",
+      "Conversion-focused UX/UI design",
+      "Scalable architecture for future growth"
+    ],
+    outro: "Let us build you a website that doesn’t just look amazing—but actively grows your business, builds trust with visitors, and outperforms your competition online.",
+    strategicApproach: [
+      {
+        title: "Consultation & Branding",
+        desc: "We learn your goals and design preferences."
+      },
+      {
+        title: "Wireframing & Mockups",
+        desc: "Visual blueprints ensure everyone’s on the same page."
+      },
+      {
+        title: "Custom Build",
+        desc: "Hand-coded websites with scalable architecture."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can I request revisions?",
+        answer: "Yes, you get multiple rounds of feedback and revisions."
+      },
+      {
+        question: "Do you integrate with WordPress or Webflow?",
+        answer: "Absolutely! We work with all major CMS platforms."
+      }
+    ]
+  },
+  "Branding": {
+    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    title: "Web Development That Accelerates Growth",
+    paragraphs: [
+      "Build a powerful online presence with high-performing, visually stunning websites.",
+      "We design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward.",
+      "Whether you're a startup or an established business, our team crafts fully tailored digital experiences that reflect your brand identity and support your specific goals."
+    ],
+    features: [
+      "Responsive & user-friendly design for all devices",
+      "Custom-coded solutions tailored to your business model",
+      "CMS integration (WordPress, Webflow, or Headless CMS)",
+      "On-page SEO & speed optimization",
+      "Conversion-focused UX/UI design",
+      "Scalable architecture for future growth"
+    ],
+    outro: "Let us build you a website that doesn’t just look amazing—but actively grows your business, builds trust with visitors, and outperforms your competition online.",
+    strategicApproach: [
+      {
+        title: "Consultation & Branding",
+        desc: "We learn your goals and design preferences."
+      },
+      {
+        title: "Wireframing & Mockups",
+        desc: "Visual blueprints ensure everyone’s on the same page."
+      },
+      {
+        title: "Custom Build",
+        desc: "Hand-coded websites with scalable architecture."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can I request revisions?",
+        answer: "Yes, you get multiple rounds of feedback and revisions."
+      },
+      {
+        question: "Do you integrate with WordPress or Webflow?",
+        answer: "Absolutely! We work with all major CMS platforms."
+      }
+    ]
+  },
+  "Maintenance": {
+    image: '/images/servicesimages/ecommerce-website-development.jpg',
+    title: "Web Development That Accelerates Growth",
+    paragraphs: [
+      "Build a powerful online presence with high-performing, visually stunning websites.",
+      "We design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward.",
+      "Whether you're a startup or an established business, our team crafts fully tailored digital experiences that reflect your brand identity and support your specific goals."
+    ],
+    features: [
+      "Responsive & user-friendly design for all devices",
+      "Custom-coded solutions tailored to your business model",
+      "CMS integration (WordPress, Webflow, or Headless CMS)",
+      "On-page SEO & speed optimization",
+      "Conversion-focused UX/UI design",
+      "Scalable architecture for future growth"
+    ],
+    outro: "Let us build you a website that doesn’t just look amazing—but actively grows your business, builds trust with visitors, and outperforms your competition online.",
+    strategicApproach: [
+      {
+        title: "Consultation & Branding",
+        desc: "We learn your goals and design preferences."
+      },
+      {
+        title: "Wireframing & Mockups",
+        desc: "Visual blueprints ensure everyone’s on the same page."
+      },
+      {
+        title: "Custom Build",
+        desc: "Hand-coded websites with scalable architecture."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can I request revisions?",
+        answer: "Yes, you get multiple rounds of feedback and revisions."
+      },
+      {
+        question: "Do you integrate with WordPress or Webflow?",
+        answer: "Absolutely! We work with all major CMS platforms."
+      }
+    ]
+  },
+  "Video Animation": {
     image: '/images/servicesimages/ecommerce-website-development.jpg',
     title: "Web Development That Accelerates Growth",
     paragraphs: [
