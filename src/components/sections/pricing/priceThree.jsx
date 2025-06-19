@@ -70,32 +70,35 @@ const PriceThree = () => {
             <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-y-10  pt-2 lg:px-20">
               {filteredData.length > 0 ? (
                 filteredData.map(
-                  ({
-                    additionalAdds,
-                    id,
-                    info,
-                    isTag,
-                    link,
-                    plan_name,
-                    price,
-                    services,
-                  }) => (
-                    <PriceCardTwo
-                      key={id}
-                      id={id}
-                      additionalAdds={additionalAdds}
-                      info={info}
-                      isTag={isTag}
-                      link={link}
-                      plan_name={plan_name}
-                      price={price}
-                      services={services}
-                      cardThree={true}
-                      isAnimating={isAnimating}
-                      isChecked={isChecked}
-                    />
-                  )
-                )
+  ({
+    additionalAdds,
+    id,
+    info,
+    isTag,
+    link,
+    plan_name,
+    price,
+    old_price, // <-- Add this
+    services,
+  }) => (
+    <PriceCardTwo
+      key={id}
+      id={id}
+      additionalAdds={additionalAdds}
+      info={info}
+      isTag={isTag}
+      link={link}
+      plan_name={plan_name}
+      price={price}
+      old_price={old_price} // <-- Pass as prop
+      services={services}
+      cardThree={true}
+      isAnimating={isAnimating}
+      isChecked={isChecked}
+    />
+  )
+)
+
               ) : (
                 <div className="col-span-full text-center text-gray-400 font-semibold">
                   No packages available in this category.

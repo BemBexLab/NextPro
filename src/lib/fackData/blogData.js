@@ -24,7 +24,7 @@ export const blogData = [
             description: ""
         },
         category: ["Marketing Strategy"],
-        thumb: "/images/blog/blog-post3-2.png",
+        thumb: "/images/blog/blog-post3-7.png",
         content: "Digital marketing has transformed the way businesses reach and engage with customers in the modern world. By leveraging tools like social media, email campaigns, search engine optimization, and online advertising, companies can connect with a global audience in real time. Unlike traditional marketing, digital strategies provide measurable results, allowing brands to track performance and optimize their efforts for maximum impact. Creative content and targeted campaigns help build brand awareness, foster loyalty, and drive conversions. As technology continues to evolve, staying ahead in digital marketing is essential for businesses seeking growth, competitive advantage, and long-term success in today’s fast-paced marketplace."
     },
     {

@@ -1,15 +1,38 @@
 import React from "react";
 import Link from "next/link";
 
-const PriceCardTwo = ({ plan_name, price, services }) => {
+import { FaCircleCheck } from "react-icons/fa6";
+
+const PriceCardTwo = ({ plan_name, price, services, old_price }) => {
   return (
     <div className="bg-white border-2 border-black rounded-[22px] flex flex-col justify-between p-8 min-h-[600px] w-[350px] transition mx-auto shadow-sm hover:shadow-md relative">
       {/* Plan Name */}
       <div>
-        <div className="text-lg font-bold text-primary uppercase mb-6 tracking-wider leading-tight">
-          {plan_name}
-        </div>
-        <div className="text-5xl font-extrabold text-black mb-5">${price}</div>
+        <div>
+  <div className="text-lg font-bold text-[#BF0B30] uppercase mb-6 tracking-wider leading-tight">
+    {plan_name}
+  </div>
+  <div className="relative inline-block mb-5">
+    {/* "NEW" label above current price */}
+    <span className="absolute -top-4 left-0 text-xs font-semibold text-green-600 tracking-wide">
+      NOW
+    </span>
+    <span className="text-5xl font-extrabold text-black">${price}</span>
+    {old_price && (
+      <>
+        {/* "OLD" label above old price */}
+        {/* <span className="absolute -top-4 -right-12 text-xs font-semibold text-gray-400 tracking-wide">
+          WAS
+        </span> */}
+        <span className="absolute top-1 -right-12 text-lg text-black/90 font-bold line-through">
+          ${old_price}
+        </span>
+      </>
+    )}
+  </div>
+</div>
+
+        
         {/* Service List with custom scrollbar */}
         <ul
           className="
@@ -28,7 +51,8 @@ const PriceCardTwo = ({ plan_name, price, services }) => {
               key={idx}
               className="flex items-start gap-3 leading-tight text-gray-900"
             >
-              <span className="mt-1 w-4 h-4 rounded-full bg-primary inline-block flex-shrink-0" />
+              <FaCircleCheck className="mt-1 w-4 h-4 text-primary flex-shrink-0 inline-block" />
+
               <span>
                 {typeof service === "string" ? service : service.service}
               </span>
@@ -63,8 +87,8 @@ const PriceCardTwo = ({ plan_name, price, services }) => {
           href="/contact-us"
           className="
   w-[90%] left-1/2 -translate-x-1/2
-  bg-primary text-white rounded-[7px] px-4 py-3 font-bold text-lg
-  transition hover:bg-blue-900/90 absolute
+  bg-[#BF0B30] text-white rounded-[7px] px-4 py-3 font-bold text-lg
+  transition hover:bg-[#BF0B30]/90 absolute
   -bottom-14
   shadow-md flex justify-center items-center
 "

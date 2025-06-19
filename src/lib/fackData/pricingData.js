@@ -6,6 +6,7 @@ export const pricingData = [
     plan_name: "START-UP WEBSITE PACKAGE",
     category: "Website Design",
     price: "199",
+    old_price: "398",
     services: [
       "3 Pages Website",
       "3 Banner Design",
@@ -22,6 +23,7 @@ export const pricingData = [
     plan_name: "PROFESSIONAL WEBSITE PACKAGE",
     category: "Website Design",
     price: "499",
+    old_price: "398",
     services: [
       "Facebook Page Design",
       "Twitter Page Design",
@@ -44,6 +46,7 @@ export const pricingData = [
     plan_name: "BUSINESS PRO WEBSITE PACKAGE",
     category: "Website Design",
     price: "1449",
+    old_price: "398",
     services: [
       "48 to 72 hours TAT",
       "Facebook Page Design",
@@ -75,6 +78,7 @@ export const pricingData = [
     plan_name: "IDENTITY WEBSITE PREMIUM PACKAGE",
     category: "Website Design",
     price: "1599",
+    old_price: "398",
     services: [
       "10 Unique Pages Website Design",
       "Custom, Interactive, Dynamic & High-end Design",
@@ -89,6 +93,7 @@ export const pricingData = [
     plan_name: "CORPORATE WEBSITE PACKAGE",
     category: "Website Design",
     price: "2599",
+    old_price: "398",
     services: [
       "Unlimited Pages Website Design",
       "Custom, Mobile, Interactive, Dynamic & High-end Design",
@@ -104,6 +109,7 @@ export const pricingData = [
     plan_name: "CORPORATE WEBSITE PACKAGE",
     category: "E-Commerce",
     price: "2599",
+    old_price: "398",
     services: [
       "Unlimited Pages Website Design",
       "Custom, Mobile, Interactive, Dynamic & High-end Design",

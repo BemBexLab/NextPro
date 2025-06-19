@@ -34,7 +34,7 @@ const tabList = [
         id: "decisions",
         tab_name: "Creative Process",
         tab_icon: icon_3,
-        tab_content: "/images/resource/approach-image4-1.jpg",
+        tab_content: "/images/resource/creative-process-1.jpg",
         heading: "Creative Process",
         description: "We get to work! You’ll see progress, share feedback, and stay updated along the way. It’s a back-and-forth flow until we get it just right.",
     },
