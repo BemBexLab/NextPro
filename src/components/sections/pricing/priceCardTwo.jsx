@@ -1,38 +1,62 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Link from "next/link";
-
 import { FaCircleCheck } from "react-icons/fa6";
 
 const PriceCardTwo = ({ plan_name, price, services, old_price }) => {
+  const planNameRef = useRef(null);
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimate(true);
+          observer.disconnect(); // Animation triggers only once
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (planNameRef.current) observer.observe(planNameRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="bg-white border-2 border-black rounded-[22px] flex flex-col justify-between p-8 min-h-[600px] w-[350px] transition mx-auto shadow-sm hover:shadow-md relative">
+    <div className="group bg-white border-2 border-black rounded-[22px] flex flex-col justify-between p-8 min-h-[600px] w-[350px] transition mx-auto shadow-sm hover:shadow-md relative">
       {/* Plan Name */}
       <div>
         <div>
-  <div className="text-lg font-bold text-[#BF0B30] bg-gray-300 rounded-2xl uppercase mb-6 tracking-wider leading-tight">
-    {plan_name}
-  </div>
-  <div className="relative inline-block mb-5">
-    {/* "NEW" label above current price */}
-    <span className="absolute -top-4 left-0 text-xs font-semibold text-green-600 tracking-wide">
-      NOW
-    </span>
-    <span className="text-5xl font-extrabold text-black">${price}</span>
-    {old_price && (
-      <>
-        {/* "OLD" label above old price */}
-        {/* <span className="absolute -top-4 -right-12 text-xs font-semibold text-gray-400 tracking-wide">
-          WAS
-        </span> */}
-        <span className="absolute top-1 -right-15 text-lg text-black/90 font-bold line-through">
-          ${old_price}
-        </span>
-      </>
-    )}
-  </div>
-</div>
+          {/* Plan Name Header - absolute, full width, bg, no spacing */}
+          <div
+            className="absolute top-0 left-0 right-0 bg-[#BF0B30] rounded-t-[22px] flex min-h-16 py-4 z-10"
+            ref={planNameRef}
+          >
+            <span
+              className={`text-lg font-bold text-white uppercase tracking-wider leading-tight mx-5 text-center w-full break-words ${
+                animate ? "price-card-animate" : ""
+              }`}
+            >
+              {plan_name}
+            </span>
+          </div>
 
-        
+          <div className="relative inline-block mb-5 mt-15">
+            {/* "NEW" label above current price */}
+            <span className="absolute -top-4 left-0 text-xs font-semibold text-green-600 tracking-wide">
+              NOW
+            </span>
+            <span className="text-5xl font-extrabold text-black">${price}</span>
+            {old_price && (
+              <>
+                {/* "OLD" label above old price */}
+                <span className="absolute top-1 -right-15 text-lg text-black/90 font-bold line-through">
+                  ${old_price}
+                </span>
+              </>
+            )}
+          </div>
+        </div>
+
         {/* Service List with custom scrollbar */}
         <ul
           className="
@@ -83,19 +107,20 @@ const PriceCardTwo = ({ plan_name, price, services, old_price }) => {
           </Link>
         </div>
         {/* Overlapping Button */}
-        <Link
-          href="/contact-us"
-          className="
-  w-[90%] left-1/2 -translate-x-1/2
-  bg-[#BF0B30] text-white rounded-[7px] px-4 py-3 font-bold text-lg
-  transition hover:bg-[#BF0B30]/90 absolute
-  -bottom-14
-  shadow-md flex justify-center items-center
-"
-          style={{ zIndex: 10 }}
-        >
-          Place Your Order
-        </Link>
+        <div className="w-[90%] left-1/2 -translate-x-1/2 absolute -bottom-14" style={{ zIndex: 10 }}>
+  <Link
+    href="/contact-us"
+    className="
+      bg-[#BF0B30] text-white rounded-[7px] px-4 py-3 font-bold text-lg
+      transition hover:bg-[#BF0B30]/90
+      shadow-md flex justify-center items-center w-full
+      group-hover:animate-shake-pause
+    "
+  >
+    Place Your Order
+  </Link>
+</div>
+
       </div>
     </div>
   );

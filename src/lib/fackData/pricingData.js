@@ -3,7 +3,7 @@
 export const pricingData = [
   {
     id: 1,
-    plan_name: "Startup Website Package",
+    plan_name: "Startup Website",
     category: "Website Design",
     price: "199",
     old_price: "299",
@@ -27,7 +27,7 @@ export const pricingData = [
   },
   {
     id: 2,
-    plan_name: "PROFESSIONAL WEBSITE PACKAGE",
+    plan_name: "PROFESSIONAL WEBSITE",
     category: "Website Design",
     price: "599",
     old_price: "799",
@@ -52,7 +52,7 @@ export const pricingData = [
   },
   {
     id: 3,
-    plan_name: "Elite WEBSITE PACKAGE",
+    plan_name: "Elite WEBSITE",
     category: "Website Design",
     price: "875",
     old_price: "1250",
@@ -85,7 +85,7 @@ export const pricingData = [
   },
   {
     id: 4,
-    plan_name: "Silver Website PACKAGE",
+    plan_name: "Silver Website",
     category: "Website Design",
     price: "1120",
     old_price: "1600",
@@ -126,7 +126,7 @@ export const pricingData = [
   },
   {
     id: 5,
-    plan_name: "Beginners E-Commerce Package",
+    plan_name: "Beginners E-Commerce",
     category: "E-Commerce",
     price: "999",
     old_price: "1700",
@@ -160,7 +160,7 @@ export const pricingData = [
   },
   {
     id: 6,
-    plan_name: "Corporate E-Commerce Package",
+    plan_name: "Corporate E-Commerce",
     category: "E-Commerce",
     price: "1750",
     old_price: "2500",
@@ -195,7 +195,7 @@ export const pricingData = [
   },
   {
     id: 7,
-    plan_name: "Elite E-Commerce Package",
+    plan_name: "Elite E-Commerce",
     category: "E-Commerce",
     price: "2450",
     old_price: "3500",
