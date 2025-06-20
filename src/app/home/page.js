@@ -13,9 +13,8 @@ import PriceThree from '@/components/sections/pricing/priceThree'
 import CompaniesSlideer from "@/components/sections/companiesslide/slider";
 
 export const metadata = {
-  title: "WebFoundersUSA",
-  description:
-    "WebFounder USA is a leading web development company that provides custom web development services to businesses of all sizes. We are a team of experienced web developers who are dedicated to providing the best possible web development services to our clients.",
+    title: "WebFoundersUSA",
+    description: "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
 };
 
 const HomeFour = () => {

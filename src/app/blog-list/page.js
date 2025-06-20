@@ -7,8 +7,8 @@ import { blogData } from '@/lib/fackData/blogData'
 export const dynamic = 'force-dynamic'; // ✅ THIS LINE FIXES BUILD TIMEOUT
 
 export const metadata = {
-  title: "WebFoundersUSA",
-  description: "NextPro is a modern Next.js and Tailwind CSS Template...",
+    title: "WebFoundersUSA",
+    description: "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
 };
 
 const BlogList = () => {

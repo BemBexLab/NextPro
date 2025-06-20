@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { blogData } from '@/lib/fackData/blogData';
 import { IoArrowBack } from "react-icons/io5";
+
+
 export async function generateMetadata({ params }) {
   const blog = blogData.find((item) => item.id === Number(params.id));
   return {

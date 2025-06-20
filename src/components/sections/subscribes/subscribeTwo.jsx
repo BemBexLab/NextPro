@@ -73,92 +73,102 @@ const Form = () => {
     };
 
     return (
-        <Dialog>
-            <DialogTrigger>
-                <span className="group rounded-full px-[38px] py-[18px] border-2 border-[#BF0B30] font-bold max-h-12.5 bg-[#BF0B30] text-secondary-foreground dark:text-muted-foreground flex justify-center items-center gap-2.5 transition-all duration-500 hover:bg-transparent hover:text-[#BF0B30]">
-                    Schedule a Meeting
-                </span>
-            </DialogTrigger>
-            <DialogContent className="max-w-[700px] p-0">
-                <div className='flex items-center justify-between py-6 border-b border-b-[#dee2e6]'>
-                    <DialogTitle className="pl-4">
-                        <h6 className='text-2xl font-bold text-muted-foreground'>Schedule a Meeting</h6>
-                    </DialogTitle>
-                    <DialogClose />
-                </div>
-                <form className='p-4 pt-0' onSubmit={handleSubmit}>
-                  <div className="flex md:flex-row flex-col justify-between gap-5">
-  <div className="w-full">
-    <input
-      type="text"
-      placeholder="Name"
-      className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-3 py-2 h-12"
-      value={name}
-      onChange={e => setName(e.target.value)}
-      required
-    />
-  </div>
-  <div className="w-full">
-    <input
-      type="email"
-      placeholder="Email"
-      className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-3 py-2 h-12"
-      value={email}
-      onChange={e => setEmail(e.target.value)}
-      required
-    />
-  </div>
-</div>
-<div className="flex md:flex-row flex-col justify-between gap-5 mt-4">
-  <div className="w-full">
-    <input
-      type="text"
-      placeholder="Website"
-      className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-3 py-2 h-12"
-      value={website}
-      onChange={e => setWebsite(e.target.value)}
-      required
-    />
-  </div>
-  <div className="w-full">
-    <select
-      className="bg-white border-2 border-gray-300 font-medium text-black w-full rounded px-3 py-2 h-12"
-      value={service}
-      onChange={e => setService(e.target.value)}
-      required
-    >
-      <option value="" disabled>Select a Service</option>
-      <option value="Search Engine Optimization">Search Engine Optimization</option>
-      <option value="Social Media Marketing">Social Media Marketing</option>
-      <option value="Content Writing">Content Writing</option>
-      <option value="Affiliate Marketing">Affiliate Marketing</option>
-      <option value="Email Marketing">Email Marketing</option>
-    </select>
-  </div>
-</div>
+       <Dialog>
+  <DialogTrigger>
+    <span className="group rounded-full px-[38px] py-[18px] border-2 border-[#BF0B30] font-bold max-h-12.5 bg-[#BF0B30] text-secondary-foreground dark:text-muted-foreground flex justify-center items-center gap-2.5 transition-all duration-500 hover:bg-transparent hover:text-[#BF0B30]">
+      Schedule a Meeting
+    </span>
+  </DialogTrigger>
+  <DialogContent
+    className="
+      max-w-[95vw] sm:max-w-[700px]
+      w-[95vw] sm:w-auto
+      p-0
+    "
+  >
+    {/* Header */}
+    <div className='flex items-center justify-between py-4 sm:py-6 border-b border-b-[#dee2e6] px-3 sm:px-4'>
+      <DialogTitle>
+        <h6 className='text-lg sm:text-2xl font-bold text-muted-foreground'>Schedule a Meeting</h6>
+      </DialogTitle>
+      <DialogClose />
+    </div>
+    {/* Form */}
+    <div className="px-3 sm:px-4 pb-4">
+      <form className='pt-0' onSubmit={handleSubmit}>
+        <div className="flex flex-col sm:flex-row justify-between gap-3 sm:gap-5">
+          <div className="w-full">
+            <input
+              type="text"
+              placeholder="Name"
+              className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="w-full">
+            <input
+              type="email"
+              placeholder="Email"
+              className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
+            />
+          </div>
+        </div>
+        <div className="flex flex-col sm:flex-row justify-between gap-3 sm:gap-5 mt-3 sm:mt-4">
+          <div className="w-full">
+            <input
+              type="text"
+              placeholder="Website"
+              className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
+              value={website}
+              onChange={e => setWebsite(e.target.value)}
+              required
+            />
+          </div>
+          <div className="w-full">
+            <select
+              className="bg-white border-2 border-gray-300 font-medium text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
+              value={service}
+              onChange={e => setService(e.target.value)}
+              required
+            >
+              <option value="" disabled>Select a Service</option>
+              <option value="Search Engine Optimization">Search Engine Optimization</option>
+              <option value="Social Media Marketing">Social Media Marketing</option>
+              <option value="Content Writing">Content Writing</option>
+              <option value="Affiliate Marketing">Affiliate Marketing</option>
+              <option value="Email Marketing">Email Marketing</option>
+            </select>
+          </div>
+        </div>
+        <div className='mt-3 sm:mt-4'>
+          <textarea
+            placeholder="Message"
+            className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-2 py-2 text-sm sm:px-3 sm:py-2 sm:text-base"
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+            required
+            rows={3}
+          />
+        </div>
+        <div className='mt-4 flex items-start'>
+          <input type='checkbox' id='checkbox' className='w-4 h-4 mt-1' required />
+          <label htmlFor="checkbox" className='pl-3 w-[94%] font-medium text-sm sm:text-base'>
+            By using this form you agree with the storage and handling of your data policies of WebFounders USA.
+          </label>
+        </div>
+        <div className='mt-6 flex justify-end pb-4'>
+          <Button type="submit" className="text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3">Send request</Button>
+        </div>
+        {status && <div className="mt-2 text-sm">{status}</div>}
+      </form>
+    </div>
+  </DialogContent>
+</Dialog>
 
-
-                    <div className='mt-4'>
-                        <textarea
-                            placeholder="Message"
-                            className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-3 py-2"
-                            value={message}
-                            onChange={e => setMessage(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className='mt-5 flex items-start'>
-                        <input type='checkbox' id='checkbox' className='w-4 h-4' required />
-                        <label htmlFor="checkbox" className='pl-3 -mt-2 w-[94%] font-medium'>
-                            By using this form you agree with the storage and handling of your data policies of WebFounders USA.
-                        </label>
-                    </div>
-                    <div className='mt-8 flex justify-end pb-8'>
-                        <Button type="submit">Send request</Button>
-                    </div>
-                    {status && <div className="mt-2">{status}</div>}
-                </form>
-            </DialogContent>
-        </Dialog>
     )
 }

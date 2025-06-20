@@ -8,8 +8,8 @@ import TeamGrid from '@/components/sections/teams/teamGrid'
 import TestimonialTwo from '@/components/sections/testimonials/testimonialTwo'
 
 export const metadata = {
-  title: "WebFoundersUSA",
-  description: "NextPro is a modern Next.js and Tailwind CSS Template there features General Marketing, Social Media Marketing, AI in Marketing, Paid Advertising, Video Marketing, Analytics and Reporting, Industry news & Trends, E-commerce Marketing",
+    title: "WebFoundersUSA",
+    description: "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
 };
 
 const About = () => {
