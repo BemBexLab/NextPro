@@ -1,7 +1,7 @@
 export const blogData = [
     {
         id: 1,
-        title: "New Study: Instagram Reels Outperform TikTok & Facebook Videos.",
+        title: "Why Your eCommerce Business Needs a Website Development Partner",
         date: "25 January 2024",
         author: {
             author_img: "",

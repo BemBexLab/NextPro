@@ -10,7 +10,9 @@ const SideBar = ({ search, onCategorySelect, selectedCategory, scrollToSection }
   const uniqueCategorys = Object.keys(serviceDetailsData);
 
   return (
-    <aside className='sticky top-[var(--header-height)] transition-all duration-300'>
+    <aside
+      className='sticky top-[var(--header-height)] max-h-[calc(100vh-var(--header-height))] overflow-y-auto transition-all duration-300'
+    >
       {search &&
         <div className='pb-12.5'>
           <Title size={"4xl"} className={"pb-7.5"}>Search</Title>
