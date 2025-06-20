@@ -8,10 +8,11 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
             id: 1,
             title: "Company",
             links: [
-                { id: 1, path: "/contact-us", label: "Contact" },
+                { id: 1, path: "/contact-us", label: "Contact Us" },
                 { id: 2, path: "/about-us", label: "About Us" },
                 { id: 3, path: "/services", label: "Services" },
-                { id: 4, path: "/portfolio", label: "Portfolio" },
+                { id: 4, path: "/portfolio", label: "Our Work" },
+                { id: 5, path: "/classic-with-sidebar", label: "Blog" },
             ]
         },
         // {

@@ -161,7 +161,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                 </nav>
                 <div className="hidden xl:flex items-center gap-5">
                   <a
-                    href="tel:4702052274"
+                    href="tel:+14702052274"
                     className="flex items-center gap-3 group"
                   >
                     <div className="rounded-full bg-primary border-primary w-14 h-14 flex items-center justify-center animate-shake-pause group-hover:bg-primary/80 transition">
@@ -170,7 +170,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                       </div>
                     </div>
                     <span className="text-base font-semibold text-primary group-hover:underline">
-                      (470) 205-2274
+                      +1 (470) 205-2274
                     </span>
                   </a>
 

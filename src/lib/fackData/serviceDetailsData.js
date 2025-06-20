@@ -34,8 +34,8 @@ export const serviceDetailsData = {
         desc: "Strategic campaigns boost interactions, followers, and brand loyalty."
       },
       {
-        title: "Performance Tracking",
-        desc: "Continuous monitoring and optimization based on analytics."
+        title: "Community Building",
+        desc: "We foster relationships, encourage conversations, and grow your loyal online audience."
       }
     ],
     faqs: [

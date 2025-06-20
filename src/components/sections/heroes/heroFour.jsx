@@ -22,17 +22,17 @@ const HeroFour = () => {
                             <Button asChild>
                                 <Link href="/contact-us"> Contact Us </Link>
                             </Button>
-                            <div className='flex items-center gap-2'>
+                            {/* <div className='flex items-center gap-2'>
                                 <PlayIcon playOne={false} />
                                 <p className='font-semibold'>How It works?</p>
-                            </div>
+                            </div> */}
                         </div>
-                        <span className='inline-block h-[1px] w-full max-w-[491px] bg-[#C0C0C0]'></span>
-                        <ul className='pt-4 flex sm:flex-row flex-col sm:items-center gap-8'>
+                        {/* <span className='inline-block h-[1px] w-full max-w-[491px] bg-[#C0C0C0]'></span> */}
+                        {/* <ul className='pt-4 flex sm:flex-row flex-col sm:items-center gap-8'>
                             <li className='flex items-center gap-2'> <Image src="/images/shapes/check-icon-blue.svg" width={"20"} height={"20"} alt='check icon' /> <span className='text-sm'>7 Days Free trial</span> </li>
                             <li className='flex items-center gap-2'> <Image src="/images/shapes/check-icon-blue.svg" width={"20"} height={"20"} alt='check icon' /> <span className='text-sm'>Credit card required</span> </li>
                             <li className='flex items-center gap-2'> <Image src="/images/shapes/check-icon-blue.svg" width={"20"} height={"20"} alt='check icon' /> <span className='text-sm'>Cancel anytime</span> </li>
-                        </ul>
+                        </ul> */}
                     </div>
                     {/* ----- left side end */}
 
