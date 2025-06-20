@@ -11,6 +11,7 @@ export default function ContactPopup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
@@ -27,7 +28,7 @@ export default function ContactPopup() {
       const res = await fetch("/api/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, website, service, message }),
+        body: JSON.stringify({ name, email, website, contactNumber, service, message }),
       });
 
       const data = await res.json();
@@ -36,6 +37,7 @@ export default function ContactPopup() {
         setName("");
         setEmail("");
         setWebsite("");
+        setContactNumber("");
         setService("");
         setMessage("");
       } else {
@@ -84,7 +86,7 @@ export default function ContactPopup() {
               <input
                 type="text"
                 placeholder="Name"
-                className="border-2 border-[#C0C0C0] rounded-lg px-[25px] py-[8px] outline-blue-200 bg-background w-full"
+                className="border-2 border-[#C0C0C0] rounded-lg px-[20px] py-[8px] outline-blue-200 bg-background w-full"
                 value={name}
                 onChange={e => setName(e.target.value)}
                 required
@@ -92,25 +94,33 @@ export default function ContactPopup() {
               <input
                 type="email"
                 placeholder="Email"
-                className="border-2 border-[#C0C0C0] rounded-lg px-[25px] py-[8px] w-full outline-blue-200 bg-background"
+                className="border-2 border-[#C0C0C0] rounded-lg px-[20px] py-[8px] w-full outline-blue-200 bg-background"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 required
               />
               <input
                 type="url"
-                placeholder="Website"
-                className="border-2 border-[#C0C0C0] rounded-lg px-[25px] py-[8px] w-full outline-blue-200 bg-background"
+                placeholder="Website (optional)"
+                className="border-2 border-[#C0C0C0] rounded-lg px-[20px] py-[8px] w-full outline-blue-200 bg-background"
                 value={website}
                 onChange={e => setWebsite(e.target.value)}
-                required
+                // Not required
+              />
+              <input
+                type="text"
+                placeholder="Contact Number (optional)"
+                className="border-2 border-[#C0C0C0] rounded-lg px-[20px] py-[8px] w-full outline-blue-200 bg-background"
+                value={contactNumber}
+                onChange={e => setContactNumber(e.target.value)}
+                // Not required
               />
               <div className="relative">
                 <select
                   value={service}
                   onChange={e => setService(e.target.value)}
                   required
-                  className="border-2 border-[#C0C0C0] rounded-lg px-[25px] h-12 w-full outline-blue-200 bg-background text-base appearance-none pr-10"
+                  className="border-2 border-[#C0C0C0] rounded-lg px-[20px] h-12 w-full outline-blue-200 bg-background text-base appearance-none pr-10"
                 >
                   <option value="" disabled>Select a Service</option>
                   <option value="Search Engine Optimization">Search Engine Optimization</option>

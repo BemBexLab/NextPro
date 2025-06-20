@@ -42,6 +42,7 @@ const Form = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [website, setWebsite] = useState('');
+    const [contactNumber, setContactNumber] = useState('');
     const [service, setService] = useState('');
     const [message, setMessage] = useState('');
     const [status, setStatus] = useState('');
@@ -56,6 +57,7 @@ const Form = () => {
                 name,
                 email,
                 website,
+                contactNumber,
                 service,
                 message,
             }),
@@ -65,6 +67,7 @@ const Form = () => {
             setName('');
             setEmail('');
             setWebsite('');
+            setContactNumber('');
             setService('');
             setMessage('');
         } else {
@@ -122,28 +125,38 @@ const Form = () => {
           <div className="w-full">
             <input
               type="text"
-              placeholder="Website"
+              placeholder="Website (optional)"
               className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
               value={website}
               onChange={e => setWebsite(e.target.value)}
-              required
+              // not required
             />
           </div>
           <div className="w-full">
-            <select
-              className="bg-white border-2 border-gray-300 font-medium text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
-              value={service}
-              onChange={e => setService(e.target.value)}
-              required
-            >
-              <option value="" disabled>Select a Service</option>
-              <option value="Search Engine Optimization">Search Engine Optimization</option>
-              <option value="Social Media Marketing">Social Media Marketing</option>
-              <option value="Content Writing">Content Writing</option>
-              <option value="Affiliate Marketing">Affiliate Marketing</option>
-              <option value="Email Marketing">Email Marketing</option>
-            </select>
+            <input
+              type="text"
+              placeholder="Contact Number (optional)"
+              className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
+              value={contactNumber}
+              onChange={e => setContactNumber(e.target.value)}
+              // not required
+            />
           </div>
+        </div>
+        <div className="w-full mt-3 sm:mt-4">
+          <select
+            className="bg-white border-2 border-gray-300 font-medium text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
+            value={service}
+            onChange={e => setService(e.target.value)}
+            required
+          >
+            <option value="" disabled>Select a Service</option>
+            <option value="Search Engine Optimization">Search Engine Optimization</option>
+            <option value="Social Media Marketing">Social Media Marketing</option>
+            <option value="Content Writing">Content Writing</option>
+            <option value="Affiliate Marketing">Affiliate Marketing</option>
+            <option value="Email Marketing">Email Marketing</option>
+          </select>
         </div>
         <div className='mt-3 sm:mt-4'>
           <textarea
@@ -169,6 +182,5 @@ const Form = () => {
     </div>
   </DialogContent>
 </Dialog>
-
     )
 }

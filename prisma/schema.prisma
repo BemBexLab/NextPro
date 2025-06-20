@@ -14,11 +14,12 @@ datasource db {
 }
 
 model Submission {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String
-  website   String
-  service   String
-  message   String
-  createdAt DateTime @default(now())
+  id            Int      @id @default(autoincrement())
+  name          String
+  email         String
+  website       String?   // Optional
+  contactNumber String?   // Optional
+  service       String
+  message       String
+  createdAt     DateTime @default(now())
 }

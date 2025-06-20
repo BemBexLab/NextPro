@@ -5,19 +5,12 @@ import { Button } from '../ui/button'
 import Title from '../ui/title'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
-import {
-  Select,
-  SelectTrigger,
-  SelectValue,
-  SelectContent,
-  SelectItem,
-} from "@/components/ui/select";
-
 
 const ContactFormTwo = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [website, setWebsite] = useState('');
+    const [contactNumber, setContactNumber] = useState('');
     const [service, setService] = useState('');
     const [message, setMessage] = useState('');
     const [status, setStatus] = useState('');
@@ -25,6 +18,7 @@ const ContactFormTwo = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('Sending...');
+        // Submit all fields, website and contactNumber are optional
         const res = await fetch('/api/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -32,6 +26,7 @@ const ContactFormTwo = () => {
                 name,
                 email,
                 website,
+                contactNumber,
                 service,
                 message,
             }),
@@ -41,6 +36,7 @@ const ContactFormTwo = () => {
             setName('');
             setEmail('');
             setWebsite('');
+            setContactNumber('');
             setService('');
             setMessage('');
         } else {
@@ -87,41 +83,48 @@ const ContactFormTwo = () => {
                                 <div className='w-full'>
                                     <input
                                         type="url"
-                                        placeholder="Website"
+                                        placeholder="Website (optional)"
                                         className="border-2 border-[#C0C0C0] rounded-lg px-[25px] py-[18px] max-h-12.5 w-full outline-blue-200 bg-background"
                                         value={website}
                                         onChange={e => setWebsite(e.target.value)}
-                                        required
+                                        // Not required anymore
                                     />
                                 </div>
-                                <div className="w-full relative">
-  <select
-    value={service}
-    onChange={e => setService(e.target.value)}
-    required
-    className="border-2 border-[#C0C0C0] rounded-lg px-[25px] h-12 w-full outline-blue-200 bg-background text-base appearance-none pr-10"
-  >
-    <option value="" disabled>Select a Service</option>
-    <option value="Search Engine Optimization">Search Engine Optimization</option>
-    <option value="Social Media Marketing">Social Media Marketing</option>
-    <option value="Content Writing">Content Writing</option>
-    <option value="Affiliate Marketing">Affiliate Marketing</option>
-    <option value="Email Marketing">Email Marketing</option>
-  </select>
-  {/* Custom dropdown arrow */}
-  <svg
-    className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    viewBox="0 0 24 24"
-    aria-hidden="true"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-  </svg>
-</div>
-
-
+                                <div className='w-full'>
+                                    <input
+                                        type="text"
+                                        placeholder="Contact Number (optional)"
+                                        className="border-2 border-[#C0C0C0] rounded-lg px-[25px] py-[18px] max-h-12.5 w-full outline-blue-200 bg-background"
+                                        value={contactNumber}
+                                        onChange={e => setContactNumber(e.target.value)}
+                                        // Not required
+                                    />
+                                </div>
+                            </div>
+                            <div className="w-full relative mb-3">
+                                <select
+                                    value={service}
+                                    onChange={e => setService(e.target.value)}
+                                    required
+                                    className="border-2 border-[#C0C0C0] rounded-lg px-[25px] h-12 w-full outline-blue-200 bg-background text-base appearance-none pr-10"
+                                >
+                                    <option value="" disabled>Select a Service</option>
+                                    <option value="Search Engine Optimization">Search Engine Optimization</option>
+                                    <option value="Social Media Marketing">Social Media Marketing</option>
+                                    <option value="Content Writing">Content Writing</option>
+                                    <option value="Affiliate Marketing">Affiliate Marketing</option>
+                                    <option value="Email Marketing">Email Marketing</option>
+                                </select>
+                                <svg
+                                    className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
                             </div>
                             <div className='mb-3'>
                                 <textarea
