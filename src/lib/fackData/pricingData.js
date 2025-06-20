@@ -538,7 +538,7 @@ export const pricingData = [
     plan_name: "3 Months",
     category: "Maintenance",
     price: "199",
-    old_price: "199",
+    old_price: "285",
     services: [
       "BackupBuddy",
       "UpDraftPlus",
