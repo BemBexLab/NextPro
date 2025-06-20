@@ -109,7 +109,7 @@ export default function ContactPopup() {
               />
               <input
                 type="text"
-                placeholder="Contact Number (optional)"
+                placeholder="Phone Number (optional)"
                 className="border-2 border-[#C0C0C0] rounded-lg px-[20px] py-[8px] w-full outline-blue-200 bg-background"
                 value={contactNumber}
                 onChange={e => setContactNumber(e.target.value)}

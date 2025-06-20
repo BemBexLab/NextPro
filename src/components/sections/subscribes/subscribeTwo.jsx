@@ -135,7 +135,7 @@ const Form = () => {
           <div className="w-full">
             <input
               type="text"
-              placeholder="Contact Number (optional)"
+              placeholder="Phone Number (optional)"
               className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
               value={contactNumber}
               onChange={e => setContactNumber(e.target.value)}

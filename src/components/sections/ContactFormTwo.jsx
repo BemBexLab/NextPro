@@ -93,7 +93,7 @@ const ContactFormTwo = () => {
                                 <div className='w-full'>
                                     <input
                                         type="text"
-                                        placeholder="Contact Number (optional)"
+                                        placeholder="Phone Number (optional)"
                                         className="border-2 border-[#C0C0C0] rounded-lg px-[25px] py-[18px] max-h-12.5 w-full outline-blue-200 bg-background"
                                         value={contactNumber}
                                         onChange={e => setContactNumber(e.target.value)}
