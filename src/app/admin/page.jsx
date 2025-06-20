@@ -170,7 +170,7 @@ export default function AdminDashboard() {
         <p>Loading submissions...</p>
       ) : (
         <div className="overflow-x-auto">
-          <table className="min-w-[800px] w-full text-left border border-black text-xs sm:text-sm">
+          <table className="min-w-[900px] w-full text-left border border-black text-xs sm:text-sm">
             <thead>
               <tr className="bg-white">
                 <th className="p-2 border border-white">
@@ -183,6 +183,7 @@ export default function AdminDashboard() {
                 <th className="p-2 border border-white">Name</th>
                 <th className="p-2 border border-white">Email</th>
                 <th className="p-2 border border-white">Website</th>
+                <th className="p-2 border border-white">Contact Number</th>
                 <th className="p-2 border border-white">Service</th>
                 <th className="p-2 border border-white">Message</th>
                 <th className="p-2 border border-white">Time</th>
@@ -200,7 +201,8 @@ export default function AdminDashboard() {
                   </td>
                   <td className="p-2 border border-white">{s.name}</td>
                   <td className="p-2 border border-white">{s.email}</td>
-                  <td className="p-2 border border-white">{s.website}</td>
+                  <td className="p-2 border border-white">{s.website || <span className="text-gray-400 italic">N/A</span>}</td>
+                  <td className="p-2 border border-white">{s.contactNumber || <span className="text-gray-400 italic">N/A</span>}</td>
                   <td className="p-2 border border-white">{s.service}</td>
                   <td className="p-2 border border-white">{s.message}</td>
                   <td className="p-2 border border-white">
