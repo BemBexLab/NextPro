@@ -8,6 +8,7 @@ import PriceThree from '@/components/sections/pricing/priceThree'
 import ProvideOne from '@/components/sections/provides/provideOne'
 import ServiceTwo from '@/components/sections/services/serviceTwo'
 import Solutions from '@/components/sections/solutions'
+import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
     title: "WebFoundersUSA",
@@ -25,6 +26,7 @@ const Services = () => {
             <Solutions />
             <PriceThree />
             {/* <ContactForm color={"text-white"} inputColor={"bg-transparent border-white border text-white placeholder:text-white"} /> */}
+            <ContactFormTwo />
         </main>
     )
 }

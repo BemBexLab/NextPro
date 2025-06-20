@@ -4,6 +4,7 @@ import PageTitle from '@/components/sections/pageTitle'
 import PriceOne from '@/components/sections/pricing/priceOne'
 import PriceThree from '@/components/sections/pricing/priceThree'
 import SubscribeTwo from '@/components/sections/subscribes/subscribeTwo'
+import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
     title: "WebFoundersUSA",
@@ -18,6 +19,7 @@ const Pricing = () => {
             {/* <PriceOne/>
             <FaqTwo/> */}
             <SubscribeTwo/>
+            <ContactFormTwo />
         </min>
     )
 }

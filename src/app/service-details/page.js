@@ -1,6 +1,6 @@
 
 // /app/service-details/page.jsx
-
+import ContactFormTwo from "@/components/sections/ContactFormTwo";
 import React from 'react';
 import PageTitle from '@/components/sections/pageTitle';
 import ServiceArtical from '@/components/sections/services/serviceArtical';
@@ -33,6 +33,7 @@ const ServicesDetails = () => {
       />
       <div className='lg:pb-15 pb-9'></div>
       */}
+      <ContactFormTwo />
     </main>
   );
 };

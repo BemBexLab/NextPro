@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
+import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 // Dynamically import the client-only BackButton
 const BackButton = dynamic(() => import("./BackButton"), { ssr: false });
@@ -30,6 +31,7 @@ export default async function ProjectPage({ params }) {
   const acf = project.acf;
 
   return (
+    <>
     <div className="min-h-screen   px-4 py-16 flex flex-col items-center mt-[80px]">
       {/* Title */}
       <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold max-w-4xl text-left w-full bg-gradient-to-r text-primary   bg-clip-text mb-[50px]">
@@ -79,6 +81,8 @@ export default async function ProjectPage({ params }) {
         <BackButton />
       </div>
     </div>
+    <ContactFormTwo />
+    </>
   );
 }
 

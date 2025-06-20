@@ -6,6 +6,7 @@ import PageTitle from '@/components/sections/pageTitle'
 import SubscribeTwo from '@/components/sections/subscribes/subscribeTwo'
 import TeamGrid from '@/components/sections/teams/teamGrid'
 import TestimonialTwo from '@/components/sections/testimonials/testimonialTwo'
+import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
     title: "WebFoundersUSA",
@@ -25,6 +26,7 @@ const About = () => {
         <TestimonialTwo/>
         {/* <FaqTwo/> */}
         <SubscribeTwo/>
+        <ContactFormTwo />
     </main>
   )
 }

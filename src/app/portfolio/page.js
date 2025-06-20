@@ -1,6 +1,7 @@
 import React from "react";
 import PageTitle from "@/components/sections/pageTitle";
 import ProjectsTab from "@/components/sections/projectsTab";
+import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
     title: "WebFoundersUSA",
@@ -12,6 +13,7 @@ const Portfolio = () => {
     <main>
       {/* <PageTitle pageName={"Portfolio"} breadcrumbLink={"Portfolio"} /> */}
       <ProjectsTab />
+      <ContactFormTwo />
     </main>
   );
 };

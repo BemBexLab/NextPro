@@ -33,6 +33,7 @@ const HomeFour = () => {
       <PriceThree />
       <SubscribeTwo />
       {/* <BlogOne /> */}
+      <ContactFormTwo />
     </main>
   );
 };

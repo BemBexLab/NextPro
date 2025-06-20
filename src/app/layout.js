@@ -34,7 +34,7 @@ const dm_sans = DM_Sans({
 export const metadata = {
   title: "WebFoundersUSA",
   description:
-    "WebFounder USA is a leading web development company that provides custom web development services to businesses of all sizes. We are a team of experienced web developers who are dedicated to providing the best possible web development services to our clients.",
+    "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
 };
 
 export default function RootLayout({ children }) {
@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
             <HeaderTwo haveOvcanvsIcon={false} haveShadow={false} />
             {children}
             <ContactPopup />
-            <ContactFormTwo />
+            {/* <ContactFormTwo /> */}
             <FooterFour />
             <Setting />
             <ScrollCircle />

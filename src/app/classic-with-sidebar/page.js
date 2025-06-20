@@ -3,6 +3,7 @@ import CardOne from '@/components/sections/blogs/cardOne'
 import PageTitle from '@/components/sections/pageTitle'
 import { blogData } from '@/lib/fackData/blogData'
 import Link from 'next/link'
+import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
     title: "WebFoundersUSA",
@@ -33,6 +34,7 @@ const Blog2 = () => {
                     </div>
                 </div>
             </div>
+            <ContactFormTwo />
         </main>
     )
 }
