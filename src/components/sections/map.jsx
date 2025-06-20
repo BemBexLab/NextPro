@@ -9,6 +9,7 @@ import content_icon from "../../../public/images/shapes/content-writing-icon.png
 import Image from "next/image";
 import SlideUp from "../animations/slideUp";
 import SocialIcons from "../ui/socialIcons";
+import FreelancerMatchForm from "@/components/sections/contact/contactForm";
 
 const ContactMap = () => {
   return (
@@ -17,9 +18,10 @@ const ContactMap = () => {
         <div className="flex flex-col items-center">
           <Button variant="secondary">Contact Us</Button>
           <Title size={"5xl"} className="max-w-[832px] pt-6 text-center">
-            Discover <Highlight>Our Location</Highlight> and Plan Your Visit
+            Get in Touch: <Highlight>We're Here to Help</Highlight>
           </Title>
         </div>
+        <FreelancerMatchForm />
         <div className="relative z-[1] lg:pt-12.5 pt-7.5">
           {/* Gray BG with rounded corners */}
           <div className="after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-gray after:rounded-[30px] after:z-[-1] relative flex items-center justify-center min-h-[300px] px-3 lg:px-0">

@@ -415,7 +415,7 @@ export const serviceDetailsData = {
       desc: "Develop data-backed hypotheses for what changes will improve conversion rates."
     },
     {
-      title: "A/B & Multivariate Testing",
+      title: "Multivariate Testing",
       desc: "Design and execute structured tests to validate optimizations and maximize results."
     },
     {
@@ -473,27 +473,27 @@ export const serviceDetailsData = {
   strategicApproach: [
     {
       title: "Store & Platform Optimization",
-      desc: "Audit and fine-tune your e-commerce platform (Shopify, WooCommerce, etc.) for seamless user experiences and faster checkouts."
+      desc: "Audit and optimize your e-commerce platform (Shopify, WooCommerce, etc.) for seamless user experiences, faster checkouts, and improved functionality."
     },
     {
       title: "Product & Category Strategy",
-      desc: "Optimize product listings, descriptions, and categories for maximum visibility and conversions."
+      desc: "Enhance product listings, descriptions, and categories to increase visibility, drive traffic, and maximize conversions."
     },
     {
       title: "Cross-Channel Promotion",
-      desc: "Drive traffic and sales through integrated advertising, email, and social media campaigns."
+      desc: "Utilize a blend of advertising, email marketing, and social media campaigns to drive traffic and boost sales across multiple platforms."
     },
     {
       title: "Retargeting & Cart Recovery",
-      desc: "Implement retargeting strategies and automated emails to recover abandoned carts and boost sales."
+      desc: "Implement targeted retargeting strategies and automated cart recovery emails to recover abandoned carts and increase sales."
     },
     {
       title: "Influencer & Affiliate Campaigns",
-      desc: "Leverage influencer partnerships and affiliate programs to expand your reach and attract new customers."
+      desc: "Collaborate with influencers and establish affiliate programs to broaden your brand reach and attract new customers."
     },
     {
       title: "Analytics, Reporting & Continuous Optimization",
-      desc: "Track campaign performance, provide transparent reporting, and refine strategies for ongoing growth."
+      desc: "Monitor campaign performance, provide detailed reporting, and continuously refine strategies for ongoing growth and higher ROI. content for ecommerce marketing"
     }
   ],
   faqs: [

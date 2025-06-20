@@ -25,13 +25,13 @@ const StoryContentOne = () => {
                 <div className='flex items-center sm:gap-[32px] gap-6 md:pt-[55px] pt-7 pb-[22px]'>
                     <div>
                         <Button asChild>
-                            <Link href="/about-us">  Get Started</Link>
+                            <Link href="/contact-us">  Get Started</Link>
                         </Button>
                     </div>
-                    <div className='flex items-center gap-2'>
+                    {/* <div className='flex items-center gap-2'>
                         <PlayIcon playOne={false} />
                         <p className='font-semibold sm:block hidden'>How It works?</p>
-                    </div>
+                    </div> */}
                 </div>
             </SlideUp>
         </div>
