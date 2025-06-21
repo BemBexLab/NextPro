@@ -24,7 +24,7 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
         //         { id: 3, path: "#", label: "Support" },
         //         { id: 4, path: "#", label: "Tutorial" },
         //     ]
-        // },
+        // }
         {
             id: 3,
             title: "Social",
