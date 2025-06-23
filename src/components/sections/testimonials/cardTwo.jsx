@@ -19,7 +19,7 @@ const CardTwo = ({ rating, name, position, src, review }) => {
                             <Rating star={rating} />
                             <Image src={"/images/shapes/trustpilot-img.png"} width={178} height={50} alt='trustpilot' />
                         </div>
-                        <p>{review.length > 134 ? review.slice(0, 134) : review}</p>
+                        <p>{review.length > 134 ? review.slice(0, 180) : review}</p>
                         <div className='pt-11'>
                             <strong className='text-1xl font-semibold text-muted-foreground'>{name}</strong>
                             <p className='font-semibold'>{position}</p>
