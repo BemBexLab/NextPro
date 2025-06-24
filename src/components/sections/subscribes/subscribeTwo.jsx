@@ -17,7 +17,7 @@ const SubscribeTwo = () => {
         <section className='lg:py-15 py-9'>
             <SlideUp>
                 <div className='max-w-[1350px] mx-auto px-[15px] relative overflow-x-hidden'>
-                    <div className='rounded-[30px] bg-gray lg:px-12.5 px-7.5 lg:pt-14 pt-7.5 lg:pb-16 pb-7.5 flex lg:flex-row flex-col justify-between lg:items-center'>
+                    <div className='rounded-[30px] bg-gray-200 lg:px-12.5 px-7.5 lg:pt-14 pt-7.5 lg:pb-16 pb-7.5 flex lg:flex-row flex-col justify-between lg:items-center'>
                         <div className='pb-6 max-w-[750px] w-full relative'>
                             <Title size={"5xl"} className={"max-w-[707px]"}>Ready to Transform Your Digital Presence?</Title>
                             <p>Schedule a 30 minutes Meeting with Our Experts to Propel Your Online Success.</p>
