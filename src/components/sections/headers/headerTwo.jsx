@@ -177,7 +177,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                   <Button asChild size="xl">
                     <Link className="text-foreground" href={"/contact-us"}>
                       {" "}
-                      Let’s Talk{" "}
+                      Contact Us{" "}
                     </Link>
                   </Button>
                   <Offcanvas>
