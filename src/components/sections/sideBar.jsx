@@ -1,18 +1,32 @@
 "use client";
 
-import React from 'react'
-import Title from '../ui/title'
-import Input from '../ui/input'
+import React, { useEffect } from 'react';
+import Title from '../ui/title';
+import Input from '../ui/input';
 import { FiSearch } from "react-icons/fi";
 import { serviceDetailsData } from '@/lib/fackData/serviceDetailsData';
+
+// Helper function to detect mobile devices
+function isMobile() {
+  if (typeof window === 'undefined') return false;
+  return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(window.navigator.userAgent);
+}
 
 const SideBar = ({ search, onCategorySelect, selectedCategory, scrollToSection }) => {
   const uniqueCategorys = Object.keys(serviceDetailsData);
 
+  // Auto-scroll when selectedCategory changes (desktop only)
+  useEffect(() => {
+    if (selectedCategory && !isMobile()) {
+      const el = document.getElementById(`sidebar-cat-${selectedCategory}`);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+  }, [selectedCategory]);
+
   return (
-    <aside
-      className='sticky top-[var(--header-height)] max-h-[calc(100vh-var(--header-height))] overflow-y-auto transition-all duration-300'
-    >
+    <aside className='sticky top-[var(--header-height)] max-h-[calc(100vh-var(--header-height))] overflow-y-auto transition-all duration-300'>
       {search &&
         <div className='pb-12.5'>
           <Title size={"4xl"} className={"pb-7.5"}>Search</Title>
@@ -31,7 +45,7 @@ const SideBar = ({ search, onCategorySelect, selectedCategory, scrollToSection }
           {uniqueCategorys.map((category, index) => {
             const isActive = selectedCategory === category;
             return (
-              <li key={index}>
+              <li key={index} id={`sidebar-cat-${category}`}>
                 <button
                   type="button"
                   onClick={() => {
@@ -43,12 +57,12 @@ const SideBar = ({ search, onCategorySelect, selectedCategory, scrollToSection }
                   {category}
                 </button>
               </li>
-            )
+            );
           })}
         </ul>
       </div>
     </aside>
-  )
-}
+  );
+};
 
-export default SideBar
+export default SideBar;

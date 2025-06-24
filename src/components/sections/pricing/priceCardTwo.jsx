@@ -30,7 +30,7 @@ const PriceCardTwo = ({ plan_name, price, services, old_price }) => {
   }, []);
 
   return (
-    <div className="group bg-white border-2 border-black rounded-[22px] flex flex-col justify-between p-8 min-h-[600px] w-[350px] transition mx-auto shadow-sm hover:shadow-md relative">
+    <div className="group bg-[#ffe6e9] border-2 border-black rounded-[22px] flex flex-col justify-between p-8 min-h-[600px] w-[350px] transition mx-auto shadow-sm hover:shadow-md relative">
       {/* Plan Name */}
       <div>
         <div>

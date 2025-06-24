@@ -46,7 +46,7 @@ const ContactFormTwo = () => {
 
     return (
         <section className='container lg:mt-15 mt-9'>
-            <div className={cn(`max-w-[1320px] mx-auto lg:pt-20 pt-12 lg:pb-12.5 pb-10 rounded-[30px] bg-background drop-shadow-4xl -mb-28 lg:px-12.5 px-6 relative z-[1]`)}>
+            <div className={cn(`max-w-[1320px] mx-auto lg:pt-20 pt-12 lg:pb-12.5 pb-10 rounded-[30px] bg-background drop-shadow-4xl bg-gray-200 -mb-28 lg:px-12.5 px-6 relative z-[1]`)}>
                 <div className='flex lg:flex-row flex-col justify-between items-center gap-12.5 '>
                     <div className='lg:w-[40%] w-full lg:pb-11'>
                         <div className={`w-[75px] h-[75px] rounded-lg flex justify-center items-center drop-shadow-3xl bg-white mb-3`}>

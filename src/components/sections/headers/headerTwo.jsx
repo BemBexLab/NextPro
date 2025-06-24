@@ -115,28 +115,29 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                             </span>
                             {/* Simple dropdown: just categories */}
                             <div
-                              className={`absolute left-0 top-full w-72 rounded-xl shadow-2xl bg-white z-30 transition-all duration-200 ${
-                                openDropdown
-                                  ? "opacity-100 pointer-events-auto translate-y-0"
-                                  : "opacity-0 pointer-events-none translate-y-2"
-                              }`}
-                            >
-                              <ul className="py-3">
-                                {serviceCategories.map((cat, i) => (
-                                  <li key={i}>
-                                    <button
-                                      type="button"
-                                      onClick={() =>
-                                        handleServiceCategoryClick(cat)
-                                      }
-                                      className="block w-full text-left px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
-                                    >
-                                      {cat}
-                                    </button>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
+  className={`absolute left-0 top-full w-72 rounded-xl shadow-2xl bg-white z-30 transition-all duration-200 ${
+    openDropdown
+      ? "opacity-100 pointer-events-auto translate-y-0"
+      : "opacity-0 pointer-events-none translate-y-2"
+  }`}
+  style={{ maxHeight: "500px" }} // Increased to 500px
+>
+  <ul className="py-3 overflow-y-auto max-h-[500px] custom-scrollbar">
+    {serviceCategories.map((cat, i) => (
+      <li key={i}>
+        <button
+          type="button"
+          onClick={() => handleServiceCategoryClick(cat)}
+          className="block w-full text-left px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
+        >
+          {cat}
+        </button>
+      </li>
+    ))}
+  </ul>
+</div>
+
+
                           </li>
                         );
                       }

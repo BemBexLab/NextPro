@@ -12,6 +12,14 @@ const companies = [
   { src: '/images/slider/clients06.webp', alt: 'Professional Bookkeeping Services', width: 150, height: 54 },
   { src: '/images/slider/clients07.webp', alt: 'USCyberCall', width: 110, height: 54 },
   { src: '/images/slider/clients08.webp', alt: 'ROCHE', width: 120, height: 54 },
+  { src: '/images/slider/clients01.webp', alt: 'Alser Logistics', width: 110, height: 54 },
+  { src: '/images/slider/clients02.webp', alt: 'answerIT', width: 110, height: 54 },
+  { src: '/images/slider/clients03.webp', alt: 'Professional Bookkeeping Services', width: 150, height: 54 },
+  { src: '/images/slider/clients04.webp', alt: 'USCyberCall', width: 110, height: 54 },
+  { src: '/images/slider/clients05.webp', alt: 'ROCHE', width: 120, height: 54 },
+  { src: '/images/slider/clients06.webp', alt: 'Professional Bookkeeping Services', width: 150, height: 54 },
+  { src: '/images/slider/clients07.webp', alt: 'USCyberCall', width: 110, height: 54 },
+  { src: '/images/slider/clients08.webp', alt: 'ROCHE', width: 120, height: 54 },
 ];
 
 export default function CompaniesSlider() {

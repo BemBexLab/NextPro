@@ -43,7 +43,7 @@ const MobileMenu = ({ data }) => {
             </div>
             <ul className="pt-9 pb-8">
               {data.map(({ id, path, lable }) => {
-                if (lable === "Services We Offer") {
+                if (lable === "Services") {
                   return (
                     <li key={id}>
                       <button
