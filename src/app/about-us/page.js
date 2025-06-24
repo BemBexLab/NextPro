@@ -23,7 +23,7 @@ const About = () => {
         <StoryFive counter={false}/>
         <Mission/>
         {/* <TeamGrid/> */}
-        <TestimonialTwo/>
+        {/* <TestimonialTwo/> */}
         {/* <FaqTwo/> */}
         <SubscribeTwo/>
         <ContactFormTwo />
