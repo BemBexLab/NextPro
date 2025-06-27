@@ -1,36 +1,45 @@
-import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
-export async function POST(request) {
+export async function POST(req) {
+  const body = await req.json();
+  // Get all fields from the frontend
+  const { name, email, website, contactNumber, service, message } = body;
+
+  // Validation: Only name, email, service, message required; others optional
+  if (!name || !email || !service || !message) {
+    return NextResponse.json({ error: "Please fill all required fields." }, { status: 400 });
+  }
+
+  // SMTP setup
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+
+  const mailOptions = {
+    from: `"Website Contact" <${process.env.SMTP_USER}>`,
+    to: "info@webfoundersusa.com",
+    subject: "New Contact Form Submission",
+    html: `
+      <h2>New Contact Form Submission</h2>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Website:</strong> ${website || 'N/A'}</p>
+      <p><strong>Phone:</strong> ${contactNumber || 'N/A'}</p>
+      <p><strong>Service:</strong> ${service}</p>
+      <p><strong>Message:</strong><br>${message}</p>
+    `,
+  };
+
   try {
-    const body = await request.json()
-    console.log('Request body:', body)
-
-    // Destructure contactNumber and website as optional
-    const { name, email, website, contactNumber, service, message } = body
-
-    // Only name, email, service, and message are required
-    if (!name || !email || !service || !message) {
-      console.log('Missing field:', { name, email, service, message })
-      return Response.json({ success: false, error: 'Missing required fields.' }, { status: 400 })
-    }
-
-    const submission = await prisma.submission.create({
-      data: {
-        name,
-        email,
-        website: website || null,               // Save null if empty
-        contactNumber: contactNumber || null,   // Save null if empty
-        service,
-        message,
-      }
-    })
-
-    console.log('Submission successful:', submission)
-
-    return Response.json({ success: true, submission })
+    await transporter.sendMail(mailOptions);
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('API error:', error)
-    return Response.json({ success: false, error: error.message }, { status: 500 })
+    console.error("Email Error:", error);
+    return NextResponse.json({ error: "Failed to send message. Please try again." }, { status: 500 });
   }
 }
