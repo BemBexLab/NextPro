@@ -50,7 +50,7 @@ const ContactFormTwo = () => {
                 <div className='flex lg:flex-row flex-col justify-between items-center gap-12.5 '>
                     <div className='lg:w-[40%] w-full lg:pb-11'>
                         <div className={`w-[75px] h-[75px] rounded-lg flex justify-center items-center drop-shadow-3xl bg-white mb-3`}>
-                            <Image src={'/images/shapes/cro-icon.png'} width={45} height={50} alt='map arrow' />
+                            <Image src={'/images/shapes/Frame 209.png'} width={45} height={50} alt='map arrow' />
                         </div>
                         <Title size={"5xl"} className={`md:leading-[140%]`}>Request a free Audit of your website</Title>
                         <p className={`font-semibold mt-4 max-w-[449px]`}>Find quick answers to common queries in our FAQ section, ensuring a clear understanding of your digital journey with us.</p>

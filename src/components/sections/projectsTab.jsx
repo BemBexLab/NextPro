@@ -2,6 +2,19 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
+// SkeletonCard component for loading state
+function SkeletonCard() {
+  return (
+    <div className="w-full h-[350px] bg-gradient-to-br from-[#10132b] to-[#1a1e38] rounded-2xl shadow-2xl border border-white/10 overflow-hidden flex flex-col animate-pulse relative">
+      <div className="flex-1 w-full h-[220px] skeleton-shimmer" />
+      <div className="p-4 flex flex-col gap-2">
+        <div className="h-6 w-2/3 bg-white/10 rounded" />
+        <div className="h-4 w-1/3 bg-white/5 rounded" />
+      </div>
+    </div>
+  );
+}
+
 const categories = [
   "WEB DEVELOPMENT",
   "SHOPIFY",
@@ -15,6 +28,7 @@ const categories = [
 const ProjectsTab = () => {
   const [posts, setPosts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("WEB DEVELOPMENT");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -27,6 +41,8 @@ const ProjectsTab = () => {
         setPosts(projectPosts);
       } catch (err) {
         console.error("Error fetching posts", err);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -65,8 +81,8 @@ const ProjectsTab = () => {
             onClick={() => setSelectedCategory(label)}
             className={`px-4 py-1.5 text-sm sm:text-base rounded-full border transition-all duration-200 font-medium cursor-pointer ${
               selectedCategory === label
-                ? "bg-[#072d7f] text-white border-[#072d7f]" // Selected style: brand primary
-                : "bg-white text-[#072d7f] border-[#d1d5db] hover:bg-[#f0f4ff] hover:border-[#072d7f]" // Default style
+                ? "bg-[#072d7f] text-white border-[#072d7f]"
+                : "bg-white text-[#072d7f] border-[#d1d5db] hover:bg-[#f0f4ff] hover:border-[#072d7f]"
             }`}
           >
             {label}
@@ -74,14 +90,23 @@ const ProjectsTab = () => {
         ))}
       </div>
 
-      {/* Projects Grid or Loading Message */}
-      {posts.length === 0 ? (
-        <div className="text-white text-center py-10">Loading Projects...</div>
+      {/* Projects Grid or Message */}
+      {loading ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
+          {Array.from({ length: 6 }).map((_, idx) => (
+            <SkeletonCard key={idx} />
+          ))}
+        </div>
+      ) : filteredPosts.length === 0 ? (
+        // Show ONLY the message, NOT the grid (no border/shadow/line effect)
+        <div className="w-full text-center text-lg py-16 text-white/80">
+          No projects found in this category.
+        </div>
       ) : (
+        // Only show grid if there are posts
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
           {filteredPosts.map((post) => {
             const imageUrl = post.acf?.project_image?.url || "/default.jpg";
-
             return (
               <Link
                 key={post.id}
@@ -108,3 +133,4 @@ const ProjectsTab = () => {
 };
 
 export default ProjectsTab;
+

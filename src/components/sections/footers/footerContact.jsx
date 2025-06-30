@@ -19,7 +19,7 @@ const FooterContact = ({ bgColor, color, white_logo }) => {
             <div className='flex md:flex-row flex-col justify-between gap-8'>
                 <div className='flex items-center gap-8'>
                     <div className={cn(`w-[75px] h-[75px] rounded-lg ${bgColor} flex justify-center items-center`)}>
-                        <Image src={'/images/shapes/google-map-pin.png'} width={45} height={50} alt='map arrwo' />
+                        <Image src={'/images/shapes/Frame 210.png'} width={45} height={50} alt='map arrwo' />
                     </div>
                     <div className={cn(`${color}`)}>
                         <p>1014 Garner Rd SW,</p>
@@ -28,7 +28,7 @@ const FooterContact = ({ bgColor, color, white_logo }) => {
                 </div>
                 <div className='flex items-center gap-8'>
                     <div className={cn(`w-[75px] h-[75px] rounded-lg ${bgColor} flex justify-center items-center`)}>
-                        <Image src={"/images/shapes/skills-icon.png"} width={44} height={50} alt='comments icon' />
+                        <Image src={"/images/shapes/Frame 208.png"} width={44} height={50} alt='comments icon' />
                     </div>
                     <div className={cn(`${color}`)}>
                         <p> <span className='font-semibold'>Email:</span> <Link href={"mailto:info@webfoundersusa.com"} className='relative hover-underline after:h-[1px] after:bg-muted'> info@webfoundersusa.com</Link> </p>
