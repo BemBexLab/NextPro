@@ -16,10 +16,10 @@ function SkeletonCard() {
 }
 
 const categories = [
+  "LOGO DESIGN",
   "WEB DEVELOPMENT",
   "SHOPIFY",
   "WORDPRESS",
-  "LOGO DESIGN",
   "BRANDING",
   "ILLUSTRATION",
   "PRINT",
@@ -27,7 +27,7 @@ const categories = [
 
 const ProjectsTab = () => {
   const [posts, setPosts] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("WEB DEVELOPMENT");
+  const [selectedCategory, setSelectedCategory] = useState("LOGO DESIGN");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

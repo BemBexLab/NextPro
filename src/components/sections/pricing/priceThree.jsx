@@ -7,18 +7,18 @@ import React, { useState } from "react";
 import PriceCardTwo from "./priceCardTwo";
 
 const categories = [
+  "Logo",
   "E-Commerce",
   "Website Design",
   "SMM",
   "Video Animation",
   "SEO",
-  "Logo",
   "Maintenance",
   "Branding",
 ];
 
 const PriceThree = () => {
-  const [activeCategory, setActiveCategory] = useState("Website Design");
+  const [activeCategory, setActiveCategory] = useState("Logo");
   const [isChecked, setChecked] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
