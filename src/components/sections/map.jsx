@@ -23,7 +23,7 @@ const ContactMap = () => {
         </div>
         <FreelancerMatchForm />
         <div className="relative z-[1] lg:pt-12.5 pt-7.5">
-          {/* Gray BG with rounded corners */}
+          {/* Gray BG with rounded cornerss */}
           <div className="after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-gray after:rounded-[30px] after:z-[-1] relative flex items-center justify-center min-h-[300px] px-3 lg:px-0 bg-gray-200 rounded-[30px]">
             <div className="flex lg:flex-row flex-col gap-8 justify-center lg:items-center items-start max-w-[1320px] w-full py-12.5">
               <Card

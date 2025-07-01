@@ -25,9 +25,21 @@ const categories = [
   "PRINT",
 ];
 
+const logoSubcategories = [
+  "Hand Picked",
+  "Real Estate",
+  "IT/Tech",
+  "Cosmetics & Beauty",
+  "Consulting",
+  "Sports",
+  "Automotive",
+  "Health & Fitness",
+];
+
 const ProjectsTab = () => {
   const [posts, setPosts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("LOGO DESIGN");
+  const [selectedLogoSubcategory, setSelectedLogoSubcategory] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -49,16 +61,41 @@ const ProjectsTab = () => {
     fetchProjects();
   }, []);
 
+  // Filter logic supporting category and subcategory
   const filteredPosts = posts.filter((post) => {
     const cat = post.acf?.catogary;
     if (!cat) return false;
 
-    if (Array.isArray(cat)) {
-      return cat.some(
-        (c) => c.toLowerCase() === selectedCategory.toLowerCase()
+    // Main category filter
+    const categoryMatch = Array.isArray(cat)
+      ? cat.some((c) => c.toLowerCase() === selectedCategory.toLowerCase())
+      : cat.toLowerCase() === selectedCategory.toLowerCase();
+
+    // Only "LOGO DESIGN" has subcategory filtering
+    if (selectedCategory !== "LOGO DESIGN") return categoryMatch;
+
+    // If logo, and no subcat selected, show all
+    if (!selectedLogoSubcategory) return categoryMatch;
+
+    // Logo subcategory filter
+    const subcat = post.acf?.logo_sub_catogary;
+    if (!subcat) return false;
+    // Normalize and check if matches
+    if (Array.isArray(subcat)) {
+      return (
+        categoryMatch &&
+        subcat.some(
+          (sc) =>
+            sc.toLowerCase().replace(/\s+/g, "") ===
+            selectedLogoSubcategory.toLowerCase().replace(/\s+/g, "")
+        )
       );
     }
-    return cat.toLowerCase() === selectedCategory.toLowerCase();
+    return (
+      categoryMatch &&
+      subcat.toLowerCase().replace(/\s+/g, "") ===
+        selectedLogoSubcategory.toLowerCase().replace(/\s+/g, "")
+    );
   });
 
   return (
@@ -74,11 +111,14 @@ const ProjectsTab = () => {
       </h2>
 
       {/* Category Filter Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
         {categories.map((label) => (
           <span
             key={label}
-            onClick={() => setSelectedCategory(label)}
+            onClick={() => {
+              setSelectedCategory(label);
+              if (label !== "LOGO DESIGN") setSelectedLogoSubcategory(null);
+            }}
             className={`px-4 py-1.5 text-sm sm:text-base rounded-full border transition-all duration-200 font-medium cursor-pointer ${
               selectedCategory === label
                 ? "bg-[#072d7f] text-white border-[#072d7f]"
@@ -89,6 +129,29 @@ const ProjectsTab = () => {
           </span>
         ))}
       </div>
+
+      {/* Logo Subcategory Filter Buttons */}
+      {selectedCategory === "LOGO DESIGN" && (
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {logoSubcategories.map((subcat) => (
+            <span
+              key={subcat}
+              onClick={() =>
+                setSelectedLogoSubcategory(
+                  selectedLogoSubcategory === subcat ? null : subcat
+                )
+              }
+              className={`px-3 py-1 text-xs sm:text-sm rounded-full border transition-all duration-200 font-medium cursor-pointer ${
+                selectedLogoSubcategory === subcat
+                  ? "bg-[#BF0B30] text-white border-[#BF0B30]"
+                  : "bg-white text-[#BF0B30] border-[#d1d5db] hover:bg-[#fbd9d3] hover:border-[#BF0B30]"
+              }`}
+            >
+              {subcat}
+            </span>
+          ))}
+        </div>
+      )}
 
       {/* Projects Grid or Message */}
       {loading ? (
@@ -133,4 +196,3 @@ const ProjectsTab = () => {
 };
 
 export default ProjectsTab;
-
