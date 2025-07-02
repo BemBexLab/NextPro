@@ -198,7 +198,7 @@ const ProjectsTab = () => {
                 key={post.id}
                 href={`/projects/${post.slug}`}
                 className={`group relative w-full rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-primary/60 bg-black ${
-                  figma ? `h-[${FIGMA_CARD_HEIGHT}px]` : "h-[350px]"
+                  figma ? `h-[${FIGMA_CARD_HEIGHT}px]` : "h-auto"
                 }`}
                 style={figma ? { height: `${FIGMA_CARD_HEIGHT}px` } : {}}
                 onMouseEnter={() => figma && setHoveredFigmaCard(post.id)}
