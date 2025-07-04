@@ -36,11 +36,11 @@ const CountDown = () => {
                 {
                     counterData.map(({ endPoint, id, number, title }) => {
                         return (
-                            <div key={id} className='flex items-center gap-[15px]'>
+                            <div key={id} className='flex md:flex-row flex-col items-center md:items-center gap-[6px] md:gap-[15px] w-full md:w-auto'>
                                 <h2 className='font-extrabold text-muted-foreground lg:text-6xl text-5xl'>
                                     <SlotCounter startValue={0} value={number} debounceDelay={5000} duration={2} animateOnVisible={{ triggerOnce: true, rootMargin: '0px 0px -100px 0px' }} />{endPoint}
                                 </h2>
-                                <p className='font-semibold text-1xl text-muted-foreground max-w-[113px]'>{title}</p>
+                                <p className='font-semibold text-1xl text-muted-foreground md:max-w-[113px]'>{title}</p>
                             </div>
                         )
                     })

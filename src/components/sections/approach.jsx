@@ -1,4 +1,5 @@
-"use client";
+"use client"
+
 import React, { useState } from "react";
 import { Button } from "../ui/button";
 import Highlight from "../ui/highlight";
@@ -63,8 +64,14 @@ const tabList = [
 
 const Approach = () => {
   const [tab, setTab] = useState("development");
+  const [mobileOpen, setMobileOpen] = useState(null);
+
   const onTabChange = (value) => {
     setTab(value);
+  };
+
+  const handleAccordion = (id) => {
+    setMobileOpen(mobileOpen === id ? null : id);
   };
 
   return (
@@ -80,64 +87,101 @@ const Approach = () => {
             </Title>
           </div>
         </SlideUp>
-        <div className="lg:pt-20 pt-8">
+
+        {/* Desktop Tabs - visible md+ */}
+        <div className="lg:pt-20 pt-8 hidden md:block">
           <Tabs onValueChange={onTabChange} defaultValue="development">
             <TabsList className="bg-transparent justify-between lg:flex-nowrap flex-wrap xl:gap-5 gap-2 w-full">
-              {tabList.map(({ id, tab_icon, tab_name }) => {
-                return (
-                  <TabsTrigger
-                    key={id}
-                    value={id}
-                    className={
-                      "bg-[#F4F6FF] dark:bg-[#1c242b] rounded-[10px] lg:basis-[20%] md:basis-[25%] sm:basis-[33%] basis-1/2 grow xl:px-6 px-2 xl:py-4 py-2 whitespace-normal text-start xl:gap-5 gap-1 data-[state=active]:bg-primary dark:data-[state=active]:bg-primary data-[state=active]:text-white overflow-hidden"
-                    }
-                  >
-                    <Image
-                      src={tab_icon}
-                      alt="icon"
-                      className={`${
-                        id === tab ? "brightness-0 invert" : ""
-                      } mr-3 xl:mr-0`}
-                    />
-                    <span className="max-w-[119px] font-semibold text-lg">
-                      {tab_name}
-                    </span>
-                  </TabsTrigger>
-                );
-              })}
+              {tabList.map(({ id, tab_icon, tab_name }) => (
+                <TabsTrigger
+  key={id}
+  value={id}
+  className={
+    "bg-[#F4F6FF] dark:bg-[#1c242b] rounded-[10px] lg:basis-[20%] md:basis-[25%] sm:basis-[33%] basis-1/2 grow xl:px-6 px-2 h-16 whitespace-normal text-start xl:gap-5 gap-1 data-[state=active]:bg-primary dark:data-[state=active]:bg-primary data-[state=active]:text-white overflow-hidden flex items-center"
+  }
+>
+  <Image
+    src={tab_icon}
+    alt="icon"
+    className={`${
+      id === tab ? "brightness-0 invert" : ""
+    } mr-3 xl:mr-0`}
+  />
+  <span className="max-w-[119px] font-semibold text-lg">
+    {tab_name}
+  </span>
+</TabsTrigger>
+
+              ))}
             </TabsList>
-            {tabList.map(({ id, tab_content, heading, description }) => {
-              return (
-                <TabsContent
-                  key={id}
-                  value={id}
-                  className={"lg:pt-7.5 md:pt-[110px] sm:pt-[190px] pt-[360px]"}
-                >
-                  <SlideUp>
-                    <div className="flex lg:flex-row flex-col justify-between bg-[#F4F6FF] dark:bg-[#1c242b] py-7.5 rounded-[30px]">
-                      <div className="lg:pl-[86px] pl-7.5 pr-7.5 lg:pr-0 xl:max-w-[660px] lg:max-w-[550px] ">
-                        <Title size={"4xl"}>{heading}</Title>
-                        <p className="pt-5 pb-7.5">{description}</p>
-                        <Button asChild variant="outline">
-                          <Link href={"/about-us"}> Discover more </Link>
-                        </Button>
-                      </div>
-                      <div className="pr-7.5 pl-7.5 lg:pl-0 lg:max-w-[540px] w-full pt-7.5 lg:pt-0">
-                        <Image
-                          src={tab_content}
-                          width={540}
-                          height={361}
-                          alt="bg"
-                          style={{ width: "100%" }}
-                          className="rounded-2.5xl"
-                        />
-                      </div>
+            {tabList.map(({ id, tab_content, heading, description }) => (
+              <TabsContent
+                key={id}
+                value={id}
+                className={"lg:pt-7.5 md:pt-[110px] sm:pt-[190px] pt-[360px]"}
+              >
+                <SlideUp>
+                  <div className="flex lg:flex-row flex-col justify-between bg-[#F4F6FF] dark:bg-[#1c242b] py-7.5 rounded-[30px]">
+                    <div className="lg:pl-[86px] pl-7.5 pr-7.5 lg:pr-0 xl:max-w-[660px] lg:max-w-[550px] ">
+                      <Title size={"4xl"}>{heading}</Title>
+                      <p className="pt-5 pb-7.5">{description}</p>
+                      <Button asChild variant="outline">
+                        <Link href={"/about-us"}> Discover more </Link>
+                      </Button>
                     </div>
-                  </SlideUp>
-                </TabsContent>
-              );
-            })}
+                    <div className="pr-7.5 pl-7.5 lg:pl-0 lg:max-w-[540px] w-full pt-7.5 lg:pt-0">
+                      <Image
+                        src={tab_content}
+                        width={540}
+                        height={361}
+                        alt="bg"
+                        style={{ width: "100%" }}
+                        className="rounded-2.5xl"
+                      />
+                    </div>
+                  </div>
+                </SlideUp>
+              </TabsContent>
+            ))}
           </Tabs>
+        </div>
+
+        {/* Mobile Accordion - visible only below md */}
+        <div className="block md:hidden pt-8">
+          {tabList.map(({ id, tab_icon, tab_name, heading, description, tab_content }) => (
+            <div key={id} className="mb-4 rounded-xl overflow-hidden shadow-sm bg-[#F4F6FF] dark:bg-[#1c242b]">
+              <button
+                className="flex items-center w-full p-4 focus:outline-none"
+                onClick={() => handleAccordion(id)}
+                aria-expanded={mobileOpen === id}
+                aria-controls={`accordion-content-${id}`}
+              >
+                <Image src={tab_icon} alt="icon" className="mr-3" />
+                <span className="font-semibold text-lg flex-1 text-left">{tab_name}</span>
+                <svg className={`transform transition-transform duration-200 ${mobileOpen === id ? "rotate-180" : ""}`} width={18} height={18} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              {mobileOpen === id && (
+                <div
+                  id={`accordion-content-${id}`}
+                  className="p-4 border-t"
+                >
+                  <Title size={"xl"}>{heading}</Title>
+                  <p className="py-3">{description}</p>
+                  <Image
+                    src={tab_content}
+                    width={540}
+                    height={361}
+                    alt="bg"
+                    style={{ width: "100%" }}
+                    className="rounded-2xl"
+                  />
+                  <Button asChild variant="outline" className="mt-4">
+                    <Link href={"/about-us"}> Discover more </Link>
+                  </Button>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

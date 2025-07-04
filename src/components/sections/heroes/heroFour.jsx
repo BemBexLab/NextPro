@@ -36,7 +36,7 @@ const HeroFour = () => {
                     </div>
                     {/* ----- left side end */}
 
-                    <div className='relative '>
+                    <div className='relative hidden lg:block'>
                         <div className='absolute -top-[21px] -left-[21px] xl:inline-block hidden' style={{ transform: `translate(-${mousPositionX}px, -${mousPositionY}px)` }}>
                             <Image src={"/images/shapes/mobius-strip4-1.png"} width={330} height={194} alt='mobius-strip-1' />
                         </div>

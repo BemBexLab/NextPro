@@ -17,8 +17,13 @@ export default function ContactPopup() {
   const [status, setStatus] = useState("");
 
   useEffect(() => {
+  const timer = setTimeout(() => {
     setOpen(true);
-  }, []);
+  }, 8000); // 8000 ms = 8 seconds
+
+  return () => clearTimeout(timer); // Clean up if component unmounts early
+}, []);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();

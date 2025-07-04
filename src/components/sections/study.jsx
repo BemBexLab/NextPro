@@ -5,82 +5,27 @@ import Title from '../ui/title'
 import { Button } from '../ui/button'
 import SlideUp from '../animations/slideUp'
 
-/**
- * @typedef {Object} ProjectACF
- * @property {Object} [project_image] - Project image object
- * @property {string} project_image.url - URL of the project image
- * @property {string|string[]} [catogary] - Category or categories (note: typo in original)
- */
-
-/**
- * @typedef {Object} ProjectTitle
- * @property {string} rendered - The rendered title text
- */
-
-/**
- * @typedef {Object} Project
- * @property {number} id - Unique identifier for the project
- * @property {string} slug - URL slug for the project
- * @property {ProjectTitle} title - Project title object
- * @property {ProjectACF} [acf] - Advanced Custom Fields data
- */
-
-/** Minimum drag distance in pixels to trigger navigation */
 const DRAG_THRESHOLD = 30;
 
-/**
- * GalleryCarousel Component
- * 
- * A responsive carousel component that displays portfolio projects with web development category.
- * Features include:
- * - Auto-play functionality (pauses on hover)
- * - Mouse drag navigation
- * - Navigation buttons and dot indicators
- * - Responsive design with different sizes for mobile/tablet/desktop
- * - Smooth transitions and hover effects
- * 
- * @component
- * @returns {JSX.Element} The rendered gallery carousel
- */
 const GalleryCarousel = () => {
-    /** @type {[Project[], Function]} Array of projects to display */
     const [projects, setProjects] = useState([]);
-
-    /** @type {[number, Function]} Index of currently active/centered item */
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    /** @type {[boolean, Function]} Whether user is hovering over carousel */
+    const [activeIndex, setActiveIndex] = useState(0); // Will be set on data load
     const [isHovering, setIsHovering] = useState(false);
+    const [shouldSmoothScroll, setShouldSmoothScroll] = useState(true);
 
-    /** @type {React.RefObject<HTMLDivElement>} Reference to carousel container */
     const carouselRef = useRef(null);
-
-    /** @type {React.RefObject<(HTMLAnchorElement|null)[]>} References to individual carousel items */
     const itemsRef = useRef([]);
-
-    /** @type {React.RefObject<boolean>} Whether user is currently dragging */
     const isDragging = useRef(false);
-
-    /** @type {React.RefObject<number>} Starting X position of drag */
     const startX = useRef(0);
-
-    /** @type {React.RefObject<number>} Initial scroll position when drag started */
     const scrollLeft = useRef(0);
-
-    /** @type {React.RefObject<number>} Current drag distance */
     const dragDelta = useRef(0);
 
-    /**
-     * Fetches projects from API and filters for web development projects with images
-     * @async
-     */
+    // 1. Fetch projects
     useEffect(() => {
         const fetchProjects = async () => {
             try {
                 const res = await fetch("/api/posts", { cache: "no-store" });
                 const data = await res.json();
-
-                // Filter projects to only include web development projects with images
                 const filtered = data.filter((project) => {
                     const hasImage = project.acf?.project_image?.url;
                     const isWebDev =
@@ -90,79 +35,88 @@ const GalleryCarousel = () => {
                                 (cat) => cat.toLowerCase() === "web development"
                             )
                             : project.acf.catogary.toLowerCase() === "web development");
-
                     return hasImage && isWebDev;
                 });
-                console.log(filtered)
                 setProjects(filtered);
             } catch (err) {
                 console.error("Failed to load projects", err);
             }
         };
-
         fetchProjects();
     }, []);
 
-    /**
-     * Auto-play effect - advances to next slide every 3 seconds
-     * Pauses when user is hovering or when no projects are loaded
-     */
+    // 2. On projects load, start in the middle copy for seamless loop
     useEffect(() => {
-        if (isHovering || projects.length === 0) return;
+        if (projects.length > 0) {
+            setActiveIndex(projects.length); // Start at middle
+        }
+    }, [projects]);
 
+    // 3. Triple your projects for infinite effect
+    const tripleProjects = [...projects, ...projects, ...projects];
+    const projectsCount = projects.length;
+    const totalProjects = tripleProjects.length;
+
+    // 4. Auto-play
+    useEffect(() => {
+        if (isHovering || projectsCount === 0) return;
         const interval = setInterval(() => {
-            setActiveIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+            handleNext();
         }, 3000);
-
         return () => clearInterval(interval);
-    }, [isHovering, projects]);
+    }, [isHovering, projectsCount, activeIndex]);
 
-    /**
-     * Auto-scroll effect - smoothly scrolls to center the active item
-     * Calculates the scroll position to center the active item in the viewport
-     */
+    // 5. Smooth scroll to active index, or instant if shouldSmoothScroll === false
     useEffect(() => {
         if (!carouselRef.current || itemsRef.current.length === 0) return;
-
         const activeItem = itemsRef.current[activeIndex];
         if (activeItem) {
             const scrollPosition =
                 activeItem.offsetLeft -
                 carouselRef.current.offsetWidth / 2 +
                 activeItem.offsetWidth / 2;
-
             carouselRef.current.scrollTo({
                 left: scrollPosition,
-                behavior: "smooth",
+                behavior: shouldSmoothScroll ? "smooth" : "auto",
             });
         }
-    }, [activeIndex]);
+    }, [activeIndex, shouldSmoothScroll]);
 
-    /**
-     * Mouse drag functionality effect
-     * Handles mouse events for drag-to-navigate functionality
-     */
+    // 6. Looping logic: teleport to center set when you reach either end
+    useEffect(() => {
+        if (projectsCount === 0) return;
+
+        // If at the last card of the last set, teleport to middle set
+        if (activeIndex >= projectsCount * 2) {
+            setTimeout(() => {
+                setShouldSmoothScroll(false);
+                setActiveIndex(activeIndex - projectsCount);
+            }, 400);
+        }
+        // If at the first card of the first set, teleport to middle set
+        else if (activeIndex < projectsCount) {
+            setTimeout(() => {
+                setShouldSmoothScroll(false);
+                setActiveIndex(activeIndex + projectsCount);
+            }, 400);
+        } else {
+            setShouldSmoothScroll(true);
+        }
+    }, [activeIndex, projectsCount]);
+
+    // 7. Mouse drag navigation
     useEffect(() => {
         const carousel = carouselRef.current;
         if (!carousel) return;
 
-        /**
-         * Handles mouse down event to start dragging
-         * @param {MouseEvent} e - Mouse event
-         */
         const handleMouseDown = (e) => {
-            if (e.button !== 0) return; // Only handle left mouse button
+            if (e.button !== 0) return;
             isDragging.current = true;
             startX.current = e.pageX - carousel.offsetLeft;
             scrollLeft.current = carousel.scrollLeft;
             dragDelta.current = 0;
             carousel.classList.add("dragging");
         };
-
-        /**
-         * Handles mouse up event to end dragging
-         * Determines if drag was significant enough to trigger navigation
-         */
         const handleMouseUp = () => {
             if (!isDragging.current) return;
             isDragging.current = false;
@@ -170,21 +124,10 @@ const GalleryCarousel = () => {
 
             const moved = dragDelta.current;
             if (Math.abs(moved) > DRAG_THRESHOLD) {
-                if (moved < 0) {
-                    // Dragged left - go to next item
-                    setActiveIndex((prev) => (prev + 1) % projects.length);
-                } else {
-                    // Dragged right - go to previous item
-                    setActiveIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
-                }
+                if (moved < 0) handleNext();
+                else handlePrev();
             }
         };
-
-        /**
-         * Handles mouse move event during dragging
-         * Updates scroll position based on drag distance
-         * @param {MouseEvent} e - Mouse event
-         */
         const handleMouseMove = (e) => {
             if (!isDragging.current) return;
             e.preventDefault();
@@ -193,32 +136,33 @@ const GalleryCarousel = () => {
             dragDelta.current = walk;
             carousel.scrollLeft = scrollLeft.current - walk;
         };
-
-        /**
-         * Handles mouse leave event to cancel dragging
-         */
         const handleMouseLeave = () => {
             isDragging.current = false;
             carousel.classList.remove("dragging");
         };
-
-        // Add event listeners
         carousel.addEventListener("mousedown", handleMouseDown);
         carousel.addEventListener("mouseup", handleMouseUp);
         carousel.addEventListener("mouseleave", handleMouseLeave);
         carousel.addEventListener("mousemove", handleMouseMove);
-
-        // Cleanup event listeners
         return () => {
             carousel.removeEventListener("mousedown", handleMouseDown);
             carousel.removeEventListener("mouseup", handleMouseUp);
             carousel.removeEventListener("mouseleave", handleMouseLeave);
             carousel.removeEventListener("mousemove", handleMouseMove);
         };
-    }, [projects.length]);
+    }, [projectsCount, activeIndex]);
 
-    // Show loading state if no projects are loaded yet
-    if (projects.length === 0) {
+    // --- NAVIGATION ---
+    function handleNext() {
+        setShouldSmoothScroll(true);
+        setActiveIndex((prev) => prev + 1);
+    }
+    function handlePrev() {
+        setShouldSmoothScroll(true);
+        setActiveIndex((prev) => prev - 1);
+    }
+
+    if (projectsCount === 0) {
         return (
             <div className="text-center py-10">
                 <div className="text-lg text-gray-600">Loading Projects...</div>
@@ -235,68 +179,60 @@ const GalleryCarousel = () => {
             {/* Left Navigation Button */}
             <div className="absolute top-1/2 left-2 z-10 -translate-y-1/2">
                 <button
-                    onClick={() =>
-                        setActiveIndex((prev) =>
-                            prev === 0 ? projects.length - 1 : prev - 1
-                        )
-                    }
+                    onClick={handlePrev}
                     className="bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all duration-300 shadow-lg"
                     aria-label="Previous project"
                 >
                     ←
                 </button>
             </div>
-
             {/* Right Navigation Button */}
             <div className="absolute top-1/2 right-2 z-10 -translate-y-1/2">
                 <button
-                    onClick={() =>
-                        setActiveIndex((prev) =>
-                            prev === projects.length - 1 ? 0 : prev + 1
-                        )
-                    }
+                    onClick={handleNext}
                     className="bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all duration-300 shadow-lg"
                     aria-label="Next project"
                 >
                     →
                 </button>
             </div>
-
             {/* Carousel Container */}
             <div
                 ref={carouselRef}
                 className="flex gap-6 overflow-x-hidden scrollbar-hide snap-x snap-mandatory py-4 px-2 cursor-grab active:cursor-grabbing select-none"
             >
-                {/* Render projects twice for infinite scroll effect */}
-                {[...projects, ...projects].map((project, index) => {
+                {tripleProjects.map((project, index) => {
                     const imageUrl = project.acf?.project_image?.url || "/default.jpg";
-                    const actualIndex = index % projects.length;
+                    // Use real index within current projects set for itemsRef
+                    const actualIndex = index % projectsCount;
+                    // Only use refs for items in the middle set
+                    const refProp = (index >= projectsCount && index < projectsCount * 2)
+                        ? (el) => { itemsRef.current[index] = el; }
+                        : null;
 
                     return (
                         <a
                             key={`${project.id}-${index}`}
                             href={`/projects/${project.slug}`}
-                            ref={(el) => {
-                                // Only store reference for the first occurrence of each project
-                                if (actualIndex === index) {
-                                    itemsRef.current[actualIndex] = el;
-                                }
-                            }}
-                            className={`relative min-w-[320px] sm:min-w-[360px] md:min-w-[400px] max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] 
-                bg-white rounded-2xl overflow-hidden shadow-xl border transition-all duration-300 flex-shrink-0 snap-center
-                ${actualIndex === activeIndex
+                            ref={refProp}
+                            className={`
+                                relative
+                                w-[80vw] min-w-0 max-w-[88vw]
+                                sm:min-w-[320px] sm:max-w-[340px] sm:w-[320px]
+                                md:min-w-[400px] md:max-w-[420px] md:w-[400px]
+                                h-[50vw] sm:h-[200px] md:h-[270px]
+                                bg-white rounded-2xl overflow-hidden shadow-xl border transition-all duration-300 flex-shrink-0 snap-center
+                                ${index === activeIndex
                                     ? "scale-105 border-blue-500"
                                     : "scale-95 opacity-80 border-gray-200"
-                                } hover:scale-105 hover:opacity-100 hover:border-blue-400`}
+                                } hover:scale-105 hover:opacity-100 hover:border-blue-400
+                            `}
                         >
-                            {/* Project Image */}
                             <img
                                 src={imageUrl}
                                 alt={project.title.rendered}
                                 className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110"
                             />
-
-                            {/* Hover Overlay with Title */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                 <span className="text-white font-medium text-lg">
                                     {project.title.rendered}
@@ -306,34 +242,10 @@ const GalleryCarousel = () => {
                     );
                 })}
             </div>
-
-            {/* Dot Indicators */}
-            <div className="flex justify-center gap-2 mt-6">
-                {projects.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => setActiveIndex(index)}
-                        className={`h-2 rounded-full transition-all duration-300 ${index === activeIndex
-                                ? "w-8 bg-blue-600"
-                                : "w-2 bg-gray-300 hover:bg-gray-500"
-                            }`}
-                        aria-label={`Go to project ${index + 1}`}
-                    />
-                ))}
-            </div>
         </div>
     );
 };
 
-/**
- * Study Component
- * 
- * Main component that displays the case studies section with an integrated
- * gallery carousel showing dynamic project data from the API.
- * 
- * @component
- * @returns {JSX.Element} The rendered study section
- */
 const Study = () => {
     return (
         <section className='lg:py-15 py-9'>
@@ -354,4 +266,4 @@ const Study = () => {
     )
 }
 
-export default Study
+export default Study;
