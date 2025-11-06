@@ -459,7 +459,7 @@ const TermsAndConditions = () => {
               our services. Message frequency may vary. Message and data rates
               may apply. Reply STOP to opt out of further messaging and HELP for
               assistance or call
-              <span className="text-[#002768]">+1 (470) 200-5121</span>. Please
+              <span className="text-[#002768]">+1 (470) 470-7520</span>. Please
               see our Privacy Policy at{" "}
               <Link href="/privacy" className="text-[#002768] underline">Privacy Policy</Link>.
             </li>
