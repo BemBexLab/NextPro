@@ -38,7 +38,7 @@ const ContactMap = () => {
                 isIcon={false}
                 desc={`
                   <p> <span class='font-semibold'>Email:</span> <a href="mailto:info@webfoundersusa.com" class='relative hover-underline after:h-[1px] after:bg-muted'> info@webfoundersusa.com</a> </p>
-                  <p> <span class='font-semibold'>Call us:</span> <a href="tel:+1470200-5121" class='relative hover-underline after:h-[1px] after:bg-muted'>+1 (470) 200-5121</a> </p>
+                  <p> <span class='font-semibold'>Call us:</span> <a href="tel:+14704707520" class='relative hover-underline after:h-[1px] after:bg-muted'>+1 (470) 470-7520</a> </p>
                 `}
               />
               <Card

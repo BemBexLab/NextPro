@@ -29,7 +29,7 @@ const MobileExtraInfo = () => {
                     </li>
                     <li className='flex items-center gap-3 mt-[9px]'>
                         <span><FaPhoneFlip /></span>
-                        <Link href={"tel:+14702005121"} className='text-[15px]'>+1 (470) 200-5121</Link>
+                        <Link href={"tel:+14704707520"} className='text-[15px]'>+1 (470) 470-7520</Link>
                     </li>
                 </ul>
                 <SocialIcons />

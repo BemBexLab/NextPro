@@ -33,7 +33,7 @@ const Setting = () => {
         <div className='fixed z-30 bottom-7.5 left-[15px] bg-[#e5e8eb] dark:bg-[#2d343b] rounded-full py-1 px-1 flex flex-col gap-2 items-center'>
 
             {/* Call Icon */}
-            <Link href="tel:+1 470-469-7096" target="_blank">
+            <Link href="tel:+14704707520" target="_blank">
                 <div className='w-7 h-7 rounded-full flex justify-center items-center p-[5px] bg-background dark:text-muted-foreground cursor-pointer hover:bg-[#f0f4fa] transition'>
                     <FiPhone className='text-xl' />
                 </div>
@@ -94,7 +94,7 @@ const Setting = () => {
                         <p>We are here, ready to answer any types of questions</p>
                         <ul className='py-4'>
                             <li><Link href={"mailto:info@webfoundersusa.com"} className='multiline-hover'>info@webfoundersusa.com</Link></li>
-                            <li><Link href={"tel:+14702005121"}><span className='font-semibold'>Call us:</span> <span className='multiline-hover'>+1 (470) 200-5121 </span> </Link></li>
+                            <li><Link href={"tel:+14704707520"}><span className='font-semibold'>Call us:</span> <span className='multiline-hover'>+1 (470) 470-7520 </span> </Link></li>
                         </ul>
                         <SocialIcons />
                     </div>
