@@ -18,7 +18,7 @@ const Title = ({ children, size, className }) => {
 
     if (size === "7.5xl") {
         return (
-            <h1 className={cn(`font-extrabold text-muted-foreground xl:text-7.5xl md:text-5.5xl text-4.5xl lg:leading-[120%] leading-[130%] ${className}`)}>
+            <h1 className={cn(`font-extrabold text-muted-foreground xl:text-7xl md:text-5.5xl text-4.5xl lg:leading-[120%] leading-[130%] ${className}`)}>
                 {children}
             </h1>
         )

@@ -22,7 +22,7 @@ const tabList = [
     tab_content: "/images/resource/approach-image4-1.jpg",
     heading: "Discovery & Planning",
     description:
-      "We start by understanding your goals. You tell us what you need & we ask a few smart questions and help shape the right plan.",
+      "Web Founders USA begins by understanding your goals and challenges. You share your needs, and we ask insightful questions to shape the right plan. As a digital marketing agency and website design and development company, we prioritize listening. Every business faces unique problems, and your custom web solutions must align with your specific situation. We delve into your industry, analyze competitors, and identify what drives your customers to purchase. Whether you require SEO optimization, social media marketing support, or business website development, we outline a clear path that saves you time and money.",
   },
   {
     id: "partnership",
@@ -31,7 +31,7 @@ const tabList = [
     tab_content: "/images/resource/proposal-&-timeline-2.jpg",
     heading: "Proposal & Timeline",
     description:
-      "Once we're aligned, we send a detailed plan with pricing, timeline, and next steps no surprises.",
+      "Some clients need WordPress development to manage content updates themselves, while others require CMS website development for larger teams. We recommend solutions that make sense for you, not just those that are most profitable for us. Responsive web design is no longer optional; your site must function seamlessly on phones, tablets, and computers. As a professional web development company, we work within your actual budget and timeline. Need eCommerce website development? Want a custom website design? Looking for expertise in UI/UX design? We provide clear deliverables and timelines with no surprises.",
   },
   {
     id: "decisions",
@@ -40,7 +40,7 @@ const tabList = [
     tab_content: "/images/resource/creative-process-1.jpg",
     heading: "Creative Process",
     description:
-      "We get to work! You’ll see progress, share feedback, and stay updated along the way. It’s a back-and-forth flow until we get it just right.",
+      "Our web design agency creates something you’ll be proud to showcase to customers. We focus on both aesthetics and performance. Secure web hosting keeps your site online and safe, while website maintenance and support address issues before they impact your sales. Website speed optimization ensures pages load in under three seconds, as slow sites can hurt conversions. Need Shopify or WooCommerce development? Interested in local SEO services? We handle the technical aspects. Professional logo design, branding services, and business card design elevate your brand’s credibility.",
   },
   {
     id: "execution",
@@ -49,7 +49,7 @@ const tabList = [
     tab_content: "/images/resource/final-delivery-2.jpg",
     heading: "Final Delivery",
     description:
-      "After your final approval, we’ll deliver all website files and assets fully ready to go live and launch smoothly.",
+      "This is where your vision comes to life. We guide you through every step to ensure your comfort. Need logo design or landing page services? Looking for help with online reputation management? We’ve got you covered. Our lead generation website captures contacts that convert. We also provide email marketing, PPC marketing, and Google Ads management services. Custom web forms and online booking system development simplify customer contact. We test everything, train you to manage updates, and make launch day exciting.",
   },
   {
     id: "communication",
@@ -58,7 +58,7 @@ const tabList = [
     tab_content: "/images/resource/website-maintainence.jpg",
     heading: "Maintenance",
     description:
-      "Need help after the project wraps? We're still here for updates, questions, or anything else down the road.",
+      "Most companies disappear after launch, but we remain committed. Markets evolve, competitors adapt, and your business grows. We adjust your strategy as needed. You’ll receive regular reports in plain English that clarify what works and what requires attention. Our website maintenance and support keep your site running smoothly, with WordPress support services managing updates and website security services preventing threats. Need website redesign services? Want mobile-friendly updates? Looking to add features like a job portal or real estate website development? We’re here for you honest communication, real results, no nonsense.",
   },
 ];
 
@@ -82,8 +82,7 @@ const Approach = () => {
             <Button variant="secondary">Our Approach</Button>
             <Title size={"5xl"} className="max-w-[872px] pt-6 text-center">
               {" "}
-              <Highlight>Client-Centered</Highlight> Philosophy: Tailoring
-              Strategies for Your Success
+              <Highlight>Client-Centered</Highlight> Philosophy: Personalized Strategies for Your Success
             </Title>
           </div>
         </SlideUp>
