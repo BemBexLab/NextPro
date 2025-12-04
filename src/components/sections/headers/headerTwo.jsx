@@ -22,7 +22,7 @@ import { serviceDetailsData } from "@/lib/fackData/serviceDetailsData";
 const navigationLinks = [
   { id: 1, path: "/home", lable: "Home" },
   { id: 2, path: "/about-us", lable: "About Us" },
-  { id: 3, path: "/service-details", lable: "Services" },
+  { id: 3, path: "/service", lable: "Services" },
   { id: 4, path: "/portfolio", lable: "Our Work" },
   { id: 5, path: "/pricing", lable: "Pricing Plans" },
   { id: 6, path: "/classic-with-sidebar", lable: "Blog" },
