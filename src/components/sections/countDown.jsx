@@ -32,7 +32,7 @@ const counterData = [
 const CountDown = () => {
     return (
         <div className='max-w-[1350px] mx-auto px-[15px] lg:py-15 py-9'>
-            <div className='flex justify-between flex-wrap items-center gap-10'>
+            <div className='flex flex-wrap justify-center items-center gap-6 md:gap-10'>
                 {
                     counterData.map(({ endPoint, id, number, title }) => {
                         return (
