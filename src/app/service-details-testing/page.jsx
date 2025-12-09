@@ -2,6 +2,10 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { IoCall } from "react-icons/io5";
+import { Button } from "@/components/ui/button";
+
 
 // Inline SVG Icons (Lucide-style)
 const SearchIcon = () => (
@@ -194,31 +198,61 @@ const SocialMediaMarketingPage = () => {
           <p className="mt-6 md:mt-8 max-w-3xl mx-auto text-white/90 text-base md:text-lg">
             At Web Founders USA, our reliable social media marketing agency transforms social media into a profit-making machine for your company.
           </p>
-          <div className="mt-8">
-            <Link
-              href="/contact-us"
-              className="inline-block px-6 py-3 bg-white text-[#072d7f] font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+          <div className="mt-8 flex items-center justify-center gap-5">
+            <a
+              href="tel:+14704707520"
+              className="flex items-center gap-3 group"
+              aria-label="Call us"
             >
-              Get Started Today
-            </Link>
+              <div className="rounded-full bg-primary border-primary w-14 h-14 flex items-center justify-center animate-shake-pause group-hover:bg-primary/80 transition">
+                <div className="text-white flex items-center justify-center">
+                  <IoCall size={30} />
+                </div>
+              </div>
+              <span className="text-base font-semibold text-white group-hover:underline">
+                +1 (470) 470-7520
+              </span>
+            </a>
+
+            <Button asChild size="xl">
+              <Link className="text-foreground" href={'/contact-us'}>
+                Contact Us
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Intro Paragraph */}
       <section className="py-12 md:py-16 px-4 max-w-6xl mx-auto">
-        <div className="text-base md:text-lg leading-relaxed text-gray-700 space-y-4">
-          <p>
-            The current customers are not just looking through the profiles; they are going to and fro, comparing, and making quick decisions. Consequently, your social presence needs more than just posts; it needs a proper social media marketing strategy, creativity, and guidance.
-          </p>
-          <p>
-            As the best Social Media Marketing Consultant, we develop campaigns that engage audiences, build trust, and convert followers into buyers. Our team deeply understands your audience—whether you’re a growing brand or a corporate giant—and tailors strategies for small business marketing or enterprise-scale impact.
-          </p>
-          <p>
-            Every campaign aligns with your industry, goals, and customer behavior. With Web Founders USA, you gain a partner who tracks trends, analyzes performance, and ensures every post, ad, and message drives conversions—whether through brand awareness, sales, or lead generation via a Lead Generation Website or targeted Landing Page Design Services.
-          </p>
-        </div>
-      </section>
+  <div className="flex flex-col md:flex-row items-center gap-8">
+  {/* Text on the left — equal column */}
+  <div className="flex-1 text-base md:text-lg leading-relaxed text-gray-700 space-y-4">
+    <p>
+      The current customers are not just looking through the profiles; they are going to and fro, comparing, and making quick decisions. Consequently, your social presence needs more than just posts; it needs a proper social media marketing strategy, creativity, and guidance.
+    </p>
+    <p>
+      As the best Social Media Marketing Consultant, we develop campaigns that engage audiences, build trust, and convert followers into buyers. Our team deeply understands your audience—whether you’re a growing brand or a corporate giant—and tailors strategies for small business marketing or enterprise-scale impact.
+    </p>
+    <p>
+      Every campaign aligns with your industry, goals, and customer behavior. With Web Founders USA, you gain a partner who tracks trends, analyzes performance, and ensures every post, ad, and message drives conversions—whether through brand awareness, sales, or lead generation via a Lead Generation Website or targeted Landing Page Design Services.
+    </p>
+  </div>
+
+  {/* Image on the right — equal column, square shape */}
+  <div className="flex-1 flex justify-center">
+    <div className="w-full" style={{ aspectRatio: '1 / 1' }}>
+      <Image
+        src="/service-deatil-images/social-media-marketing.png"
+        alt="Social media marketing illustration"
+        width={300}
+        height={300}
+        className="w-full h-full object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</div>
+</section>
 
       {/* Strategy Section */}
       <section className="py-12 md:py-20 bg-[#F4F6FF]">
