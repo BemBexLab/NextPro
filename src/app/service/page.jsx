@@ -68,7 +68,7 @@ const ServicesSection = () => {
               viewport={{ once: true, margin: "-50px" }}
             >
               {/* Link Overlay */}
-              <Link href={`/service/${service.id}`} className="absolute inset-0 z-10" />
+              <Link href={`/service/${service.id}`}>
 
               {/* Card Content */}
               {/* <Link href={`/services/${service.id}`}> */}
@@ -122,7 +122,7 @@ const ServicesSection = () => {
                 </div>
 
               </div>
-              {/* </Link> */}
+              </Link>
             </motion.div>
           ))}
         </div>
