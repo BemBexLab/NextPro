@@ -12,49 +12,49 @@ export const servicesDataTwo = [
         id: 1,
         icon_1: <Activity height={36} width={35}/>,
         service_name: "Search Engine Optimization",
-        description: "Is your customer unable to find you in search results? Boost your website's visibility on Google today with targeted keywords that attract the right audience, with our assistance. Web Founders USA provides SEO services that focus on achieving long-term results. Our team delivers excellent outcomes, whether through Local SEO services that target customers in your area, On-page SEO services that optimize your website's content, or Off-page SEO services that build links from other sites. We've got you covered."
+        description: "At Web Founders USA, we help your business reach customers. We use the right keywords, smart optimization, and a good strategy. At our SEO Company, part of our digital marketing agency, we bring more traffic to your Website and improve your ranking with Google. The more visible you are, the more customers you attract."
     },
     {
         id: 2,
         icon_1: <Send/>,
         service_name: "Social Media Marketing",
-        description: "Regularly posting unique content across various platforms can be challenging and time-consuming, often detracting from your business operations. Let us take this burden off your shoulders by creating compelling campaigns that grow your audience and enhance brand recognition across multiple channels. At Web Founders USA, we specialize in social media marketing, managing your content, responding to comments, and running ads on Instagram, Facebook, and LinkedIn, allowing you to focus on what you do best growing your business."
+        description: "Our social media marketing agency provides support in making plans for the business goals, audiences, and budgets. By understanding your brand and the target audience, we come up with content and campaigns that strike a chord with your message and involve your followers in a way that brings you positive results. Our teams take care of everything from account management to running targeted promotions."
     },
     {
         id: 3,
         icon_1: <Document/>,
         service_name: "Content Writing",
-        description: "Most visitors leave your website within five seconds due to subpar content. Many business blogs are dull, packed with keywords, yet rarely read. Web Founders USA hires writers who thoroughly research your industry to deliver compelling, original content that connects with your audience and reflects your brand's voice. Our content marketing services produce articles that people genuinely want to read. Effective content marketing not only drives traffic from Google but also demonstrates your expertise to customers."
+        description: "The majority of visitors leave your Website after five seconds because the content is substandard. Web Founders USA has writers who research your industry. They create engaging and unique content for your audience and reflect your brand's voice. Our content marketing services build relevant articles that people actually want to read. Successful content marketing drives more than just traffic from Google; it shows your customers why they should trust you as an expert in your field."
     },
     {
         id: 4,
         icon_1: <Shield height={36} width={29}/>,
         service_name: "Affiliate Marketing",
-        description: "Transform your audience into a revenue stream through effective affiliate marketing. Our program simplifies the process: you recommend products, and when purchases are made through your link, you earn a commission. We identify partnerships that align with your audience and manage the setup, tracking, and technical aspects of affiliate marketing. Effective affiliate marketing seamlessly integrates with your content, creating a natural experience rather than a pushy sales approach."
+        description: "Affiliate marketing can be a potent means to grow your revenue, and we make it easy. Our Affiliate Marketing Services help you find the right partners, track performance, and seamlessly integrate programs into your content. With recommendations seeming natural and trustworthy, alongside matching your audience's interests, Web Founders USA makes earning commissions a smooth ride that bolsters your brand online."
     },
     {
         id: 5,
         icon_1: <Message/>,
         service_name: "Email Marketing",
-        description: "Many businesses send emails that go unnoticed. Make yours stand out and achieve results by partnering with Web Founders USA. We design targeted email campaigns that effectively generate leads and transform visitors into loyal customers. Since people check their email frequently, our services ensure your messages are opened and read. Our email marketing services include welcome sequences, promotional emails, and newsletters. With our professional email marketing services, your business stays top-of-mind for customers between purchases."
+        description: "Sending emails that get read is an art, and we make it simple. At our website design and development company, the Email Marketing Services are geared to connect with your audience, spark their interest, and turn them into loyal customers. Each campaign, from newsletters and welcome emails to promotional mailings, is thoughtfully customised to make sure the right brand voice reaches the right people at the right time. Our digital marketing agency works hard to keep your business top of mind and memorable."
     },
     {
         id: 6,
         icon_1: <Scan/>,
         service_name: "Pay-Per-Click Advertising",
-        description: "Every day of inaction results in lost revenue initiating PPC campaigns that deliver immediate results. Our PPC marketing services provide rapid outcomes, allowing you to acquire customers today rather than waiting for months. Web Founders USA specializes in managing PPC marketing services on Google and Facebook. Our Google Ads management includes identifying the most effective keywords, creating compelling ads, and optimizing bids. Without the necessary expertise, managing Google Ads can become costly, with a significant risk of wasting budget on ineffective clicks."
+        description: "Every day without action can mean lost revenue. Our PPC Advertising services bring the targeted traffic to your Website quickly and effectively, giving you measurable results fast. We will run campaigns on Google and social media, amplify the keywords and bids for better performance, and create compelling ads that convert. With our web design and development company, your marketing budget is utilized effectively to bring in leads and sales fast."
     },
     {
         id: 7,
         icon_1: <Discount height={35} width={35} />,
         service_name: "Conversion Rate Optimization",
-        description: "75% of website visitors leave without making a purchase, but conversion optimization can change that outcome. Our conversion rate optimization services focus on testing elements such as headlines, images, button text, and layouts. At Web Founders USA, we monitor user interactions, identifying where visitors click and where they exit the site. Even minor adjustments can lead to significant improvements. For instance, one of our clients doubled their sales by modifying a single button. This exemplifies the impact of effective conversion rate optimization"
+        description: "Most website visitors don't take action, but our Conversion Rate Optimization services can change that. We will test different key parts of your website. This includes headlines, images, buttons, and layouts. We want to see how users interact with your site. And the cool thing about A/B testing is that even really small changes, like updating a single call to action (CTA) button, can skyrocket conversions and ultimately drive more visitors into loyal customers."
     },
     {
         id: 8,
         icon_1: <Buy/>,
         service_name: "E-commerce Marketing",
-        description: "Running an online store can be challenging, especially when competing with giants like Amazon. At Web Founders USA, we simplify this process by offering comprehensive eCommerce marketing services designed for small and medium-sized businesses. Our eCommerce website development creates fast and secure online stores, while our eCommerce SEO services enhance product visibility in search results. Together, these solutions work in harmony to attract customers to your business."
+        description: "Running an e-store is not easy, given the high competition in the market. At Web Founders USA, a full service Digital Marketing Agency, our eCommerce Marketing services make it easier for small and medium sized businesses to succeed online. From fast, secure eCommerce website development to optimized product listings and search visibility, we make sure your store attracts the right customers and drives sales."
     },
 
 ]

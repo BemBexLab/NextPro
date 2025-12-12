@@ -22,7 +22,7 @@ const tabList = [
     tab_content: "/images/resource/approach-image4-1.jpg",
     heading: "Discovery & Planning",
     description:
-      "Web Founders USA begins by understanding your goals and challenges. You share your needs, and we ask insightful questions to shape the right plan. As a digital marketing agency and website design and development company, we prioritize listening. Every business faces unique problems, and your custom web solutions must align with your specific situation. We delve into your industry, analyze competitors, and identify what drives your customers to purchase. Whether you require SEO optimization, social media marketing support, or business website development, we outline a clear path that saves you time and money.",
+      "At Web Founders USA, a dedicated and responsive Website Design and Development Company and Digital Marketing Agency, we first understand your business goals, challenges, and audience. Every business is different, so we ask insightful questions to develop custom web solutions that exactly meet your needs. We study your industry, analyze competitors, and discover what drives your customers. Whether you need SEO Optimization Services, the support of a Social Media Marketing Company, or Business Website Development, we provide a clear roadmap that is designed to save time, cost, and resources while maximizing results.",
   },
   {
     id: "partnership",
@@ -31,7 +31,7 @@ const tabList = [
     tab_content: "/images/resource/proposal-&-timeline-2.jpg",
     heading: "Proposal & Timeline",
     description:
-      "Some clients need WordPress development to manage content updates themselves, while others require CMS website development for larger teams. We recommend solutions that make sense for you, not just those that are most profitable for us. Responsive web design is no longer optional; your site must function seamlessly on phones, tablets, and computers. As a professional web development company, we work within your actual budget and timeline. Need eCommerce website development? Want a custom website design? Looking for expertise in UI/UX design? We provide clear deliverables and timelines with no surprises.",
+      "Your business deserves solutions that work for you. From WordPress Development and CMS Website Development to Ecommerce Website Development and Custom Website Design, we recommend options that fit your team, budget, and timeline. Each Website that we develop includes Responsive Web Design and mobile friendly Website Design, assuring smooth performance across devices. Clearly defined deliverables, realistic timelines, and transparency are all parts of our commitments, no surprises, just professional results.",
   },
   {
     id: "decisions",
@@ -40,7 +40,7 @@ const tabList = [
     tab_content: "/images/resource/creative-process-1.jpg",
     heading: "Creative Process",
     description:
-      "Our web design agency creates something you’ll be proud to showcase to customers. We focus on both aesthetics and performance. Secure web hosting keeps your site online and safe, while website maintenance and support address issues before they impact your sales. Website speed optimization ensures pages load in under three seconds, as slow sites can hurt conversions. Need Shopify or WooCommerce development? Interested in local SEO services? We handle the technical aspects. Professional logo design, branding services, and business card design elevate your brand’s credibility.",
+      "Our manufacturing web design agency builds websites that look great and perform even better. With our expertise in Interactive Web Design, UI/UX Design Company solutions, and fast, secure hosting, your site stays reliable, protected, and optimized for every user. From logo design services and branding services to professional web development, we handle the creative and technical aspects. We use several tools to improve user experience and increase conversions. These include website speed optimization, WooCommerce development, and Shopify website development. ",
   },
   {
     id: "execution",
@@ -49,7 +49,7 @@ const tabList = [
     tab_content: "/images/resource/final-delivery-2.jpg",
     heading: "Final Delivery",
     description:
-      "This is where your vision comes to life. We guide you through every step to ensure your comfort. Need logo design or landing page services? Looking for help with online reputation management? We’ve got you covered. Our lead generation website captures contacts that convert. We also provide email marketing, PPC marketing, and Google Ads management services. Custom web forms and online booking system development simplify customer contact. We test everything, train you to manage updates, and make launch day exciting.",
+      "We make your vision a reality. From designing services for a landing page and lead generation websites to the development of an online booking system, we make sure your site drives results. Our digital marketing agency, including Email Marketing Services and PPC Marketing Services, will complement your Website in generating leads and growing revenue. We test each feature and then train you on how to manage the updates. With Custom Web Forms, Payment Gateway Integration, and Website Security Services, your business is both effective and secure from day one.",
   },
   {
     id: "communication",
@@ -58,7 +58,7 @@ const tabList = [
     tab_content: "/images/resource/website-maintainence.jpg",
     heading: "Maintenance",
     description:
-      "Most companies disappear after launch, but we remain committed. Markets evolve, competitors adapt, and your business grows. We adjust your strategy as needed. You’ll receive regular reports in plain English that clarify what works and what requires attention. Our website maintenance and support keep your site running smoothly, with WordPress support services managing updates and website security services preventing threats. Need website redesign services? Want mobile-friendly updates? Looking to add features like a job portal or real estate website development? We’re here for you honest communication, real results, no nonsense.",
+      "Unlike others, we stay by your side after launch. Our Website Maintenance and Support keeps your site secure, updated, and running smoothly. Thinking of Website Redesign Services, Mobile Friendly Website Design, or Multi Lingual Website Development? We adapt as your business grows. Performance monitoring and strategy adjustment to maximize results are achieved through website analytics services, website traffic analysis, and revenue optimization services. Honesty in communication, measurability in growth, and dependability in support, that's the promise of Web Founders USA.",
   },
 ];
 

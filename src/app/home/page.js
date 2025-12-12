@@ -11,10 +11,11 @@ import ServiceTwo from "@/components/sections/services/serviceTwo";
 import StoryOne from "@/components/sections/ourStories/storyOne";
 import PriceThree from '@/components/sections/pricing/priceThree'
 import CompaniesSlideer from "@/components/sections/companiesslide/slider";
+import FAQSection from "@/components/sections/faqs/HomeFaqs";
 
 export const metadata = {
-    title: "WebFoundersUSA",
-    description: "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
+    title: "Web Founders USA: Responsive Website Design, Development and Digital Marketing Services.",
+    description: "Web Founders USA is a website design and development company. We are also a digital marketing agency. We help brands grow with smart SEO, effective strategies, and creative solutions.",
 };
 
 const HomeFour = () => {
@@ -34,6 +35,12 @@ const HomeFour = () => {
       <SubscribeTwo />
       {/* <BlogOne /> */}
       <ContactFormTwo />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <FAQSection />
     </main>
   );
 };
