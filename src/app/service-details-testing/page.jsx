@@ -243,7 +243,7 @@ const SocialMediaMarketingPage = () => {
   <div className="flex-1 flex justify-center">
     <div className="w-full" style={{ aspectRatio: '1 / 1' }}>
       <Image
-        src="/service-deatil-images/social-media-marketing.png"
+        src="/service-deatil-images/social-media-marketing.jpg"
         alt="Social media marketing illustration"
         width={300}
         height={300}
