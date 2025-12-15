@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { IoCall } from "react-icons/io5";
@@ -39,6 +40,22 @@ const ServiceDetailPage = ({ params }) => {
   const [activeTab, setActiveTab] = useState(service?.tab?.steps?.[0]?.id || null);
   const [mobileOpenStep, setMobileOpenStep] = useState(null);
   const [openFaq, setOpenFaq] = useState(null);
+  const [clickedArrows, setClickedArrows] = useState([]);
+
+  const handleArrowClick = (index, e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    setClickedArrows((prev) => {
+      if (prev.includes(index)) return prev;
+      const next = [...prev, index];
+      setTimeout(() => {
+        setClickedArrows((innerPrev) => innerPrev.filter((i) => i !== index));
+      }, 1200);
+      return next;
+    });
+  };
 
   if (!service) {
     return (
@@ -106,6 +123,100 @@ const ServiceDetailPage = ({ params }) => {
           </div>
         </div>
       </section>
+
+      {/* Sub-categories Section (optional) */}
+      {service.sub_categories && service.sub_categories.length > 0 && (
+        <section className="py-12 md:py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              className="text-center mb-12 md:mb-20"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <motion.p
+                className="text-[#FF3C1B] font-semibold mb-2 md:mb-3 text-sm md:text-base"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+              >
+                Services
+              </motion.p>
+              <motion.h2
+                className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+              >
+                <span className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] text-transparent bg-clip-text">
+                  Explore Related
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] text-transparent bg-clip-text">
+                  Services
+                </span>
+              </motion.h2>
+              <p className="text-gray-600 mt-3 max-w-2xl mx-auto">Dive deeper into specific offerings related to this service.</p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {service.sub_categories.map((sub, i) => (
+                <div
+                  key={sub.id}
+                  className="group relative rounded-[30px] bg-[#072d7f] p-6 md:p-8 flex flex-col justify-between border border-transparent transition-all duration-300 hover:border-[#072d7f] cursor-pointer"
+                >
+                  <Link href={`/service/${service.id}/${sub.id}`} className="relative z-20 block">
+                    <div>
+                      <div className="w-14 h-14 md:w-16 md:h-16 mb-4 md:mb-6 p-2 flex items-center justify-center rounded-[20px] bg-[rgba(255,255,255,0.10)] transition-all duration-300 border border-transparent group-hover:border-[#DE2F04]">
+                        {/* If sub has an icon component, render it; otherwise fallback to parent icon */}
+                        {(() => {
+                          const Icon = sub.icon || service.icon;
+                          return Icon ? (
+                            <Icon className="w-6 h-6 md:w-8 md:h-8 text-[#f84318]" />
+                          ) : (
+                            <img src={sub.hero?.image || service.hero?.image} alt={sub.title} className="w-6 h-6 md:w-8 md:h-8 object-contain" />
+                          );
+                        })()}
+                      </div>
+
+                      <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-white">
+                        <span className="bg-gradient-to-r from-[#ffb199] to-[white] text-transparent bg-clip-text">
+                          {sub.title.split(" ")[0]}
+                        </span>{" "}
+                        {sub.title.split(" ").slice(1).join(" ")}
+                      </h3>
+
+                      <p className="text-white text-xs md:text-sm leading-relaxed mb-4 md:mb-6 line-clamp-4">
+                        {sub.desc || (sub.introParagraphs && sub.introParagraphs[0])}
+                      </p>
+                    </div>
+
+                    <div className="flex justify-end">
+                      <div
+                        className="relative w-10 h-10 md:w-11 md:h-11 flex items-center justify-center rounded-[20px] bg-white overflow-hidden cursor-pointer"
+                        onClick={(e) => handleArrowClick(i, e)}
+                        role="button"
+                        aria-label={`Open ${sub.title}`}
+                      >
+                        <div
+                          className="relative z-10 text-[#072d7f] text-lg font-bold"
+                          style={{
+                            transform: clickedArrows.includes(i) ? "rotate(360deg)" : "rotate(0deg)",
+                            transition: "transform 0.8s ease-in-out",
+                          }}
+                        >
+                          →
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Intro Paragraph */}
       <section className="py-12 md:py-16 px-4 max-w-6xl mx-auto">
