@@ -14,8 +14,8 @@ import CompaniesSlideer from "@/components/sections/companiesslide/slider";
 import FAQSection from "@/components/sections/faqs/HomeFaqs";
 
 export const metadata = {
-    title: "Web Founders USA: Responsive Website Design, Development and Digital Marketing Services.",
-    description: "Web Founders USA is a website design and development company. We are also a digital marketing agency. We help brands grow with smart SEO, effective strategies, and creative solutions.",
+    title: "Complete 360 Online Marketing Services | Web Founders USA",
+    description: "Web Founders USA provides Complete 360 Digital Marketing Services.",
 };
 
 const HomeFour = () => {

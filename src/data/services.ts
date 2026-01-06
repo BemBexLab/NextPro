@@ -21,7 +21,7 @@ export const services = [
     desc:
       "Web Founders USA offers social media marketing that grows your brand, boosts engagement, and converts followers into real customers.",
     seo: {
-      title: "Social Media Marketing | Web Founders USA",
+      title: "Social Media Marketing Agency (SMM)  | Web Founders USA",
       description:
         "Web Founders USA offers social media marketing that grows your brand, boosts engagement, and converts followers into real customers.",
     },
@@ -120,9 +120,9 @@ export const services = [
     desc:
       "Web Founders USA delivers strategic digital marketing services that connect with real audiences and drive measurable growth.",
     seo: {
-      title: "Web Founders USA: Digital Marketing Services",
+      title: "Digital Marketing Services  | Web Founders USA",
       description:
-        "Web Founders USA, a digital marketing agency and website design and development company, creates smart and human-focused strategies to help your business succeed.",
+        "Web Founders USA Web design & development + digital marketing agency. Smart, human-focused strategies for your business success.",
     },
 
     hero: {
@@ -225,9 +225,9 @@ export const services = [
     desc:
       "Web Founders USA delivers powerful, SEO-optimized content that tells your story, boosts visibility, and converts readers into loyal customers.",
     seo: {
-      title: "Content Writing Services: Web Founders USA",
+      title: "Content Writing Services  | Web Founders USA",
       description:
-        "Web Founders USA creates human-focused, SEO-optimized content that engages audiences, strengthens brand authority, and drives real business results.",
+        "Web Founders USA content writing service delivering clear, SEO-friendly copy for businesses and brands.",
     },
 
     hero: {
@@ -325,9 +325,9 @@ export const services = [
     desc:
       "Web Founders USA delivers smart, human-focused PPC campaigns that drive high-quality leads, lower costs, and grow your business with measurable results.",
     seo: {
-      title: "Pay Per Click Advertising: Web Founders USA",
+      title: "Google Ads (PPC) Services  | Web Founders USA",
       description:
-        "Get real results with Web Founders USA PPC services. Smart, human-focused ads that boost leads, reduce costs, and help businesses grow confidently.",
+        "Get real results with Web Founders USA Google Ads (PPC). Smart, human focused ads that boost leads, lower costs, and help businesses growth.",
     },
 
     hero: {
@@ -439,7 +439,7 @@ export const services = [
     desc:
       "Web Founders USA offers conversion optimization services that increase sales, reduce friction, and improve user experience to maximize your website’s performance.",
     seo: {
-      title: "Conversion Optimization Services: Web Founders USA",
+      title: "(CRO) Conversion Optimization Services  | Web Founders USA",
       description:
         "Web Founders USA offers conversion optimization services that increase sales, decrease friction, and improve user experience.",
     },
@@ -552,9 +552,9 @@ export const services = [
     desc:
       "Web Founders USA builds high-performing ecommerce websites that convert visitors into buyers with custom design, development, and SEO strategies.",
     seo: {
-      title: "Web Founders USA: Ecommerce Website Design & Development",
+      title: "Website Design & Development Services  | Web Founders USA ",
       description:
-        "Ecommerce Website Design & Development Services by Web Founders USA. Build, scale, and optimize your online store with our ecommerce SEO packages and redesign services.",
+        "Web Founders USA Website Design & Development. Build, scale & optimize e-commerce stores with SEO packages & redesign for growth.",
     },
 
     hero: {
@@ -651,9 +651,9 @@ export const services = [
     desc:
       "Web Founders USA delivers professional graphic design, branding, and creative visual solutions that engage audiences and elevate your brand.",
     seo: {
-      title: "Web Founders USA: Graphic Designing Services",
+      title: "Graphic Designing Services  | Web Founders USA",
       description:
-        "Professional graphic designing services by Web Founders USA. Full creative services, graphic design, branding, and ads to digital solutions for businesses.",
+        "Web Founders USA Professional graphic design, branding, ads & full creative services. Digital solutions to elevate your business.",
     },
 
     hero: {
@@ -861,9 +861,9 @@ export const services = [
     desc:
       "Web Founders USA offers professional website maintenance services to keep your site fast, secure, and always online.",
     seo: {
-      title: "Web Founders USA: Website Maintenance Services",
+      title: "Website Maintenance Services  | Web Founders USA",
       description:
-        "Web Founders USA offers professional website maintenance services, which keep your site fast, secure, and fully optimized for performance and reliability.",
+        "Web Founders USA offers professional website maintenance services, which keep your site fast, secure, and always online.",
     },
 
     hero: {
@@ -965,9 +965,9 @@ export const services = [
     desc:
       "Web Founders USA delivers powerful e-commerce marketing strategies designed to increase conversions, traffic, and revenue.",
     seo: {
-      title: "Web Founders USA: E-Commerce Marketing Services to Grow Online Sales",
+      title: "E-Commerce Marketing Services  | Web Founders USA",
       description:
-        "Web Founders USA delivers expert e-commerce marketing solutions including SEO, ads, email marketing, social campaigns, and content to grow your online sales and revenue.",
+        "Web Founders USA: Boost your e-commerce traffic & revenue with our expert marketing strategies and conversion-focused solutions.",
     },
 
     hero: {
@@ -1067,9 +1067,9 @@ export const services = [
     desc:
       "Web Founders USA provides customized video animation services, including 2D, 3D, VR, and corporate video production to elevate brand presence.",
     seo: {
-      title: "Web Founders USA: Professional Video Animation Services",
+      title: "Professional Video Animation Services  | Web Founders USA",
       description:
-        "Web Founders USA delivers full-cycle video animation services including 2D, 3D, VR, product visuals, TV commercials, and custom animated videos for branding and marketing.",
+        "Customized video animation services by Web Founders USA. We offer creative video solutions designed to make your brand stand out and grow.",
     },
 
     hero: {
@@ -1169,9 +1169,9 @@ export const services = [
     desc:
       "Web Founders USA delivers professional email marketing services, including strategy, automation, creative campaigns, and performance optimization for businesses of all sizes.",
     seo: {
-      title: "Email Marketing Services | Expert Email Marketing Agency",
+      title: "Email Marketing Services  | Web Founders USA",
       description:
-        "Drive engagement and sales with professional email marketing services from Web Founders USA. Our expert team delivers strategy, automation, and creative campaigns for businesses of all sizes.",
+        "Boost sales with Web Founders USA’s professional email marketing. Expert strategy, automation, and creative campaigns for your business.",
     },
 
     hero: {
@@ -1268,9 +1268,9 @@ export const services = [
     desc:
       "Web Founders USA provides professional SEO services including technical audits, on-page and off-page optimization, local SEO, and enterprise SEO solutions to boost online visibility.",
     seo: {
-      title: "Web Founders USA: Professional SEO Services",
+      title: "SEO Services  | Web Founders USA",
       description:
-        "Web Founders USA provides professional SEO services for different enterprises. Get expert search engine optimization, technical audits, and strategic SEO solutions to boost online visibility.",
+        "Expert SEO services by Web Founders USA. We offer technical audits and strategic solutions to grow your online presence and visibility.",
     },
 
     hero: {
@@ -3743,7 +3743,7 @@ export const services = [
     desc:
       "Web Founders USA builds and manages powerful affiliate programs for businesses. From strategy and recruitment to tracking and optimization, we deliver measurable results across industries.",
     seo: {
-      title: "Affiliate and Marketing Services: Web Founders USA",
+      title: "Affiliate Marketing Services - Web Founders USA",
       description:
         "Boost your revenue with our expert affiliate and marketing services. We build and manage powerful affiliate programs for different industries.",
     },
