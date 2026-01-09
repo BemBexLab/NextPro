@@ -1368,9 +1368,9 @@ export const services = [
         desc:
           "Web Founders USA, as a premier E-commerce SEO agency, facilitates the ascension of online retailers in search rankings and converting casual visitors into buyers.",
         seo: {
-          title: "E-commerce SEO Services | Web Founders USA",
+          title: "E-commerce SEO Services​ - Web Founders USA",
           description:
-            "Comprehensive e-commerce SEO services: technical audits, product page optimization, category SEO, link building, and ongoing performance tracking to increase visibility and sales.",
+            "Increase online sales with proven strategies. E-commerce SEO Services – Web Founders USA helps stores rank higher and convert more shoppers.",
         },
         hero: {
           paragraph:
@@ -1487,8 +1487,8 @@ export const services = [
         title: "B2B SEO Services",
         desc: "Web Founders USA is a top B2B SEO agency providing specialized SEO services to increase online visibility, traffic, and qualified leads today.",
         seo: {
-          title: "B2B SEO Services | Best B2B SEO Agency: Web Founders USA",
-          description: "Web Founders USA is a top B2B SEO agency providing specialized SEO services to increase online visibility, traffic, and qualified leads today."
+          title: "B2B SEO Services​ - Web Founders USA",
+          description: "Drive qualified leads with tailored strategies. B2B SEO Services – Web Founders USA helps businesses grow visibility, trust, and revenue."
         },
         hero: {
           paragraph: "Web Founders USA is a top B2B SEO agency providing specialized SEO services to increase online visibility, traffic, and qualified leads today.",
@@ -1594,8 +1594,8 @@ export const services = [
         title: "Dental SEO Services",
         desc: "Grow your practice with our dental SEO agency. We offer specialized dental SEO marketing and local SEO strategies to attract more patients and boost online visibility.",
         seo: {
-          title: "Dental SEO Agency: Expert Dental SEO Marketing Services",
-          description: "Grow your practice with our dental SEO agency. We offer specialized dental SEO marketing and local SEO strategies to attract more patients and boost online visibility."
+          title: "Dental SEO Services​ - Web Founders USA",
+          description: "Grow your dental practice with targeted SEO. Dental SEO Services - Web Founders USA helps clinics attract more local patients online."
         },
         hero: {
           paragraph: "Good patient care is the best thing to get success, but is it the only thing? No, your clinic needs real visibility where patients search every day: Google. At Web Founders USA, we help dentists attract more local patients through strategic, simple, and effective SEO.",
@@ -1703,8 +1703,8 @@ export const services = [
         title: "Healthcare SEO Services",
         desc: "Web Founders USA offers specialized healthcare SEO agency services to hospitals, clinics, and healthcare providers to attract the right patients, increase visibility, and grow their practice.",
         seo: {
-          title: "Healthcare SEO Services | Expert Healthcare SEO Agency: Web Founders USA",
-          description: "Boost patient inquiries with Web Founders USA’s specialized healthcare SEO services. Increase visibility, attract local patients, and grow your medical practice with ethical, results-driven strategies."
+          title: "Healthcare SEO Services​ - Web Founders USA",
+          description: "Healthcare SEO Services – Web Founders USA is a reliable healthcare SEO agency helping medical brands improve search visibility and patient growth."
         },
         hero: {
           paragraph: "It is very common these days for patients to rely on Google and similar search engines as their primary source of information when searching for doctors, clinics, or medical services. If your healthcare practice is not ranking high enough in online searches, then you are probably losing a considerable amount of potential patient inquiries.",
@@ -1811,8 +1811,8 @@ export const services = [
         title: "Enterprise SEO Services",
         desc: "Boost your enterprise website with our expert Enterprise SEO Agency. We provide scalable SEO solutions to increase traffic, leads, and online authority.",
         seo: {
-          title: "Enterprise SEO Agency: Web Founders USA",
-          description: "Boost your enterprise website with our expert Enterprise SEO Agency. We provide scalable SEO solutions to increase traffic, leads, and online authority."
+          title: "Enterprise SEO Service​ - Web Founders USA",
+          description: "Enterprise SEO Service by Web Founders USA delivers scalable growth through data-driven strategies trusted by top enterprise SEO agencies."
         },
         hero: {
           paragraph: "Big businesses require advanced SEO strategies; they survive by well planned strategies that can grow and yield visible results in diverse areas, markets, and sites. At Web Founders USA, we are a committed enterprise SEO agency, helping large companies to get their online presence, bring in organic traffic, and then convert that into good quality leads.",
@@ -1915,8 +1915,8 @@ export const services = [
         title: "Shopify SEO Services",
         desc: "Increase traffic and sales with our professional Shopify SEO Agency. Get technical optimization, content strategy, and ongoing support for your Shopify store.",
         seo: {
-          title: "Shopify SEO Agency: Expert Shopify SEO Services for Stores",
-          description: "Increase traffic and sales with our professional Shopify SEO Agency. Get technical optimization, content strategy, and ongoing support for your Shopify store."
+          title: "Shopify SEO Services​ - Web Founders USA",
+          description: "Web Founders USA offers Shopify SEO Services to help stores rank higher, attract the right traffic, and grow sales effectively."
         },
         hero: {
           paragraph: "A successful shopify needs a great visibility other than good products in it, to get more customers and help them to look at what you offer. Our Shopify SEO agency is dedicated to increasing the visibility of Shopify stores in search results, helping them get their share of online sales.",
@@ -2020,8 +2020,8 @@ export const services = [
         title: "White Label SEO Services",
         desc: "Partner with a trusted White Label Company for complete SEO support. Our White Label SEO Agency delivers expert optimization and client-ready reporting under your brand.",
         seo: {
-          title: "White Label Company | Professional White Label SEO Agency",
-          description: "Partner with a trusted White Label Company for complete SEO support. Our White Label SEO Agency delivers expert optimization and client ready reporting under your brand."
+          title: "White Label SEO Service​ - Web Founders USA",
+          description: "Grow your agency with White Label SEO Service – Web Founders USA. Expert white label SEO services for agencies to boost client results."
         },
         hero: {
           paragraph: "If your agency wants to offer SEO without hiring in-house specialists, partnering with a reliable white label company gives you the advantage of delivering premium results under your own brand name.",
@@ -2120,8 +2120,8 @@ export const services = [
         title: "WordPress SEO Services",
         desc: "At Web Founders USA, we work to increase WordPress website visibility across all niches. Our experienced team delivers expert WordPress SEO services to boost traffic, rankings, and conversions—no matter your industry.",
         seo: {
-          title: "WordPress SEO Services | Expert WordPress SEO Agency: Web Founders USA",
-          description: "Boost your WordPress site with professional SEO services. Technical optimization, content strategy, speed enhancement, and local SEO—all tailored for WordPress by Web Founders USA."
+          title: "WordPress SEO Services - Web Founders USA",
+          description: "Get measurable results with Web Founders USA. Our affordable WordPress SEO agency offers expert WordPress SEO services and dedicated consultants."
         },
         hero: {
           paragraph: "At Web Founders USA, we work to increase WordPress website visibility across all niches. The industry doesn’t matter; our large, experienced team serves a wide range of businesses with confidence and expertise.",
@@ -2243,8 +2243,8 @@ export const services = [
         title: "Automotive SEO Services",
         desc: "Boost rankings, leads & local visibility with expert SEO services, by Web Founders USA automotive SEO agency.",
         seo: {
-          title: "Automotive SEO agency: Web Founders USA",
-          description: "Boost rankings, leads & local visibility with expert SEO services, by Web founders USA automotive SEO agency."
+          title: "Automotive SEO Services - Web Founders USA",
+          description: "Web Founders USA offers automotive SEO services and marketing for dealers. Our SEO optimization company drives traffic leads, and sales."
         },
         hero: {
           paragraph: "If your dealership, auto repair shop, or automotive business is not ranking on Google, you are losing customers every single day. Our Automotive SEO Agency helps dealerships, auto shops, and auto parts businesses dominate search results with strategies that are clean, effective, and built for real conversions.",
@@ -2326,8 +2326,8 @@ export const services = [
         title: "Magento SEO Services",
         desc: "Boost your Magento store’s Google rankings and visibility with Web Founders USA. Our Magento SEO agency helps your e-commerce brand grow with smart, true strategies.",
         seo: {
-          title: "Magento SEO Agency: Web Founders USA",
-          description: "Boost your Magento store’s Google rankings and visibility with Web Founders USA. Our Magento SEO agency helps your e-commerce brand grow with smart, true strategies."
+          title: "Magento SEO Services - Web Founders USA",
+          description: "Web Founders USA offers Magento SEO services and expert consultants. Our Magento SEO agency improves rankings, traffic and store conversions."
         },
         hero: {
           paragraph: "In the e-commerce world, where competition is fierce, a Magento store is only the beginning. Specialized SEO strategies based on the Magento platform are required to make you stand out, to bring in more visitors, and finally to convert them into customers.",
@@ -2442,8 +2442,8 @@ export const services = [
         title: "Medical SEO Services",
         desc: "Looking for a Medical SEO Service? Web Founders USA provides optimization services to boost its visibility and attract more views.",
         seo: {
-          title: "Medical SEO Services: Web Founders USA",
-          description: "Looking for a Medical SEO Service? Web Founders USA provides optimization services to boost its visibility and attract more views."
+          title: "Medical SEO Services - Web Founders USA",
+          description: "Boost your medical practice online with Web Founders USA. Expert medical SEO services and agencies deliver higher rankings and patient leads."
         },
         hero: {
           paragraph: "As we know, medical websites are often visited by patients checking departments, doctors, appointment timings, and more. Hospital websites are also used by staff for career opportunities or administrative purposes. An optimized medical website with the right keywords can improve your search visibility and increase Google ranking drastically.",
@@ -2546,8 +2546,8 @@ export const services = [
         title: "SEO Audit Services",
         desc: "Looking for SEO Audit Services? Web Founders USA is here to help you with practical solutions. Improve ranking and increase visibility.",
         seo: {
-          title: "SEO Audit Services: Web Founders USA",
-          description: "Looking for SEO Audit Services? Web Founders USA is here to help you with practical solutions. Improve ranking and increase visibility."
+          title: "SEO Audit Services​ - Web Founders USA",
+          description: "Web Founders USA delivers comprehensive SEO audit services. Local, technical, and website audits identify issues and drive growth for your business."
         },
         hero: {
           paragraph: "If your website is not performing as expected, even though you are using the right keywords, there may be hidden issues holding back your visibility. At Web Founders USA, our SEO audit agency identifies these problems and helps you fix them with actionable, practical solutions.",
@@ -2672,8 +2672,8 @@ export const services = [
         title: "Hotel SEO Services",
         desc: "Boost your hotel’s visibility, attract more guests, and increase direct bookings with expert Hotel SEO services from Web Founders USA.",
         seo: {
-          title: "Hotel SEO Services | Expert Hotel SEO Agency: Web Founders USA",
-          description: "Increase direct bookings and online visibility with professional Hotel SEO Services. Local SEO, hospitality-focused strategies, and expert consulting for hotels & resorts."
+          title: "Hotel SEO Services - Web Founders USA",
+          description: "Maximize your hotel or resort visibility online. Hotel SEO Services - Web Founders USA delivers optimized SEO strategies that drive bookings."
         },
         hero: {
           paragraph: "Every day, the hospitality sector gets more advanced, and being on top of it means not only giving outstanding guest experiences but also having a prominent online presence. These days, the first thing that potential visitors do is to search hotels on Google before they proceed to make a reservation. This is the situation when our hotel SEO services become beneficial, which ensure that your hotel is listed at the top of the search results, consequently drawing in more guests, and increasing the number of bookings made.",
@@ -2768,8 +2768,8 @@ export const services = [
         title: "Multilingual SEO Services",
         desc: "Looking for Multilingual SEO Services? At Web Founders USA the SEO team is here to do maximum optimization to increase the visibility and sales.",
         seo: {
-          title: "Multilingual SEO Services: Web Founders USA",
-          description: "Looking for Multilingual SEO Services? At Web Founders USA the SEO team is here to do maximum optimization to increase the visibility and sales."
+          title: "Multilingual SEO Services - Web Founders USA",
+          description: "Reach global audiences with Multilingual SEO Services - Web Founders USA. Expert strategies, multi-language optimization, and better rankings."
         },
         hero: {
           paragraph: "Nowadays, customers discover brands from every corner of the globe, your online presence shouldn't be confined to a single language. To grow truly internationally, your business needs robust multilingual SEO services that connect you with audiences in their native language.",
@@ -2883,8 +2883,8 @@ export const services = [
         title: "SEO Content Writing Services",
         desc: "SEO content writing services to improve rankings, traffic, and engagement. Expert SEO writers that create blogs, articles, and website content.",
         seo: {
-          title: "SEO Content Writing Services: Web Founders USA",
-          description: "SEO content writing services to improve rankings, traffic, and engagement. Expert SEO writers that create blogs, articles, and website content."
+          title: "SEO Content Writing Services - Web Founders USA",
+          description: "Affordable SEO content writing services from Web Founders USA. We craft optimized blogs, web content, and articles to drive traffic and leads."
         },
         hero: {
           paragraph: "Great content is the foundation of any effective digital strategy. Whether your business is small, an enterprise level brand, or a niche focused website, great content can make all the difference in your online presence.",
@@ -2996,8 +2996,8 @@ export const services = [
         title: "WooCommerce SEO Services",
         desc: "Boost your WooCommerce store’s visibility, traffic, and sales with expert SEO services from Web Founders USA—specialized in product optimization, technical SEO, and conversion-focused strategies.",
         seo: {
-          title: "WooCommerce SEO Agency: Web Founders USA",
-          description: "Boost your WooCommerce store’s visibility, traffic, and sales with expert SEO services from Web Founders USA—specialized in product optimization, technical SEO, and conversion-focused strategies."
+          title: "WooCommerce SEO Services - Web Founders USA",
+          description: "Maximize WooCommerce visibility with SEO. Web Founders USA helps stores rank higher, gain traffic, and drive sales fast."
         },
         hero: {
           paragraph: "One of the most significant advantages of running a WooCommerce store is that you have complete control over your products, customers, and brand, yet even the top stores cannot perform well if no one knows about them. This is how our WooCommerce SEO agency contributes to your development.",
@@ -3101,8 +3101,8 @@ export const services = [
         title: "BigCommerce SEO Services",
         desc: "Looking for a BigCommerce SEO service? You are at the right website. At Web Founders USA we provide the SEO service to increase your store visibility.",
         seo: {
-          title: "BigCommerce SEO Service: Web Founders USA",
-          description: "Looking for a BigCommerce SEO service? You are at the right website. At Web Founders USA we provide the SEO service to increase your store visibility."
+          title: "BigCommerce SEO Services - Web Founders USA",
+          description: "Web Founders USA offers BigCommerce SEO services. Our agency and experts help stores rank higher, attract traffic and increase sales."
         },
         hero: {
           paragraph: "Running a BigCommerce store puts you fully in control of your products, customers, and brand. But even the best designed store will not perform if people cannot find it online. That's where our BigCommerce SEO agency helps you out.",
@@ -3208,8 +3208,8 @@ export const services = [
         title: "Boutique SEO Services",
         desc: "Want to increase your boutique’s online visibility? Collaborate with our boutique SEO agency that helps you get more traffic, customers, and sales.",
         seo: {
-          title: "Boutique SEO Agency: Web Founders USA",
-          description: "Want to increase your boutique’s online visibility? collaborate with our boutique SEO agency, that helps you get more traffic, customers, and sales."
+          title: "Boutique SEO Services - Web Founders USA",
+          description: "Boost your boutique business with expert SEO. Web Founders USA provides boutique SEO services, improving rankings, traffic and visibility."
         },
         hero: {
           paragraph: "Running a boutique today is more than just setting up racks or uploading photos. People first search online before they decide where to shop, which means your website plays a huge role in attracting customers.",
@@ -3312,8 +3312,8 @@ export const services = [
         title: "YouTube SEO Services",
         desc: "Want to boost your channel visibility? Collaborate with our YouTube SEO services and get more views, subscribers, and better rankings.",
         seo: {
-          title: "Youtube SEO Agency: Web Founders USA",
-          description: "Want to boost your channel visibility? Collaborate with our YouTube SEO services and get more views, subscribers, and better rankings."
+          title: "YouTube SEO Services - Web Founders USA",
+          description: "Grow your channel with expert YouTube SEO. Web Founders USA offers video SEO strategies that increase reach, views, and audience engagement."
         },
         hero: {
           paragraph: "Sharing your message on YouTube is easy. Getting people to actually watch your videos is the real challenge. Millions of videos go live every day, so if your content is not reaching viewers, it’s not your fault—the platform is crowded. This is where our YouTube SEO services and video SEO services help you stand out.",
@@ -3419,8 +3419,8 @@ export const services = [
         title: "Roofing SEO Services",
         desc: "Grow your roofing business with our roofing SEO services. Get more calls, better rankings, and strong local visibility with expert SEO for roofing companies.",
         seo: {
-          title: "Roofing SEO Agency: Web Founders USA",
-          description: "Grow your roofing business with our roofing SEO services. Get more calls, better rankings, and strong local visibility with expert SEO for roofing companies."
+          title: "Roofing SEO Services - Web Founders USA",
+          description: "Grow your roofing company online with expert SEO. Roofing SEO Services - Web Founders USA helps attract customers and increase inquiries."
         },
         hero: {
           paragraph: "Running a roofing business is not easy, especially when every roofer in your area is trying to get the same customers. You may have the skills, tools, and the best team, but if people can’t find your business online, the calls and leads won’t come in. This is exactly where our roofing SEO company helps.",
@@ -3523,8 +3523,8 @@ export const services = [
         title: "Outsource SEO Services",
         desc: "Wanna Get expert outsource SEO services? Collaborate with Web Founders USA for audits, content, backlinks, and ongoing ranking improvements.",
         seo: {
-          title: "Outsource SEO Services: Web Founders USA",
-          description: "Wanna Get expert outsource SEO services? Collaborate Web Founders USA for audits, content, backlinks, and ongoing ranking improvements."
+          title: "Outsource SEO Services - Web Founders USA",
+          description: "Outsource SEO services with Web Founders USA. Expert SEO outsourcing company delivering results, rankings, and growth for your business."
         },
         hero: {
           paragraph: "Many businesses don’t have the time or team to manage SEO. That’s where our outsource SEO services step in. We handle everything from content to backlinks to audits while you focus on your business growth.",
@@ -3629,8 +3629,8 @@ export const services = [
         title: "Construction SEO Services",
         desc: "Boost your visibility with our construction SEO services. We offer SEO to increase leads and local reach.",
         seo: {
-          title: "Construction SEO Company: Web Founders USA",
-          description: "Boost your visibility with our construction SEO services. We offer SEO to increase leads and local reach."
+          title: "Construction SEO Services - Web Founders USA",
+          description: "Maximize your construction or remodeling business online. Construction SEO Services - Web Founders USA delivers local and commercial SEO results."
         },
         hero: {
           paragraph: "The construction industry is full of competition. Every company wants more project leads, more calls, and more visibility. But if your website is not ranking, clients will keep choosing other contractors.",
