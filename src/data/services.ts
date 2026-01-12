@@ -3929,8 +3929,8 @@ export const services = [
         "title": "B2B Web Design Services",
         "desc": "Increase the customer rates by making the web design impressive and functional at the same time. B2B Web Design Services BY Web Founders USA is here to help.",
         "seo": {
-          "title": "B2B Web Design Services: Web Founders USA",
-          "description": "Increase the customer rates by making the web design impressive and functional at the same time. B2B Web Design Services BY Web Founders USA is here to help."
+          "title": "B2B Web Design Services​ - Web Founders USA",
+          "description": "Web Founders USA provides custom B2B web design services for technology and manufacturing companies focused on growth and leads."
         },
         "hero": {
           "paragraph": "Your B2B website can be considered the initial contact point for possible customers, and the impression formed is very important. A well designed professional B2B agency website will convey your company's expertise, reliability, and innovation to the visitors and eventually convert them into clients. At Web Founders USA, we create websites that are not just visually appealing but strategically designed for business growth.",
@@ -4038,8 +4038,8 @@ export const services = [
         "title": "Law Firm Web Design Services",
         "desc": "At Web Founders USA, Law Firm Web Design Services provide the opportunity to boost your website by creating a strong online presence and increase the visibility to build clients trust.",
         "seo": {
-          "title": "Law Firm Web Design Service: Web Founders USA",
-          "description": "At Web Founders USA, Law Firm Web Design Services provide the opportunity to boost your website by creating a strong online presence and increase the visibility to build clients trust."
+          "title": "Law Firm Web Design Services​ - Web Founders USA",
+          "description": "Professional law firm web design services by Web Founders USA, helping attorneys grow with secure and responsive websites."
         },
         "hero": {
           "paragraph": "Your website is the first impression for potential clients, which shows your practice, experience, and work. A powerful online presence reflects your professionalism, communicates your expertise, and builds trust with prospective clients. As a creative and dedicated law firm web design agency, we make websites that help attorneys and law firms stand out while providing a smooth experience for visitors.",
@@ -4134,8 +4134,8 @@ export const services = [
         "title": "White Label Web Design Services",
         "desc": "Our white label web design solutions give your agency the freedom to sell websites without managing the design and development workload.",
         "seo": {
-          "title": "White Label Web Design Services: Web Founders USA",
-          "description": "Our white label web design solutions give your agency the freedom to sell websites without managing the design and development workload."
+          "title": "White Label Web Design Services - Web Founders USA",
+          "description": "Scalable white label web services by Web Founders USA, perfect for agencies needing expert design and development teams."
         },
         "hero": {
           "paragraph": "Many agencies want to offer web design but may not have the time or internal team to handle full production. Our white label web design solutions give your agency the freedom to sell websites without managing the design and development workload. We work quietly behind your brand while you keep full control of the client relationship.",
@@ -4242,8 +4242,8 @@ export const services = [
         title: "Healthcare Web Design Services",
         desc: "Wanna boost your website? Collaborate with Web Founders USA—our healthcare web design services make sure that we shape your websites engaging and bring traffic to it.",
         seo: {
-          title: "Healthcare Web Design Services: Web Founders USA",
-          description: "Wanna boost your website? Collaborate with Web Founders USA—our healthcare web design services make sure that we shape your websites engaging and bring traffic to it."
+          title: "Healthcare Web Design Services - Web Founders USA",
+          description: "Custom healthcare and medical web design by Web Founders USA, helping clinics and providers build trust and grow online."
         },
         hero: {
           paragraph: "A strong online presence has become a major part of how patients choose healthcare providers. The first impression usually begins on a website long before a call, form submission, or appointment. Our healthcare web design, made for hospitals, clinics, private practices, and medical groups, helps you deliver a digital space that feels trustworthy, secure, and easy to navigate for every patient. From appointment scheduling to patient education and mobile friendly layouts, we shape websites that support your goals and create a smooth experience.",
@@ -4349,8 +4349,8 @@ export const services = [
         title: "Restaurant Website Design Services",
         desc: "Encourage customers today; by creating an engaging, optimized and user friendly website by Web Founders USA restaurant website design services.",
         seo: {
-          title: "Restaurant Website Design Services: Web Founders USA",
-          description: "Encourage customers today; by creating an engaging, optimized and user friendly website by Web Founders USA restaurant website design services."
+          title: "Restaurant Website Design Services​ - Web Founders USA",
+          description: "Restaurant website design services by Web Founders USA, crafted to boost reservations, branding, and online visibility."
         },
         hero: {
           paragraph: "The restaurant's online presence has equal importance as the food served on its menu. Customers will often visit your website first before making any interactions with your business, whether they are browsing through the menus, checking the hours, or making reservations. It is through professional restaurant website design that you will be able to create a friendly and informative online experience that many will feel like visiting, calling, or ordering online from your restaurant. Our restaurant web design services are centered on designing appealing, user friendly, and goals achieving websites.",
@@ -4450,8 +4450,8 @@ export const services = [
         title: "Real Estate Website Design Services",
         desc: "Create an optimized, engaging, and professional website design today through Web Founders USA real estate website design services.",
         seo: {
-          title: "Real Estate Website Design Services: Web Founders USA",
-          description: "Create an optimized, engaging, and professional website design today through Web Founders USA real estate website design services."
+          title: "Real Estate Website Design Services​ - Web Founders USA",
+          description: "Professional real estate website development services by Web Founders USA, built for agents, brokers and property firms."
         },
         hero: {
           paragraph: "Your site is very much a business generator and not just a digital presence in the property market. Online is where buyers, sellers, renters, and investors are looking up information before they talk to a real estate agent. Through powerful real estate website design, your company communicates effectively with the market, stressing your skills, and providing the customer with what he/she wants in no time. Depending on whether you are an individual realtor or a big real estate company, your site should show professional touch and be a conversion driving tool.",
@@ -4544,8 +4544,8 @@ export const services = [
         title: "Manufacturing Website Design Services",
         desc: "Create a responsive, informative, and visually appealing website design from our Web Founders USA Manufacturing Website Design Services.",
         seo: {
-          title: "Manufacturing Website Design Services: Web Founders USA",
-          description: "Create a responsive, informative, and visually appealing website design from our Web Founders USA Manufacturing Website Design Services."
+          title: "Manufacturing Website Design Services​ - Web Founders USA",
+          description: "Custom manufacturing web design by Web Founders USA for manufacturers seeking modern, scalable and conversion-ready sites."
         },
         hero: {
           paragraph: "Your business usually has an online presence, which is the first interaction prospects and partners in the industrial world. The design of a strong manufacturing website shows professionalism, capability, and technical expertise. If you are catering to local markets or to global supply chains, then a well designed website would be your perfect ally to display your products, point out your capabilities, and capture leads more efficiently than a static brochure ever could. Web design for manufacturing is our service, and we create websites that not only support your business goals but also help you in the long run in an ever evolving digital marketplace.",
@@ -4639,8 +4639,8 @@ export const services = [
         title: "BigCommerce Web Design Services",
         desc: "Web Founders USA BigCommerce Web Design Services are here to design your website visually appealing and functional as well.",
         seo: {
-          title: "BigCommerce Web Design Services: Web Founders USA",
-          description: "Web Founders USA BigCommerce Web Design Services are here to design your website visually appealing and functional as well."
+          title: "BigCommerce Web Design Services  - Web Founders USA",
+          description: "BigCommerce website development services by Web Founders USA, tailored for brands needing custom design and growth-ready stores."
         },
         hero: {
           paragraph: "In the eCommerce world, your site has to be more than just visually appealing, it has to be functional as well. The proper BigCommerce web design can make the difference of your online store getting visitors, showing them around your products, and finally turning them into paying customers. It does not matter if you are opening up a new shop or renovating an old one, professional design will be a very important factor in the growth of your business. Our highly skilled BigCommerce web designers create productive storefronts that are suited to your audience and showcase your brand.",
@@ -4739,8 +4739,8 @@ export const services = [
         title: "SaaS Web Design Services",
         desc: "Our SaaS web design services are here to design the layout that leads to a professional, productive and easy interface website design.",
         seo: {
-          title: "SaaS Web Design Services: Web Founders USA",
-          description: "Our SaaS web design services are here to design the layout that leads to a professional, productive and easy interface website design."
+          title: "SaaS Web Design Services - Web Founders USA",
+          description: "Web Founders USA designs SaaS websites that boost signups, improve UX, and support fast-scaling software businesses."
         },
         hero: {
           paragraph: "SaaS applications generally rely on the website to give a prospective customer the first impression. The reason a professional SaaS web design is not only looking fresh but also conveying the worth of your product, directing visitors to features, and finally leading to sign ups or conversions. It does not matter if you are introducing a new SaaS system or remodeling an old one, the website is the one factor that is very vital to both growth and credibility. The SaaS web design agency not only makes websites that give a good impression and are aligned with the brand but also highlight the products and confirm an easy to use interface.",
@@ -4839,8 +4839,8 @@ export const services = [
         title: "Construction Company Website Design Services",
         desc: "At Web Founders USA our Construction Company Website Design Service is there to help make your construction website visually appealing and functional to get more potential clients.",
         seo: {
-          title: "Construction Company Website Design Services: Web Founders USA",
-          description: "At Web Founders USA our Construction Company Website Design Service is there to help make your construction website visually appealing and functional to get more potential clients."
+          title: "Construction Company Website Design Services​ - Web Founders USA",
+          description: "Web Founders USA provides construction company website design services with strong visuals, responsive layouts, and lead focus."
         },
         hero: {
           paragraph: "A construction company needs more than a simple online brochure. Your website is often the place where property owners, contractors, or investors make their first judgment about your work. A powerful construction company website design develops trust, highlights your work, and shows potential clients that you can manage projects with skill and commitment. Many construction businesses rely on referrals, but a presentable website opens new doors by showing your capabilities clearly and professionally. Our team creates modern, effective websites that reflect your craftsmanship, experience, and reliability. Whether you run a small contracting firm or a large established construction company, we build digital platforms that help you connect with the right clients.",
@@ -4940,8 +4940,8 @@ export const services = [
         title: "Responsive Website Design Company Services",
         desc: "At Web Founders USA, we offer responsive website design company services. Our goal is to create user-friendly and consistent website designs for every screen. This helps reduce the risk of losing visitors.",
         seo: {
-          title: "Responsive Website Design Company Services: Web Founders USA",
-          description: "At Web Founders USA, we offer responsive website design company services. Our goal is to create user-friendly and consistent website designs for every screen. This helps reduce the risk of losing visitors."
+          title: "Responsive Website Design Company Services - Web Founders USA",
+          description: "Professional responsive website designing company by Web Founders USA, building scalable and user-friendly digital solutions."
         },
         hero: {
           paragraph: "A modern website must concentrate to develop consistency on every screen. People visit the website using different devices like laptops, tablets, or mobile phones. They expect the same ease, clarity, and speed. Responsive design is important for keeping things consistent. The base of strong digital experiences exists. A site that looks best only on one device creates a risk of losing visitors who browse in different ways. Our responsive website design company creates sites that work well on all screen sizes. We ensure great visuals, performance, and user experience.",
@@ -5040,8 +5040,8 @@ export const services = [
         title: "Front End Development Services",
         desc: "At Web Founders USA, we offer front end development services. Our goal is to help brands convert visitors into engaged users through quick loading pages and purposeful interactions.",
         seo: {
-          title: "Front End Development Services: Web Founders USA",
-          description: "At Web Founders USA, we offer front end development services. Our goal is to help brands convert visitors into engaged users through quick loading pages and purposeful interactions."
+          title: "Front End Development Services​ - Web Founders USA",
+          description: "Front end development company services by Web Founders USA, focused on speed, usability, and modern web standards."
         },
         hero: {
           paragraph: "A modern website always requires a strong online presence that feels not just visually impressive but also fast and smooth, and that’s where a professional front end development company steps in. We construct interfaces that are sharp in appearance, fast in loading, and user friendly in navigating through the complete and ideal experience. The collaboration between our team that is responsible for design and technology results in something that feels seamless on every device, regardless of whether it is a startup, a large enterprise with a well-established portal, or a custom application.",
@@ -5149,8 +5149,8 @@ export const services = [
         title: "Website Redesign Services",
         desc: "Want to improve clicks? Redesign your website with Web Founders USA company. Our team of Website Redesign Services help you to reconnect with your audience.",
         seo: {
-          title: "Website Redesign Services: Web Founders USA",
-          description: "Want to improve clicks? Redesign your website with Web Founders USA company. Our team of Website Redesign Services help you to reconnect with your audience."
+          title: "Website Redesign Services​ - Web Founders USA",
+          description: "Modern website redesign services by Web Founders USA, focused on responsive layouts, CMS upgrades, and user experience."
         },
         hero: {
           paragraph: "If your website has stopped bringing clicks, leads, or engagement, it may be time to refresh how it looks and performs. A website acts as your brand’s first handshake with potential customers, and if that handshake feels outdated, slow, or unclear, visitors leave within seconds. With our website redesign services, you get a modern, clean, and conversion based website that reflects today’s digital expectations and helps you reconnect with your audience. At Web Founders USA, our team of website redesign services has one purpose: to help your business grow.",
@@ -5250,8 +5250,8 @@ export const services = [
         title: "Plumber Web Design Services",
         desc: "At Web Founders USA, we offer Plumber Web Design Services. Optimize your website today and bring more customers to your site.",
         seo: {
-          title: "Plumber Web Design Services: Web Founders USA",
-          description: "At Web Founders USA, we offer Plumber Web Design Services. Optimize your website today and bring more customers to your site."
+          title: "Plumber Web Design Services - Web Founders USA",
+          description: "Professional plumbing web design made to attract customers. Web Founders USA creates clean, responsive sites for plumbers."
         },
         hero: {
           paragraph: "Trust is a huge factor in the plumbing industry. When a customer has a leak, a pipe burst, or a drain problem, the very first thing they do is search the internet for a dependable plumber in their area. If your site is outdated or hard to navigate, possible clients will leave in a matter of seconds. Our plumber web design services are there to help you out. We make the plumbing companies' online presence visually appealing, easy to navigate, and well structured so that the customers are prompted to call, book, or request a quote right away.",
