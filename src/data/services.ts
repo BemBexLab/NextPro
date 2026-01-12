@@ -5150,7 +5150,7 @@ export const services = [
         desc: "Want to improve clicks? Redesign your website with Web Founders USA company. Our team of Website Redesign Services help you to reconnect with your audience.",
         seo: {
           title: "Website Redesign Services​ - Web Founders USA",
-          description: "Modern website redesign services by Web Founders USA, focused on responsive layouts, CMS upgrades, and user experience."
+          description: "Professional plumbing web design made to attract customers. Web Founders USA creates clean, responsive sites for plumbers."
         },
         hero: {
           paragraph: "If your website has stopped bringing clicks, leads, or engagement, it may be time to refresh how it looks and performs. A website acts as your brand’s first handshake with potential customers, and if that handshake feels outdated, slow, or unclear, visitors leave within seconds. With our website redesign services, you get a modern, clean, and conversion based website that reflects today’s digital expectations and helps you reconnect with your audience. At Web Founders USA, our team of website redesign services has one purpose: to help your business grow.",
@@ -5251,7 +5251,7 @@ export const services = [
         desc: "At Web Founders USA, we offer Plumber Web Design Services. Optimize your website today and bring more customers to your site.",
         seo: {
           title: "Plumber Web Design Services - Web Founders USA",
-          description: "Professional plumbing web design made to attract customers. Web Founders USA creates clean, responsive sites for plumbers."
+          description: "At Web Founders USA, we offer Plumber Web Design Services. Optimize your website today and bring more customers to your site."
         },
         hero: {
           paragraph: "Trust is a huge factor in the plumbing industry. When a customer has a leak, a pipe burst, or a drain problem, the very first thing they do is search the internet for a dependable plumber in their area. If your site is outdated or hard to navigate, possible clients will leave in a matter of seconds. Our plumber web design services are there to help you out. We make the plumbing companies' online presence visually appealing, easy to navigate, and well structured so that the customers are prompted to call, book, or request a quote right away.",
