@@ -5150,7 +5150,7 @@ export const services = [
         desc: "Want to improve clicks? Redesign your website with Web Founders USA company. Our team of Website Redesign Services help you to reconnect with your audience.",
         seo: {
           title: "Website Redesign Services​ - Web Founders USA",
-          description: "Professional plumbing web design made to attract customers. Web Founders USA creates clean, responsive sites for plumbers."
+          description: "Modern website redesign services by Web Founders USA, focused on responsive layouts, CMS upgrades, and user experience."
         },
         hero: {
           paragraph: "If your website has stopped bringing clicks, leads, or engagement, it may be time to refresh how it looks and performs. A website acts as your brand’s first handshake with potential customers, and if that handshake feels outdated, slow, or unclear, visitors leave within seconds. With our website redesign services, you get a modern, clean, and conversion based website that reflects today’s digital expectations and helps you reconnect with your audience. At Web Founders USA, our team of website redesign services has one purpose: to help your business grow.",
