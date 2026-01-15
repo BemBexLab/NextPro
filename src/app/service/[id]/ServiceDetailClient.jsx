@@ -246,9 +246,12 @@ const ServiceDetailPage = ({ params }) => {
 
                     {/* Desktop Tabs */}
                     <div className="hidden md:block">
-                        <div className="flex flex-wrap justify-between gap-2 w-full mb-10">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 w-full mb-10">
                             {(service.tab.steps || []).map(({ id, heading, tab_name }) => (
-                                <button key={id} onClick={() => setActiveTab(id)} className={`flex items-start gap-2 px-3 py-4 rounded-[10px] basis-[30%] sm:basis-[22%] md:basis-[15%] grow h-auto whitespace-normal text-start font-semibold text-sm md:text-base transition-colors ${activeTab === id ? "bg-[#072d7f] text-white" : "bg-white text-[#072d7f]"}`}>
+                                <button
+                                    key={id}
+                                    onClick={() => setActiveTab(id)}
+                                    className={`flex items-center justify-center px-3 py-4 rounded-[10px] min-h-[56px] text-center font-semibold text-sm md:text-base transition-colors ${activeTab === id ? "bg-[#072d7f] text-white" : "bg-white text-[#072d7f]"}`}>
                                     <span className="text-inherit">{tab_name}</span>
                                 </button>
                             ))}

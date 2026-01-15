@@ -390,47 +390,47 @@ export const services = [
     },
 
     faqs: [
-      {
-        question: "How is Web Founders USA different from other PPC marketing services?",
-        answer:
-          "At Web Founders USA, a renowned digital marketing agency and website design and development company, we don't just set up ads but create data driven, human centered campaigns made for your business goals. Unlike generic PPC solutions, we combine Google Ads management, paid social campaigns, landing page optimization, and conversion rate optimization to make sure every click results in actual growth and high value leads.",
-      },
-      {
-        question: "How do you verify my PPC campaigns deliver quality leads?",
-        answer:
-          "From ad engagement to landing page interaction, to final conversion, we place a focus on the full customer journey. Our pay per click marketing services track every touchpoint. By analyzing behavior, optimizing ad copy, and improving landing page design, some of the many ways we help your campaigns reach the right audience are by making sure you maximize your ROI and reduce wasted spend.",
-      },
-      {
-        question: "Can you integrate PPC with other marketing strategies?",
-        answer:
-          "Of course, as a full service website design and development company, digital marketing agency, Web Founders USA confirms that PPC campaigns complement your SEO, content marketing, and social media efforts. The multi channel approach creates one cohesive digital presence that reinforces brand messaging and drives conversions across all platforms.",
-      },
-      {
-        question: "How do you handle campaign tracking and reporting?",
-        answer:
-          "We believe in total transparency. Each and every PPC campaign is tied to an accurate tracking system, often connected directly with your CRM. Our clients enjoy detailed dashboards and actionable reports that display performance metrics, conversion data, and ROI. Monthly and quarterly reviews give strategic insights that help you understand what works and what can be further optimized.",
-      },
-      {
-        question: "What types of businesses can use your PPC services?",
-        answer:
-          "Ranging from startups to established enterprises, any business seeking quality lead generation and measurable growth can benefit from this. Be it Google Ads management, paid social campaigns, or landing page optimization, our PPC solutions are flexible and made according to industries, audience segments, and business goals.",
-      },
-      {
-        question: "How transparent is your pricing for PPC services?",
-        answer:
-          "Web Founders USA provides flat rate, transparent pricing across all PPC marketing services, so you only pay for results and strategic execution, not inflated ad spend or hidden fees. This guarantees alignment between the efforts our team makes and your business growth objectives by keeping campaigns cost effective and results focused.",
-      },
-      {
-        question: "How fast can I see results from PPC campaigns?",
-        answer:
-          "While some metrics are immediate, including impressions and clicks, measurable ROI and lead quality typically improve within the first 30 to 60 days. Our phased approach of discovery, strategy, implementation, and ongoing optimization means that campaigns are continually refined so results improve incrementally with time.",
-      },
-      {
-        question: "Do you provide ongoing campaign maintenance?",
-        answer:
-          "Yes, all of our pay per click services include ongoing campaign monitoring, daily adjustments, and ongoing optimization. Along with our CMS website maintenance and website analytics services, your campaigns will stay on target, effective, and prepared to scale as your business grows.",
-      },
-    ],
+  {
+    question: "How is Web Founders USA different from other PPC marketing services?",
+    answer:
+      "At Web Founders USA, a renowned digital marketing agency and website design and development company, we don't just set up ads but create data-driven, human-centered campaigns made for your business goals. Unlike generic PPC solutions, we combine Google Ads management, paid social campaigns, landing page optimization, and conversion rate optimization to make sure every click results in actual growth and high-value leads.",
+  },
+  {
+    question: "How do you verify my PPC campaigns deliver quality leads and not just clicks?",
+    answer:
+      "From ad engagement to landing page interaction to final conversion, we place a focus on the full customer journey. Our pay-per-click marketing services track every touchpoint. By analyzing behavior, optimizing ad copy, and improving landing page design, we ensure your campaigns reach the right audience—maximizing ROI and reducing wasted spend.",
+  },
+  {
+    question: "Can you incorporate pay-per-click campaigns with other digital marketing strategies?",
+    answer:
+      "Of course. As a full-service website design and development company and digital marketing agency, Web Founders USA ensures that PPC campaigns complement your SEO, content marketing, and social media efforts. This multi-channel approach creates one cohesive digital presence that reinforces brand messaging and drives conversions across all platforms.",
+  },
+  {
+    question: "How do you handle campaign tracking and reporting?",
+    answer:
+      "We believe in total transparency. Every PPC campaign is tied to an accurate tracking system, often connected directly with your CRM. Our clients receive detailed dashboards and actionable reports showing performance metrics, conversion data, and ROI. Monthly and quarterly reviews provide strategic insights to help you understand what’s working and where further optimization is possible.",
+  },
+  {
+    question: "What kind of businesses can use your services related to pay-per-click marketing?",
+    answer:
+      "From startups to established enterprises, any business seeking quality lead generation and measurable growth can benefit. Whether it’s Google Ads management, paid social campaigns, or landing page optimization, our PPC solutions are flexible and tailored to your industry, audience segments, and business goals.",
+  },
+  {
+    question: "How transparent is your pricing for PPC services?",
+    answer:
+      "Web Founders USA provides flat-rate, transparent pricing across all PPC marketing services—so you only pay for results and strategic execution, not inflated ad spend or hidden fees. This ensures alignment between our team’s efforts and your business growth objectives, keeping campaigns cost-effective and results-focused.",
+  },
+  {
+    question: "How fast can I see the results of my PPC campaigns?",
+    answer:
+      "While some metrics like impressions and clicks appear immediately, measurable ROI and lead quality typically improve within the first 30 to 60 days. Our phased approach—discovery, strategy, implementation, and ongoing optimization—ensures campaigns are continually refined so results improve incrementally over time.",
+  },
+  {
+    question: "Do you support campaigns for maintenance and updates?",
+    answer:
+      "Yes. All of our pay-per-click services include ongoing campaign monitoring, daily adjustments, and continuous optimization. Combined with our CMS website maintenance and website analytics services, your campaigns stay on target, effective, and ready to scale as your business grows.",
+  },
+],
   },
   {
     id: "conversion-optimization",
@@ -1056,7 +1056,7 @@ export const services = [
       {
         question: "Is this suitable for small businesses?",
         answer:
-          "Absolutely. Our e-commerce marketing solutions are built for businesses at any stage, from startups to established brands, to achieve scalable online growth.",
+          "Absolutely. Whether you are just starting or scaling, our e-commerce marketing solutions are built for growth at any stage.",
       },
     ],
   },
@@ -3903,6 +3903,13 @@ export const services = [
           description:
             "Consultation and Planning: We discuss your vision, objectives, and target audience. In this way, the very foundation of your unique website is laid. Wireframing & Layout Design: A pre-structural blueprint is prepared to map user journeys along with the essential features. Custom Design and Development: Our team develops visually striking layouts and integrates robust backend functionalities. SEO and Content Integration: All pages are optimized for search engines, ensuring higher visibility. Testing & Launch: Performance, responsiveness, and user experience are rigorously tested before launch. Ongoing support: includes post-launch updates, maintenance, and enhancements within our custom website design service.",
         },
+        {
+  id: "why-stand-out",
+  tab_name: "Why Web Founders USA Stands Out",
+  heading: "Why Web Founders USA Stands Out",
+  description:
+    "Expertise across platforms: From custom WordPress website design to Shopify and eCommerce, we cover all major platforms. Approach: We blend creativity with data-driven strategies that deliver maximum ROI. Industry-Specific: This is made for law firms, dental practices, eCommerce stores, and more to develop solutions specific to your niche. Transparent Pricing: Know your custom website design cost upfront and with no hidden charges. Local Presence: From a search like 'custom website design near me,' you'll find our agency ready to serve businesses both locally and globally.",
+}
       ],
     },
 
