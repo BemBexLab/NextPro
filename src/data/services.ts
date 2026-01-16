@@ -390,47 +390,47 @@ export const services = [
     },
 
     faqs: [
-  {
-    question: "How is Web Founders USA different from other PPC marketing services?",
-    answer:
-      "At Web Founders USA, a renowned digital marketing agency and website design and development company, we don't just set up ads but create data-driven, human-centered campaigns made for your business goals. Unlike generic PPC solutions, we combine Google Ads management, paid social campaigns, landing page optimization, and conversion rate optimization to make sure every click results in actual growth and high-value leads.",
-  },
-  {
-    question: "How do you verify my PPC campaigns deliver quality leads and not just clicks?",
-    answer:
-      "From ad engagement to landing page interaction to final conversion, we place a focus on the full customer journey. Our pay-per-click marketing services track every touchpoint. By analyzing behavior, optimizing ad copy, and improving landing page design, we ensure your campaigns reach the right audience—maximizing ROI and reducing wasted spend.",
-  },
-  {
-    question: "Can you incorporate pay-per-click campaigns with other digital marketing strategies?",
-    answer:
-      "Of course. As a full-service website design and development company and digital marketing agency, Web Founders USA ensures that PPC campaigns complement your SEO, content marketing, and social media efforts. This multi-channel approach creates one cohesive digital presence that reinforces brand messaging and drives conversions across all platforms.",
-  },
-  {
-    question: "How do you handle campaign tracking and reporting?",
-    answer:
-      "We believe in total transparency. Every PPC campaign is tied to an accurate tracking system, often connected directly with your CRM. Our clients receive detailed dashboards and actionable reports showing performance metrics, conversion data, and ROI. Monthly and quarterly reviews provide strategic insights to help you understand what’s working and where further optimization is possible.",
-  },
-  {
-    question: "What kind of businesses can use your services related to pay-per-click marketing?",
-    answer:
-      "From startups to established enterprises, any business seeking quality lead generation and measurable growth can benefit. Whether it’s Google Ads management, paid social campaigns, or landing page optimization, our PPC solutions are flexible and tailored to your industry, audience segments, and business goals.",
-  },
-  {
-    question: "How transparent is your pricing for PPC services?",
-    answer:
-      "Web Founders USA provides flat-rate, transparent pricing across all PPC marketing services—so you only pay for results and strategic execution, not inflated ad spend or hidden fees. This ensures alignment between our team’s efforts and your business growth objectives, keeping campaigns cost-effective and results-focused.",
-  },
-  {
-    question: "How fast can I see the results of my PPC campaigns?",
-    answer:
-      "While some metrics like impressions and clicks appear immediately, measurable ROI and lead quality typically improve within the first 30 to 60 days. Our phased approach—discovery, strategy, implementation, and ongoing optimization—ensures campaigns are continually refined so results improve incrementally over time.",
-  },
-  {
-    question: "Do you support campaigns for maintenance and updates?",
-    answer:
-      "Yes. All of our pay-per-click services include ongoing campaign monitoring, daily adjustments, and continuous optimization. Combined with our CMS website maintenance and website analytics services, your campaigns stay on target, effective, and ready to scale as your business grows.",
-  },
-],
+      {
+        question: "How is Web Founders USA different from other PPC marketing services?",
+        answer:
+          "At Web Founders USA, a renowned digital marketing agency and website design and development company, we don't just set up ads but create data-driven, human-centered campaigns made for your business goals. Unlike generic PPC solutions, we combine Google Ads management, paid social campaigns, landing page optimization, and conversion rate optimization to make sure every click results in actual growth and high-value leads.",
+      },
+      {
+        question: "How do you verify my PPC campaigns deliver quality leads and not just clicks?",
+        answer:
+          "From ad engagement to landing page interaction to final conversion, we place a focus on the full customer journey. Our pay-per-click marketing services track every touchpoint. By analyzing behavior, optimizing ad copy, and improving landing page design, we ensure your campaigns reach the right audience—maximizing ROI and reducing wasted spend.",
+      },
+      {
+        question: "Can you incorporate pay-per-click campaigns with other digital marketing strategies?",
+        answer:
+          "Of course. As a full-service website design and development company and digital marketing agency, Web Founders USA ensures that PPC campaigns complement your SEO, content marketing, and social media efforts. This multi-channel approach creates one cohesive digital presence that reinforces brand messaging and drives conversions across all platforms.",
+      },
+      {
+        question: "How do you handle campaign tracking and reporting?",
+        answer:
+          "We believe in total transparency. Every PPC campaign is tied to an accurate tracking system, often connected directly with your CRM. Our clients receive detailed dashboards and actionable reports showing performance metrics, conversion data, and ROI. Monthly and quarterly reviews provide strategic insights to help you understand what’s working and where further optimization is possible.",
+      },
+      {
+        question: "What kind of businesses can use your services related to pay-per-click marketing?",
+        answer:
+          "From startups to established enterprises, any business seeking quality lead generation and measurable growth can benefit. Whether it’s Google Ads management, paid social campaigns, or landing page optimization, our PPC solutions are flexible and tailored to your industry, audience segments, and business goals.",
+      },
+      {
+        question: "How transparent is your pricing for PPC services?",
+        answer:
+          "Web Founders USA provides flat-rate, transparent pricing across all PPC marketing services—so you only pay for results and strategic execution, not inflated ad spend or hidden fees. This ensures alignment between our team’s efforts and your business growth objectives, keeping campaigns cost-effective and results-focused.",
+      },
+      {
+        question: "How fast can I see the results of my PPC campaigns?",
+        answer:
+          "While some metrics like impressions and clicks appear immediately, measurable ROI and lead quality typically improve within the first 30 to 60 days. Our phased approach—discovery, strategy, implementation, and ongoing optimization—ensures campaigns are continually refined so results improve incrementally over time.",
+      },
+      {
+        question: "Do you support campaigns for maintenance and updates?",
+        answer:
+          "Yes. All of our pay-per-click services include ongoing campaign monitoring, daily adjustments, and continuous optimization. Combined with our CMS website maintenance and website analytics services, your campaigns stay on target, effective, and ready to scale as your business grows.",
+      },
+    ],
   },
   {
     id: "conversion-optimization",
@@ -1384,6 +1384,15 @@ export const services = [
           "The In-House Team of the E-commerce SEO agency consists of skilled individuals who not only create personalized strategies that reply to these hurdles but also make sure of a strong hold on organic long term success.",
           "In case you are operating a small boutique shop or a vast marketplace, cooperating with the best E-commerce SEO agency guarantees that potential buyers will discover your products.",
           "Our visit data based method, added to tested up optimization methods, guarantees measurable effects that influence your profitability.",
+          "Full ecommerce website audit and technical SEO review",
+          "Product page enhancement for increased sales",
+          "Category page SEO and site structure improvements",
+          "Keyword research with buyer intent focus",
+          "Schema markup for rich product snippets",
+          "Content marketing & blog strategy for organic traffic",
+          "Link building for ecommerce sites with high authority",
+          "Continuous performance tracking and reporting",
+          "E-commerce SEO services that are comprehensive and made according to the business goals let us help you overshadow your competitors. Our E-commerce seo agencies approach marries technical know how with innovative content strategies to yield long lasting organic growth."
         ],
         features: [
           "Full ecommerce website audit and technical SEO review",
@@ -1619,6 +1628,42 @@ export const services = [
         tab: {
           title: "Our Strategic Approach",
           steps: [
+            {
+              id: "complete-audit",
+              tab_name: "Complete Website & SEO Audit",
+              heading: "Complete Website & SEO Audit",
+              description: "We start with an in depth analysis of your full dental website, from performance and loading speed to the quality of content and the patient conversion flow. A clean, optimized website instills trust and makes it easier for Google to rank your practice higher."
+            },
+            {
+              id: "local-keyword-research",
+              tab_name: "Local Keyword Research for Dentists",
+              heading: "Local Keyword Research for Dentists",
+              description: "Our team studies how patients search for dental services in your region. As a specialist dental SEO agency, we target location based keywords that bring in real patients, nearby families, local professionals, and people seeking immediate dental care."
+            },
+            {
+              id: "on-page-seo",
+              tab_name: "On Page SEO & Content Optimization",
+              heading: "On Page SEO & Content Optimization",
+              description: "We improve your pages with better titles, descriptions, service details, and internal linking. Each improvement helps your website rank stronger for dental services like teeth whitening, root canals, braces, implants, and more."
+            },
+            {
+              id: "local-seo-gbp",
+              tab_name: "Local SEO & Google Business Profile Optimization",
+              heading: "Local SEO & Google Business Profile Optimization",
+              description: "For dental clinics, it's all about local visibility. We will optimize your Google Business Profile, map ranking, reviews, and location signals to drive more calls, directions requests, and appointment bookings."
+            },
+            {
+              id: "content-strategy",
+              tab_name: "Content Strategy for Dentists",
+              heading: "Content Strategy for Dentists",
+              description: "From service pages to informative blogs answering the most common questions of patients, we will create useful, easy to read content that engenders trust and further cements your practice as an authority in dental care."
+            },
+            {
+              id: "performance-tracking",
+              tab_name: "Performance Tracking & Monthly Reporting",
+              heading: "Performance Tracking & Monthly Reporting",
+              description: "We track rankings, website visits, calls, form submissions, and real patient conversions. This clear reporting lets you see precisely how your SEO investment is performing."
+            },
             {
               id: "audit",
               tab_name: "Comprehensive Dental Website Audit",
@@ -3904,12 +3949,12 @@ export const services = [
             "Consultation and Planning: We discuss your vision, objectives, and target audience. In this way, the very foundation of your unique website is laid. Wireframing & Layout Design: A pre-structural blueprint is prepared to map user journeys along with the essential features. Custom Design and Development: Our team develops visually striking layouts and integrates robust backend functionalities. SEO and Content Integration: All pages are optimized for search engines, ensuring higher visibility. Testing & Launch: Performance, responsiveness, and user experience are rigorously tested before launch. Ongoing support: includes post-launch updates, maintenance, and enhancements within our custom website design service.",
         },
         {
-  id: "why-stand-out",
-  tab_name: "Why Web Founders USA Stands Out",
-  heading: "Why Web Founders USA Stands Out",
-  description:
-    "Expertise across platforms: From custom WordPress website design to Shopify and eCommerce, we cover all major platforms. Approach: We blend creativity with data-driven strategies that deliver maximum ROI. Industry-Specific: This is made for law firms, dental practices, eCommerce stores, and more to develop solutions specific to your niche. Transparent Pricing: Know your custom website design cost upfront and with no hidden charges. Local Presence: From a search like 'custom website design near me,' you'll find our agency ready to serve businesses both locally and globally.",
-}
+          id: "why-stand-out",
+          tab_name: "Why Web Founders USA Stands Out",
+          heading: "Why Web Founders USA Stands Out",
+          description:
+            "Expertise across platforms: From custom WordPress website design to Shopify and eCommerce, we cover all major platforms. Approach: We blend creativity with data-driven strategies that deliver maximum ROI. Industry-Specific: This is made for law firms, dental practices, eCommerce stores, and more to develop solutions specific to your niche. Transparent Pricing: Know your custom website design cost upfront and with no hidden charges. Local Presence: From a search like 'custom website design near me,' you'll find our agency ready to serve businesses both locally and globally.",
+        }
       ],
     },
 
