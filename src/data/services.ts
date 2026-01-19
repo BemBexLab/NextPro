@@ -2057,6 +2057,10 @@ export const services = [
           {
             title: "Future Proof SEO Structure",
             desc: "We are already thinking about the future and the long-term stability of your website, so that if tomorrow your catalog keeps growing or you decide to go international, your SEO foundation is already robust."
+          },
+          {
+            title: "Ready to Grow Your Store?",
+            desc: "If you are in search of a shopify seo agency that is familiar with your business, practices openness, and provides quantifiable results, we are at your service. We will conduct an audit of your store, fix the hidden problems, optimize content, and create an SEO plan that will convert traffic into customers."
           }
         ]
       },
