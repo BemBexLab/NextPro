@@ -216,8 +216,8 @@ export const menuList = [
             },
             {
                 id: 2,
-                path: "/classic-with-sidebar",
-                lable: "Classic With Sidebar",
+                path: "/blog",
+                lable: "blog",
                 tag: "",
             },
             {

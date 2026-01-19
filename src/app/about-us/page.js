@@ -9,8 +9,8 @@ import TestimonialTwo from '@/components/sections/testimonials/testimonialTwo'
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
-    title: "WebFoundersUSA",
-    description: "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
+    title: "ABOUT US | Web Founders USA ",
+    description: "Learn about Web Founders USA, a results-driven digital marketing agency helping businesses grow online with proven strategies.",
 };
 
 const About = () => {
