@@ -4,8 +4,8 @@ import ProjectsTab from "@/components/sections/projectsTab";
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
-    title: "WebFoundersUSA",
-    description: "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
+    title: "OUR PORTFOLIO  | Web Founders USA",
+    description: "Explore the Web Founders USA portfolio featuring successful web design, SEO, and digital marketing projects delivering real business growth.",
 };
 
 const Portfolio = () => {

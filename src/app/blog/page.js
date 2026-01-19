@@ -6,8 +6,8 @@ import Link from 'next/link'
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
-    title: "WebFoundersUSA",
-    description: "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
+    title: "BLOG  | Web Founders USA",
+    description: "Read the Web Founders USA blog for expert insights, tips, and strategies on SEO, web design, and digital marketing growth.",
 };
 
 const Blog2 = () => {

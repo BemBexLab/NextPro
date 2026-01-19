@@ -24,7 +24,7 @@ export default function BlogPost({ params }) {
       {/* Back Button */}
       <div className="mb-8">
         <Link
-          href="/classic-with-sidebar"
+          href="/blog"
           className="inline-flex items-center gap-2 text-primary hover:underline font-semibold"
         >
           <IoArrowBack className="text-lg" />

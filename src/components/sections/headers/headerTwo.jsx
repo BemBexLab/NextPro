@@ -25,7 +25,7 @@ const navigationLinks = [
   { id: 3, path: "/service", lable: "Service" },
   { id: 4, path: "/portfolio", lable: "Our Work" },
   { id: 5, path: "/pricing", lable: "Pricing Plans" },
-  { id: 6, path: "/classic-with-sidebar", lable: "Blog" },
+  { id: 6, path: "/blog", lable: "Blog" },
 ];
 
 const serviceCategories = Object.keys(serviceDetailsData);

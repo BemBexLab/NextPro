@@ -7,8 +7,8 @@ import SubscribeTwo from '@/components/sections/subscribes/subscribeTwo'
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
-    title: "WebFoundersUSA",
-    description: "NextPro is a modern Next.js and Tailwind CSS Template there features General Marketing, Social Media Marketing, AI in Marketing, Paid Advertising, Video Marketing, Analytics and Reporting, Industry news & Trends, E-commerce Marketing",
+    title: "PRICING  | Web Founders USA",
+    description: "Explore Web Founders USA pricing plans for SEO, web design, and digital marketing services designed to deliver value and results",
 };
 
 const Pricing = () => {
