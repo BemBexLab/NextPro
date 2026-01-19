@@ -16,8 +16,8 @@ const HeroFour = () => {
                 <div className='grid lg:grid-cols-2 grid-cols-1'>
                     {/* ----- left side start */}
                     <div className='lg:pt-[132px] lg:pb-[120px] pt-12 pb-12'>
-                        <Title size={'7.5xl'} className={"max-w-[754px]"}>Turning Ideas into Digital Impact</Title>
-                        <p className='font-semibold max-w-[689px] pt-7.5'>Partner with Web Founders USA to elevate your brand through high-performing websites and smart social media marketing — everything you need to grow online, all in one place. </p>
+                        <Title size={'7.5xl'} className={"max-w-[754px]"}>Transform Your Digital Presence with a Partner Built for Results</Title>
+                        <p className='font-semibold max-w-[689px] pt-7.5'>Brands lose customers every day to slow websites, weak visibility, and outdated design. Web Founders USA, a trusted Website Design and Development Company and full-service Digital Marketing Agency, rebuilds that momentum with powerful solutions. </p>
                         <div className='flex sm:flex-row flex-col sm:items-center gap-[32px] pt-[55px] pb-[22px]'>
                             <Button asChild>
                                 <Link href="/contact-us"> Contact Us </Link>

@@ -12,7 +12,7 @@ const ServiceTwo = () => {
                 <SlideUp>
                     <div className='flex flex-col items-center'>
                         <Button variant="secondary">Our Services</Button>
-                        <Title size={"5xl"} className="max-w-[869px] pt-6 text-center">Innovative Digital Marketing with SEO, PPC, and More</Title>
+                        <Title size={"5xl"} className="max-w-[869px] pt-6 text-center">A Complete Ecosystem for Design, Development & Digital Marketing</Title>
                     </div>
                 </SlideUp>
                 <div className='lg:pt-7.5 pt-2'>

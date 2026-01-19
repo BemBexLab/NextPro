@@ -29,7 +29,7 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
             id: 3,
             title: "Social",
             links: [
-                { id: 1, path: "https://x.com/", label: "Twitter" },
+                { id: 1, path: "https://x.com/webfounders_usa", label: "Twitter" },
                 { id: 2, path: "https://www.instagram.com/webfoundersusa/", label: "Instagram" },
                 { id: 3, path: "https://linkedin.com/", label: "LinkedIn" },
                 { id: 4, path: "https://www.facebook.com/profile.php?id=61576716743578", label: "Facebook" },
