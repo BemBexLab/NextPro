@@ -4,13 +4,30 @@ import { getServiceById } from '@/data/services';
 
 export async function generateMetadata({ params }) {
   const { id } = params;
-  const service = getServiceById(id);
+  const service = await getServiceById(id);
   const title = service?.seo?.title || service?.title || 'Service';
   const description = service?.seo?.description || service?.desc || '';
+
+  const slugify = (str) =>
+    str
+      ?.toString()
+      .trim()
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/--+/g, '-')
+      .replace(/^-+|-+$/g, '') || 'service';
+
+  const canonical = `https://www.webfoundersusa.com/service/${slugify(
+    service?.title || service?.name || title
+  )}`;
 
   return {
     title,
     description,
+    alternates: {
+      canonical,
+    },
     openGraph: {
       title,
       description,

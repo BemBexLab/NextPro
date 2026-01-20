@@ -20,12 +20,12 @@ import StickyHeader from "@/components/ui/stickyHeader";
 import { serviceDetailsData } from "@/lib/fackData/serviceDetailsData";
 
 const navigationLinks = [
-  { id: 1, path: "/home", lable: "Home" },
+  { id: 1, path: "/", lable: "Home" },
   { id: 2, path: "/about-us", lable: "About Us" },
   { id: 3, path: "/service", lable: "Service" },
   { id: 4, path: "/portfolio", lable: "Our Work" },
   { id: 5, path: "/pricing", lable: "Pricing Plans" },
-  { id: 6, path: "/blog", lable: "Blog" },
+  // { id: 6, path: "/blog", lable: "Blog" },
 ];
 
 const serviceCategories = Object.keys(serviceDetailsData);

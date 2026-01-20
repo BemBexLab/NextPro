@@ -4,6 +4,9 @@ export const metadata = {
   title: "SERVICE  | Web Founders USA",
   description:
     "Explore Web Founders USA services including SEO, web design, and digital marketing solutions built to grow your business.",
+    alternates: {
+    canonical: "https://www.webfoundersusa.com/service",
+  },
 };
 
 export default function Page() {
