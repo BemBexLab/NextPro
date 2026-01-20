@@ -6,6 +6,9 @@ import ContactFormTwo from "@/components/sections/ContactFormTwo";
 export const metadata = {
     title: "OUR PORTFOLIO  | Web Founders USA",
     description: "Explore the Web Founders USA portfolio featuring successful web design, SEO, and digital marketing projects delivering real business growth.",
+    alternates: {
+    canonical: "https://www.webfoundersusa.com/portfolio",
+  },
 };
 
 const Portfolio = () => {
