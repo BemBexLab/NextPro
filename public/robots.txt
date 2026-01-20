@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /panel/
+Disallow: /cgi-bin/
+Disallow: /api/
+Disallow: /search/
+Disallow: /?s=
+Disallow: */trackback/
+Disallow: */comments/
+
+# Allow all important pages
+Allow: /
+
+# Sitemap
+Sitemap: https://www.webfoundersusa.com/sitemap.xml
+
