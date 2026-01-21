@@ -27,6 +27,11 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
+    keywords: subCategory?.seo?.keyword
+      ? String(subCategory.seo.keyword).split(',').map((k) => k.trim())
+      : parentService?.seo?.keyword
+        ? String(parentService.seo.keyword).split(',').map((k) => k.trim())
+        : undefined,
     alternates: {
       canonical,
     },

@@ -17,8 +17,19 @@ import Script from "next/script";
 export const metadata = {
     title: "Complete 360 Online Marketing Services | Web Founders USA",
     description: "Web Founders USA provides complete 360 online Digital marketing services to help US businesses boost rankings, traffic, leads, and growth.",
+
+    keywords: [
+    "Web Founders USA",
+    "Website Design and Development Company",
+    "Digital Marketing Agency",
+  ],
+  
     alternates: {
     canonical: "https://www.webfoundersusa.com/",
+
+    verification: {
+    google: "MXsme6KREETz9zsD6ULOJg-NIi75wmJqABLQiM52Lmk",
+  },
   },
 };
 const jsonLd = {

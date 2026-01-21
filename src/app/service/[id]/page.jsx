@@ -22,9 +22,14 @@ export async function generateMetadata({ params }) {
     service?.title || service?.name || title
   )}`;
 
+
+
   return {
     title,
     description,
+    keywords: service?.seo?.keyword
+      ? String(service.seo.keyword).split(',').map((k) => k.trim())
+      : undefined,
     alternates: {
       canonical,
     },

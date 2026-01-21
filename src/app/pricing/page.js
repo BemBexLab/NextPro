@@ -9,6 +9,11 @@ import ContactFormTwo from "@/components/sections/ContactFormTwo";
 export const metadata = {
     title: "PRICING  | Web Founders USA",
     description: "Explore Web Founders USA pricing plans for SEO, web design, and digital marketing services designed to deliver value and results",
+    
+    keywords: [
+    "pricing",
+  ],
+    
     alternates: {
     canonical: "https://www.webfoundersusa.com/pricing",
   },
