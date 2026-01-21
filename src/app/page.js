@@ -26,11 +26,12 @@ export const metadata = {
   
     alternates: {
     canonical: "https://www.webfoundersusa.com/",
+    
+  },
 
-    verification: {
+  verification: {
     google: "MXsme6KREETz9zsD6ULOJg-NIi75wmJqABLQiM52Lmk",
-  },
-  },
+  }, 
 };
 const jsonLd = {
   "@context": "https://schema.org",
