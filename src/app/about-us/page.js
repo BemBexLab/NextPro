@@ -11,6 +11,11 @@ import ContactFormTwo from "@/components/sections/ContactFormTwo";
 export const metadata = {
     title: "ABOUT US | Web Founders USA ",
     description: "Learn about Web Founders USA, a results-driven digital marketing agency helping businesses grow online with proven strategies.",
+
+    keywords: [
+    "About us",
+  ],
+
     alternates: {
     canonical: "https://www.webfoundersusa.com/about-us",
   },

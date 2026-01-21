@@ -24,6 +24,7 @@ export const services = [
       title: "Social Media Marketing Agency (SMM)  | Web Founders USA",
       description:
         "Web Founders USA offers social media marketing that grows your brand, boosts engagement, and converts followers into real customers.",
+      keyword: "social media marketing"
     },
     hero: {
       paragraph:
@@ -123,6 +124,7 @@ export const services = [
       title: "Digital Marketing Services  | Web Founders USA",
       description:
         "Web Founders USA Web design & development + digital marketing agency. Smart, human-focused strategies for your business success.",
+      keyword: "Digital Marketing Services"  
     },
 
     hero: {
@@ -228,6 +230,7 @@ export const services = [
       title: "Content Writing Services  | Web Founders USA",
       description:
         "Web Founders USA content writing service delivering clear, SEO-friendly copy for businesses and brands.",
+      keyword: "Content Writing, SEO Content, Blog Writing, Copywriting"  
     },
 
     hero: {
@@ -328,6 +331,8 @@ export const services = [
       title: "Google Ads (PPC) Services  | Web Founders USA",
       description:
         "Get real results with Web Founders USA Google Ads (PPC). Smart, human focused ads that boost leads, lower costs, and help businesses growth.",
+      keyword: "google local service ads, local SEO, google ads, local marketing"  
+    
     },
 
     hero: {
@@ -442,6 +447,7 @@ export const services = [
       title: "(CRO) Conversion Optimization Services  | Web Founders USA",
       description:
         "Web Founders USA offers conversion optimization services that increase sales, decrease friction, and improve user experience.",
+      keyword: "Conversion Optimization"    
     },
 
     hero: {
@@ -555,6 +561,7 @@ export const services = [
       title: "Website Design & Development Services  | Web Founders USA ",
       description:
         "Web Founders USA Website Design & Development. Build, scale & optimize e-commerce stores with SEO packages & redesign for growth.",
+      keyword: "ecommerce website, online store, ecommerce solutions"    
     },
 
     hero: {
@@ -654,6 +661,7 @@ export const services = [
       title: "Graphic Designing Services  | Web Founders USA",
       description:
         "Web Founders USA Professional graphic design, branding, ads & full creative services. Digital solutions to elevate your business.",
+      keyword: "graphic designing services"   
     },
 
     hero: {
@@ -753,6 +761,7 @@ export const services = [
       title: "Web Founders USA: Brand Strategy Services & Branding Solutions",
       description:
         "Web Founders USA provides professional brand strategy services and brand development services. Create a strong identity using expert brand management services and comprehensive branding support.",
+      keyword: "Brand Strategy Services"     
     },
 
     hero: {
@@ -864,6 +873,7 @@ export const services = [
       title: "Website Maintenance Services  | Web Founders USA",
       description:
         "Web Founders USA offers professional website maintenance services, which keep your site fast, secure, and always online.",
+      keyword: "Website Maintenance Services"  
     },
 
     hero: {
@@ -968,6 +978,7 @@ export const services = [
       title: "E-Commerce Marketing Services  | Web Founders USA",
       description:
         "Web Founders USA: Boost your e-commerce traffic & revenue with our expert marketing strategies and conversion-focused solutions.",
+      keyword: "e-commerce marketing, ecommerce marketing services, online store marketing, digital marketing for ecommerce"   
     },
 
     hero: {
@@ -1070,6 +1081,7 @@ export const services = [
       title: "Professional Video Animation Services  | Web Founders USA",
       description:
         "Customized video animation services by Web Founders USA. We offer creative video solutions designed to make your brand stand out and grow.",
+      keyword: "Video Animation, 2D Animation, 3D Animation, Explainer Videos, Motion Graphics"    
     },
 
     hero: {
@@ -1172,6 +1184,7 @@ export const services = [
       title: "Email Marketing Services  | Web Founders USA",
       description:
         "Boost sales with Web Founders USA’s professional email marketing. Expert strategy, automation, and creative campaigns for your business.",
+      keyword: "Email Marketing, Email Campaigns, Newsletter Marketing, Bulk Email Services"  
     },
 
     hero: {
@@ -1271,6 +1284,7 @@ export const services = [
       title: "SEO Services  | Web Founders USA",
       description:
         "Expert SEO services by Web Founders USA. We offer technical audits and strategic solutions to grow your online presence and visibility.",
+      keyword: "SEO Services, Professional SEO Services, Search Engine Optimization, Digital Marketing SEO, Local SEO"   
     },
 
     hero: {
@@ -1371,6 +1385,7 @@ export const services = [
           title: "E-commerce SEO Services​ - Web Founders USA",
           description:
             "Increase online sales with proven strategies. E-commerce SEO Services – Web Founders USA helps stores rank higher and convert more shoppers.",
+          keyword: "Web Design & Development Services, Custom Web Development, Website Development Company, Responsive Web Design, Web Application Development"   
         },
         hero: {
           paragraph:
@@ -3795,6 +3810,7 @@ export const services = [
       title: "Affiliate Marketing Services - Web Founders USA",
       description:
         "Boost your revenue with our expert affiliate and marketing services. We build and manage powerful affiliate programs for different industries.",
+      keyword: "Affiliate & Marketing Services, Affiliate Marketing, Performance Marketing, Digital Marketing Services"    
     },
 
     hero: {
@@ -3894,6 +3910,7 @@ export const services = [
       title: "Custom Website Design Company: Web Founders USA",
       description:
         "Establish a strong online presence through Web Founders USA. Get SEO-friendly, scalable, and visually engaging websites through our custom website design company today.",
+      keyword: "Custom Website Design Services, Website Design Company, Responsive Web Design, Professional Web Design"  
     },
 
     hero: {
@@ -5419,6 +5436,7 @@ export const services = [
       title: "Web Development Services | Web Founders USA",
       description:
         "Web Founders USA offers professional web development services. Get custom websites, e-commerce platforms, CMS solutions, and performance optimization for your business today.",
+      keyword: "Web Design & Development Services, Custom Web Development, Website Development Company, Responsive Web Design, Web Application Development"   
     },
 
     hero: {
