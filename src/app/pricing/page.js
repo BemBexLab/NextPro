@@ -7,7 +7,7 @@ import SubscribeTwo from '@/components/sections/subscribes/subscribeTwo'
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
-    title: "PRICING  | Web Founders USA",
+    title: "Pricing  | Web Founders USA",
     description: "Explore Web Founders USA pricing plans for SEO, web design, and digital marketing services designed to deliver value and results",
     
     keywords: [

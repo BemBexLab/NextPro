@@ -9,7 +9,7 @@ import TestimonialTwo from '@/components/sections/testimonials/testimonialTwo'
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
-    title: "ABOUT US | Web Founders USA ",
+    title: "About Us | Web Founders USA ",
     description: "Learn about Web Founders USA, a results-driven digital marketing agency helping businesses grow online with proven strategies.",
 
     keywords: [

@@ -1385,7 +1385,7 @@ export const services = [
           title: "E-commerce SEO Services​ - Web Founders USA",
           description:
             "Increase online sales with proven strategies. E-commerce SEO Services – Web Founders USA helps stores rank higher and convert more shoppers.",
-          keyword: "Web Design & Development Services, Custom Web Development, Website Development Company, Responsive Web Design, Web Application Development"   
+          keyword: "e-commerce seo agency, e-commerce seo agencies, seo agency for ecommerce"   
         },
         hero: {
           paragraph:
@@ -1512,7 +1512,8 @@ export const services = [
         desc: "Web Founders USA is a top B2B SEO agency providing specialized SEO services to increase online visibility, traffic, and qualified leads today.",
         seo: {
           title: "B2B SEO Services​ - Web Founders USA",
-          description: "Drive qualified leads with tailored strategies. B2B SEO Services – Web Founders USA helps businesses grow visibility, trust, and revenue."
+          description: "Drive qualified leads with tailored strategies. B2B SEO Services – Web Founders USA helps businesses grow visibility, trust, and revenue.",
+          keyword: "b2b seo agency, b2b saas seo agency, saas seo agency" 
         },
         hero: {
           paragraph: "Web Founders USA is a top B2B SEO agency providing specialized SEO services to increase online visibility, traffic, and qualified leads today.",
@@ -1619,7 +1620,8 @@ export const services = [
         desc: "Grow your practice with our dental SEO agency. We offer specialized dental SEO marketing and local SEO strategies to attract more patients and boost online visibility.",
         seo: {
           title: "Dental SEO Services​ - Web Founders USA",
-          description: "Grow your dental practice with targeted SEO. Dental SEO Services - Web Founders USA helps clinics attract more local patients online."
+          description: "Grow your dental practice with targeted SEO. Dental SEO Services - Web Founders USA helps clinics attract more local patients online.",
+          keyword: "dental seo agency, dental seo marketing agency"
         },
         hero: {
           paragraph: "Good patient care is the best thing to get success, but is it the only thing? No, your clinic needs real visibility where patients search every day: Google. At Web Founders USA, we help dentists attract more local patients through strategic, simple, and effective SEO.",
@@ -1764,7 +1766,8 @@ export const services = [
         desc: "Web Founders USA offers specialized healthcare SEO agency services to hospitals, clinics, and healthcare providers to attract the right patients, increase visibility, and grow their practice.",
         seo: {
           title: "Healthcare SEO Services​ - Web Founders USA",
-          description: "Healthcare SEO Services – Web Founders USA is a reliable healthcare SEO agency helping medical brands improve search visibility and patient growth."
+          description: "Healthcare SEO Services – Web Founders USA is a reliable healthcare SEO agency helping medical brands improve search visibility and patient growth.",
+          keyword: "healthcare seo agency, seo agency for healthcare"
         },
         hero: {
           paragraph: "It is very common these days for patients to rely on Google and similar search engines as their primary source of information when searching for doctors, clinics, or medical services. If your healthcare practice is not ranking high enough in online searches, then you are probably losing a considerable amount of potential patient inquiries.",
@@ -1872,7 +1875,8 @@ export const services = [
         desc: "Boost your enterprise website with our expert Enterprise SEO Agency. We provide scalable SEO solutions to increase traffic, leads, and online authority.",
         seo: {
           title: "Enterprise SEO Service​ - Web Founders USA",
-          description: "Enterprise SEO Service by Web Founders USA delivers scalable growth through data-driven strategies trusted by top enterprise SEO agencies."
+          description: "Enterprise SEO Service by Web Founders USA delivers scalable growth through data-driven strategies trusted by top enterprise SEO agencies.",
+          keyword: "enterprise seo agency, enterprise seo agencies, best enterprise seo agency"
         },
         hero: {
           paragraph: "Big businesses require advanced SEO strategies; they survive by well planned strategies that can grow and yield visible results in diverse areas, markets, and sites. At Web Founders USA, we are a committed enterprise SEO agency, helping large companies to get their online presence, bring in organic traffic, and then convert that into good quality leads.",
@@ -1976,7 +1980,8 @@ export const services = [
         desc: "Increase traffic and sales with our professional Shopify SEO Agency. Get technical optimization, content strategy, and ongoing support for your Shopify store.",
         seo: {
           title: "Shopify SEO Services​ - Web Founders USA",
-          description: "Web Founders USA offers Shopify SEO Services to help stores rank higher, attract the right traffic, and grow sales effectively."
+          description: "Web Founders USA offers Shopify SEO Services to help stores rank higher, attract the right traffic, and grow sales effectively.",
+          keyword: "shopify seo agency, shopify seo agencies, best shopify seo agency"
         },
         hero: {
           paragraph: "A successful shopify needs a great visibility other than good products in it, to get more customers and help them to look at what you offer. Our Shopify SEO agency is dedicated to increasing the visibility of Shopify stores in search results, helping them get their share of online sales.",
@@ -2085,7 +2090,8 @@ export const services = [
         desc: "Partner with a trusted White Label Company for complete SEO support. Our White Label SEO Agency delivers expert optimization and client-ready reporting under your brand.",
         seo: {
           title: "White Label SEO Service​ - Web Founders USA",
-          description: "Grow your agency with White Label SEO Service – Web Founders USA. Expert white label SEO services for agencies to boost client results."
+          description: "Grow your agency with White Label SEO Service – Web Founders USA. Expert white label SEO services for agencies to boost client results.",
+          keyword: "white label seo agency, white label seo for agencies, white label seo services for agencies"
         },
         hero: {
           paragraph: "If your agency wants to offer SEO without hiring in-house specialists, partnering with a reliable white label company gives you the advantage of delivering premium results under your own brand name.",
@@ -2185,7 +2191,8 @@ export const services = [
         desc: "At Web Founders USA, we work to increase WordPress website visibility across all niches. Our experienced team delivers expert WordPress SEO services to boost traffic, rankings, and conversions—no matter your industry.",
         seo: {
           title: "WordPress SEO Services - Web Founders USA",
-          description: "Get measurable results with Web Founders USA. Our affordable WordPress SEO agency offers expert WordPress SEO services and dedicated consultants."
+          description: "Get measurable results with Web Founders USA. Our affordable WordPress SEO agency offers expert WordPress SEO services and dedicated consultants.",
+          keyword: "wordpress seo services, wordpress seo agency, wordpress seo company, wordpress seo consultant"
         },
         hero: {
           paragraph: "At Web Founders USA, we work to increase WordPress website visibility across all niches. The industry doesn’t matter; our large, experienced team serves a wide range of businesses with confidence and expertise.",
@@ -2308,7 +2315,8 @@ export const services = [
         desc: "Boost rankings, leads & local visibility with expert SEO services, by Web Founders USA automotive SEO agency.",
         seo: {
           title: "Automotive SEO Services - Web Founders USA",
-          description: "Web Founders USA offers automotive SEO services and marketing for dealers. Our SEO optimization company drives traffic leads, and sales."
+          description: "Web Founders USA offers automotive SEO services and marketing for dealers. Our SEO optimization company drives traffic leads, and sales.",
+          keyword: "automotive seo, Automotive seo agency, car dealership seo"
         },
         hero: {
           paragraph: "If your dealership, auto repair shop, or automotive business is not ranking on Google, you are losing customers every single day. Our Automotive SEO Agency helps dealerships, auto shops, and auto parts businesses dominate search results with strategies that are clean, effective, and built for real conversions.",
@@ -2391,7 +2399,8 @@ export const services = [
         desc: "Boost your Magento store’s Google rankings and visibility with Web Founders USA. Our Magento SEO agency helps your e-commerce brand grow with smart, true strategies.",
         seo: {
           title: "Magento SEO Services - Web Founders USA",
-          description: "Web Founders USA offers Magento SEO services and expert consultants. Our Magento SEO agency improves rankings, traffic and store conversions."
+          description: "Web Founders USA offers Magento SEO services and expert consultants. Our Magento SEO agency improves rankings, traffic and store conversions.",
+          keyword: "magento seo agency, magento seo services, magento seo consultant"
         },
         hero: {
           paragraph: "In the e-commerce world, where competition is fierce, a Magento store is only the beginning. Specialized SEO strategies based on the Magento platform are required to make you stand out, to bring in more visitors, and finally to convert them into customers.",
@@ -2507,7 +2516,8 @@ export const services = [
         desc: "Looking for a Medical SEO Service? Web Founders USA provides optimization services to boost its visibility and attract more views.",
         seo: {
           title: "Medical SEO Services - Web Founders USA",
-          description: "Boost your medical practice online with Web Founders USA. Expert medical SEO services and agencies deliver higher rankings and patient leads."
+          description: "Boost your medical practice online with Web Founders USA. Expert medical SEO services and agencies deliver higher rankings and patient leads.",
+          keyword: "medical seo services, medical seo agency, healthcare seo services"
         },
         hero: {
           paragraph: "As we know, medical websites are often visited by patients checking departments, doctors, appointment timings, and more. Hospital websites are also used by staff for career opportunities or administrative purposes. An optimized medical website with the right keywords can improve your search visibility and increase Google ranking drastically.",
@@ -2611,7 +2621,8 @@ export const services = [
         desc: "Looking for SEO Audit Services? Web Founders USA is here to help you with practical solutions. Improve ranking and increase visibility.",
         seo: {
           title: "SEO Audit Services​ - Web Founders USA",
-          description: "Web Founders USA delivers comprehensive SEO audit services. Local, technical, and website audits identify issues and drive growth for your business."
+          description: "Web Founders USA delivers comprehensive SEO audit services. Local, technical, and website audits identify issues and drive growth for your business.",
+          keyword: "seo audit services, technical seo audit service, website audit service, seo technical audit service"
         },
         hero: {
           paragraph: "If your website is not performing as expected, even though you are using the right keywords, there may be hidden issues holding back your visibility. At Web Founders USA, our SEO audit agency identifies these problems and helps you fix them with actionable, practical solutions.",
@@ -2737,7 +2748,8 @@ export const services = [
         desc: "Boost your hotel’s visibility, attract more guests, and increase direct bookings with expert Hotel SEO services from Web Founders USA.",
         seo: {
           title: "Hotel SEO Services - Web Founders USA",
-          description: "Maximize your hotel or resort visibility online. Hotel SEO Services - Web Founders USA delivers optimized SEO strategies that drive bookings."
+          description: "Maximize your hotel or resort visibility online. Hotel SEO Services - Web Founders USA delivers optimized SEO strategies that drive bookings.",
+          keyword: "hotel seo, hotel seo agency, hotel seo services"
         },
         hero: {
           paragraph: "Every day, the hospitality sector gets more advanced, and being on top of it means not only giving outstanding guest experiences but also having a prominent online presence. These days, the first thing that potential visitors do is to search hotels on Google before they proceed to make a reservation. This is the situation when our hotel SEO services become beneficial, which ensure that your hotel is listed at the top of the search results, consequently drawing in more guests, and increasing the number of bookings made.",
@@ -2833,7 +2845,8 @@ export const services = [
         desc: "Looking for Multilingual SEO Services? At Web Founders USA the SEO team is here to do maximum optimization to increase the visibility and sales.",
         seo: {
           title: "Multilingual SEO Services - Web Founders USA",
-          description: "Reach global audiences with Multilingual SEO Services - Web Founders USA. Expert strategies, multi-language optimization, and better rankings."
+          description: "Reach global audiences with Multilingual SEO Services - Web Founders USA. Expert strategies, multi-language optimization, and better rankings.",
+          keyword: "multilingual seo agency, multilingual seo services, multilingual seo consultancy"
         },
         hero: {
           paragraph: "Nowadays, customers discover brands from every corner of the globe, your online presence shouldn't be confined to a single language. To grow truly internationally, your business needs robust multilingual SEO services that connect you with audiences in their native language.",
@@ -2948,7 +2961,8 @@ export const services = [
         desc: "SEO content writing services to improve rankings, traffic, and engagement. Expert SEO writers that create blogs, articles, and website content.",
         seo: {
           title: "SEO Content Writing Services - Web Founders USA",
-          description: "Affordable SEO content writing services from Web Founders USA. We craft optimized blogs, web content, and articles to drive traffic and leads."
+          description: "Affordable SEO content writing services from Web Founders USA. We craft optimized blogs, web content, and articles to drive traffic and leads.",
+          keyword: "seo content services, seo content writing services, website content writing services, content writing services, content writing agency"
         },
         hero: {
           paragraph: "Great content is the foundation of any effective digital strategy. Whether your business is small, an enterprise level brand, or a niche focused website, great content can make all the difference in your online presence.",
@@ -3061,7 +3075,8 @@ export const services = [
         desc: "Boost your WooCommerce store’s visibility, traffic, and sales with expert SEO services from Web Founders USA—specialized in product optimization, technical SEO, and conversion-focused strategies.",
         seo: {
           title: "WooCommerce SEO Services - Web Founders USA",
-          description: "Maximize WooCommerce visibility with SEO. Web Founders USA helps stores rank higher, gain traffic, and drive sales fast."
+          description: "Maximize WooCommerce visibility with SEO. Web Founders USA helps stores rank higher, gain traffic, and drive sales fast.",
+          keyword: "woocommerce seo, woocommerce seo agency, woocommerce seo services"
         },
         hero: {
           paragraph: "One of the most significant advantages of running a WooCommerce store is that you have complete control over your products, customers, and brand, yet even the top stores cannot perform well if no one knows about them. This is how our WooCommerce SEO agency contributes to your development.",
@@ -3166,7 +3181,8 @@ export const services = [
         desc: "Looking for a BigCommerce SEO service? You are at the right website. At Web Founders USA we provide the SEO service to increase your store visibility.",
         seo: {
           title: "BigCommerce SEO Services - Web Founders USA",
-          description: "Web Founders USA offers BigCommerce SEO services. Our agency and experts help stores rank higher, attract traffic and increase sales."
+          description: "Web Founders USA offers BigCommerce SEO services. Our agency and experts help stores rank higher, attract traffic and increase sales.",
+          keyword: "bigcommerce seo, bigcommerce seo services, bigcommerce seo agency"
         },
         hero: {
           paragraph: "Running a BigCommerce store puts you fully in control of your products, customers, and brand. But even the best designed store will not perform if people cannot find it online. That's where our BigCommerce SEO agency helps you out.",
@@ -3273,7 +3289,8 @@ export const services = [
         desc: "Want to increase your boutique’s online visibility? Collaborate with our boutique SEO agency that helps you get more traffic, customers, and sales.",
         seo: {
           title: "Boutique SEO Services - Web Founders USA",
-          description: "Boost your boutique business with expert SEO. Web Founders USA provides boutique SEO services, improving rankings, traffic and visibility."
+          description: "Boost your boutique business with expert SEO. Web Founders USA provides boutique SEO services, improving rankings, traffic and visibility.",
+          keyword: "boutique seo agency, boutique seo company, boutique seo"
         },
         hero: {
           paragraph: "Running a boutique today is more than just setting up racks or uploading photos. People first search online before they decide where to shop, which means your website plays a huge role in attracting customers.",
@@ -3377,7 +3394,8 @@ export const services = [
         desc: "Want to boost your channel visibility? Collaborate with our YouTube SEO services and get more views, subscribers, and better rankings.",
         seo: {
           title: "YouTube SEO Services - Web Founders USA",
-          description: "Grow your channel with expert YouTube SEO. Web Founders USA offers video SEO strategies that increase reach, views, and audience engagement."
+          description: "Grow your channel with expert YouTube SEO. Web Founders USA offers video SEO strategies that increase reach, views, and audience engagement.",
+          keyword: "youtube seo services, youtube seo agency, video seo company, video seo service, video seo agency"
         },
         hero: {
           paragraph: "Sharing your message on YouTube is easy. Getting people to actually watch your videos is the real challenge. Millions of videos go live every day, so if your content is not reaching viewers, it’s not your fault—the platform is crowded. This is where our YouTube SEO services and video SEO services help you stand out.",
@@ -3484,7 +3502,8 @@ export const services = [
         desc: "Grow your roofing business with our roofing SEO services. Get more calls, better rankings, and strong local visibility with expert SEO for roofing companies.",
         seo: {
           title: "Roofing SEO Services - Web Founders USA",
-          description: "Grow your roofing company online with expert SEO. Roofing SEO Services - Web Founders USA helps attract customers and increase inquiries."
+          description: "Grow your roofing company online with expert SEO. Roofing SEO Services - Web Founders USA helps attract customers and increase inquiries.",
+          keyword: "roofing seo, seo for roofers, seo for roofing companies, roofing seo services"
         },
         hero: {
           paragraph: "Running a roofing business is not easy, especially when every roofer in your area is trying to get the same customers. You may have the skills, tools, and the best team, but if people can’t find your business online, the calls and leads won’t come in. This is exactly where our roofing SEO company helps.",
@@ -3588,7 +3607,8 @@ export const services = [
         desc: "Wanna Get expert outsource SEO services? Collaborate with Web Founders USA for audits, content, backlinks, and ongoing ranking improvements.",
         seo: {
           title: "Outsource SEO Services - Web Founders USA",
-          description: "Outsource SEO services with Web Founders USA. Expert SEO outsourcing company delivering results, rankings, and growth for your business."
+          description: "Outsource SEO services with Web Founders USA. Expert SEO outsourcing company delivering results, rankings, and growth for your business.",
+          keyword: "outsource seo services, outsource seo service, outsource seo company"
         },
         hero: {
           paragraph: "Many businesses don’t have the time or team to manage SEO. That’s where our outsource SEO services step in. We handle everything from content to backlinks to audits while you focus on your business growth.",
@@ -3694,7 +3714,8 @@ export const services = [
         desc: "Boost your visibility with our construction SEO services. We offer SEO to increase leads and local reach.",
         seo: {
           title: "Construction SEO Services - Web Founders USA",
-          description: "Maximize your construction or remodeling business online. Construction SEO Services - Web Founders USA delivers local and commercial SEO results."
+          description: "Maximize your construction or remodeling business online. Construction SEO Services - Web Founders USA delivers local and commercial SEO results.",
+          keyword: "seo for construction companies, construction seo, construction company seo, seo for construction"
         },
         hero: {
           paragraph: "The construction industry is full of competition. Every company wants more project leads, more calls, and more visibility. But if your website is not ranking, clients will keep choosing other contractors.",
@@ -4003,7 +4024,8 @@ export const services = [
         "desc": "Increase the customer rates by making the web design impressive and functional at the same time. B2B Web Design Services BY Web Founders USA is here to help.",
         "seo": {
           "title": "B2B Web Design Services​ - Web Founders USA",
-          "description": "Web Founders USA provides custom B2B web design services for technology and manufacturing companies focused on growth and leads."
+          "description": "Web Founders USA provides custom B2B web design services for technology and manufacturing companies focused on growth and leads.",
+          keyword: "b2b web design agency, b2b web design, b2b web design services"
         },
         "hero": {
           "paragraph": "Your B2B website can be considered the initial contact point for possible customers, and the impression formed is very important. A well designed professional B2B agency website will convey your company's expertise, reliability, and innovation to the visitors and eventually convert them into clients. At Web Founders USA, we create websites that are not just visually appealing but strategically designed for business growth.",
@@ -4112,7 +4134,8 @@ export const services = [
         "desc": "At Web Founders USA, Law Firm Web Design Services provide the opportunity to boost your website by creating a strong online presence and increase the visibility to build clients trust.",
         "seo": {
           "title": "Law Firm Web Design Services​ - Web Founders USA",
-          "description": "Professional law firm web design services by Web Founders USA, helping attorneys grow with secure and responsive websites."
+          "description": "Professional law firm web design services by Web Founders USA, helping attorneys grow with secure and responsive websites.",
+          keyword: "attorney web design, lawyer website development, web design for attorneys, best law firm website design companies"
         },
         "hero": {
           "paragraph": "Your website is the first impression for potential clients, which shows your practice, experience, and work. A powerful online presence reflects your professionalism, communicates your expertise, and builds trust with prospective clients. As a creative and dedicated law firm web design agency, we make websites that help attorneys and law firms stand out while providing a smooth experience for visitors.",
@@ -4208,7 +4231,8 @@ export const services = [
         "desc": "Our white label web design solutions give your agency the freedom to sell websites without managing the design and development workload.",
         "seo": {
           "title": "White Label Web Design Services - Web Founders USA",
-          "description": "Scalable white label web services by Web Founders USA, perfect for agencies needing expert design and development teams."
+          "description": "Scalable white label web services by Web Founders USA, perfect for agencies needing expert design and development teams.",
+          keyword: "white label web design, white label website design, white label web development, white label web design services"
         },
         "hero": {
           "paragraph": "Many agencies want to offer web design but may not have the time or internal team to handle full production. Our white label web design solutions give your agency the freedom to sell websites without managing the design and development workload. We work quietly behind your brand while you keep full control of the client relationship.",
@@ -4316,7 +4340,8 @@ export const services = [
         desc: "Wanna boost your website? Collaborate with Web Founders USA—our healthcare web design services make sure that we shape your websites engaging and bring traffic to it.",
         seo: {
           title: "Healthcare Web Design Services - Web Founders USA",
-          description: "Custom healthcare and medical web design by Web Founders USA, helping clinics and providers build trust and grow online."
+          description: "Custom healthcare and medical web design by Web Founders USA, helping clinics and providers build trust and grow online.",
+          keyword: "healthcare web design, medical web design, healthcare web design agency"
         },
         hero: {
           paragraph: "A strong online presence has become a major part of how patients choose healthcare providers. The first impression usually begins on a website long before a call, form submission, or appointment. Our healthcare web design, made for hospitals, clinics, private practices, and medical groups, helps you deliver a digital space that feels trustworthy, secure, and easy to navigate for every patient. From appointment scheduling to patient education and mobile friendly layouts, we shape websites that support your goals and create a smooth experience.",
@@ -4423,7 +4448,8 @@ export const services = [
         desc: "Encourage customers today; by creating an engaging, optimized and user friendly website by Web Founders USA restaurant website design services.",
         seo: {
           title: "Restaurant Website Design Services​ - Web Founders USA",
-          description: "Restaurant website design services by Web Founders USA, crafted to boost reservations, branding, and online visibility."
+          description: "Restaurant website design services by Web Founders USA, crafted to boost reservations, branding, and online visibility.",
+          keyword: "restaurant website design, web design for restaurant, restaurant website design company"
         },
         hero: {
           paragraph: "The restaurant's online presence has equal importance as the food served on its menu. Customers will often visit your website first before making any interactions with your business, whether they are browsing through the menus, checking the hours, or making reservations. It is through professional restaurant website design that you will be able to create a friendly and informative online experience that many will feel like visiting, calling, or ordering online from your restaurant. Our restaurant web design services are centered on designing appealing, user friendly, and goals achieving websites.",
@@ -4524,7 +4550,8 @@ export const services = [
         desc: "Create an optimized, engaging, and professional website design today through Web Founders USA real estate website design services.",
         seo: {
           title: "Real Estate Website Design Services​ - Web Founders USA",
-          description: "Professional real estate website development services by Web Founders USA, built for agents, brokers and property firms."
+          description: "Professional real estate website development services by Web Founders USA, built for agents, brokers and property firms.",
+          keyword: "real estate website design, real estate web design, realtor website design, real estate website builder"
         },
         hero: {
           paragraph: "Your site is very much a business generator and not just a digital presence in the property market. Online is where buyers, sellers, renters, and investors are looking up information before they talk to a real estate agent. Through powerful real estate website design, your company communicates effectively with the market, stressing your skills, and providing the customer with what he/she wants in no time. Depending on whether you are an individual realtor or a big real estate company, your site should show professional touch and be a conversion driving tool.",
@@ -4618,7 +4645,8 @@ export const services = [
         desc: "Create a responsive, informative, and visually appealing website design from our Web Founders USA Manufacturing Website Design Services.",
         seo: {
           title: "Manufacturing Website Design Services​ - Web Founders USA",
-          description: "Custom manufacturing web design by Web Founders USA for manufacturers seeking modern, scalable and conversion-ready sites."
+          description: "Custom manufacturing web design by Web Founders USA for manufacturers seeking modern, scalable and conversion-ready sites.",
+          keyword: "manufacturing website design, manufacturing web design, web design for manufacturing companies"
         },
         hero: {
           paragraph: "Your business usually has an online presence, which is the first interaction prospects and partners in the industrial world. The design of a strong manufacturing website shows professionalism, capability, and technical expertise. If you are catering to local markets or to global supply chains, then a well designed website would be your perfect ally to display your products, point out your capabilities, and capture leads more efficiently than a static brochure ever could. Web design for manufacturing is our service, and we create websites that not only support your business goals but also help you in the long run in an ever evolving digital marketplace.",
@@ -4713,7 +4741,8 @@ export const services = [
         desc: "Web Founders USA BigCommerce Web Design Services are here to design your website visually appealing and functional as well.",
         seo: {
           title: "BigCommerce Web Design Services  - Web Founders USA",
-          description: "BigCommerce website development services by Web Founders USA, tailored for brands needing custom design and growth-ready stores."
+          description: "BigCommerce website development services by Web Founders USA, tailored for brands needing custom design and growth-ready stores.",
+          keyword: "bigcommerce web design, bigcommerce web designers, bigcommerce website design, bigcommerce designer"
         },
         hero: {
           paragraph: "In the eCommerce world, your site has to be more than just visually appealing, it has to be functional as well. The proper BigCommerce web design can make the difference of your online store getting visitors, showing them around your products, and finally turning them into paying customers. It does not matter if you are opening up a new shop or renovating an old one, professional design will be a very important factor in the growth of your business. Our highly skilled BigCommerce web designers create productive storefronts that are suited to your audience and showcase your brand.",
@@ -4813,7 +4842,8 @@ export const services = [
         desc: "Our SaaS web design services are here to design the layout that leads to a professional, productive and easy interface website design.",
         seo: {
           title: "SaaS Web Design Services - Web Founders USA",
-          description: "Web Founders USA designs SaaS websites that boost signups, improve UX, and support fast-scaling software businesses."
+          description: "Web Founders USA designs SaaS websites that boost signups, improve UX, and support fast-scaling software businesses.",
+          keyword: "saas web design, saas web design agency, web design for saas"
         },
         hero: {
           paragraph: "SaaS applications generally rely on the website to give a prospective customer the first impression. The reason a professional SaaS web design is not only looking fresh but also conveying the worth of your product, directing visitors to features, and finally leading to sign ups or conversions. It does not matter if you are introducing a new SaaS system or remodeling an old one, the website is the one factor that is very vital to both growth and credibility. The SaaS web design agency not only makes websites that give a good impression and are aligned with the brand but also highlight the products and confirm an easy to use interface.",
@@ -4913,7 +4943,8 @@ export const services = [
         desc: "At Web Founders USA our Construction Company Website Design Service is there to help make your construction website visually appealing and functional to get more potential clients.",
         seo: {
           title: "Construction Company Website Design Services​ - Web Founders USA",
-          description: "Web Founders USA provides construction company website design services with strong visuals, responsive layouts, and lead focus."
+          description: "Web Founders USA provides construction company website design services with strong visuals, responsive layouts, and lead focus.",
+          keyword: "construction company website design, website design for construction company"
         },
         hero: {
           paragraph: "A construction company needs more than a simple online brochure. Your website is often the place where property owners, contractors, or investors make their first judgment about your work. A powerful construction company website design develops trust, highlights your work, and shows potential clients that you can manage projects with skill and commitment. Many construction businesses rely on referrals, but a presentable website opens new doors by showing your capabilities clearly and professionally. Our team creates modern, effective websites that reflect your craftsmanship, experience, and reliability. Whether you run a small contracting firm or a large established construction company, we build digital platforms that help you connect with the right clients.",
@@ -5014,7 +5045,8 @@ export const services = [
         desc: "At Web Founders USA, we offer responsive website design company services. Our goal is to create user-friendly and consistent website designs for every screen. This helps reduce the risk of losing visitors.",
         seo: {
           title: "Responsive Website Design Company Services - Web Founders USA",
-          description: "Professional responsive website designing company by Web Founders USA, building scalable and user-friendly digital solutions."
+          description: "Professional responsive website designing company by Web Founders USA, building scalable and user-friendly digital solutions.",
+          keyword: "responsive website design company, responsive website designing company, responsive website development company"
         },
         hero: {
           paragraph: "A modern website must concentrate to develop consistency on every screen. People visit the website using different devices like laptops, tablets, or mobile phones. They expect the same ease, clarity, and speed. Responsive design is important for keeping things consistent. The base of strong digital experiences exists. A site that looks best only on one device creates a risk of losing visitors who browse in different ways. Our responsive website design company creates sites that work well on all screen sizes. We ensure great visuals, performance, and user experience.",
@@ -5114,7 +5146,8 @@ export const services = [
         desc: "At Web Founders USA, we offer front end development services. Our goal is to help brands convert visitors into engaged users through quick loading pages and purposeful interactions.",
         seo: {
           title: "Front End Development Services​ - Web Founders USA",
-          description: "Front end development company services by Web Founders USA, focused on speed, usability, and modern web standards."
+          description: "Front end development company services by Web Founders USA, focused on speed, usability, and modern web standards.",
+          keyword: "front end development services, front end development agency, front end development company, front end development companies"
         },
         hero: {
           paragraph: "A modern website always requires a strong online presence that feels not just visually impressive but also fast and smooth, and that’s where a professional front end development company steps in. We construct interfaces that are sharp in appearance, fast in loading, and user friendly in navigating through the complete and ideal experience. The collaboration between our team that is responsible for design and technology results in something that feels seamless on every device, regardless of whether it is a startup, a large enterprise with a well-established portal, or a custom application.",
@@ -5223,7 +5256,8 @@ export const services = [
         desc: "Want to improve clicks? Redesign your website with Web Founders USA company. Our team of Website Redesign Services help you to reconnect with your audience.",
         seo: {
           title: "Website Redesign Services​ - Web Founders USA",
-          description: "Modern website redesign services by Web Founders USA, focused on responsive layouts, CMS upgrades, and user experience."
+          description: "Modern website redesign services by Web Founders USA, focused on responsive layouts, CMS upgrades, and user experience.",
+          keyword: "website redesign services, responsive web design services, responsive web design company"
         },
         hero: {
           paragraph: "If your website has stopped bringing clicks, leads, or engagement, it may be time to refresh how it looks and performs. A website acts as your brand’s first handshake with potential customers, and if that handshake feels outdated, slow, or unclear, visitors leave within seconds. With our website redesign services, you get a modern, clean, and conversion based website that reflects today’s digital expectations and helps you reconnect with your audience. At Web Founders USA, our team of website redesign services has one purpose: to help your business grow.",
@@ -5324,7 +5358,8 @@ export const services = [
         desc: "At Web Founders USA, we offer Plumber Web Design Services. Optimize your website today and bring more customers to your site.",
         seo: {
           title: "Plumber Web Design Services - Web Founders USA",
-          description: "At Web Founders USA, we offer Plumber Web Design Services. Optimize your website today and bring more customers to your site."
+          description: "At Web Founders USA, we offer Plumber Web Design Services. Optimize your website today and bring more customers to your site.",
+          keyword: "plumbing web design services cost, plumber web design, plumber web design services"
         },
         hero: {
           paragraph: "Trust is a huge factor in the plumbing industry. When a customer has a leak, a pipe burst, or a drain problem, the very first thing they do is search the internet for a dependable plumber in their area. If your site is outdated or hard to navigate, possible clients will leave in a matter of seconds. Our plumber web design services are there to help you out. We make the plumbing companies' online presence visually appealing, easy to navigate, and well structured so that the customers are prompted to call, book, or request a quote right away.",
