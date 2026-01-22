@@ -2,8 +2,8 @@ import Privacy from "@/components/termsandprivacy/privacy"
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
-    title: "WebFoundersUSA",
-    description: "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
+    title: "PrivacyPolicy  | Web Founders USA",
+    description: "Our Privacy Policy details how information is collected, stored, and used, ensuring transparency, security, and protection of user data.",
 };
 const PrivacyPolicy = () => {
     return (
