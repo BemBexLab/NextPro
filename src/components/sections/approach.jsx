@@ -21,8 +21,11 @@ const tabList = [
     tab_icon: icon_1,
     tab_content: "/images/resource/approach-image4-1.jpg",
     heading: "Discovery & Planning",
-    description:
-      "At Web Founders USA, a dedicated and responsive Website Design and Development Company and Digital Marketing Agency, we first understand your business goals, challenges, and audience. Every business is different, so we ask insightful questions to develop custom web solutions that exactly meet your needs. We study your industry, analyze competitors, and discover what drives your customers. Whether you need SEO Optimization Services, the support of a Social Media Marketing Company, or Business Website Development, we provide a clear roadmap that is designed to save time, cost, and resources while maximizing results.",
+    description: (
+      <>
+        At <Link href="/" className="text-blue-900 hover:underline transition-all duration-300">Web Founders USA</Link>, a dedicated and responsive Website Design and Development Company and <Link href="/service/digital-marketing" className="text-blue-900 hover:underline transition-all duration-300">Digital Marketing Agency</Link>, we first understand your business goals, challenges, and audience. Every business is different, so we ask insightful questions to develop custom web solutions that exactly meet your needs. We study your industry, analyze competitors, and discover what drives your customers. Whether you need SEO Optimization Services, the support of a Social Media Marketing Company, or Business Website Development, we provide a clear roadmap that is designed to save time, cost, and resources while maximizing results.
+      </>
+    ),
   },
   {
     id: "partnership",
@@ -93,23 +96,22 @@ const Approach = () => {
             <TabsList className="bg-transparent justify-between lg:flex-nowrap flex-wrap xl:gap-5 gap-2 w-full">
               {tabList.map(({ id, tab_icon, tab_name }) => (
                 <TabsTrigger
-  key={id}
-  value={id}
-  className={
-    "bg-[#F4F6FF] dark:bg-[#1c242b] rounded-[10px] lg:basis-[20%] md:basis-[25%] sm:basis-[33%] basis-1/2 grow xl:px-6 px-2 h-16 whitespace-normal text-start xl:gap-5 gap-1 data-[state=active]:bg-primary dark:data-[state=active]:bg-primary data-[state=active]:text-white overflow-hidden flex items-center"
-  }
->
-  <Image
-    src={tab_icon}
-    alt="icon"
-    className={`${
-      id === tab ? "brightness-0 invert" : ""
-    } mr-3 xl:mr-0`}
-  />
-  <span className="max-w-[119px] font-semibold text-lg">
-    {tab_name}
-  </span>
-</TabsTrigger>
+                  key={id}
+                  value={id}
+                  className={
+                    "bg-[#F4F6FF] dark:bg-[#1c242b] rounded-[10px] lg:basis-[20%] md:basis-[25%] sm:basis-[33%] basis-1/2 grow xl:px-6 px-2 h-16 whitespace-normal text-start xl:gap-5 gap-1 data-[state=active]:bg-primary dark:data-[state=active]:bg-primary data-[state=active]:text-white overflow-hidden flex items-center"
+                  }
+                >
+                  <Image
+                    src={tab_icon}
+                    alt="icon"
+                    className={`${id === tab ? "brightness-0 invert" : ""
+                      } mr-3 xl:mr-0`}
+                  />
+                  <span className="max-w-[119px] font-semibold text-lg">
+                    {tab_name}
+                  </span>
+                </TabsTrigger>
 
               ))}
             </TabsList>
@@ -157,7 +159,7 @@ const Approach = () => {
               >
                 <Image src={tab_icon} alt="icon" className="mr-3" />
                 <span className="font-semibold text-lg flex-1 text-left">{tab_name}</span>
-                <svg className={`transform transition-transform duration-200 ${mobileOpen === id ? "rotate-180" : ""}`} width={18} height={18} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                <svg className={`transform transition-transform duration-200 ${mobileOpen === id ? "rotate-180" : ""}`} width={18} height={18} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
               </button>
               {mobileOpen === id && (
                 <div
