@@ -33,8 +33,11 @@ const tabList = [
     tab_icon: icon_2,
     tab_content: "/images/resource/proposal-&-timeline-2.jpg",
     heading: "Proposal & Timeline",
-    description:
-      "Your business deserves solutions that work for you. From WordPress Development and CMS Website Development to Ecommerce Website Development and Custom Website Design, we recommend options that fit your team, budget, and timeline. Each Website that we develop includes Responsive Web Design and mobile friendly Website Design, assuring smooth performance across devices. Clearly defined deliverables, realistic timelines, and transparency are all parts of our commitments, no surprises, just professional results.",
+    description: (
+      <>
+      "Your business deserves solutions that work for you. From WordPress Development and CMS <Link href="/service/web-development" className="text-blue-900 hover:underline transition-all duration-300"> Website Development </Link> to Ecommerce Website Development and <Link href="/service/custom-website-design" className="text-blue-900 hover:underline transition-all duration-300"> Custom Website Design </Link>, we recommend options that fit your team, budget, and timeline. Each Website that we develop includes Responsive Web Design and mobile friendly Website Design, assuring smooth performance across devices. Clearly defined deliverables, realistic timelines, and transparency are all parts of our commitments, no surprises, just professional results.",
+      </>
+    ) 
   },
   {
     id: "decisions",
