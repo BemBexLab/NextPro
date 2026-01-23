@@ -1281,7 +1281,7 @@ export const services = [
     desc:
       "Web Founders USA provides professional SEO services including technical audits, on-page and off-page optimization, local SEO, and enterprise SEO solutions to boost online visibility.",
     seo: {
-      title: "SEO Services  - Web Founders USA",
+      title: "SEO Services - Web Founders USA",
       description:
         "Expert SEO services by Web Founders USA. We offer technical audits and strategic solutions to grow your online presence and visibility.",
       keyword: "SEO Services, Professional SEO Services, Search Engine Optimization, Digital Marketing SEO, Local SEO"   
@@ -1511,7 +1511,7 @@ export const services = [
         title: "B2B SEO Services",
         desc: "Web Founders USA is a top B2B SEO agency providing specialized SEO services to increase online visibility, traffic, and qualified leads today.",
         seo: {
-          title: "B2B SEO Services​ - Web Founders USA",
+          title: "B2B SEO Services - Web Founders USA",
           description: "Drive qualified leads with tailored strategies. B2B SEO Services – Web Founders USA helps businesses grow visibility, trust, and revenue.",
           keyword: "b2b seo agency, b2b saas seo agency, saas seo agency" 
         },
@@ -1619,7 +1619,7 @@ export const services = [
         title: "Dental SEO Services",
         desc: "Grow your practice with our dental SEO agency. We offer specialized dental SEO marketing and local SEO strategies to attract more patients and boost online visibility.",
         seo: {
-          title: "Dental SEO Services​ - Web Founders USA",
+          title: "Dental SEO Services - Web Founders USA",
           description: "Grow your dental practice with targeted SEO. Dental SEO Services - Web Founders USA helps clinics attract more local patients online.",
           keyword: "dental seo agency, dental seo marketing agency"
         },
@@ -1765,7 +1765,7 @@ export const services = [
         title: "Healthcare SEO Services",
         desc: "Web Founders USA offers specialized healthcare SEO agency services to hospitals, clinics, and healthcare providers to attract the right patients, increase visibility, and grow their practice.",
         seo: {
-          title: "Healthcare SEO Services​ - Web Founders USA",
+          title: "Healthcare SEO Service - Web Founders USA",
           description: "Healthcare SEO Services – Web Founders USA is a reliable healthcare SEO agency helping medical brands improve search visibility and patient growth.",
           keyword: "healthcare seo agency, seo agency for healthcare"
         },
@@ -1979,7 +1979,7 @@ export const services = [
         title: "Shopify SEO Services",
         desc: "Increase traffic and sales with our professional Shopify SEO Agency. Get technical optimization, content strategy, and ongoing support for your Shopify store.",
         seo: {
-          title: "Shopify SEO Services​ - Web Founders USA",
+          title: "Shopify SEO Services - Web Founders USA",
           description: "Web Founders USA offers Shopify SEO Services to help stores rank higher, attract the right traffic, and grow sales effectively.",
           keyword: "shopify seo agency, shopify seo agencies, best shopify seo agency"
         },
@@ -2089,7 +2089,7 @@ export const services = [
         title: "White Label SEO Services",
         desc: "Partner with a trusted White Label Company for complete SEO support. Our White Label SEO Agency delivers expert optimization and client-ready reporting under your brand.",
         seo: {
-          title: "White Label SEO Service​ - Web Founders USA",
+          title: "White Label SEO Service - Web Founders USA",
           description: "Grow your agency with White Label SEO Service – Web Founders USA. Expert white label SEO services for agencies to boost client results.",
           keyword: "white label seo agency, white label seo for agencies, white label seo services for agencies"
         },
@@ -2620,7 +2620,7 @@ export const services = [
         title: "SEO Audit Services",
         desc: "Looking for SEO Audit Services? Web Founders USA is here to help you with practical solutions. Improve ranking and increase visibility.",
         seo: {
-          title: "SEO Audit Services​ - Web Founders USA",
+          title: "SEO Audit Service - Web Founders USA",
           description: "Web Founders USA delivers comprehensive SEO audit services. Local, technical, and website audits identify issues and drive growth for your business.",
           keyword: "seo audit services, technical seo audit service, website audit service, seo technical audit service"
         },
