@@ -27,15 +27,21 @@ const ServiceTwo = () => {
                     [&>*:nth-child(8)>.icon]:bg-[#009F961A] [&>*:nth-child(8)>.icon]:text-[#009F96]
                     '>
                             {
-                                servicesDataTwo.map(({ id, description, icon_1, service_name }) => {
+                                servicesDataTwo.map(({ id, description, icon_1, service_name, link }) => {
                                     return (
-                                        <div key={id} className='lg:pt-15 pt-8 text-center lg:text-start flex flex-col items-center lg:items-start group'>
+                                        <Link
+                                            href={link}
+                                            key={id}
+                                            className='lg:pt-15 pt-8 text-center lg:text-start flex flex-col items-center lg:items-start group'
+                                        >
                                             <div className='md:w-[85px] md:h-[85px] w-16 h-16 md:p-6 p-4 rounded-full flex justify-center items-center lg:mb-7.5 mb-4 bg-[rgba(46,77,254,0.10)] icon'>
                                                 <span className='transition-all duration-500 group-hover:scale-90'>{icon_1}</span>
                                             </div>
-                                            <Link href={"/service-details"} className='text-xl font-extrabold text-muted-foreground leading-[140%] multiline-hover'>{service_name}</Link>
+                                            <span className='text-xl font-extrabold text-muted-foreground leading-[140%] multiline-hover'>
+                                                {service_name}
+                                            </span>
                                             <p className='lg:pt-6 pt-3'>{description}</p>
-                                        </div>
+                                        </Link>
                                     )
                                 })
                             }
