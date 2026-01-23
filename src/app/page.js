@@ -15,7 +15,7 @@ import FAQSection from "@/components/sections/faqs/HomeFaqs";
 import Script from "next/script";
 
 export const metadata = {
-    title: "Complete 360 Online Marketing Services | Web Founders USA",
+    title: "Complete 360 Online Marketing Services - Web Founders USA",
     description: "Web Founders USA provides complete 360 online Digital marketing services to help US businesses boost rankings, traffic, leads, and growth.",
 
     keywords: [

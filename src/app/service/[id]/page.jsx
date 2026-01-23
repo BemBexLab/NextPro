@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
       .replace(/^-+|-+$/g, '') || 'service';
 
   const canonical = `https://www.webfoundersusa.com/service/${slugify(
-    service?.title || service?.name || title
+    service?.id || service?.id || id
   )}`;
 
 
