@@ -8,15 +8,27 @@ export default function FAQSection() {
   const faqs = [
     {
       question: "What services does Web Founders USA offer?",
-      answer: "Comprehensive web services are Website Design and Development, Digital Marketing Agency, SEO Optimization Services, Social Media Marketing, Email Marketing Services, and Custom Web Solutions that assist businesses in the online growth process."
+      answer: (
+        <>
+          Comprehensive web services are <Link href="/service/custom-website-design" className="text-blue-900 hover:underline transition-all duration-300">Website Design and Development</Link>, Digital Marketing Agency, SEO Optimization Services, Social Media Marketing, Email Marketing Services, and Custom Web Solutions that assist businesses in the online growth process.
+        </>
+      )
     },
     {
       question: "Can you build an eCommerce website for my business?",
-      answer: "We create eCommerce websites through WooCommerce development, Shopify website development, and eCommerce website development for fast, secure, and mobile friendly online stores that have a high ratio of visitors converting into customers."
+      answer: (
+        <>
+          We create eCommerce websites through WooCommerce development, Shopify website development, and <Link href="/service/ecommerce-web-design" className="text-blue-900 hover:underline transition-all duration-300">eCommerce website development</Link> for fast, secure, and mobile friendly online stores that have a high ratio of visitors converting into customers.
+        </>
+      )
     },
     {
       question: "Do you provide website maintenance and support?",
-      answer: "Absolutely, our Website Maintenance and Support, as well as WordPress Support Services, keep your site not only secure but also updated and with great performance. Moreover, we provide Website Security and Website Speed Optimization services."
+      answer: (
+        <>
+          Absolutely, our <Link href="/service/website-maintenance" className="text-blue-900 hover:underline transition-all duration-300">Website Maintenance</Link> and Support, as well as WordPress Support Services, keep your site not only secure but also updated and with great performance. Moreover, we provide Website Security and Website Speed Optimization services.
+        </>
+      )
     },
     {
       question: "Can you redesign my existing Website?",
@@ -32,7 +44,11 @@ export default function FAQSection() {
     },
     {
       question: "Do you offer customized web solutions?",
-      answer: "We do offer Custom Web Solutions, including CMS Website Development, Custom PHP Development, Laravel Development Services, and Dynamic Web Application Development according to your business needs."
+      answer: (
+        <>
+          We do offer <Link href="/service/custom-website-design" className="text-blue-900 hover:underline transition-all duration-300">Custom Web Solutions</Link>, including CMS Website Development, Custom PHP Development, Laravel Development Services, and Dynamic <Link href="/service/web-development" className="text-blue-900 hover:underline transition-all duration-300">Web Application Development</Link> according to your business needs.
+        </>
+      )
     }
   ];
 
@@ -58,9 +74,8 @@ export default function FAQSection() {
             >
               <span className="font-semibold text-lg">{faq.question}</span>
               <svg
-                className={`transform transition-transform duration-200 ${
-                  openFaq === index ? 'rotate-180' : ''
-                }`}
+                className={`transform transition-transform duration-200 ${openFaq === index ? 'rotate-180' : ''
+                  }`}
                 width={20}
                 height={20}
                 fill="none"
