@@ -46,7 +46,7 @@ export default function FAQSection() {
       question: "Do you offer customized web solutions?",
       answer: (
         <>
-          We do offer <Link href="/service/custom-website-design" className="text-blue-900 hover:underline transition-all duration-300">Custom Web Solutions</Link>, including CMS Website Development, Custom PHP Development, Laravel Development Services, and Dynamic <Link href="/service/web-development" className="text-blue-900 hover:underline transition-all duration-300">Web Application Development</Link> according to your business needs.
+          We do offer Custom Web Solutions, including CMS Website Development, Custom PHP Development, Laravel Development Services, and Dynamic Web Application Development according to your business needs.
         </>
       )
     }
