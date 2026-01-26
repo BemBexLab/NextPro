@@ -8,7 +8,7 @@ import FreelancerMatchForm from "@/components/sections/contact/contactForm";
 const ContactMap = dynamic(() => import('@/components/sections/map'), { ssr: false })
 
 export const metadata = {
-    title: "WebFoundersUSA",
+    title: "Contact Us - Web Founders USA",
     description: "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
     alternates: {
     canonical: "https://www.webfoundersusa.com/contact-us",
