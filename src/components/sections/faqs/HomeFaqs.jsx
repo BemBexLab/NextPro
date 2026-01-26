@@ -10,7 +10,7 @@ export default function FAQSection() {
       question: "What services does Web Founders USA offer?",
       answer: (
         <>
-          Comprehensive web services are <Link href="/service/custom-website-design" className="text-blue-900 hover:underline transition-all duration-300">Website Design and Development</Link>, Digital Marketing Agency, SEO Optimization Services, Social Media Marketing, Email Marketing Services, and Custom Web Solutions that assist businesses in the online growth process.
+          Comprehensive web services are Website Design and Development, Digital Marketing Agency, SEO Optimization Services, Social Media Marketing, Email Marketing Services, and Custom Web Solutions that assist businesses in the online growth process.
         </>
       )
     },

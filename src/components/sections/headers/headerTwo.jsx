@@ -17,8 +17,10 @@ import {
 } from "@/components/ui/offcanvas";
 import StickyHeader from "@/components/ui/stickyHeader";
 
-import { serviceDetailsData } from "@/lib/fackData/serviceDetailsData";
+// ✅ Import real service data
+import { services } from "@/data/services";
 
+// ⚠️ Keep "lable" (not "label") to match MobileMenu expectations
 const navigationLinks = [
   { id: 1, path: "/", lable: "Home" },
   { id: 2, path: "/about-us", lable: "About Us" },
@@ -28,29 +30,15 @@ const navigationLinks = [
   // { id: 6, path: "/blog", lable: "Blog" },
 ];
 
-const serviceCategories = Object.keys(serviceDetailsData);
-
 const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
-  const pathName = usePathname();
+  const pathname = usePathname();
   const router = useRouter();
 
-  // Dropdown state
   const [openDropdown, setOpenDropdown] = useState(false);
 
-  // Helper: is link active (also supports subroutes)
   const isActive = (path) => {
-    if (path === "/") return pathName === "/";
-    return pathName.startsWith(path);
-  };
-
-  // Direct category click handler
-  const handleServiceCategoryClick = (cat) => {
-    setOpenDropdown(false);
-    router.push(`/service-details?category=${encodeURIComponent(cat)}`);
-    setTimeout(() => {
-      const target = document.getElementById("service-detail-main");
-      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
+    if (path === "/") return pathname === "/";
+    return pathname.startsWith(path);
   };
 
   return (
@@ -69,7 +57,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
         >
           <div
             className={`${
-              pathName !== "/home-2"
+              pathname !== "/home-2"
                 ? "[.header-pinned_&]:shadow-3xl dark:[.header-pinned_&]:shadow-[0px_14px_21px_0px_rgba(0,0,0,0.3)]"
                 : null
             }`}
@@ -84,7 +72,9 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                   <ul className="flex items-center text-[17px] 2xl:gap-10 gap-6">
                     {navigationLinks.map(({ id, lable, path }) => {
                       const active = isActive(path);
-                      if (lable === "Serv") {
+
+                      // ✅ Fix: check for "Service" (not "Serv")
+                      if (lable === "Service") {
                         return (
                           <li
                             className="pt-[43px] pb-[42px] relative"
@@ -98,7 +88,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                                 relative transition-all duration-500
                                 ${
                                   active
-                                    ? "text-blue-900 underline"
+                                    ? "text-primary underline"
                                     : "text-muted-foreground"
                                 }
                                 hover:text-primary-foreground
@@ -117,27 +107,25 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                                 <path d="M19 9l-7 7-7-7" />
                               </svg>
                             </span>
-                            {/* Simple dropdown: just categories */}
+
+                            {/* Dropdown with real service data */}
                             <div
                               className={`absolute left-0 top-full w-72 rounded-xl shadow-2xl bg-white z-30 transition-all duration-200 ${
                                 openDropdown
                                   ? "opacity-100 pointer-events-auto translate-y-0"
                                   : "opacity-0 pointer-events-none translate-y-2"
                               }`}
-                              style={{ maxHeight: "500px" }} // Increased to 500px
                             >
-                              <ul className="py-3 overflow-y-auto max-h-[500px] custom-scrollbar">
-                                {serviceCategories.map((cat, i) => (
-                                  <li key={i}>
-                                    <button
-                                      type="button"
-                                      onClick={() =>
-                                        handleServiceCategoryClick(cat)
-                                      }
+                              <ul className="py-3 max-h-[400px] overflow-y-auto custom-scrollbar">
+                                {services.map((service) => (
+                                  <li key={service.id}>
+                                    <Link
+                                      href={`/service/${service.id}`}
                                       className="block w-full text-left px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
+                                      onClick={() => setOpenDropdown(false)}
                                     >
-                                      {cat}
-                                    </button>
+                                      {service.title}
+                                    </Link>
                                   </li>
                                 ))}
                               </ul>
@@ -145,7 +133,8 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                           </li>
                         );
                       }
-                      // All other menu items
+
+                      // All other nav items
                       return (
                         <li className="pt-[43px] pb-[42px]" key={id}>
                           <Link
@@ -185,8 +174,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
 
                   <Button asChild size="xl">
                     <Link className="text-foreground" href={"/contact-us"}>
-                      {" "}
-                      Contact Us{" "}
+                      Contact Us
                     </Link>
                   </Button>
                   <Offcanvas>
@@ -209,6 +197,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                     </OffcanvasContent>
                   </Offcanvas>
                 </div>
+                {/* ✅ MobileMenu is preserved EXACTLY as before */}
                 <MobileMenu data={navigationLinks} />
               </div>
             </div>
