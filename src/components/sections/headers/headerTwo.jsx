@@ -75,64 +75,66 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
 
                       // ✅ Fix: check for "Service" (not "Serv")
                       if (lable === "Service") {
-                        return (
-                          <li
-                            className="pt-[43px] pb-[42px] relative"
-                            key={id}
-                            onMouseEnter={() => setOpenDropdown(true)}
-                            onMouseLeave={() => setOpenDropdown(false)}
-                          >
-                            <span
-                              className={`
-                                font-semibold leading-[22px] flex items-center gap-1 cursor-pointer
-                                relative transition-all duration-500
-                                ${
-                                  active
-                                    ? "text-primary underline"
-                                    : "text-muted-foreground"
-                                }
-                                hover:text-primary-foreground
-                              `}
-                              tabIndex={0}
-                              onClick={() => setOpenDropdown((v) => !v)}
-                            >
-                              {lable}
-                              <svg
-                                className="ml-1 w-5 h-5"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth={2}
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M19 9l-7 7-7-7" />
-                              </svg>
-                            </span>
+  return (
+    <li
+      className="pt-[43px] pb-[42px] relative"
+      key={id}
+      onMouseEnter={() => setOpenDropdown(true)}
+      onMouseLeave={() => setOpenDropdown(false)}
+    >
+      {/* Main Link: Click goes to /service */}
+      <Link
+        href={path}
+        className={`
+          font-semibold leading-[22px] flex items-center gap-1 cursor-pointer
+          relative transition-all duration-500
+          ${active ? "text-primary underline" : "text-muted-foreground"}
+          hover:text-primary-foreground
+        `}
+        onClick={(e) => {
+          // If clicking on desktop, go to /service
+          // Do NOT prevent default — let Next.js handle navigation
+          // But close dropdown if open
+          setOpenDropdown(false);
+        }}
+      >
+        {lable}
+        <svg
+          className="ml-1 w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </Link>
 
-                            {/* Dropdown with real service data */}
-                            <div
-                              className={`absolute left-0 top-full w-72 rounded-xl shadow-2xl bg-white z-30 transition-all duration-200 ${
-                                openDropdown
-                                  ? "opacity-100 pointer-events-auto translate-y-0"
-                                  : "opacity-0 pointer-events-none translate-y-2"
-                              }`}
-                            >
-                              <ul className="py-3 max-h-[400px] overflow-y-auto custom-scrollbar">
-                                {services.map((service) => (
-                                  <li key={service.id}>
-                                    <Link
-                                      href={`/service/${service.id}`}
-                                      className="block w-full text-left px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
-                                      onClick={() => setOpenDropdown(false)}
-                                    >
-                                      {service.title}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </li>
-                        );
-                      }
+      {/* Dropdown */}
+      <div
+        className={`absolute left-0 top-full w-72 rounded-xl shadow-2xl bg-white z-30 transition-all duration-200 ${
+          openDropdown
+            ? "opacity-100 pointer-events-auto translate-y-0"
+            : "opacity-0 pointer-events-none translate-y-2"
+        }`}
+      >
+        <ul className="py-3 max-h-[400px] overflow-y-auto custom-scrollbar">
+          {services.map((service) => (
+            <li key={service.id}>
+              <Link
+                href={`/service/${service.id}`}
+                className="block w-full text-left px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
+                onClick={() => setOpenDropdown(false)}
+              >
+                {service.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </li>
+  );
+}
 
                       // All other nav items
                       return (
