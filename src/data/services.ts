@@ -32,9 +32,14 @@ export const services = [
       image: "/service-deatil-images/social-media-marketing.jpg",
     },
     introParagraphs: [
-      "At Web Founders USA, our reliable social media marketing agency transforms social media into a profit making machine for your company. The current customers are not just looking through the profiles; they are going to and fro, comparing, and making quick decisions. Consequently, your social presence needs more than just posts; it needs a proper social media marketing strategy, creativity, and guidance. As the best Social Media Marketing Consultant, we develop campaigns that are involved with audiences, create their trust, and eventually convert them into buyers.",
-      "Our team deeply understands and visualizes the true nature of your audience whether you are a growing brand or a corporate giant while helping you achieve better results through social media for small business marketing. Every campaign is adjusted to your industry, your goals, and your customers' behavior. With Web Founders USA, you have a partner who not only keeps abreast of trends but also does thorough performance analyses and makes sure that every piece of content, every ad, and every message works towards conversions, be it raising brand awareness, sales, or generating leads via a Lead Generation Website or through targeted Landing Page Design Services.",
-    ],
+  "At Web Founders USA, our reliable social media marketing agency transforms social media into a profit making machine for your company.",
+  "The current customers are not just looking through the profiles; they are going to and fro, comparing, and making quick decisions.",
+  "Consequently, your social presence needs more than just posts; it needs a proper social media marketing strategy, creativity, and guidance.",
+  "As the best Social Media Marketing Consultant, we develop campaigns that are involved with audiences, create their trust, and eventually convert them into buyers.",
+  "Our team deeply understands and visualizes the true nature of your audience whether you are a growing brand or a corporate giant while helping you achieve better results through social media for small business marketing.",
+  "Every campaign is adjusted to your industry, your goals, and your customers' behavior.",
+  "With Web Founders USA, you have a partner who not only keeps abreast of trends but also does thorough performance analyses and makes sure that every piece of content, every ad, and every message works towards conversions, be it raising brand awareness, sales, or generating leads via a Lead Generation Website or through targeted Landing Page Design Services."
+],
 
     tab: {
       title: "Our Strategic Social Media Approach",
@@ -134,9 +139,15 @@ export const services = [
     },
 
     introParagraphs: [
-      "At Web Founders USA, we believe every business has a unique story worth telling and a unique audience waiting to hear it. Our digital marketing services are not just launching ads and hoping for clicks, it is not our cup of tea. We take time to calculate your business values, your customers, and what makes your brand stand out. Then we build a marketing strategy according to you, one that feels human, connects with real people, and turns casual visitors into loyal customers.",
-      "We combine creative thinking with data to get the best results. Because as a complete service website design development company and digital marketing agency, we know that a beautiful website alone isn't enough. You need a holistic plan, smart campaigns, consistent messaging, and ongoing optimization to grow, engage, and convert. Let us build that roadmap for you, so you can focus on what you do best.",
-    ],
+  "At Web Founders USA, we believe every business has a unique story worth telling and a unique audience waiting to hear it.",
+  "Our digital marketing services are not just launching ads and hoping for clicks, it is not our cup of tea.",
+  "We take time to calculate your business values, your customers, and what makes your brand stand out.",
+  "Then we build a marketing strategy according to you, one that feels human, connects with real people, and turns casual visitors into loyal customers.",
+  "We combine creative thinking with data to get the best results.",
+  "Because as a complete service website design development company and digital marketing agency, we know that a beautiful website alone isn't enough.",
+  "You need a holistic plan, smart campaigns, consistent messaging, and ongoing optimization to grow, engage, and convert.",
+  "Let us build that roadmap for you, so you can focus on what you do best."
+],
 
     tab: {
       title: "Our Strategic Approach",
@@ -240,9 +251,13 @@ export const services = [
     },
 
     introParagraphs: [
-      "Content and Words are not the same things; it is the voice of your brand, the value you give the world, and the most effective way to get noticed and heard online. Our content writing company members understand different businesses and their unique narratives. At Web Founders USA, we specialize in transforming those narratives into captivating, clearly articulated, and SEO optimized content that your audience can genuinely connect with. No matter if you want to get more traffic to your website, engage with people on social media, or get better positions in Google, our content will be the one to give you the results that really count.",
-      "Our strategy is different from the old school of keyword stuffing or writing generic content.We combine meticulous SEO research, audience analysis, and industry insights to confirm that every article, blog, webpage, or social post is not only engaging but also strategically structured to reach the right audience. Web Founders USA, always looks forward to innovative ideas and builds a scheme to target the highest visibility of content, strengthen the authority of your brand, and convert readers into loyal customers.",
-    ],
+  "Content and Words are not the same things; it is the voice of your brand, the value you give the world, and the most effective way to get noticed and heard online.",
+  "Our content writing company members understand different businesses and their unique narratives. At Web Founders USA, we specialize in transforming those narratives into captivating, clearly articulated, and SEO optimized content that your audience can genuinely connect with.",
+  "No matter if you want to get more traffic to your website, engage with people on social media, or get better positions in Google, our content will be the one to give you the results that really count.",
+  "Our strategy is different from the old school of keyword stuffing or writing generic content.",
+  "We combine meticulous SEO research, audience analysis, and industry insights to confirm that every article, blog, webpage, or social post is not only engaging but also strategically structured to reach the right audience.",
+  "Web Founders USA, always looks forward to innovative ideas and builds a scheme to target the highest visibility of content, strengthen the authority of your brand, and convert readers into loyal customers."
+],
 
     tab: {
       title: "Our Strategic Approach to Content Writing",
@@ -342,9 +357,13 @@ export const services = [
     },
 
     introParagraphs: [
-      "We know running ads is not sufficient. Every business is unique, and your PPC campaigns should reflect that. Combining human insight, data analysis, and practical execution is what the web founders USA approach is all about, which is the key to our approach in confirming high quality leads, measurable ROI, and sustainable business growth. Forget one size fits all strategies; we create every campaign in a way that matches your goals, audience, and brand identity.",
-      "At our digital marketing agency and website design and development company, we treat PPC as a living system, rather than a one off effort. That means we are constantly adapting, testing, and optimizing campaigns to make sure every ad dollar is working harder for your business. From Google Ads management and paid social campaigns to landing page optimization, conversion rate improvements, and CMS website maintenance, we focus on results that matter, not just impressions or clicks.",
-    ],
+  "We know running ads is not sufficient.",
+  "Every business is unique, and your PPC campaigns should reflect that. Combining human insight, data analysis, and practical execution is what the web founders USA approach is all about, which is the key to our approach in confirming high quality leads, measurable ROI, and sustainable business growth.",
+  "Forget one size fits all strategies; we create every campaign in a way that matches your goals, audience, and brand identity.",
+  "At our digital marketing agency and website design and development company, we treat PPC as a living system, rather than a one off effort.",
+  "That means we are constantly adapting, testing, and optimizing campaigns to make sure every ad dollar is working harder for your business.",
+  "From Google Ads management and paid social campaigns to landing page optimization, conversion rate improvements, and CMS website maintenance, we focus on results that matter, not just impressions or clicks."
+],
 
     tab: {
       title: "Why Choose Web Founders USA PPC Services",
@@ -457,9 +476,13 @@ export const services = [
     },
 
     introParagraphs: [
-      "At Web Founders USA, a trusted digital marketing agency and website design and development company, we know that getting the traffic is only half the job. Converting that traffic coming to your website into leads, sales, and long term customers is where real growth occurs and the success gates open. That is why our conversion optimization services go beyond simple tweaks. We combine actionable analytics user behaviour insights, based on psychological principles, and full funnel testing to help your website convert at its highest potential.",
-      "Our idea is to build on one core belief: the website doesn't just look great, but perform great. Regardless of whether you are employing paid ads, email, or organic search as your main source of traffic, it is crucial that your website is equipped with the appropriate tools to turn every client's interest into an action. It could be landing page optimization, conducting a heatmap analysis, or A/B testing and restructuring the funnel. We find the obstacles and eliminate them, guiding users clearly, confidently, and consistently to conversion. ",
-    ],
+  "At Web Founders USA, a trusted digital marketing agency and website design and development company, we know that getting the traffic is only half the job.",
+  "Converting that traffic coming to your website into leads, sales, and long term customers is where real growth occurs and the success gates open.",
+  "That is why our conversion optimization services go beyond simple tweaks. We combine actionable analytics user behaviour insights, based on psychological principles, and full funnel testing to help your website convert at its highest potential.",
+  "Our idea is to build on one core belief: the website doesn't just look great, but perform great.",
+  "Regardless of whether you are employing paid ads, email, or organic search as your main source of traffic, it is crucial that your website is equipped with the appropriate tools to turn every client's interest into an action.",
+  "It could be landing page optimization, conducting a heatmap analysis, or A/B testing and restructuring the funnel. We find the obstacles and eliminate them, guiding users clearly, confidently, and consistently to conversion."
+],
 
     tab: {
       steps: [
@@ -571,9 +594,16 @@ export const services = [
     },
 
     introParagraphs: [
-      "Your ecommerce website is more than a digital shop; it's the strongest revenue generating asset your business owns. At Web Founders USA, we help brands transform visitors into buyers through strategic ecommerce website design, high performing funnels, and complete ecommerce website development solutions according to your goals. Whether you are starting with a small store or scaling a multi category brand, our approach blends creativity, psychology, and analysis based data marketing to bring real growth. Your online store deserves a team that understands conversions, not just code. We also specialize in ecommerce website content writing to set the seal on your product pages and banners to communicate effectively and drive engagement.",
-      "We create seamless shopping experiences that customers trust. From custom e-commerce website development to performance driven UI/UX, product page optimization, branding, and full scale marketing, we build ecommerce systems that work together in complete harmony. As an experienced ecommerce website development company, we mix strong visual identity and fast loading architecture with high intent traffic strategies that drive consistent sales: no templates, no guesswork, just smart ecommerce built around your customers and your revenue. Whether it’s for adult ecommerce websites' SEO or a standard online store, our strategies adapt to every market segment.",
-    ],
+  "Your ecommerce website is more than a digital shop; it's the strongest revenue generating asset your business owns.",
+  "At Web Founders USA, we help brands transform visitors into buyers through strategic ecommerce website design, high performing funnels, and complete ecommerce website development solutions according to your goals.",
+  "Whether you are starting with a small store or scaling a multi category brand, our approach blends creativity, psychology, and analysis based data marketing to bring real growth.",
+  "Your online store deserves a team that understands conversions, not just code.",
+  "We also specialize in ecommerce website content writing to set the seal on your product pages and banners to communicate effectively and drive engagement.",
+  "We create seamless shopping experiences that customers trust.",
+  "From custom e-commerce website development to performance driven UI/UX, product page optimization, branding, and full scale marketing, we build ecommerce systems that work together in complete harmony.",
+  "As an experienced ecommerce website development company, we mix strong visual identity and fast loading architecture with high intent traffic strategies that drive consistent sales: no templates, no guesswork, just smart ecommerce built around your customers and your revenue.",
+  "Whether it’s for adult ecommerce websites' SEO or a standard online store, our strategies adapt to every market segment."
+],
 
     tab: {
       title: "Ecommerce Website Design & Development",
@@ -671,9 +701,12 @@ export const services = [
     },
 
     introParagraphs: [
-      "At Web Founders USA, we truly believe that extraordinary graphic designing services are the backbone of any brand. We aim to enable startups and established enterprises to communicate with style, be creative, and strike a chord. Our creative services for graphic design make sure that every visual, from logos and social media graphics down to brochures and banners, reflects your brand's story and engages your audience with real effectiveness.",
-      "Whether you want a fresh look for your website, marketing campaigns, or product packaging, our team delivers affordable graphic design services to small businesses and large brands alike. We offer an exhaustive list of graphic design services that take every aspect of visual communication into consideration for making your brand stand out on both digital and print media.",
-    ],
+  "At Web Founders USA, we truly believe that extraordinary graphic designing services are the backbone of any brand.",
+  "We aim to enable startups and established enterprises to communicate with style, be creative, and strike a chord.",
+  "Our creative services for graphic design make sure that every visual, from logos and social media graphics down to brochures and banners, reflects your brand's story and engages your audience with real effectiveness.",
+  "Whether you want a fresh look for your website, marketing campaigns, or product packaging, our team delivers affordable graphic design services to small businesses and large brands alike.",
+  "We offer an exhaustive list of graphic design services that take every aspect of visual communication into consideration for making your brand stand out on both digital and print media."
+],
 
     tab: {
       title: "Our Graphic Designing Services at Web Founders USA",
@@ -771,11 +804,17 @@ export const services = [
     },
 
     introParagraphs: [
-      "At Web Founders USA, we believe branding goes far beyond a logo, it’s the emotional and strategic foundation of how customers see, trust, and choose your business. In this competitive and demanding market, businesses win not because they shout the loudest, but because they build clear, consistent, meaningful identities.",
-      "Our brand strategy services help you define that identity from the ground up, giving your business a voice, personality, and message that feel unmistakably yours. Whether you are launching a new company, refreshing your identity, or entering new markets, we create a brand presence that strengthens recognition and builds long term loyalty.",
-      "We also understand that branding in the service industry requires a deeper emotional connection. Service brands don’t sell physical products, they sell trust, experience, and value. That’s why our approach blends creative identity building with research driven strategy.",
-      "From visual identity to communication frameworks, our brand development services maintain consistency across every touchpoint. We help small businesses, service brands, b2b companies, and even financial services brands establish clarity, cohesion, and confidence. Our team delivers every service branding solution that aligns every part of your business with your long term vision.",
-    ],
+  "At Web Founders USA, we believe branding goes far beyond a logo, it’s the emotional and strategic foundation of how customers see, trust, and choose your business.",
+  "In this competitive and demanding market, businesses win not because they shout the loudest, but because they build clear, consistent, meaningful identities.",
+  "Our brand strategy services help you define that identity from the ground up, giving your business a voice, personality, and message that feel unmistakably yours.",
+  "Whether you are launching a new company, refreshing your identity, or entering new markets, we create a brand presence that strengthens recognition and builds long term loyalty.",
+  "We also understand that branding in the service industry requires a deeper emotional connection.",
+  "Service brands don’t sell physical products, they sell trust, experience, and value.",
+  "That’s why our approach blends creative identity building with research driven strategy.",
+  "From visual identity to communication frameworks, our brand development services maintain consistency across every touchpoint.",
+  "We help small businesses, service brands, b2b companies, and even financial services brands establish clarity, cohesion, and confidence.",
+  "Our team delivers every service branding solution that aligns every part of your business with your long term vision."
+],
 
     tab: {
       title: "What’s Included in Our Brand Strategy Services",
@@ -883,9 +922,14 @@ export const services = [
     },
 
     introParagraphs: [
-      "Your website is the digital home of your business and like any valuable asset, it needs ongoing care, monitoring, and expert support to stay secure and perform at its peak. At Web Founders USA, our website maintenance services are designed to protect your investment, enhance performance, and eliminate the stress of technical upkeep. Whether you run a small business site, an e-commerce store, or a growing digital brand, we make sure your website stays healthy, updated, and fully optimized around the clock.",
-      "Our approach goes beyond basic updates. We provide proactive monitoring, hands on fixes, security hardening, and real time support because a modern website demands consistent attention. From routine tasks to emergency troubleshooting, our team handles everything behind the scenes so you can focus on running your business with confidence. With our website support and maintenance services, you get a reliable partner who keeps your online presence strong, stable, and ready to grow.",
-    ],
+  "Your website is the digital home of your business and like any valuable asset, it needs ongoing care, monitoring, and expert support to stay secure and perform at its peak.",
+  "At Web Founders USA, our website maintenance services are designed to protect your investment, enhance performance, and eliminate the stress of technical upkeep.",
+  "Whether you run a small business site, an e-commerce store, or a growing digital brand, we make sure your website stays healthy, updated, and fully optimized around the clock.",
+  "Our approach goes beyond basic updates.",
+  "We provide proactive monitoring, hands on fixes, security hardening, and real time support because a modern website demands consistent attention.",
+  "From routine tasks to emergency troubleshooting, our team handles everything behind the scenes so you can focus on running your business with confidence.",
+  "With our website support and maintenance services, you get a reliable partner who keeps your online presence strong, stable, and ready to grow."
+],
 
     tab: {
       title: "What’s Included in Our Website Maintenance Services",
@@ -988,12 +1032,12 @@ export const services = [
     },
 
     introParagraphs: [
-      "At Web Founders USA, we help online businesses achieve true success and growth through strategic e-commerce marketing. Whether you are a new startup or a well-known brand, our marketing plan can help you. We focus on increasing visibility, attracting the right visitors, and improving sales.",
-      "Nowadays, selling online needs more than a working website. It needs a marketing strategy based on data. This strategy should attract the right customers at the right time. That is exactly what our team specializes in.",
-      "Our e-commerce marketing services use effective digital strategies. We focus on improving conversions and content marketing for e-commerce. We also use analytics to make every campaign more profitable.",
-      "We combine SEO, ads, email marketing, social campaigns, and personalized content. This creates a strong solution for digital marketing and e-commerce.",
-      "If you need help with e-commerce marketing strategies, Web Founders USA can assist you. They offer expert advice and complete management services. They provide results that are measurable, sustainable, and match your business goals.",
-    ],
+  "At Web Founders USA, we help online businesses achieve true success and growth through strategic e-commerce marketing. Whether you are a new startup or a well-known brand, our marketing plan can help you. We focus on increasing visibility, attracting the right visitors, and improving sales.",
+  "Nowadays, selling online needs more than a working website. It needs a marketing strategy based on data. This strategy should attract the right customers at the right time. That is exactly what our team specializes in.",
+  "Our e-commerce marketing services use effective digital strategies. We focus on improving conversions and content marketing for e-commerce. We also use analytics to make every campaign more profitable.",
+  "We combine SEO, ads, email marketing, social campaigns, and personalized content. This creates a strong solution for digital marketing and e-commerce.",
+  "If you need help with e-commerce marketing strategies, Web Founders USA can assist you. They offer expert advice and complete management services. They provide results that are measurable, sustainable, and match your business goals."
+],
 
     tab: {
       title: "Our E-Commerce Marketing Features",
@@ -1194,9 +1238,14 @@ export const services = [
     },
 
     introParagraphs: [
-      "More than ever, it is about reaching your audience directly. With the right approach, emails can convert leads into customers, build strategic relationships, and reinforce repeat purchases. At Web Founders USA, we help businesses tap into the true potential of email campaigns. From ecommerce email marketing to B2B email campaigns, we create the right message to connect with your audience and drive measurable results.",
-      "Our full service email marketing agency blends strategy, creativity, and technology. Whether you are a small business just learning about email marketing for small businesses or a large enterprise looking for B2B email marketing services, we will create a campaign that meets your needs and objectives. Using data from behaviors, timing, and engagement patterns, every email is made according to directly benefit your larger growth and success.",
-    ],
+  "More than ever, it is about reaching your audience directly.",
+  "With the right approach, emails can convert leads into customers, build strategic relationships, and reinforce repeat purchases.",
+  "At Web Founders USA, we help businesses tap into the true potential of email campaigns.",
+  "From ecommerce email marketing to B2B email campaigns, we create the right message to connect with your audience and drive measurable results.",
+  "Our full service email marketing agency blends strategy, creativity, and technology.",
+  "Whether you are a small business just learning about email marketing for small businesses or a large enterprise looking for B2B email marketing services, we will create a campaign that meets your needs and objectives.",
+  "Using data from behaviors, timing, and engagement patterns, every email is made according to directly benefit your larger growth and success."
+],
 
     tab: {
       title: "Why choose our email marketing services?",
@@ -1294,10 +1343,15 @@ export const services = [
     },
 
     introParagraphs: [
-      "Web Founders USA considered that professional SEO basically meant ranking number one on search engines; it’s about getting to know your audience and creating trust that lasts. Our SEO services are meant to assist companies in every sector, like dentistry and healthcare, even B2B and eCommerce, up to local businesses. Being an organic search optimization focused company, we are always up to the mark with our planning that not only boosts the site but also attracts the right customers and eventually gives back huge profits with the help of easy-to-measure results.",
-      "We provide custom made services for different platforms like Shopify, WordPress, WooCommerce, Magento, and BigCommerce. If you seek enterprise SEO services, local SEO marketing, or even specialized solutions like law firm SEO services or medical SEO services, then we mix technical know how with creative content strategies to verify that your business flourishes on the internet.",
-      "Our strategy brings together technical optimization, content marketing, link building, and analytics in such a way that your website is always at its peak performance. Our team devises strategies for the small businesses that want affordable local SEO services to the big corporations that need professional SEO services, which are created according to your goals and the market. We also work with agencies through white label SEO services and private label SEO services, providing solutions that are seamless and easy to scale.",
-    ],
+  "Web Founders USA considered that professional SEO basically meant ranking number one on search engines; it’s about getting to know your audience and creating trust that lasts.",
+  "Our SEO services are meant to assist companies in every sector, like dentistry and healthcare, even B2B and eCommerce, up to local businesses.",
+  "Being an organic search optimization focused company, we are always up to the mark with our planning that not only boosts the site but also attracts the right customers and eventually gives back huge profits with the help of easy-to-measure results.",
+  "We provide custom made services for different platforms like Shopify, WordPress, WooCommerce, Magento, and BigCommerce.",
+  "If you seek enterprise SEO services, local SEO marketing, or even specialized solutions like law firm SEO services or medical SEO services, then we mix technical know how with creative content strategies to verify that your business flourishes on the internet.",
+  "Our strategy brings together technical optimization, content marketing, link building, and analytics in such a way that your website is always at its peak performance.",
+  "Our team devises strategies for the small businesses that want affordable local SEO services to the big corporations that need professional SEO services, which are created according to your goals and the market.",
+  "We also work with agencies through white label SEO services and private label SEO services, providing solutions that are seamless and easy to scale."
+],
 
     tab: {
       title: "Our Six Key SEO Service Areas",
@@ -3841,9 +3895,15 @@ export const services = [
     },
 
     introParagraphs: [
-      "In a digital ecosystem where consumer awareness is divided among many different sites, brands will require to have very flexible, performance oriented, and massive scaling marketing strategies. And that is the main feature of our affiliate and marketing services. We do not only depend on conventional advertising but rather we use top quality partnerships, reliable content creators, niche communities, and industry specific affiliates that already possess your target audience to help the companies grow. We are talking of startups with innovative ideas or a well established company looking for new ways to grow. Our method is a mix of creativity, transparency, and data informed inputs that will hasten your revenue with tangible, quantifiable results.",
-      "We are bringing our broad knowledge of the entire marketing spectrum to bear on every affiliate partnership so that it becomes really important. Our affiliate and marketing services are not about just linking or running campaigns, but rather creating a strong affiliate ecosystem around your brand that not only allows for an increase in visibility through searches in your niche, but also acts as a catalyst for the implementation of the company's SEO, content marketing, PPC, and social media outreach strategies. We make every part of the affiliate program from managing, and tracking performance to crypto payments) very friendly through open communication and engaging marketing.",
-    ],
+  "In a digital ecosystem where consumer awareness is divided among many different sites, brands will require to have very flexible, performance oriented, and massive scaling marketing strategies.",
+  "And that is the main feature of our affiliate and marketing services.",
+  "We do not only depend on conventional advertising but rather we use top quality partnerships, reliable content creators, niche communities, and industry specific affiliates that already possess your target audience to help the companies grow.",
+  "We are talking of startups with innovative ideas or a well established company looking for new ways to grow.",
+  "Our method is a mix of creativity, transparency, and data informed inputs that will hasten your revenue with tangible, quantifiable results.",
+  "We are bringing our broad knowledge of the entire marketing spectrum to bear on every affiliate partnership so that it becomes really important.",
+  "Our affiliate and marketing services are not about just linking or running campaigns, but rather creating a strong affiliate ecosystem around your brand that not only allows for an increase in visibility through searches in your niche, but also acts as a catalyst for the implementation of the company's SEO, content marketing, PPC, and social media outreach strategies.",
+  "We make every part of the affiliate program from managing, and tracking performance to crypto payments) very friendly through open communication and engaging marketing."
+],
 
     tab: {
       title: "Our Affiliate & Marketing Services",
@@ -3941,9 +4001,11 @@ export const services = [
     },
 
     introParagraphs: [
-      "The customers of your business may often get their first impression from your website. A well built and easy to use website may not only attract visitors but also gain their confidence, increase the time they spend at your site, and lead to sales. Web Founders USA, as a top custom website design company, concentrates on making websites that are your identity, appeal to your audience, and bring about measurable business growth.",
-      "Custom website design services approach starts with a thorough grounding in your vision. We are going to assist you by identifying your ideas, goals, and expectations. After that, our team will reshape, develop, and broaden your concepts by combining creativity, functionality, and strategic design. The finished product is going to be a one-of-a-kind, captivating, and assuredly visit worthy website. No matter the size of the company, small or large, every project that we handle will involve the various talents of our designers, developers, and SEO specialists.",
-    ],
+  "The customers of your business may often get their first impression from your website. A well built and easy to use website may not only attract visitors but also gain their confidence, increase the time they spend at your site, and lead to sales.",
+  "Web Founders USA, as a top custom website design company, concentrates on making websites that are your identity, appeal to your audience, and bring about measurable business growth.",
+  "Custom website design services approach starts with a thorough grounding in your vision. We are going to assist you by identifying your ideas, goals, and expectations. After that, our team will reshape, develop, and broaden your concepts by combining creativity, functionality, and strategic design.",
+  "The finished product is going to be a one-of-a-kind, captivating, and assuredly visit worthy website. No matter the size of the company, small or large, every project that we handle will involve the various talents of our designers, developers, and SEO specialists."
+],
 
     tab: {
       title: "Reasons to select our Custom Website Design Agency",
@@ -5482,9 +5544,11 @@ export const services = [
     },
 
     introParagraphs: [
-      "A powerful online presence begins with a website that looks great but also performs. At Web Founders USA, we build modern, high performing websites crafted to represent your brand, communicate clearly, and convert visitors into paying customers. Whether you are a startup, a service business, or an established e-commerce brand, at Web Founders USA, we turn your ideas into a fully functional digital experience that brings real results.",
-      "By merging clean coding methods, user centered design, and business strategy, our web development team crafts websites that feel and act effortlessly to navigate. We believe fast loading speeds, responsive layouts, smooth navigation, and feature rich solutions provide a seamless visitor experience across devices. Be it corporate websites, custom web applications, or ecommerce platforms, we offer solutions supportive of long-term growth and maximum digital presence.",
-    ],
+  "A powerful online presence begins with a website that looks great but also performs. At Web Founders USA, we build modern, high performing websites crafted to represent your brand, communicate clearly, and convert visitors into paying customers.",
+  "Whether you are a startup, a service business, or an established e-commerce brand, at Web Founders USA, we turn your ideas into a fully functional digital experience that brings real results.",
+  "By merging clean coding methods, user centered design, and business strategy, our web development team crafts websites that feel and act effortlessly to navigate.",
+  "We believe fast loading speeds, responsive layouts, smooth navigation, and feature rich solutions provide a seamless visitor experience across devices. Be it corporate websites, custom web applications, or ecommerce platforms, we offer solutions supportive of long-term growth and maximum digital presence."
+],
 
     tab: {
       title: "Web Development Features & Capabilities",
