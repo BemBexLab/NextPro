@@ -76,6 +76,15 @@ const ServiceDetailPage = ({ params }) => {
         setOpenFaq(openFaq === index ? null : index);
     };
 
+    const toTitleCase = (str) => {
+        if (!str) return "";
+        return String(str)
+            .split(" ")
+            .filter(Boolean)
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+            .join(" ");
+    };
+
     return (
         <div className="bg-white text-gray-900">
             {/* Hero Section */}
@@ -87,7 +96,7 @@ const ServiceDetailPage = ({ params }) => {
                         </span>
                     </h1>
                     <p className="mt-6 md:mt-8 max-w-3xl mx-auto text-white/90 text-base md:text-lg">
-                        {service.hero?.paragraph || service.desc}
+                        {`Service | ${toTitleCase(service.title) || "Unknown"}`}
                     </p>
                     <div className="mt-8 flex items-center justify-center gap-5">
                         <a href={`tel:+14704707520`} className="flex items-center gap-3 group" aria-label="Call us">
