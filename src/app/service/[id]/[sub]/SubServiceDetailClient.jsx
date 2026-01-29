@@ -47,6 +47,8 @@ const SubServiceDetailPage = ({ params }) => {
             .join(" ");
     };
 
+    const formatHtml = (s) => ({ __html: (s || "").toString().replace(/\n/g, '<br/>') });
+
     return (
         <div className="bg-white text-gray-900">
             <section className="py-16 md:py-24 bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] text-white">
@@ -67,7 +69,7 @@ const SubServiceDetailPage = ({ params }) => {
                                 </div>
                             </div>
                             <span className="text-base font-semibold text-white group-hover:underline">
-                                +1 (470) 470-7520
+                                +1 470-206-5285
                             </span>
                         </a>
 
@@ -82,10 +84,10 @@ const SubServiceDetailPage = ({ params }) => {
 
             {/* Intro Paragraph */}
             <section className="py-12 md:py-16 px-4 max-w-6xl mx-auto">
-                <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex flex-col md:flex-row gap-8">
                     <div className="flex-1 text-base md:text-lg leading-relaxed text-gray-700 space-y-4">
                         {(service.introParagraphs || []).map((p, idx) => (
-                            <p key={idx}>{p}</p>
+                            <p key={idx} dangerouslySetInnerHTML={formatHtml(p)} />
                         ))}
                     </div>
 
@@ -128,7 +130,7 @@ const SubServiceDetailPage = ({ params }) => {
                                 <div key={id} className="pt-6 md:pt-10">
                                     <div className="bg-white py-8 px-6 rounded-[30px] max-w-4xl mx-auto shadow-sm">
                                         <h3 className="text-2xl md:text-3xl font-bold text-center mb-5">{heading}</h3>
-                                        <p className="text-gray-700 text-base md:text-lg text-center leading-relaxed">{description}</p>
+                                        <p className="text-gray-700 text-base md:text-lg text-center leading-relaxed" dangerouslySetInnerHTML={formatHtml(description)} />
                                     </div>
                                 </div>
                             )
@@ -148,7 +150,7 @@ const SubServiceDetailPage = ({ params }) => {
                                 {mobileOpenStep === id && (
                                     <div className="p-5 pt-0 border-t border-gray-200">
                                         <h3 className="text-xl font-bold mb-2">{heading}</h3>
-                                        <p className="text-gray-700 py-3">{description}</p>
+                                        <p className="text-gray-700 py-3" dangerouslySetInnerHTML={formatHtml(description)} />
                                     </div>
                                 )}
                             </div>
@@ -197,7 +199,7 @@ const SubServiceDetailPage = ({ params }) => {
                                         </div>
                                         <div>
                                             <h3 className="text-lg font-semibold text-[#072d7f]">{item.title}</h3>
-                                            <p className="text-gray-700 mt-2 text-sm leading-relaxed">{item.desc}</p>
+                                            <p className="text-gray-700 mt-2 text-sm leading-relaxed" dangerouslySetInnerHTML={formatHtml(item.desc)} />
                                         </div>
                                     </div>
                                 </div>
@@ -224,7 +226,7 @@ const SubServiceDetailPage = ({ params }) => {
                             </button>
                             {openFaq === index && (
                                 <div className="p-5 pt-3 border-t border-gray-200 bg-white">
-                                    <p className="text-gray-700">{faq.answer}</p>
+                                    <p className="text-gray-700" dangerouslySetInnerHTML={formatHtml(faq.answer)} />
                                 </div>
                             )}
                         </div>

@@ -1,19 +1,9 @@
 User-agent: *
-Disallow: /admin/
-Disallow: /backend/
-Disallow: /login/
-Disallow: /dashboard/
-Disallow: /panel/
-Disallow: /cgi-bin/
-Disallow: /api/
-Disallow: /search/
-Disallow: /?s=
-Disallow: */trackback/
-Disallow: */comments/
 
-# Allow all important pages
-Allow: /
+Block all services
+Disallow: /service/
 
-# Sitemap
+Explicitly allow only SEO main page
+Allow: /service/seo-services$
+
 Sitemap: https://www.webfoundersusa.com/sitemap.xml
-
