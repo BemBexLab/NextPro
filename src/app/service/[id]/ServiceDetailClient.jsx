@@ -85,6 +85,8 @@ const ServiceDetailPage = ({ params }) => {
             .join(" ");
     };
 
+    const formatHtml = (s) => ({ __html: (s || "").toString().replace(/\n/g, '<br/>') });
+
     return (
         <div className="bg-white text-gray-900">
             {/* Hero Section */}
@@ -95,9 +97,9 @@ const ServiceDetailPage = ({ params }) => {
                             {service.title}
                         </span>
                     </h1>
-                    <p className="mt-6 md:mt-8 max-w-3xl mx-auto text-white/90 text-base md:text-lg">
+                    {/* <p className="mt-6 md:mt-8 max-w-3xl mx-auto text-white/90 text-base md:text-lg">
                         {`Service | ${toTitleCase(service.title) || "Unknown"}`}
-                    </p>
+                    </p> */}
                     <div className="mt-8 flex items-center justify-center gap-5">
                         <a href={`tel:+14704707520`} className="flex items-center gap-3 group" aria-label="Call us">
                             <div className="rounded-full bg-primary border-primary w-14 h-14 flex items-center justify-center animate-shake-pause group-hover:bg-primary/80 transition">
@@ -106,7 +108,7 @@ const ServiceDetailPage = ({ params }) => {
                                 </div>
                             </div>
                             <span className="text-base font-semibold text-white group-hover:underline">
-                                +1 (470) 470-7520
+                                +1 470-206-5285
                             </span>
                         </a>
 
@@ -182,9 +184,7 @@ const ServiceDetailPage = ({ params }) => {
                                                 {sub.title.split(" ").slice(1).join(" ")}
                                             </h3>
 
-                                            <p className="text-white text-xs md:text-sm leading-relaxed mb-4 md:mb-6 line-clamp-4">
-                                                {sub.desc || (sub.introParagraphs && sub.introParagraphs[0])}
-                                            </p>
+                                            <p className="text-white text-xs md:text-sm leading-relaxed mb-4 md:mb-6 line-clamp-4" dangerouslySetInnerHTML={formatHtml(sub.desc || (sub.introParagraphs && sub.introParagraphs[0]))} />
                                         </div>
 
                                         <div className="flex justify-end">
@@ -215,14 +215,14 @@ const ServiceDetailPage = ({ params }) => {
 
             {/* Intro Paragraph */}
             <section className="py-12 md:py-16 px-4 max-w-6xl mx-auto">
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                    <div className="flex-1 text-base md:text-lg leading-relaxed text-gray-700 space-y-4">
+                <div className="flex flex-col md:flex-row gap-8">
+                    <div className="flex-1 text-left text-base md:text-lg leading-relaxed text-gray-700 space-y-5">
                         {(service.introParagraphs || []).map((p, idx) => (
-                            <p key={idx}>{p}</p>
+                            <p key={idx} dangerouslySetInnerHTML={formatHtml(p)} />
                         ))}
                     </div>
 
-                    <div className="flex-1 flex justify-center">
+                    <div className="flex-1 flex">
                         <div className="w-full" style={{ aspectRatio: '1 / 1' }}>
                             {service.hero?.image ? (
                                 <Image src={service.hero.image} alt={service.title} width={300} height={300} className="w-full h-full object-cover rounded-lg" />
@@ -271,7 +271,7 @@ const ServiceDetailPage = ({ params }) => {
                                 <div key={id} className="pt-6 md:pt-10">
                                     <div className="bg-white py-8 px-6 rounded-[30px] max-w-4xl mx-auto shadow-sm">
                                         <h3 className="text-2xl md:text-3xl font-bold text-center mb-5">{heading}</h3>
-                                        <p className="text-gray-700 text-base md:text-lg text-center leading-relaxed">{description}</p>
+                                        <p className="text-gray-700 text-base md:text-lg text-center leading-relaxed" dangerouslySetInnerHTML={formatHtml(description)} />
                                     </div>
                                 </div>
                             )
@@ -292,7 +292,7 @@ const ServiceDetailPage = ({ params }) => {
                                 {mobileOpenStep === id && (
                                     <div className="p-5 pt-0 border-t border-gray-200">
                                         <h3 className="text-xl font-bold mb-2">{heading}</h3>
-                                        <p className="text-gray-700 py-3">{description}</p>
+                                        <p className="text-gray-700 py-3" dangerouslySetInnerHTML={formatHtml(description)} />
                                     </div>
                                 )}
                             </div>
@@ -357,7 +357,7 @@ const ServiceDetailPage = ({ params }) => {
                             </button>
                             {openFaq === index && (
                                 <div className="p-5 pt-3 border-t border-gray-200 bg-white">
-                                    <p className="text-gray-700">{faq.answer}</p>
+                                    <p className="text-gray-700" dangerouslySetInnerHTML={formatHtml(faq.answer)} />
                                 </div>
                             )}
                         </div>

@@ -32,13 +32,13 @@ export const services = [
       image: "/service-deatil-images/social-media-marketing.jpg",
     },
     introParagraphs: [
-  "At Web Founders USA, our reliable social media marketing agency transforms social media into a profit making machine for your company.",
-  "The current customers are not just looking through the profiles; they are going to and fro, comparing, and making quick decisions.",
-  "Consequently, your social presence needs more than just posts; it needs a proper social media marketing strategy, creativity, and guidance.",
-  "As the best Social Media Marketing Consultant, we develop campaigns that are involved with audiences, create their trust, and eventually convert them into buyers.",
+  "At <a href='/' class='text-[#072d7f] underline font-regular'>Web Founders USA</a> our reliable social media marketing agency transforms social media into a profit making machine for your company.",
+  "The current customers are not just looking through the profiles they are going to and from comparing and making quick decisions.",
+  "Consequently your social presence needs more than just posts it needs a proper social media marketing strategy creativity and guidance.",
+  "As the best Social Media Marketing Consultant we develop campaigns that are involved with audiences create their trust and eventually convert them into buyers.",
   "Our team deeply understands and visualizes the true nature of your audience whether you are a growing brand or a corporate giant while helping you achieve better results through social media for small business marketing.",
-  "Every campaign is adjusted to your industry, your goals, and your customers' behavior.",
-  "With Web Founders USA, you have a partner who not only keeps abreast of trends but also does thorough performance analyses and makes sure that every piece of content, every ad, and every message works towards conversions, be it raising brand awareness, sales, or generating leads via a Lead Generation Website or through targeted Landing Page Design Services."
+  "Every campaign is adjusted to your industry, your goals, and your customers behavior.",
+  "With Web Founders USA, you have a partner who not only keeps abreast of trends but also does thorough performance analyses and makes sure that every piece of content, every ad, and every message works towards conversions, be it raising brand awareness, sales, or generating leads via a Lead Generation Website or through targeted <a href='/service/custom-website-design/' class='text-[#072d7f] underline font-regular'>Landing Page Design Services</a>."
 ],
 
     tab: {
@@ -70,7 +70,7 @@ export const services = [
           tab_name: "Paid Advertising & Audience Targeting",
           heading: "Paid Advertising & Audience Targeting",
           description:
-            "Organic reach is powerful, but smart advertising is in a class of its own. Our social media marketing agency experts will create high performing ad campaigns on Meta, TikTok, LinkedIn, and more. We test creatives, refine audiences, and optimize bids to drive conversions, not just clicks.",
+            "Organic reach is powerful, but smart advertising is in a class of its own. Our social media marketing agency experts will create high performing ad campaigns on <a href='https://www.facebook.com/' class='text-[#072d7f] underline font-regular'>Meta</a>, <a href='https://www.tiktok.com/' class='text-[#072d7f] underline font-regular'>TikTok</a>, <a href='https://linkedin.com/' class='text-[#072d7f] underline font-regular'>LinkedIn</a>, and more. We test creatives, refine audiences, and optimize bids to drive conversions, not just clicks.",
         },
         {
           id: "reporting",
@@ -139,13 +139,13 @@ export const services = [
     },
 
     introParagraphs: [
-  "At Web Founders USA, we believe every business has a unique story worth telling and a unique audience waiting to hear it.",
-  "Our digital marketing services are not just launching ads and hoping for clicks, it is not our cup of tea.",
+  "At <a href='/' class='text-[#072d7f] underline font-regular'>Web Founders USA</a>, we believe every business has a unique story worth telling and a unique audience waiting to hear it.",
+  "Our <a href='/service/digital-marketing/' class='text-[#072d7f] underline font-regular'>Digital Marketing Services</a> are not just launching ads and hoping for clicks it is not our cup of tea.",
   "We take time to calculate your business values, your customers, and what makes your brand stand out.",
-  "Then we build a marketing strategy according to you, one that feels human, connects with real people, and turns casual visitors into loyal customers.",
+  "Then we build a marketing strategy according to you, one that feels human connects with real people and turns casual visitors into loyal customers.",
   "We combine creative thinking with data to get the best results.",
-  "Because as a complete service website design development company and digital marketing agency, we know that a beautiful website alone isn't enough.",
-  "You need a holistic plan, smart campaigns, consistent messaging, and ongoing optimization to grow, engage, and convert.",
+  "Because as a complete service website design development company and digital marketing agency we know that a beautiful website alone isn't enough.",
+  "You need a holistic plan, smart campaigns, consistent messaging, and ongoing optimization to grow engage and convert.",
   "Let us build that roadmap for you, so you can focus on what you do best."
 ],
 
@@ -164,14 +164,14 @@ export const services = [
           tab_name: "Competitive & Market Analysis",
           heading: "Competitive & Market Analysis",
           description:
-            "We examine your competitors, market trends, and opportunities. A website design and development company and a full service digital marketing agency, Web Founders USA identifies what works in your niche and what doesn't so that we can position your brand where it stands out. This analysis helps find gaps in your market that reveal underserved audiences and shape a strategy to win those customers.",
+            "We examine your competitors, market trends, and opportunities. A <a href='/service/web-development/' class='text-[#072d7f] underline font-regular'>Website Design & Development Company</a> and a full service digital marketing agency, Web Founders USA identifies what works in your niche and what doesn't so that we can position your brand where it stands out. This analysis helps find gaps in your market that reveal underserved audiences and shape a strategy to win those customers.",
         },
         {
           id: "campaign-mapping",
           tab_name: "Custom Campaign Mapping",
           heading: "Custom Campaign Mapping & Multi-Channel Strategy",
           description:
-            "With the data in hand, we map out a custom campaign plan across channels: search, social media, email, or paid advertising, if needed. At Web Founders USA, we believe in integrated marketing: verify that your message stays consistent, whether someone visits your website, sees your social post, or receives an email. This unified strategy not only develops brand trust but also moves prospects along smoothly from awareness to interest to conversion.",
+            "With the data in hand, we map out a custom campaign plan across channels search, social media, email, or paid advertising, if needed. At Web Founders USA, we believe in integrated marketing: verify that your message stays consistent, whether someone visits your website, sees your social post, or receives an email. This unified strategy not only develops brand trust but also moves prospects along smoothly from awareness to interest to conversion.",
         },
         {
           id: "content",
@@ -185,14 +185,14 @@ export const services = [
           tab_name: "Performance Tracking",
           heading: "Conversion-Driven Performance Tracking & Optimization",
           description:
-            "Every campaign is tracked by real metrics that matter: leads, sales, cost per acquisition, conversion rate, not vanity numbers. Web Founders USA monitors performance and makes adjustments in strategy where needed, ensuring each campaign becomes smarter and more effective over time. You will see clear results and know exactly what you are getting.",
+            "Every campaign is tracked by real metrics that matter leads, sales, cost per acquisition, conversion rate, not vanity numbers. Web Founders USA monitors performance and makes adjustments in strategy where needed, ensuring each campaign becomes smarter and more effective over time. You will see clear results and know exactly what you are getting.",
         },
         {
           id: "full-service",
           tab_name: "Full Service Support",
           heading: "Full Service Support Under One Roof",
           description:
-            "As both a creative website design and development company and a digital marketing agency, Web Founders USA offers comprehensive services from website creation or redesign to ongoing marketing, maintenance, and growth. We confirm your site, design, and digital marketing work hand in hand, so you don't juggle multiple vendors; you just grow.",
+            "As both a creative website design and development company and a digital marketing agency, Web Founders USA offers comprehensive services from website creation or redesign to ongoing marketing, <a href='/service/website-maintenance/' class='text-[#072d7f] underline font-regular'>maintainance</a>, and growth. We confirm your site, design, and digital marketing work hand in hand, so you don't juggle multiple vendors you just grow.",
         },
       ],
     },
@@ -251,11 +251,11 @@ export const services = [
     },
 
     introParagraphs: [
-  "Content and Words are not the same things; it is the voice of your brand, the value you give the world, and the most effective way to get noticed and heard online.",
-  "Our content writing company members understand different businesses and their unique narratives. At Web Founders USA, we specialize in transforming those narratives into captivating, clearly articulated, and SEO optimized content that your audience can genuinely connect with.",
-  "No matter if you want to get more traffic to your website, engage with people on social media, or get better positions in Google, our content will be the one to give you the results that really count.",
+  "Content and Words are not the same things it is the voice of your brand the value you give the world and the most effective way to get noticed and heard online.",
+  "Our <a class='text-[#072d7f] underline font-regular' href='/service/content-writing/'>content writing company</a> members understand different businesses and their unique narratives. At <a href='/' class='text-[#072d7f] underline font-regular'>Web Founders USA</a> we specialize in transforming those narratives into captivating clearly articulated and <a class='text-[#072d7f] underline font-regular' href='/service/seo-services/'>SEO</a> optimized content that your audience can genuinely connect with.",
+  "No matter if you want to get more traffic to your website engage with people on social media or get better positions in Google. Our content will be the one to give you the results that really count.",
   "Our strategy is different from the old school of keyword stuffing or writing generic content.",
-  "We combine meticulous SEO research, audience analysis, and industry insights to confirm that every article, blog, webpage, or social post is not only engaging but also strategically structured to reach the right audience.",
+  "We combine meticulous SEO research, audience analysis and industry insights to confirm that every ( article blog webpage or social post ) is not only engaging but also strategically structured to reach the right audience.",
   "Web Founders USA, always looks forward to innovative ideas and builds a scheme to target the highest visibility of content, strengthen the authority of your brand, and convert readers into loyal customers."
 ],
 
@@ -358,11 +358,11 @@ export const services = [
 
     introParagraphs: [
   "We know running ads is not sufficient.",
-  "Every business is unique, and your PPC campaigns should reflect that. Combining human insight, data analysis, and practical execution is what the web founders USA approach is all about, which is the key to our approach in confirming high quality leads, measurable ROI, and sustainable business growth.",
-  "Forget one size fits all strategies; we create every campaign in a way that matches your goals, audience, and brand identity.",
-  "At our digital marketing agency and website design and development company, we treat PPC as a living system, rather than a one off effort.",
+  "Every business is unique, and your <a href='/service/pay-per-click/' class='text-[#072d7f] underline font-regular'>PPC Campaign</a> should reflect that. Combining human insight, data analysis, and practical execution is what the web founders USA approach is all about, which is the key to our approach in confirming high quality leads, measurable ROI, and sustainable business growth.",
+  "Forget one size fits all strategies we create every campaign in a way that matches your goals, audience, and brand identity.",
+  "At our <a href='/service/digital-marketing/' class='text-[#072d7f] underline font-regular'>Digital Marketing Agency</a> and <a href='/service/ecommerce-web-design/' class='text-[#072d7f] underline font-regular'>Website Design and Development</a>, we treat PPC as a living system, rather than a one off effort.",
   "That means we are constantly adapting, testing, and optimizing campaigns to make sure every ad dollar is working harder for your business.",
-  "From Google Ads management and paid social campaigns to landing page optimization, conversion rate improvements, and CMS website maintenance, we focus on results that matter, not just impressions or clicks."
+  "From Google Ads management and <a href='/service/social-media-marketing/' class='text-[#072d7f] underline font-regular'>paid social campaigns</a> to landing page optimization, conversion rate improvements, and <a href='/service/website-maintenance/' class='text-[#072d7f] underline font-regular'>CMS Website Maintainance</a>, we focus on results that matter, not just impressions or clicks."
 ],
 
     tab: {
@@ -394,7 +394,7 @@ export const services = [
           tab_name: "Full Funnel Integration",
           heading: "Full Funnel Integration",
           description:
-            "PPC campaigns will not operate in isolation. We make sure every ad complements your SEO efforts, content marketing, and social media strategies. By creating a cohesive digital marketing agency, we capture attention at multiple touchpoints, nurture leads through the sales funnel, and convert clicks into paying customers. This integrated approach multiplies your results across all channels.",
+            "PPC campaigns will not operate in isolation. We make sure every ad complements your <a href='/service/seo-services/' class='text-[#072d7f] underline font-regular'>SEO</a> efforts, content marketing, and social media strategies. By creating a cohesive digital marketing agency, we capture attention at multiple touchpoints, nurture leads through the sales funnel, and convert clicks into paying customers. This integrated approach multiplies your results across all channels.",
         },
         {
           id: "growth",
@@ -476,12 +476,12 @@ export const services = [
     },
 
     introParagraphs: [
-  "At Web Founders USA, a trusted digital marketing agency and website design and development company, we know that getting the traffic is only half the job.",
+  "At <a href='/' class='text-[#072d7f] underline font-regular'>Web Founders USA</a>, a trusted <a href='/service/digital-marketing/' class='text-[#072d7f] underline font-regular'>Digital Marketing Agency</a> and <a href='/service/web-development/' class='text-[#072d7f] underline font-regular'>Website Design and Development Company</a>, we know that getting the traffic is only half the job.",
   "Converting that traffic coming to your website into leads, sales, and long term customers is where real growth occurs and the success gates open.",
   "That is why our conversion optimization services go beyond simple tweaks. We combine actionable analytics user behaviour insights, based on psychological principles, and full funnel testing to help your website convert at its highest potential.",
-  "Our idea is to build on one core belief: the website doesn't just look great, but perform great.",
+  "Our idea is to build on one core belief the website doesn't just look great, but perform great.",
   "Regardless of whether you are employing paid ads, email, or organic search as your main source of traffic, it is crucial that your website is equipped with the appropriate tools to turn every client's interest into an action.",
-  "It could be landing page optimization, conducting a heatmap analysis, or A/B testing and restructuring the funnel. We find the obstacles and eliminate them, guiding users clearly, confidently, and consistently to conversion."
+  "It could be <a href='/service/seo-services/' class='text-[#072d7f] underline font-regular'>Landing Page Optimization</a>, conducting a heatmap analysis, or <a href='/service/social-media-marketing/' class='text-[#072d7f] underline font-regular'>A/B Testing</a> and restructuring the funnel. We find the obstacles and eliminate them, guiding users clearly, confidently, and consistently to conversion."
 ],
 
     tab: {
@@ -491,7 +491,7 @@ export const services = [
           tab_name: "Deep Performance Audit",
           heading: "Deep Performance Audit & User Journey Analysis",
           description:
-            "We start with an in depth analysis of your complete conversion path, right from the first click to the final action. Our team researches user behaviors, scroll depth, bounce can triggers, UX issues, and form abandonment patterns. Our website design and development company used to identify friction points and missed opportunities that most businesses never see.",
+            "We start with an in depth analysis of your complete conversion path, right from the first click to the final action. Our team researches user behaviors, scroll depth, bounce can triggers, UX issues, and form abandonment patterns. Our <a href='/service/ecommerce-web-design/' class='text-[#072d7f] underline font-regular'>Website Design</a> and development company used to identify friction points and missed opportunities that most businesses never see.",
         },
         {
           id: "landing-page",
@@ -505,7 +505,7 @@ export const services = [
           tab_name: "A/B Testing",
           heading: "A/B Testing & Experimentation Framework",
           description:
-            "We don't guess what works. We do testing for everything: headlines, layouts, images, button placements, form designs, trust badges. By using controlled testing, we can determine the best performing variation of each element. This scientific approach leads to predictable and repeatable improvements in conversions.",
+            "We don't guess what works. We do testing for everything headlines, layouts, images, button placements, form designs, trust badges. By using controlled testing, we can determine the best performing variation of each element. This scientific approach leads to predictable and repeatable improvements in conversions.",
         },
         {
           id: "behavioral-analytics",
@@ -526,7 +526,7 @@ export const services = [
           tab_name: "Data Driven CRO",
           heading: "Data-Driven CRO Strategy & Monthly Optimization Cycles",
           description:
-            "Conversion optimization is not a one off fix; it is a progressive and changing process. Every month, we are going to improve your site according to performance data, user feedback, and quality of traffic. This will confirm that your website not only keeps on getting better but also scales along with your marketing activities like SEO, PPC, and content marketing.",
+            "Conversion optimization is not a one off fix it is a progressive and changing process. Every month, we are going to improve your site according to performance data, user feedback, and quality of traffic. This will confirm that your website not only keeps on getting better but also scales along with your marketing activities like <a href='/service/seo-services' class='text-[#072d7f] underline font-regular'>SEO</a>, <a href='/service/pay-per-click/' class='text-[#072d7f] underline font-regular'>PPC</a>, and content marketing.",
         },
       ],
     },
@@ -594,15 +594,15 @@ export const services = [
     },
 
     introParagraphs: [
-  "Your ecommerce website is more than a digital shop; it's the strongest revenue generating asset your business owns.",
-  "At Web Founders USA, we help brands transform visitors into buyers through strategic ecommerce website design, high performing funnels, and complete ecommerce website development solutions according to your goals.",
+  "Your ecommerce website is more than a digital shop it's the strongest revenue generating asset your business owns.",
+  "At <a href='/' class='text-[#072d7f] underline font-regular'>Web Founders USA</a>, we help brands transform visitors into buyers through strategic <a href='/service/ecommerce-web-design/' class='text-[#072d7f] underline font-regular'>E-commerce Website Design</a>, high performing funnels, and complete ecommerce website development solutions according to your goals.",
   "Whether you are starting with a small store or scaling a multi category brand, our approach blends creativity, psychology, and analysis based data marketing to bring real growth.",
   "Your online store deserves a team that understands conversions, not just code.",
   "We also specialize in ecommerce website content writing to set the seal on your product pages and banners to communicate effectively and drive engagement.",
   "We create seamless shopping experiences that customers trust.",
   "From custom e-commerce website development to performance driven UI/UX, product page optimization, branding, and full scale marketing, we build ecommerce systems that work together in complete harmony.",
   "As an experienced ecommerce website development company, we mix strong visual identity and fast loading architecture with high intent traffic strategies that drive consistent sales: no templates, no guesswork, just smart ecommerce built around your customers and your revenue.",
-  "Whether it’s for adult ecommerce websites' SEO or a standard online store, our strategies adapt to every market segment."
+  "Whether it’s for adult ecommerce websites' <a href='/service/seo-services' class='text-[#072d7f] underline font-regular'>SEO</a> or a standard online store, our strategies adapt to every market segment."
 ],
 
     tab: {
@@ -613,7 +613,7 @@ export const services = [
           tab_name: "Conversion Driven Design",
           heading: "Conversion Driven Ecommerce Website Design",
           description:
-            "Great design does not just look good; it sells. Our ecommerce website redesign service focuses on creating layouts that guide customers effortlessly from product browsing to checkout. Based on behavior psychology and mobile first principles, every section, every banner, every button, and every navigation is designed. We also build custom flows for different industries, from ecommerce clothing website layouts to specialty stores and subscription based shops. Be it a premium look or a minimalistic structure, we build visuals to influence buying decisions. Features like a React ecommerce website header are implemented to enhance usability and conversion rates.",
+            "Great design does not just look good it sells. Our ecommerce website redesign service focuses on creating layouts that guide customers effortlessly from product browsing to checkout. Based on behavior psychology and mobile first principles, every section, every banner, every button, and every navigation is designed. We also build custom flows for different industries, from ecommerce clothing website layouts to specialty stores and subscription based shops. Be it a premium look or a minimalistic structure, we build visuals to influence buying decisions. Features like a React ecommerce website header are implemented to enhance usability and conversion rates.",
         },
         {
           id: "advanced-development",
@@ -634,7 +634,7 @@ export const services = [
           tab_name: "SEO & Growth Optimization",
           heading: "Ecommerce SEO & Growth Optimization",
           description:
-            "Having a store is not enough; you need visibility. Our e-commerce website SEO packages help your products rank higher and attract high intent customers ready to buy. We optimize category structures, product descriptions, metadata, schema, and internal linking to drive more organic traffic. If you are on Shopify or WooCommerce, for instance, our SEO strategies integrate seamlessly with your site architecture. We also help brands compete globally, including niche markets like adult stores or specialty b2b ecommerce websites.",
+            "Having a store is not enough; you need visibility. Our e-commerce website SEO packages help your products rank higher and attract high intent customers ready to buy. We optimize category structures, product descriptions, metadata, schema, and internal linking to drive more organic traffic. If you are on <a href='/service/seo-services/shopify-seo/' class='text-[#072d7f] underline font-regular'>Shopify</a> or <a href='/service/seo-services/woocommerce-seo/' class='text-[#072d7f] underline font-regular'>WooCommerce</a>, for instance, our SEO strategies integrate seamlessly with your site architecture. We also help brands compete globally, including niche markets like adult stores or specialty <a href='/service/custom-website-design/b2b-web-design/' class='text-[#072d7f] underline font-regular'>B2B E-Commerce Websites</a>.",
         },
         {
           id: "platform-solutions",
@@ -1452,15 +1452,7 @@ export const services = [
           "The fact that online stores with thousands of products and seasonal stock changes face different types of challenges in SEO is what we take into account.",
           "The In-House Team of the E-commerce SEO agency consists of skilled individuals who not only create personalized strategies that reply to these hurdles but also make sure of a strong hold on organic long term success.",
           "In case you are operating a small boutique shop or a vast marketplace, cooperating with the best E-commerce SEO agency guarantees that potential buyers will discover your products.",
-          "Our visit data based method, added to tested up optimization methods, guarantees measurable effects that influence your profitability.",
-          "Full ecommerce website audit and technical SEO review",
-          "Product page enhancement for increased sales",
-          "Category page SEO and site structure improvements",
-          "Keyword research with buyer intent focus",
-          "Schema markup for rich product snippets",
-          "Content marketing & blog strategy for organic traffic",
-          "Link building for ecommerce sites with high authority",
-          "Continuous performance tracking and reporting",
+          "Our visit data based method, added to tested up optimization methods, guarantees measurable effects that influence your profitability.<br></br>Full ecommerce website audit and technical SEO review. Product page enhancement for increased sales. Category page SEO and site structure improvements.<br></br>Keyword research with buyer intent focus. Schema markup for rich product snippets. Content marketing & blog strategy for organic traffic. Link building for ecommerce sites with high authority. Continuous performance tracking and reporting.",
           "E-commerce SEO services that are comprehensive and made according to the business goals let us help you overshadow your competitors. Our E-commerce seo agencies approach marries technical know how with innovative content strategies to yield long lasting organic growth."
         ],
         features: [
