@@ -69,7 +69,7 @@ const SubServiceDetailPage = ({ params }) => {
                                 </div>
                             </div>
                             <span className="text-base font-semibold text-white group-hover:underline">
-                                +1 470-206-5285
+                                +1 470-470-7520
                             </span>
                         </a>
 
