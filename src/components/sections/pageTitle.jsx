@@ -4,7 +4,7 @@ import { FaChevronRight } from "react-icons/fa";
 import Title from '../ui/title'
 import { cn } from '@/lib/utils';
 
-// Add bgImage as a prop with a default value
+// Add bgImage as a prop with a default valu
 const PageTitle = ({
   pageName,
   breadcrumbLink,

@@ -8,6 +8,11 @@ import ContactFormTwo from "@/components/sections/ContactFormTwo";
 export const metadata = {
     title: "BLOG  | Web Founders USA",
     description: "Read the Web Founders USA blog for expert insights, tips, and strategies on SEO, web design, and digital marketing growth.",
+
+    robots: {
+        index: false,  // prevents indexing
+        follow: true   // allows links to be followed
+    }
 };
 
 const Blog2 = () => {

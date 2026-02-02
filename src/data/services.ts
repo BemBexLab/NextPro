@@ -1444,7 +1444,7 @@ export const services = [
         hero: {
           paragraph:
             "Web Founders USA, as a premier E-commerce SEO agency, facilitates the ascension of online retailers in search rankings and converting casual visitors into buyers.",
-          image: "/images/resource/SEO2.png",
+          image: "/service-deatil-images/seo.webp",
         },
         introParagraphs: [
           "Web Founders USA, as a premier E-commerce SEO agency, facilitates the ascension of online retailers in search rankings and converting casual visitors into buyers.",
@@ -1563,7 +1563,7 @@ export const services = [
         },
         hero: {
           paragraph: "Web Founders USA is a top B2B SEO agency providing specialized SEO services to increase online visibility, traffic, and qualified leads today.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "Our B2B SEO agency at Web Founders USA aims to help B2B companies reach potential customers online. We do this by using custom B2B SEO strategies to convert visitors into clients. No matter what type of business you have, we can help.",
@@ -1671,7 +1671,7 @@ export const services = [
         },
         hero: {
           paragraph: "Good patient care is the best thing to get success, but is it the only thing? No, your clinic needs real visibility where patients search every day: Google. At Web Founders USA, we help dentists attract more local patients through strategic, simple, and effective SEO.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "Good patient care is the best thing to get success, but is it the only thing? No, your clinic needs real visibility where patients search every day: Google. At Web Founders USA, we help dentists attract more local patients through strategic, simple, and effective SEO.",
@@ -1817,7 +1817,7 @@ export const services = [
         },
         hero: {
           paragraph: "It is very common these days for patients to rely on Google and similar search engines as their primary source of information when searching for doctors, clinics, or medical services. If your healthcare practice is not ranking high enough in online searches, then you are probably losing a considerable amount of potential patient inquiries.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "It is very common these days for patients to rely on Google and similar search engines as their primary source of information when searching for doctors, clinics, or medical services.",
@@ -1926,7 +1926,7 @@ export const services = [
         },
         hero: {
           paragraph: "Big businesses require advanced SEO strategies; they survive by well planned strategies that can grow and yield visible results in diverse areas, markets, and sites. At Web Founders USA, we are a committed enterprise SEO agency, helping large companies to get their online presence, bring in organic traffic, and then convert that into good quality leads.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "Big businesses require advanced SEO strategies; they survive by well planned strategies that can grow and yield visible results in diverse areas, markets, and sites.",
@@ -2031,7 +2031,7 @@ export const services = [
         },
         hero: {
           paragraph: "A successful shopify needs a great visibility other than good products in it, to get more customers and help them to look at what you offer. Our Shopify SEO agency is dedicated to increasing the visibility of Shopify stores in search results, helping them get their share of online sales.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "A successful shopify needs a great visibility other than good products in it, to get more customers and help them to look at what you offer.",
@@ -2141,7 +2141,7 @@ export const services = [
         },
         hero: {
           paragraph: "If your agency wants to offer SEO without hiring in-house specialists, partnering with a reliable white label company gives you the advantage of delivering premium results under your own brand name.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "If your agency wants to offer SEO without hiring in-house specialists, partnering with a reliable white label company gives you the advantage of delivering premium results under your own brand name.",
@@ -2242,7 +2242,7 @@ export const services = [
         },
         hero: {
           paragraph: "At Web Founders USA, we work to increase WordPress website visibility across all niches. The industry doesn’t matter; our large, experienced team serves a wide range of businesses with confidence and expertise.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "At Web Founders USA, we work to increase WordPress website visibility across all niches. The industry doesn’t matter; our large, experienced team serves a wide range of businesses with confidence and expertise.",
@@ -2366,7 +2366,7 @@ export const services = [
         },
         hero: {
           paragraph: "If your dealership, auto repair shop, or automotive business is not ranking on Google, you are losing customers every single day. Our Automotive SEO Agency helps dealerships, auto shops, and auto parts businesses dominate search results with strategies that are clean, effective, and built for real conversions.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "If your dealership, auto repair shop, or automotive business is not ranking on Google, you are losing customers every single day.",
@@ -2450,7 +2450,7 @@ export const services = [
         },
         hero: {
           paragraph: "In the e-commerce world, where competition is fierce, a Magento store is only the beginning. Specialized SEO strategies based on the Magento platform are required to make you stand out, to bring in more visitors, and finally to convert them into customers.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "In the e-commerce world, where competition is fierce, a Magento store is only the beginning. Specialized SEO strategies based on the Magento platform are required to make you stand out, to bring in more visitors, and finally to convert them into customers.",
@@ -2567,7 +2567,7 @@ export const services = [
         },
         hero: {
           paragraph: "As we know, medical websites are often visited by patients checking departments, doctors, appointment timings, and more. Hospital websites are also used by staff for career opportunities or administrative purposes. An optimized medical website with the right keywords can improve your search visibility and increase Google ranking drastically.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "As we know, medical websites are often visited by patients checking departments, doctors, appointment timings, and more. Hospital websites are also used by staff for career opportunities or administrative purposes. An optimized medical website with the right keywords can improve your search visibility and increase Google ranking drastically.",
@@ -2672,7 +2672,7 @@ export const services = [
         },
         hero: {
           paragraph: "If your website is not performing as expected, even though you are using the right keywords, there may be hidden issues holding back your visibility. At Web Founders USA, our SEO audit agency identifies these problems and helps you fix them with actionable, practical solutions.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "If your website is not performing as expected, even though you are using the right keywords, there may be hidden issues holding back your visibility.",
@@ -2799,7 +2799,7 @@ export const services = [
         },
         hero: {
           paragraph: "Every day, the hospitality sector gets more advanced, and being on top of it means not only giving outstanding guest experiences but also having a prominent online presence. These days, the first thing that potential visitors do is to search hotels on Google before they proceed to make a reservation. This is the situation when our hotel SEO services become beneficial, which ensure that your hotel is listed at the top of the search results, consequently drawing in more guests, and increasing the number of bookings made.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "Every day, the hospitality sector gets more advanced, and being on top of it means not only giving outstanding guest experiences but also having a prominent online presence. These days, the first thing that potential visitors do is to search hotels on Google before they proceed to make a reservation. This is the situation when our hotel SEO services become beneficial, which ensure that your hotel is listed at the top of the search results, consequently drawing in more guests, and increasing the number of bookings made.",
@@ -2896,7 +2896,7 @@ export const services = [
         },
         hero: {
           paragraph: "Nowadays, customers discover brands from every corner of the globe, your online presence shouldn't be confined to a single language. To grow truly internationally, your business needs robust multilingual SEO services that connect you with audiences in their native language.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "Nowadays, customers discover brands from every corner of the globe, your online presence shouldn't be confined to a single language. To grow truly internationally, your business needs robust multilingual SEO services that connect you with audiences in their native language.",
@@ -3012,7 +3012,7 @@ export const services = [
         },
         hero: {
           paragraph: "Great content is the foundation of any effective digital strategy. Whether your business is small, an enterprise level brand, or a niche focused website, great content can make all the difference in your online presence.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "Great content is the foundation of any effective digital strategy. Whether your business is small, an enterprise level brand, or a niche focused website, great content can make all the difference in your online presence.",
@@ -3126,7 +3126,7 @@ export const services = [
         },
         hero: {
           paragraph: "One of the most significant advantages of running a WooCommerce store is that you have complete control over your products, customers, and brand, yet even the top stores cannot perform well if no one knows about them. This is how our WooCommerce SEO agency contributes to your development.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "One of the most significant advantages of running a WooCommerce store is that you have complete control over your products, customers, and brand, yet even the top stores cannot perform well if no one knows about them. This is how our WooCommerce SEO agency contributes to your development.",
@@ -3232,7 +3232,7 @@ export const services = [
         },
         hero: {
           paragraph: "Running a BigCommerce store puts you fully in control of your products, customers, and brand. But even the best designed store will not perform if people cannot find it online. That's where our BigCommerce SEO agency helps you out.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "Running a BigCommerce store puts you fully in control of your products, customers, and brand. But even the best designed store will not perform if people cannot find it online.",
@@ -3340,7 +3340,7 @@ export const services = [
         },
         hero: {
           paragraph: "Running a boutique today is more than just setting up racks or uploading photos. People first search online before they decide where to shop, which means your website plays a huge role in attracting customers.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "Running a boutique today is more than just setting up racks or uploading photos. People first search online before they decide where to shop, which means your website plays a huge role in attracting customers.",
@@ -3445,7 +3445,7 @@ export const services = [
         },
         hero: {
           paragraph: "Sharing your message on YouTube is easy. Getting people to actually watch your videos is the real challenge. Millions of videos go live every day, so if your content is not reaching viewers, it’s not your fault—the platform is crowded. This is where our YouTube SEO services and video SEO services help you stand out.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "Sharing your message on YouTube is easy. Getting people to actually watch your videos is the real challenge. Millions of videos go live every day, so if your content is not reaching viewers, it’s not your fault—the platform is crowded. This is where our YouTube SEO services and video SEO services help you stand out.",
@@ -3553,7 +3553,7 @@ export const services = [
         },
         hero: {
           paragraph: "Running a roofing business is not easy, especially when every roofer in your area is trying to get the same customers. You may have the skills, tools, and the best team, but if people can’t find your business online, the calls and leads won’t come in. This is exactly where our roofing SEO company helps.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "Running a roofing business is not easy, especially when every roofer in your area is trying to get the same customers. You may have the skills, tools, and the best team, but if people can’t find your business online, the calls and leads won’t come in. This is exactly where our roofing SEO company helps.",
@@ -3658,7 +3658,7 @@ export const services = [
         },
         hero: {
           paragraph: "Many businesses don’t have the time or team to manage SEO. That’s where our outsource SEO services step in. We handle everything from content to backlinks to audits while you focus on your business growth.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "Many businesses don’t have the time or team to manage SEO. That’s where our outsource SEO services step in.",
@@ -3765,7 +3765,7 @@ export const services = [
         },
         hero: {
           paragraph: "The construction industry is full of competition. Every company wants more project leads, more calls, and more visibility. But if your website is not ranking, clients will keep choosing other contractors.",
-          image: "/images/resource/SEO2.png"
+          image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
           "The construction industry is full of competition. Every company wants more project leads, more calls, and more visibility. But if your website is not ranking, clients will keep choosing other contractors.",
@@ -4083,7 +4083,7 @@ export const services = [
         },
         "hero": {
           "paragraph": "Your B2B website can be considered the initial contact point for possible customers, and the impression formed is very important. A well designed professional B2B agency website will convey your company's expertise, reliability, and innovation to the visitors and eventually convert them into clients. At Web Founders USA, we create websites that are not just visually appealing but strategically designed for business growth.",
-          "image": "/images/resource/Custom-Website-Design-1.jpg"
+          "image": "/service-deatil-images/custom-website-design.webp"
         },
         "introParagraphs": [
           "Your B2B website can be considered the initial contact point for possible customers, and the impression formed is very important. A well designed professional B2B agency website will convey your company's expertise, reliability, and innovation to the visitors and eventually convert them into clients. At Web Founders USA, we create websites that are not just visually appealing but strategically designed for business growth.",
@@ -4193,7 +4193,7 @@ export const services = [
         },
         "hero": {
           "paragraph": "Your website is the first impression for potential clients, which shows your practice, experience, and work. A powerful online presence reflects your professionalism, communicates your expertise, and builds trust with prospective clients. As a creative and dedicated law firm web design agency, we make websites that help attorneys and law firms stand out while providing a smooth experience for visitors.",
-          "image": "/images/resource/Custom-Website-Design-1.jpg"
+          "image": "/service-deatil-images/custom-website-design.webp"
         },
         "introParagraphs": [
           "Your website is the first impression for potential clients, which shows your practice, experience, and work. A powerful online presence reflects your professionalism, communicates your expertise, and builds trust with prospective clients.",
@@ -4290,7 +4290,7 @@ export const services = [
         },
         "hero": {
           "paragraph": "Many agencies want to offer web design but may not have the time or internal team to handle full production. Our white label web design solutions give your agency the freedom to sell websites without managing the design and development workload. We work quietly behind your brand while you keep full control of the client relationship.",
-          "image": "/images/resource/Custom-Website-Design-1.jpg"
+          "image": "/service-deatil-images/custom-website-design.webp"
         },
         "introParagraphs": [
           "Many agencies want to offer web design but may not have the time or internal team to handle full production.",
@@ -4399,7 +4399,7 @@ export const services = [
         },
         hero: {
           paragraph: "A strong online presence has become a major part of how patients choose healthcare providers. The first impression usually begins on a website long before a call, form submission, or appointment. Our healthcare web design, made for hospitals, clinics, private practices, and medical groups, helps you deliver a digital space that feels trustworthy, secure, and easy to navigate for every patient. From appointment scheduling to patient education and mobile friendly layouts, we shape websites that support your goals and create a smooth experience.",
-          image: "/images/resource/Custom-Website-Design-1.jpg"
+          image: "/service-deatil-images/custom-website-design.webp"
         },
         introParagraphs: [
           "A strong online presence has become a major part of how patients choose healthcare providers. The first impression usually begins on a website long before a call, form submission, or appointment.",
@@ -4507,7 +4507,7 @@ export const services = [
         },
         hero: {
           paragraph: "The restaurant's online presence has equal importance as the food served on its menu. Customers will often visit your website first before making any interactions with your business, whether they are browsing through the menus, checking the hours, or making reservations. It is through professional restaurant website design that you will be able to create a friendly and informative online experience that many will feel like visiting, calling, or ordering online from your restaurant. Our restaurant web design services are centered on designing appealing, user friendly, and goals achieving websites.",
-          image: "/images/resource/Custom-Website-Design-1.jpg"
+          image: "/service-deatil-images/custom-website-design.webp"
         },
         introParagraphs: [
           "The restaurant's online presence has equal importance as the food served on its menu. Customers will often visit your website first before making any interactions with your business, whether they are browsing through the menus, checking the hours, or making reservations.",
@@ -4609,7 +4609,7 @@ export const services = [
         },
         hero: {
           paragraph: "Your site is very much a business generator and not just a digital presence in the property market. Online is where buyers, sellers, renters, and investors are looking up information before they talk to a real estate agent. Through powerful real estate website design, your company communicates effectively with the market, stressing your skills, and providing the customer with what he/she wants in no time. Depending on whether you are an individual realtor or a big real estate company, your site should show professional touch and be a conversion driving tool.",
-          image: "/images/resource/Custom-Website-Design-1.jpg"
+          image: "/service-deatil-images/custom-website-design.webp"
         },
         introParagraphs: [
           "Your site is very much a business generator and not just a digital presence in the property market. Online is where buyers, sellers, renters, and investors are looking up information before they talk to a real estate agent.",
@@ -4704,7 +4704,7 @@ export const services = [
         },
         hero: {
           paragraph: "Your business usually has an online presence, which is the first interaction prospects and partners in the industrial world. The design of a strong manufacturing website shows professionalism, capability, and technical expertise. If you are catering to local markets or to global supply chains, then a well designed website would be your perfect ally to display your products, point out your capabilities, and capture leads more efficiently than a static brochure ever could. Web design for manufacturing is our service, and we create websites that not only support your business goals but also help you in the long run in an ever evolving digital marketplace.",
-          image: "/images/resource/Custom-Website-Design-1.jpg"
+          image: "/service-deatil-images/custom-website-design.webp"
         },
         introParagraphs: [
           "Your business usually has an online presence, which is the first interaction prospects and partners in the industrial world.",
@@ -4800,7 +4800,7 @@ export const services = [
         },
         hero: {
           paragraph: "In the eCommerce world, your site has to be more than just visually appealing, it has to be functional as well. The proper BigCommerce web design can make the difference of your online store getting visitors, showing them around your products, and finally turning them into paying customers. It does not matter if you are opening up a new shop or renovating an old one, professional design will be a very important factor in the growth of your business. Our highly skilled BigCommerce web designers create productive storefronts that are suited to your audience and showcase your brand.",
-          image: "/images/resource/Custom-Website-Design-1.jpg"
+          image: "/service-deatil-images/custom-website-design.webp"
         },
         introParagraphs: [
           "In the eCommerce world, your site has to be more than just visually appealing, it has to be functional as well.",
@@ -4901,7 +4901,7 @@ export const services = [
         },
         hero: {
           paragraph: "SaaS applications generally rely on the website to give a prospective customer the first impression. The reason a professional SaaS web design is not only looking fresh but also conveying the worth of your product, directing visitors to features, and finally leading to sign ups or conversions. It does not matter if you are introducing a new SaaS system or remodeling an old one, the website is the one factor that is very vital to both growth and credibility. The SaaS web design agency not only makes websites that give a good impression and are aligned with the brand but also highlight the products and confirm an easy to use interface.",
-          image: "/images/resource/Custom-Website-Design-1.jpg"
+          image: "/service-deatil-images/custom-website-design.webp"
         },
         introParagraphs: [
           "SaaS applications generally rely on the website to give a prospective customer the first impression.",
@@ -5003,7 +5003,7 @@ export const services = [
         },
         hero: {
           paragraph: "A construction company needs more than a simple online brochure. Your website is often the place where property owners, contractors, or investors make their first judgment about your work. A powerful construction company website design develops trust, highlights your work, and shows potential clients that you can manage projects with skill and commitment. Many construction businesses rely on referrals, but a presentable website opens new doors by showing your capabilities clearly and professionally. Our team creates modern, effective websites that reflect your craftsmanship, experience, and reliability. Whether you run a small contracting firm or a large established construction company, we build digital platforms that help you connect with the right clients.",
-          image: "/images/resource/Custom-Website-Design-1.jpg"
+          image: "/service-deatil-images/custom-website-design.webp"
         },
         introParagraphs: [
           "A construction company needs more than a simple online brochure. Your website is often the place where property owners, contractors, or investors make their first judgment about your work.",
@@ -5105,7 +5105,7 @@ export const services = [
         },
         hero: {
           paragraph: "A modern website must concentrate to develop consistency on every screen. People visit the website using different devices like laptops, tablets, or mobile phones. They expect the same ease, clarity, and speed. Responsive design is important for keeping things consistent. The base of strong digital experiences exists. A site that looks best only on one device creates a risk of losing visitors who browse in different ways. Our responsive website design company creates sites that work well on all screen sizes. We ensure great visuals, performance, and user experience.",
-          image: "/images/resource/Custom-Website-Design-1.jpg"
+          image: "/service-deatil-images/custom-website-design.webp"
         },
         introParagraphs: [
           "A modern website must deliver consistency across every screen. People visit using laptops, tablets, or mobile phones—and they expect the same ease, clarity, and speed regardless of device.",
@@ -5206,7 +5206,7 @@ export const services = [
         },
         hero: {
           paragraph: "A modern website always requires a strong online presence that feels not just visually impressive but also fast and smooth, and that’s where a professional front end development company steps in. We construct interfaces that are sharp in appearance, fast in loading, and user friendly in navigating through the complete and ideal experience. The collaboration between our team that is responsible for design and technology results in something that feels seamless on every device, regardless of whether it is a startup, a large enterprise with a well-established portal, or a custom application.",
-          image: "/images/resource/Custom-Website-Design-1.jpg"
+          image: "/service-deatil-images/custom-website-design.webp"
         },
         introParagraphs: [
           "A modern website requires more than just good looks—it needs speed, responsiveness, and intuitive interactions. That’s where professional front end development makes the difference.",
@@ -5316,7 +5316,7 @@ export const services = [
         },
         hero: {
           paragraph: "If your website has stopped bringing clicks, leads, or engagement, it may be time to refresh how it looks and performs. A website acts as your brand’s first handshake with potential customers, and if that handshake feels outdated, slow, or unclear, visitors leave within seconds. With our website redesign services, you get a modern, clean, and conversion based website that reflects today’s digital expectations and helps you reconnect with your audience. At Web Founders USA, our team of website redesign services has one purpose: to help your business grow.",
-          image: "/images/resource/Custom-Website-Design-1.jpg"
+          image: "/service-deatil-images/custom-website-design.webp"
         },
         introParagraphs: [
           "If your website has stopped bringing clicks, leads, or engagement, it may be time to refresh how it looks and performs.",
@@ -5418,7 +5418,7 @@ export const services = [
         },
         hero: {
           paragraph: "Trust is a huge factor in the plumbing industry. When a customer has a leak, a pipe burst, or a drain problem, the very first thing they do is search the internet for a dependable plumber in their area. If your site is outdated or hard to navigate, possible clients will leave in a matter of seconds. Our plumber web design services are there to help you out. We make the plumbing companies' online presence visually appealing, easy to navigate, and well structured so that the customers are prompted to call, book, or request a quote right away.",
-          image: "/images/resource/Custom-Website-Design-1.jpg"
+          image: "/service-deatil-images/custom-website-design.webp"
         },
         introParagraphs: [
           "Trust is a huge factor in the plumbing industry. When a customer has a leak, a pipe burst, or a drain problem, the very first thing they do is search the internet for a dependable plumber in their area.",

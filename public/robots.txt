@@ -1,9 +1,4 @@
 User-agent: *
-
-Block all services
-Disallow: /service/
-
-Explicitly allow only SEO main page
-Allow: /service/seo-services$
-
+Allow: /
+ 
 Sitemap: https://www.webfoundersusa.com/sitemap.xml
