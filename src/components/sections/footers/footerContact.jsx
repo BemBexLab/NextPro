@@ -32,7 +32,7 @@ const FooterContact = ({ bgColor, color, white_logo }) => {
                     </div>
                     <div className={cn(`${color}`)}>
                         <p> <span className='font-semibold'>Email:</span> <Link href={"mailto:info@webfoundersusa.com"} className='relative hover-underline after:h-[1px] after:bg-muted'> info@webfoundersusa.com</Link> </p>
-                        <p> <span className='font-semibold'>Call us:</span> <Link href={"tal:+14704707520"} className='relative hover-underline after:h-[1px] after:bg-muted'>+1 470-206-5285</Link> </p>
+                        <p> <span className='font-semibold'>Call us:</span> <Link href={"tal:+14704707520"} className='relative hover-underline after:h-[1px] after:bg-muted'>+1 470-470-7520</Link> </p>
                     </div>
                 </div>
             </div>

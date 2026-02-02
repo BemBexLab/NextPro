@@ -29,7 +29,7 @@ export const services = [
     hero: {
       paragraph:
         "At Web Founders USA, our reliable social media marketing agency transforms social media into a profit-making machine for your company.",
-      image: "/service-deatil-images/social-media-marketing.jpg",
+      image: "/service-deatil-images/affiliate-marketing.webp",
     },
     introParagraphs: [
   "At <a href='/' class='text-[#072d7f] underline font-regular'>Web Founders USA</a> our reliable social media marketing agency transforms social media into a profit making machine for your company.",
@@ -135,7 +135,7 @@ export const services = [
     hero: {
       paragraph:
         "At Web Founders USA, we believe every business has a unique story worth telling and a unique audience waiting to hear it. Our digital marketing services go far beyond launching ads — we build human-focused strategies that turn visitors into loyal customers.",
-      image: "/images/resource/digital-marketing2.jpg",
+      image: "/service-deatil-images/digital-marketing.webp",
     },
 
     introParagraphs: [
@@ -247,7 +247,7 @@ export const services = [
     hero: {
       paragraph:
         "Content is more than words — it is the voice of your brand, the value you provide, and the most powerful way to get noticed online. At Web Founders USA, we transform your narrative into compelling, strategic, and SEO-optimized content your audience genuinely connects with.",
-      image: "/images/servicesimages/content-writing.jpg",
+      image: "/service-deatil-images/content-writing.webp",
     },
 
     introParagraphs: [
@@ -472,7 +472,7 @@ export const services = [
     hero: {
       paragraph:
         "At Web Founders USA, we know that getting traffic is only half the job. Our conversion optimization services transform website visitors into leads, sales, and long-term customers by combining analytics, user behavior insights, and full-funnel testing.",
-      image: "/images/resource/Conversion-Optimization.jpg",
+      image: "/service-deatil-images/conversion-optimization.webp",
     },
 
     introParagraphs: [
@@ -590,7 +590,7 @@ export const services = [
     hero: {
       paragraph:
         "Your ecommerce website is more than a digital shop; it’s your strongest revenue-generating asset. Web Founders USA transforms visitors into buyers through strategic design, optimized funnels, and full-scale ecommerce development solutions.",
-      image: "/images/resource/E-commerce-marketing.2.jpg",
+      image: "/service-deatil-images/e-commerce-webdesign-development.webp",
     },
 
     introParagraphs: [
@@ -697,7 +697,7 @@ export const services = [
     hero: {
       paragraph:
         "At Web Founders USA, extraordinary graphic designing services are the backbone of every brand. We help startups and enterprises communicate with style, creativity, and impact, ensuring every visual resonates with your audience.",
-      image: "/images/resource/Logo-Design.jpg-2.jpg",
+      image: "/service-deatil-images/graphic-designing.webp",
     },
 
     introParagraphs: [
@@ -800,7 +800,7 @@ export const services = [
     hero: {
       paragraph:
         "At Web Founders USA, branding is more than a logo; it’s the emotional and strategic foundation of how customers see, trust, and choose your business. Our brand strategy services help businesses establish meaningful identities that drive long-term loyalty.",
-      image: "/images/resource/Branding.jpg",
+      image: "/service-deatil-images/brand-strategy.webp",
     },
 
     introParagraphs: [
@@ -918,7 +918,7 @@ export const services = [
     hero: {
       paragraph:
         "At Web Founders USA, we provide website maintenance services designed to protect your investment, enhance performance, and eliminate the stress of technical upkeep. From routine updates to emergency troubleshooting, we keep your online presence strong, secure, and ready to grow.",
-      image: "/images/resource/maintenance.jpg",
+      image: "/service-deatil-images/website-maintenance.webp",
     },
 
     introParagraphs: [
@@ -1028,7 +1028,7 @@ export const services = [
     hero: {
       paragraph:
         "At Web Founders USA, we help online businesses grow through strategic e-commerce marketing. Our team focuses on increasing visibility, attracting high intent visitors, and boosting conversions to achieve measurable, sustainable results.",
-      image: "/images/resource/E-commerce-marketing.jpg",
+      image: "/service-deatil-images/e-commerce-marketing.webp",
     },
 
     introParagraphs: [
@@ -1131,7 +1131,7 @@ export const services = [
     hero: {
       paragraph:
         "At Web Founders USA, we create animations that tell your story, engage your audience, and elevate your brand. Our team blends creativity, strategy, and technical expertise to produce 2D, 3D, VR, and interactive video content that drives results.",
-      image: "/images/resource/Video-Animation.jpg",
+      image: "/service-deatil-images/video-animation.webp",
     },
 
     introParagraphs: [
@@ -1234,7 +1234,7 @@ export const services = [
     hero: {
       paragraph:
         "At Web Founders USA, we help businesses transform their email campaigns into powerful tools for engagement, retention, and revenue growth. From e-commerce email marketing to B2B campaigns, we craft messages that connect with your audience and drive measurable results.",
-      image: "/images/servicesimages/email-marketing.jpg",
+      image: "/service-deatil-images/email-marketing-service.webp",
     },
 
     introParagraphs: [
@@ -1339,7 +1339,7 @@ export const services = [
     hero: {
       paragraph:
         "At Web Founders USA, we deliver SEO services that do more than just improve rankings. From local businesses to enterprise organizations, our solutions help you attract the right audience, build trust, and drive measurable growth online.",
-      image: "/images/resource/SEO2.png",
+      image: "/service-deatil-images/seo.webp",
     },
 
     introParagraphs: [
@@ -3883,7 +3883,7 @@ export const services = [
     hero: {
       paragraph:
         "In today’s digital ecosystem, growth requires flexible, performance-driven marketing strategies. Our affiliate and marketing services combine creativity, transparency, and data-driven insights to build strong affiliate ecosystems that increase visibility, revenue, and ROI.",
-      image: "/images/servicesimages/affiliate-marketing.jpg",
+      image: "/service-deatil-images/affiliate-marketing.webp",
     },
 
     introParagraphs: [
@@ -3989,7 +3989,7 @@ export const services = [
     hero: {
       paragraph:
         "A website is often the first impression your business makes. Web Founders USA designs custom websites that reflect your brand identity, engage your audience, and drive measurable growth.",
-      image: "/images/resource/Custom-Website-Design-1.jpg",
+      image: "/service-deatil-images/custom-website-design.webp",
     },
 
     introParagraphs: [
@@ -5532,7 +5532,7 @@ export const services = [
     hero: {
       paragraph:
         "A website should look great and perform seamlessly. At Web Founders USA, we turn your ideas into fully functional digital experiences that drive results, from startups to e-commerce brands.",
-      image: "/images/servicesimages/ecommerce-website-development.jpg",
+      image: "/service-deatil-images/web-development.webp",
     },
 
     introParagraphs: [
