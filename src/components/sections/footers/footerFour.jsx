@@ -17,7 +17,7 @@ const FooterFour = () => {
 
                             <h3 className='text-1xl font-semibold text-muted-foreground lg:pb-7.5 pb-3 text-white'>About</h3>
 
-                            <p className='pb-[38px] text-white'>WebFounders USA seamlessly integrates with a variety of industry-leading tools, ensuring a cohesive and efficient digital ecosystem for your business.</p>
+                            <p className='pb-[38px] text-white'>Award Winning Digital Marketing Agency - Web Founders USA</p>
                             <SocialIcons color={"text-white"} hoverColor={"hover:text-white"} />
                         </div>
                         <div>
