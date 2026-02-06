@@ -22,8 +22,8 @@ const FooterContact = ({ bgColor, color, white_logo }) => {
                         <Image src={'/images/shapes/Frame 210.png'} width={45} height={50} alt='map arrwo' />
                     </div>
                     <div className={cn(`${color}`)}>
-                        <p>3021 Peachtree Rd NWAtlanta,</p>
-                        <p>GA 30305, USA</p>
+                        <p>1014 Garner Rd SW,</p>
+                        <p>Lilburn,GA 30047, USA</p>
                     </div>
                 </div>
                 <div className='flex items-center gap-8'>
