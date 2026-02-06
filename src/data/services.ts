@@ -5630,7 +5630,5 @@ export function getServiceById(id) {
 export function getSubCategory(serviceId, subId) {
   const service = services.find((s) => s.id === serviceId);
   if (!service || !service.sub_categories) return null;
-  return (
-    service.sub_categories.find((sc) => sc.id === subId || sc.slug === subId) || null
-  );
+  return service.sub_categories.find((sc) => sc.id === subId) || null;
 }

@@ -211,7 +211,7 @@ const ProjectsTab = () => {
                     }}
                     src={imageUrl}
                     alt={post.title.rendered}
-                    className={`w-full object-cover object-top transition-transform duration-[2500ms] ease-in-out`}
+                    className={`w-full object-cover object-top transition-transform`}
                     style={
                       figma
                         ? {
