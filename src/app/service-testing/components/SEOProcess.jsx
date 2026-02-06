@@ -35,40 +35,37 @@ const SEOProcess = () => {
   ];
 
   return (
-    <section className="w-full bg-[#0B5FCC] py-20">
+    <section className="w-full bg-[#0B5FCC] py-12 md:py-16 lg:py-20">
       <div className="w-[92%] max-w-[1200px] mx-auto">
         {/* Header */}
-        <h2 className="text-[45px] font-semibold text-white mb-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-semibold text-white mb-8 md:mb-12 lg:mb-16 leading-tight">
           Our SEO Process: Built To Deliver Measurable Growth
         </h2>
 
         {/* Timeline */}
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-[23px] top-0 bottom-0 w-[2px] bg-white/30"></div>
+          <div className="absolute left-[15px] sm:left-[19px] lg:left-[23px] top-0 bottom-0 w-[2px] bg-white/30"></div>
 
           {/* Process Steps */}
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             {processSteps.map((step, index) => (
-              <div key={index} className="relative flex items-start gap-6">
+              <div key={index} className="relative flex items-start gap-3 sm:gap-4 md:gap-6">
                 {/* Number Circle */}
                 <div className="relative z-10 flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-white border-4 border-[#0B5FCC] flex items-center justify-center">
-                    <span className="text-[#0B5FCC] font-bold text-lg">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white border-2 sm:border-3 lg:border-4 border-[#0B5FCC] flex items-center justify-center">
+                    <span className="text-[#0B5FCC] font-bold text-sm sm:text-base lg:text-lg">
                       {step.number}
                     </span>
                   </div>
                 </div>
 
                 {/* Content Card */}
-                <div className="flex-1 bg-white rounded-2xl p-8 shadow-lg">
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+                <div className="flex-1 bg-white rounded-xl md:rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">
                     {step.title}
                   </h3>
-                  <div className="w-60 h-0.5 bg-gray-300 mb-4"></div>
-                  {/* {step.number === "4" && (
-                    // <div className="w-16 h-1 bg-gray-300 mb-4"></div>
-                  )} */}
+                  <div className="w-40 sm:w-48 md:w-60 h-0.5 bg-gray-300 mb-3 md:mb-4"></div>
                   <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                     {step.description}
                   </p>

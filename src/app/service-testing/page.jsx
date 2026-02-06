@@ -9,8 +9,11 @@ import SuccessStories from "./components/SuccessStories";
 import WhyChoose from "./components/WhyChoose";
 import SEOComparison from "./components/SEOComparison";
 import Testimonials from "./components/Testimonials";
-import ClaimFreeCall from "./components/ClaimFreeCall";import ServiceFAQs from "./components/ServiceFAQs";
-;
+import ClaimFreeCall from "./components/ClaimFreeCall";
+import ServiceFAQs from "./components/ServiceFAQs";
+import FAQSection from "@/components/sections/faqs/HomeFaqs";
+import ContactFormTwo from "@/components/sections/ContactFormTwo";
+import WhyChooseUs from "./components/WhyChooseUs";
 // import NavBar from './components/NavBar'
 
 const ServiceTesting = () => {
@@ -22,12 +25,15 @@ const ServiceTesting = () => {
       <LocalSEOServices />
       <AIDiscoveryChannels />
       <SEOProcess />
-      <SuccessStories />
-      <WhyChoose />
+      {/* <SuccessStories /> */}
+      {/* <WhyChoose /> TODO: Replace with other New UI */}
+      <WhyChooseUs />
       <SEOComparison />
       <Testimonials />
-      <ClaimFreeCall />
-      <ServiceFAQs />
+      {/* <ClaimFreeCall /> */}
+      <ContactFormTwo />
+      {/* <ServiceFAQs /> */}
+      <FAQSection />
     </section>
   );
 };
