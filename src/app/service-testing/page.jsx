@@ -8,7 +8,7 @@ import SEOProcess from "./components/SEOProcess";
 import SuccessStories from "./components/SuccessStories";
 import WhyChoose from "./components/WhyChoose";
 import SEOComparison from "./components/SEOComparison";
-import Testimonials from "./components/Testimonials";
+import { Testimonials } from './components/Testimonials';
 import ClaimFreeCall from "./components/ClaimFreeCall";
 import ServiceFAQs from "./components/ServiceFAQs";
 import FAQSection from "@/components/sections/faqs/HomeFaqs";

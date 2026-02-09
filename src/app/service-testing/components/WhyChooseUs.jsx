@@ -82,7 +82,7 @@ const WhyChooseUs = () => {
           <div className="relative mt-6 lg:mt-0">
             <div className="relative rounded-[2rem] md:rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden border-[6px] md:border-[8px] lg:border-[10px] border-[#4AB8E8] shadow-xl">
               <img
-                src="/service-testing/dental.png"
+                src="/service-testing/whychooseus.png"
                 alt="Dental practice"
                 className="w-full h-auto object-cover"
               />

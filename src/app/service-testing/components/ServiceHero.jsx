@@ -6,7 +6,7 @@ const ServiceHero = () => {
       className="w-full min-h-[730px] h-auto lg:h-[730px] bg-cover bg-center bg-no-repeat py-10 md:py-16 lg:py-20"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/service-testing/Local-SEO-Agency-LocalMighty.webp')",
+          "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/service-testing/service-hero.webp')",
       }}
     >
       <div className="w-[92%] max-w-[1200px] mx-auto grid grid-cols-12 gap-6 md:gap-8 items-start">
@@ -77,7 +77,7 @@ const ServiceHero = () => {
               />
             </div>
 
-            <div className="mt-3 sm:mt-4 border rounded-md p-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+            {/* <div className="mt-3 sm:mt-4 border rounded-md p-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
               <label className="flex items-center gap-3">
                 <input
                   type="checkbox"
@@ -89,7 +89,7 @@ const ServiceHero = () => {
               <div className="w-20 h-10 sm:w-24 sm:h-12 bg-gray-100 flex items-center justify-center text-xs text-gray-500 self-end sm:self-auto">
                 reCAPTCHA
               </div>
-            </div>
+            </div> */}
 
             <button className="mt-4 sm:mt-5 w-full bg-[#0b63b8] text-white py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-[#075aa6] transition-colors">
               Send

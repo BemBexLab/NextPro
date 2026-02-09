@@ -5,7 +5,7 @@ const nextConfig = {
   // output: "standalone",
   trailingSlash: true,
   images: {
-    domains: ['localhost', 'olive-peafowl-546702.hostingersite.com'],
+    domains: ['localhost', 'olive-peafowl-546702.hostingersite.com',],
   },
   eslint: {
     ignoreDuringBuilds: true,
