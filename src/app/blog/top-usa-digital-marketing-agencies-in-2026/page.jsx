@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Top 5 U.S.A Digital Marketing Agencies in 2026',
-  description: 'Discover the top digital marketing agencies in the USA for 2026. Expert insights on SEO, PPC, social media marketing, and conversion optimization strategies.',
+  description: 'Top 5 USA Digital Marketing Agencies in 2026 ranked for SEO, PPC, social media, and growth strategy to scale your business fast.',
 };
 
 // Simple SVG Icon for visual flair (optional)
