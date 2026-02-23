@@ -4,56 +4,63 @@ const SEOComparison = () => {
   const seoTypes = [
     {
       title: "Traditional SEO",
-      subtitle: "Search Engine Optimization",
+      subtitle: "(Foundational Search Engine Optimization)",
       whatItIs: [
-        "Optimizing websites for Google visibility",
-        "Targeting keywords people search daily",
-        "Building quality backlinks for authority",
-        "Improving site speed and technical health",
-        "Creating content that answers user intent",
+        "Helping people discover your website with clarity",
+        "Pages built with simple layouts, honest words, and relevant answers",
+        "Consistency and value build trust over time",
+        "Keyword identification shapes each page",
+        "Clear structure with headers, tags, and titles",
+        "Fast site speed and mobile responsiveness",
+        "Building credibility through genuine background and steady reliability"
       ],
       whatItMatters: [
-        "Drives consistent, long-term traffic",
-        "Builds trust and credibility online",
-        "Outranks competitors in organic search",
-        "Increases ROI without ongoing ad spend",
-        "Strengthens your brand's digital presence",
+        "Generates consistent, long-term organic traffic",
+        "Builds credibility with users and search engines",
+        "Improves keyword rankings in competitive industries",
+        "Lowers customer acquisition cost over time",
+        "Creates strong foundation for advanced SEO strategies",
       ],
     },
     {
       title: "Local SEO",
-      subtitle: "Dominate Maps & Neighborhood Searches",
+      subtitle: "(Location-Based Search & Map Visibility Optimization)",
       whatItIs: [
-        "Optimizing Google Business Profiles",
-        "Targeting location-based keywords",
-        "Managing local citations and directories",
-        "Generating reviews for social proof",
-        "Driving calls, bookings, and walk-ins",
+        "Optimizing web presence for local audiences",
+        "Enhancing visibility on Google Maps",
+        "Optimizing Google Business Profile",
+        "Using location-specific keywords",
+        "Managing citations with uniform NAP (Name, Address, Phone)",
+        "Leveraging customer feedback and trust indicators",
+        "Encouraging calls, directions, bookings, and walk-ins",
       ],
       whatItMatters: [
-        "Puts you in front of nearby customers",
-        'Boosts visibility in "near me" searches',
-        "Increases trust through reviews",
-        "Converts map clicks into real sales",
-        "Makes you the go-to choice locally",
+        "Increases visibility in “near me” and local-intent searches",
+        'Connects businesses with nearby ready-to-buy customers',
+        "Strengthens trust through reviews and local authority",
+        "Converts map impressions into real-world revenue",
+        "Establishes brand dominance in specific geographic areas",
       ],
     },
     {
-      title: "AI SEO",
-      subtitle: "Answer Engine & Generative Optimization",
+      title: "AI SEO / AIO",
+      subtitle: "(Answer Engine Optimization & Generative Search Visibility)",
       whatItIs: [
-        "Optimizing presence in AI search results",
-        "Structuring content for direct AI answers",
-        "Using semantic search strategies",
-        "Leveraging automation + AI tools for insights",
-        "Aligning SEO with how people now ask AI",
+        "Optimizing content for AI-powered search and smart assistants",
+        "Shaping information so algorithms understand it better",
+        "Creating clear, structured, natural content for bots",
+        "Focusing on meaning and context over keywords",
+        "Answering questions quickly, sometimes without clicks",
+        "Grouping related topics to show depth",
+        "Using smart software for pattern recognition and automation",
+        "Gaining recognition when AI systems quote your material",
       ],
       whatItMatters: [
-        "AI results are replacing traditional clicks",
-        "Improves visibility in conversations",
-        "Future-proofs your business online",
-        "Captures customers earlier in their journey",
-        "Positions you as an authority in AI results",
+        "AI answers replace traditional search clicks",
+        "Brands are discovered in conversations, not just search results",
+        "Captures users earlier in decision-making journey",
+        "Future-proofs SEO strategy against algorithm/platform changes",
+        "Positions brand as authority trusted by AI systems",
       ],
     },
   ];
@@ -64,11 +71,10 @@ const SEOComparison = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-3">
-            Traditional SEO vs Local SEO vs AI SEO
+            Traditional SEO vs Local SEO vs AI SEO (AIO)
           </h2>
           <p className="text-white text-base md:text-lg">
-            See how each SEO type fuels growth and why every category is
-            mission-critical.
+            A complete, future-ready search optimization framework powered by enterprise seo services.  Gone are the days when searching meant just clicking blue lines at Google. Now people find companies by asking smart speakers, tapping maps, or getting instant replies from artificial brains online. One path does not cover it anymore.
           </p>
         </div>
 

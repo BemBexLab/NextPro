@@ -1,11 +1,11 @@
-"uee client"
-import { useContext} from 'react';
+"use client"
+import { useContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link'
 import { IoSunnyOutline } from "react-icons/io5";
 import { BsMoonStars } from "react-icons/bs";
 import { CiGlobe } from 'react-icons/ci'
-import { useTheme } from 'next-themes'
+// import { useTheme } from 'next-themes'
 
 import Email from '../../../../public/icons/email'
 import Call from '../../../../public/icons/call'
@@ -23,8 +23,8 @@ import { CountryContext } from '@/contextApi/countryProvider';
 
 
 const TopHeader = ({ color, bgColor, darkBg }) => {
-    const { theme, setTheme } = useTheme()
-    const  {selectCountry, setSelectCountry}  = useContext(CountryContext)
+    // const { theme, setTheme } = useTheme()
+    const { selectCountry, setSelectCountry } = useContext(CountryContext)
     // The color, darkBg and bgcolor props are inherited from the header three, and these properties are passed down to different children of the 
 
     return (
@@ -65,7 +65,7 @@ const TopHeader = ({ color, bgColor, darkBg }) => {
                                     theme === "dark" ? <span className={cn(`font-semibold ${color}`)}>Dark</span> : <span className={cn(`font-semibold ${color}`)}>Light</span>
                                 }
                             </div> */}
-                            
+
                         </div>
                         <p className='h-7.5 w-[1px] bg-accent dark:bg-[#717A83]'></p>
                         {/* language select option */}

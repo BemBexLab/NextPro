@@ -1,6 +1,6 @@
 "use client"
 import React, { useContext } from 'react'
-import { useTheme } from 'next-themes'
+// import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
@@ -26,7 +26,7 @@ import { CountryContext } from '@/contextApi/countryProvider'
 
 
 const Setting = () => {
-    const { theme, setTheme } = useTheme()
+    // const { theme, setTheme } = useTheme()
     const { selectCountry, setSelectCountry } = useContext(CountryContext)
 
     return (
