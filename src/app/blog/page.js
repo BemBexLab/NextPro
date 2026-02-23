@@ -1,7 +1,27 @@
 import React from 'react'
 import CardOne from '@/components/sections/blogs/cardOne'
 import PageTitle from '@/components/sections/pageTitle'
-import { blogData } from '@/lib/fackData/blogData'
+// Local blog data (title, image, and link URL)
+const blogData = [
+    {
+        id: 1,
+        title: 'Top 5 U.S.A Digital Marketing Agencies in 2026',
+        thumb: '/images/blog-images/7.-What-Makes-the-Best-Email-Marketing-Campaigns-Stand-Out.jpg',
+        author: 'Web Founders USA',
+        date: 'Feb 20, 2026',
+        category: 'Industry',
+        url: '/blog/top-usa-digital-marketing-agencies-in-2026'
+    },
+    {
+        id: 2,
+        title: 'How to Choose a Digital Marketing Agency (Complete 2026 Guide)',
+        thumb: '/images/blog-images/digital-marketing.webp',
+        author: 'Web Founders USA',
+        date: 'Feb 18, 2026',
+        category: 'Guides',
+        url: '/blog/how-to-choose-digital-marketing-agency'
+    }
+]
 import Link from 'next/link'
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
@@ -23,8 +43,8 @@ const Blog2 = () => {
                     {/* Optional: <PageTitle title="Our Blog" /> */}
                     <div className='grid grid-cols-1'>
                         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7.5'>
-                            {blogData.map(({ id, author, date, thumb, title, category }) => (
-                                <Link key={id} href={`/blog/top-usa-digital-marketing-agencies-in-2026`} className="block h-full">
+                            {blogData.map(({ id, author, date, thumb, title, category, url }) => (
+                                <Link key={id} href={url} className="block h-full">
                                     <CardOne
                                         id={id}
                                         title={title}
@@ -32,6 +52,7 @@ const Blog2 = () => {
                                         author={author}
                                         date={date}
                                         category={category}
+                                        url={url}
                                     />
                                 </Link>
                             ))}
