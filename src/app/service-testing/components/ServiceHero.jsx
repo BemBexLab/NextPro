@@ -12,15 +12,13 @@ const ServiceHero = () => {
       <div className="w-[92%] max-w-[1200px] mx-auto grid grid-cols-12 gap-8 items-start">
         <div className="col-span-12 lg:col-span-7 text-white">
           <h1 className="text-4xl font-bold mt-40 leading-tight drop-shadow-md">
-            Dominate Your Local Market With Expert Local SEO Services
+            Professional SEO Services Built on Strategy, Trust & Results - Web Founders USA
           </h1>
 
           <p className="mt-6 text-md md:text-xl max-w-[720px] text-slate-100/90">
-            Our local SEO services help your business win visibility in Google
-            Maps, rank higher in local search, and turn high-intent searches
-            into real calls and customers. With focused SEO, GEO, and AEO
-            strategies powered by AI insights, we position your brand ahead in
-            Maps and AI search, not just traditional rankings.
+            At Web Founders USA, every step we take is based on real results, not quick fixes. Our approach combines sharp SEO audit services with smart changes because growth means more than just rankings. It also means credibility, reach, and strength.
+            <br />
+            Imagine clearer online positioning, steady traffic growth, and a smarter site structure, all built without tricks. The work stays grounded in what lasts, whether it's fine-tuning product pages or guiding strategy through professional SEO services. You can make real changes by working hard, being open about how you do things, and planning ahead. That's how presence grows, not all at once, but little by little.
           </p>
 
           <div className="mt-8 flex gap-4">

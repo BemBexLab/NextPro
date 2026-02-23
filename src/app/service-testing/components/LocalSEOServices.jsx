@@ -5,39 +5,39 @@ const LocalSEOServices = () => {
   const services = [
     {
       icon: "/service-testing/keyword.png", // Replace with actual icon/image
-      title: "Keyword Research",
+      title: "Keyword Strategy",
       description:
-        "We identify local keywords using expert research and premium tools that bring customers.",
+        "We find the high-intent searches that your customers really use, and then we put the terms that will bring in steady calls, visits, and sales at the top of the list. This is great for professional SEO services and small business SEO services that want to grow.",
     },
     {
       icon: "/service-testing/seoaudit.png", // Replace with actual icon/image
-      title: "SEO Audit",
+      title: "Full SEO Audit",
       description:
-        "Our audits uncover technical gaps, competitor weaknesses, and hidden growth opportunities.",
+        "We do a thorough check of your site through SEO audit services to find things that are keeping it from ranking, missed chances, and gaps in your competitors' sites. Then we turn that information into an action plan that also helps with enterprise SEO services.",
     },
     {
       icon: "/service-testing/onpageseo.png", // Replace with actual icon/image
-      title: "On-Page SEO",
+      title: "On-Page SEO Optimization",
       description:
-        "We optimize pages with metas, headings, NLP content, and schema to rank higher and convert.",
+        "With on page SEO services and SEO copywriting services, we improve your pages by giving them better structure, smarter headings, internal links, and on-page signals. This helps Google understand your content and get more users to convert.",
     },
     {
       icon: "/service-testing/technicalseo.png", // Replace with actual icon/image
-      title: "Technical SEO",
+      title: "Technical SEO Fixes",
       description:
-        "We fix crawl errors, Core Web Vitals, and indexing issues, making sure Google discovers you first.",
+        "We fix crawl issues, indexing problems, site speed, Core Web Vitals, and architecture so that your website works the way it should. These are advanced technical SEO services backed by detailed SEO audit services that make your site easier to find.",
     },
     {
       icon: "/service-testing/linkbuilding.png", // Replace with actual icon/image
-      title: "Link Building",
+      title: "Authority & Link Growth",
       description:
-        "We earn high-authority backlinks from trusted local sources that build trust and long-term visibility.",
+        "We get quality mentions and backlinks from relevant sources to build trust, improve domain authority, and move competitive pages up. This is all part of our professional SEO services approach and long-term organic SEO services mindset, not spammy links.",
     },
     {
       icon: "/service-testing/contentmarketing.png", // Replace with actual icon/image
-      title: "Content Marketing",
+      title: "Content & SEO Copywriting",
       description:
-        "We create content ecosystems that dominate Google search and AI-driven results.",
+        "We create content that matches search intent and drives action: service pages, location pages, blogs, and landing pages, high-impact SEO copywriting services made for AI + Google results.",
     },
   ];
 
@@ -50,7 +50,7 @@ const LocalSEOServices = () => {
             The Foundation of Local Growth
           </p>
           <h2 className="text-4xl font-medium text-gray-900">
-            The Local SEO Services Every Winning Business Needs
+            SEO Services Built to Win Rankings, Traffic, and Customers
           </h2>
         </div>
 
