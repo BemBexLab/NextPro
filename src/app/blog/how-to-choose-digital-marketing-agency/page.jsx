@@ -147,10 +147,10 @@ export default function HowToChooseAgency() {
                         <p>A good <Link href="/service/digital-marketing" className="text-blue-600 underline">digital marketing agency</Link> should have case studies with real numbers, industry experience, clear before-and-after results, client testimonials, and proven process documentation.</p>
 
                         <div className="my-6 bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                            <h4 className="font-bold text-lg mb-3 flex items-center">
+                            <h3 className="font-bold text-lg mb-3 flex items-center">
                                 <span className="bg-black text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-2">!</span>
                                 What to Look for in Case Studies
-                            </h4>
+                            </h3>
                             <p className="mb-4 text-gray-700">Instead of vague claims like “We increased traffic,” look for:</p>
                             <InfoList items={[
                                 "Specific % growth metrics",
@@ -188,12 +188,12 @@ export default function HowToChooseAgency() {
                     </StepCard>
 
                     <StepCard number="6" title="Understand Pricing & Contracts">
-                        <h4 className="font-bold text-xl mb-4">How Much Does a Digital Marketing Agency Charge?</h4>
+                        <h3 className="font-bold text-xl mb-4">How Much Does a Digital Marketing Agency Charge?</h3>
                         <p className="mb-4">Pricing varies based on scope of services, market competition, agency expertise, and ad spend (if PPC).</p>
 
                         <div className="grid md:grid-cols-2 gap-6 mb-6">
                             <div>
-                                <h5 className="font-bold mb-2">Common Pricing Models</h5>
+                                <h4 className="font-bold mb-2">Common Pricing Models</h4>
                                 <ul className="space-y-2 text-gray-700">
                                     <li className="flex items-center"><CheckIcon /> Monthly retainer</li>
                                     <li className="flex items-center"><CheckIcon /> Project-based</li>
@@ -202,7 +202,7 @@ export default function HowToChooseAgency() {
                                 </ul>
                             </div>
                             <div>
-                                <h5 className="font-bold mb-2">Contract Essentials</h5>
+                                <h4 className="font-bold mb-2">Contract Essentials</h4>
                                 <ul className="space-y-2 text-gray-700">
                                     <li className="flex items-center"><CheckIcon /> Contract length</li>
                                     <li className="flex items-center"><CheckIcon /> Termination clause</li>

@@ -30,7 +30,7 @@ const ContactMap = () => {
                 icon={team_icon}
                 title={"Address"}
                 isIcon={false}
-                desc={"1014 Garner Rd SW, Lilburn,GA 30047, USA"}
+                desc={"3021 Peachtree Rd NW Atlanta, GA 30305, USA"}
               />
               <Card
                 icon={skills_icon}

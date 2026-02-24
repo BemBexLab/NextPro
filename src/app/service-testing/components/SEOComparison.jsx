@@ -52,8 +52,6 @@ const SEOComparison = () => {
         "Focusing on meaning and context over keywords",
         "Answering questions quickly, sometimes without clicks",
         "Grouping related topics to show depth",
-        "Using smart software for pattern recognition and automation",
-        "Gaining recognition when AI systems quote your material",
       ],
       whatItMatters: [
         "AI answers replace traditional search clicks",
@@ -95,7 +93,7 @@ const SEOComparison = () => {
               </div>
 
               {/* What it is Section - Takes remaining space */}
-              <div className="mb-8 lg:h-[340px]">
+              <div className="lg:mb-10 xl:mb-0 lg:h-[340px]">
                 <h4 className="text-xl font-bold mb-4">What it is:</h4>
                 <ul className="space-y-0">
                   {type.whatItIs.map((item, idx) => (
@@ -111,7 +109,7 @@ const SEOComparison = () => {
 
               {/* What it matters Section - At Bottom */}
               <div>
-                <h4 className="text-xl font-bold mb-4 mt-4">What it matters:</h4>
+                <h4 className="text-xl font-bold mb-4">What it matters:</h4>
                 <ul className="space-y-0">
                   {type.whatItMatters.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">

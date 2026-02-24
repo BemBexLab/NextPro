@@ -6,7 +6,7 @@ const SEOProcess = () => {
       number: "1",
       title: "Site + Market Audit",
       description:
-        "Start here - see it all laid out. Your spot right now, who else is playing, what's holding you back. Dive into real SEO work with technical SEO services: can search engines reach your pages? Are they saving them properly. What about those web performance markers people talk about in seo optimization services? Map every chance to move forward, both immediate fixes and moves that pay off later. No assumptions needed. A solid starting line shows up in full view.",
+        "Start here see it all laid out. Your spot right now, who else is playing, what's holding you back. Dive into real SEO work with technical SEO services can search engines reach your pages? Are they saving them properly. What about those web performance markers people talk about in seo optimization services? Map every chance to move forward, both immediate fixes and moves that pay off later. No assumptions needed. A solid starting line shows up in full view.",
     },
     {
       number: "2",
@@ -30,13 +30,13 @@ const SEOProcess = () => {
       number: "5",
       title: "Authority Building & Trust Signals",
       description:
-        "Start solid, then comes respect with organic seo services. With steady effort, real visibility grows - backed by genuine references and clear expertise. Pages rise when they're seen as reliable, guided by consistent signals instead of shortcuts. Strength builds slowly, but it lasts, just like with best seo services.",
+        "Start solid, then comes respect with organic seo services. With steady effort, real visibility grows backed by genuine references and clear expertise. Pages rise when they're seen as reliable, guided by consistent signals instead of shortcuts. Strength builds slowly, but it lasts, just like with best seo services.",
     },
     {
       number: "6",
       title: "Reporting, Learnings & Growth Loops",
       description:
-        "Month by month, signs point upward with seo optimization services - visitors grow, interest builds, outcomes take shape. What delivers gains focus. What falls short loses steam without needing a push. Reports tell the story behind our seo consulting services: effort matches outcome. Progress creeps forward, not in leaps but steady tweaks, reviewed again and again.",
+        "Month by month, signs point upward with seo optimization services visitors grow, interest builds, outcomes take shape. What delivers gains focus. What falls short loses steam without needing a push. Reports tell the story behind our seo consulting services: effort matches outcome. Progress creeps forward, not in leaps but steady tweaks, reviewed again and again.",
     },
   ];
 
