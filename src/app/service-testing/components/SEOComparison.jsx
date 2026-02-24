@@ -83,19 +83,19 @@ const SEOComparison = () => {
           {seoTypes.map((type, index) => (
             <div
               key={index}
-              className="bg-[#1a3a5c] rounded-2xl p-8 text-white"
+              className="bg-[#1a3a5c] rounded-2xl p-8 text-white flex flex-col"
             >
-              {/* Title Section */}
+              {/* Title Section - Fixed Height */}
               <div className="mb-8">
                 <h3 className="text-4xl text-center font-medium mb-3">
                   {type.title}
                 </h3>
-                <p className="text-base text-center mb-4">{type.subtitle}</p>
+                <p className="text-base text-center mb-4 min-h-[3rem] lg:min-h-[4rem]">{type.subtitle}</p>
                 <div className="w-12 h-0.5 bg-white mx-auto"></div>
               </div>
 
-              {/* What it is Section */}
-              <div className="mb-8">
+              {/* What it is Section - Takes remaining space */}
+              <div className="mb-8 lg:h-[340px]">
                 <h4 className="text-xl font-bold mb-4">What it is:</h4>
                 <ul className="space-y-0">
                   {type.whatItIs.map((item, idx) => (
@@ -109,9 +109,9 @@ const SEOComparison = () => {
                 </ul>
               </div>
 
-              {/* What it matters Section */}
+              {/* What it matters Section - At Bottom */}
               <div>
-                <h4 className="text-xl font-bold mb-4">What it matters:</h4>
+                <h4 className="text-xl font-bold mb-4 mt-4">What it matters:</h4>
                 <ul className="space-y-0">
                   {type.whatItMatters.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">

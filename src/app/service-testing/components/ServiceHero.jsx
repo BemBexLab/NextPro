@@ -3,7 +3,7 @@ import React from "react";
 const ServiceHero = () => {
   return (
     <section
-      className="w-full h-[730px] bg-cover bg-center bg-no-repeat py-20"
+      className="w-full min-h-[730px] bg-cover bg-center bg-no-repeat py-20"
       style={{
         backgroundImage:
           "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/service-testing/Local-SEO-Agency-LocalMighty.webp')",
@@ -11,14 +11,18 @@ const ServiceHero = () => {
     >
       <div className="w-[92%] max-w-[1200px] mx-auto grid grid-cols-12 gap-8 items-start">
         <div className="col-span-12 lg:col-span-7 text-white">
-          <h1 className="text-4xl font-bold mt-40 leading-tight drop-shadow-md">
+          <h1 className="text-4xl font-bold mt-10 leading-tight drop-shadow-md">
             Professional SEO Services Built on Strategy, Trust & Results - Web Founders USA
           </h1>
 
           <p className="mt-6 text-md md:text-xl max-w-[720px] text-slate-100/90">
-            At Web Founders USA, every step we take is based on real results, not quick fixes. Our approach combines sharp SEO audit services with smart changes because growth means more than just rankings. It also means credibility, reach, and strength.
+            At Web Founders USA, every step we take is based on real results, not quick fixes. Our approach combines sharp SEO audit services.
             <br />
-            Imagine clearer online positioning, steady traffic growth, and a smarter site structure, all built without tricks. The work stays grounded in what lasts, whether it's fine-tuning product pages or guiding strategy through professional SEO services. You can make real changes by working hard, being open about how you do things, and planning ahead. That's how presence grows, not all at once, but little by little.
+            <br />
+            Imagine clearer online positioning, steady traffic growth, and a smarter site structure, all built without tricks. The work stays grounded in what lasts, whether it's fine-tuning product pages or guiding strategy through professional SEO services. 
+            <br />
+            <br />
+            You can make real changes by working hard, being open about how you do things, and planning ahead. That's how presence grows, not all at once, but little by little.
           </p>
 
           <div className="mt-8 flex gap-4">
@@ -35,7 +39,7 @@ const ServiceHero = () => {
         </div>
 
         <aside className="col-span-12 mt-8 lg:col-span-5">
-          <div className="bg-[#F2F3F5] rounded-xl p-6 shadow-xl max-w-[420px] ml-auto">
+          <div className="bg-[#F2F3F5] rounded-xl p-6 shadow-xl max-w-[420px] mx-auto lg:ml-auto">
             <div className="grid grid-cols-2 gap-4">
               <input
                 className="col-span-1 p-3 rounded-md border border-gray-200 bg-white"

@@ -28,7 +28,7 @@ const StepCard = ({ number, title, children }) => (
             <span className="bg-black text-white text-xs font-bold px-2 py-1 rounded mr-3 uppercase tracking-wider">
                 Step {number}
             </span>
-            <h3 className="text-2xl font-bold text-black">{title}</h3>
+            <h2 className="text-2xl font-bold text-black">{title}</h2>
         </div>
         <div className="text-gray-800 leading-relaxed prose prose-lg max-w-none">
             {children}
@@ -87,7 +87,7 @@ export default function HowToChooseAgency() {
                                 </p>
 
                                 <div className="bg-gray-50 border-l-4 border-blue-600 p-4 my-6 rounded-r-lg">
-                                    <h4 className="font-bold text-black mb-2">Why Choosing the Right Agency Matters</h4>
+                                    <h2 className="font-bold text-black mb-2">Why Choosing the Right Agency Matters</h2>
                                     <p className="text-sm text-gray-700 mb-2">A professional agency should help you:</p>
                                     <ul className="text-sm space-y-1 text-gray-700">
                                         <li>• Increase qualified traffic</li>
@@ -124,19 +124,19 @@ export default function HowToChooseAgency() {
                         <p>Not all agencies are the same. Choose based on your specific needs:</p>
                         <div className="grid md:grid-cols-2 gap-6 my-6">
                             <div className="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                                <h4 className="font-bold text-lg mb-2">1. SEO Agency</h4>
+                                <h3 className="font-bold text-lg mb-2">1. SEO Agency</h3>
                                 <p className="text-gray-700 text-sm">Focuses on organic rankings and long-term traffic growth.</p>
                             </div>
                             <div className="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                                <h4 className="font-bold text-lg mb-2">2. PPC Agency</h4>
+                                <h3 className="font-bold text-lg mb-2">2. PPC Agency</h3>
                                 <p className="text-gray-700 text-sm">Manages paid ads like Google Ads and social media ads.</p>
                             </div>
                             <div className="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                                <h4 className="font-bold text-lg mb-2">3. Social Media Agency</h4>
+                                <h3 className="font-bold text-lg mb-2">3. Social Media Agency</h3>
                                 <p className="text-gray-700 text-sm">Handles content creation, engagement, and paid campaigns on social platforms.</p>
                             </div>
                             <div className="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                                <h4 className="font-bold text-lg mb-2">4. Full-Service Agency</h4>
+                                <h3 className="font-bold text-lg mb-2">4. Full-Service Agency</h3>
                                 <p className="text-gray-700 text-sm">Offers SEO, PPC, social media, content, <Link href="/service/email-marketing" className="text-blue-600 underline">email</Link>, and strategy under one roof.</p>
                             </div>
                         </div>
@@ -320,7 +320,7 @@ export default function HowToChooseAgency() {
                     <p className="text-gray-600 mb-8">Ready to see who made our top list for 2026?</p>
 
                     <Link
-                        href="/"
+                        href="/blog/top-usa-digital-marketing-agencies-in-2026"
                         className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-[#072D7F] rounded-lg hover:bg-transparent hover:text-[#072D7F] border-2 border-[#072D7F] transition-colors duration-200 shadow-lg"
                     >
                         View Top 5 U.S.A Digital Marketing Agencies in 2026
