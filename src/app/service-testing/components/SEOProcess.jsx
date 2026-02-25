@@ -31,14 +31,14 @@ const SEOProcess = () => {
           action. We offer{" "}
           <a
             href="/service/seo-services/shopify-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             shopify seo services
           </a>{" "}
-          for collections and products if you're on <a href="/service/seo-services/ecommerce-seo/" className="hover:text-blue-800 hover:underline" target="_blank" rel="noopener noreferrer">eCommerce</a>. If you're on CMS,
-          we offer <a href="/service/seo-services/wordpress-seo/" className="hover:text-blue-800 hover:underline" target="_blank" rel="noopener noreferrer">wordpress seo services</a> that are built for clean structure and
+          for collections and products if you're on <a href="/service/seo-services/ecommerce-seo/" className="text-blue-800 hover:underline"  rel="noopener noreferrer">eCommerce</a>. If you're on CMS,
+          we offer <a href="/service/seo-services/wordpress-seo/" className="text-blue-800 hover:underline"  rel="noopener noreferrer">wordpress seo services</a> that are built for clean structure and
           growth.
         </>
       ),

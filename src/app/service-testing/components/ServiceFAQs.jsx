@@ -17,8 +17,8 @@ const ServiceFAQs = () => {
           We offer professional{" "}
           <a
             href="/service/seo-services/b2b-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             b2b seo services
@@ -26,8 +26,8 @@ const ServiceFAQs = () => {
           and{" "}
           <a
             href="/service/seo-services/dental-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             dental seo services
@@ -35,8 +35,8 @@ const ServiceFAQs = () => {
           for businesses in the{" "}
           <a
             href="/service/seo-services/healthcare-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             health
@@ -44,8 +44,8 @@ const ServiceFAQs = () => {
           ,{" "}
           <a
             href="/service/seo-services/dental-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             dental
@@ -53,8 +53,8 @@ const ServiceFAQs = () => {
           , law,{" "}
           <a
             href="/service/seo-services/b2b-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             B2B
@@ -62,8 +62,8 @@ const ServiceFAQs = () => {
           ,{" "}
           <a
             href="/service/seo-services/ecommerce-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             eCommerce
@@ -71,8 +71,8 @@ const ServiceFAQs = () => {
           ,{" "}
           <a
             href="/service/seo-services/shopify-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             shopify
@@ -80,8 +80,8 @@ const ServiceFAQs = () => {
           ,{" "}
           <a
             href="/service/seo-services/wordpress-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             WordPress
@@ -89,8 +89,8 @@ const ServiceFAQs = () => {
           ,{" "}
           <a
             href="/service/seo-services/hotel-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             hotels
@@ -98,8 +98,8 @@ const ServiceFAQs = () => {
           ,{" "}
           <a
             href="/service/seo-services/automotive-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             automotive
@@ -107,8 +107,8 @@ const ServiceFAQs = () => {
           ,{" "}
           <a
             href="/service/seo-services/construction-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             construction
@@ -134,8 +134,8 @@ const ServiceFAQs = () => {
           Surely! Each platform's SEO services are personalized for Shopify,{" "}
           <a
             href="/service/seo-services/wordpress-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             WordPress
@@ -143,8 +143,8 @@ const ServiceFAQs = () => {
           ,{" "}
           <a
             href="/service/seo-services/woocommerce-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             WooCommerce
@@ -152,8 +152,8 @@ const ServiceFAQs = () => {
           , and{" "}
           <a
             href="/service/seo-services/bigcommerce-seo/"
-            className="hover:text-blue-800 hover:underline"
-            target="_blank"
+            className="text-blue-800 hover:underline"
+            
             rel="noopener noreferrer"
           >
             BigCommerce
