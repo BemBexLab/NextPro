@@ -13,7 +13,7 @@ const LocalSEOServices = () => {
       icon: "/service-testing/seoaudit.png", // Replace with actual icon/image
       title: "Full SEO Audit",
       description:
-        "We do a thorough check of your site through SEO audit services to find things that are keeping it from ranking, missed chances, and gaps in your competitors' sites. Then we turn that information into an action plan that also helps with enterprise SEO services.",
+        (<>We do a thorough check of your site through <a href="/service/seo-services/seo-audit/" className="text-blue-800 hover:underline" rel="noopener noreferrer">SEO audit services</a> to find things that are keeping it from ranking, missed chances, and gaps in your competitors' sites. Then we turn that information into an action plan that also helps with enterprise SEO services.</>),
     },
     {
       icon: "/service-testing/onpageseo.png", // Replace with actual icon/image

@@ -12,14 +12,12 @@ const ExpertsPage = () => {
       <div className="w-[92%] max-w-[1200px] mx-auto">
         {/* Heading */}
         <h2 className="text-center text-4xl md:text-5xl font-medium text-[#0b63b8] mb-6">
-          Local SEO That Brings Nearby Customers
+          SEO That Brings Nearby Customers
         </h2>
 
         {/* Description */}
         <p className="text-center text-gray-600 text-md max-w-[900px] mx-auto mb-12">
          Getting seen online does not require fancy tricks for small shops. The important thing is to appear when neighbors search in the area, which is exactly what small business SEO services focus on. Simple steps work better than complicated plans. Real outcomes, stable rates, and no extended contracts are what you can expect from some suppliers. 
-         <br />
-         When listings show up clearly on maps, visibility increases. Rankings rise by focusing on what locals actually type into search bars. Customers arrive faster once details like hours and location stay accurate. Trust builds through consistency, not ads. Simple changes often lead to phone rings within days. Being found at the right moment beats expensive campaigns every time.
         </p>
 
         {/* Certification Cards */}

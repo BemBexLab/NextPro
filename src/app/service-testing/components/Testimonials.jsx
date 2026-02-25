@@ -8,45 +8,59 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote:
-        "Great experience and saw our SEO soar with my impressions and getting more leads through ChatGPT now through search!",
-      image: "/testimonials/stephen.jpg", // Replace with actual image path
-      name: "Stephen",
-      title: "Founder & CEO of Solar Business",
+        "We doubled qualified leads in three months after the LocalMighty SEO sprint — organic traffic grew 132% and our contact form conversions tripled.",
+      image: "/service-testing/testimonials/17719507759cb7.png",
+      name: "Stephen Ramos",
+      title: "Founder & CEO, SunBright Solar",
     },
     {
       quote:
-        "Great experience. LocalMighty and the team helped our business grow online, and I truly appreciate their dedication and hard work. Thank you.",
-      image: "/testimonials/dr-lloyd.jpg", // Replace with actual image path
-      name: "Dr. Lloyd K",
-      title: "Founder & CEO of Dental Clinic",
+        "Local-first SEO and Google Business optimization brought a steady stream of new patients. Online bookings increased 45% and phone calls are up 60%.",
+      image: "/service-testing/testimonials/17719509296cd5.png",
+      name: "Dr. Lloyd Kim",
+      title: "Founder & CEO, SmileWorks Dental",
     },
     {
       quote:
-        "Great experience. LocalMighty delivered creative SEO strategies, high-quality backlinks, and content that truly improved our rankings.",
-      image: "/testimonials/robert.jpg", // Replace with actual image path
-      name: "Robert P",
-      title: "Marketing Director at Real Estate",
+        "Their content and link strategy moved us onto page one for several competitive terms. We closed 8 new listings attributed directly to organic leads.",
+      image: "/service-testing/testimonials/Frame66.webp",
+      name: "Robert Patel",
+      title: "Marketing Director, BlueRock Realty",
     },
     {
       quote:
-        "LocalMighty helped us so much! We are grateful for their expertise and skills—truly thankful for their support!",
-      image: "/testimonials/dr-berg.jpg", // Replace with actual image path
-      name: "Dr Berg",
-      title: "Founder & CEO of Dr. Berg",
+        "The local SEO program made a measurable difference — more foot traffic, better visibility on Maps, and a clear uplift in patient referrals.",
+      image: "/service-testing/testimonials/Frame661.webp",
+      name: "Dr. Ingrid Berg",
+      title: "Founder & CEO, Berg Clinic",
     },
     {
       quote:
-        "LocalMighty exceeded expectations! My new service-based website is climbing search rankings consistently.",
-      image: "/testimonials/ryan.jpg", // Replace with actual image path
-      name: "Ryan P",
-      title: "Founder & CEO of Cleaning Business",
+        "After GMB optimization and local keyword work our weekly inbound calls grew 80% and booking rate improved. Highly recommend for service businesses.",
+      image: "/service-testing/testimonials/review3.webp",
+      name: "Ryan Parker",
+      title: "Founder & CEO, SparkClean Services",
     },
     {
       quote:
-        "The team was professional. They excelled in their work on my SEO and elevated my business to the first page of Google.",
-      image: "/testimonials/nicole.jpg", // Replace with actual image path
-      name: "Nicole",
-      title: "Attorney & Founder of Law Firm",
+        "Focused SEO and onboarding content helped our law practice appear for the right searches — quality consultations increased and client acquisition costs dropped.",
+      image: "/service-testing/testimonials/17719507759cb7.png",
+      name: "Nicole Alvarez",
+      title: "Managing Partner, Sterling Law",
+    },
+    {
+      quote:
+        "E‑commerce growth was immediate after their on-page fixes and product schema updates — conversion rate improved and average order value increased 18%.",
+      image: "/service-testing/testimonials/17719509296cd5.png",
+      name: "Maya Hernandez",
+      title: "Ecommerce Manager, CozyHome",
+    },
+    {
+      quote:
+        "We started ranking for local search terms in weeks and saw more lunchtime customers than ever — revenue from local search is now a core channel for us.",
+      image: "/service-testing/testimonials/Frame66.webp",
+      name: "Carlos Martinez",
+      title: "Owner, FreshBite Café",
     },
   ];
 
@@ -141,11 +155,10 @@ const Testimonials = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
                   ? "bg-[#0B5FCC] w-8"
                   : "bg-gray-300 hover:bg-gray-400"
-              }`}
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}

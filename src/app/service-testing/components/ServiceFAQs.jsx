@@ -10,32 +10,164 @@ const ServiceFAQs = () => {
   };
 
   const faqs = [
-  {
-    question: "Which industries do you serve?",
-    answer:
-      "We offer professional b2b seo services and dental seo services for businesses in the health, dental, law, B2B, eCommerce, Shopify, WordPress, hotels, automotive, construction, SaaS, and other areas.",
-  },
-  {
-    question: "How long before SEO shows results?",
-    answer:
-      "Most businesses get to see some kind of improvement in a few months, depending on how much competition there is and how healthy the website is.",
-  },
-  {
-    question: "Do you offer services for small businesses?",
-    answer:
-      "That's right! Our small business seo services and affordable local seo service are all about providing you with effective solutions.",
-  },
-  {
-    question: "Can you optimize Shopify, WordPress, or WooCommerce websites?",
-    answer:
-      "Surely! Each platform's SEO services are personalized for Shopify, WordPress, WooCommerce, and BigCommerce.",
-  },
-  {
-    question: "Do you provide agency support?",
-    answer:
-      "Yes, the support that we offer to the agencies and partners comes in the form of white label SEO services, private label SEO services, and SEO consulting services for seamless collaboration with the agencies.",
-  },
-];
+    {
+      question: "Which industries do you serve?",
+      answer: (
+        <>
+          We offer professional{" "}
+          <a
+            href="/service/seo-services/b2b-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            b2b seo services
+          </a>{" "}
+          and{" "}
+          <a
+            href="/service/seo-services/dental-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            dental seo services
+          </a>{" "}
+          for businesses in the{" "}
+          <a
+            href="/service/seo-services/healthcare-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            health
+          </a>
+          ,{" "}
+          <a
+            href="/service/seo-services/dental-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            dental
+          </a>
+          , law,{" "}
+          <a
+            href="/service/seo-services/b2b-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            B2B
+          </a>
+          ,{" "}
+          <a
+            href="/service/seo-services/ecommerce-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            eCommerce
+          </a>
+          ,{" "}
+          <a
+            href="/service/seo-services/shopify-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            shopify
+          </a>
+          ,{" "}
+          <a
+            href="/service/seo-services/wordpress-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            WordPress
+          </a>
+          ,{" "}
+          <a
+            href="/service/seo-services/hotel-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            hotels
+          </a>
+          ,{" "}
+          <a
+            href="/service/seo-services/automotive-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            automotive
+          </a>
+          ,{" "}
+          <a
+            href="/service/seo-services/construction-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            construction
+          </a>
+          , SaaS, and other areas.
+        </>
+      ),
+    },
+    {
+      question: "How long before SEO shows results?",
+      answer:
+        "Most businesses get to see some kind of improvement in a few months, depending on how much competition there is and how healthy the website is.",
+    },
+    {
+      question: "Do you offer services for small businesses?",
+      answer:
+        "That's right! Our small business seo services and affordable local seo service are all about providing you with effective solutions.",
+    },
+    {
+      question: "Can you optimize Shopify, WordPress, or WooCommerce websites?",
+      answer: (
+        <>
+          Surely! Each platform's SEO services are personalized for Shopify,{" "}
+          <a
+            href="/service/seo-services/wordpress-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            WordPress
+          </a>
+          ,{" "}
+          <a
+            href="/service/seo-services/woocommerce-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            WooCommerce
+          </a>
+          , and{" "}
+          <a
+            href="/service/seo-services/bigcommerce-seo/"
+            className="text-blue-800 hover:underline"
+            
+            rel="noopener noreferrer"
+          >
+            BigCommerce
+          </a>
+          .
+        </>
+      ),
+    },
+    {
+      question: "Do you provide agency support?",
+      answer:
+        "Yes, the support that we offer to the agencies and partners comes in the form of white label SEO services, private label SEO services, and SEO consulting services for seamless collaboration with the agencies.",
+    },
+  ];
   return (
     <section>
       <style>

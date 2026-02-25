@@ -1,8 +1,8 @@
-import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
+import { getPrisma } from "@/lib/prisma";
 
 export async function POST(request) {
   try {
+    const prisma = await getPrisma();
     const { ids } = await request.json();
     if (!Array.isArray(ids) || ids.length === 0) {
       return Response.json({ error: 'No IDs provided' }, { status: 400 });

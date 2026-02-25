@@ -3,13 +3,13 @@
 export const dynamic = "force-dynamic";
 
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
-const prisma = new PrismaClient();
+import { getPrisma } from "@/lib/prisma";
 
 export async function GET() {
   console.log("API: /api/get-form-data called");
 
   try {
+    const prisma = await getPrisma();
     const submissions = await prisma.submission.findMany({
       orderBy: { createdAt: 'desc' },
       select: {

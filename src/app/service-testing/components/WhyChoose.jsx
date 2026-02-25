@@ -1,6 +1,15 @@
 import React from "react";
 
 const WhyChoose = () => {
+  const features = [
+    { text: "SEO Experts Certified for Real Results", color: "bg-[#0052cc]" },
+    { text: "Proven Success Backed by Data", color: "bg-[#ff0000]" },
+    { text: "Clear Reports with Continuous Improvements", color: "bg-[#fbbc05]" },
+    { text: "SEO Strategies Customized for Your Audience", color: "bg-[#0052cc]" },
+    { text: "Personal SEO Manager for Dedicated Support", color: "bg-[#00875a]" },
+    { text: "Reliable Partners Committed to Your Growth", color: "bg-[#ff0000]" },
+  ];
+
   return (
     <section className="w-full bg-white py-20">
       <div className="w-[92%] max-w-[1400px] mx-auto">
@@ -12,8 +21,8 @@ const WhyChoose = () => {
         </div>
 
         {/* Content Paragraphs */}
-        <div className="max-w-7xl mx-auto">
-          <div className="space-y-6 text-gray-700 text-[16px] leading-relaxed">
+        <div className="max-w-7xl mx-auto mb-16">
+          <div className="space-y-6 text-gray-700 text-[16px] leading-relaxed text-center">
             <p>
               Fixing errors lifts rankings fast with focused on page seo
               services. Spotting hidden problems on your site uncovers roadblocks
@@ -25,23 +34,24 @@ const WhyChoose = () => {
               action through steady organic seo services. No tricks, just hard
               work behind the scenes.
             </p>
-
-            <p>
-              To make choices, you need to know what people are actually looking
-              for, not just what they think with the help of seo consulting
-              services. Choices change depending on what competitors do, which
-              helps keep goals clear and on track.
-            </p>
-
-            <p>
-              The method follows the rules: no shortcuts, only strong pages that
-              get attention through seo optimization services. Words are
-              important, structure is important, and links grow slowly but
-              safely. Metrics like loading time affect design, and paths through
-              sites feel natural. More clicks come in when the flow is better,
-              and rankings go up without tricks.
-            </p>
           </div>
+        </div>
+
+        {/* --- Image Feature Cards Section --- */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {features.map((item, index) => (
+            <div 
+              key={index} 
+              className="bg-[#F8F9FA] p-6 rounded-lg flex items-start shadow-sm border border-gray-50 h-full"
+            >
+              {/* Vertical Color Bar */}
+              <div className={`w-1 h-full min-h-[60px] ${item.color} mr-4 shrink-0`} />
+              
+              <p className="text-[#3c4043] text-sm font-normal leading-snug self-center">
+                {item.text}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
