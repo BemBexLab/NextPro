@@ -19,13 +19,13 @@ const ServiceHero = () => {
 
           <p className="mt-6 text-md md:text-xl max-w-[720px] text-slate-100/90">
             At Web Founders USA, every step we take is based on real results,
-            not quick fixes. Our approach combines sharp SEO audit services.
+            not quick fixes. Our approach combines sharp <strong>SEO audit services</strong>.
             <br />
             <br />
             Imagine clearer online positioning, steady traffic growth, and a
             smarter site structure, all built without tricks. The work stays
             grounded in what lasts, whether it's fine-tuning product pages or
-            guiding strategy through professional SEO services.
+            guiding strategy through professional <strong>SEO services</strong>.
             <br />
             <br />
             You can make real changes by working hard, being open about how you

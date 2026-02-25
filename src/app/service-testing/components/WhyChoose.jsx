@@ -24,14 +24,13 @@ const WhyChoose = () => {
         <div className="max-w-7xl mx-auto mb-16">
           <div className="space-y-6 text-gray-700 text-[16px] leading-relaxed text-center">
             <p>
-              Fixing errors lifts rankings fast with focused on page seo
-              services. Spotting hidden problems on your site uncovers roadblocks
+              Fixing errors lifts rankings fast with focused <strong>on page seo services</strong>. Spotting hidden problems on your site uncovers roadblocks
               holding things back. Start with small changes - they deliver
               speedier outcomes without delay. Pages that run smoother pull in
               more visitors naturally. Progress shows when layout makes sense
               plus words say exactly what matters. People stay longer if they
               find what they need. Over time, interest naturally turns into
-              action through steady organic seo services. No tricks, just hard
+              action through steady <strong>organic seo services</strong>. No tricks, just hard
               work behind the scenes.
             </p>
           </div>
