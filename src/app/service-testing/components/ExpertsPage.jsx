@@ -46,7 +46,7 @@ const ExpertsPage = () => {
               Real SEO Results Not Just Rankings
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              We do SEO services that get you real money, qualified leads, and steady traffic, not just pretty reports. We offer professional SEO services to both small and large businesses that can grow with them. With our organic SEO services, we want to help your site grow over time. With our on-page SEO services, we want to make it easier to use. And with our technical SEO services, we want to make it better.
+              We do <strong>SEO services</strong> that get you real money, qualified leads, and steady traffic, not just pretty reports. We offer <strong>professional SEO services</strong> to both small and large businesses that can grow with them. With our organic SEO services, we want to help your site grow over time. With our on-page SEO services, we want to make it easier to use. And with our technical SEO services, we want to make it better.
             </p>
           </div>
 

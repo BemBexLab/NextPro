@@ -72,7 +72,7 @@ const SEOComparison = () => {
             Traditional SEO vs Local SEO vs AI SEO (AIO)
           </h2>
           <p className="text-white text-base md:text-lg">
-            A complete, future-ready search optimization framework powered by enterprise seo services.  Gone are the days when searching meant just clicking blue lines at Google. Now people find companies by asking smart speakers, tapping maps, or getting instant replies from artificial brains online. One path does not cover it anymore.
+            A complete, future-ready search optimization framework powered by <strong>enterprise seo services</strong>.  Gone are the days when searching meant just clicking blue lines at Google. Now people find companies by asking smart speakers, tapping maps, or getting instant replies from artificial brains online. One path does not cover it anymore.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ const SEOComparison = () => {
                 <h3 className="text-4xl text-center font-medium mb-3">
                   {type.title}
                 </h3>
-                <p className="text-base text-center mb-4 min-h-[3rem] lg:min-h-[4rem]">{type.subtitle}</p>
+                <p className="text-base text-center font-semibold mb-4 min-h-[3rem] lg:min-h-[4rem]">{type.subtitle}</p>
                 <div className="w-12 h-0.5 bg-white mx-auto"></div>
               </div>
 

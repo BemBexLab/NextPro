@@ -5,55 +5,92 @@ const SEOProcess = () => {
     {
       number: "1",
       title: "Site + Market Audit",
-      description:
-        "Start here see it all laid out. Your spot right now, who else is playing, what's holding you back. Dive into real SEO work with technical SEO services can search engines reach your pages? Are they saving them properly. What about those web performance markers people talk about in seo optimization services? Map every chance to move forward, both immediate fixes and moves that pay off later. No assumptions needed. A solid starting line shows up in full view.",
+      description: (
+        <>
+          Start here see it all laid out. Your spot right now, who else is
+          playing, what's holding you back. Dive into real SEO work with
+          <strong>technical SEO services:</strong> can search engines reach your
+          pages? Are they saving them properly. What about those web performance
+          markers people talk about in{" "}
+          <strong>seo optimization services</strong>? Map every chance to move
+          forward, both immediate fixes and moves that pay off later. No
+          assumptions needed. A solid starting line shows up in full view.
+        </>
+      ),
     },
     {
       number: "2",
       title: "SEO Roadmap & Playbooks",
-      description:
-        "After that comes the strategy shaped by our findings through seo consulting services. This plan lays out your content path while defining solid targets for on page seo services work. Whether you run a tiny shop or a large team, everything remains structured and trackable without confusion.",
+      description: (
+        <>
+          After that comes the strategy shaped by our findings through <strong>seo consulting services</strong>. This plan lays out your content path while
+          defining solid targets for <strong>on page seo services</strong>. Whether you run
+          a tiny shop or a large team, everything remains structured and
+          trackable without confusion.
+        </>
+      ),
     },
     {
       number: "3",
       title: "Execution Sprints",
-      description:
-        "Because speed keeps changing, steps stay small and quick in our organic seo services approach. Testing happens quickly, updates come out quickly, performance is closely watched, and changes are made based on what works. Better topic matches and smarter links within pages appear through focused on page seo services, and the purpose lines up more closely. This makes natural search support more solid, which increases visibility where it matters most. Each result immediately affects the next move.",
+      description: (
+        <>
+          Because speed keeps changing, steps stay small and quick in our <strong>organic seo services</strong> approach. Testing happens quickly, updates come out quickly, performance is closely watched, and changes are made based on what works. Better topic matches and smarter links within pages appear through focused <strong>on page seo services</strong>, and the purpose lines up more closely. This makes natural search support more solid, which increases visibility where it matters most. Each result immediately affects the next move.
+        </>
+      ),
     },
     {
       number: "4",
       title: "Content That Ranks & Converts",
       description: (
         <>
-          If visitors don't buy, rankings don't matter. We use seo copywriting
-          services to make landing pages, service pages, and supporting articles
+          If visitors don't buy, rankings don't matter. We use <strong>seo copywriting services</strong> to make landing pages, service pages, and supporting articles
           that match what people are really looking for and get them to take
           action. We offer{" "}
           <a
             href="/service/seo-services/shopify-seo/"
-            className="text-blue-800 hover:underline"
-            
+            className="text-blue-800 font-bold hover:underline"
             rel="noopener noreferrer"
           >
             shopify seo services
           </a>{" "}
-          for collections and products if you're on <a href="/service/seo-services/ecommerce-seo/" className="text-blue-800 hover:underline"  rel="noopener noreferrer">eCommerce</a>. If you're on CMS,
-          we offer <a href="/service/seo-services/wordpress-seo/" className="text-blue-800 hover:underline"  rel="noopener noreferrer">wordpress seo services</a> that are built for clean structure and
-          growth.
+          for collections and products if you're on{" "}
+          <a
+            href="/service/seo-services/ecommerce-seo/"
+            className="text-blue-800 hover:underline"
+            rel="noopener noreferrer"
+          >
+            eCommerce
+          </a>
+          . If you're on CMS, we offer{" "}
+          <a
+            href="/service/seo-services/wordpress-seo/"
+            className="text-blue-800 font-bold hover:underline"
+            rel="noopener noreferrer"
+          >
+            wordpress seo services
+          </a>{" "}
+          that are built for clean structure and growth.
         </>
       ),
     },
     {
       number: "5",
       title: "Authority Building & Trust Signals",
-      description:
-        "Start solid, then comes respect with organic seo services. With steady effort, real visibility grows backed by genuine references and clear expertise. Pages rise when they're seen as reliable, guided by consistent signals instead of shortcuts. Strength builds slowly, but it lasts, just like with best seo services.",
+      description: (
+        <>
+          Start solid, then comes respect with <strong>organic seo services</strong>. With steady effort, real visibility grows backed by genuine references and clear expertise. Pages rise when they're seen as reliable, guided by consistent signals instead of shortcuts. Strength builds slowly, but it lasts, just like with <strong>best seo services</strong>.
+        </>
+      ),
     },
     {
       number: "6",
       title: "Reporting, Learnings & Growth Loops",
-      description:
-        "Month by month, signs point upward with seo optimization services visitors grow, interest builds, outcomes take shape. What delivers gains focus. What falls short loses steam without needing a push. Reports tell the story behind our seo consulting services: effort matches outcome. Progress creeps forward, not in leaps but steady tweaks, reviewed again and again.",
+      description: (
+        <>
+          Month by month, signs point upward with <strong>seo optimization services</strong> visitors grow, interest builds, outcomes take shape. What delivers gains focus. What falls short loses steam without needing a push. Reports tell the story behind our <strong>seo consulting services</strong>: effort matches outcome. Progress creeps forward, not in leaps but steady tweaks, reviewed again and again.
+        </>
+      ),
     },
   ];
 
