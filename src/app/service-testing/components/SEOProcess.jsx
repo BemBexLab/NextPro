@@ -23,8 +23,25 @@ const SEOProcess = () => {
     {
       number: "4",
       title: "Content That Ranks & Converts",
-      description:
-        "If visitors don't buy, rankings don't matter. We use seo copywriting services to make landing pages, service pages, and supporting articles that match what people are really looking for and get them to take action. We offer shopify seo services for collections and products if you're on eCommerce. If you're on CMS, we offer wordpress seo services that are built for clean structure and growth.",
+      description: (
+        <>
+          If visitors don't buy, rankings don't matter. We use seo copywriting
+          services to make landing pages, service pages, and supporting articles
+          that match what people are really looking for and get them to take
+          action. We offer{" "}
+          <a
+            href="/service/seo-services/shopify-seo/"
+            className="hover:text-blue-800 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            shopify seo services
+          </a>{" "}
+          for collections and products if you're on <a href="/service/seo-services/ecommerce-seo/" className="hover:text-blue-800 hover:underline" target="_blank" rel="noopener noreferrer">eCommerce</a>. If you're on CMS,
+          we offer <a href="/service/seo-services/wordpress-seo/" className="hover:text-blue-800 hover:underline" target="_blank" rel="noopener noreferrer">wordpress seo services</a> that are built for clean structure and
+          growth.
+        </>
+      ),
     },
     {
       number: "5",
