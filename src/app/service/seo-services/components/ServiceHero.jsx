@@ -35,10 +35,10 @@ const ServiceHero = () => {
 
           <div className="mt-8 flex gap-4">
             <Link
-              href="/contact"
+              href="/contact-us"
               className="bg-[#0b63b8] hover:bg-[#075aa6] text-white font-semibold px-6 py-3 rounded-lg shadow"
             >
-              See Results
+              Contact Us
               <span className="ml-3 inline-block">&gt;</span>
             </Link>
 
@@ -46,7 +46,7 @@ const ServiceHero = () => {
               href="/about-us"
               className="border border-white/40 text-white px-6 py-3 rounded-lg backdrop-blur-sm"
             >
-              Why Us
+              About Us
               <span className="ml-3 inline-block">&gt;</span>
             </Link>
           </div>
@@ -88,12 +88,12 @@ const ServiceHero = () => {
 
             <div className="mt-4">
               <textarea
-                className="w-full p-3 rounded-md border border-gray-200 bg-white h-28"
+                className="w-full p-3 rounded-md border border-gray-200 bg-white h-[50px]"
                 placeholder="Message"
               />
             </div>
 
-            <div className="mt-4 border rounded-md p-3 flex items-center justify-between">
+            {/* <div className="mt-4 border rounded-md p-3 flex items-center justify-between">
               <label className="flex items-center gap-3">
                 <input
                   type="checkbox"
@@ -105,9 +105,9 @@ const ServiceHero = () => {
               <div className="w-24 h-12 bg-gray-100 flex items-center justify-center text-xs text-gray-500">
                 reCAPTCHA
               </div>
-            </div>
+            </div> */}
 
-            <button className="mt-5 w-full bg-[#0b63b8] text-white py-3 rounded-full font-semibold">
+            <button className="mt-20 w-full bg-[#0b63b8] text-white py-3 rounded-full font-semibold">
               Send
             </button>
           </div>

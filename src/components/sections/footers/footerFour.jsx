@@ -15,9 +15,9 @@ const FooterFour = () => {
                     <div className='grid xl:grid-cols-[auto_65%] lg:grid-cols-[auto_60%] grid-cols-1 gap-x-7 justify-between'>
                         <div>
 
-                            <h3 className='text-1xl font-semibold text-muted-foreground lg:pb-7.5 pb-3 text-white'>About</h3>
+                            {/* <h3 className='text-1xl font-semibold text-muted-foreground lg:pb-7.5 pb-3 text-white'>About</h3> */}
 
-                            <p className='pb-[38px] text-white'>Award Winning Digital Marketing Agency - Web Founders USA</p>
+                            <p className='pb-[38px] text-sm text-white'>Web Founders USA - The No.1 Award-Winning Digital Marketing Agency in the USA. We Don’t Just Market - We Build Digital Empires.</p>
                             <SocialIcons color={"text-white"} hoverColor={"hover:text-white"} />
                         </div>
                         <div>
