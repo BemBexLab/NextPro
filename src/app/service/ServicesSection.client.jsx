@@ -22,6 +22,19 @@ const ServicesSection = () => {
   return (
     <section className="bg-white text-white px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <div className="max-w-7xl mx-auto">
+        {/* BreadCrumbs */}
+        <nav aria-label="Breadcrumb" className="mb-8">
+          <ol className="flex items-center gap-2 text-sm text-gray-600">
+            <li>
+              <Link href="/" className="hover:text-[#072d7f] transition-colors">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden="true">{">"}</li>
+            <li className="font-medium text-[#072d7f]">Service</li>
+          </ol>
+        </nav>
+
         {/* Header */}
         <motion.div
           className="text-center mb-12 md:mb-20"

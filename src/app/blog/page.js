@@ -26,7 +26,7 @@ import Link from 'next/link'
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
-    title: "BLOG  | Web Founders USA",
+    title: "Blog  - Web Founders USA",
     description: "Read the Web Founders USA blog for expert insights, tips, and strategies on SEO, web design, and digital marketing growth.",
 
     robots: {
@@ -60,7 +60,7 @@ const Blog2 = () => {
                     </div>
                 </div>
             </div>
-            <ContactFormTwo />
+            {/* <ContactFormTwo /> */}
         </main>
     )
 }

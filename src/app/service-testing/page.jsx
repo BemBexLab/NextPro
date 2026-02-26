@@ -1,15 +1,16 @@
 import React from "react";
-import ServiceHero from "./components/ServiceHero";
-import ExpertsPage from "./components/ExpertsPage";
-import OurPartners from "./components/OurPartners";
-import LocalSEOServices from "./components/LocalSEOServices";
-import AIDiscoveryChannels from "./components/AIDiscoveryChannels";
-import SEOProcess from "./components/SEOProcess";
-import SuccessStories from "./components/SuccessStories";
-import WhyChoose from "./components/WhyChoose";
-import SEOComparison from "./components/SEOComparison";
-import Testimonials from "./components/Testimonials";
-import ClaimFreeCall from "./components/ClaimFreeCall";import ServiceFAQs from "./components/ServiceFAQs";
+import ServiceHero from "../service/seo-services/components/ServiceHero";
+import ExpertsPage from "../service/seo-services/components/ExpertsPage";
+import OurPartners from "../service/seo-services/components/OurPartners";
+import LocalSEOServices from "../service/seo-services/components/LocalSEOServices";
+import AIDiscoveryChannels from "../service/seo-services/components/AIDiscoveryChannels";
+import SEOProcess from "../service/seo-services/components/SEOProcess";
+import SuccessStories from "../service/seo-services/components/SuccessStories";
+import WhyChoose from "../service/seo-services/components/WhyChoose";
+import SEOComparison from "../service/seo-services/components/SEOComparison";
+import Testimonials from "../service/seo-services/components/Testimonials";
+import ClaimFreeCall from "../service/seo-services/components/ClaimFreeCall";
+import ServiceFAQs from "../service/seo-services/components/ServiceFAQs";
 ;
 // import NavBar from './components/NavBar'
 

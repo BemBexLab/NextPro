@@ -5523,7 +5523,7 @@ export const services = [
     desc:
       "Web Founders USA builds modern, high-performing websites that reflect your brand, engage visitors, and convert them into customers. We offer custom development, CMS integrations, and e-commerce solutions.",
     seo: {
-      title: "Web-Development - Web Founders USA",
+      title: "Web Development Services - Web Founders USA",
       description:
         "Web Founders USA delivers web development services focused on speed, security, clean code, and scalable websites for business growth online",
       keyword: "Web Design & Development Services, Custom Web Development, Website Development Company, Responsive Web Design, Web Application Development"   
