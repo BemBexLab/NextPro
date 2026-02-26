@@ -12,6 +12,24 @@ const ServiceHero = () => {
     >
       <div className="w-[92%] max-w-[1200px] mx-auto grid grid-cols-12 gap-8 items-start">
         <div className="col-span-12 lg:col-span-7 text-white">
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex items-center gap-2 text-sm text-white/90">
+              <li>
+                <Link href="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li aria-hidden="true">{">"}</li>
+              <li>
+                <Link href="/service" className="hover:text-white transition-colors">
+                  Service
+                </Link>
+              </li>
+              <li aria-hidden="true">{">"}</li>
+              <li className="font-medium text-white">SEO Services</li>
+            </ol>
+          </nav>
+
           <h1 className="text-4xl font-bold mt-10 leading-tight drop-shadow-md">
             Professional SEO Services Built on Strategy, Trust & Results - Web
             Founders USA
@@ -52,7 +70,7 @@ const ServiceHero = () => {
           </div>
         </div>
 
-        <aside className="col-span-12 mt-8 lg:col-span-5">
+        <aside className="col-span-12 mt-15 lg:col-span-5">
           <div className="bg-[#F2F3F5] rounded-xl p-6 shadow-xl max-w-[420px] mx-auto lg:ml-auto">
             <div className="grid grid-cols-2 gap-4">
               <input
@@ -88,7 +106,7 @@ const ServiceHero = () => {
 
             <div className="mt-4">
               <textarea
-                className="w-full p-3 rounded-md border border-gray-200 bg-white h-[50px]"
+                className="w-full p-3 rounded-md border border-gray-200 bg-white h-38"
                 placeholder="Message"
               />
             </div>
@@ -107,7 +125,7 @@ const ServiceHero = () => {
               </div>
             </div> */}
 
-            <button className="mt-20 w-full bg-[#0b63b8] text-white py-3 rounded-full font-semibold">
+            <button className="mt-10 w-full bg-[#0b63b8] text-white py-3 rounded-full font-semibold">
               Send
             </button>
           </div>
