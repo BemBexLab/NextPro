@@ -14,6 +14,7 @@ import SEOComparison from "./components/SEOComparison";
 import Testimonials from "./components/Testimonials";
 import ClaimFreeCall from "./components/ClaimFreeCall";
 import ServiceFAQs from "./components/ServiceFAQs";
+import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 const SERVICE_ID = "seo-services";
 
@@ -53,7 +54,8 @@ export default function SeoServicesPage() {
       <WhyChoose />
       <SEOComparison />
       <Testimonials />
-      <ClaimFreeCall />
+      {/* <ClaimFreeCall /> */}
+      <ContactFormTwo />
       <ServiceFAQs />
     </section>
   );
