@@ -703,6 +703,60 @@ const Blog3 = () => {
           </div>
         </section>
 
+        {/* More Relevant Articles Section */}
+        <section className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 lg:p-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-3">More Relevant Articles</h2>
+            <p className="text-slate-300">Explore more guides to help you succeed in digital marketing</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <a 
+              href="/blog/how-to-choose-digital-marketing-agency/" 
+              className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 hover:border-blue-400 transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <Briefcase className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-blue-300 transition-colors">
+                    How to Choose a Digital Marketing Agency (Complete 2026 Guide)
+                  </h3>
+                  <p className="text-slate-300 text-sm">
+                    Learn what to look for when hiring a digital marketing agency for your business.
+                  </p>
+                  <div className="mt-3 flex items-center text-blue-400 text-sm font-medium">
+                    Read Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a 
+              href="/blog/top-usa-digital-marketing-agencies-in-2026/" 
+              className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 hover:border-purple-400 transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <Award className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-purple-300 transition-colors">
+                    Top 5 U.S.A Digital Marketing Agencies in 2026
+                  </h3>
+                  <p className="text-slate-300 text-sm">
+                    Discover the leading digital marketing agencies in the United States.
+                  </p>
+                  <div className="mt-3 flex items-center text-purple-400 text-sm font-medium">
+                    View List <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
       </main>
 
       {/* Footer */}
