@@ -8,6 +8,18 @@ export const metadata = {
     "A step-by-step guide to choosing the right digital marketing agency in 2026. Learn how to evaluate portfolios, pricing, red flags, and contracts.",
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "How to Choose a Digital Marketing Agency (Complete 2026 Guide)",
+  description:
+    "A step-by-step guide to choosing the right digital marketing agency in 2026. Learn how to evaluate portfolios, pricing, red flags, and contracts.",
+  author: {
+    "@type": "Organization",
+    name: "Web Founders USA",
+  },
+};
+
 // Reusing the same Icon from the previous page for consistency
 const CheckIcon = () => (
   <svg
@@ -85,6 +97,10 @@ export default function HowToChooseAgency() {
     <div className="min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white">
       {/* Main Content Container */}
       <main className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
         {/* Header Section */}
         <header className="mb-16">
           <div className="flex flex-col md:flex-row gap-8 items-start">
@@ -93,7 +109,7 @@ export default function HowToChooseAgency() {
               <div className="relative w-full aspect-[7/8] rounded-lg overflow-hidden bg-gray-100 shadow-sm">
                 {/* Placeholder image - replace with actual path */}
                 <Image
-                  src="/images/blog-images/digital-marketing.webp"
+                  src="/blogs/6.webp"
                   alt="Digital Marketing Strategy Meeting"
                   fill
                   className="object-cover"

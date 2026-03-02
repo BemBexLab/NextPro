@@ -1,7 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
+import { notFound } from "next/navigation";
 import { blogData } from "@/lib/fackData/blogData";
 import { IoArrowBack } from "react-icons/io5";
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
+
+export function generateStaticParams() {
+  return blogData.map((item) => ({ id: String(item.id) }));
+}
 
 export async function generateMetadata({ params }) {
   const blog = blogData.find((item) => item.id === Number(params.id));
@@ -15,7 +21,7 @@ export default function BlogPost({ params }) {
   const blog = blogData.find((item) => item.id === Number(params.id));
 
   if (!blog) {
-    return <div>Blog not found</div>;
+    notFound();
   }
 
   return (
@@ -35,9 +41,11 @@ export default function BlogPost({ params }) {
       <div className="flex flex-col lg:flex-row gap-10 items-start">
         {/* Left: Image */}
         <div className="w-full lg:w-[40%]">
-          <img
+          <Image
             src={blog.thumb}
             alt={blog.title}
+            width={1200}
+            height={800}
             className="w-full h-auto rounded-2xl shadow-lg object-cover"
           />
         </div>
