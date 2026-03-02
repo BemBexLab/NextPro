@@ -58,7 +58,7 @@ const jsonLd = {
         "addressLocality": "Atlanta",
         "addressRegion": "GA",
         "postalCode": "30305",
-        "addressCountry": "US"
+        "addressCountry": "USA"
       },
       "contactPoint": {
         "@type": "ContactPoint",
