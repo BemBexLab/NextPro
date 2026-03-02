@@ -43,6 +43,60 @@ export function generateMetadata(): Metadata {
 
 export default function SeoServicesPage() {
   return (
+    <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.webfoundersusa.com/seo-services/#service",
+  "name": "Complete SEO Services",
+  "alternateName": "Full-Service Search Engine Optimization Agency",
+  "url": "https://www.webfoundersusa.com/seo-services/",
+  "description": "Web Founders USA provides complete SEO services including Technical SEO, On-Page SEO, Off-Page SEO, Local SEO, Enterprise SEO, E-commerce SEO, SEO Audits, Keyword Research, Content Optimization, Link Building, and Conversion Optimization for businesses of all sizes.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Web Founders USA",
+    "url": "https://www.webfoundersusa.com/"
+  },
+  "serviceType": [
+    "SEO Audit",
+    "Technical SEO",
+    "On-Page SEO",
+    "Off-Page SEO",
+    "Local SEO",
+    "Enterprise SEO",
+    "E-commerce SEO",
+    "Keyword Research",
+    "Competitor Analysis",
+    "Content Optimization",
+    "Link Building",
+    "Backlink Strategy",
+    "Conversion Rate Optimization",
+    "Mobile SEO",
+    "Core Web Vitals Optimization",
+    "Schema Markup Implementation",
+    "International SEO",
+    "SEO Consulting"
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Small Businesses, Startups, Corporations, Enterprises and Online Brands"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.webfoundersusa.com/seo-services/",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  }
+}`,
+        }}
+      />
     <section className="text-black">
       <ServiceHero />
       <ExpertsPage params={undefined} />
@@ -58,5 +112,6 @@ export default function SeoServicesPage() {
       <ContactFormTwo />
       <ServiceFAQs />
     </section>
+    </main>
   );
 }
