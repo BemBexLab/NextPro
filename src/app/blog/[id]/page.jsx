@@ -8,6 +8,18 @@ export const metadata = {
   description: 'Discover the top digital marketing agencies in the USA for 2026. Expert insights on SEO, PPC, social media marketing, and conversion optimization strategies.',
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Top 5 U.S.A Digital Marketing Agencies in 2026",
+  description:
+    "Discover the top digital marketing agencies in the USA for 2026. Expert insights on SEO, PPC, social media marketing, and conversion optimization strategies.",
+  author: {
+    "@type": "Organization",
+    name: "Web Founders USA",
+  },
+};
+
 // Simple SVG Icon for visual flair (optional)
 const CheckIcon = () => (
   <svg className="w-5 h-5 text-black mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -55,6 +67,10 @@ export default function BlogPost() {
     <div className="min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white">
       {/* Main Content Container */}
       <main className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
         
         <header className="mb-16">
           <div className="flex flex-col md:flex-row gap-8 items-start">

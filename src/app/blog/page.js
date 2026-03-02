@@ -6,7 +6,7 @@ const blogData = [
     {
         id: 1,
         title: 'Top 5 U.S.A Digital Marketing Agencies in 2026',
-        thumb: '/images/blog-images/7.-What-Makes-the-Best-Email-Marketing-Campaigns-Stand-Out.jpg',
+        thumb: '/blogs/4.webp',
         author: 'Web Founders USA',
         date: 'Feb 20, 2026',
         category: 'Industry',
@@ -15,12 +15,21 @@ const blogData = [
     {
         id: 2,
         title: 'How to Choose a Digital Marketing Agency (Complete 2026 Guide)',
-        thumb: '/images/blog-images/digital-marketing.webp',
+        thumb: '/blogs/6.webp',
         author: 'Web Founders USA',
         date: 'Feb 18, 2026',
         category: 'Guides',
         url: '/blog/how-to-choose-digital-marketing-agency'
-    }
+    },
+    {
+        id: 3,
+        title: 'Is Digital Marketing a Good Career?',
+        thumb: '/blogs/1.webp',
+        author: 'Web Founders USA',
+        date: 'Feb 15, 2026',
+        category: 'Social Media',
+        url: '/blog/is-digital-marketing-a-good-career'
+    },
 ]
 import Link from 'next/link'
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
@@ -30,8 +39,8 @@ export const metadata = {
     description: "Read the Web Founders USA blog for expert insights, tips, and strategies on SEO, web design, and digital marketing growth.",
 
     robots: {
-        index: false,  // prevents indexing
-        follow: true   // allows links to be followed
+        index: true,
+        follow: true
     }
 };
 

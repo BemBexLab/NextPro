@@ -39,7 +39,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
        <head>
         {/* Meta Pixel Code */}
         <script
@@ -58,6 +58,12 @@ fbq('track', 'PageView');
             `,
           }}
         />
+        {/* End Meta Pixel Code */}
+      </head>
+      <body
+        className={`${inter.variable} ${plus_jakarta_sans.variable} ${dm_sans.variable}`}
+        suppressHydrationWarning={true}
+      >
         <noscript>
           <img
             height="1"
@@ -67,12 +73,6 @@ fbq('track', 'PageView');
             alt=""
           />
         </noscript>
-        {/* End Meta Pixel Code */}
-      </head>
-      <body
-        className={`${inter.variable} ${plus_jakarta_sans.variable} ${dm_sans.variable}`}
-        suppressHydrationWarning={true}
-      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

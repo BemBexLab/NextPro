@@ -8,7 +8,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote:
-        "We doubled qualified leads in three months after the LocalMighty SEO sprint — organic traffic grew 132% and our contact form conversions tripled.",
+        "We doubled qualified leads in three months after the Web Founders USA SEO sprint — organic traffic grew 132% and our contact form conversions tripled.",
       image: "/service-testing/testimonials/17719507759cb7.png",
       name: "Stephen Ramos",
       title: "Founder & CEO, SunBright Solar",
@@ -186,3 +186,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+

@@ -160,11 +160,11 @@ const ServiceFAQs = () => {
     },
   ];
   return (
-    <section className="w-full flex flex-col items-center justify-center py-16 px-4">
+    <section className="w-full mt-[130px] flex flex-col items-center justify-center py-16 px-4">
       <div className="w-full max-w-5xl">
         <div className="mb-10">
           <h2 className="text-4xl flex justify-center font-medium text-[#0749A7] text-center md:text-start mb-4">
-            Your Local SEO Questions Answered
+            Your SEO Questions Answered
           </h2>
         </div>
 
