@@ -72,7 +72,7 @@ const Blog3 = () => {
             </div>
             <div className="order-1 lg:order-2 space-y-6">
               <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider">
-                Career Guide
+                Digital Marketing
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
                 Is Digital Marketing a Good Career?
@@ -760,11 +760,11 @@ const Blog3 = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12">
+      {/* <footer className="bg-slate-900 text-white py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <p>© 2026 Digital Marketing Career Guide</p>
+          <p>© 2026 Digital Marketing.</p>
         </div>
-      </footer>
+      </footer> */}
 
     </div>
   );
