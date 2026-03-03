@@ -30,8 +30,16 @@ const blogData = [
         category: 'Social Media',
         url: '/blog/is-digital-marketing-a-good-career'
     },
+    {
+        id: 4,
+        title: 'Why Businesses Struggle With SEO in 2026 And How Professional SEO Services Fix Rankings',
+        thumb: '/blogs/blog-4-1.webp',
+        author: 'Web Founders USA',
+        date: 'Feb 15, 2026',
+        category: 'Social Media',
+        url: '/blog/why-businesses-struggle-with-seo-in-2026'
+    }
 ]
-import Link from 'next/link'
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 export const metadata = {
@@ -53,17 +61,16 @@ const Blog2 = () => {
                     <div className='grid grid-cols-1'>
                         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7.5'>
                             {blogData.map(({ id, author, date, thumb, title, category, url }) => (
-                                <Link key={id} href={url} className="block h-full">
-                                    <CardOne
-                                        id={id}
-                                        title={title}
-                                        thumb={thumb}
-                                        author={author}
-                                        date={date}
-                                        category={category}
-                                        url={url}
-                                    />
-                                </Link>
+                                <CardOne
+                                    key={id}
+                                    id={id}
+                                    title={title}
+                                    thumb={thumb}
+                                    author={author}
+                                    date={date}
+                                    category={category}
+                                    url={url}
+                                />
                             ))}
                         </div>
                     </div>
