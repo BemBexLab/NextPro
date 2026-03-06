@@ -54,13 +54,11 @@ const Blog6: React.FC = () => {
             <p className={`mb-4 ${bodyTextClass}`}>
               In 2026, online competition is not slowing down.
             </p>
-            <p className={`mb-4 ${bodyTextClass}`}>
-              Every industry is crowded.
-            </p>
-            <p className={`mb-4 ${bodyTextClass}`}>
-              Every keyword has competitors.
-            </p>
-            <p className={`mb-8 ${bodyTextClass}`}>Every click matters.</p>
+            <ul className="list-disc pl-5 mb-6">
+              <li className={listItemClass}>Every industry is crowded.</li>
+              <li className={listItemClass}>Every keyword has competitors.</li>
+              <li className={listItemClass}>Every click matters.</li>
+            </ul>            <p className={`mb-8 ${bodyTextClass}`}></p>
             <p className={`mb-6 ${bodyTextClass}`}>
               If your business wants stable growth, you cannot rely on luck. You
               need structured, scalable seo services that grow with you.
@@ -196,25 +194,25 @@ const Blog6: React.FC = () => {
                 className={`flex items-center text-slate-300 ${listItemClass}`}
               >
                 <span className="flex-shrink-0 w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                Your traffic grows month by month
+                ◦ Your traffic grows month by month
               </li>
               <li
                 className={`flex items-center text-slate-300 ${listItemClass}`}
               >
                 <span className="flex-shrink-0 w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                Your website can handle expansion
+                ◦ Your website can handle expansion
               </li>
               <li
                 className={`flex items-center text-slate-300 ${listItemClass}`}
               >
                 <span className="flex-shrink-0 w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                Your rankings stay stable during updates
+                ◦ Your rankings stay stable during updates
               </li>
               <li
                 className={`flex items-center text-slate-300 ${listItemClass}`}
               >
                 <span className="flex-shrink-0 w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                Your brand builds authority over time
+                ◦ Your brand builds authority over time
               </li>
             </ul>
           </div>
@@ -261,27 +259,27 @@ const Blog6: React.FC = () => {
             <ul className="space-y-2 mb-4">
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                Site structure
+                ◦ Site structure
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                Technical errors
+                ◦ Technical errors
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                Speed performance
+                ◦ Speed performance
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                Duplicate content
+                ◦ Duplicate content
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                Keyword gaps
+                ◦ Keyword gaps
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                Competitor positioning
+                ◦ Competitor positioning
               </li>
             </ul>
             <p className={bodyTextClass}>Without an audit, SEO is guesswork.</p>
@@ -298,19 +296,19 @@ const Blog6: React.FC = () => {
             <ul className="space-y-2 mb-4">
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                A dentist needs local treatment keywords
+                ◦ A dentist needs local treatment keywords
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                A law firm needs authority content
+                ◦ A law firm needs authority content
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                A B2B company needs long-form educational pages
+                ◦ A B2B company needs long-form educational pages
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                An ecommerce brand needs optimized product architecture
+                ◦ An ecommerce brand needs optimized product architecture
               </li>
             </ul>
             <p className={`mb-4 ${bodyTextClass}`}>
@@ -337,19 +335,19 @@ const Blog6: React.FC = () => {
             <ul className="space-y-2 mb-4">
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                Buyer-intent keywords
+                ◦ Buyer-intent keywords
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                Clear CTAs
+                ◦ Clear CTAs
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                Optimized landing pages
+                ◦ Optimized landing pages
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                Funnel alignment
+                ◦ Funnel alignment
               </li>
             </ul>
             <p className={bodyTextClass}>
@@ -465,23 +463,23 @@ const Blog6: React.FC = () => {
             <ul className="space-y-2 mb-6">
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 flex-shrink-0"></span>
-                Optimized headings
+                ◦ Optimized headings
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 flex-shrink-0"></span>
-                Keyword placement
+                ◦ Keyword placement
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 flex-shrink-0"></span>
-                Internal linking
+                ◦ Internal linking
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 flex-shrink-0"></span>
-                Clear page structure
+                ◦ Clear page structure
               </li>
               <li className={`flex items-center ${listItemClass}`}>
                 <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 flex-shrink-0"></span>
-                User-friendly formatting
+                ◦ User-friendly formatting
               </li>
             </ul>
             <p className={`mb-2 ${bodyTextClass}`}>Clean pages rank better.</p>
@@ -689,19 +687,19 @@ const Blog6: React.FC = () => {
               <ul className="space-y-3 mb-6">
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Content planning
+                  ◦ Content planning
                 </li>
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Keyword clustering
+                  ◦ Keyword clustering
                 </li>
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Performance analysis
+                  ◦ Performance analysis
                 </li>
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Predictive insights
+                  ◦ Predictive insights
                 </li>
               </ul>
               <p className={`mb-2 ${bodyTextClass}`}>
@@ -855,15 +853,15 @@ const Blog6: React.FC = () => {
                 <ul className="space-y-2">
                   <li className={`flex items-center ${listItemClass}`}>
                     <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></span>
-                    Collection structure
+                    ◦ Collection structure
                   </li>
                   <li className={`flex items-center ${listItemClass}`}>
                     <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></span>
-                    Speed optimization
+                    ◦ Speed optimization
                   </li>
                   <li className={`flex items-center ${listItemClass}`}>
                     <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></span>
-                    Duplicate content fixes
+                    ◦ Duplicate content fixes
                   </li>
                 </ul>
               </div>
@@ -876,15 +874,15 @@ const Blog6: React.FC = () => {
                 <ul className="space-y-2">
                   <li className={`flex items-center ${listItemClass}`}>
                     <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></span>
-                    Plugin setup
+                    ◦ Plugin setup
                   </li>
                   <li className={`flex items-center ${listItemClass}`}>
                     <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></span>
-                    Clean permalink structure
+                    ◦ Clean permalink structure
                   </li>
                   <li className={`flex items-center ${listItemClass}`}>
                     <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></span>
-                    Performance optimization
+                    ◦ Performance optimization
                   </li>
                 </ul>
               </div>
@@ -932,15 +930,15 @@ const Blog6: React.FC = () => {
               <ul className="space-y-2 mb-6">
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Service-based keywords
+                  ◦ Service-based keywords
                 </li>
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Location pages
+                  ◦ Location pages
                 </li>
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Review optimization
+                  ◦ Review optimization
                 </li>
               </ul>
               <p className={`mb-3 font-semibold ${bodyTextClass}`}>
@@ -949,15 +947,15 @@ const Blog6: React.FC = () => {
               <ul className="space-y-2">
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Authority content
+                  ◦ Authority content
                 </li>
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Legal-specific keywords
+                  ◦ Legal-specific keywords
                 </li>
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
-                  High-trust backlinks
+                  ◦ High-trust backlinks
                 </li>
               </ul>
             </div>
@@ -976,19 +974,19 @@ const Blog6: React.FC = () => {
               <ul className="space-y-2 mb-6">
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Long-form educational content
+                 ◦ Long-form educational content
                 </li>
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Industry authority
+                  ◦ Industry authority
                 </li>
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Lead-focused landing pages
+                  ◦ Lead-focused landing pages
                 </li>
                 <li className={`flex items-center ${listItemClass}`}>
                   <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Funnel optimization
+                  ◦ Funnel optimization
                 </li>
               </ul>
               <p className={bodyTextClass}>

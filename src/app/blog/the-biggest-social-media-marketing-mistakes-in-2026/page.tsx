@@ -65,18 +65,18 @@ const SocialMediaMistakes2026: React.FC = () => {
             <li>No plan for growth.</li>
           </ul>
           <p className="mb-4">A proper social media marketing strategy should answer simple questions:</p>
-          <ul className="list-none space-y-2 mb-6 text-[#8b949e]">
-            <li className="flex items-start gap-3">
-              <span className="text-green-500 font-bold mt-0.5">?</span> Who are we targeting?
+          <ul className="space-y-2 mb-6 text-[#8b949e] list-disc list-inside marker:text-blue-500">
+            <li>
+              Who are we targeting?
             </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-500 font-bold mt-0.5">?</span> What problem are we solving?
+            <li>
+              What problem are we solving?
             </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-500 font-bold mt-0.5">?</span> What action do we want people to take?
+            <li>
+              What action do we want people to take?
             </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-500 font-bold mt-0.5">?</span> How will we measure success?
+            <li>
+              How will we measure success?
             </li>
           </ul>
           <div className="bg-red-500/10 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
@@ -114,15 +114,15 @@ const SocialMediaMistakes2026: React.FC = () => {
             Good social media & marketing is not about entertainment only. It is about positioning.
           </p>
           <p className="mb-4">Ask yourself:</p>
-          <ul className="list-none space-y-2 mb-6 text-[#8b949e]">
-            <li className="flex items-start gap-3">
-              <span className="text-green-500 font-bold mt-0.5">?</span> Does this post attract my ideal customer?
+          <ul className="list-disc list-inside space-y-2 mb-6 text-[#8b949e] marker:text-green-500">
+            <li>
+              Does this post attract my ideal customer?
             </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-500 font-bold mt-0.5">?</span> Does it show my expertise?
+            <li>
+              Does it show my expertise?
             </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-500 font-bold mt-0.5">?</span> Does it move people closer to buying?
+            <li>
+              Does it move people closer to buying?
             </li>
           </ul>
           <p className="mb-4">
@@ -221,7 +221,7 @@ const SocialMediaMistakes2026: React.FC = () => {
             You are not using social media as a sales tool.
           </p>
           <p className="mb-4">
-            Many businesses search for a <a className='text-blue-900 font-semibold hover:underline' href="/">social media marketing agency that serves all types of businesses across the United States</a> because they realize its strategy.They need a clear structure an
+            Many businesses search for a <a className='text-blue-900 font-semibold hover:underline' href="/service/social-media-marketing/">social media marketing agency that serves all types of businesses across the United States</a> because they realize its strategy.They need a clear structure an
           </p>
           <div className="bg-blue-500/10 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
             <p className="text-blue-200">A professional approach turns social platforms into predictable lead systems.</p>
@@ -236,21 +236,21 @@ const SocialMediaMistakes2026: React.FC = () => {
           <p className="mb-4">Boosting posts is not a strategy.</p>
           <p className="mb-4">Running ads without a plan is like pouring water into sand.</p>
           <p className="mb-4">Before spending money, ask:</p>
-          <ul className="list-none space-y-2 mb-6 text-[#8b949e]">
-            <li className="flex items-start gap-3">
-              <span className="text-green-500 font-bold mt-0.5">?</span> Where will this traffic go?
+          <ul className="list-disc list-inside space-y-2 mb-6 text-[#8b949e]">
+            <li>
+              Where will this traffic go?
             </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-500 font-bold mt-0.5">?</span> Is the landing page optimized?
+            <li>
+              Is the landing page optimized?
             </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-500 font-bold mt-0.5">?</span> Is there a strong offer?
+            <li>
+              Is there a strong offer?
             </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-500 font-bold mt-0.5">?</span> Are we collecting emails?
+            <li>
+              Are we collecting emails?
             </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-500 font-bold mt-0.5">?</span> Is there follow-up?
+            <li>
+              Is there follow-up?
             </li>
           </ul>
           <p className="mb-4">Many <b>social media marketing agencies run ads</b>. But not all focus on conversion.</p>
