@@ -41,12 +41,21 @@ const blogData = [
     },
     {
         id: 5,
-        title: 'Why Businesses Struggle With SEO in 2026 And How Professional SEO Services Fix Rankings',
+        title: 'The Biggest Social Media Marketing Mistakes in 2026',
         thumb: '/blogs/blog 5.webp',
         author: 'Web Founders USA',
         date: 'Jan 6, 2026',
         category: 'Social Media',
         url: '/blog/the-biggest-social-media-marketing-mistakes-in-2026'
+    },
+    {
+        id: 6,
+        title: 'Best SEO Services in USA for 2026 Scalable SEO Optimization & Growth Solutions',
+        thumb: '/blogs/blog 6.webp',
+        author: 'Web Founders USA',
+        date: 'Jan 6, 2026',
+        category: 'Social Media',
+        url: '/blog/best-seo-services-in-usa-for-2026'
     }
 ]
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
