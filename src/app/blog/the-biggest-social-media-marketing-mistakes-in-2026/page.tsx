@@ -1,684 +1,460 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import React from "react";
+import Image from 'next/image';
+import React from 'react';
 
-export const metadata: Metadata = {
-  title:
-    "WebFoundersUSA - The Biggest Social Media Marketing Mistakes in 2026",
-};
-
-type ImageData = {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-};
-
-const pageContent = {
-  hero: {
-    badge: "Industry Insight 2026",
-    title:
-      "The Biggest Social Media Marketing Mistakes in 2026",
-    subtitle: "How to Avoid Costly Errors and Start Getting Real Results",
-    image: {
-      src: "/blogs/blog 5.webp",
-      alt: "The Biggest Social Media Marketing Mistakes in 2026",
-      width: 1024,
-      height: 600,
-    },
-  },
-  intro: {
-    lead: "Social media marketing in 2026 is not the same as it was two years ago.",
-    paragraphs: [
-      "The platforms changed. The audience changed. The competition grew fast.",
-      "But many businesses are still using old methods. At Web Founders USA, we speak with business owners every week. Small shops. B2B brands. Healthcare providers. E-commerce stores. Most of them are active online. But many are not getting real results.",
-    ],
-    highlightCards: [
-      { title: "They", text: "Are Posting" },
-      { title: "They", text: "Are Boosting Ads" },
-      { title: "They", text: "Are Hiring Freelancers" },
-    ],
-    signalsTitle: "But leads? Sales? Growth? Not really.",
-    signals: [
-      "No strategy",
-      "Wrong audience",
-      "Weak CTAs",
-      "No conversion plan",
-      "Ignoring video",
-      "Tracking wrong metrics",
-      "Doing everything in-house",
-    ],
-    linkLine: {
-      before:
-        "Let's talk honestly about the biggest mistakes businesses are making in social media marketing this year and how you can avoid them. This is why many businesses are now turning to",
-      href: "/service/social-media-marketing",
-      anchor: "professional social media marketing services",
-      after: "and expert help instead of guessing what works.",
-    },
-    quote:
-      "If your current approach feels confusing or slow, it might be time to rethink your strategy.",
-  },
-  sections: {
-    reasons: {
-      title: "Running Social Media Without a Clear Growth Plan",
-      intro:
-        "Posting randomly is not a strategy.",
-      items: [
-        "No goals",
-        "No target numbers",
-        "No plan for growth",
-        "No clear targeting",
-        "No success measurement",
-        "Random posting",
-        "No roadmap",
-      ],
-      callout: {
-        title: "The Reality Check",
-        lines: [
-          "Many businesses say they are doing social media marketing, but when we ask about their social media marketing strategy, there is silence.",
-          "This happens a lot in social media marketing for small businesses. The owners are busy. They post when they remember. They boost a post sometimes. That's it.",
-          "Social media for small business marketing needs structure. Even a simple plan is better than none. If you do not have a roadmap, you will waste time and money.",
-        ],
-      },
-    },
-    aiAndTechnical: {
-      left: {
-        title: "Posting Content That Attracts Likes but Not Leads",
-        paragraphs: [
-          "Likes feel good. Comments feel even better. But likes do not pay bills.",
-          "In 2026, attention is easy to get. Conversion is hard.",
-        ],
-        bullets: [
-          "Funny memes",
-          "Trendy reels",
-          "Viral audio",
-          "Motivational quotes",
-        ],
-        followUp:
-          "These bring engagement. But they do not bring buyers. Good social media & marketing is not about entertainment only. It is about positioning.",
-        focusTitle:
-          "Ask yourself:",
-        focusItems: [
-          "Does this post attract my ideal customer?",
-          "Does it show my expertise?",
-          "Does it move people closer to buying?",
-        ],
-        outro: "A strong social media marketer knows the difference between content for reach and content for revenue. You need both. But you need balance.",
-      },
-      right: {
-        title: "Ignoring Your Ideal Customer While Chasing Everyone",
-        intro:
-          "Trying to talk to everyone is the fastest way to confuse your brand.",
-        issuesTitle: "This mistake is very common in:",
-        issues: [
-          "B2B social media marketing",
-          "Healthcare social media marketing",
-        ],
-        auditTitle:
-          "For example:",
-        auditItems: [
-          "A B2B company posts like a lifestyle brand",
-          "A medical clinic posts like a meme page",
-          "It does not match",
-        ],
-        outro:
-          "In 2026, customers want relevance. They want content that feels made for them. Define clearly: Age, Industry, Income level, Pain points, Buying behavior. When your message becomes specific, your results improve. This is why working with a social media marketing consultant can help. They look at your audience first — not just the trends.",
-      },
-    //   image: {
-    //     src: "/blogs/blog-5-3.webp",
-    //     alt: "Ignoring Your Ideal Customer While Chasing Everyone",
-    //     width: 1024,
-    //     height: 600,
-    //   },
-    },
-    content: {
-      title: "Missing Out on Short-Form Video and High-Converting Formats",
-      paragraphs: [
-        "Short-form video is not optional anymore.",
-        "Reels. Shorts. TikTok-style videos. Even LinkedIn videos.",
-      ],
-      weakContent: [
-        "Educational tips",
-        "Before-and-after results",
-        "Client testimonials",
-        "Behind-the-scenes trust builders",
-        "Clear offer explanations",
-      ],
-      mustTitle:
-        "If your social media marketing strategy does not include video, you are invisible. But here is the important part. It is not just about posting video. It is about posting the right kind of video:",
-      mustItems: [
-        "Many social media marketing companies focus only on pretty designs",
-        "But video builds authority much faster",
-        "Especially in social media marketing for small business",
-      ],
-      optimizeTitle: "Video builds trust in:",
-      optimizeItems: [
-        "Healthcare social media marketing",
-        "B2B social media marketing",
-        "Small business marketing",
-      ],
-      outro: "People buy from brands they trust. Video builds that trust.",
-    },
-    authority: {
-      title: "Treating Social Media Like a Hobby Instead of a Sales Channel",
-      image: {
-        src: "/blogs/blog 5-1.webp",
-        alt: "Treating Social Media Like a Hobby Instead of a Sales Channel",
-        width: 1024,
-        height: 600,
-      },
-      paragraphs: [
-        "If you treat social media like a side activity, it will give side results.",
-        "In 2026, social media marketing services are directly connected to revenue.",
-      ],
-      focusTitle: "It is no longer just 'brand awareness.' Your pages should:",
-      focusItems: [
-        "Educate",
-        "Build authority",
-        "Capture leads",
-        "Drive traffic",
-        "Convert sales",
-      ],
-      outro:
-        "If your bio has no clear offer… If your page does not explain what you do… If your content never talks about your services… You are not using social media as a sales tool. Many businesses search for a social media marketing agency that serves all types of businesses across the United States because they realize its strategy. They need a clear structure. A professional approach turns social platforms into predictable lead systems.",
-    },
-    diy: {
-      title: "Spending on Ads Without a Conversion Strategy",
-      intro:
-        "Boosting posts is not a strategy. Running ads without a plan is like pouring water into sand.",
-      mistakesTitle: "Before spending money, ask:",
-      mistakes: [
-        "Where will this traffic go?",
-        "Is the landing page optimized?",
-        "Is there a strong offer?",
-        "Are we collecting emails?",
-        "Is there follow-up?",
-      ],
-      after:
-        "Many social media marketing agencies run ads. But not all focus on conversion.",
-      costTitle: "The real goal is not traffic. The goal is leads and sales. Smart social media marketing packages include:",
-      costs: [
-        "Funnel setup",
-        "Retargeting",
-        "Audience testing",
-        "Offer testing",
-      ],
-      fixTitle: "Without this, ad spend becomes waste.",
-      fix:
-        "Professional planning ensures every dollar spent on ads contributes to measurable business growth.",
-    },
-    diagnosis: {
-      title: "Not Optimizing Profiles for Trust and Authority",
-      intro:
-        "Your profile is your digital storefront. Yet many businesses ignore:",
-      auditChecks: [
-        "Bio clarity",
-        "Highlights",
-        "Pinned posts",
-        "Professional branding",
-        "Clear service descriptions",
-      ],
-      examplesTitle: "When someone visits your page, they decide in seconds:",
-      businessTypes: [
-        {
-          name: "Trust Signals That Matter",
-          lines: [
-            "Testimonials",
-            "Case studies",
-            "Certifications",
-            "Clear contact info",
-          ],
-        },
-        {
-          name: "Your Page Should Show",
-          lines: [
-            "Who you help",
-            "What you offer",
-            "Why you are different",
-            "How to contact you",
-          ],
-        },
-      ],
-    },
-    strategy: {
-      title: "Creating Content Without a Clear Call to Action",
-      intro: "This is one of the biggest mistakes in social media marketing. No call to action. Every post should guide the reader.",
-      steps: [
-        "Comment below",
-        "Send a DM",
-        "Book a call",
-        "Visit the link",
-        "Download the guide",
-      ],
-      outro:
-        "Without direction, people scroll away. A skilled social media marketing consultant understands buyer psychology. You need soft CTAs and strong CTAs. For example: Soft - 'Save this post for later.' Strong - 'Book your free strategy call today.' Clear action increases conversions.",
-    },
-    growth: {
-      title: "Tracking Vanity Metrics Instead of Revenue",
-      intro:
-        "Views are exciting. Followers look impressive. But revenue is what matters.",
-      outcomes: [
-        { icon: "LEAD", text: "Cost per lead" },
-        { icon: "CONV", text: "Cost per conversion" },
-        { icon: "RATE", text: "Conversion rate" },
-        { icon: "LTV", text: "Customer lifetime value" },
-      ],
-      principlesTitle: "In 2026, smart brands track:",
-      principles: [
-        "Not just: Likes, Shares, Impressions",
-        "This is where professional social media marketing services make a difference",
-        "They measure business growth, not just engagement",
-      ],
-      outro:
-        "For social media marketing for small business, tracking the right numbers is even more important. Budgets are limited. Every dollar matters.",
-      image: {
-        src: "/blogs/blog 5-2.webp",
-        alt: "Tracking Vanity Metrics Instead of Revenue",
-        width: 1024,
-        height: 600,
-      },
-    },
-  },
-  faq: [
-    {
-      q: "1. Why is my social media not generating leads?",
-      a: "Most businesses focus on vanity metrics like likes and followers instead of creating content that converts. You need a clear strategy with strong calls to action and content that addresses your ideal customer's pain points.",
-    },
-    {
-      q: "2. Is short-form video really necessary in 2026?",
-      a: "Yes. Reels, Shorts, and TikTok-style videos are essential for visibility. Video builds trust and authority much faster than static images. If your strategy doesn't include video, you're missing out on the most powerful format.",
-    },
-    {
-      q: "3. Should I boost posts or run proper ad campaigns?",
-      a: "Boosting posts is not a strategy. Proper ad campaigns with funnel setup, retargeting, and conversion tracking deliver real results. Without a conversion strategy, ad spend becomes waste.",
-    },
-    {
-      q: "4. How do I know if I need a social media marketing consultant?",
-      a: "If you're posting regularly but not seeing leads or sales, if you're confused about metrics, or if you're spending money on ads without clear ROI, it's time to work with a professional who can create a structured growth plan.",
-    },
-  ],
-  readNext: {
-    label: "More Relevant",
-    title: "How to Choose a Digital Marketing Agency (Complete 2026 Guide)",
-    href: "/blog/how-to-choose-digital-marketing-agency",
-    cta: "Read Article",
-  },
-};
-
-const imageCard = (image: ImageData) => (
-  <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
-    <img
-      src={image.src}
-      alt={image.alt}
-      className="w-full h-auto object-cover"
-      style={{ aspectRatio: `${image.width}/${image.height}` }}
-      width={image.width}
-      height={image.height}
-    />
-  </div>
-);
-
-const Blog5: React.FC = () => {
-  const bodyTextClass = "text-base md:text-lg leading-relaxed text-slate-700";
-  const listItemClass = "text-base md:text-lg leading-relaxed text-slate-700";
-
+const SocialMediaMistakes2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-800 selection:bg-blue-100 selection:text-blue-900">
-      <header className="relative bg-slate-900 pt-16 pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-slate-900 z-0"></div>
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-200 text-xs font-semibold tracking-wider uppercase mb-6">
-            {pageContent.hero.badge}
-          </span>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
-            {pageContent.hero.title}
+    <div className="min-h-screen bg-[#0f1115] text-[#c9d1d9] font-sans selection:bg-blue-500/30">
+      <div className="max-w-3xl mx-auto px-6 py-16 sm:px-8 lg:px-12">
+        
+        {/* HEADER */}
+        <header className="mb-12">
+          <h1 className="text-4xl text-center sm:text-5xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-white via-slate-200 to-slate-500 bg-clip-text">
+            The Biggest Social Media Marketing Mistakes in 2026
           </h1>
-          <h2 className="text-xl md:text-2xl font-semibold text-slate-300 max-w-2xl mx-auto font-light">
-            {pageContent.hero.subtitle}
-          </h2>
-        </div>
-      </header>
-
-      <div className="max-w-4xl mx-auto px-6 mt-16 relative z-20">
-        {imageCard(pageContent.hero.image)}
-      </div>
-
-      <main className="max-w-4xl mx-auto px-6 relative z-20 pb-20 mt-12">
-        <section className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12 border border-slate-100">
-          <div className={`prose prose-slate max-w-none ${bodyTextClass}`}>
-            <p className="mb-6 font-medium text-slate-900">{pageContent.intro.lead}</p>
-            {pageContent.intro.paragraphs.map((text) => (
-              <p key={text} className="mb-6">
-                {text}
-              </p>
-            ))}
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-              {pageContent.intro.highlightCards.map((item) => (
-                <div
-                  key={item.text}
-                  className="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center"
-                >
-                  <span className="block text-2xl font-bold text-blue-600 mb-1">{item.title}</span>
-                  <span className="text-sm text-slate-500">{item.text}</span>
-                </div>
-              ))}
-            </div>
-
-            <p className="mb-4 font-semibold text-slate-800">{pageContent.intro.signalsTitle}</p>
-            <ul className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8 list-none pl-0">
-              {pageContent.intro.signals.map((item) => (
-                <li
-                  key={item}
-                  className={`flex items-center space-x-2 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100 ${listItemClass}`}
-                >
-                  <span className="w-2 h-2 rounded-full bg-red-500"></span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mb-6">
-              {pageContent.intro.linkLine.before}{" "}
-              <Link href={pageContent.intro.linkLine.href} className="font-semibold text-blue-800 hover:underline">
-                {pageContent.intro.linkLine.anchor}
-              </Link>{" "}
-              {pageContent.intro.linkLine.after}
-            </p>
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
-              <p className="italic text-slate-700">{pageContent.intro.quote}</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">{pageContent.sections.reasons.title}</h2>
-          <p className={`mb-6 ${bodyTextClass}`}>{pageContent.sections.reasons.intro}</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            {pageContent.sections.reasons.items.map((item) => (
-              <div
-                key={item}
-                className={`flex items-start p-4 rounded-xl bg-white border border-slate-200 shadow-sm ${listItemClass}`}
-              >
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center font-bold mr-4">
-                  !
-                </div>
-                <span className="font-medium text-slate-700">{item}</span>
-              </div>
-            ))}
-          </div>
-          <div className="bg-slate-900  p-8 rounded-2xl">
-            <h3 className="text-xl font-bold mb-4">{pageContent.sections.reasons.callout.title}</h3>
-            {pageContent.sections.reasons.callout.lines.map((line) => (
-              <p key={line} className={`mb-3 ${bodyTextClass}`}>
-                {line}
-              </p>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">{pageContent.sections.aiAndTechnical.left.title}</h2>
-            {pageContent.sections.aiAndTechnical.left.paragraphs.map((line) => (
-              <p key={line} className={`mb-4 ${bodyTextClass}`}>
-                {line}
-              </p>
-            ))}
-            <ul className="space-y-3 mb-6">
-              {pageContent.sections.aiAndTechnical.left.bullets.map((item) => (
-                <li key={item} className={`flex items-center ${listItemClass}`}>
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className={`mb-4 ${bodyTextClass}`}>{pageContent.sections.aiAndTechnical.left.followUp}</p>
-            <p className={`mb-4 ${bodyTextClass}`}>{pageContent.sections.aiAndTechnical.left.focusTitle}</p>
-            <ul className="space-y-2 mb-6">
-              {pageContent.sections.aiAndTechnical.left.focusItems.map((item) => (
-                <li key={item} className={`flex items-center ${listItemClass}`}>
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className={bodyTextClass}>{pageContent.sections.aiAndTechnical.left.outro}</p>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
-            <h3 className="text-xl font-bold text-slate-900 mb-4">{pageContent.sections.aiAndTechnical.right.title}</h3>
-            <p className={`mb-4 ${bodyTextClass}`}>{pageContent.sections.aiAndTechnical.right.intro}</p>
-            <p className={`mb-4 font-semibold ${bodyTextClass}`}>{pageContent.sections.aiAndTechnical.right.issuesTitle}</p>
-            <ul className="space-y-2 mb-6">
-              {pageContent.sections.aiAndTechnical.right.issues.map((item) => (
-                <li
-                  key={item}
-                  className={`flex justify-between items-center border-b border-slate-100 pb-2 last:border-0 ${listItemClass}`}
-                >
-                  <span>{item}</span>
-                  <span className="text-xs font-bold text-red-500 bg-red-50 px-2 py-1 rounded">MISTAKE</span>
-                </li>
-              ))}
-            </ul>
-            <p className={`mb-4 ${bodyTextClass}`}>{pageContent.sections.aiAndTechnical.right.auditTitle}</p>
-            <ul className="space-y-2 mb-6">
-              {pageContent.sections.aiAndTechnical.right.auditItems.map((item) => (
-                <li key={item} className={`flex items-center ${listItemClass}`}>
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className={bodyTextClass}>{pageContent.sections.aiAndTechnical.right.outro}</p>
-          </div>
-        </section>
-
-        {/* <section className="mb-16">{imageCard(pageContent.sections.aiAndTechnical.image)}</section> */}
-
-        <section className="mb-16">
-          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-3xl p-8 md:p-12 border border-indigo-100">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">{pageContent.sections.content.title}</h2>
-            {pageContent.sections.content.paragraphs.map((line) => (
-              <p key={line} className={`mb-4 ${bodyTextClass}`}>
-                {line}
-              </p>
-            ))}
-            <ul className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-6 list-none pl-0">
-              {pageContent.sections.content.weakContent.map((item) => (
-                <li
-                  key={item}
-                  className={`bg-white px-3 py-2 rounded-lg text-center border border-indigo-100 text-indigo-800 font-medium ${listItemClass}`}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className={`mb-4 ${bodyTextClass}`}>{pageContent.sections.content.mustTitle}</p>
-            <ul className="space-y-2 mb-6">
-              {pageContent.sections.content.mustItems.map((item) => (
-                <li key={item} className={`flex items-center ${listItemClass}`}>
-                  <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className={`mb-4 font-semibold ${bodyTextClass}`}>{pageContent.sections.content.optimizeTitle}</p>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {pageContent.sections.content.optimizeItems.map((item) => (
-                <span
-                  key={item}
-                  className={`bg-white text-indigo-600 px-3 py-1 rounded-full font-medium shadow-sm border border-indigo-100 ${listItemClass}`}
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-            <p className={bodyTextClass}>{pageContent.sections.content.outro}</p>
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">{pageContent.sections.authority.title}</h2>
-          {pageContent.sections.authority.paragraphs.map((line) => (
-            <p key={line} className={`mb-4 ${bodyTextClass}`}>
-              {line}
-            </p>
-          ))}
-          <p className={`mb-4 ${bodyTextClass}`}>{pageContent.sections.authority.focusTitle}</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            {pageContent.sections.authority.focusItems.map((item) => (
-              <div
-                key={item}
-                className={`bg-white p-3 rounded-lg text-center font-medium text-slate-700 border border-slate-200 shadow-sm ${listItemClass}`}
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-          <p className={bodyTextClass}>{pageContent.sections.authority.outro}</p>
-        </section>
-
-        <section className="mb-16">{imageCard(pageContent.sections.authority.image)}</section>
-
-        <section className="mb-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">{pageContent.sections.diy.title}</h2>
-            <p className={`mb-6 ${bodyTextClass}`}>{pageContent.sections.diy.intro}</p>
-            <div className="bg-red-50 border border-red-100 rounded-xl p-6 mb-6">
-              <h3 className="font-bold text-red-700 mb-4">{pageContent.sections.diy.mistakesTitle}</h3>
-              <ul className="space-y-3">
-                {pageContent.sections.diy.mistakes.map((item) => (
-                  <li key={item} className={`flex items-center text-red-700 ${listItemClass}`}>
-                    <span className="flex-shrink-0 w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-3 font-bold text-sm">
-                      ?
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <p className={`mb-6 ${bodyTextClass}`}>{pageContent.sections.diy.after}</p>
-            <div className="bg-slate-100 border border-slate-200 rounded-xl p-6 mb-6">
-              <h3 className="font-bold text-slate-800 mb-4">{pageContent.sections.diy.costTitle}</h3>
-              <ul className="space-y-3">
-                {pageContent.sections.diy.costs.map((item) => (
-                  <li key={item} className={`flex items-center ${listItemClass}`}>
-                    <span className="flex-shrink-0 w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="bg-slate-900  p-8 rounded-2xl shadow-xl h-fit">
-            <h3 className="text-xl font-bold mb-4 text-emerald-400">{pageContent.sections.diy.fixTitle}</h3>
-            <p className={`text-slate-300 ${bodyTextClass}`}>{pageContent.sections.diy.fix}</p>
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">{pageContent.sections.diagnosis.title}</h2>
-          <p className={`mb-6 ${bodyTextClass}`}>{pageContent.sections.diagnosis.intro}</p>
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 mb-8">
-            <div className="p-6 bg-slate-50 border-b border-slate-100">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                {pageContent.sections.diagnosis.auditChecks.map((item) => (
-                  <div
-                    key={item}
-                    className={`text-center p-3 bg-white rounded-lg border border-slate-200 font-medium shadow-sm ${listItemClass}`}
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <p className={`mb-4 ${bodyTextClass}`}>{pageContent.sections.diagnosis.examplesTitle}</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {pageContent.sections.diagnosis.businessTypes.map((item) => (
-              <div key={item.name} className="p-6 bg-white rounded-xl border border-slate-200">
-                <h3 className="text-xl font-bold text-blue-600 mb-3">{item.name}</h3>
-                {item.lines.map((line) => (
-                  <p key={line} className={`mb-2 ${bodyTextClass}`}>
-                    {line}
-                  </p>
-                ))}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">{pageContent.sections.strategy.title}</h2>
-          <p className={`mb-4 ${bodyTextClass}`}>{pageContent.sections.strategy.intro}</p>
-          <ol className={`list-decimal pl-5 mb-4 space-y-1 ${listItemClass}`}>
-            {pageContent.sections.strategy.steps.map((step) => (
-              <li key={step}>{step}</li>
-            ))}
-          </ol>
-          <p className={bodyTextClass}>{pageContent.sections.strategy.outro}</p>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">{pageContent.sections.growth.title}</h2>
-          <p className={`mb-6 ${bodyTextClass}`}>{pageContent.sections.growth.intro}</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            {pageContent.sections.growth.outcomes.map((item) => (
-              <div
-                key={item.text}
-                className="bg-white p-4 rounded-xl border border-slate-200 text-center shadow-sm"
-              >
-                <div className="text-xs font-bold text-blue-600 mb-2">{item.icon}</div>
-                <div className={`font-medium text-slate-700 ${listItemClass}`}>{item.text}</div>
-              </div>
-            ))}
-          </div>
-          <p className={`mb-4 ${bodyTextClass}`}>{pageContent.sections.growth.principlesTitle}</p>
-          <ul className={`list-disc pl-5 mb-6 space-y-1 ${listItemClass}`}>
-            {pageContent.sections.growth.principles.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
+          <img
+            src="/blogs/blog 5.webp"
+            alt="The Biggest Social Media Marketing Mistakes in 2026"
+            className="w-full h-auto object-cover rounded-lg"
+            style={{ aspectRatio: "1024/600" }}
+            width={1024}
+            height={600}
+          />
+        </header>
+        
+        {/* INTRO BOX */}
+        <section className="bg-[#161b22]/60 border border-[#30363d] rounded-2xl p-8 mb-16 backdrop-blur-sm shadow-xl">
+          <p className="text-lg text-[#e6edf3] mb-4">
+            Social media marketing in 2026 is not the same as it was two years ago.
+          </p>
+          <ul className="list-none space-y-2 mb-6 text-[#8b949e]">
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>The platforms changed.</li>
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>The audience changed.</li>
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>The competition grew fast.</li>
           </ul>
-          <p className={`mb-6 ${bodyTextClass}`}>{pageContent.sections.growth.outro}</p>
+          <p className="text-lg text-[#e6edf3] mb-6">
+            But many businesses are still using old methods.
+          </p>
+          <p className="mb-6">
+            At <span className="text-blue-400 font-semibold">Web Founders USA</span>, we speak with business owners every week. Small shops. B2B brands. Healthcare providers. E-commerce stores. Most of them are active online. But many are not getting real results.
+          </p>
+          <ul className="list-none space-y-2 mb-6 text-[#8b949e]">
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-600"></span>They are posting.</li>
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-600"></span>They are boosting ads.</li>
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-600"></span>They are hiring freelancers.</li>
+          </ul>
+          <p className="mb-6">
+            But leads? Sales? Growth? Not really.
+          </p>
+          <p className="text-[#e6edf3] font-medium">
+            Let's talk honestly about the biggest mistakes businesses are making in social media marketing this year and how you can avoid them.
+          </p>
         </section>
 
-        <section className="mb-16">{imageCard(pageContent.sections.growth.image)}</section>
-
+        {/* MISTAKE 1 */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions (FAQ)</h2>
-          <div className="space-y-4">
-            {pageContent.faq.map((item) => (
-              <div key={item.q} className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md transition-shadow">
-                <h3 className={`font-bold text-slate-800 mb-2 ${bodyTextClass}`}>{item.q}</h3>
-                <p className={`text-slate-600 leading-relaxed ${bodyTextClass}`}>{item.a}</p>
-              </div>
-            ))}
+          <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">
+            Running Social Media Without a Clear Growth Plan
+          </h2>
+          <p className="mb-4">Posting randomly is not a strategy.</p>
+          <p className="mb-4">
+            Many businesses say they are doing social media marketing, but when we ask about their social media marketing strategy, there is silence.
+          </p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>No goals.</li>
+            <li>No target numbers.</li>
+            <li>No plan for growth.</li>
+          </ul>
+          <p className="mb-4">A proper social media marketing strategy should answer simple questions:</p>
+          <ul className="list-none space-y-2 mb-6 text-[#8b949e]">
+            <li className="flex items-start gap-3">
+              <span className="text-green-500 font-bold mt-0.5">?</span> Who are we targeting?
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-green-500 font-bold mt-0.5">?</span> What problem are we solving?
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-green-500 font-bold mt-0.5">?</span> What action do we want people to take?
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-green-500 font-bold mt-0.5">?</span> How will we measure success?
+            </li>
+          </ul>
+          <div className="bg-red-500/10 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
+            <p className="text-red-200">Without this, you are just posting and hoping.</p>
+          </div>
+          <p className="mb-4">
+            This happens a lot in social media marketing for small businesses. The owners are busy. They post when they remember. They boost a post sometimes. That's it.
+          </p>
+          <p className="mb-4">
+            Social media for small business marketing needs structure. Even a simple plan is better than none.
+          </p>
+          <p className="text-[#e6edf3]">
+            If you do not have a roadmap, you will waste time and money.
+          </p>
+        </section>
+
+        {/* MISTAKE 2 */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">
+            Posting Content That Attracts Likes but Not Leads
+          </h2>
+          <p className="mb-2">Likes feel good.</p>
+          <p className="mb-2">Comments feel even better.</p>
+          <p className="mb-6 text-[#e6edf3]">But likes do not pay bills.</p>
+          <p className="mb-4">In 2026, attention is easy to get. Conversion is hard.</p>
+          <p className="mb-4">We see this often with businesses that focus only on:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Funny memes</li>
+            <li>Trendy reels</li>
+            <li>Viral audio</li>
+            <li>Motivational quotes</li>
+          </ul>
+          <p className="mb-4">These bring engagement. But they do not bring buyers.</p>
+          <p className="mb-4">
+            Good social media & marketing is not about entertainment only. It is about positioning.
+          </p>
+          <p className="mb-4">Ask yourself:</p>
+          <ul className="list-none space-y-2 mb-6 text-[#8b949e]">
+            <li className="flex items-start gap-3">
+              <span className="text-green-500 font-bold mt-0.5">?</span> Does this post attract my ideal customer?
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-green-500 font-bold mt-0.5">?</span> Does it show my expertise?
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-green-500 font-bold mt-0.5">?</span> Does it move people closer to buying?
+            </li>
+          </ul>
+          <p className="mb-4">
+            A strong social media marketer knows the difference between content for reach and content for revenue.
+          </p>
+          <p className="text-[#e6edf3]">You need both. But you need balance.</p>
+        </section>
+
+        {/* MISTAKE 3 */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">
+            Ignoring Your Ideal Customer While Chasing Everyone
+          </h2>
+          <p className="mb-4">Trying to talk to everyone is the fastest way to confuse your brand.</p>
+          <p className="mb-4">
+            This mistake is very common in b2b social media marketing and healthcare social media marketing.
+          </p>
+          <p className="mb-4">For example:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>A B2B company posts like a lifestyle brand.</li>
+            <li>A medical clinic posts like a meme page.</li>
+          </ul>
+          <p className="mb-4">It does not match.</p>
+          <p className="mb-4">In 2026, customers want relevance. They want content that feels made for them.</p>
+          <p className="mb-4">Define clearly:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Age</li>
+            <li>Industry</li>
+            <li>Income level</li>
+            <li>Pain points</li>
+            <li>Buying behavior</li>
+          </ul>
+          <p className="mb-4">When your message becomes specific, your results improve.</p>
+          <p className="text-[#e6edf3]">
+            This is why working with a social media marketing consultant can help. They look at your audience first — not just the trends.
+          </p>
+        </section>
+
+        {/* MISTAKE 4 */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">
+            Missing Out on Short-Form Video and High-Converting Formats
+          </h2>
+          <p className="mb-4">Short-form video is not optional anymore.</p>
+          <p className="mb-4">Reels. Shorts. TikTok-style videos. Even LinkedIn videos.</p>
+          <p className="mb-4">If your social media marketing strategy does not include video, you are invisible.</p>
+          <p className="mb-4">But here is the important part.</p>
+          <p className="mb-4">It is not just about posting video. It is about posting the right kind of video:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Educational tips</li>
+            <li>Before-and-after results</li>
+            <li>Client testimonials</li>
+            <li>Behind-the-scenes trust builders</li>
+            <li>Clear offer explanations</li>
+          </ul>
+          <p className="mb-4">
+            Many social media marketing companies focus only on pretty designs. But video builds authority much faster.
+          </p>
+          <p className="mb-4">Especially in:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>social media marketing for small business</li>
+            <li>healthcare social media marketing</li>
+            <li>b2b social media marketing</li>
+          </ul>
+          <p className="text-[#e6edf3]">People buy from brands they trust. Video builds that trust.</p>
+        </section>
+
+        {/* MISTAKE 5 */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">
+            Treating Social Media Like a Hobby Instead of a Sales Channel
+          </h2>
+          <img
+            src="/blogs/blog 5-1.webp"
+            alt="The Biggest Social Media Marketing Mistakes in 2026"
+            className="w-full h-auto object-cover rounded-lg"
+            style={{ aspectRatio: "1024/600" }}
+            width={1024}
+            height={600}
+          />
+          <p className="mb-4">If you treat social media like a side activity, it will give side results.</p>
+          <p className="mb-4">In 2026, social media marketing services are directly connected to revenue.</p>
+          <p className="mb-4">It is no longer just "brand awareness."</p>
+          <p className="mb-4">Your pages should:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Educate</li>
+            <li>Build authority</li>
+            <li>Capture leads</li>
+            <li>Drive traffic</li>
+            <li>Convert sales</li>
+          </ul>
+          <p className="mb-4">
+            If your bio has no clear offer…<br />
+            If your page does not explain what you do…<br />
+            If your content never talks about your services…<br />
+            You are not using social media as a sales tool.
+          </p>
+          <p className="mb-4">
+            Many businesses search for a <a className='text-blue-900 font-semibold hover:underline' href="/">social media marketing agency that serves all types of businesses across the United States</a> because they realize its strategy.They need a clear structure an
+          </p>
+          <div className="bg-blue-500/10 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
+            <p className="text-blue-200">A professional approach turns social platforms into predictable lead systems.</p>
           </div>
         </section>
 
-        <footer className="border-t border-slate-200 pt-12 mt-12">
-          <div className="flex flex-col md:flex-row items-center justify-between bg-slate-50 p-6 rounded-xl border border-slate-200">
-            <div className="mb-4 md:mb-0">
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-                {pageContent.readNext.label}
-              </span>
-              <h3 className={`text-lg font-bold text-slate-800 mt-1 ${bodyTextClass}`}>
-                {pageContent.readNext.title}
-              </h3>
+        {/* MISTAKE 6 */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">
+            Spending on Ads Without a Conversion Strategy
+          </h2>
+          <p className="mb-4">Boosting posts is not a strategy.</p>
+          <p className="mb-4">Running ads without a plan is like pouring water into sand.</p>
+          <p className="mb-4">Before spending money, ask:</p>
+          <ul className="list-none space-y-2 mb-6 text-[#8b949e]">
+            <li className="flex items-start gap-3">
+              <span className="text-green-500 font-bold mt-0.5">?</span> Where will this traffic go?
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-green-500 font-bold mt-0.5">?</span> Is the landing page optimized?
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-green-500 font-bold mt-0.5">?</span> Is there a strong offer?
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-green-500 font-bold mt-0.5">?</span> Are we collecting emails?
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-green-500 font-bold mt-0.5">?</span> Is there follow-up?
+            </li>
+          </ul>
+          <p className="mb-4">Many <b>social media marketing agencies run ads</b>. But not all focus on conversion.</p>
+          <p className="mb-4">The real goal is not traffic.</p>
+          <p className="mb-4">The goal is leads and sales.</p>
+          <p className="mb-4">Smart social media marketing packages include:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Funnel setup</li>
+            <li>Retargeting</li>
+            <li>Audience testing</li>
+            <li>Offer testing</li>
+          </ul>
+          <p className="text-[#e6edf3]">Without this, ad spend becomes waste.</p>
+        </section>
+
+        {/* MISTAKE 7 */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">
+            Not Optimizing Profiles for Trust and Authority
+          </h2>
+          <p className="mb-4">Your profile is your digital storefront.</p>
+          <p className="mb-4">Yet many businesses ignore:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Bio clarity</li>
+            <li>Highlights</li>
+            <li>Pinned posts</li>
+            <li>Professional branding</li>
+            <li>Clear service descriptions</li>
+          </ul>
+          <p className="mb-4">When someone visits your page, they decide in seconds:</p>
+          <p className="mb-4">"Is this brand serious?"</p>
+          <p className="mb-4">Trust signals matter:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Testimonials</li>
+            <li>Case studies</li>
+            <li>Certifications</li>
+            <li>Clear contact info</li>
+          </ul>
+          <p className="mb-4">
+            If you are searching for social media marketing companies near me, one thing you should check is how their own profiles look.
+          </p>
+          <p className="mb-4">Your page should show:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Who you help</li>
+            <li>What you offer</li>
+            <li>Why you are different</li>
+            <li>How to contact you</li>
+          </ul>
+          <p className="text-[#e6edf3] font-medium">Simple. Clear. Direct.</p>
+        </section>
+
+        {/* MISTAKE 8 */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">
+            Creating Content Without a Clear Call to Action
+          </h2>
+          <p className="mb-4">This is one of the biggest mistakes in social media marketing.</p>
+          <p className="mb-4">No call to action.</p>
+          <p className="mb-4">Every post should guide the reader.</p>
+          <p className="mb-4">Tell them:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Comment below</li>
+            <li>Send a DM</li>
+            <li>Book a call</li>
+            <li>Visit the link</li>
+            <li>Download the guide</li>
+          </ul>
+          <p className="mb-4">Without direction, people scroll away.</p>
+          <p className="mb-4">A skilled social media marketing consultant understands buyer psychology.</p>
+          <p className="mb-4">You need soft CTAs and strong CTAs.</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-[#21262d] p-6 rounded-lg border border-[#30363d]">
+              <span className="text-xs uppercase tracking-wider text-[#8b949e] block mb-2">Soft CTA</span>
+              <p className="text-[#e6edf3]">"Save this post for later."</p>
             </div>
-            <Link
-              href={pageContent.readNext.href}
-              className="px-6 py-2 bg-white border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-colors shadow-sm"
-            >
-              {pageContent.readNext.cta}
-            </Link>
+            <div className="bg-[#21262d] p-6 rounded-lg border border-[#30363d]">
+              <span className="text-xs uppercase tracking-wider text-green-500 font-bold block mb-2">Strong CTA</span>
+              <p className="text-[#e6edf3]">"Book your free strategy call today."</p>
+            </div>
           </div>
-        </footer>
-      </main>
+
+          <p className="text-[#e6edf3]">Clear action increases conversions.</p>
+        </section>
+
+        {/* MISTAKE 9 */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">
+            Tracking Vanity Metrics Instead of Revenue
+          </h2>
+          <img
+            src="/blogs/blog 5-2.webp"
+            alt="Tracking Vanity Metrics Instead of Revenue"
+            className="w-full h-auto object-cover rounded-lg"
+            style={{ aspectRatio: "1024/600" }}
+            width={1024}
+            height={600}
+          />
+          <p className="mb-2 mt-2">Views are exciting.</p>
+          <p className="mb-2">Followers look impressive.</p>
+          <p className="mb-6 text-[#e6edf3]">But revenue is what matters.</p>
+          <p className="mb-4">In 2026, smart brands track:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Cost per lead</li>
+            <li>Cost per conversion</li>
+            <li>Conversion rate</li>
+            <li>Customer lifetime value</li>
+          </ul>
+          <p className="mb-4">Not just:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Likes</li>
+            <li>Shares</li>
+            <li>Impressions</li>
+          </ul>
+          <p className="mb-4">This is where professional social media marketing services make a difference.</p>
+          <p className="mb-4">They measure business growth, not just engagement.</p>
+          <p className="text-[#e6edf3]">
+            For social media marketing for small business, tracking the right numbers is even more important. Budgets are limited. Every dollar matters.
+          </p>
+        </section>
+
+        {/* MISTAKE 10 */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">
+            Trying to Handle Everything In-House Without Expert Guidance
+          </h2>
+          <p className="mb-4">Many business owners try to do everything themselves.</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Posting.</li>
+            <li>Designing.</li>
+            <li>Running ads.</li>
+            <li>Writing captions.</li>
+            <li>Answering DMs.</li>
+          </ul>
+          <p className="mb-4">It becomes overwhelming.</p>
+          <p className="mb-4">Social media & marketing is now technical. It involves:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>Strategy</li>
+            <li>Analytics</li>
+            <li>Paid ads</li>
+            <li>Creative direction</li>
+            <li>Copywriting</li>
+            <li>Funnel building</li>
+          </ul>
+          <p className="mb-4">That is why many brands look for:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
+            <li>social media marketing near me</li>
+            <li>social media marketing agency near me</li>
+            <li>social media marketing companies</li>
+            <li>experienced social media marketer</li>
+          </ul>
+          <p className="mb-4">Working with professionals saves time and prevents costly mistakes.</p>
+          <p className="text-[#e6edf3]">You do not need a huge team. But you need the right guidance.</p>
+        </section>
+
+        {/* CLOSING */}
+        <div className="border-t border-[#30363d] pt-12 mt-24">
+          <h2 className="text-4xl font-semibold text-[#e6edf3] text-center mb-6">Closing Insights</h2>
+          <p className="mb-6">Social media marketing in 2026 is powerful. But only if done correctly.</p>
+          <p className="mb-4">If you avoid these mistakes:</p>
+          <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500 text-left inline-block">
+            <li>No strategy</li>
+            <li>Wrong audience</li>
+            <li>Weak CTAs</li>
+            <li>No conversion plan</li>
+            <li>Ignoring video</li>
+            <li>Tracking wrong metrics</li>
+          </ul>
+          <p className="mb-6 mt-6">You will see real growth.</p>
+          <p className="mb-6">
+            At <span className="text-blue-400 font-bold">Web Founders USA</span>, we believe in simple, clear systems. No hype. No empty promises.
+          </p>
+          <p className="mb-4">Whether you need:</p>
+          <ul className="list-disc list-inside space-y-1 mb-8 text-[#8b949e] marker:text-blue-500 text-left inline-block">
+            <li>social media marketing services</li>
+            <li>customized social media marketing packages</li>
+            <li>b2b social media marketing strategy</li>
+            <li>healthcare social media marketing</li>
+            <li>or a trusted social media marketing consultant</li>
+          </ul>
+          <p className="mb-6">The focus should always be the same.</p>
+          <div className="text-xl font-bold text-[#e6edf3] mb-8 leading-relaxed">
+            <ul className="list-disc list-inside">
+              <li>Clarity</li>
+              <li>Consistency</li>
+              <li>Conversion</li>
+            </ul>
+          </div>
+          <p className="mb-4">If your current approach feels confusing or slow, it might be time to rethink your strategy.</p>
+          <p className="mb-4">Because in 2026, businesses that treat social media as a real growth channel — win.</p>
+          <p className="text-[#e6edf3] font-medium">And those who treat it casually — disappear.</p>
+        </div>
+
+        {/* RELATED LINK */}
+        <a href="/blog/how-to-choose-digital-marketing-agency" className="block mt-16 bg-gradient-to-br from-[#1f252e] to-[#161b22] border border-[#30363d] p-8 rounded-2xl hover:border-blue-500 hover:-translate-y-1 transition-all duration-300 group">
+          <span className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3 block">╰┈➤ More Relevant</span>
+          <h4 className="text-xl font-semibold  group-hover:text-blue-300 transition-colors">
+            How to Choose a Digital Marketing Agency (Complete 2026 Guide)
+          </h4>
+        </a>
+
+      </div>
     </div>
   );
 };
 
-export default Blog5;
+export default SocialMediaMistakes2026;
