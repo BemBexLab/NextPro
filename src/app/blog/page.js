@@ -56,7 +56,16 @@ const blogData = [
         date: 'Jan 6, 2026',
         category: 'Social Media',
         url: '/blog/best-seo-services-in-usa-for-2026'
-    }
+    },
+    {
+        id: 7,
+        title: "2026's Most Trusted SEO Consulting & Optimization Services in the USA",
+        thumb: '/blogs/blog 7.webp',
+        author: 'Web Founders USA',
+        date: 'Jan 6, 2026',
+        category: 'Social Media',
+        url: '/blog/2026-most-trusted-seo-consulting-optimization-services/'
+    },
 ]
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
