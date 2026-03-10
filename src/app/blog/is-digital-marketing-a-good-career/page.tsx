@@ -7,9 +7,9 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Is Digital Marketing a Good Career? Complete Guide (2026)",
+  title: "Is Digital Marketing a Good Career​?",
   description:
-    "Learn whether digital marketing is a good career path in 2026, including skills, salary outlook, career paths, pros and cons, and how to get started.",
+    "Is digital marketing a good career in 2026? Discover job opportunities, skills needed, salary potential, and why many choose this fast-growing field.",
 };
 
 const faqs = [
