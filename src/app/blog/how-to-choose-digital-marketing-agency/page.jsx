@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata = {
   title: "How to Choose a Digital Marketing Agency (Complete 2026 Guide)",
   description:
-    "A step-by-step guide to choosing the right digital marketing agency in 2026. Learn how to evaluate portfolios, pricing, red flags, and contracts.",
+    "Learn how to choose the right digital marketing agency in 2026. Simple tips to find trusted experts for SEO, ads, and real business growth.",
 };
 
 const articleSchema = {
@@ -13,7 +13,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "How to Choose a Digital Marketing Agency (Complete 2026 Guide)",
   description:
-    "A step-by-step guide to choosing the right digital marketing agency in 2026. Learn how to evaluate portfolios, pricing, red flags, and contracts.",
+    "Learn how to choose the right digital marketing agency in 2026. Simple tips to find trusted experts for SEO, ads, and real business growth.",
   author: {
     "@type": "Organization",
     name: "Web Founders USA",

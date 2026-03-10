@@ -13,7 +13,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Top 5 U.S.A Digital Marketing Agencies in 2026",
   description:
-    "Top 5 USA Digital Marketing Agencies in 2026 ranked for SEO, PPC, social media, and growth strategy to scale your business fast.",
+    "Top 5 digital marketing agencies in the USA for 2026, known for innovative strategies, strong results, and helping brands grow online.",
   author: {
     "@type": "Organization",
     name: "Web Founders USA",

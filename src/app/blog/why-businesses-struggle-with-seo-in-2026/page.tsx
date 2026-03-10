@@ -4,7 +4,9 @@ import React from "react";
 
 export const metadata: Metadata = {
   title:
-    "WebFoundersUSA - Why Businesses Struggle With SEO in 2026 And How Professional SEO Services Fix Rankings",
+    "Why Businesses Struggle With SEO in 2026 And How Professional SEO Services Fix Rankings",
+  description:
+    "Discover why many businesses struggle with SEO in 2026 and how professional SEO services help improve rankings, traffic, and long-term growth.",
 };
 
 type ImageData = {

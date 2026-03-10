@@ -10,6 +10,11 @@ import {
   Zap,
 } from "lucide-react";
 
+export const metadata = {
+    title: "2026’s Most Trusted SEO Consulting & Optimization Services in the USA",
+    description: "Discover 2026’s most trusted SEO consulting and optimization services in the USA, built to boost rankings, attract more customers, and scale online growth.",
+};
+
 const BlogPost = () => {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-700 selection:bg-indigo-100 selection:text-indigo-900">
