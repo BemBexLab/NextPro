@@ -17,7 +17,7 @@ export const metadata = {
 
 const BlogPost = () => {
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-700 selection:bg-indigo-100 selection:text-indigo-900">
+    <div className="min-h-screen bg-slate-50 font-sans selection:bg-indigo-100 selection:text-indigo-900">
       {/* --- HEADER / HERO SECTION --- */}
       <header className="relative bg-slate-900  overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/50 to-slate-900 z-0"></div>
@@ -57,67 +57,67 @@ const BlogPost = () => {
                 <nav className="space-y-1">
                   <a
                     href="#why-need"
-                    className="block text-sm text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block text-sm  hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Why Businesses Need Advanced SEO
                   </a>
                   <a
                     href="#professional-vs-basic"
-                    className="block text-sm text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block text-sm  hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Professional vs Basic SEO
                   </a>
                   <a
                     href="#techniques"
-                    className="block text-sm text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block text-sm  hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Important Techniques
                   </a>
                   <a
                     href="#technical"
-                    className="block text-sm text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block text-sm  hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Technical SEO Improvements
                   </a>
                   <a
                     href="#on-page"
-                    className="block text-sm text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block text-sm  hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     On-Page SEO Optimization
                   </a>
                   <a
                     href="#content-strategy"
-                    className="block text-sm text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block text-sm  hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Content Strategy
                   </a>
                   <a
                     href="#local-seo"
-                    className="block text-sm text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block text-sm  hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Local SEO Consulting
                   </a>
                   <a
                     href="#ecommerce"
-                    className="block text-sm text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block text-sm  hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Ecommerce SEO
                   </a>
                   <a
                     href="#data-driven"
-                    className="block text-sm text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block text-sm  hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Data-Driven Audits
                   </a>
                   <a
                     href="#choosing-partner"
-                    className="block text-sm text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block text-sm  hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Choosing a Partner
                   </a>
                   <a
                     href="#faqs"
-                    className="block text-sm text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block text-sm  hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     FAQs
                   </a>
@@ -128,7 +128,7 @@ const BlogPost = () => {
 
           {/* --- MAIN CONTENT --- */}
           <main className="lg:col-span-9 space-y-16">
-            <article className="prose prose-slate prose-lg max-w-none text-slate-600 leading-loose">
+            <article className="prose prose-slate prose-lg max-w-none  leading-loose">
               <p>
                 Annual changes are made to search engines.. In 2026, the
                 competition is stronger than ever. Businesses across the United
@@ -157,7 +157,7 @@ const BlogPost = () => {
               <div className="my-12">
                 <h2
                   id="why-need"
-                  className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3"
+                  className="text-3xl font-bold  mb-6 flex items-center gap-3"
                 >
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Why Businesses in the USA Need Advanced SEO in 2026
@@ -221,7 +221,7 @@ const BlogPost = () => {
               <div className="my-12">
                 <h2
                   id="professional-vs-basic"
-                  className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3"
+                  className="text-3xl font-bold  mb-6 flex items-center gap-3"
                 >
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   What Makes Professional SEO Consulting Different from Basic
@@ -246,22 +246,22 @@ const BlogPost = () => {
                 </p>
                 <p>Professional SEO usually includes:</p>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-                  <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm text-slate-700 font-medium">
+                  <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm font-medium">
                     Full <b>SEO audit services</b>
                   </li>
-                  <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm text-slate-700 font-medium">
+                  <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm font-medium">
                     Keyword research and market analysis
                   </li>
-                  <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm text-slate-700 font-medium">
+                  <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm font-medium">
                     Technical website improvements
                   </li>
-                  <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm text-slate-700 font-medium">
+                  <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm font-medium">
                     Content planning and optimization
                   </li>
-                  <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm text-slate-700 font-medium">
+                  <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm font-medium">
                     Link building strategies
                   </li>
-                  <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm text-slate-700 font-medium">
+                  <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm font-medium">
                     Performance tracking and reporting
                   </li>
                 </ul>
@@ -274,7 +274,7 @@ const BlogPost = () => {
               <div className="my-12">
                 <h2
                   id="techniques"
-                  className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3"
+                  className="text-3xl font-bold  mb-6 flex items-center gap-3"
                 >
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Important Techniques for SEO Optimization That Promote
@@ -290,7 +290,7 @@ const BlogPost = () => {
 
                 <div className="space-y-8 mt-8">
                   <div className="border-l-4 border-indigo-200 pl-6">
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                    <h3 className="text-xl font-bold  mb-2">
                       Keyword targeting
                     </h3>
                     <p>
@@ -301,7 +301,7 @@ const BlogPost = () => {
                   </div>
 
                   <div className="border-l-4 border-indigo-200 pl-6">
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                    <h3 className="text-xl font-bold  mb-2">
                       Content improvement
                     </h3>
                     <p>
@@ -313,7 +313,7 @@ const BlogPost = () => {
                   </div>
 
                   <div className="border-l-4 border-indigo-200 pl-6">
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                    <h3 className="text-xl font-bold  mb-2">
                       Internal linking
                     </h3>
                     <p>
@@ -324,7 +324,7 @@ const BlogPost = () => {
                   </div>
 
                   <div className="border-l-4 border-indigo-200 pl-6">
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                    <h3 className="text-xl font-bold  mb-2">
                       Authority building
                     </h3>
                     <p>
@@ -342,7 +342,7 @@ const BlogPost = () => {
               <div className="my-12">
                 <h2
                   id="technical"
-                  className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3"
+                  className="text-3xl font-bold  mb-6 flex items-center gap-3"
                 >
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Technical SEO Improvements That Strengthen Your Website
@@ -363,27 +363,27 @@ const BlogPost = () => {
                 </p>
                 <p>Some common improvements include:</p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-                  <li className="flex items-center gap-2 text-slate-700">
+                  <li className="flex items-center gap-2">
                     <Zap size={16} className="text-indigo-500" /> Making the
                     website load faster
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700">
+                  <li className="flex items-center gap-2">
                     <Globe size={16} className="text-indigo-500" /> Ensuring the
                     site works well on mobile phones
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700">
+                  <li className="flex items-center gap-2">
                     <Shield size={16} className="text-indigo-500" /> Fixing
                     broken links and errors
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700">
+                  <li className="flex items-center gap-2">
                     <Search size={16} className="text-indigo-500" /> Organizing
                     the website pages in a clear way
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700">
+                  <li className="flex items-center gap-2">
                     <BarChart2 size={16} className="text-indigo-500" /> Adding
                     schema so search engines understand the content better
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700">
+                  <li className="flex items-center gap-2">
                     <Shield size={16} className="text-indigo-500" /> Keeping the
                     website secure with HTTPS
                   </li>
@@ -401,7 +401,7 @@ const BlogPost = () => {
               <div className="my-12">
                 <h2
                   id="on-page"
-                  className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3"
+                  className="text-3xl font-bold  mb-6 flex items-center gap-3"
                 >
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   On-Page SEO Optimization for Higher Visibility & Better CTR
@@ -441,7 +441,7 @@ const BlogPost = () => {
               <div className="my-12">
                 <h2
                   id="content-strategy"
-                  className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3"
+                  className="text-3xl font-bold  mb-6 flex items-center gap-3"
                 >
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Content Strategy & Keyword Mapping for Scalable Growth
@@ -478,7 +478,7 @@ const BlogPost = () => {
               <div className="my-12">
                 <h2
                   id="local-seo"
-                  className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3"
+                  className="text-3xl font-bold  mb-6 flex items-center gap-3"
                 >
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Local SEO Consulting for Targeted USA Market Reach
@@ -524,7 +524,7 @@ const BlogPost = () => {
               <div className="my-12">
                 <h2
                   id="ecommerce"
-                  className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3"
+                  className="text-3xl font-bold  mb-6 flex items-center gap-3"
                 >
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Ecommerce SEO Optimization for Revenue-Focused Brands
@@ -574,7 +574,7 @@ const BlogPost = () => {
               <div className="my-12">
                 <h2
                   id="data-driven"
-                  className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3"
+                  className="text-3xl font-bold  mb-6 flex items-center gap-3"
                 >
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Data-Driven SEO Audits & Performance Tracking in 2026
@@ -620,7 +620,7 @@ const BlogPost = () => {
               <div className="my-12">
                 <h2
                   id="choosing-partner"
-                  className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3"
+                  className="text-3xl font-bold  mb-6 flex items-center gap-3"
                 >
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Choosing a Trusted SEO Consulting Partner in the USA
@@ -687,7 +687,7 @@ const BlogPost = () => {
                 />
                 <h2
                   id="faqs"
-                  className="text-3xl font-bold text-slate-900 mb-8"
+                  className="text-3xl font-bold  mb-8"
                 >
                   FAQs About SEO Services in the USA
                 </h2>

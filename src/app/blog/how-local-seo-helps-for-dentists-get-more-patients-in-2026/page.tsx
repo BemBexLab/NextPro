@@ -23,7 +23,7 @@ export const metadata = {
 
 const Blog8 = () => {
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-700 selection:bg-indigo-100 selection:text-indigo-900">
+    <div className="min-h-screen bg-slate-50 font-sans selection:bg-indigo-100 selection:text-indigo-900">
       {/* --- HEADER / HERO SECTION --- */}
       <header className="relative bg-slate-900 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/50 to-slate-900 z-0"></div>
@@ -61,67 +61,67 @@ const Blog8 = () => {
                 <nav className="space-y-1">
                   <a
                     href="#why-local-seo-matters"
-                    className="block  text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block   hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Why Local SEO Matters
                   </a>
                   <a
                     href="#local-search-impacts"
-                    className="block  text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block   hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     How Local Search Impacts Patients
                   </a>
                   <a
                     href="#optimizing-gbp"
-                    className="block  text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block   hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Optimizing Google Business Profile
                   </a>
                   <a
                     href="#online-reviews"
-                    className="block  text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block   hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     The Role of Online Reviews
                   </a>
                   <a
                     href="#local-keywords"
-                    className="block  text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block   hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Local Keywords to Target
                   </a>
                   <a
                     href="#local-listings"
-                    className="block  text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block   hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Local Listings & Citations
                   </a>
                   <a
                     href="#mobile-search"
-                    className="block  text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block   hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Mobile Search Trends
                   </a>
                   <a
                     href="#location-content"
-                    className="block  text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block   hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Location-Focused Content
                   </a>
                   <a
                     href="#common-mistakes"
-                    className="block  text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block   hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Common Local SEO Mistakes
                   </a>
                   <a
                     href="#simple-strategies"
-                    className="block  text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block   hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     Simple Local SEO Strategies
                   </a>
                   <a
                     href="#faqs"
-                    className="block  text-slate-600 hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
+                    className="block   hover:text-indigo-600 hover:translate-x-1 transition-all duration-200 py-1"
                   >
                     FAQs
                   </a>
@@ -132,7 +132,7 @@ const Blog8 = () => {
 
           {/* --- MAIN CONTENT --- */}
           <main className="lg:col-span-9 space-y-16">
-            <article className="prose prose-slate prose-lg max-w-none text-slate-600 leading-loose">
+            <article className="prose prose-slate prose-lg max-w-none  leading-loose">
               <p>
                 Finding new patients is not as easy as before. Today, most
                 people go online when they need a dentist. They search for
@@ -286,23 +286,23 @@ const Blog8 = () => {
                 </p>
                 <p>These signals include:</p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <MapPin size={16} className="text-indigo-500" /> Google
                     Business Profile
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <Link2 size={16} className="text-indigo-500" /> Local
                     citations
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <Star size={16} className="text-indigo-500" /> Online
                     reviews
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <FileText size={16} className="text-indigo-500" /> Website
                     location pages
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <Globe size={16} className="text-indigo-500" /> NAP
                     information (Name, Address, Phone)
                   </li>
@@ -492,19 +492,19 @@ const Blog8 = () => {
                 </p>
                 <p>Simple ways include:</p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <CheckCircle size={16} className="text-indigo-500" />{" "}
                     sending a follow-up email
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <CheckCircle size={16} className="text-indigo-500" /> SMS
                     review request
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <CheckCircle size={16} className="text-indigo-500" /> QR
                     code in the clinic
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <CheckCircle size={16} className="text-indigo-500" /> review
                     link on receipts
                   </li>
@@ -567,19 +567,19 @@ const Blog8 = () => {
                 </div>
                 <p>These keywords should appear naturally in:</p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <Search size={16} className="text-indigo-500" /> your dental
                     website SEO
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <FileText size={16} className="text-indigo-500" /> service
                     pages
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <BookOpen size={16} className="text-indigo-500" /> blog
                     content
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <Globe size={16} className="text-indigo-500" /> Google
                     Business Profile
                   </li>
@@ -691,23 +691,23 @@ const Blog8 = () => {
                   Mobile SEO improvements include
                 </h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <Zap size={16} className="text-indigo-500" /> fast loading
                     pages
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <CheckCircle size={16} className="text-indigo-500" /> easy
                     appointment booking
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <Smartphone size={16} className="text-indigo-500" />{" "}
                     click-to-call buttons
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <Globe size={16} className="text-indigo-500" /> simple
                     navigation
                   </li>
-                  <li className="flex items-center gap-2 text-slate-700 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                  <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <Smartphone size={16} className="text-indigo-500" />{" "}
                     responsive website design
                   </li>
