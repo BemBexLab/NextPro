@@ -226,14 +226,7 @@ const Blog9 = () => {
                                     Performance
                                 </h2>
 
-                                <img
-                                    src="/blogs/blog 9-2.webp"
-                                    alt="Technical SEO Optimization Services"
-                                    className="w-full h-auto object-cover rounded-xl mb-6"
-                                    style={{ aspectRatio: "1024/600" }}
-                                    width={1024}
-                                    height={600}
-                                />
+    
 
                                 <div className="space-y-6">
                                     <p>
@@ -339,6 +332,14 @@ const Blog9 = () => {
                                     <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                                     Ecommerce SEO Services for Scalable Online Growth in the USA
                                 </h2>
+                                <img
+                                    src="/blogs/blog 9-2.webp"
+                                    alt="Technical SEO Optimization Services"
+                                    className="w-full h-auto object-cover rounded-xl mb-6"
+                                    style={{ aspectRatio: "1024/600" }}
+                                    width={1024}
+                                    height={600}
+                                />
 
                                 <div className="space-y-6">
                                     <p>
