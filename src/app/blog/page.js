@@ -84,6 +84,24 @@ const blogData = [
         category: 'SEO',
         url: '/blog/advanced-seo-services-usa-2026'
     },
+    {
+        id: 10,
+        title: "Professional Content Writing Services in USA (2026) – Built for Rankings & Conversions",
+        thumb: '/blogs/blog 10.webp',
+        author: 'Web Founders USA',
+        date: 'Mar 18, 2026',
+        category: 'SEO',
+        url: '/blog/ecommerce-and-white-label-seo-services-in-usa-2026'
+    },
+    {
+        id: 11,
+        title: "Professional Content Writing Services in USA (2026) – Built for Rankings & Conversions",
+        thumb: '/blogs/blog 11.webp',
+        author: 'Web Founders USA',
+        date: 'Mar 18, 2026',
+        category: 'SEO',
+        url: '/blog/professional-content-writing-services-in-usa-2026'
+    },
 ]
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
