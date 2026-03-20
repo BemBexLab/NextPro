@@ -111,6 +111,33 @@ const blogData = [
         category: 'SEO',
         url: '/blog/premium-content-writing-services-usa-2026'
     },
+    {
+        id: 13,
+        title: "Advanced Content Writing Services USA (2026) – Strategy, SEO & Results Combined",
+        thumb: '/blogs/blog 13.webp',
+        author: 'Web Founders USA',
+        date: 'Mar 20, 2026',
+        category: 'Content Writing',
+        url: '/blog/advanced-content-writing-services-usa-2026'
+    },
+    {
+        id: 14,
+        title: "Pay Per Click Advertising Services in USA (2026) – Maximize ROI with Smart PPC",
+        thumb: '/blogs/blog 14.webp',
+        author: 'Web Founders USA',
+        date: 'Mar 20, 2026',
+        category: 'PPC',
+        url: '/blog/pay-per-click-advertising-services-in-usa-2026'
+    },
+    {
+        id: 15,
+        title: "Advanced Pay Per Click (PPC) Services USA Scalable Ad Strategies for 2026",
+        thumb: '/blogs/blog 15.webp',
+        author: 'Web Founders USA',
+        date: 'Mar 20, 2026',
+        category: 'PPC',
+        url: '/blog/advanced-pay-per-click-ppc-services-usa-scalable-ad-strategies-for-2026'
+    },
 ]
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
