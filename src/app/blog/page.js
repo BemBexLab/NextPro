@@ -183,6 +183,24 @@ const blogData = [
         category: 'Ecommerce Website',
         url: '/blog/the-biggest-ecommerce-website-errors-killing-sales-in-2026-usa'
     },
+    {
+        id: 21,
+        title: "Advanced Ecommerce Design & Development USA 2026 Create High-Converting Online Stores",
+        thumb: '/blogs/blog 21.webp',
+        author: 'Web Founders USA',
+        date: 'Mar 21, 2026',
+        category: 'Ecommerce Website',
+        url: '/blog/advanced-ecommerce-design-development-usa-2026-create-high-converting-online-stores'
+    },
+    {
+        id: 22,
+        title: "Common Ecommerce Design & Development Mistakes in 2026 – USA Edition",
+        thumb: '/blogs/blog 22.webp',
+        author: 'Web Founders USA',
+        date: 'Mar 21, 2026',
+        category: 'Ecommerce Website',
+        url: '/blog/common-ecommerce-design-development-mistakes-in-2026-usa-edition'
+    },
 ]
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
