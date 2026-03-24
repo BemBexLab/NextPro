@@ -53,7 +53,7 @@ const pageContent = {
     linkLine: {
       before:
         "If one thing is weak, rankings drop. This is why many businesses are now turning to",
-      href: "/service/seo-services",
+      href: "/service/seo-services/",
       anchor: "seo services for multiple businesses",
       after: "and expert help instead of guessing what works.",
     },

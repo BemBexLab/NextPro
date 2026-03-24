@@ -52,7 +52,7 @@ const SEOProcess = () => {
             className="text-blue-800 font-bold hover:underline"
             rel="noopener noreferrer"
           >
-            shopify seo shopify services
+            seo shopify services
           </a>{" "}
           for collections and products if you're on{" "}
           <a
@@ -68,7 +68,7 @@ const SEOProcess = () => {
             className="text-blue-800 font-bold hover:underline"
             rel="noopener noreferrer"
           >
-            wordpress seo wordpress services
+            seo wordpress services
           </a>{" "}
           that are built for clean structure and growth.
         </>

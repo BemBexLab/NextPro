@@ -32,7 +32,7 @@ export function generateMetadata(): Metadata {
           .map((k) => k.trim())
       : undefined,
     alternates: {
-      canonical: "https://www.webfoundersusa.com/service/seo-services",
+      canonical: "https://www.webfoundersusa.com/service/seo-services/",
     },
     openGraph: {
       title,

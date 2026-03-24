@@ -176,7 +176,7 @@ export default function HowToChooseAgency() {
                 <>
                   Do you need{" "}
                   <Link
-                    href="/service/seo-services"
+                    href="/service/seo-services/"
                     className="text-blue-600 underline"
                   >
                     SEO

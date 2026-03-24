@@ -526,7 +526,7 @@ export const services = [
           tab_name: "Data Driven CRO",
           heading: "Data-Driven CRO Strategy & Monthly Optimization Cycles",
           description:
-            "Conversion optimization is not a one off fix it is a progressive and changing process. Every month, we are going to improve your site according to performance data, user feedback, and quality of traffic. This will confirm that your website not only keeps on getting better but also scales along with your marketing activities like <a href='/service/seo-services' class='text-[#072d7f] underline font-regular'>SEO</a>, <a href='/service/pay-per-click/' class='text-[#072d7f] underline font-regular'>PPC</a>, and content marketing.",
+            "Conversion optimization is not a one off fix it is a progressive and changing process. Every month, we are going to improve your site according to performance data, user feedback, and quality of traffic. This will confirm that your website not only keeps on getting better but also scales along with your marketing activities like <a href='/service/seo-services/' class='text-[#072d7f] underline font-regular'>SEO</a>, <a href='/service/pay-per-click/' class='text-[#072d7f] underline font-regular'>PPC</a>, and content marketing.",
         },
       ],
     },
@@ -602,7 +602,7 @@ export const services = [
   "We create seamless shopping experiences that customers trust.",
   "From custom e-commerce website development to performance driven UI/UX, product page optimization, branding, and full scale marketing, we build ecommerce systems that work together in complete harmony.",
   "As an experienced ecommerce website development company, we mix strong visual identity and fast loading architecture with high intent traffic strategies that drive consistent sales: no templates, no guesswork, just smart ecommerce built around your customers and your revenue.",
-  "Whether it’s for adult ecommerce websites' <a href='/service/seo-services' class='text-[#072d7f] underline font-regular'>SEO</a> or a standard online store, our strategies adapt to every market segment."
+  "Whether it’s for adult ecommerce websites' <a href='/service/seo-services/' class='text-[#072d7f] underline font-regular'>SEO</a> or a standard online store, our strategies adapt to every market segment."
 ],
 
     tab: {
@@ -1343,7 +1343,7 @@ export const services = [
     },
 
     introParagraphs: [
-  "Our <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> are meant to assist companies in every sector, like dentistry and healthcare, even B2B and eCommerce, up to local businesses.",
+  "Our <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> are meant to assist companies in every sector, like dentistry and healthcare, even B2B and eCommerce, up to local businesses.",
   "Being an organic search optimization focused company, we are always up to the mark with our planning that not only boosts the site but also attracts the right customers and eventually gives back huge profits with the help of easy-to-measure results.",
   "We provide custom made services for different platforms like Shopify, WordPress, WooCommerce, Magento, and BigCommerce.",
   "If you seek enterprise SEO services, local SEO marketing, or even specialized solutions like law firm SEO services or medical SEO services, then we mix technical know how with creative content strategies to verify that your business flourishes on the internet.",
@@ -1446,7 +1446,7 @@ export const services = [
           image: "/service-deatil-images/seo.webp",
         },
         introParagraphs: [
-          "The e-commerce <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> industry specific SEO strategies and tactics are formulated to not only increase your product visibility but also to push the adoption of sustainable revenue growth over the longer period and make it to be a part of your business.",
+          "The e-commerce <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> industry specific SEO strategies and tactics are formulated to not only increase your product visibility but also to push the adoption of sustainable revenue growth over the longer period and make it to be a part of your business.",
           "The fact that online stores with thousands of products and seasonal stock changes face different types of challenges in SEO is what we take into account.",
           "The In-House Team of the E-commerce SEO agency consists of skilled individuals who not only create personalized strategies that reply to these hurdles but also make sure of a strong hold on organic long term success.",
           "In case you are operating a small boutique shop or a vast marketplace, cooperating with the best E-commerce SEO agency guarantees that potential buyers will discover your products.",
@@ -1565,7 +1565,7 @@ export const services = [
         },
         introParagraphs: [
           "This includes tech providers, SaaS companies, and other service-based businesses. Our team uses effective SEO techniques.",
-          "We help increase your visibility, bring in more organic traffic, and convert visitors into customers. When you work with a B2B <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a>, your website will reach the right audience. This will have a clear impact on your business."
+          "We help increase your visibility, bring in more organic traffic, and convert visitors into customers. When you work with a B2B <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a>, your website will reach the right audience. This will have a clear impact on your business."
         ],
         features: [
           "Full Website Audit & Technical SEO Review",
@@ -1671,7 +1671,7 @@ export const services = [
           image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
-          "The goal of our dental <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> is to build marketing strategies that help dental clinics rise in search results, achieve consistent appointment bookings, and stand out within highly competitive local markets.",
+          "The goal of our dental <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> is to build marketing strategies that help dental clinics rise in search results, achieve consistent appointment bookings, and stand out within highly competitive local markets.",
           "Our strategy starts with a deep understanding of patient online behavior in searching for dental services. From routine checkups to braces for the kids and even emergency care, Google is the first point of contact.",
           "If your practice is not ranking at the top, you are losing potential patients to your competitors.",
           "This is why working with a reliable dental SEO marketing agency can make all the difference. We make sure that your practice appears exactly where it should: right in front of patients who are actively searching for dental services within your area."
@@ -1817,7 +1817,7 @@ export const services = [
         },
         introParagraphs: [
           "If your healthcare practice is not ranking high enough in online searches, then you are probably losing a considerable amount of potential patient inquiries.",
-          "<a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a> is the place where we offer specialized healthcare <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> services to hospitals, clinics, and healthcare providers for the purpose of attracting the right patients, increasing visibility, and eventually growing their practice.",
+          "<a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a> is the place where we offer specialized healthcare <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> services to hospitals, clinics, and healthcare providers for the purpose of attracting the right patients, increasing visibility, and eventually growing their practice.",
           "Our method takes advantage of established SEO techniques along with a thorough comprehension of the medical sector. We concentrate on the development of moral, patient centered SEO that earns respect, rises in search results, and gives measurable returns. By collaborating with a focused healthcare SEO agency, your website will not only be ranked higher in search results but also attract visitors in a great manner leading to their becoming permanent patients."
         ],
         features: [
@@ -1924,7 +1924,7 @@ export const services = [
           image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
-          "At <a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a>, we are a committed enterprise <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a>, helping large companies to get their online presence, bring in organic traffic, and then convert that into good quality leads.",
+          "At <a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a>, we are a committed enterprise <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a>, helping large companies to get their online presence, bring in organic traffic, and then convert that into good quality leads.",
           "We know the hard times enterprise websites go through: intricate site structures, hundreds of thousands of web pages, and global or multi regional audiences.",
           "Therefore, we have chosen to partner with the enterprises and that is why our approach is made according to the enterprises, focusing on strategies that are scalable, measurable, and designed to make a real impact. Working with a top enterprise SEO agency guarantees that your brand has a chance to be seen even in competitive markets while at the same time keeping your SEO performance consistent across all platforms."
         ],
@@ -2028,7 +2028,7 @@ export const services = [
           image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
-          "Our Shopify <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> is dedicated to increasing the visibility of Shopify stores in search results, helping them get their share of online sales.",
+          "Our Shopify <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> is dedicated to increasing the visibility of Shopify stores in search results, helping them get their share of online sales.",
           "We implement no universal methods for all, but rather customize our strategies to suit the store's size, catalog, and business goals, which will eventually lead to growth in both rankings and sales.",
           "You are entitled to an expert SEO job done on your Shopify store that understands the platform's unique structure, whether you have just launched your shop or have been running it for years.",
           "Our squad brings together technical expertise, content best practices, and continuous optimization so that your store is always a step ahead of rivals and algorithm changes. We are among the best SEO services for Shopify, and the agencies we represent offer clarity, results, and hassle free interactions to you and your customers."
@@ -2137,7 +2137,7 @@ export const services = [
           image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
-          "We support digital agencies, marketing teams, freelancers, and studios that want to expand their service range without increasing their workload. With our expertise as a dedicated white label <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a>, you get a seasoned team working behind the scenes while your clients receive high quality SEO performance that reflects positively on you.",
+          "We support digital agencies, marketing teams, freelancers, and studios that want to expand their service range without increasing their workload. With our expertise as a dedicated white label <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a>, you get a seasoned team working behind the scenes while your clients receive high quality SEO performance that reflects positively on you.",
           "Our approach is simple: we do the work, and you take the credit. Whether your clients need on-page optimization, technical improvements, content enhancement, or ongoing reporting, our team handles the full process. Many agencies struggle with time, staffing, or experience in SEO. That’s exactly why our partnership model exists to provide reliable support and long-term scalability so you can serve every client with confidence.",
           "We work closely with agencies of all sizes. Some rely on us for full service execution, while others use our expertise to support only specific parts of their projects. This flexibility helps you maintain control over how you package your offerings, while giving you access to a complete SEO department whenever you need it."
         ],
@@ -2239,7 +2239,7 @@ export const services = [
         introParagraphs: [
           "Success is not just about building a website; real success comes from generating strong, consistent traffic.",
           "People notice results when others are reaching your website, and that reach only happens when the right keywords, structure, and linking strategy are used.",
-          "A fully optimised website that actually brings customers is a blessing, and that’s exactly what our WordPress <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> focuses on.",
+          "A fully optimised website that actually brings customers is a blessing, and that’s exactly what our WordPress <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> focuses on.",
           "We don’t just optimise new content; we refine existing content as well. From making compelling meta titles and descriptions to polishing the conclusion, we make sure your website has engaging, high quality content enriched with the right keywords for better performance."
         ],
         features: [
@@ -2360,7 +2360,7 @@ export const services = [
           image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
-          "Our Automotive <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> helps dealerships, auto shops, and auto parts businesses dominate search results with strategies that are clean, effective, and built for real conversions.",
+          "Our Automotive <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> helps dealerships, auto shops, and auto parts businesses dominate search results with strategies that are clean, effective, and built for real conversions.",
           "As an experienced automotive SEO company, we optimize your online presence so car buyers and service seeking customers find you first.",
           "We work like a true Automotive SEO optimization company, diving deep into your inventory, services, location pages, and customer intent. If you need SEO for automotive dealerships, auto repair SEO services, or SEO for automotive industry brands, our team makes sure your business becomes the top choice in your area.",
           "From auto SEO services to full automotive search engine marketing, we make sure your business outranks competitors and attracts high intent local customers."
@@ -2445,7 +2445,7 @@ export const services = [
         introParagraphs: [
           "<a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a> is a pioneer among Magento SEO agencies, and the solutions we provide will improve not only your online store's visibility but also its performance and sales.",
           "Our group knows the different structure and characteristics of Magento websites so well that they are able to give real strategies and act as a reliable Magento SEO consultant.",
-          "Our Magento <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> services, whether your store is new or established, primarily focus on improving rankings, generating organic traffic, and facilitating the entire shopping experience for your customers.",
+          "Our Magento <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> services, whether your store is new or established, primarily focus on improving rankings, generating organic traffic, and facilitating the entire shopping experience for your customers.",
           "A Magento SEO company will make sure that your e-commerce site is completely optimized and ready to take on the competition in the online marketplace."
         ],
         features: [
@@ -2560,7 +2560,7 @@ export const services = [
         },
         introParagraphs: [
           "Whenever a patient searches for your services, Google will display your website at the top for the relevant keywords.",
-          "Our team at <a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a>, a specialized medical <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a>, works on your website to boost its visibility and attract more views. This ultimately increases patient flow for your hospital, clinic, or healthcare center.",
+          "Our team at <a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a>, a specialized medical <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a>, works on your website to boost its visibility and attract more views. This ultimately increases patient flow for your hospital, clinic, or healthcare center.",
           "By using targeted medical SEO services, we help your practice reach the right audience, increase engagement, and improve online credibility."
         ],
         features: [
@@ -2790,7 +2790,7 @@ export const services = [
         },
         introParagraphs: [
           "A modern and attractive website is not enough in isolation. If your hotel does not appear in search engine results, potential guests may never even know about you.",
-          "The hotel <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> has the task to make sure that the website of the hotel you might be working with is tactically optimized in terms of the right keywords, meta descriptions, and content structure.",
+          "The hotel <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> has the task to make sure that the website of the hotel you might be working with is tactically optimized in terms of the right keywords, meta descriptions, and content structure.",
           "Collaborating with a hotel SEO agency can help you reach your audience and increase your online visibility.",
           "SEO for hotels goes beyond merely competing for generic keywords. It includes market analysis, guest behavior insights, and the application of tried and tested SEO strategies specifically adapted to the hospitality sector.",
           "Seeking the advice of a seasoned hotel SEO expert, your hotel can surpass rivalries and become one of the top picks among tourists."
@@ -2885,7 +2885,7 @@ export const services = [
           image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
-          "At <a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a>, our multilingual <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> helps companies expand into new regions, strengthens global rankings, and creates meaningful visibility within more than one market.",
+          "At <a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a>, our multilingual <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> helps companies expand into new regions, strengthens global rankings, and creates meaningful visibility within more than one market.",
           "Professional multilingual SEO companies work with you to stay on top of how search differs around the world, is spoken differently, and expects locally tuned content.",
           "Our team puts in the work so that your website will feel natural, rank correctly, and perform strongly within every target language.",
           "Search behavior changes in every different language. The words, the tone, the queries, and the cultural expectations change, which is why you need a dedicated multilingual SEO agency in the United States. We don't just translate your strategy—we localize it. From keyword research to on page optimization and technical updates, everything is adjusted to the linguistic and cultural requirements of every region.",
@@ -3114,7 +3114,7 @@ export const services = [
         },
         introParagraphs: [
           "The steps we take to increase your store's visibility on Google are elevating product rankings and pulling buyers who are already doing their searches for what you sell. Structured strategies and open communication, our objective is to make SEO easier, faster, and more effective for your business through our new approach.",
-          "Our WooCommerce <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> are personalized for store owners who look for long-term growth. We examine your store thoroughly from technical setup, product descriptions, and category structure to ensure everything conforms to SEO standards.",
+          "Our WooCommerce <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> are personalized for store owners who look for long-term growth. We examine your store thoroughly from technical setup, product descriptions, and category structure to ensure everything conforms to SEO standards.",
           "Our WooCommerce SEO service is a complete solution that enhances ranking and boosts conversions, no matter if your problem is low traffic, weak visibility of products, or a poorly optimized website. Rather than making assumptions on what might work, we employ data, competition analysis, and industry standards to establish a plan for your store that is focused on results."
         ],
         features: [
@@ -3218,7 +3218,7 @@ export const services = [
           image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
-          "That's where our BigCommerce <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> helps you out. We specialize in increasing your store's visibility, improving product rankings, and attracting buyers who are actively looking for your kind of products.",
+          "That's where our BigCommerce <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> helps you out. We specialize in increasing your store's visibility, improving product rankings, and attracting buyers who are actively looking for your kind of products.",
           "With clear strategies and continuous optimization, our goal is to make SEO simple, effective, and bring best results for your eCommerce business.",
           "Our BigCommerce SEO services focus on long-term, sustainable growth by auditing your entire store, from technical setup and site structure to product and category pages to make sure everything aligns with proven SEO best practices.",
           "Whether you face low traffic, weak product visibility, or slow conversions, our data driven strategies and competitor analysis help improve rankings and boost sales. With deep expertise in BigCommerce’s unique features, our team delivers personalized solutions rather than generic approaches.",
@@ -3325,7 +3325,7 @@ export const services = [
           image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
-          "A boutique with a strong online presence gets more clicks, more visitors, and eventually more sales. This is where our boutique <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> comes in.",
+          "A boutique with a strong online presence gets more clicks, more visitors, and eventually more sales. This is where our boutique <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> comes in.",
           "At <a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a>, we help boutiques improve their online visibility through simple, effective, and practical SEO strategies. From choosing the right keywords to improving your rankings on Google, our goal is to make sure shoppers find your boutique before they find your competitors.",
           "Whether you run a small online shop or a well-known boutique store, our boutique SEO services help you reach customers who are actually searching for your products."
         ],
@@ -3431,7 +3431,7 @@ export const services = [
         introParagraphs: [
           "We have got your back if you're a creator, brand, or business looking for ways to increase the number of people watching your content, getting engaged with it, and having it seen more prominently on YouTube.",
           "In order to do this, we first analyze your channel's performance, the keywords that users are typing in the search box, and the types of videos that your competitors are producing, for instance. Based on this, we can advise you on what new content to upload, how to improve your videos, and how to grow your channel in a steady and healthy way.",
-          "Our YouTube <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> and video SEO company is specialized in working on everything that helps your content reach the right audience. Besides that, we are also there to help you with your titles, descriptions, tags, and thumbnails by applying our optimization strategies on top of that.",
+          "Our YouTube <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> and video SEO company is specialized in working on everything that helps your content reach the right audience. Besides that, we are also there to help you with your titles, descriptions, tags, and thumbnails by applying our optimization strategies on top of that.",
           "This way the overall structure of your channel will be gone through and your videos will end up being in a better position to appear in the 'YouTube search', 'suggested videos' and also in 'Google search results' areas.",
           "Our expert team keeps an eye on the hottest topics and changes in viewer habits so you will always be the first to know. It doesn't matter if you are imparting knowledge, marketing a product, or providing entertainment; our YouTube SEO service will assist you in reaching a wider audience without having to rely on expensive advertising campaigns."
         ],
@@ -3537,7 +3537,7 @@ export const services = [
         },
         introParagraphs: [
           "At <a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a>, we understand how tough the competition is in the roofing industry.",
-          "Customers search online before calling any roofing company, and your website needs to show up at the right time, in the right place. Our roofing <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> helps roofing contractors strengthen their online presence, get more qualified leads, and grow their brand without struggling.",
+          "Customers search online before calling any roofing company, and your website needs to show up at the right time, in the right place. Our roofing <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> helps roofing contractors strengthen their online presence, get more qualified leads, and grow their brand without struggling.",
           "Most roofing companies lose clients because their website is not optimised. Our SEO for roofing companies focuses on fixing that.",
           "We improve your website structure, add the right roofing SEO keywords, optimise speed, work on local visibility, and give your business the push it needs to attract customers.",
           "Whether you want more roof repair calls, new roof installation leads, or insurance roofing clients, our roofing SEO expert team works on simple strategies that actually bring results."
@@ -3641,7 +3641,7 @@ export const services = [
         },
         introParagraphs: [
           "We handle everything from content to backlinks to audits while you focus on your business growth.",
-          "As a reliable outsource <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a>, we give you the support, updates, and execution your business needs without hiring an in-house team.",
+          "As a reliable outsource <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a>, we give you the support, updates, and execution your business needs without hiring an in-house team.",
           "SEO requires time, planning, keyword research, and ongoing work. When a business tries to manage everything alone, results stay slow.",
           "By working with our outsource SEO company, you save time and get a professional team working on your website performance every single day.",
           "Whether you are a marketing agency, ecommerce store, local business, or a startup, our SEO outsourcing services help you stay ahead."
@@ -3746,7 +3746,7 @@ export const services = [
           image: "/service-deatil-images/seo.webp"
         },
         introParagraphs: [
-          "Our construction <a class='text-blue-800 hover:underline' href='/service/seo-services'>SEO agency</a> help you show up when people search for builders, remodelers, or construction services online.",
+          "Our construction <a class='text-blue-800 hover:underline' href='/service/seo-services/'>SEO agency</a> help you show up when people search for builders, remodelers, or construction services online.",
           "Our construction SEO company works on simple and effective methods that help construction firms grow online and build a strong digital presence.",
           "Today, homeowners and businesses search online before hiring a contractor. If your website doesn't appear in the top results, your chances of getting the project drop instantly.",
           "Our SEO for construction companies focuses on increasing your online reach, improving visibility, and generating quality leads.",

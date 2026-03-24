@@ -547,7 +547,7 @@ const Blog20 = () => {
                   </ul>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
-                      <a href="/service/seo-services" className="text-blue-700 underline">SEO</a> brings free traffic. Without it, you depend only on ads.
+                      <a href="/service/seo-services/" className="text-blue-700 underline">SEO</a> brings free traffic. Without it, you depend only on ads.
                     </p>
                   </div>
                 </div>

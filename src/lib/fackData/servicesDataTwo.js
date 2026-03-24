@@ -12,7 +12,7 @@ export const servicesDataTwo = [
         id: 1,
         icon_1: <Activity height={36} width={35}/>,
         service_name: "Search Engine Optimization",
-        link: "/service/seo-services",
+        link: "/service/seo-services/",
         description: "At Web Founders USA, we help your business reach customers. We use the right keywords, smart optimization, and a good strategy. At our SEO Company, part of our digital marketing agency, we bring more traffic to your Website and improve your ranking with Google. The more visible you are, the more customers you attract."
     },
     {
