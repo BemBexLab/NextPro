@@ -36,7 +36,7 @@ const ServiceHero = () => {
           </h1>
 
           <p className="mt-6 text-md md:text-xl max-w-[720px] text-slate-100/90">
-            At Web Founders USA, every step we take is based on real results,
+            At <a className="text-white font-semibold hover:underline" href="/">Web Founders USA</a>, every step we take is based on real results,
             not quick fixes. Our approach combines sharp <strong>SEO audit services</strong>.
             <br />
             <br />
