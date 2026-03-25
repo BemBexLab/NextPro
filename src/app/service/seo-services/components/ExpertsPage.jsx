@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { getServiceById } from "@/data/services";
+import { getServiceById } from "./subservices";
 
 const ExpertsPage = ({ params }) => {
   const serviceId = params?.id || "seo-services";
@@ -168,7 +168,7 @@ const ExpertsPage = ({ params }) => {
                         className="text-white text-xs md:text-sm leading-relaxed mb-4 md:mb-6 line-clamp-4"
                         dangerouslySetInnerHTML={formatHtml(
                           sub.desc ||
-                            (sub.introParagraphs && sub.introParagraphs[0]),
+                          (sub.introParagraphs && sub.introParagraphs[0]),
                         )}
                       />
                     </div>
