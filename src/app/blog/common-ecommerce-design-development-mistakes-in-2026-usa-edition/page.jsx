@@ -580,7 +580,7 @@ const Blog22 = () => {
                 </div>
               </div>
 
-              {/* Personalization */}
+              {/* Personalizatin */}
               <div className="my-12" id="personalization">
                 <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
