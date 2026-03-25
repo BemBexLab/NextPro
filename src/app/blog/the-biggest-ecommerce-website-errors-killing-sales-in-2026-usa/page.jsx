@@ -396,6 +396,14 @@ const Blog20 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Confusing Website Navigation That Drives Visitors Away
                 </h2>
+                <img
+                  src="/blogs/blog 20-2.webp"
+                  alt="Slow Mobile Experience Destroying Ecommerce Sales"
+                  className="w-full h-auto object-cover rounded-xl mb-6"
+                  style={{ aspectRatio: "1024/600" }}
+                  width={1024}
+                  height={600}
+                />
                 <div className="space-y-6">
                   <p>
                     If users cannot find what they need, they leave.
@@ -450,14 +458,7 @@ const Blog20 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Lack of Clear Value Proposition on Landing Pages
                 </h2>
-                <img
-                  src="/blogs/blog 20-2.webp"
-                  alt="Slow Mobile Experience Destroying Ecommerce Sales"
-                  className="w-full h-auto object-cover rounded-xl mb-6"
-                  style={{ aspectRatio: "1024/600" }}
-                  width={1024}
-                  height={600}
-                />
+                
                 <div className="space-y-6">
                   <p>
                     When someone lands on your website, they should understand your value in seconds.

@@ -141,14 +141,7 @@ const Blog22 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Ignoring Mobile-First UX in a Mobile-Dominated USA Market
                 </h2>
-                <img
-                  src="/blogs/blog 22-2.webp"
-                  alt="Mobile-First UX for Ecommerce Websites USA"
-                  className="w-full h-auto object-cover rounded-xl mb-6"
-                  style={{ aspectRatio: "1024/600" }}
-                  width={1024}
-                  height={600}
-                />
+                
                 <div className="space-y-6">
                   <p>
                     Most people in the USA now shop on their phones. If your <b>ecommerce website</b> is not mobile-friendly, you're already behind.
@@ -216,7 +209,7 @@ const Blog22 = () => {
                     Speed matters more than ever. A slow <b>ecommerce website</b> kills conversions.
                   </p>
                   <p>
-                    Many <b>ecommerce website developers</b> add too many scripts, plugins, and heavy designs. It may look fancy, but it slows everything down.
+                    Many <a href="/service/ecommerce-web-development" className="text-blue-700 underline">ecommerce website developers</a> add too many scripts, plugins, and heavy designs. It may look fancy, but it slows everything down.
                   </p>
                   <p>
                     Even a <b>2–3 second delay</b> can make users leave.
@@ -457,6 +450,14 @@ const Blog22 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Poor Checkout Experience Leading to Cart Abandonment
                 </h2>
+                <img
+                  src="/blogs/blog 22-2.webp"
+                  alt="Mobile-First UX for Ecommerce Websites USA"
+                  className="w-full h-auto object-cover rounded-xl mb-6"
+                  style={{ aspectRatio: "1024/600" }}
+                  width={1024}
+                  height={600}
+                />
                 <div className="space-y-6">
                   <div className="bg-red-50 border-l-4 border-red-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900 flex items-center gap-2">
@@ -569,7 +570,7 @@ const Blog22 = () => {
                     This makes your listing stand out.
                   </p>
                   <p>
-                    Many <b>ecommerce website design companies</b> ignore this step. But it's important for SEO.
+                    Many <b>ecommerce website design companies</b> ignore this step. But it's <a href="/service/seo-services" className="text-blue-700 underline">important for SEO</a>.
                   </p>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
