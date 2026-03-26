@@ -18,7 +18,7 @@ const BlogSingle = () => {
                 breadcrumbCurrent={"New Study: Instagram Reels Outperform TikTok & Facebook Videos."}
             />
 
-            <BlogArtical sidebarShow={true} thumb={'/images/blog/blog-post1-10.png'} />
+            <BlogArtical sidebarShow={true} thumb={'/images/blog/blog-post1-10.webp'} />
         </main>
     )
 }

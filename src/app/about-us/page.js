@@ -27,7 +27,7 @@ const About = () => {
         {/* <PageTitle PageTitle pageName="About Us"
   breadcrumbLink="About Us"
   breadcrumbCurrent=""
-  bgImage="/images/servicebanner/website-creatives-and-images.jpg"/> */}
+  bgImage="/images/servicebanner/website-creatives-and-images.webp"/> */}
         <StoryFive counter={false}/>
         <Mission/>
         {/* <TeamGrid/> */}

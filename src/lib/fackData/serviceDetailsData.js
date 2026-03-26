@@ -1,6 +1,6 @@
 export const serviceDetailsData = {
   "Social Media Marketing": {
-    image: '/images/resource/Social-Meida-Marketing.png',
+    image: '/service-deatil-images/social-media-marketing.webp',
     title: "Why choose WebFounders USA as your Marketing Partner",
     paragraphs: [
       "At WebFounders USA, we understand the importance of having a strong online presence and ranking well in search engine results.",
@@ -50,7 +50,7 @@ export const serviceDetailsData = {
     ]
   },
   "Marketing Strategy": {
-  image: '/images/resource/marketingstrategy.png',
+  image: '/images/resource/marketingstrategy.webp',
   title: "Marketing Strategy That Delivers Results",
   paragraphs: [
     "Fuel your business growth with tailored, data-driven marketing strategies.",
@@ -111,7 +111,7 @@ export const serviceDetailsData = {
 },
   
   "Content Writing": {
-  image: '/images/servicesimages/content-writing.jpg',
+  image: '/images/servicesimages/content-writing.webp',
   title: "Content That Converts",
   paragraphs: [
     "Fuel your business growth with high-impact, SEO-optimized content tailored to your audience.",
@@ -180,7 +180,7 @@ export const serviceDetailsData = {
 },
 
   "Affiliate Marketing": {
-  image: '/images/servicesimages/affiliate-marketing.jpg',
+  image: '/images/servicesimages/affiliate-marketing.webp',
   title: "Affiliate Marketing That Delivers",
   paragraphs: [
     "Accelerate your business growth with a performance-based affiliate marketing strategy that puts results first.",
@@ -249,7 +249,7 @@ export const serviceDetailsData = {
 },
 
   "Email Marketing": {
-  image: '/images/servicesimages/email-marketing.jpg',
+  image: '/images/servicesimages/email-marketing.webp',
   title: "Email Campaigns That Convert",
   paragraphs: [
     "Drive engagement, nurture leads, and boost your sales with targeted email marketing built for results.",
@@ -318,7 +318,7 @@ export const serviceDetailsData = {
 },
 
   "Pay-Per-Click Advertising": {
-  image: '/images/resource/Pay-Per-Click-Advertising.jpg',
+  image: '/images/resource/Pay-Per-Click-Advertising.webp',
   title: "PPC Campaigns That Deliver Results",
   paragraphs: [
     "Gain instant visibility, drive targeted traffic, and generate high-quality leads with expertly managed PPC advertising.",
@@ -387,7 +387,7 @@ export const serviceDetailsData = {
 },
 
   "Conversion Optimization": {
-  image: '/images/resource/Conversion-Optimization.jpg',
+  image: '/images/resource/Conversion-Optimization.webp',
   title: "Conversion Optimization That Delivers",
   paragraphs: [
     "Turn more website visitors into loyal customers with data-driven conversion optimization strategies.",
@@ -456,7 +456,7 @@ export const serviceDetailsData = {
 },
 
  "E-commerce Marketing": {
-  image: '/images/resource/E-commerce-marketing.jpg',
+  image: '/images/resource/E-commerce-marketing.webp',
   title: "E-commerce Marketing That Drives Sales",
   paragraphs: [
     "Accelerate your online store’s growth and stand out in a crowded market with proven e-commerce marketing strategies.",
@@ -524,7 +524,7 @@ export const serviceDetailsData = {
   ]
 },
 "Digital Marketing": {
-  image: '/images/resource/digital-marketing2.jpg',
+  image: '/service-deatil-images/digital-marketing.webp',
   title: "Digital Marketing That Gets Results",
   paragraphs: [
     "Supercharge your business growth with comprehensive digital marketing strategies tailored to your unique goals.",
@@ -593,7 +593,7 @@ export const serviceDetailsData = {
 },
 
  "Web Development": {
-  image: '/images/servicesimages/ecommerce-website-development.jpg',
+  image: '/images/servicesimages/ecommerce-website-development.webp',
   title: "Web Development That Accelerates Growth",
   paragraphs: [
     "Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.",
@@ -662,7 +662,7 @@ export const serviceDetailsData = {
 },
 
  "Custom Website Design": {
-  image: '/images/resource/Custom-Website-Design-1.jpg',
+  image: '/images/resource/Custom-Website-Design-1.webp',
   title: "Custom Website Design That Accelerates Growth",
   paragraphs: [
     "Build a powerful online presence with high-performing, visually stunning websites built just for you.",
@@ -734,7 +734,7 @@ export const serviceDetailsData = {
 },
 
  "ECommerce Website": {
-  image: '/images/resource/E-commerce-marketing.2.jpg',
+  image: '/images/resource/E-commerce-marketing.2.webp',
   title: "ECommerce Website Development That Accelerates Growth",
   paragraphs: [
     "Build a powerful online store with high-performing, visually stunning e-commerce websites designed for growth.",
@@ -806,7 +806,7 @@ export const serviceDetailsData = {
 },
 
   "Logo Design": {
-  image: '/images/resource/Logo-Design.jpg-2.jpg',
+  image: '/images/resource/Logo-Design.jpg-2.webp',
   title: "Logo Design That Defines Your Brand",
   paragraphs: [
     "Make a lasting impression with a memorable, professional logo that captures the essence of your brand.",
@@ -877,7 +877,7 @@ export const serviceDetailsData = {
 },
 
  "SEO": {
-  image: '/images/resource/SEO2.png',
+  image: '/images/resource/SEO2.webp',
   title: "SEO Services That Drive Real Results",
   paragraphs: [
     "Get discovered by your ideal audience and climb the search rankings with proven SEO strategies.",
@@ -948,7 +948,7 @@ export const serviceDetailsData = {
 },
 
  "Branding": {
-  image: '/images/resource/Branding.jpg',
+  image: '/service-deatil-images/brand-strategy.webp',
   title: "Branding That Inspires Trust & Growth",
   paragraphs: [
     "Elevate your business with a distinctive brand identity that captures attention and earns loyalty.",
@@ -1019,7 +1019,7 @@ export const serviceDetailsData = {
 },
 
   "Maintenance": {
-  image: '/images/resource/maintenance.jpg',
+  image: '/images/resource/maintenance.webp',
   title: "Website Maintenance & Support",
   paragraphs: [
     "Keep your website running smoothly and securely with proactive maintenance and expert support.",
@@ -1090,7 +1090,7 @@ export const serviceDetailsData = {
 },
 
   "Video Animation": {
-  image: '/images/resource/Video-Animation.jpg',
+  image: '/service-deatil-images/video-animation.webp',
   title: "Video Animation That Captivates & Converts",
   paragraphs: [
     "Bring your brand to life and captivate your audience with stunning video animations tailored to your message.",

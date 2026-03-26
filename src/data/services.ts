@@ -353,7 +353,7 @@ export const services = [
     hero: {
       paragraph:
         "Running ads alone is not enough. At Web Founders USA, we combine human insight, data analysis, and practical execution to create PPC campaigns that generate high-quality leads and measurable ROI.",
-      image: "/images/resource/Pay-Per-Click-Advertising.jpg",
+      image: "/images/resource/Pay-Per-Click-Advertising.webp",
     },
 
     introParagraphs: [

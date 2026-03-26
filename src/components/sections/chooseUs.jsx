@@ -43,7 +43,7 @@ const ChooseUs = () => {
             <div className='max-w-[1350px] mx-auto px-[15px]'>
                 <div className='grid lg:grid-cols-[42%_auto] grid-cols-1 gap-7.5'>
                     <div>
-                        <Image src={'/images/resource/why-choose-img4-1.png'} sizes='(max-width:1024px) 100vw, 50vw' style={{ width: '100%' }} width={486} height={633} alt='bg' />
+                        <Image src={'/images/resource/why-choose-img4-1.webp'} sizes='(max-width:1024px) 100vw, 50vw' style={{ width: '100%' }} width={486} height={633} alt='bg' />
                     </div>
                     <div>
                         <SlideUp>

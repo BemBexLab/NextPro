@@ -7,11 +7,11 @@ import Title from "../ui/title";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import Link from "next/link";
-import icon_1 from "../../../public/images/shapes/approach-icon4-1.png";
-import icon_2 from "../../../public/images/shapes/approach-icon4-2.png";
-import icon_3 from "../../../public/images/shapes/approach-icon4-3.png";
-import icon_4 from "../../../public/images/shapes/approach-icon4-4.png";
-import icon_5 from "../../../public/images/shapes/approach-icon4-5.png";
+import icon_1 from "../../../public/images/shapes/approach-icon4-1.webp";
+import icon_2 from "../../../public/images/shapes/approach-icon4-2.webp";
+import icon_3 from "../../../public/images/shapes/approach-icon4-3.webp";
+import icon_4 from "../../../public/images/shapes/approach-icon4-4.webp";
+import icon_5 from "../../../public/images/shapes/approach-icon4-5.webp";
 import SlideUp from "../animations/slideUp";
 
 const tabList = [
@@ -19,7 +19,7 @@ const tabList = [
     id: "development",
     tab_name: "Discovery & Planning",
     tab_icon: icon_1,
-    tab_content: "/images/resource/approach-image4-1.jpg",
+    tab_content: "/images/resource/approach-image4-1.webp",
     heading: "Discovery & Planning",
     description: (
       <>
@@ -31,7 +31,7 @@ const tabList = [
     id: "partnership",
     tab_name: "Proposal & Timeline",
     tab_icon: icon_2,
-    tab_content: "/images/resource/proposal-&-timeline-2.jpg",
+    tab_content: "/images/resource/proposal-&-timeline-2.webp",
     heading: "Proposal & Timeline",
     description: (
       <>
@@ -43,7 +43,7 @@ const tabList = [
     id: "decisions",
     tab_name: "Creative Process",
     tab_icon: icon_3,
-    tab_content: "/images/resource/creative-process-1.jpg",
+    tab_content: "/images/resource/creative-process-1.webp",
     heading: "Creative Process",
     description:
       "Our manufacturing web design agency builds websites that look great and perform even better. With our expertise in Interactive Web Design, UI/UX Design Company solutions, and fast, secure hosting, your site stays reliable, protected, and optimized for every user. From logo design services and branding services to professional web development, we handle the creative and technical aspects. We use several tools to improve user experience and increase conversions. These include website speed optimization, WooCommerce development, and Shopify website development. ",
@@ -52,7 +52,7 @@ const tabList = [
     id: "execution",
     tab_name: "Final Delivery",
     tab_icon: icon_4,
-    tab_content: "/images/resource/final-delivery-2.jpg",
+    tab_content: "/images/resource/final-delivery-2.webp",
     heading: "Final Delivery",
     description:
       "We make your vision a reality. From designing services for a landing page and lead generation websites to the development of an online booking system, we make sure your site drives results. Our digital marketing agency, including Email Marketing Services and PPC Marketing Services, will complement your Website in generating leads and growing revenue. We test each feature and then train you on how to manage the updates. With Custom Web Forms, Payment Gateway Integration, and Website Security Services, your business is both effective and secure from day one.",
@@ -61,7 +61,7 @@ const tabList = [
     id: "communication",
     tab_name: "Maintenance",
     tab_icon: icon_5,
-    tab_content: "/images/resource/website-maintainence.jpg",
+    tab_content: "/service-deatil-images/website-maintenance.webp",
     heading: "Maintenance",
     description:
       "Unlike others, we stay by your side after launch. Our Website Maintenance and Support keeps your site secure, updated, and running smoothly. Thinking of Website Redesign Services, Mobile Friendly Website Design, or Multi Lingual Website Development? We adapt as your business grows. Performance monitoring and strategy adjustment to maximize results are achieved through website analytics services, website traffic analysis, and revenue optimization services. Honesty in communication, measurability in growth, and dependability in support, that's the promise of Web Founders USA.",

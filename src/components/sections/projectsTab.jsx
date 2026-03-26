@@ -189,7 +189,8 @@ const ProjectsTab = () => {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
           {filteredPosts.map((post) => {
-            const imageUrl = post.acf?.project_image?.url || "/default.jpg";
+            const imageUrl =
+              post.acf?.project_image?.url || "/images/servicebanner/portfolio-image.webp";
             const figma = isFigmaCard(post);
             const scrollAmount = scrollOffsets[post.id] || 0;
 

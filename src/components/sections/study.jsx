@@ -202,7 +202,8 @@ const GalleryCarousel = () => {
                 className="flex gap-6 overflow-x-hidden scrollbar-hide snap-x snap-mandatory py-4 px-2 cursor-grab active:cursor-grabbing select-none"
             >
                 {tripleProjects.map((project, index) => {
-                    const imageUrl = project.acf?.project_image?.url || "/default.jpg";
+                    const imageUrl =
+                        project.acf?.project_image?.url || "/images/servicebanner/portfolio-image.webp";
                     // Use real index within current projects set for itemsRef
                     const actualIndex = index % projectsCount;
                     // Only use refs for items in the middle set

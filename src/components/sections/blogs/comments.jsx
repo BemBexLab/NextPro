@@ -6,7 +6,7 @@ import Link from 'next/link'
 const commentData = [
     {
         id: 1,
-        src: "/images/blog/comment-author1-1.jpg",
+        src: "/images/blog/comment-author1-1.webp",
         name: "Devon Lane",
         date: "28 April 2024",
         comment: `As the world continues to fight COVID-19 some property owners are searching
@@ -14,7 +14,7 @@ const commentData = [
         replyComment: [
             {
                 id: 1,
-                src: "/images/blog/comment-author1-2.jpg",
+                src: "/images/blog/comment-author1-2.webp",
                 name: "Jenny Wilson",
                 date: "28 April 2024",
                 comment: `As the world continues to fight COVID-19 some property owners are searching
@@ -24,7 +24,7 @@ const commentData = [
     },
     {
         id: 2,
-        src: "/images/blog/comment-author1-3.jpg",
+        src: "/images/blog/comment-author1-3.webp",
         name: "Courtney Henry",
         date: "28 April 2024",
         comment: `As the world continues to fight COVID-19 some property owners are searching

@@ -148,7 +148,7 @@ export default function FreelancerMatchForm() {
         <div className="md:w-2/5 w-full relative flex items-center justify-center bg-gray-100">
           <div className="relative w-full h-96 md:h-full">
             <Image
-              src="/images/contact/contact image.png"
+              src="/images/contact/contact image.webp"
               alt="Designers"
               fill
               className="object-cover object-center"

@@ -1,5 +1,5 @@
 import React from 'react'
-import bg_img from "../../public/images/banner/hero-404.jpg"
+import bg_img from "../../public/images/banner/hero-404.webp"
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import RightArrow from '../../public/icons/rightArrow'

@@ -17,7 +17,7 @@ const CardThree = ({ id, title, date, thumb, author, category }) => {
                     <div className='flex md:flex-row flex-col md:items-center justify-between pb-7.5'>
                         <div className='flex sm:flex-row flex-col sm:items-center sm:gap-7 gap-3 mt-2.5'>
                             <div className='flex items-center gap-4'>
-                                <Image src={"/images/blog/posts-author-img1-1.png"} alt='author' width={38} height={38} className='rounded-full' />
+                                <Image src={"/images/blog/posts-author-img1-1.webp"} alt='author' width={38} height={38} className='rounded-full' />
                                 <Link href={""} className='text-base hover:text-primary-foreground transition-all duration-500'>Eleanor Pena</Link>
                             </div>
                             <Link href={""} className='text-base relative after:absolute after:-left-[15px] after:top-1/2 after:-translate-y-1/2 after:bg-secondary after:w-[6px] after:h-[6px] after:rounded-full hover:text-primary-foreground transition-all duration-500 ml-4 sm:ml-0'>Social Media Marketing</Link>

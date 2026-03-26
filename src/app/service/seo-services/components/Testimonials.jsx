@@ -9,14 +9,14 @@ const Testimonials = () => {
     {
       quote:
         "We doubled qualified leads in three months after the Web Founders USA SEO sprint — organic traffic grew 132% and our contact form conversions tripled.",
-      image: "/service-testing/testimonials/17719507759cb7.png",
+      image: "/service-testing/testimonials/17719507759cb7.webp",
       name: "Stephen Ramos",
       title: "Founder & CEO, SunBright Solar",
     },
     {
       quote:
         "Local-first SEO and Google Business optimization brought a steady stream of new patients. Online bookings increased 45% and phone calls are up 60%.",
-      image: "/service-testing/testimonials/17719509296cd5.png",
+      image: "/service-testing/testimonials/17719509296cd5.webp",
       name: "Dr. Lloyd Kim",
       title: "Founder & CEO, SmileWorks Dental",
     },
@@ -44,14 +44,14 @@ const Testimonials = () => {
     {
       quote:
         "Focused SEO and onboarding content helped our law practice appear for the right searches — quality consultations increased and client acquisition costs dropped.",
-      image: "/service-testing/testimonials/17719507759cb7.png",
+      image: "/service-testing/testimonials/17719507759cb7.webp",
       name: "Nicole Alvarez",
       title: "Managing Partner, Sterling Law",
     },
     {
       quote:
         "E‑commerce growth was immediate after their on-page fixes and product schema updates — conversion rate improved and average order value increased 18%.",
-      image: "/service-testing/testimonials/17719509296cd5.png",
+      image: "/service-testing/testimonials/17719509296cd5.webp",
       name: "Maya Hernandez",
       title: "Ecommerce Manager, CozyHome",
     },

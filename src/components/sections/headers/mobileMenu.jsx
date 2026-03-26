@@ -33,7 +33,7 @@ const MobileMenu = ({ data }) => {
             <div className="flex justify-start mt-7">
               <Link href={"/"}>
                 <Image
-                  src={"/images/image123.png"}
+                  src={"/images/image123.webp"}
                   width={179}
                   height={53}
                   alt="logo-white"

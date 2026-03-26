@@ -160,8 +160,8 @@ html {
         rgba(46, 77, 254, 0.05),
         rgba(46, 77, 254, 0.05)
       ),
-      url("/images/demos/hero-landing-bg.png"),
-      url("/images/demos/hero-landing-bg2.png");
+      url("/images/demos/hero-landing-bg.webp"),
+      url("/images/demos/hero-landing-bg2.webp");
     background-blend-mode: multiply;
   }
 }

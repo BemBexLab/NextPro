@@ -29,7 +29,7 @@ const BlogArtical = ({ sidebarShow }) => {
                             <div className='flex md:flex-row flex-col md:items-center justify-between'>
                                 <div className='flex sm:flex-row flex-col sm:items-center sm:gap-7 gap-3 mt-2.5'>
                                     <div className='flex items-center gap-4'>
-                                        <Image src={"/images/blog/posts-author-img1-1.png"} alt='author' width={38} height={38} className='rounded-full' />
+                                        <Image src={"/images/blog/posts-author-img1-1.webp"} alt='author' width={38} height={38} className='rounded-full' />
                                         <Link href={"#"} className='text-base font-semibold hover:text-primary-foreground transition-all duration-500'>Eleanor Pena</Link>
                                     </div>
                                     <Link href={"#"} className='text-base font-semibold relative after:absolute after:-left-[15px] after:top-1/2 after:-translate-y-1/2 after:bg-secondary after:w-[6px] after:h-[6px] after:rounded-full hover:text-primary-foreground transition-all duration-500 ml-4 sm:ml-0'>Social Media Marketing</Link>
@@ -41,9 +41,9 @@ const BlogArtical = ({ sidebarShow }) => {
                         <div className='lg:pt-12.5 pt-6'>
                             {
                                 sidebarShow ?
-                                    <Image src={'/images/blog/blog-post1-10.png'} width={872} height={472} alt='thumb' className='rounded-[30px]' />
+                                    <Image src={'/images/blog/blog-post1-10.webp'} width={872} height={472} alt='thumb' className='rounded-[30px]' />
                                     :
-                                    <Image src={'/images/blog/blog-single-feature1-1.jpg'} width={1320} height={568} alt='thumb' className='rounded-[30px]' />
+                                    <Image src={'/images/blog/blog-single-feature1-1.webp'} width={1320} height={568} alt='thumb' className='rounded-[30px]' />
                             }
                         </div>
                         <div>
@@ -82,10 +82,10 @@ const BlogArtical = ({ sidebarShow }) => {
 
                             <div className='flex sm:flex-row flex-col justify-between gap-7.5 lg:pt-12.5 pt-6'>
                                 <div className='w-full'>
-                                    <Image src={'/images/blog/single-post1-1.jpg'} width={424} height={475} style={{ width: '100%' }} alt='inner-img-1' className='rounded-[30px] w-full' />
+                                    <Image src={'/images/blog/single-post1-1.webp'} width={424} height={475} style={{ width: '100%' }} alt='inner-img-1' className='rounded-[30px] w-full' />
                                 </div>
                                 <div className='w-full'>
-                                    <Image src={'/images/blog/single-post1-2.jpg'} width={424} height={475} style={{ width: '100%' }} alt='inner-img-2' className='rounded-[30px]' />
+                                    <Image src={'/images/blog/single-post1-2.webp'} width={424} height={475} style={{ width: '100%' }} alt='inner-img-2' className='rounded-[30px]' />
                                 </div>
                             </div>
 
