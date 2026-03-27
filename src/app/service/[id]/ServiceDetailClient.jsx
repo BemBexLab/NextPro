@@ -435,37 +435,37 @@ const ServiceDetailPage = ({ params }) => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 items-center justify-center">
             {[
               {
-                src: "/brands/images__2_-removebg-preview.png",
+                src: "/brands/images__2_-removebg-preview.webp",
                 alt: "Trustpilot",
                 width: 40,
                 height: 40,
               },
               {
-                src: "/brands/images__1_-removebg-preview.png",
+                src: "/brands/images__1_-removebg-preview.webp",
                 alt: "BirdEye",
                 width: 40,
                 height: 40,
               },
               {
-                src: "/brands/images__2__1-removebg-preview.png",
+                src: "/brands/images__2__1-removebg-preview.webp",
                 alt: "Feefo",
                 width: 80,
                 height: 80,
               },
               {
-                src: "/brands/images-1-removebg-preview.png",
+                src: "/brands/images-1-removebg-preview.webp",
                 alt: "Yetpo",
                 width: 40,
                 height: 40,
               },
               {
-                src: "/brands/images-removebg-preview.png",
+                src: "/brands/images-removebg-preview.webp",
                 alt: "Reviewsio",
                 width: 40,
                 height: 40,
               },
               {
-                src: "/brands/unnamed-removebg-preview.png",
+                src: "/brands/unnamed-removebg-preview.webp",
                 alt: "BazaarVoice",
                 width: 40,
                 height: 40,

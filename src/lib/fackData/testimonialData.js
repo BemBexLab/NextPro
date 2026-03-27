@@ -1,6 +1,6 @@
-import img_1 from '../../../public/images/testimonial/testimonial-img1-1.png'
-import img_2 from '../../../public/images/testimonial/testimonial-img1-2.png'
-import img_3 from '../../../public/images/testimonial/testimonial-img1-3.png'
+import img_1 from '../../../public/images/testimonial/testimonial-img1-1.webp'
+import img_2 from '../../../public/images/testimonial/testimonial-img1-2.webp'
+import img_3 from '../../../public/images/testimonial/testimonial-img1-3.webp'
 
 export const testimonialData = [
     {

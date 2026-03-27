@@ -79,7 +79,7 @@ export default function BlogPost() {
             <div className="w-full md:w-1/2 flex-shrink-0">
               <div className="relative w-full aspect-[7/8] rounded-lg overflow-hidden bg-gray-100 shadow-sm">
                 <Image
-                  src="/images/blog-images/7.-What-Makes-the-Best-Email-Marketing-Campaigns-Stand-Out.jpg"
+                  src="/images/blog-images/7.-What-Makes-the-Best-Email-Marketing-Campaigns-Stand-Out.webp"
                   alt="Digital Marketing Analytics"
                   fill
                   className="object-cover"
@@ -207,7 +207,7 @@ export default function BlogPost() {
             <div className="w-full md:w-1/2 flex-shrink-0">
               <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-gray-100 shadow-sm">
                 <Image
-                  src="/images/blog-images/3.Top-Qualities-of-a-Reliable-Web-Development-Agency.jpg"
+                  src="/images/blog-images/3.Top-Qualities-of-a-Reliable-Web-Development-Agency.webp"
                   alt="Choosing Digital Marketing Agency"
                   fill
                   className="object-cover"

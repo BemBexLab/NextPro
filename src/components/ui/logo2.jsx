@@ -7,7 +7,7 @@ const Logo2 = () => {
     <div className="w-auto h-auto">
       <Link href={"/"} className="relative">
         <Image
-          src={"/images/image123.png"}
+          src={"/images/image123.webp"}
           width={500}
           height={200}
           unoptimized="true"

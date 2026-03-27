@@ -39,28 +39,28 @@ const HeroFour = () => {
 
                     <div className='relative hidden lg:block'>
                         <div className='absolute -top-[21px] -left-[21px] xl:inline-block hidden' style={{ transform: `translate(-${mousPositionX}px, -${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-1.png"} width={330} height={194} alt='mobius-strip-1' />
+                            <Image src={"/images/shapes/mobius-strip4-1.webp"} width={330} height={194} alt='mobius-strip-1' />
                         </div>
                         <div className='relative lg:absolute xl:top-[62px] lg:top-[30%] xl:right-[136px] lg:right-14 lg:z-[2]' style={{ transform: `translate(-${mousPositionX}px, -${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-4.png"} width={600} height={600} alt='mobius-strip-4' style={{ width: "100%" }} className='max-h-[420px] lg:max-h-full object-cover' />
+                            <Image src={"/images/shapes/mobius-strip4-4.webp"} width={600} height={600} alt='mobius-strip-4' style={{ width: "100%" }} className='max-h-[420px] lg:max-h-full object-cover' />
                         </div>
                         <div className='absolute top-0 md:right-5 right-0 z-[1] sm:max-w-full max-w-[190px]' style={{ transform: `translate(${mousPositionX}px, ${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-3.png"} width={288} height={267} alt='mobius-strip-3' style={{ width: "100%" }} />
+                            <Image src={"/images/shapes/mobius-strip4-3.webp"} width={288} height={267} alt='mobius-strip-3' style={{ width: "100%" }} />
                         </div>
                         <div className='absolute md:bottom-[138px] bottom-12 md:-left-2 left-0 z-[3] sm:max-w-full max-w-[190px]' style={{ transform: `translate(${mousPositionX}px, ${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-2.png"} width={300} height={300} alt='mobius-strip-2 ' style={{ width: "100%" }} />
+                            <Image src={"/images/shapes/mobius-strip4-2.webp"} width={300} height={300} alt='mobius-strip-2 ' style={{ width: "100%" }} />
                         </div>
                         <div className='absolute bottom-0 left-0 lg:block hidden' >
-                            <Image src={"/images/shapes/mobius-strip4-5.png"} width={434} height={188} alt='mobius-strip-5' />
+                            <Image src={"/images/shapes/mobius-strip4-5.webp"} width={434} height={188} alt='mobius-strip-5' />
                         </div>
                         <div className='absolute -bottom-[6px] right-[70px] blur-[7px]' style={{ transform: `translate(-${mousPositionX}px, -${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-6.png"} width={382} height={164} alt='mobius-strip-6' />
+                            <Image src={"/images/shapes/mobius-strip4-6.webp"} width={382} height={164} alt='mobius-strip-6' />
                         </div>
                         <div className='absolute lg:bottom-[210px] bottom-25 xl:right-[94px] right-0 z-[7] md:block hidden' style={{ transform: `translate(${mousPositionX}px, ${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-7.png"} width={160} height={160} alt='mobius-strip-7' />
+                            <Image src={"/images/shapes/mobius-strip4-7.webp"} width={160} height={160} alt='mobius-strip-7' />
                         </div>
                         <div className='absolute bottom-0 right-0 xl:inline-block hidden' style={{ transform: `translate(${mousPositionX}px, ${mousPositionY}px)` }}>
-                            <Image src={"/images/shapes/mobius-strip4-8.png"} width={276} height={246} alt='mobius-strip-8' />
+                            <Image src={"/images/shapes/mobius-strip4-8.webp"} width={276} height={246} alt='mobius-strip-8' />
                         </div>
                     </div>
 

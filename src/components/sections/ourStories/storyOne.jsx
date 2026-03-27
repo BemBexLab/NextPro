@@ -13,7 +13,7 @@ const StoryOne = () => {
                 <div className='relative md:pt-16 pb-8 lg:pb-6 xl:pb-0 sm:px-2.5 after:absolute after:z-[-1] after:left-0 after:top-0 sm:after:bg-accent after:w-full after:h-[calc(100%-140px)] lg:after:rounded-[50px] after:rounded-2.5xl'>
                     <div className='flex lg:flex-row flex-col justify-between '>
                         <div className='-mt-[22px] basis-1/2'>
-                            <Image src={"/images/resource/our-story1-1.png"} width={731} height={763} alt='stroy background' />
+                            <Image src={"/images/resource/our-story1-1.webp"} width={731} height={763} alt='stroy background' />
                         </div>
                         <div className='basis-1/2 mt-8 lg:mt-0 px-[15px] lg:px-0'>
                             <StoryContentOne />

@@ -10,7 +10,7 @@ const ProjectArtical = () => {
                 <div className='pt-12.5'>
                     <div className='grid lg:grid-cols-[66%_33%] grid-cols-1 items-start gap-12.5'>
                         <article>
-                            <Image src={"/images/resource/portfolio-feature1-1.jpg"} width={872} height={451} className='rounded-[30px]' alt='project background ' />
+                            <Image src={"/images/resource/portfolio-feature1-1.webp"} width={872} height={451} className='rounded-[30px]' alt='project background ' />
                             <div className='pt-20'>
                                 <Title size={"4xl"}>Client Overview:</Title>
                                 <p className='pt-2.5'>XYZ Furniture Co. is a leading manufacturer and retailer of high-quality furniture products with a strong presence in the offline market. Despite their success offline, they were struggling to gain traction online and wanted to increase their visibility and sales through digital channels. </p>

@@ -5,9 +5,9 @@ import { Button } from '@/components/ui/button'
 import Highlight from '@/components/ui/highlight'
 import Title from '@/components/ui/title'
 
-import team_icon from "../../../../public/images/shapes/dynamic-team-icon.png"
-import skills_icon from "../../../../public/images/shapes/skills-icon.png"
-import content_icon from "../../../../public/images/shapes/content-writing-icon.png"
+import team_icon from "../../../../public/images/shapes/dynamic-team-icon.webp"
+import skills_icon from "../../../../public/images/shapes/skills-icon.webp"
+import content_icon from "../../../../public/images/shapes/content-writing-icon.webp"
 import SlideUp from '@/components/animations/slideUp'
 import SlideRight from '@/components/animations/slideRight'
 
@@ -46,7 +46,7 @@ const TeamOne = () => {
                 </SlideUp>
                 <div className='lg:pt-12.5 pt-7.5 relative z-[1] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[calc(100%-160px)] after:bg-gray after:rounded-[30px] after:z-[-1]'>
                     <div className='shadow-[0px_4px_46.9px_0px_rgba(9,25,40,0.1)] rounded-[30px] max-w-[1320px] mx-auto relative mt-7.5 sm:mt-0'>
-                        <Image src={'/images/resource/career-team1-1.jpg'} width={1320} height={510} sizes='100vw' alt="dashboard1" className='lg:rounded-[30px] rounded-2xl' />
+                        <Image src={'/images/resource/career-team1-1.webp'} width={1320} height={510} sizes='100vw' alt="dashboard1" className='lg:rounded-[30px] rounded-2xl' />
                     </div>
                     <div className='lg:pt-[46px] pt-4 flex lg:flex-row flex-col justify-between max-w-[1320px] mx-auto pb-12.5 px-3 lg:px-0'>
                         {

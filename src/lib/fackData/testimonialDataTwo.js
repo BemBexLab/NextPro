@@ -2,7 +2,7 @@ export const testimonialDataThree = [
     {
         id: 1,
         name: "Sarah Johnson",
-        src: '/images/testimonial/client-img-3-1.png',
+        src: '/images/testimonial/client-img-3-1.webp',
         position: "DigitalRevolve Solutions",
         review: "Just Wow, I like the design and their incredible support. I had some queries and the support team replied within just an hour. Thanks for quick reply.",
         title:"Design quality",
@@ -11,7 +11,7 @@ export const testimonialDataThree = [
     {
         id: 2,
         name: "Larry A. Kolb ",
-        src: '/images/testimonial/client-img-3-2.png',
+        src: '/images/testimonial/client-img-3-2.webp',
         position: "Driftwood Road",
         review: "The results achieved were beyond our expectations. NextPro agency proved to be proven results achievers, consistently delivering measurable impact. ",
         title:"Customer Support",
@@ -20,7 +20,7 @@ export const testimonialDataThree = [
     {
         id: 3,
         name: "Sarah Johnson",
-        src: '/images/testimonial/client-img-3-3.png',
+        src: '/images/testimonial/client-img-3-3.webp',
         position: "DigitalRevolve Solutions",
         review: "I highly recommend to get you started setting up a design system in Figma.  focus on wireframing layouts with nice defaults.",
         title:"Customizibilty",
@@ -29,7 +29,7 @@ export const testimonialDataThree = [
     {
         id: 4,
         name: "Sarah Johnson",
-        src: '/images/testimonial/client-img-3-4.png',
+        src: '/images/testimonial/client-img-3-4.webp',
         position: "DigitalRevolve Solutions",
         review: "Not only the design is GREAT, but the support is magnificent. Next marketing agency proved to be proven results achievers, consistently delivering measurable impact.",
         title:"Code quality",
@@ -38,7 +38,7 @@ export const testimonialDataThree = [
     {
         id: 5,
         name: "Sarah Johnson",
-        src: '/images/testimonial/client-img-3-5.png',
+        src: '/images/testimonial/client-img-3-5.webp',
         position: "DigitalRevolve Solutions",
         review: "Excellent customer service! Got back right away and fixed my problem loading template!",
         title:"Design quality",
@@ -47,7 +47,7 @@ export const testimonialDataThree = [
     {
         id: 6,
         name: "Larry A. Kolb ",
-        src: '/images/testimonial/client-img-3-6.png',
+        src: '/images/testimonial/client-img-3-6.webp',
         position: "Driftwood Road",
         review: "The results achieved were beyond our expectations. Next marketing agency proved to be proven results achievers, consistently delivering measurable impact. ",
         title:"Customer Support",
@@ -56,7 +56,7 @@ export const testimonialDataThree = [
     {
         id: 7,
         name: "Sarah Johnson",
-        src: '/images/testimonial/client-img-3-7.png',
+        src: '/images/testimonial/client-img-3-7.webp',
         position: "DigitalRevolve Solutions",
         review: "Excellent customer service! Got back right away and fixed my problem loading template!",
         title:"Design quality",
@@ -65,7 +65,7 @@ export const testimonialDataThree = [
     {
         id: 8,
         name: "Larry A. Kolb ",
-        src: '/images/testimonial/client-img-3-8.png',
+        src: '/images/testimonial/client-img-3-8.webp',
         position: "Driftwood Road",
         review: "I highly recommend to get you started setting up a design system in Figma.  focus on wireframing layouts with nice defaults.",
         title:"Customer Support",
@@ -74,7 +74,7 @@ export const testimonialDataThree = [
     {
         id: 9,
         name: "Sarah Johnson",
-        src: '/images/testimonial/client-img-3-1.png',
+        src: '/images/testimonial/client-img-3-1.webp',
         position: "DigitalRevolve Solutions",
         review: "Excellent customer service! Got back right away and fixed my problem loading template!",
         title:"Design quality",
@@ -83,7 +83,7 @@ export const testimonialDataThree = [
     {
         id: 10,
         name: "Sarah Johnson",
-        src: '/images/testimonial/client-img-3-2.png',
+        src: '/images/testimonial/client-img-3-2.webp',
         position: "DigitalRevolve Solutions",
         review: "Not only the design is GREAT, but the support is magnificent. Next marketing agency proved to be proven results achievers, consistently delivering measurable impact.",
         title:"Code quality",
@@ -92,7 +92,7 @@ export const testimonialDataThree = [
     {
         id: 11,
         name: "Sarah Johnson",
-        src: '/images/testimonial/client-img-3-3.png',
+        src: '/images/testimonial/client-img-3-3.webp',
         position: "DigitalRevolve Solutions",
         review: "Just Wow, I like the design and their incredible support. I had some queries and the support team replied within just an hour. Thanks for quick reply.",
         title:"Design quality",
@@ -101,7 +101,7 @@ export const testimonialDataThree = [
     {
         id: 12,
         name: "Sarah Johnson",
-        src: '/images/testimonial/client-img-3-4.png',
+        src: '/images/testimonial/client-img-3-4.webp',
         position: "DigitalRevolve Solutions",
         review: "The results achieved were beyond our expectations. NextPro agency proved to be proven results achievers, consistently delivering measurable impact. ",
         title:"Design quality",

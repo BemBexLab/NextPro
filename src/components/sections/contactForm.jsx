@@ -20,13 +20,13 @@ const ContactForm = ({ color, inputColor }) => {
     return (
         <section className='container lg:mt-15 mt-9'>
             <div className={` bg-primary lg:rounded-[30px] rounded-2xl px-3 relative z-[1]`}>
-                <div className='absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat opacity-20 z-[-1]' style={{ backgroundImage: `url(/images/background/services-bg1-1.png)` }}></div>
+                <div className='absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat opacity-20 z-[-1]' style={{ backgroundImage: `url(/images/background/services-bg1-1.webp)` }}></div>
                 <div className={`max-w-[1320px] mx-auto lg:pt-[138px] pt-12 lg:pb-15 pb-10 rounded-[30px]`}>
                     <div className='flex lg:flex-row flex-col justify-between items-center gap-12.5'>
                         <div className='lg:w-[40%] w-full lg:pb-11'>
                             <SlideUp>
                                 <div className={`w-[75px] h-[75px] rounded-lg flex justify-center items-center drop-shadow-3xl bg-white mb-3`}>
-                                    <Image src={'/images/shapes/cro-icon.png'} width={45} height={50} alt='map arrwo' />
+                                    <Image src={'/images/shapes/cro-icon.webp'} width={45} height={50} alt='map arrwo' />
                                 </div>
                                 <Title size={"5xl"} className={`md:leading-[140%] ${color}`}>Request a free Audit of your website</Title>
                                 <p className={`font-semibold mt-4 max-w-[449px] ${color}`}>Find quick answers to common queries in our FAQ section, ensuring a clear understanding of your digital journey with us.</p>

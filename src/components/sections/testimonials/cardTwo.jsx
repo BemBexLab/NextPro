@@ -10,14 +10,14 @@ const CardTwo = ({ rating, name, position, src, review }) => {
                 <div className='grid md:grid-cols-[200px_auto] grid-cols-1 gap-11'>
                     <div className='relative'>
                         <div className='absolute -left-6 -top-6'>
-                            <Image src={'/images/shapes/skills-icon.png'} width={49} height={56} alt='testimonial-image' />
+                            <Image src={'/images/shapes/skills-icon.webp'} width={49} height={56} alt='testimonial-image' />
                         </div>
                         <Image src={src} className='h-full max-h-[268px] md:max-h-full object-cover rounded-2xl' alt='testimonial-image' />
                     </div>
                     <div className='py-4'>
                         <div className='flex items-center justify-between pb-5'>
                             <Rating star={rating} />
-                            <Image src={"/images/shapes/trustpilot-img.png"} width={178} height={50} alt='trustpilot' />
+                            <Image src={"/images/shapes/trustpilot-img.webp"} width={178} height={50} alt='trustpilot' />
                         </div>
                         <p>{review.length > 134 ? review.slice(0, 180) : review}</p>
                         <div className='pt-11'>

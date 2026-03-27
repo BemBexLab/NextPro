@@ -15,7 +15,7 @@ const PlayIcon = ({ playOne, color }) => {
             {
                 playOne ?
                     <div onClick={() => setOpen(true)} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-                        <Image src={'/images/shapes/play-btn1-1.png'} alt='play icon' width={132} height={132} className='cursor-pointer lg:max-w-[116px] lg:max-h-[116px] sm:max-w-20 sm:max-h-20 max-w-16 max-h-16' />
+                        <Image src={'/images/shapes/play-btn1-1.webp'} alt='play icon' width={132} height={132} className='cursor-pointer lg:max-w-[116px] lg:max-h-[116px] sm:max-w-20 sm:max-h-20 max-w-16 max-h-16' />
                         <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[160%] z-[-1] after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-[rgba(46,77,254,0.3)] after:rounded-full after:animate-spring-one'></div>
                         <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[160%] z-[-1] after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-[rgba(46,77,254,0.3)] after:rounded-full after:animate-spring-two'></div>
                         <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[160%] z-[-1] after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-[rgba(46,77,254,0.3)] after:rounded-full after:animate-spring-three'></div>

@@ -23,7 +23,7 @@ const AIDiscoveryChannels = () => {
       name: "Gemini",
     },
     {
-      logo: "/service-testing/qwen.png",
+      logo: "/service-testing/qwen.webp",
       name: "Qwen",
     },
   ];

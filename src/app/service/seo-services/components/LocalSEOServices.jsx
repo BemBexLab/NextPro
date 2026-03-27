@@ -4,7 +4,7 @@ import React from "react";
 const LocalSEOServices = () => {
   const services = [
     {
-      icon: "/service-testing/keyword.png", // Replace with actual icon/image
+      icon: "/service-testing/keyword.webp", // Replace with actual icon/image
       title: "Keyword Strategy",
       description: (
         <>
@@ -17,7 +17,7 @@ const LocalSEOServices = () => {
       ),
     },
     {
-      icon: "/service-testing/seoaudit.png", // Replace with actual icon/image
+      icon: "/service-testing/seoaudit.webp", // Replace with actual icon/image
       title: "Full SEO Audit",
       description: (
         <>
@@ -37,7 +37,7 @@ const LocalSEOServices = () => {
       ),
     },
     {
-      icon: "/service-testing/onpageseo.png", // Replace with actual icon/image
+      icon: "/service-testing/onpageseo.webp", // Replace with actual icon/image
       title: "On-Page SEO Optimization",
       description: (
         <>
@@ -50,7 +50,7 @@ const LocalSEOServices = () => {
       ),
     },
     {
-      icon: "/service-testing/technicalseo.png", // Replace with actual icon/image
+      icon: "/service-testing/technicalseo.webp", // Replace with actual icon/image
       title: "Technical SEO Fixes",
       description: (
         <>
@@ -63,7 +63,7 @@ const LocalSEOServices = () => {
       ),
     },
     {
-      icon: "/service-testing/linkbuilding.png", // Replace with actual icon/image
+      icon: "/service-testing/linkbuilding.webp", // Replace with actual icon/image
       title: "Authority & Link Growth",
       description: (
         <>
@@ -75,7 +75,7 @@ const LocalSEOServices = () => {
       ),
     },
     {
-      icon: "/service-testing/contentmarketing.png", // Replace with actual icon/image
+      icon: "/service-testing/contentmarketing.webp", // Replace with actual icon/image
       title: "Content & SEO Copywriting",
       description: (
         <>

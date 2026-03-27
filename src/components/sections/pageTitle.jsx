@@ -10,7 +10,7 @@ const PageTitle = ({
   breadcrumbLink,
   breadcrumbCurrent,
   className,
-  bgImage = "/images/servicebanner/portfolio-image.jpg"
+  bgImage = "/images/servicebanner/portfolio-image.webp"
 }) => {
   return (
     <div

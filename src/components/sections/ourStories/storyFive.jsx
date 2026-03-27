@@ -11,14 +11,14 @@ const StoryFive = ({ counter }) => {
                     <div className='flex lg:flex-row flex-col justify-center 2xl:gap-[144px] xl:gap-20 lg:gap-10 gap-5'>
                         <div className=' max-w-[534px] relative '>
                             <div className='relative '>
-                                <Image src={"/images/resource/our-story5-4.png"} width={510} height={670} sizes='(max-width:1024px) 100vw, 50vw' alt='stroy background' className='relative z-[1]' />
-                                <Image src={"/images/resource/our-story5-2.png"} width={510} height={670} sizes='(max-width:1024px) 100vw, 50vw' alt='stroy background' className='absolute bottom-0' />
+                                <Image src={"/images/resource/our-story5-4.webp"} width={510} height={670} sizes='(max-width:1024px) 100vw, 50vw' alt='stroy background' className='relative z-[1]' />
+                                <Image src={"/images/resource/our-story5-2.webp"} width={510} height={670} sizes='(max-width:1024px) 100vw, 50vw' alt='stroy background' className='absolute bottom-0' />
                             </div>
                             <div className='absolute top-7'>
-                                <Image src={"/images/shapes/our-story5-1.png"} width={138} height={140} alt='bg' />
+                                <Image src={"/images/shapes/our-story5-1.webp"} width={138} height={140} alt='bg' />
                             </div>
                             <div className='absolute -right-9 -top-12'>
-                                <Image src={"/images/shapes/our-story5-3.png"} width={366} height={307} alt='bg' className='w-full z-[1]' />
+                                <Image src={"/images/shapes/our-story5-3.webp"} width={366} height={307} alt='bg' className='w-full z-[1]' />
                             </div>
                         </div>
                         <div className='max-w-[683px] mt-8 '>

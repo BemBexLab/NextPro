@@ -7,7 +7,7 @@ const Author = () => {
         <div className='bg-[rgba(46,77,254,0.05)] rounded-[30px] p-[26px] border border-accent'>
             <div className='flex md:flex-row flex-col lg:items-center gap-5'>
                 <div className='min-w-[160px]'>
-                    <Image src={'/images/blog/single-post-author.jpg'} width={160} height={168} alt='Eleanor Pena' className='rounded-[15px]' />
+                    <Image src={'/images/blog/single-post-author.webp'} width={160} height={168} alt='Eleanor Pena' className='rounded-[15px]' />
                 </div>
                 <div>
                     <h6 className='text-1xl font-semibold'>Eleanor Pena</h6>

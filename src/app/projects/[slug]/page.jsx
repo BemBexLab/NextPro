@@ -28,7 +28,8 @@ export default async function ProjectPage({ params }) {
   const project = data[0];
   if (!project) return notFound();
 
-  const imageUrl = project.acf?.project_image?.url || "/default.jpg";
+  const imageUrl =
+    project.acf?.project_image?.url || "/images/servicebanner/portfolio-image.webp";
   const acf = project.acf;
 
   return (
