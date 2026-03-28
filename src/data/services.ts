@@ -3973,7 +3973,7 @@ export const services = [
   "The customers of your business may often get their first impression from your website. A well built and easy to use website may not only attract visitors but also gain their confidence, increase the time they spend at your site, and lead to sales.",
   "<a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a>, as a top custom website design company, concentrates on making websites that are your identity, appeal to your audience, and bring about measurable business growth.",
   "Custom website design services approach starts with a thorough grounding in your vision. We are going to assist you by identifying your ideas, goals, and expectations. After that, our team will reshape, develop, and broaden your concepts by combining creativity, functionality, and strategic design.",
-  "The finished product is going to be a one of a kind, captivating, and assuredly visit worthy website. No matter the size of the company, small or large, every project that we handle will involve the various talents of our designers, developers, and SEO specialists."
+  "The finished product is going to be a one of a kind, captivating, and assuredly visit worthy website. No matter the size of the company, small or large, every project that we handle will involve the various talents of our designers, developers, and <a class='text-blue-800 hover:underline' href='/service/seo-services/'> SEO specialists. </a>"
 ],
 
     tab: {

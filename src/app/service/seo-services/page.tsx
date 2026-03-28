@@ -20,7 +20,7 @@ const SERVICE_ID = "seo-services";
 
 export function generateMetadata(): Metadata {
   const service = getServiceById(SERVICE_ID);
-  const title = service?.seo?.title || service?.title || "SEO Services  | Web Founders USA";
+  const title = service?.seo?.title || service?.title || "SEO Services - Web Founders USA";
   const description = service?.seo?.description || service?.desc || "Expert SEO services by Web Founders USA. We offer technical audits and strategic solutions to grow your online presence and visibility.";
 
   return {
