@@ -1,4 +1,26 @@
 User-agent: *
-Disallow:
- 
+Allow: /
+
+Disallow: /admin/
+Disallow: /search
+Disallow: /?s=
+Disallow: /*?filter=
+Disallow: /*?sort=
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /thank-you/
+
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jsx$
+Allow: /*.ts$
+Allow: /*.tsx$
+Allow: /*.html$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.mp4$
+
 Sitemap: https://www.webfoundersusa.com/sitemap.xml
