@@ -1,64 +1,10 @@
 import { notFound } from "next/navigation";
-
-type WPPost = {
-  id: number;
-  slug: string;
-  date: string;
-  title?: { rendered?: string };
-  content?: { rendered?: string };
-  excerpt?: { rendered?: string };
-  _embedded?: {
-    ["wp:featuredmedia"]?: Array<{
-      source_url?: string;
-      alt_text?: string;
-    }>;
-  };
-};
-
-async function getPostBySlug(slug: string): Promise<WPPost | null> {
-  const cmsEndpoint = process.env.CMS?.trim();
-  if (!cmsEndpoint) {
-    console.error("Missing CMS environment variable");
-    return null;
-  }
-
-  const normalizedEndpoint = cmsEndpoint.endsWith("/")
-    ? cmsEndpoint.slice(0, -1)
-    : cmsEndpoint;
-  const querySeparator = normalizedEndpoint.includes("?") ? "&" : "?";
-  const endpoint = `${normalizedEndpoint}${querySeparator}slug=${encodeURIComponent(slug)}&_embed`;
-
-  const res = await fetch(endpoint, { cache: "no-store" });
-  if (!res.ok) {
-    return null;
-  }
-
-  const posts = (await res.json()) as WPPost[];
-  return posts[0] ?? null;
-}
-
-function formatDate(value: string) {
-  return new Date(value).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
-
-function getTextFromHtml(html: string) {
-  return html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
-}
-
-function getReadingTime(html: string) {
-  const words = getTextFromHtml(html).split(" ").filter(Boolean).length;
-  const minutes = Math.max(1, Math.ceil(words / 220));
-  return `${minutes} min read`;
-}
-
-function getFirstImageFromHtml(html: string) {
-  const match = html.match(/<img[^>]+src=["']([^"']+)["'][^>]*>/i);
-  return match?.[1] || null;
-}
+import {
+  formatDate,
+  getFirstImageFromHtml,
+  getPostBySlug,
+  getReadingTime,
+} from "../wpPosts";
 
 export default async function BlogSlugPage({
   params,

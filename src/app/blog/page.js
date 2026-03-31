@@ -1,6 +1,7 @@
 import React from 'react'
 import CardOne from '@/components/sections/blogs/cardOne'
 import PageTitle from '@/components/sections/pageTitle'
+import { decodeHtmlEntities, formatDate, getAllWpPosts, getFirstImageFromHtml } from './wpPosts'
 // Local blog data (title, image, and link URL)
 const blogData = [
     {
@@ -204,6 +205,23 @@ const blogData = [
 ]
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
+function mapWpPostToCard(post, index) {
+    const htmlContent = post?.content?.rendered || post?.excerpt?.rendered || ''
+    const title = decodeHtmlEntities(post?.title?.rendered || '')
+    const thumb = post?._embedded?.['wp:featuredmedia']?.[0]?.source_url || getFirstImageFromHtml(htmlContent) || '/blogs/1.webp'
+
+    return {
+        id: `wp-${post.id || index}`,
+        title,
+        thumb,
+        author: 'Web Founders USA',
+        date: formatDate(post.date),
+        category: 'CMS Blog',
+        url: `/blog/${post.slug}`,
+        publishedAt: post.date || '',
+    }
+}
+
 export const metadata = {
     title: "Blog  - Web Founders USA",
     description: "Read the Web Founders USA blog for expert insights, tips, and strategies on SEO, web design, and digital marketing growth.",
@@ -217,7 +235,18 @@ export const metadata = {
     }
 };
 
-const Blog2 = () => {
+const Blog2 = async () => {
+    const wpPosts = await getAllWpPosts()
+    const wpBlogCards = wpPosts
+        .map(mapWpPostToCard)
+        .filter((post) => post.title && post.url)
+
+    const seenUrls = new Set(blogData.map((post) => post.url.replace(/\/$/, '')))
+    const mergedBlogData = [
+        ...blogData.map((post) => ({ ...post, publishedAt: new Date(post.date).toISOString() })),
+        ...wpBlogCards.filter((post) => !seenUrls.has(post.url.replace(/\/$/, ''))),
+    ].sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+
     return (
         <main>
             <div className='lg:py-15 py-9'>
@@ -225,7 +254,7 @@ const Blog2 = () => {
                     {/* Optional: <PageTitle title="Our Blog" /> */}
                     <div className='grid grid-cols-1'>
                         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7.5'>
-                            {blogData.map(({ id, author, date, thumb, title, category, url }) => (
+                            {mergedBlogData.map(({ id, author, date, thumb, title, category, url }) => (
                                 <CardOne
                                     key={id}
                                     id={id}
