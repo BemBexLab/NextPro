@@ -46,19 +46,19 @@ export default function SeoServicesPage() {
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": "https://www.webfoundersusa.com/seo-services/#service",
-  "name": "Complete SEO Services",
-  "alternateName": "Full-Service Search Engine Optimization Agency",
-  "url": "https://www.webfoundersusa.com/seo-services/",
-  "description": "Web Founders USA provides complete SEO services including Technical SEO, On-Page SEO, Off-Page SEO, Local SEO, Enterprise SEO, E-commerce SEO, SEO Audits, Keyword Research, Content Optimization, Link Building, and Conversion Optimization for businesses of all sizes.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Web Founders USA",
-    "url": "https://www.webfoundersusa.com/"
+	        dangerouslySetInnerHTML={{
+	          __html: `{
+	  "@context": "https://schema.org",
+	  "@type": "Service",
+	  "@id": "https://www.webfoundersusa.com/service/seo-services/#service",
+	  "name": "Complete SEO Services",
+	  "alternateName": "Full-Service Search Engine Optimization Agency",
+	  "url": "https://www.webfoundersusa.com/service/seo-services/",
+	  "description": "Web Founders USA provides complete SEO services including Technical SEO, On-Page SEO, Off-Page SEO, Local SEO, Enterprise SEO, E-commerce SEO, SEO Audits, Keyword Research, Content Optimization, Link Building, and Conversion Optimization for businesses of all sizes.",
+	  "provider": {
+	    "@type": "Organization",
+	    "name": "Web Founders USA",
+	    "url": "https://www.webfoundersusa.com/"
   },
   "serviceType": [
     "SEO Audit",
@@ -87,15 +87,15 @@ export default function SeoServicesPage() {
   "audience": {
     "@type": "Audience",
     "audienceType": "Small Businesses, Startups, Corporations, Enterprises and Online Brands"
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.webfoundersusa.com/seo-services/",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
-  }
-}`,
-        }}
+	  },
+	  "offers": {
+	    "@type": "Offer",
+	    "url": "https://www.webfoundersusa.com/service/seo-services/",
+	    "priceCurrency": "USD",
+	    "availability": "https://schema.org/InStock"
+	  }
+	}`,
+	        }}
       />
     <section className="text-black">
       <ServiceHero />
