@@ -25,6 +25,9 @@ export const metadata = {
   title: "Pay Per Click Advertising Services in USA (2026) – Maximize ROI with Smart PPC",
   description:
     "Maximize ROI in 2026 with expert PPC services in the USA—smart targeting, optimized ads, and higher conversions for your business growth.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/blog/pay-per-click-advertising-services-in-usa-2026",
+  },    
 };
 
 const Blog14 = () => {

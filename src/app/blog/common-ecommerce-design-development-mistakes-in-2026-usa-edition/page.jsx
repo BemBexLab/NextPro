@@ -41,6 +41,9 @@ export const metadata = {
   title: "Common Ecommerce Design & Development Mistakes in 2026 – USA Edition",
   description:
     "Discover common ecommerce design and development mistakes in 2026 USA and learn how to avoid them for better growth and conversions.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/blog/common-ecommerce-design-development-mistakes-in-2026-usa-edition",
+  },     
 };
 
 const Blog22 = () => {

@@ -37,6 +37,9 @@ export const metadata = {
   title: "The Biggest Ecommerce Website Errors Killing Sales in 2026 (USA)",
   description:
     "Biggest ecommerce mistakes in 2026 that hurt sales in the USA—fix issues fast and boost conversions with smart strategies today.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/blog/the-biggest-ecommerce-website-errors-killing-sales-in-2026-usa",
+  },    
 };
 
 const Blog20 = () => {

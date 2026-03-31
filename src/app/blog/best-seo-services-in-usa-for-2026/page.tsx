@@ -6,6 +6,9 @@ import Image from "next/image";
 export const metadata = {
     title: "Best SEO Services in USA for 2026 Scalable SEO Optimization & Growth Solutions",
     description: "Explore the best SEO services in the USA for 2026. Learn how scalable SEO optimization strategies help businesses improve rankings, traffic, and growth.",
+    alternates: {
+    canonical: "https://www.webfoundersusa.com/blog/best-seo-services-in-usa-for-2026",
+  },   
 };
 
 const Blog6: React.FC = () => {

@@ -86,7 +86,7 @@ const blogData = [
     },
     {
         id: 10,
-        title: "Professional Content Writing Services in USA (2026) – Built for Rankings & Conversions",
+        title: "Ecommerce & White Label SEO Services in USA (2026) – Built for Brands That Want to Dominate",
         thumb: '/blogs/blog 10.webp',
         author: 'Web Founders USA',
         date: 'Mar 18, 2026',
@@ -95,7 +95,7 @@ const blogData = [
     },
     {
         id: 11,
-        title: "Ecommerce & White Label SEO Services in USA (2026) – Built for Brands That Want to Dominate",
+        title: "Professional Content Writing Services in USA (2026) – Built for Rankings & Conversions",
         thumb: '/blogs/blog 11.webp',
         author: 'Web Founders USA',
         date: 'Mar 18, 2026',

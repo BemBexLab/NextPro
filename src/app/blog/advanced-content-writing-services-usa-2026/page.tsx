@@ -23,6 +23,9 @@ export const metadata = {
   title: "Advanced Content Writing Services USA (2026) – Strategy, SEO & Results Combined",
   description:
     "Advanced content writing services in the USA combining SEO strategy, engaging copy, and data-driven results for growth in 2026.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/blog/advanced-content-writing-services-usa-2026",
+  },
 };
 
 const Blog13 = () => {

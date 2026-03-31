@@ -7,6 +7,9 @@ export const metadata: Metadata = {
     "Why Businesses Struggle With SEO in 2026 And How Professional SEO Services Fix Rankings",
   description:
     "Discover why many businesses struggle with SEO in 2026 and how professional SEO services help improve rankings, traffic, and long-term growth.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/blog/why-businesses-struggle-with-seo-in-2026",
+  },   
 };
 
 type ImageData = {

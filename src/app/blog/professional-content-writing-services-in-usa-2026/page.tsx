@@ -28,6 +28,9 @@ export const metadata = {
   title: "Professional Content Writing Services in USA (2026) – Built for Rankings & Conversions",
   description:
     "Professional content writing services in USA for 2026—SEO-optimized, engaging, and designed to boost rankings and conversions.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/blog/professional-content-writing-services-in-usa-2026",
+  },      
 };
 
 const Blog11 = () => {

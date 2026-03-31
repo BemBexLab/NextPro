@@ -19,6 +19,9 @@ export const metadata = {
   title: "How Local SEO Helps For Dentists Get More Patients in 2026",
   description:
     "Learn how local SEO helps dentists attract more patients in 2026 by improving online visibility, ranking for nearby searches, and building trust locally.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/blog/how-local-seo-helps-for-dentists-get-more-patients-in-2026",
+  },   
 };
 
 const Blog8 = () => {

@@ -6,6 +6,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Top 5 U.S.A Digital Marketing Agencies in 2026',
   description: 'Top 5 USA Digital Marketing Agencies in 2026 ranked for SEO, PPC, social media, and growth strategy to scale your business fast.',
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/blog/top-usa-digital-marketing-agencies-in-2026",
+  }, 
 };
 
 const articleSchema = {

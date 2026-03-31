@@ -33,6 +33,9 @@ export const metadata = {
   title: "Custom Ecommerce Website Design & Development USA – 2026 Growth Solutions",
   description:
     "Custom ecommerce website design and development in USA, delivering scalable, user-friendly solutions to boost your business growth in 2026.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/blog/custom-ecommerce-website-design-development-usa-2026",
+  },    
 };
 
 const Blog19 = () => {

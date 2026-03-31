@@ -24,6 +24,9 @@ export const metadata = {
   title: "Ecommerce & White Label SEO Services in USA (2026) – Built for Brands That Want to Dominate",
   description:
     "Expert ecommerce and white label SEO services in the USA for 2026. Grow rankings, traffic, and sales with powerful SEO strategies.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/blog/ecommerce-and-white-label-seo-services-in-usa-2026",
+  },     
 };
 
 const Blog10 = () => {

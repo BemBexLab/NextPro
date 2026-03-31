@@ -21,6 +21,9 @@ export const metadata = {
   title: "Premium Content Writing Services USA 2026 – Built for Authority & Long-Term Growth",
   description:
     "Premium content writing services in the USA for 2026, focused on authority building, SEO growth, and long-term digital success.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/blog/premium-content-writing-services-usa-2026",
+  },      
 };
 
 const Blog12 = () => {
