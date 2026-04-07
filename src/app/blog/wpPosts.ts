@@ -2,9 +2,18 @@ export type WPPost = {
   id: number;
   slug: string;
   date: string;
+  link?: string;
   title?: { rendered?: string };
   content?: { rendered?: string };
   excerpt?: { rendered?: string };
+  yoast_head_json?: {
+    title?: string;
+    description?: string;
+    canonical?: string;
+    og_image?: Array<{
+      url?: string;
+    }>;
+  };
   _embedded?: {
     ["wp:featuredmedia"]?: Array<{
       source_url?: string;
@@ -93,6 +102,65 @@ export function getReadingTime(html: string) {
 export function getFirstImageFromHtml(html: string) {
   const match = html.match(/<img[^>]+src=["']([^"']+)["'][^>]*>/i);
   return match?.[1] || null;
+}
+
+export function stripInlineStyles(html = "") {
+  return html.replace(/\sstyle=(["'])(?:(?!\1).)*\1/gi, "");
+}
+
+export type WpRenderedStyles = {
+  stylesheets: string[];
+  inlineStyles: string[];
+};
+
+function makeAbsoluteUrl(url: string, baseUrl: string) {
+  try {
+    return new URL(url, baseUrl).toString();
+  } catch {
+    return null;
+  }
+}
+
+export async function getRenderedWpStyles(
+  pageUrl?: string
+): Promise<WpRenderedStyles> {
+  if (!pageUrl) {
+    return { stylesheets: [], inlineStyles: [] };
+  }
+
+  try {
+    const res = await fetch(pageUrl, { cache: "no-store" });
+
+    if (!res.ok) {
+      return { stylesheets: [], inlineStyles: [] };
+    }
+
+    const html = await res.text();
+
+    const stylesheetMatches = Array.from(
+      html.matchAll(
+        /<link[^>]+rel=["'][^"']*stylesheet[^"']*["'][^>]+href=["']([^"']+)["'][^>]*>/gi
+      )
+    );
+    const inlineStyleMatches = Array.from(
+      html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/gi)
+    );
+
+    const stylesheets = stylesheetMatches
+      .map((match) => makeAbsoluteUrl(match[1], pageUrl))
+      .filter((value): value is string => Boolean(value));
+
+    const inlineStyles = inlineStyleMatches
+      .map((match) => match[1]?.trim())
+      .filter((value): value is string => Boolean(value));
+
+    return {
+      stylesheets: Array.from(new Set(stylesheets)),
+      inlineStyles,
+    };
+  } catch {
+    return { stylesheets: [], inlineStyles: [] };
+  }
 }
 
 export function decodeHtmlEntities(value = "") {
