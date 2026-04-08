@@ -25,6 +25,30 @@ const nextConfig = {
         destination: '/service/seo-services/:path*',
         permanent: true, // 301 permanent redirect
       },
+      {
+        source: '/:path*',
+        has: [{ type: 'query', key: 'SA' }],
+        destination: '/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'query', key: 'SD' }],
+        destination: '/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'query', key: 'MD' }],
+        destination: '/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'query', key: 'MA' }],
+        destination: '/:path*',
+        permanent: true,
+      },
     ];
   },
 };
