@@ -16,6 +16,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/home/:path*',
+        destination: '/',
+        permanent: true, // 301 redirect /home -> /
+      },
+      {
         source: '/service/seo-service/:path*',
         destination: '/service/seo-services/:path*',
         permanent: true, // 301 permanent redirect
