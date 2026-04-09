@@ -25,6 +25,15 @@ type WpPost = {
   excerpt?: { rendered?: string };
   yoast_head_json?: {
     canonical?: string;
+    og_image?: Array<{
+      url?: string;
+    }>;
+  };
+  _embedded?: {
+    ["wp:featuredmedia"]?: Array<{
+      source_url?: string;
+      alt_text?: string;
+    }>;
   };
 };
 
@@ -159,14 +168,23 @@ export default function BlogSlugPage() {
       }
     });
 
-    let featuredImage = "";
-    let featuredImageAlt = "";
+    const embeddedFeaturedImage =
+      post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+      post?.yoast_head_json?.og_image?.[0]?.url ||
+      "";
+    const embeddedFeaturedImageAlt =
+      post?._embedded?.["wp:featuredmedia"]?.[0]?.alt_text || "";
+
+    let featuredImage = embeddedFeaturedImage;
+    let featuredImageAlt = embeddedFeaturedImageAlt;
     const firstImage = doc.querySelector("img");
 
-    if (firstImage) {
+    if (!featuredImage && firstImage) {
       featuredImage = firstImage.getAttribute("src") || "";
       featuredImageAlt = firstImage.getAttribute("alt") || "";
+    }
 
+    if (firstImage) {
       const imageParent = firstImage.parentElement;
       if (
         imageParent &&
@@ -199,7 +217,12 @@ export default function BlogSlugPage() {
       featuredImageAlt,
       toc,
     };
-  }, [post?.content?.rendered, post?.excerpt?.rendered]);
+  }, [
+    post?._embedded,
+    post?.content?.rendered,
+    post?.excerpt?.rendered,
+    post?.yoast_head_json?.og_image,
+  ]);
 
   const leadText = useMemo(() => {
     const text = getPlainText(
