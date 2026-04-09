@@ -1,7 +1,7 @@
 import React from 'react'
 import CardOne from '@/components/sections/blogs/cardOne'
 import PageTitle from '@/components/sections/pageTitle'
-import { decodeHtmlEntities, formatDate, getAllWpPosts, getFirstImageFromHtml } from './wpPosts'
+import { decodeHtmlEntities, formatDate, getAllWpPosts, getFeaturedImageFromPost } from './wpPosts'
 // Local blog data (title, image, and link URL)
 const blogData = [
     {
@@ -206,9 +206,8 @@ const blogData = [
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
 function mapWpPostToCard(post, index) {
-    const htmlContent = post?.content?.rendered || post?.excerpt?.rendered || ''
     const title = decodeHtmlEntities(post?.title?.rendered || '')
-    const thumb = post?._embedded?.['wp:featuredmedia']?.[0]?.source_url || getFirstImageFromHtml(htmlContent) || '/blogs/1.webp'
+    const thumb = getFeaturedImageFromPost(post) || '/blogs/1.webp'
 
     return {
         id: `wp-${post.id || index}`,

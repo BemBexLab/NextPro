@@ -104,6 +104,17 @@ export function getFirstImageFromHtml(html: string) {
   return match?.[1] || null;
 }
 
+export function getFeaturedImageFromPost(post?: WPPost | null) {
+  return (
+    post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+    post?.yoast_head_json?.og_image?.[0]?.url ||
+    getFirstImageFromHtml(
+      post?.content?.rendered || post?.excerpt?.rendered || ""
+    ) ||
+    null
+  );
+}
+
 export function stripInlineStyles(html = "") {
   return html.replace(/\sstyle=(["'])(?:(?!\1).)*\1/gi, "");
 }
