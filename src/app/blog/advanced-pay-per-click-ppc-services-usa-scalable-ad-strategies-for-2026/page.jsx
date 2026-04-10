@@ -695,7 +695,7 @@ const Blog15 = () => {
                     </li>
                   </ul>
                   <p>
-                    At <a href="/https://www.webfoundersusa.com" className="text-blue-700 underline">Web Founders USA</a>, we keep things simple.
+                    At <a href="https://www.webfoundersusa.com" className="text-blue-700 underline">Web Founders USA</a>, we keep things simple.
                   </p>
                   <p className="font-semibold text-slate-900">We offer:</p>
                   <ul className="space-y-3">
