@@ -2518,7 +2518,118 @@ export const services = [
             desc: "Whether you’re a solo contractor or a multi-crew commercial builder, our strategies adapt to your goals and service areas."
           }
         ]
+      },
+      {
+  id: "local-seo",
+  title: "Local SEO Services",
+  desc: "Boost your business with Local SEO services. Rank higher on Google Maps, attract local customers, and increase calls and leads.",
+  seo: {
+    title: "Local SEO Services - Web Founders USA",
+    description: "Boost your business with Local SEO services. Rank higher on Google Maps, attract local customers, and increase calls and leads.",
+    keyword: "local seo services, local seo, google business profile optimization, local search engine optimization, map pack ranking"
+  },
+  hero: {
+    paragraph: "The demand for local SEO services is growing rapidly as customers rely on Google search and Maps to find nearby businesses. Our strategies are designed not only to improve your local search rankings but also to bring real customers to your doorstep.",
+    image: "/service-deatil-images/seo.webp"
+  },
+  introParagraphs: [
+    "The demand for local SEO services is growing rapidly as customers rely on Google search and Maps to find nearby businesses. Our strategies are designed not only to improve your local search rankings but also to bring real customers to your doorstep.",
+    "Local businesses face unique challenges such as strong competition in map pack rankings, inconsistent NAP (Name, Address, Phone Number) data, and low visibility in location-based searches. Our team identifies and fixes these issues with precision.",
+    "At <a href='https://www.webfoundersusa.com' class='text-indigo-600 hover:text-indigo-800'>Web Founders USA</a>, our experts create tailored strategies using local keyword targeting, Google Business Profile optimization, and citation building to help your business stand out in your area.",
+    "Whether you run a small business or manage multiple locations, our local SEO agency & <a href='https://www.webfoundersusa.com/services/seo/local-seo' class='text-indigo-600 hover:text-indigo-800'>professional SEO services</a> ensure your brand is easily discoverable in your target locations.",
+    "Our approach is fully data-driven and focused on delivering measurable growth in local traffic, calls, and store visits."
+  ],
+  features: [
+    "Complete local SEO audit and competitor analysis",
+    "Google Business Profile (GBP) optimization",
+    "Local citations and directory submissions",
+    "Location based keyword research",
+    "On-page SEO for local landing pages",
+    "Review and reputation management",
+    "Ongoing performance tracking and reporting"
+  ],
+  tab: {
+    title: "Our Strategic Approach",
+    steps: [
+      {
+        id: "local-seo-audit",
+        tab_name: "Local SEO Audit",
+        heading: "Comprehensive Local SEO Audit",
+        description: "We analyze your entire local presence including your Google Business Profile, local listings, website structure, and competitors to identify opportunities for higher rankings in local search results and Google Maps."
+      },
+      {
+        id: "google-business-optimization",
+        tab_name: "Google Business Optimization",
+        heading: "Google Business Optimization",
+        description: ""
+      },
+      {
+        id: "local-keyword-research",
+        tab_name: "Local Keyword Research",
+        heading: "Local Keyword Research",
+        description: ""
+      },
+      {
+        id: "on-page-local-seo",
+        tab_name: "On-Page Local SEO",
+        heading: "On-Page Local SEO",
+        description: ""
+      },
+      {
+        id: "citation-building",
+        tab_name: "Citation Building",
+        heading: "Citation Building",
+        description: ""
+      },
+      {
+        id: "performance-tracking",
+        tab_name: "Performance Tracking",
+        heading: "Performance Tracking",
+        description: ""
       }
+    ]
+  },
+  faqs: [
+    {
+      question: "What is Local SEO?",
+      answer: "Local SEO is the process of optimizing your business to rank in local search results and Google Maps for nearby customers."
+    },
+    {
+      question: "How does Local SEO help my business?",
+      answer: "Local SEO services increase your visibility in near me searches, bringing more local traffic, calls, and leads."
+    },
+    {
+      question: "What is Google Business Profile optimization?",
+      answer: "It is the process of improving your Google Business Profile (GBP) to rank higher in Google Maps listings and local results."
+    },
+    {
+      question: "How long does Local SEO take?",
+      answer: "Most businesses see results from local SEO optimization within 4 to 8 weeks, depending on competition."
+    },
+    {
+      question: "Do I need Local SEO for a small business?",
+      answer: "Yes, small business local SEO helps you attract nearby customers and compete with larger brands in your area."
+    }
+  ],
+  whyChoose: [
+    {
+      title: "Local SEO Expertise",
+      desc: "We specialize in local business SEO, helping you rank in Google Map Pack and dominate location based searches in your target area."
+    },
+    {
+      title: "Proven Local Results",
+      desc: "Our strategies improve your visibility in near me searches, increase local traffic, and generate more calls and leads."
+    },
+    {
+      title: "Custom Location Strategies",
+      desc: "We create personalized campaigns based on your business location, audience behavior, and local competition."
+    },
+    {
+      title: "Transparent Reporting",
+      desc: "Get clear insights into your local rankings, traffic, and conversions with easy-to-understand reports."
+    }
+  ]
+}
 
 
 
