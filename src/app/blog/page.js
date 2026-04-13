@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import CardOne from '@/components/sections/blogs/cardOne'
 import PageTitle from '@/components/sections/pageTitle'
 import { decodeHtmlEntities, formatDate, getAllWpPosts, getFeaturedImageFromPost } from './wpPosts'
@@ -234,7 +235,7 @@ export const metadata = {
     }
 };
 
-const Blog2 = async () => {
+const Blog2 = async ({ searchParams }) => {
     const wpPosts = await getAllWpPosts()
     const wpBlogCards = wpPosts
         .map(mapWpPostToCard)
@@ -246,6 +247,18 @@ const Blog2 = async () => {
         ...wpBlogCards.filter((post) => !seenUrls.has(post.url.replace(/\/$/, ''))),
     ].sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
 
+    // Pagination logic
+    const blogsPerPage = 9
+    const currentPage = Math.max(1, parseInt(searchParams?.page) || 1)
+    const totalBlogs = mergedBlogData.length
+    const totalPages = Math.ceil(totalBlogs / blogsPerPage)
+
+    // Ensure current page doesn't exceed total pages
+    const pageToDisplay = Math.min(currentPage, Math.max(1, totalPages))
+    const startIndex = (pageToDisplay - 1) * blogsPerPage
+    const endIndex = startIndex + blogsPerPage
+    const blogsToDisplay = mergedBlogData.slice(startIndex, endIndex)
+
     return (
         <main>
             <div className='lg:py-15 py-9'>
@@ -253,7 +266,7 @@ const Blog2 = async () => {
                     {/* Optional: <PageTitle title="Our Blog" /> */}
                     <div className='grid grid-cols-1'>
                         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7.5'>
-                            {mergedBlogData.map(({ id, author, date, thumb, title, category, url }) => (
+                            {blogsToDisplay.map(({ id, author, date, thumb, title, category, url }) => (
                                 <CardOne
                                     key={id}
                                     id={id}
@@ -267,6 +280,62 @@ const Blog2 = async () => {
                             ))}
                         </div>
                     </div>
+
+                    {/* Pagination Controls */}
+                    {totalPages > 1 && (
+                        <div className='flex justify-center items-center gap-2 mt-12'>
+                            {/* Left Arrow Button */}
+                            {pageToDisplay > 1 ? (
+                                <Link
+                                    href={`/blog?page=${pageToDisplay - 1}`}
+                                    className='w-10 h-10 flex items-center justify-center text-[#072D7F] transition'
+                                >
+                                    ←
+                                </Link>
+                            ) : (
+                                <button
+                                    disabled
+                                    className='w-10 h-10 flex items-center justify-center   text-gray-400 cursor-not-allowed'
+                                >
+                                    ←
+                                </button>
+                            )}
+
+                            {/* Page Numbers */}
+                            <div className='flex gap-1'>
+                                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                                    <Link
+                                        key={page}
+                                        href={`/blog?page=${page}`}
+                                        className={`w-10 h-10 flex items-center justify-center transition ${
+                                            pageToDisplay === page
+                                                ? 'bg-[#072D7F] text-white font-semibold border border-[#072D7F] rounded-xl'
+                                                : 'border border-gray-300 hover:bg-[#072D7F]/20 bg-gray-100 rounded-xl'
+                                        }`}
+                                    >
+                                        {page}
+                                    </Link>
+                                ))}
+                            </div>
+
+                            {/* Right Arrow Button */}
+                            {pageToDisplay < totalPages ? (
+                                <Link
+                                    href={`/blog?page=${pageToDisplay + 1}`}
+                                    className='w-10 h-10 flex items-center justify-center transition text-[#072D7F]'
+                                >
+                                    →
+                                </Link>
+                            ) : (
+                                <button
+                                    disabled
+                                    className='w-10 h-10 flex items-center justify-center  text-gray-400 cursor-not-allowed'
+                                >
+                                    →
+                                </button>
+                            )}
+                        </div>
+                    )}
                 </div>
             </div>
             {/* <ContactFormTwo /> */}
