@@ -2530,7 +2530,7 @@ export const services = [
   },
   hero: {
     paragraph: "The demand for local SEO services is growing rapidly as customers rely on Google search and Maps to find nearby businesses. Our strategies are designed not only to improve your local search rankings but also to bring real customers to your doorstep.",
-    image: "/service-deatil-images/seo.webp"
+    image: "/service-deatil-images/Boost your business visibility online.webp"
   },
   introParagraphs: [
     "The demand for <strong>local SEO services</strong> is growing rapidly as customers rely on <strong>Google search and Maps</strong> to find nearby businesses. Our strategies are designed not only to improve your <strong>local search rankings</strong> but also to bring real customers to your doorstep.",
