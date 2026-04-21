@@ -581,7 +581,7 @@ export const services = [
     desc:
       "Web Founders USA builds high-performing ecommerce websites that convert visitors into buyers with custom design, development, and SEO strategies.",
     seo: {
-      title: "Ecommerce-Web-Design - Web Founders USA",
+      title: "Ecommerce Web Design - Web Founders USA",
       description:
         "Professional ecommerce web design focused on usability, performance, and sales growth for modern online businesses.",
       keyword: "ecommerce website, online store, ecommerce solutions"    
