@@ -1,5 +1,3 @@
-import BlogCanonical from "./BlogCanonical";
-
 export const metadata = {
   robots: {
     index: true,
@@ -14,7 +12,6 @@ export const metadata = {
 export default function BlogLayout({ children }) {
   return (
     <>
-      <BlogCanonical />
       {children}
     </>
   );

@@ -222,18 +222,23 @@ function mapWpPostToCard(post, index) {
     }
 }
 
-export const metadata = {
-    title: "Blog  - Web Founders USA",
-    description: "Read the Web Founders USA blog for expert insights, tips, and strategies on SEO, web design, and digital marketing growth.",
-    alternates: {
-        canonical: "https://www.webfoundersusa.com/blog",
-    },
+export async function generateMetadata({ searchParams }) {
+    const page = Math.max(1, parseInt(searchParams?.page || "1", 10));
+    const base = "https://www.webfoundersusa.com/blog";
+    const canonical = page > 1 ? `${base}?page=${page}` : base;
 
-    robots: {
-        index: true,
-        follow: true
-    }
-};
+    return {
+        title: "Blog - Web Founders USA",
+        description:
+            "Read the Web Founders USA blog for expert insights, tips, and strategies on SEO, web design, and digital marketing growth.",
+        alternates: { canonical },
+        robots: {
+            index: true,
+            follow: true,
+            googleBot: { index: true, follow: true },
+        },
+    };
+}
 
 const Blog2 = async ({ searchParams }) => {
     const wpPosts = await getAllWpPosts()
