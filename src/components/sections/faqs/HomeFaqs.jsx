@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import FaqJsonLd from '@/components/seo/FaqJsonLd';
 
 export default function FAQSection() {
   // Embedded FAQs data
@@ -60,6 +61,7 @@ export default function FAQSection() {
 
   return (
     <section className="py-16 md:py-24 px-4 max-w-6xl mx-auto">
+      <FaqJsonLd faqs={faqs} />
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
       </div>

@@ -366,7 +366,7 @@ export const services = [
 ],
 
     tab: {
-      title: "Why Choose <a class='text-blue-800 hover:underline' href='/'>Web Founders USA</a> PPC Services",
+      title: "Why Choose Web Founders USA PPC Services",
       steps: [
         {
           id: "audit",

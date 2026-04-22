@@ -14,7 +14,7 @@ const Faq = () => {
         <main>
             <PageTitle pageName={"Faq"} breadcrumbLink={"Faq"} />
             <FaqOne />
-            <FaqTwo />
+            <FaqTwo includeSchema={false} />
             <SubscribeTwo />
         </main>
     )

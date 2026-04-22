@@ -7,6 +7,7 @@ import ScrollCircle from "@/components/ui/scrollCircle";
 import FooterFour from "@/components/sections/footers/footerFour";
 import HeaderTwo from "@/components/sections/headers/headerTwo";
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
+import AutoFaqJsonLd from "@/components/seo/AutoFaqJsonLd";
 import ContactPopup from "@/components/popupform/ContactPopup";
 const CustomCursor = dynamic(() => import("@/components/ui/customCursor"), {
   ssr: false,
@@ -90,6 +91,7 @@ fbq('track', 'PageView');
           <CountryProvider>
             <HeaderTwo haveOvcanvsIcon={false} haveShadow={false} />
             {children}
+            <AutoFaqJsonLd />
             <ContactPopup />
             {/* <ContactFormTwo /> */}
             <FooterFour />

@@ -1,8 +1,11 @@
+import { cache } from "react";
+
 export type WPPost = {
   id: number;
   slug: string;
   date: string;
   link?: string;
+  class_list?: string[];
   title?: { rendered?: string };
   content?: { rendered?: string };
   excerpt?: { rendered?: string };
@@ -12,6 +15,9 @@ export type WPPost = {
     canonical?: string;
     og_image?: Array<{
       url?: string;
+      width?: number;
+      height?: number;
+      type?: string;
     }>;
   };
   _embedded?: {
@@ -23,10 +29,10 @@ export type WPPost = {
 };
 
 const DEFAULT_CMS_ENDPOINT =
-  "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts";
+  "https://projectdemolink.com/webfounderstest/index.php/wp-json/wp/v2/posts";
 
 function normalizeCmsEndpoint() {
-  const cmsEndpoint = process.env.CMS?.trim() || DEFAULT_CMS_ENDPOINT;
+  const cmsEndpoint = process.env.BLOG_CMS?.trim() || DEFAULT_CMS_ENDPOINT;
   return cmsEndpoint.endsWith("/") ? cmsEndpoint.slice(0, -1) : cmsEndpoint;
 }
 
@@ -36,19 +42,14 @@ function buildEndpoint(params: Record<string, string>) {
   return `${base}${separator}${new URLSearchParams(params).toString()}`;
 }
 
-export async function getPostBySlug(slug: string): Promise<WPPost | null> {
-  const endpoint = buildEndpoint({ slug, _embed: "" });
-  const res = await fetch(endpoint, { cache: "no-store" });
-
-  if (!res.ok) {
-    return null;
+export const getPostBySlug = cache(
+  async (slug: string): Promise<WPPost | null> => {
+    const posts = await getAllWpPosts();
+    return posts.find((post) => post.slug === slug) ?? null;
   }
+);
 
-  const posts = (await res.json()) as WPPost[];
-  return posts[0] ?? null;
-}
-
-export async function getAllWpPosts(): Promise<WPPost[]> {
+export const getAllWpPosts = cache(async (): Promise<WPPost[]> => {
   const posts: WPPost[] = [];
   let page = 1;
 
@@ -58,7 +59,9 @@ export async function getAllWpPosts(): Promise<WPPost[]> {
       page: String(page),
       _embed: "",
     });
-    const res = await fetch(endpoint, { cache: "no-store" });
+    const res = await fetch(endpoint, {
+      next: { revalidate: 900 },
+    });
 
     if (!res.ok) {
       break;
@@ -79,7 +82,7 @@ export async function getAllWpPosts(): Promise<WPPost[]> {
   }
 
   return posts;
-}
+});
 
 export function formatDate(value: string) {
   return new Date(value).toLocaleDateString("en-US", {
