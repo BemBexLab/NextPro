@@ -199,7 +199,7 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                     <OffcanvasOverlay />
                     <OffcanvasContent className="top-0">
                       <OffcanvasClose />
-                      <HeaderShortInfo />
+                      {/* <HeaderShortInfo /> */}
                     </OffcanvasContent>
                   </Offcanvas>
                 </div>

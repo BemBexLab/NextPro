@@ -114,10 +114,10 @@ const Blog12 = () => {
                   Most businesses today understand SEO. But many still struggle with one thing writing content that people actually want to read.
                 </p>
                 <p>
-                  That's where <b>content writing services</b> make a real difference.
+                  That's where <a href="https://www.webfoundersusa.com/service/content-writing/" className="text-indigo-600 hover:underline">content writing services</a> make a real difference.
                 </p>
                 <p>
-                  At <b>Web Founders USA</b>, we focus on simple, clear, and results-driven content. Not fluff. Not keyword stuffing. Just real content that works.
+                  At <a href="https://www.webfoundersusa.com" className="text-indigo-600 hover:underline">Web Founders USA</a>, we focus on simple, clear, and results-driven content. Not fluff. Not keyword stuffing. Just real content that works.
                 </p>
               </div>
 
@@ -234,7 +234,7 @@ const Blog12 = () => {
                     </li>
                   </ul>
                   <p>
-                    With proper <b>seo content writing services</b>, your content becomes easier to find.
+                    With proper <a href="https://www.webfoundersusa.com/service/seo-services/" className="text-indigo-600 hover:underline">seo content writing services</a>, your content becomes easier to find.
                   </p>
                   <p>
                     But more importantly, it becomes easier to read.
@@ -577,6 +577,33 @@ const Blog12 = () => {
                       Yes, if you want professional, consistent, and result-driven content.
                     </p>
                   </div>
+                </div>
+              </div>
+
+              {/* More Relevant Section */}
+              <div className="my-12 bg-indigo-50 p-8 rounded-2xl border border-indigo-200">
+                <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                  <span>╰┈➤</span> More Relevant
+                </h2>
+                <div className="space-y-4">
+                  <a
+                    href="https://www.webfoundersusa.com/blog/is-digital-marketing-a-good-career/"
+                    className="flex items-center justify-between p-2  transition-all group"
+                  >
+                    <span className="text-slate-900 font-semibold group-hover:text-indigo-600 transition-colors">
+                      Is Digital Marketing a Good Career?
+                    </span>
+                    <ArrowRight className="text-indigo-600 shrink-0" size={20} />
+                  </a>
+                  <a
+                    href="https://www.webfoundersusa.com/blog/how-to-choose-digital-marketing-agency/"
+                    className="flex items-center justify-between p-2  transition-all group"
+                  >
+                    <span className="text-slate-900 font-semibold group-hover:text-indigo-600 transition-colors">
+                      How to Choose a Digital Marketing Agency (Complete 2026 Guide)
+                    </span>
+                    <ArrowRight className="text-indigo-600 shrink-0" size={20} />
+                  </a>
                 </div>
               </div>
             </article>
