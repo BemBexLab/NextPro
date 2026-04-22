@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { IoCall } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { getServiceById, getSubCategory } from "@/data/services";
 
 const SubServiceDetailPage = ({ params }) => {
@@ -55,6 +56,7 @@ const SubServiceDetailPage = ({ params }) => {
 
   return (
     <div className="bg-white text-gray-900">
+      <FaqJsonLd faqs={service.faqs || []} />
       <section className="py-16 md:py-24 bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight max-w-3xl mx-auto">

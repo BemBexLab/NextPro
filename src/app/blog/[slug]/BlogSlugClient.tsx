@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useParams } from "next/navigation";
+import type { WPPost } from "../wpPosts";
 
 type TocItem = {
   id: string;
@@ -14,42 +14,6 @@ type TocGroup = {
   children: TocItem[];
 };
 
-type WpPost = {
-  id: number;
-  slug: string;
-  date: string;
-  class_list?: string[];
-  title?: { rendered?: string };
-  content?: { rendered?: string };
-  excerpt?: { rendered?: string };
-  yoast_head_json?: {
-    og_image?: Array<{
-      url?: string;
-    }>;
-  };
-  _embedded?: {
-    ["wp:featuredmedia"]?: Array<{
-      source_url?: string;
-      alt_text?: string;
-    }>;
-  };
-};
-
-const WP_POSTS_ENDPOINT =
-  "https://projectdemolink.com/webfounderstest/index.php/wp-json/wp/v2/posts";
-
-function formatDate(value?: string) {
-  if (!value) {
-    return "";
-  }
-
-  return new Date(value).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
-
 function slugifyHeading(value: string) {
   return value
     .toLowerCase()
@@ -60,80 +24,20 @@ function slugifyHeading(value: string) {
     .replace(/-+/g, "-");
 }
 
-function getPlainText(html = "") {
-  return html
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&nbsp;/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
+type BlogSlugPageProps = {
+  post: WPPost;
+};
 
-export default function BlogSlugPage() {
-  const params = useParams<{ slug: string }>();
-  const slug = Array.isArray(params?.slug) ? params.slug[0] : params?.slug;
-
-  const [post, setPost] = useState<WpPost | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+export default function BlogSlugPage({ post }: BlogSlugPageProps) {
+  const [hasMounted, setHasMounted] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>(
     {}
   );
 
   useEffect(() => {
-    if (!slug) {
-      setLoading(false);
-      setError("Missing blog slug.");
-      return;
-    }
-
-    let ignore = false;
-
-    async function loadPost() {
-      try {
-        setLoading(true);
-        setError("");
-
-        const res = await fetch(
-          `${WP_POSTS_ENDPOINT}?slug=${encodeURIComponent(slug)}&_embed`,
-          { cache: "no-store" }
-        );
-
-        if (!res.ok) {
-          throw new Error(`Failed to fetch post (${res.status})`);
-        }
-
-        const data = (await res.json()) as WpPost[];
-        const nextPost = data?.[0] ?? null;
-
-        if (!ignore) {
-          if (!nextPost) {
-            setError("Post not found.");
-            setPost(null);
-          } else {
-            setPost(nextPost);
-          }
-        }
-      } catch (err) {
-        if (!ignore) {
-          setPost(null);
-          setError(
-            err instanceof Error ? err.message : "Failed to load blog post."
-          );
-        }
-      } finally {
-        if (!ignore) {
-          setLoading(false);
-        }
-      }
-    }
-
-    loadPost();
-
-    return () => {
-      ignore = true;
-    };
-  }, [slug]);
+    setHasMounted(true);
+  }, []);
 
   const articleClassName = useMemo(() => {
     const wpClasses = post?.class_list?.join(" ") || "";
@@ -142,12 +46,18 @@ export default function BlogSlugPage() {
 
   const transformedPost = useMemo(() => {
     const sourceHtml = post?.content?.rendered || post?.excerpt?.rendered || "";
+    const embeddedFeaturedImage =
+      post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+      post?.yoast_head_json?.og_image?.[0]?.url ||
+      "";
+    const embeddedFeaturedImageAlt =
+      post?._embedded?.["wp:featuredmedia"]?.[0]?.alt_text || "";
 
-    if (!sourceHtml || typeof window === "undefined") {
+    if (!sourceHtml || !hasMounted) {
       return {
         contentHtml: sourceHtml,
-        featuredImage: "",
-        featuredImageAlt: "",
+        featuredImage: embeddedFeaturedImage,
+        featuredImageAlt: embeddedFeaturedImageAlt,
         toc: [] as TocItem[],
       };
     }
@@ -166,23 +76,18 @@ export default function BlogSlugPage() {
       }
     });
 
-    const embeddedFeaturedImage =
-      post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-      post?.yoast_head_json?.og_image?.[0]?.url ||
-      "";
-    const embeddedFeaturedImageAlt =
-      post?._embedded?.["wp:featuredmedia"]?.[0]?.alt_text || "";
-
     let featuredImage = embeddedFeaturedImage;
     let featuredImageAlt = embeddedFeaturedImageAlt;
     const firstImage = doc.querySelector("img");
+    let shouldRemoveFirstImage = false;
 
     if (!featuredImage && firstImage) {
       featuredImage = firstImage.getAttribute("src") || "";
       featuredImageAlt = firstImage.getAttribute("alt") || "";
+      shouldRemoveFirstImage = true;
     }
 
-    if (firstImage) {
+    if (shouldRemoveFirstImage && firstImage) {
       const imageParent = firstImage.parentElement;
       if (
         imageParent &&
@@ -219,15 +124,9 @@ export default function BlogSlugPage() {
     post?._embedded,
     post?.content?.rendered,
     post?.excerpt?.rendered,
+    hasMounted,
     post?.yoast_head_json?.og_image,
   ]);
-
-  const leadText = useMemo(() => {
-    const text = getPlainText(
-      post?.excerpt?.rendered || post?.content?.rendered || ""
-    );
-    return text.slice(0, 220).trim() + (text.length > 220 ? "..." : "");
-  }, [post?.content?.rendered, post?.excerpt?.rendered]);
 
   const tocGroups = useMemo<TocGroup[]>(() => {
     const groups: TocGroup[] = [];
@@ -333,26 +232,6 @@ export default function BlogSlugPage() {
     }));
   }
 
-  if (loading) {
-    return (
-      <main className="bg-white text-[#1f2937]">
-        <section className="mx-auto w-full max-w-[860px] px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
-          <p className="text-base text-slate-500">Loading blog post...</p>
-        </section>
-      </main>
-    );
-  }
-
-  if (error || !post) {
-    return (
-      <main className="bg-white text-[#1f2937]">
-        <section className="mx-auto w-full max-w-[860px] px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
-          <p className="text-base text-red-600">{error || "Post not found."}</p>
-        </section>
-      </main>
-    );
-  }
-
   return (
     <main className="bg-white text-[#1f2937]">
       <section className="mx-auto w-full max-w-[1230px] px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
@@ -365,10 +244,6 @@ export default function BlogSlugPage() {
               className="wp-post-title text-center"
               dangerouslySetInnerHTML={{ __html: post.title?.rendered || "" }}
             />
-            {/* <div className="wp-post-meta">
-              <span>{formatDate(post.date)}</span>
-            </div> */}
-            {/* {leadText ? <p className="wp-post-lead">{leadText}</p> : null} */}
           </header>
 
           {transformedPost.featuredImage ? (

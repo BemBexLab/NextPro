@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import type { WPPost } from "../wpPosts";
+import { getAllWpPosts, getPostBySlug, getTextFromHtml } from "../wpPosts";
 import BlogSlugClient from "./BlogSlugClient";
 
 type PageProps = {
@@ -7,31 +10,10 @@ type PageProps = {
   };
 };
 
-type WpPost = {
-  slug: string;
-  link?: string;
-  title?: { rendered?: string };
-  content?: { rendered?: string };
-  excerpt?: { rendered?: string };
-  yoast_head_json?: {
-    title?: string;
-    description?: string;
-    canonical?: string;
-    og_image?: Array<{
-      url?: string;
-      width?: number;
-      height?: number;
-      type?: string;
-    }>;
-  };
-};
-
-const WP_POSTS_ENDPOINT =
-  "https://projectdemolink.com/webfounderstest/index.php/wp-json/wp/v2/posts";
+export const revalidate = 900;
 
 function getPlainText(html = "") {
-  return html
-    .replace(/<[^>]+>/g, " ")
+  return getTextFromHtml(html)
     .replace(/&nbsp;/g, " ")
     .replace(/&hellip;/g, "...")
     .replace(/&#8211;|&ndash;/g, "-")
@@ -44,22 +26,40 @@ function getPlainText(html = "") {
     .trim();
 }
 
-async function getPostBySlug(slug: string): Promise<WpPost | null> {
-  try {
-    const res = await fetch(
-      `${WP_POSTS_ENDPOINT}?slug=${encodeURIComponent(slug)}&_embed`,
-      { cache: "no-store" }
-    );
+function getClientPost(post: WPPost): WPPost {
+  return {
+    id: post.id,
+    slug: post.slug,
+    date: post.date,
+    class_list: post.class_list,
+    title: post.title,
+    content: post.content,
+    excerpt: post.excerpt,
+    yoast_head_json: post.yoast_head_json
+      ? {
+          og_image: post.yoast_head_json.og_image,
+        }
+      : undefined,
+    _embedded: post._embedded?.["wp:featuredmedia"]?.[0]
+      ? {
+          "wp:featuredmedia": [
+            {
+              source_url:
+                post._embedded["wp:featuredmedia"][0]?.source_url,
+              alt_text: post._embedded["wp:featuredmedia"][0]?.alt_text,
+            },
+          ],
+        }
+      : undefined,
+  };
+}
 
-    if (!res.ok) {
-      return null;
-    }
+export async function generateStaticParams() {
+  const posts = await getAllWpPosts();
 
-    const posts = (await res.json()) as WpPost[];
-    return posts[0] ?? null;
-  } catch {
-    return null;
-  }
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
 export async function generateMetadata({
@@ -105,6 +105,12 @@ export async function generateMetadata({
   };
 }
 
-export default function Page() {
-  return <BlogSlugClient />;
+export default async function Page({ params }: PageProps) {
+  const post = await getPostBySlug(params.slug);
+
+  if (!post) {
+    notFound();
+  }
+
+  return <BlogSlugClient post={getClientPost(post)} />;
 }

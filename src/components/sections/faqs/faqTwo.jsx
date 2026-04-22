@@ -9,10 +9,12 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import SlideUp from '@/components/animations/slideUp'
+import FaqJsonLd from '@/components/seo/FaqJsonLd'
 
-const FaqTwo = () => {
+const FaqTwo = ({ includeSchema = true }) => {
     return (
         <section className='lg:py-15 py-9'>
+            {includeSchema ? <FaqJsonLd faqs={faqData} /> : null}
             <div className='max-w-[1350px] mx-auto px-[15px]'>
                 <div className='grid xl:grid-cols-[533px_1fr] lg:grid-cols-[430px_1fr] grid-cols-1 justify-between items-start gap-7.5'>
 
