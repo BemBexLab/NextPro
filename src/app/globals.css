@@ -233,6 +233,24 @@ html {
   animation-play-state: paused;
 }
 
+@keyframes companyMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.company-marquee {
+  animation: companyMarquee 40s linear infinite;
+}
+
+.company-marquee:hover {
+  animation-play-state: paused;
+}
+
 @keyframes scrollTop {
   0% {
     transform: translateY(0);
