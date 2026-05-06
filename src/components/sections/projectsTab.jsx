@@ -50,7 +50,7 @@ const ProjectsTab = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch("/api/posts", { cache: "no-store" });
+        const res = await fetch("/api/posts");
         const data = await res.json();
         const projectPosts = data.filter(
           (post) => post.acf?.project_image?.url && post.slug

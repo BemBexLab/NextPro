@@ -1,18 +1,12 @@
 import { DM_Sans, Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
+import Script from "next/script";
 import { ThemeProvider } from "@/contextApi/themeProvider";
 import CountryProvider from "@/contextApi/countryProvider";
-import ScrollCircle from "@/components/ui/scrollCircle";
 import FooterFour from "@/components/sections/footers/footerFour";
 import HeaderTwo from "@/components/sections/headers/headerTwo";
-import ContactFormTwo from "@/components/sections/ContactFormTwo";
-import AutoFaqJsonLd from "@/components/seo/AutoFaqJsonLd";
-import ContactPopup from "@/components/popupform/ContactPopup";
-const CustomCursor = dynamic(() => import("@/components/ui/customCursor"), {
-  ssr: false,
-});
-const Setting = dynamic(() => import("@/components/ui/setting"), {
+const ClientEnhancements = dynamic(() => import("@/components/ClientEnhancements"), {
   ssr: false,
 });
 
@@ -49,9 +43,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-       <head>
-        {/* Meta Pixel Code */}
-        <script
+      <head />
+      <body
+        className={`${inter.variable} ${plus_jakarta_sans.variable} ${dm_sans.variable}`}
+        suppressHydrationWarning={true}
+      >
+        <Script
+          id="facebook-pixel"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
 (function(f,b,e,v,n,t,s)
@@ -67,12 +66,6 @@ fbq('track', 'PageView');
             `,
           }}
         />
-        {/* End Meta Pixel Code */}
-      </head>
-      <body
-        className={`${inter.variable} ${plus_jakarta_sans.variable} ${dm_sans.variable}`}
-        suppressHydrationWarning={true}
-      >
         <noscript>
           <img
             height="1"
@@ -91,13 +84,8 @@ fbq('track', 'PageView');
           <CountryProvider>
             <HeaderTwo haveOvcanvsIcon={false} haveShadow={false} />
             {children}
-            <AutoFaqJsonLd />
-            <ContactPopup />
-            {/* <ContactFormTwo /> */}
             <FooterFour />
-            <Setting />
-            <ScrollCircle />
-            <CustomCursor />
+            <ClientEnhancements />
           </CountryProvider>
         </ThemeProvider>
       </body>

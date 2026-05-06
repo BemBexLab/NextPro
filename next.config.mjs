@@ -2,8 +2,18 @@
 
 const nextConfig = {
   // output: "standalone",
+  compress: true,
+  poweredByHeader: false,
   trailingSlash: true,
+  experimental: {
+    optimizePackageImports: [
+      "react-icons",
+      "lucide-react",
+      "@fortawesome/react-fontawesome",
+    ],
+  },
   images: {
+    formats: ["image/avif", "image/webp"],
     domains: [
       'localhost',
       'olive-peafowl-546702.hostingersite.com',

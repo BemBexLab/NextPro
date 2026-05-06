@@ -4,11 +4,43 @@ import React, { useEffect } from 'react'
 const CustomCursor = () => {
     useEffect(() => {
         const infoElement = document.getElementById('info');
-        window.addEventListener("mousemove", (event) => {
-            let x = event.clientX;
-            let y = event.clientY;
-            infoElement.style.transform = `translate3d(calc(${x}px - 50%), calc(${y}px - 50%), 0)`;
-        })
+        if (!infoElement || typeof window === "undefined") {
+            return undefined
+        }
+
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
+        const finePointer = window.matchMedia("(pointer: fine)")
+
+        if (prefersReducedMotion.matches || !finePointer.matches) {
+            return undefined
+        }
+
+        let frameId = null
+        let nextX = 0
+        let nextY = 0
+
+        const render = () => {
+            frameId = null
+            infoElement.style.transform = `translate3d(calc(${nextX}px - 50%), calc(${nextY}px - 50%), 0)`
+        }
+
+        const handleMouseMove = (event) => {
+            nextX = event.clientX
+            nextY = event.clientY
+
+            if (!frameId) {
+                frameId = window.requestAnimationFrame(render)
+            }
+        }
+
+        window.addEventListener("mousemove", handleMouseMove, { passive: true })
+
+        return () => {
+            window.removeEventListener("mousemove", handleMouseMove)
+            if (frameId) {
+                window.cancelAnimationFrame(frameId)
+            }
+        }
     }, [])
     return (
         <div id='info' className='fixed pointer-events-none left-0 top-0 translate-[calc(-50% + 5px), -50%] z-50 lg:block hidden'>

@@ -1,18 +1,16 @@
-import Approach from "@/components/sections/approach";
-import BlogOne from "@/components/sections/blogs/blogOne";
-import ChooseUs from "@/components/sections/chooseUs";
-import CountDown from "@/components/sections/countDown";
+import dynamic from "next/dynamic";
 import HeroFour from "@/components/sections/heroes/heroFour";
-import Study from "@/components/sections/study";
-import SubscribeTwo from "@/components/sections/subscribes/subscribeTwo";
-import TestimonialThree from "@/components/sections/testimonials/testimonialThree";
-import ContactFormTwo from "@/components/sections/ContactFormTwo";
-import ServiceTwo from "@/components/sections/services/serviceTwo";
-import StoryOne from "@/components/sections/ourStories/storyOne";
-import PriceThree from '@/components/sections/pricing/priceThree'
 import CompaniesSlideer from "@/components/sections/companiesslide/slider";
-import FAQSection from "@/components/sections/faqs/HomeFaqs";
 import Script from "next/script";
+
+const ServiceTwo = dynamic(() => import("@/components/sections/services/serviceTwo"));
+const Approach = dynamic(() => import("@/components/sections/approach"));
+const CountDown = dynamic(() => import("@/components/sections/countDown"));
+const Study = dynamic(() => import("@/components/sections/study"));
+const PriceThree = dynamic(() => import("@/components/sections/pricing/priceThree"));
+const SubscribeTwo = dynamic(() => import("@/components/sections/subscribes/subscribeTwo"));
+const ContactFormTwo = dynamic(() => import("@/components/sections/ContactFormTwo"));
+const FAQSection = dynamic(() => import("@/components/sections/faqs/HomeFaqs"));
 
 export const metadata = {
     title: "Complete 360 Online Marketing Services - Web Founders USA",

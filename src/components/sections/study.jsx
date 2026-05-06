@@ -24,7 +24,7 @@ const GalleryCarousel = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const res = await fetch("/api/posts", { cache: "no-store" });
+                const res = await fetch("/api/posts");
                 const data = await res.json();
                 const filtered = data.filter((project) => {
                     const hasImage = project.acf?.project_image?.url;

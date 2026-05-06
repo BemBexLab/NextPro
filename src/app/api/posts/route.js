@@ -1,3 +1,5 @@
+export const revalidate = 900;
+
 export async function GET() {
   try {
     const allPosts = [];
@@ -6,19 +8,13 @@ export async function GET() {
 
     while (hasMore) {
       const res = await fetch(`https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts?per_page=100&page=${page}`, {
-        cache: "no-store",
+        next: { revalidate: 900 },
       });
 
       if (!res.ok) break;
 
       const posts = await res.json();
       allPosts.push(...posts);
-      console.log(`Full response body for page ${page}:`, posts);
-      console.log(`Fetched page ${page} with ${posts.length} posts`);
-      console.log(`Total posts so far: ${allPosts.length}`);
-      console.log(`Response headers: ${JSON.stringify(res.headers)}`);
-      console.log(`Response status: ${res.status}`);
-      console.log(`Response status text: ${res}`);
 
       // If fewer than 100 returned, this is the last page
       if (posts.length < 100) hasMore = false;
@@ -27,7 +23,10 @@ export async function GET() {
 
     return new Response(JSON.stringify(allPosts), {
       status: 200,
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "s-maxage=900, stale-while-revalidate=3600",
+      },
     });
   } catch (error) {
     console.error("API Route Error:", error);

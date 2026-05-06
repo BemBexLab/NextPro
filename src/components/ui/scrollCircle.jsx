@@ -7,20 +7,33 @@ const ScrollCircle = () => {
     const [showBackToTop, setShowBackToTop] = useState(false);
 
     useEffect(() => {
+        let frameId = null;
+
         const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.body.clientHeight;
-            const scrollableHeight = documentHeight - windowHeight;
-            const scrollPercentage = (scrollPosition / scrollableHeight) * 100;
-            setScrollPercentage(scrollPercentage);
-            setShowBackToTop(scrollPosition > 350);
+            if (frameId) {
+                return;
+            }
+
+            frameId = window.requestAnimationFrame(() => {
+                frameId = null;
+                const scrollPosition = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+                const scrollableHeight = Math.max(documentHeight - windowHeight, 1);
+                const scrollPercentage = (scrollPosition / scrollableHeight) * 100;
+                setScrollPercentage(scrollPercentage);
+                setShowBackToTop(scrollPosition > 350);
+            });
         };
 
-        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
+            if (frameId) {
+                window.cancelAnimationFrame(frameId);
+            }
         };
     }, []);
 
