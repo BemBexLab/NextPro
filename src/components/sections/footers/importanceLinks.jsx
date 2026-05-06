@@ -42,6 +42,7 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
                 { id: 1, path: "/terms", label: "Terms" },
                 { id: 2, path: "/privacy", label: "Privacy" },
                 { id: 3, path: "/service/seo-services/", label: "SEO Services" },
+                { id: 4, path: "/blog/", label: "Blogs" },
             ]
         },
     ]
