@@ -120,6 +120,27 @@ html {
     scrollbar-width: none;
   }
 
+  .service-description-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  .service-description-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .service-description-scroll::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 999px;
+  }
+
+  .service-description-scroll::-webkit-scrollbar-thumb {
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: transparent;
+    box-shadow: none;
+  }
+
   .linear-text {
     background: linear-gradient(
         rgba(46, 77, 254, 0.1) 0%,
