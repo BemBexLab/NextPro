@@ -40,7 +40,9 @@ const ServiceTwo = () => {
                                             <span className='text-xl font-extrabold text-muted-foreground leading-[140%] multiline-hover'>
                                                 {service_name}
                                             </span>
-                                            <p className='lg:pt-6 pt-3'>{description}</p>
+                                            <p className='service-description-scroll lg:pt-6 pt-3 h-[21rem] overflow-y-auto pr-2'>
+                                                {description}
+                                            </p>
                                         </Link>
                                     )
                                 })
