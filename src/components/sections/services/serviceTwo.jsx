@@ -5,6 +5,13 @@ import { Button } from '@/components/ui/button'
 import Title from '@/components/ui/title'
 import { servicesDataTwo } from '@/lib/fackData/servicesDataTwo'
 
+const getWords = (text) => text.trim().split(/\s+/)
+
+const getDescriptionPreview = (text, wordLimit = 28) => {
+    const words = getWords(text)
+    return words.slice(0, wordLimit).join(' ')
+}
+
 const ServiceTwo = () => {
     return (
         <section className='lg:pt-[80px] pt-16 lg:pb-15 pb-9' id='services'>
@@ -28,6 +35,9 @@ const ServiceTwo = () => {
                     '>
                             {
                                 servicesDataTwo.map(({ id, description, icon_1, service_name, link }) => {
+                                    const hasLongDescription = getWords(description).length > 28
+                                    const previewDescription = getDescriptionPreview(description)
+
                                     return (
                                         <Link
                                             href={link}
@@ -40,7 +50,20 @@ const ServiceTwo = () => {
                                             <span className='text-xl font-extrabold text-muted-foreground leading-[140%] multiline-hover'>
                                                 {service_name}
                                             </span>
-                                            <p className='lg:pt-6 pt-3'>{description}</p>
+                                            <p
+                                                className={`lg:pt-6 pt-3 ${hasLongDescription ? 'service-description-scroll max-h-[7.5rem] overflow-y-auto pr-2' : ''}`}
+                                                data-preview={previewDescription}
+                                                data-full={description}
+                                            >
+                                                {hasLongDescription ? (
+                                                    <>
+                                                        <span className='description-preview'>{previewDescription}</span>
+                                                        <span className='description-full'>{description}</span>
+                                                    </>
+                                                ) : (
+                                                    previewDescription
+                                                )}
+                                            </p>
                                         </Link>
                                     )
                                 })

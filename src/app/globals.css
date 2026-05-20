@@ -120,6 +120,63 @@ html {
     scrollbar-width: none;
   }
 
+  .service-description-scroll {
+    display: block;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  .service-description-scroll .description-preview {
+    display: inline;
+  }
+
+  .service-description-scroll .description-full {
+    display: none;
+  }
+
+  .service-description-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .service-description-scroll::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 999px;
+  }
+
+  .service-description-scroll::-webkit-scrollbar-thumb {
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .service-description-scroll:hover {
+    scrollbar-color: rgba(255, 255, 255, 0.55) rgba(255, 255, 255, 0.08);
+  }
+
+  .service-description-scroll:hover .description-preview {
+    display: none;
+  }
+
+  .service-description-scroll:hover .description-full {
+    display: inline;
+  }
+
+  .service-description-scroll:hover::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .service-description-scroll:hover::-webkit-scrollbar-thumb {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.45) 0%,
+      rgba(255, 255, 255, 0.18) 100%
+    );
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35),
+      0 6px 14px rgba(15, 23, 42, 0.12);
+  }
+
   .linear-text {
     background: linear-gradient(
         rgba(46, 77, 254, 0.1) 0%,
