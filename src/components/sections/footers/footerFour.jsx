@@ -40,10 +40,10 @@ const FooterFour = () => {
     ]
 
     return (
-        <footer className='bg-primary rounded-tr-[30px] rounded-tl-[30px] pt-[200px] relative'>
+        <footer className='bg-primary rounded-t-[30px] pt-[200px] relative'>
             <div className='w-full h-full bg-no-repeat bg-contain bg-top absolute top-0 left-0 opacity-20' style={{ backgroundImage: `url(/images/background/services-bg1-1.webp)` }}>  </div>
             <div className='container relative z-2'>
-                <div className='max-w-[1350px] mx-auto px-[15px]'>
+                <div className='max-w-full mx-auto px-[15px]'>
                     <FooterContact white_logo={false} bgColor={"bg-white"} color="text-white" />
                     <span className='inline-block bg-white h-[1px] w-full mb-12.5 mt-[45px]'></span>
                     <div className='grid xl:grid-cols-[auto_65%] lg:grid-cols-[auto_60%] grid-cols-1 gap-x-7 justify-between'>
@@ -56,14 +56,14 @@ const FooterFour = () => {
                         </div>
                         <div>
                             <ImportanceLinks color={"text-white"} linkHoverColor={"hover:text-white hover:underline"} />
-                            <div className='mt-10'>
+                            {/* <div className='mt-10'>
                                 <TempLinks
                                     sections={tempLinks}
                                     color={"text-white"}
                                     linkHoverColor={"hover:text-white hover:underline"}
                                     scrollable={true}
                                 />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,22 @@
 import Image from "next/image";
 import React from "react";
 
+const getWordCount = (node) => {
+  if (typeof node === "string") {
+    return node.trim().split(/\s+/).filter(Boolean).length;
+  }
+
+  if (Array.isArray(node)) {
+    return node.reduce((count, child) => count + getWordCount(child), 0);
+  }
+
+  if (React.isValidElement(node)) {
+    return getWordCount(node.props.children);
+  }
+
+  return 0;
+};
+
 const LocalSEOServices = () => {
   const services = [
     {
@@ -101,33 +117,43 @@ const LocalSEOServices = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow duration-300"
-            >
-              {/* Icon */}
-              <div className="mb-6 text-center text-5xl">
-                <Image
-                  src={service.icon}
-                  alt={service.title}
-                  width={64}
-                  height={64}
-                  className="mx-auto"
-                />
+          {services.map((service, index) => {
+            const hasLongDescription = getWordCount(service.description) > 27;
+
+            return (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow duration-300"
+              >
+                {/* Icon */}
+                <div className="mb-6 text-center text-5xl">
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    width={64}
+                    height={64}
+                    className="mx-auto"
+                  />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl text-center font-medium text-gray-900 mb-1">
+                  {service.title}
+                </h3>
+
+                {/* Description */}
+                <p
+                  className={`text-gray-600 text-center text-md leading-relaxed ${
+                    hasLongDescription
+                      ? "max-h-28 overflow-y-auto pr-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                      : ""
+                  }`}
+                >
+                  {service.description}
+                </p>
               </div>
-
-              {/* Title */}
-              <h3 className="text-xl text-center font-medium text-gray-900 mb-1">
-                {service.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-gray-600 text-center text-md leading-relaxed">
-                {service.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
