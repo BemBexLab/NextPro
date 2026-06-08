@@ -43,7 +43,7 @@ const FooterFour = () => {
         <footer className='bg-primary rounded-tr-[30px] rounded-tl-[30px] pt-[200px] relative'>
             <div className='w-full h-full bg-no-repeat bg-contain bg-top absolute top-0 left-0 opacity-20' style={{ backgroundImage: `url(/images/background/services-bg1-1.webp)` }}>  </div>
             <div className='container relative z-2'>
-                <div className='max-w-[1600px] mx-auto px-[15px]'>
+                <div className='max-w-full mx-auto px-[15px]'>
                     <FooterContact white_logo={false} bgColor={"bg-white"} color="text-white" />
                     <span className='inline-block bg-white h-[1px] w-full mb-12.5 mt-[45px]'></span>
                     <div className='grid xl:grid-cols-[auto_65%] lg:grid-cols-[auto_60%] grid-cols-1 gap-x-7 justify-between'>
