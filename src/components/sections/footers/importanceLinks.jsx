@@ -49,7 +49,7 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
             id: 5,
             title: "SEO links",
             links: [
-                { id: 1, path: "/service/seo-services/seo-audit/", label: "Local SEO Services" },
+                { id: 1, path: "/service/seo-services/local-seo-services/", label: "Local SEO Services" },
                 { id: 2, path: "/service/seo-services/wordpress-seo/", label: "WordPress SEO Services" },
                 { id: 3, path: "/service/seo-services/seo-audit/", label: "SEO Audit Services" },
                 { id: 4, path: "/service/seo-services/ecommerce-seo/", label: "E-commerce SEO Services" },
