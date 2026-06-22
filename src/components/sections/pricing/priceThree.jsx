@@ -40,9 +40,9 @@ const PriceThree = () => {
         <SlideUp>
           <div className="flex flex-col items-center">
             <Button variant="secondary">Pricing</Button>
-            <h1 className="font-extrabold text-muted-foreground lg:text-5xl sm:text-4.5xl text-3xl lg:leading-[140%] sm:leading-[130%] leading-[120%] pt-6 max-w-full text-center">
+            <h2 className="font-extrabold text-muted-foreground lg:text-5xl sm:text-4.5xl text-3xl lg:leading-[140%] sm:leading-[130%] leading-[120%] pt-6 max-w-full text-center">
               OUR PACKAGES
-            </h1>
+            </h2>
             <p className="pt-[18px] text-gray-600 text-center max-w-[757px] font-semibold">
               No matter what budget type you have – we welcome you
             </p>

@@ -52,7 +52,7 @@ const ServicesSection = () => {
           >
             Services
           </motion.p>
-          <motion.h2
+          <motion.h1
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ const ServicesSection = () => {
             <span className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] text-transparent bg-clip-text">
               Deliver Results
             </span>
-          </motion.h2>
+          </motion.h1>
         </motion.div>
 
         {/* Services Grid */}
