@@ -1,27 +1,68 @@
-User-agent: *
+User-agent: 
 Allow: /
 Allow: /service/
-
+ 
 Disallow: /admin/
 Disallow: /search
 Disallow: /?s=
-Disallow: /*?filter=
-Disallow: /*?sort=
+Disallow: /?filter=
+Disallow: /*?sort=*
 Disallow: /checkout/
 Disallow: /cart/
 Disallow: /thank-you/
-
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.jsx$
-Allow: /*.ts$
-Allow: /*.tsx$
-Allow: /*.html$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.png$
-Allow: /*.webp$
-Allow: /*.svg$
-Allow: /*.mp4$
-
+ 
+Allow: /.css$
+Allow: /*.js$*
+Allow: /.jsx$
+Allow: /*.ts$*
+Allow: /.tsx$
+Allow: /*.html$*
+Allow: /.jpg$
+Allow: /*.jpeg$*
+Allow: /.png$
+Allow: /*.webp$*
+Allow: /.svg$
+Allow: /*.mp4$*
+ 
+# --- Google & Bing normal crawlers (already covered by User-agent:  above) ---
+User-agent: Googlebot
+Allow: /
+ 
+User-agent: Bingbot
+Allow: /
+ 
+# --- AI Crawlers / LLM bots ---
+User-agent: GPTBot
+Allow: /
+ 
+User-agent: ChatGPT-User
+Allow: /
+ 
+User-agent: OAI-SearchBot
+Allow: /
+ 
+User-agent: ClaudeBot
+Allow: /
+ 
+User-agent: Claude-Web
+Allow: /
+ 
+User-agent: anthropic-ai
+Allow: /
+ 
+User-agent: Google-Extended
+Allow: /
+ 
+User-agent: PerplexityBot
+Allow: /
+ 
+User-agent: CCBot
+Allow: /
+ 
+User-agent: cohere-ai
+Allow: /
+ 
+User-agent: Bytespider
+Allow: /
+ 
 Sitemap: https://www.webfoundersusa.com/sitemap.xml
