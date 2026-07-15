@@ -111,9 +111,20 @@ const ContactFormTwo = () => {
                                     <option value="" disabled>Select a Service</option>
                                     <option value="Search Engine Optimization">Search Engine Optimization</option>
                                     <option value="Social Media Marketing">Social Media Marketing</option>
+                                    <option value="Digital Marketing">Digital Marketing</option>
                                     <option value="Content Writing">Content Writing</option>
+                                    <option value="Pay Per Click">Pay Per Click</option>
+                                    <option value="Conversion Optimization Services">Conversion Optimization Services</option>
+                                    <option value="eCommerce Website Design & Development">eCommerce Website Design & Development</option>
+                                    <option value="Graphics Design Services">Graphic Design Services</option>
+                                    <option value="Brand Strategy Services">Brand Strategy Services</option>
+                                    <option value="Website Maintainance Services">Website Maintainance Services</option>
+                                    <option value="eCommerce Marketing Services">eCommerce Marketing Services</option>
+                                    <option value="Video Animation Services">Video Animation Services</option>
                                     <option value="Affiliate Marketing">Affiliate Marketing</option>
                                     <option value="Email Marketing">Email Marketing</option>
+                                    <option value="Custom Website Design Services">Custom Website Design Services</option>
+                                    <option value="Website Development Services">Website Development Services</option>
                                 </select>
                                 <svg
                                     className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
