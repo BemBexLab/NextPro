@@ -48,7 +48,7 @@ const jsonLd = {
       },
       "description": "Web Founders USA is a digital marketing and web development agency helping businesses grow online with web design, SEO, branding & marketing strategies tailored for measurable results.",
       "foundingDate": "2012",
-      "email": "info@webfoundersusa.com",
+      "email": "marketer@webfoundersusa.com",
       "telephone": "+1-470-470-7520",
       "address": {
         "@type": "PostalAddress",
@@ -62,7 +62,7 @@ const jsonLd = {
         "@type": "ContactPoint",
         "telephone": "+1-470-470-7520",
         "contactType": "customer support",
-        "email": "info@webfoundersusa.com",
+        "email": "marketer@webfoundersusa.com",
         "availableLanguage": "English"
       },
       "sameAs": [

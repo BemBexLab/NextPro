@@ -115,7 +115,7 @@ const Privacy = () => {
               You may choose to stop receiving our newsletter or marketing
               emails by following the unsubscribe instructions included in these
               emails or you can contact us at{" "}
-              <span className="text-[#002768]">info@webfoundersusa.com</span>
+              <span className="text-[#002768]">marketer@webfoundersusa.com</span>
             </li>
             <li>
               The account will be de-activated if a customer is non-responsive
@@ -245,7 +245,7 @@ const Privacy = () => {
               of electronic storage, is 100% secure, however. Therefore we
               cannot guarantee its absolute security. If you have any questions
               about security on our website, you can contact us at
-              <span className="text-[#002768]"> info@webfoundersusa.com</span>
+              <span className="text-[#002768]"> marketer@webfoundersusa.com</span>
             </li>
             <br />
             <li>
@@ -289,7 +289,7 @@ const Privacy = () => {
             <li>
               To review and update your personal information to ensure it is
               accurate, contact us at{" "}
-              <span className="text-[#002768]">info@webfoundersusa.com</span>
+              <span className="text-[#002768]">marketer@webfoundersusa.com</span>
             </li>
             <br />
             <li>
