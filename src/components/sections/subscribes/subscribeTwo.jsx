@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import Title from '@/components/ui/title'
+import Swal from 'sweetalert2'
 import {
     Dialog,
     DialogContent,
@@ -45,33 +46,82 @@ const Form = () => {
     const [contactNumber, setContactNumber] = useState('');
     const [service, setService] = useState('');
     const [message, setMessage] = useState('');
-    const [status, setStatus] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setStatus('Sending...');
-        const res = await fetch('/api/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                name,
-                email,
-                website,
-                contactNumber,
-                service,
-                message,
-            }),
+        setIsSubmitting(true);
+
+        Swal.fire({
+            title: 'Sending your request...',
+            text: 'Please wait while we deliver your message.',
+            allowOutsideClick: false,
+            didOpen: () => {
+                Swal.showLoading();
+            },
+            customClass: {
+                popup: 'rounded-3xl',
+                title: 'text-[#002768]',
+                confirmButton: 'rounded-full px-6 py-3',
+            },
         });
-        if (res.ok) {
-            setStatus('Message sent!');
+
+        try {
+            const res = await fetch('/api/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    website,
+                    contactNumber,
+                    service,
+                    message,
+                }),
+            });
+
+            if (!res.ok) {
+                throw new Error('Request failed');
+            }
+
+            Swal.close();
+            await Swal.fire({
+                icon: 'success',
+                title: 'Message sent!',
+                text: 'Thanks for reaching out. We will get back to you shortly.',
+                confirmButtonText: 'Great',
+                confirmButtonColor: '#002768',
+                background: '#ffffff',
+                color: '#1f2937',
+                customClass: {
+                    popup: 'rounded-3xl',
+                    confirmButton: 'rounded-full px-6 py-3',
+                },
+            });
+
             setName('');
             setEmail('');
             setWebsite('');
             setContactNumber('');
             setService('');
             setMessage('');
-        } else {
-            setStatus('Error sending message.');
+        } catch {
+            Swal.close();
+            await Swal.fire({
+                icon: 'error',
+                title: 'Something went wrong',
+                text: 'Your message could not be sent right now. Please try again.',
+                confirmButtonText: 'Try again',
+                confirmButtonColor: '#dc2626',
+                background: '#ffffff',
+                color: '#1f2937',
+                customClass: {
+                    popup: 'rounded-3xl',
+                    confirmButton: 'rounded-full px-6 py-3',
+                },
+            });
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -175,9 +225,10 @@ const Form = () => {
           </label>
         </div>
         <div className='mt-6 flex justify-end pb-4'>
-          <Button type="submit" className="text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3">Send request</Button>
+          <Button type="submit" disabled={isSubmitting} className="text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3">
+            {isSubmitting ? 'Sending...' : 'Send request'}
+          </Button>
         </div>
-        {status && <div className="mt-2 text-sm">{status}</div>}
       </form>
     </div>
   </DialogContent>

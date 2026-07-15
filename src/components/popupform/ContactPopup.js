@@ -1,165 +1,284 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Button } from '../ui/button';
+import { Button } from "../ui/button";
 import Image from "next/image";
+import Swal from "sweetalert2";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
 
 export default function ContactPopup() {
   const [open, setOpen] = useState(false);
 
-  // Form state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
   const [contactNumber, setContactNumber] = useState("");
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-  const timer = setTimeout(() => {
-    setOpen(true);
-  }, 8000); // 8000 ms = 8 seconds
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, 8000);
 
-  return () => clearTimeout(timer); // Clean up if component unmounts early
-}, []);
+    return () => clearTimeout(timer);
+  }, []);
 
+  useEffect(() => {
+    if (!open) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Submitting...");
+
+    if (!service) {
+      await Swal.fire({
+        icon: "warning",
+        title: "Select a service",
+        text: "Please choose a service before submitting the form.",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#BF0B30",
+        background: "#ffffff",
+        color: "#1f2937",
+        customClass: {
+          popup: "rounded-3xl",
+          confirmButton: "rounded-full px-6 py-3",
+        },
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    Swal.fire({
+      title: "Sending your request...",
+      text: "Please wait while we deliver your message.",
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+      customClass: {
+        popup: "rounded-3xl",
+        title: "text-[#002768]",
+        confirmButton: "rounded-full px-6 py-3",
+      },
+    });
 
     try {
       const res = await fetch("/api/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, website, contactNumber, service, message }),
+        body: JSON.stringify({
+          name,
+          email,
+          website,
+          contactNumber,
+          service,
+          message,
+        }),
       });
 
       const data = await res.json();
-      if (data.success) {
-        setStatus("Submitted!");
-        setName("");
-        setEmail("");
-        setWebsite("");
-        setContactNumber("");
-        setService("");
-        setMessage("");
-      } else {
-        setStatus("Submission failed: " + (data.error || "Unknown error"));
+      if (!data.success) {
+        throw new Error(data.error || "Unknown error");
       }
-    } catch (error) {
-      setStatus("Submission failed: " + error.message);
+
+      Swal.close();
+      await Swal.fire({
+        icon: "success",
+        title: "Message sent!",
+        text: "Thanks for reaching out. We will get back to you shortly.",
+        confirmButtonText: "Great",
+        confirmButtonColor: "#002768",
+        background: "#ffffff",
+        color: "#1f2937",
+        customClass: {
+          popup: "rounded-3xl",
+          confirmButton: "rounded-full px-6 py-3",
+        },
+      });
+
+      setName("");
+      setEmail("");
+      setWebsite("");
+      setContactNumber("");
+      setService("");
+      setMessage("");
+      setOpen(false);
+    } catch {
+      Swal.close();
+      await Swal.fire({
+        icon: "error",
+        title: "Something went wrong",
+        text: "Your message could not be sent right now. Please try again.",
+        confirmButtonText: "Try again",
+        confirmButtonColor: "#dc2626",
+        background: "#ffffff",
+        color: "#1f2937",
+        customClass: {
+          popup: "rounded-3xl",
+          confirmButton: "rounded-full px-6 py-3",
+        },
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-      <div
-        className="bg-white rounded-2xl w-full max-w-2xl mx-4 p-0 shadow-2xl flex overflow-hidden relative"
-        style={{ height: 600 }}
-      >
-        {/* Left Side - Full Cover Image */}
-        <div className="relative w-1/2 h-full hidden md:block">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 sm:p-6">
+      <div className="relative flex max-h-[90vh] w-full max-w-5xl flex-col overflow-hidden rounded-[28px] bg-white shadow-2xl md:max-h-[720px] md:flex-row">
+        <button
+          onClick={() => setOpen(false)}
+          className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-lg font-semibold text-gray-700 shadow-sm transition hover:bg-white hover:text-[#BF0B30]"
+          aria-label="Close popup"
+        >
+          x
+        </button>
+
+        <div className="relative h-56 w-full shrink-0 md:h-auto md:w-[44%]">
           <Image
             src="/images/banner/POPPUP.webp"
             alt="Promo"
             fill
             className="object-cover"
             priority
-            sizes="(max-width: 1024px) 50vw, 420px"
-            style={{ display: "block" }}
+            sizes="(max-width: 768px) 100vw, 44vw"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-5 text-white sm:p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/80">
+              Limited-Time Offer
+            </p>
+            <h2 className="mt-2 max-w-xs text-2xl font-bold leading-tight sm:text-3xl">
+              Unlock exclusive discounts for your next brand move.
+            </h2>
+          </div>
         </div>
-        {/* Right Side - Form */}
-        <div className="w-full md:w-1/2 h-full p-8 flex flex-col justify-center">
-          <button
-            onClick={() => setOpen(false)}
-            className="absolute top-3 right-3 text-xl text-gray-700 hover:text-red-500"
-            aria-label="Close"
-          >
-            ×
-          </button>
-          <h2 className="text-2xl font-bold mb-2">
-            Wait! Looking For Exclusive Discounts?
-          </h2>
-          <p className="mb-5 text-sm text-gray-700">Get Your Perfect Branding Designed!</p>
-          <form onSubmit={handleSubmit}>
-            <div className="flex flex-col gap-3">
-              <input
-                type="text"
-                placeholder="Name"
-                className="border-2 border-[#C0C0C0] rounded-lg px-[20px] py-[8px] outline-blue-200 bg-background w-full"
-                value={name}
-                onChange={e => setName(e.target.value)}
-                required
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="border-2 border-[#C0C0C0] rounded-lg px-[20px] py-[8px] w-full outline-blue-200 bg-background"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                required
-              />
-              <input
-                type="url"
-                placeholder="Website (optional)"
-                className="border-2 border-[#C0C0C0] rounded-lg px-[20px] py-[8px] w-full outline-blue-200 bg-background"
-                value={website}
-                onChange={e => setWebsite(e.target.value)}
-                // Not required
-              />
-              <input
-                type="text"
-                placeholder="Phone Number (optional)"
-                className="border-2 border-[#C0C0C0] rounded-lg px-[20px] py-[8px] w-full outline-blue-200 bg-background"
-                value={contactNumber}
-                onChange={e => setContactNumber(e.target.value)}
-                // Not required
-              />
-              <div className="relative">
-                <select
-                  value={service}
-                  onChange={e => setService(e.target.value)}
+
+        <div className="w-full overflow-y-auto md:w-[56%]">
+          <div className="flex min-h-full flex-col justify-center p-5 sm:p-8">
+            <div className="mb-6 pr-10">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#BF0B30]">
+                Schedule a Strategy Call
+              </p>
+              <h3 className="mt-2 text-2xl font-bold leading-tight text-gray-900 sm:text-3xl">
+                Wait! Looking for exclusive discounts?
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-gray-600 sm:text-base">
+                Get Your Perfect Branding Designed!
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="h-12 rounded-xl border-2 border-[#C0C0C0] bg-background px-4 outline-blue-200 transition focus:border-[#BF0B30]"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   required
-                  className="border-2 border-[#C0C0C0] rounded-lg px-[20px] h-12 w-full outline-blue-200 bg-background text-base appearance-none pr-10"
-                >
-                  <option value="" disabled>Select a Service</option>
-                  <option value="Search Engine Optimization">Search Engine Optimization</option>
-                  <option value="Social Media Marketing">Social Media Marketing</option>
-                  <option value="Content Writing">Content Writing</option>
-                  <option value="Affiliate Marketing">Affiliate Marketing</option>
-                  <option value="Email Marketing">Email Marketing</option>
-                </select>
-                {/* Custom dropdown arrow */}
-                <svg
-                  className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="h-12 rounded-xl border-2 border-[#C0C0C0] bg-background px-4 outline-blue-200 transition focus:border-[#BF0B30]"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
               </div>
+
+              <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <input
+                  type="url"
+                  placeholder="Website (optional)"
+                  className="h-12 rounded-xl border-2 border-[#C0C0C0] bg-background px-4 outline-blue-200 transition focus:border-[#BF0B30]"
+                  value={website}
+                  onChange={(e) => setWebsite(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="Phone Number (optional)"
+                  className="h-12 rounded-xl border-2 border-[#C0C0C0] bg-background px-4 outline-blue-200 transition focus:border-[#BF0B30]"
+                  value={contactNumber}
+                  onChange={(e) => setContactNumber(e.target.value)}
+                />
+              </div>
+
+              <div className="mt-3">
+                <Select value={service} onValueChange={setService}>
+                  <SelectTrigger
+                    className="h-12 rounded-xl border-2 border-[#C0C0C0] bg-background px-4 text-base outline-blue-200 transition focus:border-[#BF0B30] focus:ring-0 focus:ring-offset-0"
+                    aria-label="Select a Service"
+                  >
+                    <SelectValue placeholder="Select a Service" />
+                  </SelectTrigger>
+                  <SelectContent className="z-[60] rounded-xl border-[#C0C0C0] bg-white text-black shadow-xl">
+                    <SelectItem value="Search Engine Optimization" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
+                      Search Engine Optimization
+                    </SelectItem>
+                    <SelectItem value="Social Media Marketing" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
+                      Social Media Marketing
+                    </SelectItem>
+                    <SelectItem value="Content Writing" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
+                      Content Writing
+                    </SelectItem>
+                    <SelectItem value="Affiliate Marketing" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
+                      Affiliate Marketing
+                    </SelectItem>
+                    <SelectItem value="Email Marketing" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
+                      Email Marketing
+                    </SelectItem>
+                    <SelectItem value="Other" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
+                      Other
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
+                <input
+                  type="hidden"
+                  name="service"
+                  value={service}
+                  required
+                  readOnly
+                />
+              </div>
+
               <textarea
                 name="message"
                 placeholder="Message"
-                className="border-2 border-[#C0C0C0] outline-none w-full rounded-lg px-[25px] py-[18px] min-h-24 bg-background"
+                className="mt-3 min-h-28 w-full rounded-xl border-2 border-[#C0C0C0] bg-background px-4 py-3 outline-none transition focus:border-[#BF0B30]"
                 value={message}
-                onChange={e => setMessage(e.target.value)}
+                onChange={(e) => setMessage(e.target.value)}
                 required
               />
-            </div>
-            <div className="flex justify-end w-full mt-4">
-              <Button type="submit" className="w-full">Send request</Button>
-            </div>
-            <div className="mt-2 text-green-600 text-sm">{status}</div>
-          </form>
+
+              <div className="mt-5 flex justify-end">
+                <Button type="submit" disabled={isSubmitting} className="w-full sm:w-auto sm:min-w-44">
+                  {isSubmitting ? "Sending..." : "Send request"}
+                </Button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

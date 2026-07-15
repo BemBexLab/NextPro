@@ -42,6 +42,7 @@
     "sass": "^1.72.0",
     "sharp": "^0.33.3",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.26.25",
     "swiper": "^11.1.1",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"

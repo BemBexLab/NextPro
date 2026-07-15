@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Swal from "sweetalert2";
 
 const SERVICES_LIST = [
   "Search Engine Optimization",
@@ -21,7 +22,7 @@ export default function FreelancerMatchForm() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [services, setServices] = useState([]);
-  const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Handle checkbox toggle
   const handleServiceChange = (service) => {
@@ -34,7 +35,21 @@ export default function FreelancerMatchForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Submitting...");
+    setIsSubmitting(true);
+
+    Swal.fire({
+      title: "Sending your request...",
+      text: "Please wait while we deliver your message.",
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+      customClass: {
+        popup: "rounded-3xl",
+        title: "text-[#002768]",
+        confirmButton: "rounded-full px-6 py-3",
+      },
+    });
 
     try {
       const res = await fetch("/api/submit", {
@@ -50,19 +65,48 @@ export default function FreelancerMatchForm() {
         }),
       });
       const data = await res.json();
-      if (data.success) {
-        setStatus("Submitted!");
-        setName("");
-        setEmail("");
-        setWebsite("");
-        setPhone("");
-        setMessage("");
-        setServices([]);
-      } else {
-        setStatus("Submission failed: " + (data.error || "Unknown error"));
+      if (!data.success) {
+        throw new Error(data.error || "Unknown error");
       }
-    } catch (error) {
-      setStatus("Submission failed: " + error.message);
+
+      Swal.close();
+      await Swal.fire({
+        icon: "success",
+        title: "Message sent!",
+        text: "Thanks for reaching out. We will get back to you shortly.",
+        confirmButtonText: "Great",
+        confirmButtonColor: "#002768",
+        background: "#ffffff",
+        color: "#1f2937",
+        customClass: {
+          popup: "rounded-3xl",
+          confirmButton: "rounded-full px-6 py-3",
+        },
+      });
+
+      setName("");
+      setEmail("");
+      setWebsite("");
+      setPhone("");
+      setMessage("");
+      setServices([]);
+    } catch {
+      Swal.close();
+      await Swal.fire({
+        icon: "error",
+        title: "Something went wrong",
+        text: "Your message could not be sent right now. Please try again.",
+        confirmButtonText: "Try again",
+        confirmButtonColor: "#dc2626",
+        background: "#ffffff",
+        color: "#1f2937",
+        customClass: {
+          popup: "rounded-3xl",
+          confirmButton: "rounded-full px-6 py-3",
+        },
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -130,12 +174,13 @@ export default function FreelancerMatchForm() {
                 ))}
               </div>
             </div>
-            <Button type="submit" className="mt-4 w-full py-2 rounded-lg">
-              Send Request
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="mt-4 w-full py-2 rounded-lg"
+            >
+              {isSubmitting ? "Sending..." : "Send Request"}
             </Button>
-            {status && (
-              <div className="mt-2 text-sm text-center text-green-600">{status}</div>
-            )}
           </form>
           <div className="text-center mt-4 text-xs text-gray-500">
             Prefer email?{" "}
