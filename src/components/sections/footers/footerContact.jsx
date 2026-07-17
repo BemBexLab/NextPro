@@ -31,7 +31,7 @@ const FooterContact = ({ bgColor, color, white_logo }) => {
                         <Image src={"/images/shapes/Frame 208.webp"} width={44} height={50} alt='comments icon' />
                     </div>
                     <div className={cn(`${color}`)}>
-                        <p> <span className='font-semibold'>Email:</span> <Link href={"mailto:marketer@webfoundersusa.com"} className='relative hover-underline after:h-[1px] after:bg-muted'> marketer@webfoundersusa.com</Link> </p>
+                        <p> <span className='font-semibold'>Email:</span> <Link href={"mailto:info@webfoundersusa.com"} className='relative hover-underline after:h-[1px] after:bg-muted'> info@webfoundersusa.com</Link> </p>
                         <p> <span className='font-semibold'>Call us:</span> <Link href={"tal:+14704707520"} className='relative hover-underline after:h-[1px] after:bg-muted'>+1 470-470-7520</Link> </p>
                     </div>
                 </div>

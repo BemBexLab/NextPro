@@ -184,8 +184,8 @@ export default function FreelancerMatchForm() {
           </form>
           <div className="text-center mt-4 text-xs text-gray-500">
             Prefer email?{" "}
-            <a href="mailto:marketer@webfoundersusa.com" className="underline">
-              marketer@webfoundersusa.com
+            <a href="mailto:info@webfoundersusa.com" className="underline">
+              info@webfoundersusa.com
             </a>
           </div>
         </div>

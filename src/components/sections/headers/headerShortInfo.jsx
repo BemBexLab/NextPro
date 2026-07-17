@@ -34,7 +34,7 @@ const HeaderShortInfo = () => {
                 <h1 className='text-muted-foreground font-semibold'>Get In Touch</h1>
                 <div className='text-[#7C848C] mb-[26px]'>
                     <p>3021 Peachtree Rd NW Atlanta, GA 30305, USA</p>
-                    <p> <Link href={"mailto:ask@next.com"}>marketer@webfoundersusa.com</Link></p>
+                    <p> <Link href={"mailto:ask@next.com"}>info@webfoundersusa.com</Link></p>
                     <p>Ph:<Link href={"tel:+14704707520"}>+1 470-470-7520</Link></p>
                 </div>
                 <SocialIcons/>

@@ -93,7 +93,7 @@ const Setting = () => {
                         <h3 className='text-2xl font-extrabold text-muted-foreground pb-2'>Connect for more information</h3>
                         <p>We are here, ready to answer any types of questions</p>
                         <ul className='py-4'>
-                            <li><Link href={"mailto:marketer@webfoundersusa.com"} className='multiline-hover'>marketer@webfoundersusa.com</Link></li>
+                            <li><Link href={"mailto:info@webfoundersusa.com"} className='multiline-hover'>info@webfoundersusa.com</Link></li>
                             <li><Link href={"tel:+14704707520"}><span className='font-semibold'>Call us:</span> <span className='multiline-hover'>+1 (470) 470-7520 </span> </Link></li>
                         </ul>
                         <SocialIcons />
