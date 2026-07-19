@@ -70,7 +70,7 @@ const FooterFour = () => {
             </div>
             <div className='bg-muted dark:bg-accent mt-[54px] relative z-10'>
                 <div className='max-w-[1350px] mx-auto px-[15px] flex xl:flex-row flex-col justify-between items-center gap-3 py-7.5 text-white'>
-                    <p>Designed and Developed By <Link href={""} className='text-primary-foreground font-medium relative hover-underline after:h-[1px]'>WebFounders USA</Link></p>
+                    <p>Designed and Developed By <Link href="/" className='text-primary-foreground font-medium relative hover-underline after:h-[1px]'>WebFounders USA</Link></p>
                     <div className='flex flex-col items-center gap-1 xl:items-end'>
                         <p>Copyright: © 2026. All Rights Reserved</p>
                         <Link

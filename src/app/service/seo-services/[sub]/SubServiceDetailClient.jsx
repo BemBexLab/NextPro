@@ -55,6 +55,15 @@ const SubServiceDetailPage = ({ params }) => {
     __html: (s || "").toString().replace(/\n/g, "<br/>"),
   });
 
+  const renderRichParagraph = (content, key) =>
+    typeof content === "string" || content == null ? (
+      <p key={key} dangerouslySetInnerHTML={formatHtml(content)} />
+    ) : React.isValidElement(content) && content.type === React.Fragment ? (
+      <p key={key}>{content}</p>
+    ) : (
+      <React.Fragment key={key}>{content}</React.Fragment>
+    );
+
   return (
     <div className="bg-white text-gray-900">
       <FaqJsonLd faqs={service.faqs || []} />
@@ -134,9 +143,9 @@ const SubServiceDetailPage = ({ params }) => {
       <section className="py-12 md:py-16 px-4 max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="flex-1 text-base md:text-lg leading-relaxed text-gray-700 space-y-4">
-            {(service.introParagraphs || []).map((p, idx) => (
-              <p key={idx} dangerouslySetInnerHTML={formatHtml(p)} />
-            ))}
+            {(service.introParagraphs || []).map((p, idx) =>
+              renderRichParagraph(p, idx),
+            )}
             {id === "custom-website-design" && (
               <Link
                 href={`/service/${serviceId}`}
