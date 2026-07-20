@@ -56,7 +56,7 @@ const ServiceBody2 = () => {
       <section className="relative overflow-hidden border-b border-black/10 bg-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,0,0,0.06),transparent_28%),linear-gradient(to_bottom,rgba(0,0,0,0.015),transparent_30%)]" />
 
-        <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="relative w-full px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
           <div className="grid gap-10 md:grid-cols-2 md:items-stretch">
             <motion.div variants={fadeLeft} className="min-w-0 md:pr-8">
               <motion.span
@@ -66,14 +66,14 @@ const ServiceBody2 = () => {
                 {content.meta.eyebrow}
               </motion.span>
               <motion.h1
-                className="mt-5 max-w-[15ch] text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-black sm:text-5xl lg:text-7xl"
+                className="mt-5 max-w-4xl text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-black sm:text-5xl lg:text-7xl"
                 variants={fadeUp}
               >
                 {content.hero.title}
               </motion.h1>
 
               <motion.div
-                className="mt-8 max-w-2xl space-y-5 text-base leading-8 text-black/70 sm:text-lg"
+                className="mt-8 max-w-4xl space-y-5 text-base leading-8 text-black/70 sm:text-lg"
                 variants={stagger}
               >
                 {content.hero.paragraphs.map((paragraph, index) => (
@@ -137,7 +137,7 @@ const ServiceBody2 = () => {
         </div>
       </section>
 
-      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <div className="w-full px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
         <div className="space-y-10">
           <motion.section
             className={`${cardClass} shadow-[0_24px_80px_rgba(0,0,0,0.04)]`}
@@ -193,8 +193,8 @@ const ServiceBody2 = () => {
             whileInView="visible"
             viewport={viewport}
           >
-            <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-              <motion.div variants={fadeLeft}>
+            <div className="flex flex-col gap-8 md:flex-row md:items-start">
+              <motion.div variants={fadeLeft} className="md:w-[52%]">
                 <h2 className="text-3xl font-semibold leading-tight tracking-[-0.03em] text-black sm:text-4xl">
                   {content.definition.title}
                 </h2>
@@ -208,7 +208,7 @@ const ServiceBody2 = () => {
               </motion.div>
 
               <motion.div
-                className="overflow-hidden rounded-[30px] border border-black/10 bg-black/[0.04]"
+                className="overflow-hidden rounded-[30px] border border-black/10 bg-black/[0.04] md:w-[48%]"
                 variants={fadeRight}
               >
                 <motion.img
@@ -301,14 +301,14 @@ const ServiceBody2 = () => {
           </motion.section>
 
           <motion.div
-            className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]"
+            className="flex flex-col md:flex-row"
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
             variants={stagger}
           >
             <motion.div
-              className="overflow-hidden rounded-[32px] border border-black/10 bg-black/[0.04]"
+              className="overflow-hidden rounded-[32px] border border-black/10 bg-black/[0.04] md:w-[52%]"
               variants={fadeLeft}
             >
               <motion.img
@@ -321,7 +321,7 @@ const ServiceBody2 = () => {
               />
             </motion.div>
             <motion.div
-              className="overflow-hidden rounded-[32px] border border-black/10 bg-black/[0.04]"
+              className="overflow-hidden rounded-[32px] border border-black/10 bg-black/[0.04] md:w-[48%]"
               variants={fadeRight}
             >
               <motion.img
@@ -449,8 +449,8 @@ const ServiceBody2 = () => {
               whileInView="visible"
               viewport={viewport}
             >
-              <div className="grid gap-8 lg:grid-cols-[1fr_0.88fr] lg:items-start">
-                <motion.div variants={fadeLeft}>
+              <div className="flex flex-col gap-8 md:flex-row md:items-stretch">
+                <motion.div variants={fadeLeft} className="md:flex md:w-1/2 md:flex-col md:justify-center">
                   <h2 className="text-3xl font-semibold leading-tight tracking-[-0.03em] text-black sm:text-4xl">
                     {content.servicesIntro.title}
                   </h2>
@@ -464,13 +464,13 @@ const ServiceBody2 = () => {
                 </motion.div>
 
                 <motion.div
-                  className="overflow-hidden rounded-[30px] border border-black/10 bg-black/[0.04]"
+                  className="relative min-h-[320px] overflow-hidden rounded-[30px] border border-black/10 bg-black/[0.04] md:min-h-0 md:w-1/2"
                   variants={fadeRight}
                 >
                   <motion.img
-                    src={content.images.services.src}
-                    alt={content.images.services.alt}
-                    className="h-full min-h-[320px] w-full object-cover"
+                    src="https://images.unsplash.com/photo-1617654116857-a1d5e1ad2bfa?auto=format&fit=crop&w=1400&q=80"
+                    alt="Grayscale photo of lamborghini aventador"
+                    className="h-full w-full object-cover md:absolute md:inset-0 md:h-full"
                     loading="lazy"
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.4 }}
