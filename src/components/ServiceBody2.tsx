@@ -450,17 +450,19 @@ const ServiceBody2 = () => {
               viewport={viewport}
             >
               <div className="flex flex-col gap-8 md:flex-row md:items-stretch">
-                <motion.div variants={fadeLeft} className="md:flex md:w-1/2 md:flex-col md:justify-center">
-                  <h2 className="text-3xl font-semibold leading-tight tracking-[-0.03em] text-black sm:text-4xl">
-                    {content.servicesIntro.title}
-                  </h2>
-                  <motion.div className="mt-6 space-y-5 text-base leading-8 text-black/70 sm:text-lg" variants={stagger}>
-                    {content.servicesIntro.paragraphs.map((paragraph, index) => (
-                      <motion.p key={index} variants={fadeUp}>
-                        {paragraph}
-                      </motion.p>
-                    ))}
-                  </motion.div>
+                <motion.div variants={fadeLeft} className="md:w-1/2 md:self-stretch">
+                  <div className="md:flex md:h-full md:flex-col md:justify-center">
+                    <h2 className="text-3xl font-semibold leading-tight tracking-[-0.03em] text-black sm:text-4xl">
+                      {content.servicesIntro.title}
+                    </h2>
+                    <motion.div className="mt-6 space-y-5 text-base leading-8 text-black/70 sm:text-lg" variants={stagger}>
+                      {content.servicesIntro.paragraphs.map((paragraph, index) => (
+                        <motion.p key={index} variants={fadeUp}>
+                          {paragraph}
+                        </motion.p>
+                      ))}
+                    </motion.div>
+                  </div>
                 </motion.div>
 
                 <motion.div
