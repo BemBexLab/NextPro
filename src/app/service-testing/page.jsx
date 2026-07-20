@@ -17,7 +17,7 @@ import ServiceBody2 from "@/components/ServiceBody2";
 
 const ServiceTesting = () => {
   return (
-    <section className="text-black">
+    <section className="text-black overflow-x-hidden">
       {/* <ServiceHero /> */}
       <ServiceBody2 />
       {/* <ExpertsPage />

@@ -56,9 +56,9 @@ const ServiceBody2 = () => {
       <section className="relative overflow-hidden border-b border-black/10 bg-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,0,0,0.06),transparent_28%),linear-gradient(to_bottom,rgba(0,0,0,0.015),transparent_30%)]" />
 
-        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <div className="grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
-            <motion.div variants={fadeLeft}>
+        <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div className="grid gap-10 md:grid-cols-2 md:items-stretch">
+            <motion.div variants={fadeLeft} className="min-w-0 md:pr-8">
               <motion.span
                 className="inline-flex rounded-full border border-black/10 bg-black/[0.03] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60"
                 variants={fadeUp}
@@ -66,14 +66,14 @@ const ServiceBody2 = () => {
                 {content.meta.eyebrow}
               </motion.span>
               <motion.h1
-                className="mt-5 max-w-4xl text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-black sm:text-5xl lg:text-7xl"
+                className="mt-5 max-w-[15ch] text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-black sm:text-5xl lg:text-7xl"
                 variants={fadeUp}
               >
                 {content.hero.title}
               </motion.h1>
 
               <motion.div
-                className="mt-8 max-w-3xl space-y-5 text-base leading-8 text-black/70 sm:text-lg"
+                className="mt-8 max-w-2xl space-y-5 text-base leading-8 text-black/70 sm:text-lg"
                 variants={stagger}
               >
                 {content.hero.paragraphs.map((paragraph, index) => (
@@ -108,13 +108,13 @@ const ServiceBody2 = () => {
 
             <motion.div
               variants={fadeRight}
-              className="overflow-hidden mt-3 rounded-[34px] border border-black/10 bg-black/[0.04] shadow-[0_30px_80px_rgba(0,0,0,0.08)]"
+              className="mt-3 h-full w-full overflow-hidden rounded-[34px] border border-black/10 bg-black/[0.04] shadow-[0_30px_80px_rgba(0,0,0,0.08)] md:mt-0 md:pl-4"
             >
-              <div className="relative">
+              <div className="relative h-full min-h-[420px]">
                 <motion.img
                   src={content.images.hero.src}
                   alt={content.images.hero.alt}
-                  className="h-[420px] w-full object-cover"
+                  className="h-full w-full object-cover"
                   loading="lazy"
                   initial={{ scale: 1.06 }}
                   animate={{ scale: 1 }}
