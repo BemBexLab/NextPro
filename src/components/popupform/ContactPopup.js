@@ -237,20 +237,14 @@ export default function ContactPopup() {
                     <SelectItem value="Search Engine Optimization" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
                       Search Engine Optimization
                     </SelectItem>
-                    <SelectItem value="Social Media Marketing" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
-                      Social Media Marketing
+                    <SelectItem value="Custom Web Development" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
+                      Custom Web Development
                     </SelectItem>
-                    <SelectItem value="Content Writing" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
-                      Content Writing
+                    <SelectItem value="Graphic Designing" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
+                      Graphic Designing
                     </SelectItem>
-                    <SelectItem value="Affiliate Marketing" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
-                      Affiliate Marketing
-                    </SelectItem>
-                    <SelectItem value="Email Marketing" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
-                      Email Marketing
-                    </SelectItem>
-                    <SelectItem value="Other" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
-                      Other
+                    <SelectItem value="E-commerce marketing" className="rounded-lg py-3 pl-4 text-base focus:bg-[#BF0B30] focus:text-white">
+                      E-commerce marketing
                     </SelectItem>
                   </SelectContent>
                 </Select>
