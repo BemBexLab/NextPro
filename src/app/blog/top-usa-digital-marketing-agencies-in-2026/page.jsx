@@ -122,7 +122,7 @@ export default function BlogPost() {
             name="Web Founders USA"
             location="Georgia, USA"
             specialties="SEO, PPC, Social Media Marketing, Web Design, Conversion Rate Optimization (CRO)"
-            phone="+1 470-470-7520"
+            phone="+1 470-470-7392"
             why={<><Link href="https://webfoundersusa.com" className="text-blue-600 hover:text-blue-800 underline">Web Founders USA</Link> redefines digital marketing by creating integrated, customer-first strategies that go beyond simple clicks. They prioritize data-driven decisions and user experience, ensuring that your website not only ranks well on search engines but also converts visitors into loyal customers. Their <Link href="/service/conversion-optimization" className="text-blue-600 hover:text-blue-800 underline">conversion rate optimization (CRO)</Link> techniques are a game changer for businesses looking to turn traffic into real revenue. With an emphasis on holistic marketing strategies, they are one of the most innovative and forward-thinking agencies of 2026.</>}
             creative={<>They don't just optimize websites for <Link href="/service/seo-services/" className="text-blue-600 hover:text-blue-800 underline">SEO</Link> they optimize experiences, turning visitors into advocates. Their unique focus on UX design and conversion psychology ensures that every campaign is not just efficient but also emotionally engaging for your audience.</>}
           />

@@ -116,7 +116,7 @@ const SubServiceDetailPage = ({ params }) => {
           </p> */}
           <div className="mt-8 flex items-center justify-center gap-5">
             <a
-              href={`tel:+14704707520`}
+              href={`tel:+14704707392`}
               className="flex items-center gap-3 group"
               aria-label="Call us"
             >
@@ -126,7 +126,7 @@ const SubServiceDetailPage = ({ params }) => {
                 </div>
               </div>
               <span className="text-base font-semibold text-white group-hover:underline">
-                +1 470-470-7520
+                +1 470-470-7392
               </span>
             </a>
 

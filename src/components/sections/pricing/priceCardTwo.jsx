@@ -100,10 +100,10 @@ const PriceCardTwo = ({ plan_name, price, services, old_price }) => {
               Speak with us
             </div>
             <a
-              href="tel:+14704707520"
+              href="tel:+14704707392"
               className="text-[16px] font-medium text-black leading-none hover:text-primary transition"
             >
-              +1 (470) 470-7520
+              +1 (470) 470-7392
             </a>
           </div>
 
