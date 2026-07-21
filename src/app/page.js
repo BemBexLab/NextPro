@@ -3,33 +3,41 @@ import HeroFour from "@/components/sections/heroes/heroFour";
 import CompaniesSlideer from "@/components/sections/companiesslide/slider";
 import Script from "next/script";
 
-const ServiceTwo = dynamic(() => import("@/components/sections/services/serviceTwo"));
+const ServiceTwo = dynamic(
+  () => import("@/components/sections/services/serviceTwo"),
+);
 const Approach = dynamic(() => import("@/components/sections/approach"));
 const CountDown = dynamic(() => import("@/components/sections/countDown"));
 const Study = dynamic(() => import("@/components/sections/study"));
-const PriceThree = dynamic(() => import("@/components/sections/pricing/priceThree"));
-const SubscribeTwo = dynamic(() => import("@/components/sections/subscribes/subscribeTwo"));
-const ContactFormTwo = dynamic(() => import("@/components/sections/ContactFormTwo"));
+const PriceThree = dynamic(
+  () => import("@/components/sections/pricing/priceThree"),
+);
+const SubscribeTwo = dynamic(
+  () => import("@/components/sections/subscribes/subscribeTwo"),
+);
+const ContactFormTwo = dynamic(
+  () => import("@/components/sections/ContactFormTwo"),
+);
 const FAQSection = dynamic(() => import("@/components/sections/faqs/HomeFaqs"));
 
 export const metadata = {
-    title: "Complete 360 Online Marketing Services - Web Founders USA",
-    description: "Web Founders USA provides complete 360 online Digital marketing services to help US businesses boost rankings, traffic, leads, and growth.",
+  title: "Complete 360 Online Marketing Services - Web Founders USA",
+  description:
+    "Web Founders USA provides complete 360 online Digital marketing services to help US businesses boost rankings, traffic, leads, and growth.",
 
-    keywords: [
+  keywords: [
     "Web Founders USA",
     "Website Design and Development Company",
     "Digital Marketing Agency",
   ],
-  
-    alternates: {
+
+  alternates: {
     canonical: "https://www.webfoundersusa.com/",
-    
   },
 
   verification: {
     google: "MXsme6KREETz9zsD6ULOJg-NIi75wmJqABLQiM52Lmk",
-  }, 
+  },
 };
 const jsonLd = {
   "@context": "https://schema.org",
@@ -37,108 +45,110 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": "https://www.webfoundersusa.com/#organization",
-      "name": "Web Founders USA",
-      "alternateName": "WebFoundersUSA",
-      "url": "https://www.webfoundersusa.com/",
-      "logo": {
+      name: "Web Founders USA",
+      alternateName: "WebFoundersUSA",
+      url: "https://www.webfoundersusa.com/",
+      logo: {
         "@type": "ImageObject",
-        "url": "https://www.webfoundersusa.com/wp-content/uploads/2024/01/logo.png",
-        "width": "200",
-        "height": "60"
+        url: "https://www.webfoundersusa.com/wp-content/uploads/2024/01/logo.png",
+        width: "200",
+        height: "60",
       },
-      "description": "Web Founders USA is a digital marketing and web development agency helping businesses grow online with web design, SEO, branding & marketing strategies tailored for measurable results.",
-      "foundingDate": "2012",
-      "email": "info@webfoundersusa.com",
-      "telephone": "+1-470-470-7520",
-      "address": {
+      description:
+        "Web Founders USA is a digital marketing and web development agency helping businesses grow online with web design, SEO, branding & marketing strategies tailored for measurable results.",
+      foundingDate: "2012",
+      email: "info@webfoundersusa.com",
+      telephone: "+1-470-470-7520",
+      address: {
         "@type": "PostalAddress",
-        "streetAddress": "3021 Peachtree Rd NW",
-        "addressLocality": "Atlanta",
-        "addressRegion": "GA",
-        "postalCode": "30305",
-        "addressCountry": "USA"
+        streetAddress: "3021 Peachtree Rd NW",
+        addressLocality: "Atlanta",
+        addressRegion: "GA",
+        postalCode: "30305",
+        addressCountry: "USA",
       },
-      "contactPoint": {
+      contactPoint: {
         "@type": "ContactPoint",
-        "telephone": "+1-470-470-7520",
-        "contactType": "customer support",
-        "email": "info@webfoundersusa.com",
-        "availableLanguage": "English"
+        telephone: "+1-470-470-7520",
+        contactType: "customer support",
+        email: "info@webfoundersusa.com",
+        availableLanguage: "English",
       },
-      "sameAs": [
+      sameAs: [
         "https://www.facebook.com/WebfoundersUSA/",
         "https://www.instagram.com/webfoundersusa/",
         "https://x.com/webfounders_usa",
         "https://www.youtube.com/@WebFoundersUSA",
-        "https://www.pinterest.com/WebFoundersUSA/"
+        "https://www.pinterest.com/WebFoundersUSA/",
       ],
-      "knowsAbout": [
+      knowsAbout: [
         "Web Design",
         "SEO Services",
         "Digital Marketing",
         "Branding",
         "Logo Design",
         "Web Development",
-        "E-commerce Solutions"
-      ]
+        "E-commerce Solutions",
+      ],
     },
     {
       "@type": "WebSite",
       "@id": "https://www.webfoundersusa.com/#website",
-      "url": "https://www.webfoundersusa.com/",
-      "name": "Web Founders USA",
-      "description": "Web Founders USA provides professional digital solutions including web design, SEO, branding, and marketing to help businesses grow online.", 
-      "publisher": {
-        "@id": "https://www.webfoundersusa.com/#organization"
+      url: "https://www.webfoundersusa.com/",
+      name: "Web Founders USA",
+      description:
+        "Web Founders USA provides professional digital solutions including web design, SEO, branding, and marketing to help businesses grow online.",
+      publisher: {
+        "@id": "https://www.webfoundersusa.com/#organization",
       },
-      "inLanguage": "en-US",
-      "potentialAction": {
+      inLanguage: "en-US",
+      potentialAction: {
         "@type": "SearchAction",
-        "target": "https://www.webfoundersusa.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+        target: "https://www.webfoundersusa.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
     },
     {
       "@type": "WebPage",
       "@id": "https://www.webfoundersusa.com/#webpage",
-      "url": "https://www.webfoundersusa.com/",
-      "name": "Web Founders USA | Digital Marketing & Web Design Agency",
-      "isPartOf": {
-        "@id": "https://www.webfoundersusa.com/#website"
+      url: "https://www.webfoundersusa.com/",
+      name: "Web Founders USA | Digital Marketing & Web Design Agency",
+      isPartOf: {
+        "@id": "https://www.webfoundersusa.com/#website",
       },
-      "about": {
-        "@id": "https://www.webfoundersusa.com/#organization"
+      about: {
+        "@id": "https://www.webfoundersusa.com/#organization",
       },
-      "description": "Web Founders USA helps brands grow through customized digital solutions like web design, SEO, branding and marketing services for measurable online success.",
-      "breadcrumb": {
-        "@id": "https://www.webfoundersusa.com/#breadcrumb"
-      }
+      description:
+        "Web Founders USA helps brands grow through customized digital solutions like web design, SEO, branding and marketing services for measurable online success.",
+      breadcrumb: {
+        "@id": "https://www.webfoundersusa.com/#breadcrumb",
+      },
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://www.webfoundersusa.com/#breadcrumb",
-      "itemListElement": [
+      itemListElement: [
         {
           "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.webfoundersusa.com/"
-        }
-      ]
-    }
-  ]
+          position: 1,
+          name: "Home",
+          item: "https://www.webfoundersusa.com/",
+        },
+      ],
+    },
+  ],
 };
-
 
 const HomeFour = () => {
   return (
     <main>
       <Script
-  id="home-schema"
-  type="application/ld+json"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-/>
+        id="home-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <HeroFour />
       <CompaniesSlideer />
