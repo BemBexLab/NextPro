@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
-import Swal from "sweetalert2";
 import {
   Select,
   SelectContent,
@@ -11,6 +10,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import {
+  showServiceRequiredWarning,
+  showSubmissionError,
+  showSubmissionLoading,
+  showSubmissionSuccess,
+  submitSubmission,
+} from "@/lib/submission";
 
 export default function ContactPopup() {
   const [open, setOpen] = useState(false);
@@ -48,71 +54,23 @@ export default function ContactPopup() {
     e.preventDefault();
 
     if (!service) {
-      await Swal.fire({
-        icon: "warning",
-        title: "Select a service",
-        text: "Please choose a service before submitting the form.",
-        confirmButtonText: "OK",
-        confirmButtonColor: "#BF0B30",
-        background: "#ffffff",
-        color: "#1f2937",
-        customClass: {
-          popup: "rounded-3xl",
-          confirmButton: "rounded-full px-6 py-3",
-        },
-      });
+      await showServiceRequiredWarning();
       return;
     }
 
     setIsSubmitting(true);
-
-    Swal.fire({
-      title: "Sending your request...",
-      text: "Please wait while we deliver your message.",
-      allowOutsideClick: false,
-      didOpen: () => {
-        Swal.showLoading();
-      },
-      customClass: {
-        popup: "rounded-3xl",
-        title: "text-[#002768]",
-        confirmButton: "rounded-full px-6 py-3",
-      },
-    });
+    showSubmissionLoading();
 
     try {
-      const res = await fetch("/api/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          website,
-          contactNumber,
-          service,
-          message,
-        }),
+      await submitSubmission({
+        name,
+        email,
+        website,
+        contactNumber,
+        service,
+        message,
       });
-
-      const data = await res.json();
-      if (!data.success) {
-        throw new Error(data.error || "Unknown error");
-      }
-
-      Swal.close();
-      await Swal.fire({
-        icon: "success",
-        title: "Message sent!",
-        text: "Thanks for reaching out. We will get back to you shortly.",
-        confirmButtonText: "Great",
-        confirmButtonColor: "#002768",
-        background: "#ffffff",
-        color: "#1f2937",
-        customClass: {
-          popup: "rounded-3xl",
-          confirmButton: "rounded-full px-6 py-3",
-        },
-      });
+      await showSubmissionSuccess();
 
       setName("");
       setEmail("");
@@ -122,20 +80,7 @@ export default function ContactPopup() {
       setMessage("");
       setOpen(false);
     } catch {
-      Swal.close();
-      await Swal.fire({
-        icon: "error",
-        title: "Something went wrong",
-        text: "Your message could not be sent right now. Please try again.",
-        confirmButtonText: "Try again",
-        confirmButtonColor: "#dc2626",
-        background: "#ffffff",
-        color: "#1f2937",
-        customClass: {
-          popup: "rounded-3xl",
-          confirmButton: "rounded-full px-6 py-3",
-        },
-      });
+      await showSubmissionError();
     } finally {
       setIsSubmitting(false);
     }

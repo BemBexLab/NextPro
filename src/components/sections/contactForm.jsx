@@ -1,10 +1,11 @@
-import React from 'react'
+"use client";
+
+import React, { useState } from 'react'
 import Input from '../ui/input'
 import { Button } from '../ui/button'
 import Title from '../ui/title'
 import Textarea from '../ui/textarea'
 import Image from 'next/image'
-import { cn } from '@/lib/utils'
 import SlideUp from '../animations/slideUp'
 import {
     Select,
@@ -13,10 +14,49 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+import {
+    showSubmissionError,
+    showSubmissionLoading,
+    showSubmissionSuccess,
+    submitSubmission,
+} from "@/lib/submission"
 
 
 const ContactForm = ({ color, inputColor }) => {
-    // color and inputColor props come from home page 3
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [website, setWebsite] = useState('');
+    const [service, setService] = useState('');
+    const [message, setMessage] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        showSubmissionLoading();
+
+        try {
+            await submitSubmission({
+                name,
+                email,
+                website,
+                service,
+                message,
+            });
+
+            await showSubmissionSuccess();
+            setName('');
+            setEmail('');
+            setWebsite('');
+            setService('');
+            setMessage('');
+        } catch {
+            await showSubmissionError();
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <section className='container lg:mt-15 mt-9'>
             <div className={` bg-primary lg:rounded-[30px] rounded-2xl px-3 relative z-[1]`}>
@@ -34,21 +74,40 @@ const ContactForm = ({ color, inputColor }) => {
                         </div>
                         <div className='lg:w-[54%] w-full'>
                             <SlideUp>
-                                <form >
+                                <form onSubmit={handleSubmit}>
                                     <div className='flex sm:flex-row flex-col items-center gap-4 mb-3'>
                                         <div className='w-full'>
-                                            <Input type={"text"} placeholder={"Your Name"} className={`w-full border-2 border-[#C0C0C0] ${inputColor}`} />
+                                            <Input
+                                                type={"text"}
+                                                placeholder={"Your Name"}
+                                                className={`w-full border-2 border-[#C0C0C0] ${inputColor}`}
+                                                value={name}
+                                                onChange={(e) => setName(e.target.value)}
+                                            />
                                         </div>
                                         <div className='w-full'>
-                                            <Input type={"email"} placeholder={"Email"} className={`w-full border-2 border-[#C0C0C0] ${inputColor}`} />
+                                            <Input
+                                                type={"email"}
+                                                placeholder={"Email"}
+                                                className={`w-full border-2 border-[#C0C0C0] ${inputColor}`}
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
+                                            />
                                         </div>
                                     </div>
                                     <div className='flex sm:flex-row flex-col items-center gap-4 mb-3'>
                                         <div className='w-full'>
-                                            <Input type={"url"} placeholder={"Website"} className={`w-full border-2 border-[#C0C0C0] ${inputColor}`} />
+                                            <Input
+                                                type={"url"}
+                                                placeholder={"Website"}
+                                                className={`w-full border-2 border-[#C0C0C0] ${inputColor}`}
+                                                value={website}
+                                                onChange={(e) => setWebsite(e.target.value)}
+                                                required={false}
+                                            />
                                         </div>
                                         <div className='w-full'>
-                                            <Select>
+                                            <Select value={service} onValueChange={setService}>
                                                 <SelectTrigger className={`border-2 border-[#C0C0C0] ${inputColor} h-12.5 py-[18px] px-[25px] text-lg`}>
                                                     <SelectValue placeholder="Select a Service" />
                                                 </SelectTrigger>
@@ -60,13 +119,23 @@ const ContactForm = ({ color, inputColor }) => {
                                                     <SelectItem value="Email Marketing" className="text-lg focus:bg-primary focus:text-white pl-5">Email Marketing</SelectItem>
                                                 </SelectContent>
                                             </Select>
+                                            <input type="hidden" name="service" value={service} required readOnly />
                                         </div>
                                     </div>
                                     <div className='mb-3'>
-                                        <Textarea name={"massage"} placeholder={"Massage"} className={`${inputColor}`} />
+                                        <Textarea
+                                            name={"message"}
+                                            placeholder={"Message"}
+                                            className={`${inputColor}`}
+                                            value={message}
+                                            onChange={(e) => setMessage(e.target.value)}
+                                            required
+                                        />
                                     </div>
                                     <div className='flex justify-end w-full'>
-                                        <Button variant={"outline"} className="border-white border text-white hover:text-primary-foreground hover:bg-white">Send request</Button>
+                                        <Button type="submit" variant={"outline"} disabled={isSubmitting} className="border-white border text-white hover:text-primary-foreground hover:bg-white">
+                                            {isSubmitting ? 'Sending...' : 'Send request'}
+                                        </Button>
                                     </div>
                                 </form>
                             </SlideUp>

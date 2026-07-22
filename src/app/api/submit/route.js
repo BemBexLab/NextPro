@@ -1,45 +1,77 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { getPrisma } from "@/lib/prisma";
 
 export async function POST(req) {
   const body = await req.json();
-  // Get all fields from the frontend
-  const { name, email, website, contactNumber, service, message } = body;
+  const name = body.name?.trim();
+  const email = body.email?.trim();
+  const website = body.website?.trim() || null;
+  const contactNumber = body.contactNumber?.trim() || body.phone?.trim() || null;
+  const message = body.message?.trim();
+  const service = Array.isArray(body.service)
+    ? body.service.filter(Boolean).join(", ")
+    : body.service?.trim();
 
-  // Validation: Only name, email, service, message required; others optional
   if (!name || !email || !service || !message) {
-    return NextResponse.json({ error: "Please fill all required fields." }, { status: 400 });
+    return NextResponse.json(
+      { error: "Please fill all required fields." },
+      { status: 400 }
+    );
   }
 
-  // SMTP setup
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
-
-  const mailOptions = {
-    from: `"Website Contact" <${process.env.SMTP_USER}>`,
-    to: "info@webfoundersusa.com",
-    subject: "New Contact Form Submission",
-    html: `
-      <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Website:</strong> ${website || 'N/A'}</p>
-      <p><strong>Phone:</strong> ${contactNumber || 'N/A'}</p>
-      <p><strong>Service:</strong> ${service}</p>
-      <p><strong>Message:</strong><br>${message}</p>
-    `,
-  };
-
   try {
-    await transporter.sendMail(mailOptions);
-    return NextResponse.json({ success: true });
+    const prisma = await getPrisma();
+
+    const submission = await prisma.submission.create({
+      data: {
+        name,
+        email,
+        website,
+        contactNumber,
+        service,
+        message,
+      },
+    });
+
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPass = process.env.SMTP_PASS;
+
+    if (smtpUser && smtpPass) {
+      try {
+        const transporter = nodemailer.createTransport({
+          service: "gmail",
+          auth: {
+            user: smtpUser,
+            pass: smtpPass,
+          },
+        });
+
+        await transporter.sendMail({
+          from: `"Website Contact" <${smtpUser}>`,
+          to: "info@webfoundersusa.com",
+          subject: "New Contact Form Submission",
+          html: `
+            <h2>New Contact Form Submission</h2>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Website:</strong> ${website || "N/A"}</p>
+            <p><strong>Phone:</strong> ${contactNumber || "N/A"}</p>
+            <p><strong>Service:</strong> ${service}</p>
+            <p><strong>Message:</strong><br>${message}</p>
+          `,
+        });
+      } catch (emailError) {
+        console.error("Submission Email Error:", emailError);
+      }
+    }
+
+    return NextResponse.json({ success: true, id: submission.id });
   } catch (error) {
-    console.error("Email Error:", error);
-    return NextResponse.json({ error: "Failed to send message. Please try again." }, { status: 500 });
+    console.error("Submission Error:", error);
+    return NextResponse.json(
+      { error: "Failed to save message. Please try again." },
+      { status: 500 }
+    );
   }
 }

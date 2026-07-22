@@ -5,7 +5,12 @@ import { Button } from '../ui/button'
 import Title from '../ui/title'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
-import Swal from 'sweetalert2'
+import {
+    showSubmissionError,
+    showSubmissionLoading,
+    showSubmissionSuccess,
+    submitSubmission,
+} from '@/lib/submission'
 
 const ContactFormTwo = () => {
     const [name, setName] = useState('');
@@ -19,53 +24,18 @@ const ContactFormTwo = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-
-        Swal.fire({
-            title: 'Sending your request...',
-            text: 'Please wait while we deliver your message.',
-            allowOutsideClick: false,
-            didOpen: () => {
-                Swal.showLoading();
-            },
-            customClass: {
-                popup: 'rounded-3xl',
-                title: 'text-[#002768]',
-                confirmButton: 'rounded-full px-6 py-3',
-            },
-        });
+        showSubmissionLoading();
 
         try {
-            const res = await fetch('/api/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    website,
-                    contactNumber,
-                    service,
-                    message,
-                }),
+            await submitSubmission({
+                name,
+                email,
+                website,
+                contactNumber,
+                service,
+                message,
             });
-
-            if (!res.ok) {
-                throw new Error('Request failed');
-            }
-
-            Swal.close();
-            await Swal.fire({
-                icon: 'success',
-                title: 'Message sent!',
-                text: 'Thanks for reaching out. We will get back to you shortly.',
-                confirmButtonText: 'Great',
-                confirmButtonColor: '#002768',
-                background: '#ffffff',
-                color: '#1f2937',
-                customClass: {
-                    popup: 'rounded-3xl',
-                    confirmButton: 'rounded-full px-6 py-3',
-                },
-            });
+            await showSubmissionSuccess();
 
             setName('');
             setEmail('');
@@ -74,20 +44,7 @@ const ContactFormTwo = () => {
             setService('');
             setMessage('');
         } catch {
-            Swal.close();
-            await Swal.fire({
-                icon: 'error',
-                title: 'Something went wrong',
-                text: 'Your message could not be sent right now. Please try again.',
-                confirmButtonText: 'Try again',
-                confirmButtonColor: '#dc2626',
-                background: '#ffffff',
-                color: '#1f2937',
-                customClass: {
-                    popup: 'rounded-3xl',
-                    confirmButton: 'rounded-full px-6 py-3',
-                },
-            });
+            await showSubmissionError();
         } finally {
             setIsSubmitting(false);
         }
