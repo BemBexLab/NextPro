@@ -1,4 +1,3 @@
-import { DM_Sans, Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
 import Script from "next/script";
@@ -8,22 +7,6 @@ import FooterFour from "@/components/sections/footers/footerFour";
 import HeaderTwo from "@/components/sections/headers/headerTwo";
 const ClientEnhancements = dynamic(() => import("@/components/ClientEnhancements"), {
   ssr: false,
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--inter",
-});
-const plus_jakarta_sans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--plus-jakarta-sans",
-});
-const dm_sans = DM_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--dm-sans",
 });
 
 export const metadata = {
@@ -55,7 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </head>
       <body
-        className={`${inter.variable} ${plus_jakarta_sans.variable} ${dm_sans.variable}`}
+        className="font-sans"
         suppressHydrationWarning={true}
       >
         <noscript>

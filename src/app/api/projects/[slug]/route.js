@@ -3,10 +3,21 @@ export const revalidate = 900;
 
 export async function GET(_, { params }
 ) {
-  const wpRes = await fetch(
-    `https://olive-peafowl-546702.hostingersite.com/index.php/wp-json/wp/v2/projects?slug=${params.slug}`,
-    { next: { revalidate: 900 } }
-  );
+  let wpRes;
+
+  try {
+    wpRes = await fetch(
+      `https://olive-peafowl-546702.hostingersite.com/index.php/wp-json/wp/v2/projects?slug=${params.slug}`,
+      { next: { revalidate: 900 } }
+    );
+  } catch {
+    return new Response("Not found", { status: 404 });
+  }
+
+  if (!wpRes.ok) {
+    return new Response("Not found", { status: 404 });
+  }
+
   const data = await wpRes.json();
 
   if (!data || data.length === 0) {

@@ -18,16 +18,12 @@ export async function generateStaticParams() {
     });
 
     if (!res.ok) {
-      console.error(
-        `Failed to fetch project slugs for static params: ${res.status} ${res.statusText}`
-      );
       return [];
     }
 
     const posts = await res.json();
     return posts.map((post) => ({ slug: post.slug }));
-  } catch (error) {
-    console.error("Failed to collect static params for /projects/[slug]:", error);
+  } catch {
     return [];
   }
 }
@@ -39,8 +35,7 @@ export default async function ProjectPage({ params }) {
     res = await fetch(`${API_URL}${params.slug}`, {
       next: { revalidate: 60 },
     });
-  } catch (error) {
-    console.error(`Failed to fetch project "${params.slug}":`, error);
+  } catch {
     return notFound();
   }
 

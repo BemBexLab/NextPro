@@ -42,6 +42,23 @@ function buildEndpoint(params: Record<string, string>) {
   return `${base}${separator}${new URLSearchParams(params).toString()}`;
 }
 
+async function safeFetchJson<T>(
+  url: string,
+  init?: RequestInit & { next?: { revalidate?: number } }
+): Promise<T | null> {
+  try {
+    const response = await fetch(url, init);
+
+    if (!response.ok) {
+      return null;
+    }
+
+    return (await response.json()) as T;
+  } catch {
+    return null;
+  }
+}
+
 export const getPostBySlug = cache(
   async (slug: string): Promise<WPPost | null> => {
     const posts = await getAllWpPosts();
@@ -59,15 +76,9 @@ export const getAllWpPosts = cache(async (): Promise<WPPost[]> => {
       page: String(page),
       _embed: "",
     });
-    const res = await fetch(endpoint, {
+    const batch = await safeFetchJson<WPPost[]>(endpoint, {
       next: { revalidate: 900 },
     });
-
-    if (!res.ok) {
-      break;
-    }
-
-    const batch = (await res.json()) as WPPost[];
     if (!Array.isArray(batch) || batch.length === 0) {
       break;
     }

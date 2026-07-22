@@ -47,6 +47,9 @@ html {
 
     --radius: 20px;
     --text-color: #000000;
+    --inter: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --plus-jakarta-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --dm-sans: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
   }
 
   .dark {
