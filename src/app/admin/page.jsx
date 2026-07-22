@@ -12,10 +12,17 @@ import {
   Users,
 } from "lucide-react";
 
-function formatDateTime(value) {
-  if (!value) return "N/A";
+function formatDateParts(value) {
+  if (!value) {
+    return { date: "N/A", time: "" };
+  }
 
-  return new Date(value).toLocaleString();
+  const date = new Date(value);
+
+  return {
+    date: date.toLocaleDateString(),
+    time: date.toLocaleTimeString(),
+  };
 }
 
 function formatDateOnly(value) {
@@ -26,6 +33,15 @@ function formatDateOnly(value) {
     month: "short",
     day: "numeric",
   });
+}
+
+function splitServices(value) {
+  if (!value) return [];
+
+  return value
+    .split(",")
+    .map((service) => service.trim())
+    .filter(Boolean);
 }
 
 export default function AdminDashboard() {
@@ -455,7 +471,17 @@ export default function AdminDashboard() {
               </div>
             ) : (
               <div className="overflow-x-auto">
-                <table className="min-w-[1080px] w-full text-left">
+                <table className="min-w-[1240px] w-full table-fixed text-left">
+                  <colgroup>
+                    <col className="w-[56px]" />
+                    <col className="w-[190px]" />
+                    <col className="w-[210px]" />
+                    <col className="w-[130px]" />
+                    <col className="w-[140px]" />
+                    <col className="w-[240px]" />
+                    <col className="w-[220px]" />
+                    <col className="w-[150px]" />
+                  </colgroup>
                   <thead className="bg-slate-50 text-xs uppercase tracking-[0.16em] text-slate-500">
                     <tr>
                       <th className="px-5 py-4">
@@ -493,77 +519,96 @@ export default function AdminDashboard() {
                         </td>
                       </tr>
                     ) : (
-                      filteredSubmissions.map((submission, idx) => (
-                        <tr
-                          key={submission.id || idx}
-                          className="transition hover:bg-slate-50/80"
-                        >
-                          <td className="px-5 py-4 align-top">
-                            <input
-                              type="checkbox"
-                              checked={selected.includes(submission.id)}
-                              onChange={() => handleCheckbox(submission.id)}
-                              className="mt-1 h-4 w-4 rounded border-slate-300 text-[#002768] focus:ring-[#002768]"
-                            />
-                          </td>
-                          <td className="px-5 py-4 align-top">
-                            <div className="flex items-start gap-3">
-                              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#002768]/8 text-sm font-semibold text-[#002768]">
-                                {(submission.name || "?").slice(0, 1).toUpperCase()}
+                      filteredSubmissions.map((submission, idx) => {
+                        const submittedAt = formatDateParts(submission.createdAt);
+                        const services = splitServices(submission.service);
+
+                        return (
+                          <tr
+                            key={submission.id || idx}
+                            className="transition hover:bg-slate-50/80"
+                          >
+                            <td className="px-5 py-4 align-top">
+                              <input
+                                type="checkbox"
+                                checked={selected.includes(submission.id)}
+                                onChange={() => handleCheckbox(submission.id)}
+                                className="mt-1 h-4 w-4 rounded border-slate-300 text-[#002768] focus:ring-[#002768]"
+                              />
+                            </td>
+                            <td className="px-5 py-4 align-top">
+                              <div className="flex items-start gap-3">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#002768]/8 text-sm font-semibold text-[#002768]">
+                                  {(submission.name || "?").slice(0, 1).toUpperCase()}
+                                </div>
+                                <div>
+                                  <p className="font-medium text-slate-900">{submission.name}</p>
+                                  <p className="mt-1 text-xs text-slate-400">Lead record</p>
+                                </div>
                               </div>
-                              <div>
-                                <p className="font-medium text-slate-900">{submission.name}</p>
-                                <p className="mt-1 text-xs text-slate-400">Lead record</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td className="px-5 py-4 align-top">
-                            <div className="inline-flex items-center gap-2 text-slate-700">
-                              <Mail className="h-4 w-4 text-slate-400" />
-                              <span>{submission.email}</span>
-                            </div>
-                          </td>
-                          <td className="px-5 py-4 align-top">
-                            {submission.website ? (
-                              <a
-                                href={submission.website}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="text-[#002768] underline-offset-4 transition hover:underline"
-                              >
-                                {submission.website}
-                              </a>
-                            ) : (
-                              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-500">
-                                N/A
-                              </span>
-                            )}
-                          </td>
-                          <td className="px-5 py-4 align-top">
-                            {submission.contactNumber ? (
+                            </td>
+                            <td className="px-5 py-4 align-top">
                               <div className="inline-flex items-center gap-2 text-slate-700">
-                                <Phone className="h-4 w-4 text-slate-400" />
-                                <span>{submission.contactNumber}</span>
+                                <Mail className="h-4 w-4 text-slate-400" />
+                                <span className="break-all">{submission.email}</span>
                               </div>
-                            ) : (
-                              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-500">
-                                N/A
-                              </span>
-                            )}
-                          </td>
-                          <td className="px-5 py-4 align-top">
-                            <span className="inline-flex rounded-full bg-[#bf0b30]/10 px-3 py-1 text-xs font-medium text-[#bf0b30]">
-                              {submission.service}
-                            </span>
-                          </td>
-                          <td className="max-w-[340px] px-5 py-4 align-top text-slate-600">
-                            <p className="line-clamp-3 leading-6">{submission.message}</p>
-                          </td>
-                          <td className="px-5 py-4 align-top text-slate-500">
-                            {formatDateTime(submission.createdAt)}
-                          </td>
-                        </tr>
-                      ))
+                            </td>
+                            <td className="px-5 py-4 align-top">
+                              {submission.website ? (
+                                <a
+                                  href={submission.website}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="break-all text-[#002768] underline-offset-4 transition hover:underline"
+                                >
+                                  {submission.website}
+                                </a>
+                              ) : (
+                                <span className="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-500">
+                                  N/A
+                                </span>
+                              )}
+                            </td>
+                            <td className="px-5 py-4 align-top">
+                              {submission.contactNumber ? (
+                                <div className="inline-flex items-center gap-2 whitespace-nowrap text-slate-700">
+                                  <Phone className="h-4 w-4 text-slate-400" />
+                                  <span>{submission.contactNumber}</span>
+                                </div>
+                              ) : (
+                                <span className="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-500">
+                                  N/A
+                                </span>
+                              )}
+                            </td>
+                            <td className="px-5 py-4 align-top">
+                              <div className="flex flex-wrap gap-2">
+                                {services.map((service, serviceIndex) => (
+                                  <span
+                                    key={`${submission.id}-${serviceIndex}-${service}`}
+                                    className="rounded-full bg-[#bf0b30]/10 px-3 py-1 text-xs font-medium leading-5 text-[#bf0b30]"
+                                  >
+                                    {service}
+                                  </span>
+                                ))}
+                              </div>
+                            </td>
+                            <td className="px-5 py-4 align-top text-slate-600">
+                              <p className="break-words leading-6">{submission.message}</p>
+                            </td>
+                            <td className="px-5 py-4 align-top text-slate-500">
+                              <div className="space-y-1">
+                                <p className="font-medium text-slate-700">
+                                  {submittedAt.date}
+                                </p>
+                                <p className="text-xs text-slate-400">
+                                  {submittedAt.time}
+                                </p>
+                              </div>
+                            </td>
+                          </tr>
+                        );
+                      })
                     )}
                   </tbody>
                 </table>
