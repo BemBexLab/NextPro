@@ -2,6 +2,55 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
+const PROJECTS_API_BASE = "https://projects-api-bembexlab.vercel.app";
+const PROJECTS_API_URL = `${PROJECTS_API_BASE}/api/images/`;
+
+const CATEGORY_MAP = {
+  "LOGO DESIGN": ["logo"],
+  "WEB DEVELOPMENT": ["website development & design", "web development"],
+  SHOPIFY: ["website development & design", "web development"],
+  WORDPRESS: ["website development & design", "web development"],
+  BRANDING: ["branding"],
+  ILLUSTRATION: ["illustration"],
+  PRINT: ["print"],
+  "FIGMA DESIGN": ["website development & design", "web development"],
+};
+
+const WEB_DEVELOPMENT_TABS = [
+  "WEB DEVELOPMENT",
+  "SHOPIFY",
+  "WORDPRESS",
+  "FIGMA DESIGN",
+];
+
+const normalizeValue = (value) => (value || "").toLowerCase().trim();
+
+const matchesMappedCategory = (projectCategory, selectedCategory) => {
+  const normalizedProjectCategory = normalizeValue(projectCategory);
+  const mappedCategories = CATEGORY_MAP[selectedCategory] || [
+    normalizeValue(selectedCategory),
+  ];
+
+  return mappedCategories.includes(normalizedProjectCategory);
+};
+
+const resolveProjectImageUrl = (path) => {
+  if (!path) return "/images/servicebanner/portfolio-image.webp";
+  if (path.startsWith("http://") || path.startsWith("https://")) return path;
+  return `${PROJECTS_API_BASE}${path}`;
+};
+
+const getSegmentedPosts = (items, segmentIndex, segmentCount) => {
+  if (items.length === 0) return [];
+
+  const segmentSize = Math.ceil(items.length / segmentCount);
+  const start = segmentIndex * segmentSize;
+  const end = start + segmentSize;
+  const segment = items.slice(start, end);
+
+  return segment.length > 0 ? segment : items;
+};
+
 function SkeletonCard() {
   return (
     <div className="w-full h-[350px] bg-gradient-to-br from-[#10132b] to-[#1a1e38] rounded-2xl shadow-2xl border border-white/10 overflow-hidden flex flex-col animate-pulse relative">
@@ -25,17 +74,6 @@ const categories = [
   "FIGMA DESIGN",
 ];
 
-const logoSubcategories = [
-  "Hand Picked",
-  "Real Estate",
-  "IT/Tech",
-  "Cosmetics & Beauty",
-  "Consulting",
-  "Sports",
-  "Automotive",
-  "Health & Fitness",
-];
-
 const FIGMA_CARD_HEIGHT = 500; // px, adjust as needed
 
 const ProjectsTab = () => {
@@ -50,10 +88,10 @@ const ProjectsTab = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch("/api/posts");
+        const res = await fetch(PROJECTS_API_URL);
         const data = await res.json();
-        const projectPosts = data.filter(
-          (post) => post.acf?.project_image?.url && post.slug
+        const projectPosts = (data.projects || []).filter(
+          (post) => post.cover_image_url || post.images?.[0]?.image_url
         );
         setPosts(projectPosts);
       } catch (err) {
@@ -65,45 +103,49 @@ const ProjectsTab = () => {
     fetchProjects();
   }, []);
 
-  const filteredPosts = posts.filter((post) => {
-    const cat = post.acf?.catogary;
-    if (!cat) return false;
+  const logoSubcategories = [
+    ...new Set(
+      posts
+        .filter((post) => matchesMappedCategory(post.category, "LOGO DESIGN"))
+        .map((post) => post.subcategory?.trim())
+        .filter(Boolean)
+    ),
+  ];
 
-    const categoryMatch = Array.isArray(cat)
-      ? cat.some((c) => c.toLowerCase() === selectedCategory.toLowerCase())
-      : cat.toLowerCase() === selectedCategory.toLowerCase();
+  const webDevelopmentPosts = posts.filter((post) =>
+    matchesMappedCategory(post.category, "WEB DEVELOPMENT")
+  );
 
-    if (selectedCategory !== "LOGO DESIGN") return categoryMatch;
-
-    if (!selectedLogoSubcategory) return categoryMatch;
-
-    const subcat = post.acf?.logo_sub_catogary;
-    if (!subcat) return false;
-
-    if (Array.isArray(subcat)) {
-      return (
-        categoryMatch &&
-        subcat.some(
-          (sc) =>
-            sc.toLowerCase().replace(/\s+/g, "") ===
-            selectedLogoSubcategory.toLowerCase().replace(/\s+/g, "")
-        )
+  const filteredPosts = (() => {
+    if (WEB_DEVELOPMENT_TABS.includes(selectedCategory)) {
+      const segmentIndex = WEB_DEVELOPMENT_TABS.indexOf(selectedCategory);
+      return getSegmentedPosts(
+        webDevelopmentPosts,
+        segmentIndex,
+        WEB_DEVELOPMENT_TABS.length
       );
     }
-    return (
-      categoryMatch &&
-      subcat.toLowerCase().replace(/\s+/g, "") ===
-        selectedLogoSubcategory.toLowerCase().replace(/\s+/g, "")
-    );
-  });
+
+    return posts.filter((post) => {
+      const categoryMatch = matchesMappedCategory(post.category, selectedCategory);
+
+      if (selectedCategory !== "LOGO DESIGN") return categoryMatch;
+
+      if (!selectedLogoSubcategory || logoSubcategories.length === 0) {
+        return categoryMatch;
+      }
+
+      return (
+        categoryMatch &&
+        normalizeValue(post.subcategory).replace(/\s+/g, "") ===
+          normalizeValue(selectedLogoSubcategory).replace(/\s+/g, "")
+      );
+    });
+  })();
 
   // Helper to check if a post is a Figma card
   const isFigmaCard = (post) => {
-    const cat = post.acf?.catogary;
-    if (Array.isArray(cat)) {
-      return cat.some((c) => c.toLowerCase() === "figma design".toLowerCase());
-    }
-    return cat && cat.toLowerCase() === "figma design".toLowerCase();
+    return normalizeValue(post.category) === "figma design";
   };
 
   // On image load, calculate how much we can scroll (no black bg ever shows)
@@ -153,7 +195,7 @@ const ProjectsTab = () => {
       </div>
 
       {/* Logo Subcategory Filter Buttons */}
-      {selectedCategory === "LOGO DESIGN" && (
+      {selectedCategory === "LOGO DESIGN" && logoSubcategories.length > 0 && (
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {logoSubcategories.map((subcat) => (
             <span
@@ -189,29 +231,25 @@ const ProjectsTab = () => {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
           {filteredPosts.map((post) => {
-            const imageUrl =
-              post.acf?.project_image?.url || "/images/servicebanner/portfolio-image.webp";
+            const imageUrl = resolveProjectImageUrl(
+              post.cover_image_url || post.images?.[0]?.image_url
+            );
             const figma = isFigmaCard(post);
             const scrollAmount = scrollOffsets[post.id] || 0;
-
-            return (
-              <Link
-                key={post.id}
-                href={`/projects/${post.slug}`}
-                className={`group relative w-full rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-primary/60 bg-black ${
-                  figma ? `h-[${FIGMA_CARD_HEIGHT}px]` : "h-auto"
-                }`}
-                style={figma ? { height: `${FIGMA_CARD_HEIGHT}px` } : {}}
-                onMouseEnter={() => figma && setHoveredFigmaCard(post.id)}
-                onMouseLeave={() => figma && setHoveredFigmaCard(null)}
-              >
+            const projectTitle = post.alt || post.category || "Project";
+            const projectHref = post.href_url?.trim();
+            const cardClassName = `group relative w-full rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-primary/60 bg-black ${
+              figma ? `h-[${FIGMA_CARD_HEIGHT}px]` : "h-auto"
+            }`;
+            const cardContent = (
+              <>
                 <div className={`w-full ${figma ? "h-full overflow-hidden relative" : ""}`}>
                   <img
                     ref={(el) => {
                       if (figma) imgRefs.current[post.id] = el;
                     }}
                     src={imageUrl}
-                    alt={post.title.rendered}
+                    alt={projectTitle}
                     className={`w-full object-cover object-top transition-transform duration-[2500ms] ease-in-out`}
                     style={
                       figma
@@ -232,10 +270,37 @@ const ProjectsTab = () => {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <span className="text-white font-medium text-lg text-center">
-                    {post.title.rendered}
+                    {projectTitle}
                   </span>
                 </div>
-              </Link>
+              </>
+            );
+
+            if (projectHref) {
+              return (
+                <Link
+                  key={post.id}
+                  href={projectHref}
+                  className={cardClassName}
+                  style={figma ? { height: `${FIGMA_CARD_HEIGHT}px` } : {}}
+                  onMouseEnter={() => figma && setHoveredFigmaCard(post.id)}
+                  onMouseLeave={() => figma && setHoveredFigmaCard(null)}
+                >
+                  {cardContent}
+                </Link>
+              );
+            }
+
+            return (
+              <div
+                key={post.id}
+                className={cardClassName}
+                style={figma ? { height: `${FIGMA_CARD_HEIGHT}px` } : {}}
+                onMouseEnter={() => figma && setHoveredFigmaCard(post.id)}
+                onMouseLeave={() => figma && setHoveredFigmaCard(null)}
+              >
+                {cardContent}
+              </div>
             );
           })}
         </div>

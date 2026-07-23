@@ -6,6 +6,14 @@ import { Button } from '../ui/button'
 import SlideUp from '../animations/slideUp'
 
 const DRAG_THRESHOLD = 30;
+const PROJECTS_API_BASE = "https://projects-api-bembexlab.vercel.app";
+const PROJECTS_API_URL = `${PROJECTS_API_BASE}/api/images/`;
+
+const resolveProjectImageUrl = (path) => {
+    if (!path) return "/images/servicebanner/portfolio-image.webp";
+    if (path.startsWith("http://") || path.startsWith("https://")) return path;
+    return `${PROJECTS_API_BASE}${path}`;
+};
 
 const GalleryCarousel = () => {
     const [projects, setProjects] = useState([]);
@@ -24,17 +32,14 @@ const GalleryCarousel = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const res = await fetch("/api/posts");
+                const res = await fetch(PROJECTS_API_URL);
                 const data = await res.json();
-                const filtered = data.filter((project) => {
-                    const hasImage = project.acf?.project_image?.url;
+                const filtered = (data.projects || []).filter((project) => {
+                    const hasImage = project.cover_image_url || project.images?.[0]?.image_url;
+                    const category = project.category?.toLowerCase() || "";
                     const isWebDev =
-                        project.acf?.catogary &&
-                        (Array.isArray(project.acf.catogary)
-                            ? project.acf.catogary.some(
-                                (cat) => cat.toLowerCase() === "web development"
-                            )
-                            : project.acf.catogary.toLowerCase() === "web development");
+                        category.includes("website development") ||
+                        category.includes("web development");
                     return hasImage && isWebDev;
                 });
                 setProjects(filtered);
@@ -55,7 +60,6 @@ const GalleryCarousel = () => {
     // 3. Triple your projects for infinite effect
     const tripleProjects = [...projects, ...projects, ...projects];
     const projectsCount = projects.length;
-    const totalProjects = tripleProjects.length;
 
     // 4. Auto-play
     useEffect(() => {
@@ -202,10 +206,11 @@ const GalleryCarousel = () => {
                 className="flex gap-6 overflow-x-hidden scrollbar-hide snap-x snap-mandatory py-4 px-2 cursor-grab active:cursor-grabbing select-none"
             >
                 {tripleProjects.map((project, index) => {
-                    const imageUrl =
-                        project.acf?.project_image?.url || "/images/servicebanner/portfolio-image.webp";
-                    // Use real index within current projects set for itemsRef
-                    const actualIndex = index % projectsCount;
+                    const imageUrl = resolveProjectImageUrl(
+                        project.cover_image_url || project.images?.[0]?.image_url
+                    );
+                    const projectTitle = project.alt || project.category || "Project";
+                    const projectHref = project.href_url || undefined;
                     // Only use refs for items in the middle set
                     const refProp = (index >= projectsCount && index < projectsCount * 2)
                         ? (el) => { itemsRef.current[index] = el; }
@@ -214,7 +219,7 @@ const GalleryCarousel = () => {
                     return (
                         <a
                             key={`${project.id}-${index}`}
-                            href={`/projects/${project.slug}`}
+                            href={projectHref}
                             ref={refProp}
                             className={`
                                 relative
@@ -231,12 +236,12 @@ const GalleryCarousel = () => {
                         >
                             <img
                                 src={imageUrl}
-                                alt={project.title.rendered}
+                                alt={projectTitle}
                                 className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                 <span className="text-white font-medium text-lg">
-                                    {project.title.rendered}
+                                    {projectTitle}
                                 </span>
                             </div>
                         </a>
