@@ -20,7 +20,7 @@ const ZoomIn = ({ children, id = 1 }) => {
     return (
         <motion.div
             variants={zoomInVariants}
-            initial="offscreen"
+            initial={false}
             whileInView="onscreen"
             viewport={{ once: true, amount: 0 }}
         >

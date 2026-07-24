@@ -39,14 +39,14 @@ const ServicesSection = () => {
         {/* Header */}
         <motion.div
           className="text-center mb-12 md:mb-20"
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, margin: "-100px" }}
         >
           <motion.p
             className="text-[#FF3C1B] font-semibold mb-2 md:mb-3 text-sm md:text-base"
-            initial={{ opacity: 0 }}
+            initial={false}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
@@ -54,7 +54,7 @@ const ServicesSection = () => {
           </motion.p>
           <motion.h2
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"
-            initial={{ opacity: 0, y: 10 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
@@ -76,7 +76,7 @@ const ServicesSection = () => {
             <motion.div
               key={i}
               className="group relative rounded-[30px] bg-[#072d7f] backdrop-blur-[33px] p-6 md:p-8 flex flex-col justify-between border border-transparent transition-all duration-300 hover:border-[#072d7f] cursor-pointer"
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -151,7 +151,7 @@ const ServicesSection = () => {
               <motion.div
                 key="seo-extra"
                 className="group relative rounded-[30px] bg-[#072d7f] backdrop-blur-[33px] p-6 md:p-8 flex flex-col justify-between border border-transparent transition-all duration-300 hover:border-[#072d7f] cursor-pointer"
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.6 }}
                 viewport={{ once: true, margin: "-50px" }}

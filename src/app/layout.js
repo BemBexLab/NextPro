@@ -26,8 +26,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <head>
-        <script
+      <head />
+      <body
+        className="font-sans"
+        suppressHydrationWarning={true}
+      >
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -36,11 +42,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5QKPP9FB');`,
           }}
         />
-      </head>
-      <body
-        className="font-sans"
-        suppressHydrationWarning={true}
-      >
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5QKPP9FB"

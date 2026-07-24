@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from 'react';
 import Link from 'next/link';
 import FaqJsonLd from '@/components/seo/FaqJsonLd';
 
@@ -53,12 +50,6 @@ export default function FAQSection() {
     }
   ];
 
-  const [openFaq, setOpenFaq] = useState(null);
-
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
-
   return (
     <section className="py-16 md:py-24 px-4 max-w-6xl mx-auto">
       <FaqJsonLd faqs={faqs} />
@@ -68,16 +59,15 @@ export default function FAQSection() {
 
       <div className="space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
-            <button
-              className="flex justify-between items-center w-full p-5 text-left bg-white hover:bg-gray-50 transition-colors"
-              onClick={() => toggleFaq(index)}
-              aria-expanded={openFaq === index}
-            >
+          <details
+            key={index}
+            className="group border border-gray-200 rounded-xl overflow-hidden bg-white"
+            open={index === 0}
+          >
+            <summary className="flex cursor-pointer list-none justify-between items-center gap-4 p-5 text-left hover:bg-gray-50 transition-colors">
               <span className="font-semibold text-lg">{faq.question}</span>
               <svg
-                className={`transform transition-transform duration-200 ${openFaq === index ? 'rotate-180' : ''
-                  }`}
+                className="shrink-0 transform transition-transform duration-200 group-open:rotate-180"
                 width={20}
                 height={20}
                 fill="none"
@@ -87,13 +77,11 @@ export default function FAQSection() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
-            </button>
-            {openFaq === index && (
-              <div className="p-5 pt-3 border-t border-gray-200 bg-white">
-                <p className="text-gray-700">{faq.answer}</p>
-              </div>
-            )}
-          </div>
+            </summary>
+            <div className="p-5 pt-3 border-t border-gray-200 bg-white">
+              <div className="text-gray-700">{faq.answer}</div>
+            </div>
+          </details>
         ))}
       </div>
 

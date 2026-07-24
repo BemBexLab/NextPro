@@ -1,15 +1,6 @@
-"use client";
-
-import React from "react";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 
-const ServiceFAQs = () => {
-  const [openIndex, setOpenIndex] = React.useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex((prev) => (prev === index ? null : index));
-  };
-
+export default function ServiceFAQs() {
   const faqs = [
     {
       question: "Which industries do you serve?",
@@ -116,9 +107,9 @@ const ServiceFAQs = () => {
       question: "Do you offer services for small businesses?",
       answer: (
         <>
-          That's right! Our <strong>small business seo services</strong> and{" "}
-          <strong>affordable local seo service</strong> are all about providing
-          you with effective solutions.
+          That&apos;s right! Our <strong>small business seo services</strong> and{" "}
+          <strong>affordable local seo service</strong> are all about providing you
+          with effective solutions.
         </>
       ),
     },
@@ -126,7 +117,7 @@ const ServiceFAQs = () => {
       question: "Can you optimize Shopify, WordPress, or WooCommerce websites?",
       answer: (
         <>
-          Surely! Each platform's SEO services are personalized for Shopify,{" "}
+          Surely! Each platform&apos;s SEO services are personalized for Shopify,{" "}
           <a
             href="/service/seo-services/wordpress-seo/"
             className="text-blue-800 hover:underline"
@@ -160,79 +151,49 @@ const ServiceFAQs = () => {
         "Yes, the support that we offer to the agencies and partners comes in the form of white label SEO services, private label SEO services, and SEO consulting services for seamless collaboration with the agencies.",
     },
   ];
+
   return (
-    <section className="w-full mt-[130px] flex flex-col items-center justify-center py-16 px-4">
+    <section className="mt-[130px] flex w-full flex-col items-center justify-center px-4 py-16">
       <FaqJsonLd faqs={faqs} />
       <div className="w-full max-w-5xl">
         <div className="mb-10">
-          <h2 className="text-4xl flex justify-center font-medium text-[#0749A7] text-center md:text-start mb-4">
+          <h2 className="mb-4 flex justify-center text-center text-4xl font-medium text-[#0749A7] md:text-start">
             Your SEO Questions Answered
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
           {faqs.map((faq, index) => (
-            <div
+            <details
               key={index}
-              onClick={() => toggleFAQ(index)}
-              className={`bg-slate-50 p-3.5 rounded-lg cursor-pointer transition-all duration-300 border border-slate-200 hover:bg-slate-100 ${openIndex === index ? "row-span-2" : ""}`}
+              className="group rounded-lg border border-slate-200 bg-slate-50 p-3.5"
+              open={index === 0}
             >
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-neutral-800">
-                  {faq.question}
-                </span>
-                <div
-                  className={`text-slate-400 p-1 rounded transition-colors ${openIndex === index ? "bg-slate-200 text-slate-500" : "hover:bg-slate-300 hover:text-slate-500"}`}
-                >
-                  {openIndex === index ? (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-minus"
-                    >
-                      <path d="M5 12h14" />
-                    </svg>
-                  ) : (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-plus"
-                    >
-                      <path d="M5 12h14" />
-                      <path d="M12 5v14" />
-                    </svg>
-                  )}
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+                <span className="text-sm font-medium text-neutral-800">{faq.question}</span>
+                <div className="rounded p-1 text-slate-400 transition-colors group-hover:bg-slate-200 group-hover:text-slate-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="transition-transform duration-200 group-open:rotate-45"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                  </svg>
                 </div>
-              </div>
-              <div
-                className={`grid transition-all duration-300 ease-in-out ${openIndex === index ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"}`}
-              >
-                <div className="overflow-hidden">
-                  <p className="text-sm text-neutral-600 leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </div>
-            </div>
+              </summary>
+              <div className="mt-4 text-sm leading-relaxed text-neutral-600">{faq.answer}</div>
+            </details>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default ServiceFAQs;
+}

@@ -22,7 +22,7 @@ const SlideRight = ({ children, id = 1 }) => {
     return (
         <motion.div
             variants={slideRightVariants}
-            initial="offscreen"
+            initial={false}
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.1 }}
         >

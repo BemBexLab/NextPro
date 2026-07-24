@@ -1,7 +1,3 @@
-"use client";
-
-import React, { useState } from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { IoCall } from "react-icons/io5";
@@ -9,22 +5,41 @@ import { Button } from "@/components/ui/button";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { getServiceById, getSubCategory } from "../components/subservices";
 
-const SubServiceDetailPage = ({ params }) => {
+function toTitleCase(value) {
+  if (!value) return "";
+
+  return String(value)
+    .split(" ")
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+}
+
+function formatHtml(value) {
+  return {
+    __html: (value || "").toString().replace(/\n/g, "<br/>"),
+  };
+}
+
+function renderRichBlock(content, key) {
+  if (typeof content === "string" || content == null) {
+    return <p key={key} dangerouslySetInnerHTML={formatHtml(content)} />;
+  }
+
+  return <div key={key}>{content}</div>;
+}
+
+export default function SubServiceDetailPage({ params }) {
   const { id, sub } = params;
   const serviceId = id || "seo-services";
   const parent = getServiceById(serviceId);
   const service = getSubCategory(serviceId, sub);
-  const [activeTab, setActiveTab] = useState(
-    service?.tab?.steps?.[0]?.id || null,
-  );
-  const [mobileOpenStep, setMobileOpenStep] = useState(null);
-  const [openFaq, setOpenFaq] = useState(null);
 
   if (!parent || !service) {
     return (
       <div className="py-24 text-center">
         <h2 className="text-2xl font-bold">Page not found</h2>
-        <p className="mt-4">We couldn't find the page you're looking for.</p>
+        <p className="mt-4">We couldn&apos;t find the page you&apos;re looking for.</p>
         <div className="mt-6">
           <Link href="/service" className="text-[#072d7f] underline">
             Back to Services
@@ -34,55 +49,23 @@ const SubServiceDetailPage = ({ params }) => {
     );
   }
 
-  const handleStepAccordion = (id) => {
-    setMobileOpenStep(mobileOpenStep === id ? null : id);
-  };
-
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
-
-  const toTitleCase = (str) => {
-    if (!str) return "";
-    return String(str)
-      .split(" ")
-      .filter(Boolean)
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(" ");
-  };
-
-  const formatHtml = (s) => ({
-    __html: (s || "").toString().replace(/\n/g, "<br/>"),
-  });
-
-  const renderRichParagraph = (content, key) =>
-    typeof content === "string" || content == null ? (
-      <p key={key} dangerouslySetInnerHTML={formatHtml(content)} />
-    ) : React.isValidElement(content) && content.type === React.Fragment ? (
-      <p key={key}>{content}</p>
-    ) : (
-      <React.Fragment key={key}>{content}</React.Fragment>
-    );
-
   return (
     <div className="bg-white text-gray-900">
       <FaqJsonLd faqs={service.faqs || []} />
-      <section className="py-16 md:py-24 bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] text-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight max-w-3xl mx-auto">
-            <span className="bg-gradient-to-r from-[#ffb199] to-white text-transparent bg-clip-text">
+
+      <section className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] py-16 text-white md:py-24">
+        <div className="mx-auto max-w-7xl px-4 text-center">
+          <h1 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+            <span className="bg-gradient-to-r from-[#ffb199] to-white bg-clip-text text-transparent">
               {service.title}
             </span>
           </h1>
-          {/* Breadcrumbs */}
-          <div className="max-w-7xl mx-auto px-4 pt-6">
+
+          <div className="mx-auto max-w-7xl px-4 pt-6">
             <nav aria-label="Breadcrumb">
-              <ol className="flex items-center justify-center gap-2 text-sm text-gray-600">
+              <ol className="flex items-center justify-center gap-2 text-sm text-gray-200">
                 <li>
-                  <Link
-                    href="/"
-                    className="text-white hover:text-[#072d7f] transition-colors"
-                  >
+                  <Link href="/" className="text-white transition-colors hover:text-[#d7e6ff]">
                     Home
                   </Link>
                 </li>
@@ -90,7 +73,7 @@ const SubServiceDetailPage = ({ params }) => {
                 <li>
                   <Link
                     href="/service"
-                    className="text-white hover:text-[#072d7f] transition-colors"
+                    className="text-white transition-colors hover:text-[#d7e6ff]"
                   >
                     Service
                   </Link>
@@ -99,29 +82,25 @@ const SubServiceDetailPage = ({ params }) => {
                 <li>
                   <Link
                     href={`/service/${serviceId}`}
-                    className="text-white hover:text-[#072d7f] transition-colors"
+                    className="text-white transition-colors hover:text-[#d7e6ff]"
                   >
                     {toTitleCase(parent.title || serviceId)}
                   </Link>
                 </li>
                 <li aria-hidden="true">{">"}</li>
-                <li className="font-medium text-[#072d7f]">
-                  {toTitleCase(service.title || sub)}
-                </li>
+                <li className="font-medium text-white">{toTitleCase(service.title || sub)}</li>
               </ol>
             </nav>
           </div>
-          {/* <p className="mt-6 md:mt-8 max-w-3xl mx-auto text-white/90 text-base md:text-lg">
-            {`Service | ${toTitleCase(parent.title) || "Unknown"} | ${toTitleCase(service.title) || "Unknown"}`}
-          </p> */}
+
           <div className="mt-8 flex items-center justify-center gap-5">
             <a
-              href={`tel:+14704707392`}
-              className="flex items-center gap-3 group"
+              href="tel:+14704707392"
+              className="group flex items-center gap-3"
               aria-label="Call us"
             >
-              <div className="rounded-full bg-primary border-primary w-14 h-14 flex items-center justify-center animate-shake-pause group-hover:bg-primary/80 transition">
-                <div className="text-white flex items-center justify-center">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border-primary bg-primary transition group-hover:bg-primary/80">
+                <div className="flex items-center justify-center text-white">
                   <IoCall size={30} />
                 </div>
               </div>
@@ -131,7 +110,7 @@ const SubServiceDetailPage = ({ params }) => {
             </a>
 
             <Button asChild size="xl">
-              <Link className="text-foreground" href={"/contact-us"}>
+              <Link className="text-foreground" href="/contact-us">
                 Contact Us
               </Link>
             </Button>
@@ -139,23 +118,23 @@ const SubServiceDetailPage = ({ params }) => {
         </div>
       </section>
 
-      {/* Intro Paragraph */}
-      <section className="py-12 md:py-16 px-4 max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-8">
-          <div className="flex-1 text-base md:text-lg leading-relaxed text-gray-700 space-y-4">
-            {(service.introParagraphs || []).map((p, idx) =>
-              renderRichParagraph(p, idx),
+      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+        <div className="flex flex-col gap-8 md:flex-row">
+          <div className="flex-1 space-y-4 text-base leading-relaxed text-gray-700 md:text-lg">
+            {(service.introParagraphs || []).map((paragraph, index) =>
+              renderRichBlock(paragraph, index),
             )}
             {id === "custom-website-design" && (
               <Link
                 href={`/service/${serviceId}`}
-                className="border p-2 rounded-lg border-blue-800 bg-blue-800 text-white hover:bg-white hover:text-blue-800 transition-colors inline-block mt-4"
+                className="mt-4 inline-block rounded-lg border border-blue-800 bg-blue-800 p-2 text-white transition-colors hover:bg-white hover:text-blue-800"
               >
                 Custom Website Design Services
               </Link>
             )}
           </div>
-          <div className="flex-1 flex justify-center">
+
+          <div className="flex flex-1 justify-center">
             <div className="w-full" style={{ aspectRatio: "1 / 1" }}>
               {service.hero?.image ? (
                 <Image
@@ -163,148 +142,73 @@ const SubServiceDetailPage = ({ params }) => {
                   alt={service.title}
                   width={300}
                   height={300}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="h-full w-full rounded-lg object-cover"
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center rounded-lg bg-gray-100" />
+                <div className="flex h-full w-full items-center justify-center rounded-lg bg-gray-100" />
               )}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Tab Section */}
-      <section className="py-12 md:py-20 bg-[#F4F6FF]">
-        <div className="max-w-[1350px] mx-auto px-[15px]">
-          <div className="flex flex-col items-center mb-12">
-            <span className="px-4 py-2 bg-white text-[#072d7f] font-semibold rounded-full text-sm">
-              Our Strategy
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold max-w-[800px] pt-4 text-center">
-              <span className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] text-transparent bg-clip-text">
-                {service.tab?.title}
+      {service.tab?.steps?.length > 0 && (
+        <section className="bg-[#F4F6FF] py-12 md:py-20">
+          <div className="mx-auto max-w-[1350px] px-[15px]">
+            <div className="mb-12 flex flex-col items-center">
+              <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#072d7f]">
+                Our Strategy
               </span>
-            </h2>
-          </div>
-
-          <div className="hidden md:block">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 w-full mb-10">
-              {(service.tab?.steps || []).map(({ id, heading, tab_name }) => (
-                <button
-                  key={id}
-                  onClick={() => setActiveTab(id)}
-                  className={`flex items-center justify-center px-3 py-4 rounded-[10px] min-h-[56px] text-center font-semibold text-sm md:text-base transition-colors ${activeTab === id ? "bg-[#072d7f] text-white" : "bg-white text-[#072d7f]"}`}
-                >
-                  <span className="text-inherit">{tab_name}</span>
-                </button>
-              ))}
+              <h2 className="max-w-[800px] pt-4 text-center text-3xl font-bold md:text-4xl">
+                <span className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] bg-clip-text text-transparent">
+                  {service.tab.title}
+                </span>
+              </h2>
             </div>
 
-            {(service.tab?.steps || []).map(
-              ({ id, heading, description }) =>
-                activeTab === id && (
-                  <div key={id} className="pt-6 md:pt-10">
-                    <div className="bg-white py-8 px-6 rounded-[30px] max-w-4xl mx-auto shadow-sm">
-                      <h3 className="text-2xl md:text-3xl font-bold text-center mb-5">
-                        {heading}
-                      </h3>
-                      <p
-                        className="text-gray-700 text-base md:text-lg text-center leading-relaxed"
-                        dangerouslySetInnerHTML={formatHtml(description)}
-                      />
-                    </div>
-                  </div>
-                ),
-            )}
-          </div>
-
-          <div className="block md:hidden pt-8">
-            {(service.tab?.steps || []).map(
-              ({ id, tab_name, heading, description }) => (
-                <div
-                  key={id}
-                  className="mb-4 rounded-xl overflow-hidden shadow-sm bg-white border border-gray-200"
+            <div className="grid gap-5 md:gap-6">
+              {service.tab.steps.map(({ id: stepId, tab_name, heading, description }, index) => (
+                <article
+                  key={stepId}
+                  className="rounded-[24px] border border-[#dbe4ff] bg-white px-6 py-6 shadow-sm md:px-8 md:py-8"
                 >
-                  <button
-                    className="flex items-start w-full p-5 text-left focus:outline-none"
-                    onClick={() => handleStepAccordion(id)}
-                    aria-expanded={mobileOpenStep === id}
-                  >
-                    <span className="text-[#072d7f] mr-3 mt-1">●</span>
-                    <span className="font-semibold text-lg flex-1">
-                      {tab_name}
-                    </span>
-                    <svg
-                      className={`transform transition-transform duration-200 ml-2 mt-1 ${mobileOpenStep === id ? "rotate-180" : ""}`}
-                      width={18}
-                      height={18}
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
-                  {mobileOpenStep === id && (
-                    <div className="p-5 pt-0 border-t border-gray-200">
-                      <h3 className="text-xl font-bold mb-2">{heading}</h3>
-                      <p
-                        className="text-gray-700 py-3"
-                        dangerouslySetInnerHTML={formatHtml(description)}
-                      />
-                    </div>
-                  )}
-                </div>
-              ),
-            )}
+                  <span className="inline-flex rounded-full bg-[#F4F6FF] px-4 py-2 text-sm font-semibold text-[#072d7f]">
+                    Step {index + 1}: {tab_name}
+                  </span>
+                  <h3 className="mt-4 text-2xl font-bold text-[#072d7f] md:text-3xl">
+                    {heading}
+                  </h3>
+                  <p
+                    className="pt-5 text-base leading-relaxed text-gray-700 md:text-lg"
+                    dangerouslySetInnerHTML={formatHtml(description)}
+                  />
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      {/* Why Choose Section (optional) */}
-      {service.whyChoose && service.whyChoose.length > 0 && (
-        <section className="py-12 md:py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-12 md:mb-20"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <motion.p
-                className="text-[#FF3C1B] font-semibold mb-2 md:mb-3 text-sm md:text-base"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-              >
-                Why Choose
-              </motion.p>
-              <motion.h2
-                className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-              >
-                <span className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] text-transparent bg-clip-text">
+      {service.whyChoose?.length > 0 && (
+        <section className="bg-white py-12 md:py-16">
+          <div className="mx-auto max-w-7xl px-4">
+            <div className="mb-12 text-center md:mb-16">
+              <p className="mb-3 text-sm font-semibold text-[#FF3C1B] md:text-base">Why Choose</p>
+              <h2 className="text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
+                <span className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] bg-clip-text text-transparent">
                   Why Choose Our {service.title}
                 </span>
-              </motion.h2>
-            </motion.div>
+              </h2>
+            </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {service.whyChoose.map((item, idx) => (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {service.whyChoose.map((item, index) => (
                 <div
-                  key={idx}
-                  className="group bg-[#F4F6FF] p-6 rounded-[20px] border border-transparent shadow-lg hover:shadow-xl transition"
+                  key={index}
+                  className="rounded-[20px] border border-transparent bg-[#F4F6FF] p-6 shadow-lg"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center text-[#072d7f]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full text-[#072d7f]">
                       <svg
                         width="18"
                         height="18"
@@ -322,11 +226,9 @@ const SubServiceDetailPage = ({ params }) => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-[#072d7f]">
-                        {item.title}
-                      </h3>
+                      <h3 className="text-lg font-semibold text-[#072d7f]">{item.title}</h3>
                       <p
-                        className="text-gray-700 mt-2 text-sm leading-relaxed"
+                        className="mt-2 text-sm leading-relaxed text-gray-700"
                         dangerouslySetInnerHTML={formatHtml(item.desc)}
                       />
                     </div>
@@ -338,28 +240,22 @@ const SubServiceDetailPage = ({ params }) => {
         </section>
       )}
 
-      {/* FAQs Section */}
-      <section className="py-16 md:py-24 px-4 max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Frequently Asked Questions
-          </h2>
+      <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-bold md:text-4xl">Frequently Asked Questions</h2>
         </div>
 
         <div className="space-y-4">
           {(service.faqs || []).map((faq, index) => (
-            <div
+            <details
               key={index}
-              className="border border-gray-200 rounded-xl overflow-hidden"
+              className="group overflow-hidden rounded-xl border border-gray-200 bg-white"
+              open={index === 0}
             >
-              <button
-                className="flex justify-between items-center w-full p-5 text-left bg-white hover:bg-gray-50 transition-colors"
-                onClick={() => toggleFaq(index)}
-                aria-expanded={openFaq === index}
-              >
-                <span className="font-semibold text-lg">{faq.question}</span>
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 bg-white p-5 text-left transition-colors hover:bg-gray-50">
+                <span className="text-lg font-semibold">{faq.question}</span>
                 <svg
-                  className={`transform transition-transform duration-200 ${openFaq === index ? "rotate-180" : ""}`}
+                  className="shrink-0 transform transition-transform duration-200 group-open:rotate-180"
                   width={20}
                   height={20}
                   fill="none"
@@ -373,23 +269,25 @@ const SubServiceDetailPage = ({ params }) => {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
-              </button>
-              {openFaq === index && (
-                <div className="p-5 pt-3 border-t border-gray-200 bg-white">
+              </summary>
+              <div className="border-t border-gray-200 bg-white p-5 pt-3">
+                {typeof faq.answer === "string" ? (
                   <p
                     className="text-gray-700"
                     dangerouslySetInnerHTML={formatHtml(faq.answer)}
                   />
-                </div>
-              )}
-            </div>
+                ) : (
+                  <div className="text-gray-700">{faq.answer}</div>
+                )}
+              </div>
+            </details>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="mt-12 text-center">
           <Link
             href="/contact-us"
-            className="inline-block px-6 py-3 border-2 border-[#072d7f] text-[#072d7f] font-semibold rounded-lg hover:bg-[#072d7f] hover:text-white transition-colors"
+            className="inline-block rounded-lg border-2 border-[#072d7f] px-6 py-3 font-semibold text-[#072d7f] transition-colors hover:bg-[#072d7f] hover:text-white"
           >
             Start Your Journey
           </Link>
@@ -397,6 +295,4 @@ const SubServiceDetailPage = ({ params }) => {
       </section>
     </div>
   );
-};
-
-export default SubServiceDetailPage;
+}

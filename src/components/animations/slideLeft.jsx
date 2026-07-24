@@ -21,7 +21,7 @@ const SlideLeft = ({ children, id }) => {
     return (
         <motion.div
             variants={slideLeftVariants}
-            initial="offscreen"
+            initial={false}
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.1 }}
         >
