@@ -34,6 +34,9 @@ export default function HeroFour() {
                 width={600}
                 height={600}
                 alt="mobius-strip-4"
+                loading="eager"
+                fetchPriority="high"
+                sizes="(min-width: 1280px) 600px, (min-width: 1024px) 50vw, 100vw"
                 style={{ width: "100%" }}
                 className="max-h-[420px] object-cover lg:max-h-full"
               />

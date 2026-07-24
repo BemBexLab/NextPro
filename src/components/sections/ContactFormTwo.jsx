@@ -108,7 +108,11 @@ const ContactFormTwo = () => {
                                 </div>
                             </div>
                             <div className="w-full relative mb-3">
+                                <label htmlFor="contact-form-service" className="sr-only">
+                                    Select a service
+                                </label>
                                 <select
+                                    id="contact-form-service"
                                     value={service}
                                     onChange={e => setService(e.target.value)}
                                     required

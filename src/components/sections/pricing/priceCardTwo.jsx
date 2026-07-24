@@ -236,7 +236,11 @@ const OrderDialog = () => {
               </div>
             </div>
             <div className="w-full mt-3 sm:mt-4">
+              <label htmlFor="price-order-service" className="sr-only">
+                Select a service
+              </label>
               <select
+                id="price-order-service"
                 className="bg-white border-2 border-gray-300 font-medium text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
                 value={service}
                 onChange={e => setService(e.target.value)}
@@ -261,8 +265,8 @@ const OrderDialog = () => {
               />
             </div>
             <div className='mt-4 flex items-start'>
-              <input type='checkbox' id='checkbox' className='w-4 h-4 mt-1' required />
-              <label htmlFor="checkbox" className='pl-3 w-[94%] font-medium text-sm sm:text-base'>
+              <input type='checkbox' id='price-order-consent' className='w-4 h-4 mt-1' required />
+              <label htmlFor="price-order-consent" className='pl-3 w-[94%] font-medium text-sm sm:text-base'>
                 By using this form you agree with the storage and handling of your data policies of WebFounders USA.
               </label>
             </div>

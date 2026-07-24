@@ -35,7 +35,7 @@ export default function CompaniesSlider() {
                 width={logo.width}
                 height={logo.height}
                 className="h-[36px] w-auto object-contain md:h-[54px]"
-                priority={idx < 4}
+                loading="lazy"
               />
             </div>
           ))}

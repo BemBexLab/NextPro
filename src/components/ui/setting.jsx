@@ -18,14 +18,22 @@ const Setting = () => {
         <div className='fixed z-30 bottom-7.5 left-[15px] bg-[#e5e8eb] dark:bg-[#2d343b] rounded-full py-1 px-1 flex flex-col gap-2 items-center'>
 
             {/* Call Icon */}
-            <Link href="tel:+14704707392" target="_blank">
+            <Link
+                href="tel:+14704707392"
+                target="_blank"
+                aria-label="Call Web Founders USA at +1 470-470-7392"
+            >
                 <div className='w-7 h-7 rounded-full flex justify-center items-center p-[5px] bg-background dark:text-muted-foreground cursor-pointer hover:bg-[#f0f4fa] transition'>
                     <FiPhone className='text-xl' />
                 </div>
             </Link>
 
             {/* Email Icon */}
-            <Link href="mailto:hello@webfounder.com" target="_blank">
+            <Link
+                href="mailto:hello@webfounder.com"
+                target="_blank"
+                aria-label="Email Web Founders USA"
+            >
                 <div className='w-7 h-7 rounded-full flex justify-center items-center p-[5px] bg-background dark:text-muted-foreground cursor-pointer hover:bg-[#f0f4fa] transition'>
                     <MdOutlineEmail className='text-xl' />
                 </div>
