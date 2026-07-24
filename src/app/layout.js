@@ -2,7 +2,6 @@ import "./globals.css";
 import dynamic from "next/dynamic";
 import Script from "next/script";
 import { ThemeProvider } from "@/contextApi/themeProvider";
-import CountryProvider from "@/contextApi/countryProvider";
 import FooterFour from "@/components/sections/footers/footerFour";
 import HeaderTwo from "@/components/sections/headers/headerTwo";
 const ClientEnhancements = dynamic(() => import("@/components/ClientEnhancements"), {
@@ -83,12 +82,10 @@ fbq('track', 'PageView');
           enableSystem
           disableTransitionOnChange
         >
-          <CountryProvider>
-            <HeaderTwo haveOvcanvsIcon={false} haveShadow={false} />
-            {children}
-            <FooterFour />
-            <ClientEnhancements />
-          </CountryProvider>
+          <HeaderTwo haveOvcanvsIcon={false} haveShadow={false} />
+          {children}
+          <FooterFour />
+          <ClientEnhancements />
         </ThemeProvider>
       </body>
     </html>

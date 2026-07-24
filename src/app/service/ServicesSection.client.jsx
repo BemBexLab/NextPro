@@ -1,33 +1,22 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { useState } from "react";
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
 import { services } from "@/data/services";
 
-const ServicesSection = () => {
-  const [clickedArrows, setClickedArrows] = useState([]);
-
-  const handleArrowClick = (index) => {
-    setClickedArrows((prev) => {
-      if (prev.includes(index)) return prev;
-      const next = [...prev, index];
-      setTimeout(() => {
-        setClickedArrows((innerPrev) => innerPrev.filter((i) => i !== index));
-      }, 2000);
-      return next;
-    });
+export default function ServicesSection() {
+  const seoService = services.find((service) => service.id === "seo-services") || {
+    id: "seo-services",
+    title: "SEO Services",
+    desc: "Professional SEO services including technical audits, on-page optimization, local SEO, and growth-driven strategies.",
+    icon: FaSearch,
   };
 
   return (
-    <section className="bg-white text-white px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <div className="max-w-7xl mx-auto">
-        {/* BreadCrumbs */}
+    <section className="bg-white px-4 py-16 text-white sm:px-6 lg:px-8 md:py-24">
+      <div className="mx-auto max-w-7xl">
         <nav aria-label="Breadcrumb" className="mb-8">
           <ol className="flex items-center gap-2 text-sm text-gray-600">
             <li>
-              <Link href="/" className="hover:text-[#072d7f] transition-colors">
+              <Link href="/" className="transition-colors hover:text-[#072d7f]">
                 Home
               </Link>
             </li>
@@ -36,171 +25,86 @@ const ServicesSection = () => {
           </ol>
         </nav>
 
-        {/* Header */}
-        <motion.div
-          className="text-center mb-12 md:mb-20"
-          initial={false}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <motion.p
-            className="text-[#FF3C1B] font-semibold mb-2 md:mb-3 text-sm md:text-base"
-            initial={false}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-          >
+        <div className="mb-12 text-center md:mb-20">
+          <p className="mb-2 text-sm font-semibold text-[#FF3C1B] md:mb-3 md:text-base">
             Services
-          </motion.p>
-          <motion.h2
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"
-            initial={false}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-          >
-            <span className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] text-transparent bg-clip-text">
-              Digital Services
-
-              That <br className="" />
-
-            </span>
-            <span className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] text-transparent bg-clip-text">
+          </p>
+          <h2 className="text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
+            <span className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] bg-clip-text text-transparent">
+              Digital Services That <br />
               Deliver Results
             </span>
-          </motion.h2>
-        </motion.div>
+          </h2>
+        </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {services.map((service, i) => (
-            <motion.div
-              key={i}
-              className="group relative rounded-[30px] bg-[#072d7f] backdrop-blur-[33px] p-6 md:p-8 flex flex-col justify-between border border-transparent transition-all duration-300 hover:border-[#072d7f] cursor-pointer"
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              viewport={{ once: true, margin: "-50px" }}
-            >
-              {/* Link Overlay */}
-              <Link href={`/service/${service.id}`}>
+        <div className="grid grid-cols-1 gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => {
+            const Icon = service.icon;
 
-                {/* Card Content */}
-                {/* <Link href={`/services/${service.id}`}> */}
-                <div className="relative z-20">
-                  {/* Icon */}
-                  <div className="w-14 h-14 md:w-16 md:h-16 mb-4 md:mb-6 p-2 flex items-center justify-center rounded-[20px] bg-[rgba(255,255,255,0.10)] backdrop-blur-[33.15px] transition-all duration-300 border border-transparent group-hover:border-[#DE2F04]">
-                    {(() => {
-                      const Icon = service.icon;
-                      return Icon ? (
-                        <Icon className="w-6 h-6 md:w-8 md:h-8 text-[#f84318]" />
-                      ) : (
-                        <img
-                          src={service.img}
-                          alt={service.title}
-                          className="w-6 h-6 md:w-8 md:h-8 object-contain"
-                        />
-                      );
-                    })()}
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
-                    <span className="bg-gradient-to-r from-[#ffb199] to-[white] text-transparent bg-clip-text">
-                      {service.title.split(" ")[0]}
-                    </span>{" "}
-                    {service.title.split(" ").slice(1).join(" ")}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-white text-xs md:text-sm leading-relaxed mb-4 md:mb-6">
-                    {service.desc}
-                  </p>
-
-                  {/* Arrow */}
-
-                  <div
-                    className="relative w-10 h-10 md:w-11 md:h-11 flex items-center justify-center rounded-[20px] bg-white backdrop-blur-[33.15px] overflow-hidden cursor-pointer"
-                    onClick={() => handleArrowClick(i)}
-                  >
-                    <div
-                      className="relative z-10 text-[#072d7f] text-lg font-bold"
-                      style={{
-                        transform: clickedArrows.includes(i)
-                          ? "rotate(360deg)"
-                          : "rotate(0deg)",
-                        transition: "transform 0.8s ease-in-out",
-                      }}
-                    >
-                      →
-                    </div>
-                  </div>
-
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-          {/* Additional SEO Services Card */}
-          {(() => {
-            const seoService = services.find((s) => s.id === "seo-services") || {
-              id: "seo-services",
-              title: "SEO Services",
-              desc: "Professional SEO services including technical audits, on-page optimization, local SEO, and growth-driven strategies.",
-            };
-            const seoIndex = services.length;
             return (
-              <motion.div
-                key="seo-extra"
-                className="group relative rounded-[30px] bg-[#072d7f] backdrop-blur-[33px] p-6 md:p-8 flex flex-col justify-between border border-transparent transition-all duration-300 hover:border-[#072d7f] cursor-pointer"
-                initial={false}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1, duration: 0.6 }}
-                viewport={{ once: true, margin: "-50px" }}
+              <Link
+                key={service.id}
+                href={`/service/${service.id}`}
+                className="group rounded-[30px] border border-transparent bg-[#072d7f] p-6 transition-all duration-300 hover:border-[#DE2F04] md:p-8"
               >
-                <Link href={`/service/${seoService.id}`}>
-                  <div className="relative z-20">
-                    <div className="w-14 h-14 md:w-16 md:h-16 mb-4 md:mb-6 p-2 flex items-center justify-center rounded-[20px] bg-[rgba(255,255,255,0.10)] backdrop-blur-[33.15px] transition-all duration-300 border border-transparent group-hover:border-[#DE2F04]">
-                      {(() => {
-                        const Icon = seoService.icon || FaSearch;
-                        return Icon ? (
-                          <Icon className="w-6 h-6 md:w-8 md:h-8 text-[#f84318]" />
-                        ) : null;
-                      })()}
-                    </div>
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-[20px] border border-transparent bg-[rgba(255,255,255,0.10)] transition-all duration-300 group-hover:border-[#DE2F04] md:mb-6 md:h-16 md:w-16">
+                  {Icon ? (
+                    <Icon className="h-6 w-6 text-[#f84318] md:h-8 md:w-8" />
+                  ) : (
+                    <img
+                      src={service.img}
+                      alt={service.title}
+                      className="h-6 w-6 object-contain md:h-8 md:w-8"
+                    />
+                  )}
+                </div>
 
-                    <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
-                      <span className="bg-gradient-to-r from-[#ffb199] to-[white] text-transparent bg-clip-text">
-                        {seoService.title.split(" ")[0]}
-                      </span>{" "}
-                      {seoService.title.split(" ").slice(1).join(" ")}
-                    </h3>
+                <h3 className="mb-2 text-lg font-semibold md:mb-3 md:text-xl">
+                  <span className="bg-gradient-to-r from-[#ffb199] to-white bg-clip-text text-transparent">
+                    {service.title.split(" ")[0]}
+                  </span>{" "}
+                  {service.title.split(" ").slice(1).join(" ")}
+                </h3>
 
-                    <p className="text-white text-xs md:text-sm leading-relaxed mb-4 md:mb-6">
-                      {seoService.desc}
-                    </p>
+                <p className="mb-4 text-xs leading-relaxed text-white md:mb-6 md:text-sm">
+                  {service.desc}
+                </p>
 
-                    <div
-                      className="relative w-10 h-10 md:w-11 md:h-11 flex items-center justify-center rounded-[20px] bg-white backdrop-blur-[33.15px] overflow-hidden cursor-pointer"
-                      onClick={() => handleArrowClick(seoIndex)}
-                    >
-                      <div
-                        className="relative z-10 text-[#072d7f] text-lg font-bold"
-                        style={{
-                          transform: clickedArrows.includes(seoIndex) ? "rotate(360deg)" : "rotate(0deg)",
-                          transition: "transform 0.8s ease-in-out",
-                        }}
-                      >
-                        →
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-[20px] bg-white text-lg font-bold text-[#072d7f] md:h-11 md:w-11">
+                  →
+                </span>
+              </Link>
             );
-          })()}
+          })}
+
+          <Link
+            href={`/service/${seoService.id}`}
+            className="group rounded-[30px] border border-transparent bg-[#072d7f] p-6 transition-all duration-300 hover:border-[#DE2F04] md:p-8"
+          >
+            <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-[20px] border border-transparent bg-[rgba(255,255,255,0.10)] transition-all duration-300 group-hover:border-[#DE2F04] md:mb-6 md:h-16 md:w-16">
+              {(() => {
+                const Icon = seoService.icon || FaSearch;
+                return <Icon className="h-6 w-6 text-[#f84318] md:h-8 md:w-8" />;
+              })()}
+            </div>
+
+            <h3 className="mb-2 text-lg font-semibold md:mb-3 md:text-xl">
+              <span className="bg-gradient-to-r from-[#ffb199] to-white bg-clip-text text-transparent">
+                {seoService.title.split(" ")[0]}
+              </span>{" "}
+              {seoService.title.split(" ").slice(1).join(" ")}
+            </h3>
+
+            <p className="mb-4 text-xs leading-relaxed text-white md:mb-6 md:text-sm">
+              {seoService.desc}
+            </p>
+
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-[20px] bg-white text-lg font-bold text-[#072d7f] md:h-11 md:w-11">
+              →
+            </span>
+          </Link>
         </div>
       </div>
     </section>
   );
-};
-
-export default ServicesSection;
+}

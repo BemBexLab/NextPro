@@ -1,33 +1,18 @@
 "use client"
-import React, { useContext } from 'react'
+import React from 'react'
 // import { useTheme } from 'next-themes'
 import Link from 'next/link'
-import { cn } from '@/lib/utils'
-import Image from 'next/image'
 
-import { BsMoonStars, BsQuestionLg } from 'react-icons/bs'
-import { IoSunnyOutline } from 'react-icons/io5'
-import { CiGlobe } from 'react-icons/ci'
+import { BsQuestionLg } from 'react-icons/bs'
 import { FiPhone } from 'react-icons/fi'
 import { MdOutlineEmail } from 'react-icons/md'
 import SocialIcons from './socialIcons'
 
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select"
-
-import { countriesList } from '@/lib/fackData/countriesList'
 import { Offcanvas, OffcanvasClose, OffcanvasContent, OffcanvasTrigger } from '@/components/ui/offcanvas'
-import { CountryContext } from '@/contextApi/countryProvider'
 
 
 const Setting = () => {
     // const { theme, setTheme } = useTheme()
-    const { selectCountry, setSelectCountry } = useContext(CountryContext)
 
     return (
         <div className='fixed z-30 bottom-7.5 left-[15px] bg-[#e5e8eb] dark:bg-[#2d343b] rounded-full py-1 px-1 flex flex-col gap-2 items-center'>

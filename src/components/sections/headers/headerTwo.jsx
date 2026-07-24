@@ -1,27 +1,19 @@
 "use client";
+
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { IoCall } from "react-icons/io5";
 
 import Logo from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
-import MobileMenu from "./mobileMenu";
-import HeaderShortInfo from "./headerShortInfo";
-import {
-  Offcanvas,
-  OffcanvasContent,
-  OffcanvasOverlay,
-  OffcanvasTrigger,
-  OffcanvasClose,
-} from "@/components/ui/offcanvas";
 import StickyHeader from "@/components/ui/stickyHeader";
 
-// ✅ Import real service data
-import { services as mainServices } from "@/data/services";
-import { services as seoServices } from "@/app/service/seo-services/components/subservices";
+const MobileMenu = dynamic(() => import("./mobileMenu"), {
+  ssr: false,
+});
 
-// ⚠️ Keep "lable" (not "label") to match MobileMenu expectations
 const navigationLinks = [
   { id: 1, path: "/", lable: "Home" },
   { id: 2, path: "/about-us", lable: "About Us" },
@@ -32,77 +24,129 @@ const navigationLinks = [
   { id: 7, path: "/blog", lable: "Blog" },
 ];
 
-const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
-  const pathname = usePathname();
-  const router = useRouter();
+function mapServiceLinks(services = []) {
+  return services.map((service) => ({
+    id: service.id,
+    title: service.title,
+    path: `/service/${service.id}`,
+  }));
+}
 
+function mapSeoLinks(services = []) {
+  const seoService = services.find((service) => service.id === "seo-services");
+  const subCategories = seoService?.sub_categories || [];
+
+  return subCategories.map((service) => ({
+    id: service.id,
+    title: service.title,
+    path: `/service/seo-services/${service.id}/`,
+  }));
+}
+
+const HeaderTwo = ({ haveShadow }) => {
+  const pathname = usePathname();
   const [openDropdown, setOpenDropdown] = useState(null);
-  const seoService = seoServices.find((service) => service.id === "seo-services");
-  const seoSubServices = seoService?.sub_categories || [];
+  const [serviceLinks, setServiceLinks] = useState([]);
+  const [seoSubServices, setSeoSubServices] = useState([]);
+  const [servicesReady, setServicesReady] = useState(false);
+  const [seoReady, setSeoReady] = useState(false);
+  const [isLoadingServices, setIsLoadingServices] = useState(false);
+  const [isLoadingSeo, setIsLoadingSeo] = useState(false);
 
   const isActive = (path) => {
-    if (path === "/") return pathname === "/";
+    if (path === "/") {
+      return pathname === "/";
+    }
+
     return pathname.startsWith(path);
+  };
+
+  const loadServiceLinks = async () => {
+    if (servicesReady || isLoadingServices) {
+      return;
+    }
+
+    setIsLoadingServices(true);
+
+    try {
+      const module = await import("@/data/services");
+      setServiceLinks(mapServiceLinks(module.services));
+      setServicesReady(true);
+    } finally {
+      setIsLoadingServices(false);
+    }
+  };
+
+  const loadSeoLinks = async () => {
+    if (seoReady || isLoadingSeo) {
+      return;
+    }
+
+    setIsLoadingSeo(true);
+
+    try {
+      const module = await import("@/app/service/seo-services/components/subservices");
+      setSeoSubServices(mapSeoLinks(module.services));
+      setSeoReady(true);
+    } finally {
+      setIsLoadingSeo(false);
+    }
   };
 
   return (
     <StickyHeader>
       <header
         id="header"
-        className="sticky top-0 w-full transition-[top] duration-300 z-40 bg-background"
+        className="sticky top-0 z-40 w-full bg-background transition-[top] duration-300"
       >
         <div
           id="header-container"
-          className={`${haveShadow
-              ? "dark:shadow-[0px_14px_21px_0px_rgba(0,0,0,0.3)] shadow-3xl"
+          className={`${
+            haveShadow
+              ? "shadow-3xl dark:shadow-[0px_14px_21px_0px_rgba(0,0,0,0.3)]"
               : ""
-            }`}
+          }`}
         >
           <div
-            className={`${pathname !== "/home-2"
+            className={`${
+              pathname !== "/home-2"
                 ? "[.header-pinned_&]:shadow-3xl dark:[.header-pinned_&]:shadow-[0px_14px_21px_0px_rgba(0,0,0,0.3)]"
-                : null
-              }`}
+                : ""
+            }`}
           >
-            <div className="container mx-auto relative">
-              <span className="border-t border-accent block"></span>
-              <div className="flex justify-between items-center">
+            <div className="container relative mx-auto">
+              <span className="block border-t border-accent"></span>
+              <div className="flex items-center justify-between">
                 <div className="py-5">
                   <Logo />
                 </div>
-                <nav className="xl:block hidden">
-                  <ul className="flex items-center text-[17px] 2xl:gap-10 gap-6">
+
+                <nav className="hidden xl:block">
+                  <ul className="flex items-center gap-6 text-[17px] 2xl:gap-10">
                     {navigationLinks.map(({ id, lable, path }) => {
                       const active = isActive(path);
 
-                      // ✅ Fix: check for "Service" (not "Serv")
                       if (lable === "Service") {
                         return (
                           <li
-                            className="pt-[43px] pb-[42px] relative"
+                            className="relative pb-[42px] pt-[43px]"
                             key={id}
-                            onMouseEnter={() => setOpenDropdown("service")}
+                            onMouseEnter={() => {
+                              setOpenDropdown("service");
+                              void loadServiceLinks();
+                            }}
                             onMouseLeave={() => setOpenDropdown(null)}
                           >
-                            {/* Main Link: Click goes to /service */}
                             <Link
                               href={path}
-                              className={`
-          font-semibold leading-[22px] flex items-center gap-1 cursor-pointer
-          relative transition-all duration-500
-          ${active ? "text-primary underline" : "text-muted-foreground"}
-          hover:text-primary-foreground
-        `}
-                              onClick={(e) => {
-                                // If clicking on desktop, go to /service
-                                // Do NOT prevent default — let Next.js handle navigation
-                                // But close dropdown if open
-                                setOpenDropdown(null);
-                              }}
+                              className={`relative flex items-center gap-1 font-semibold leading-[22px] transition-all duration-500 ${
+                                active ? "text-primary underline" : "text-muted-foreground"
+                              } hover:text-primary-foreground`}
+                              onClick={() => setOpenDropdown(null)}
                             >
                               {lable}
                               <svg
-                                className="ml-1 w-5 h-5"
+                                className="ml-1 h-5 w-5"
                                 fill="none"
                                 stroke="currentColor"
                                 strokeWidth={2}
@@ -112,25 +156,30 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                               </svg>
                             </Link>
 
-                            {/* Dropdown */}
                             <div
-                              className={`absolute left-0 top-full w-72 rounded-xl shadow-2xl bg-white z-30 transition-all duration-200 ${openDropdown === "service"
-                                  ? "opacity-100 pointer-events-auto translate-y-0"
-                                  : "opacity-0 pointer-events-none translate-y-2"
-                                }`}
+                              className={`absolute left-0 top-full z-30 w-72 rounded-xl bg-white shadow-2xl transition-all duration-200 ${
+                                openDropdown === "service"
+                                  ? "pointer-events-auto translate-y-0 opacity-100"
+                                  : "pointer-events-none translate-y-2 opacity-0"
+                              }`}
                             >
-                              <ul className="py-3 max-h-[400px] overflow-y-auto custom-scrollbar">
-                                {mainServices.map((service) => (
+                              <ul className="custom-scrollbar max-h-[400px] overflow-y-auto py-3">
+                                {serviceLinks.map((service) => (
                                   <li key={service.id}>
                                     <Link
-                                      href={`/service/${service.id}`}
-                                      className="block w-full text-left px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
+                                      href={service.path}
+                                      className="block w-full px-6 py-2 text-left text-muted-foreground transition-colors hover:bg-gray-100 hover:text-primary-foreground"
                                       onClick={() => setOpenDropdown(null)}
                                     >
                                       {service.title}
                                     </Link>
                                   </li>
                                 ))}
+                                {!serviceLinks.length && (
+                                  <li className="px-6 py-2 text-muted-foreground">
+                                    {isLoadingServices ? "Loading services..." : "View all services"}
+                                  </li>
+                                )}
                               </ul>
                             </div>
                           </li>
@@ -140,27 +189,26 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                       if (lable === "SEO Services") {
                         return (
                           <li
-                            className="pt-[43px] pb-[42px] relative"
+                            className="relative pb-[42px] pt-[43px]"
                             key={id}
-                            onMouseEnter={() => setOpenDropdown("seo-services")}
+                            onMouseEnter={() => {
+                              setOpenDropdown("seo-services");
+                              void loadSeoLinks();
+                            }}
                             onMouseLeave={() => setOpenDropdown(null)}
                           >
                             <Link
                               href={path}
-                              className={`
-                                font-semibold leading-[22px] flex items-center gap-1 cursor-pointer
-                                relative transition-all duration-500
-                                ${active
+                              className={`relative flex items-center gap-1 font-semibold leading-[22px] transition-all duration-500 ${
+                                active
                                   ? "text-primary underline underline-offset-4"
                                   : "text-muted-foreground"
-                                }
-                                hover:text-primary-foreground
-                              `}
+                              } hover:text-primary-foreground`}
                               onClick={() => setOpenDropdown(null)}
                             >
                               {lable}
                               <svg
-                                className="ml-1 w-5 h-5"
+                                className="ml-1 h-5 w-5"
                                 fill="none"
                                 stroke="currentColor"
                                 strokeWidth={2}
@@ -171,43 +219,44 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                             </Link>
 
                             <div
-                              className={`absolute left-0 top-full w-80 rounded-xl shadow-2xl bg-white z-30 transition-all duration-200 ${openDropdown === "seo-services"
-                                  ? "opacity-100 pointer-events-auto translate-y-0"
-                                  : "opacity-0 pointer-events-none translate-y-2"
-                                }`}
+                              className={`absolute left-0 top-full z-30 w-80 rounded-xl bg-white shadow-2xl transition-all duration-200 ${
+                                openDropdown === "seo-services"
+                                  ? "pointer-events-auto translate-y-0 opacity-100"
+                                  : "pointer-events-none translate-y-2 opacity-0"
+                              }`}
                             >
-                              <ul className="py-3 max-h-[400px] overflow-y-auto custom-scrollbar">
-                                {seoSubServices.map((subService) => (
-                                  <li key={subService.id}>
+                              <ul className="custom-scrollbar max-h-[400px] overflow-y-auto py-3">
+                                {seoSubServices.map((service) => (
+                                  <li key={service.id}>
                                     <Link
-                                      href={`/service/seo-services/${subService.id}/`}
-                                      className="block w-full text-left px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
+                                      href={service.path}
+                                      className="block w-full px-6 py-2 text-left text-muted-foreground transition-colors hover:bg-gray-100 hover:text-primary-foreground"
                                       onClick={() => setOpenDropdown(null)}
                                     >
-                                      {subService.title}
+                                      {service.title}
                                     </Link>
                                   </li>
                                 ))}
+                                {!seoSubServices.length && (
+                                  <li className="px-6 py-2 text-muted-foreground">
+                                    {isLoadingSeo ? "Loading SEO services..." : "View SEO services"}
+                                  </li>
+                                )}
                               </ul>
                             </div>
                           </li>
                         );
                       }
 
-                      // All other nav items
                       return (
-                        <li className="pt-[43px] pb-[42px]" key={id}>
+                        <li className="pb-[42px] pt-[43px]" key={id}>
                           <Link
                             href={path}
-                            className={`
-                              font-semibold leading-[22px] flex items-center gap-1
-                              relative transition-all duration-500
-                              ${active
+                            className={`relative flex items-center gap-1 font-semibold leading-[22px] transition-all duration-500 ${
+                              active
                                 ? "text-primary underline underline-offset-4"
                                 : "text-muted-foreground"
-                              }
-                              hover:text-primary-foreground
-                            `}
+                            } hover:text-primary-foreground`}
                           >
                             {lable}
                           </Link>
@@ -216,13 +265,11 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                     })}
                   </ul>
                 </nav>
-                <div className="hidden xl:flex items-center gap-5">
-                  <a
-                    href="tel:+14704707392"
-                    className="flex items-center gap-3 group"
-                  >
-                    <div className="rounded-full bg-primary border-primary w-14 h-14 flex items-center justify-center animate-shake-pause group-hover:bg-primary/80 transition">
-                      <div className="text-white flex items-center justify-center">
+
+                <div className="hidden items-center gap-5 xl:flex">
+                  <a href="tel:+14704707392" className="group flex items-center gap-3">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full border-primary bg-primary transition group-hover:bg-primary/80">
+                      <div className="flex items-center justify-center text-white">
                         <IoCall size={30} />
                       </div>
                     </div>
@@ -232,30 +279,12 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                   </a>
 
                   <Button asChild size="xl">
-                    <Link className="text-foreground" href={"/contact-us"}>
+                    <Link className="text-foreground" href="/contact-us">
                       Contact Us
                     </Link>
                   </Button>
-                  <Offcanvas>
-                    <OffcanvasTrigger>
-                      <div
-                        className={`${haveOvcanvsIcon
-                            ? "flex flex-col gap-3 cursor-pointer"
-                            : "hidden"
-                          }`}
-                      >
-                        <span className="h-[4px] w-10 bg-muted rounded-lg block"></span>
-                        <span className="h-[4px] w-5 bg-muted rounded-lg block"></span>
-                      </div>
-                    </OffcanvasTrigger>
-                    <OffcanvasOverlay />
-                    <OffcanvasContent className="top-0">
-                      <OffcanvasClose />
-                      {/* <HeaderShortInfo /> */}
-                    </OffcanvasContent>
-                  </Offcanvas>
                 </div>
-                {/* ✅ MobileMenu is preserved EXACTLY as before */}
+
                 <MobileMenu data={navigationLinks} />
               </div>
             </div>
