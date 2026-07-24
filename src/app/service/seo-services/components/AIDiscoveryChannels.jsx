@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const AIDiscoveryChannels = () => {
@@ -50,10 +51,13 @@ const AIDiscoveryChannels = () => {
               key={index}
               className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-h-[140px]"
             >
-              <img
+              <Image
                 src={platform.logo}
                 alt={platform.name}
-                className="max-w-full max-h-16 w-auto h-auto object-contain"
+                width={160}
+                height={64}
+                sizes="(min-width: 1024px) 160px, (min-width: 768px) 30vw, 45vw"
+                className="h-auto max-h-16 w-auto max-w-full object-contain"
               />
             </div>
           ))}

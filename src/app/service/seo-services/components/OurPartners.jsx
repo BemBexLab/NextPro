@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const OurPartners = () => {
@@ -32,8 +33,7 @@ const OurPartners = () => {
 
   return (
     <section className="w-full bg-white py-20">
-      <div className="w-[92%] max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Left column - Fixed heading */}
+      <div className="mx-auto grid w-[92%] max-w-[1200px] grid-cols-1 items-start gap-8 lg:grid-cols-12">
         <div className="col-span-1 lg:col-span-3 flex flex-col items-start justify-start pr-6">
           <div className="inline-flex items-center gap-3 mb-8">
             <span className="w-3 h-3 rounded-full bg-[#6EE07F] block"></span>
@@ -53,95 +53,118 @@ const OurPartners = () => {
           </h3>
         </div>
 
-        {/* Right column - Animated carousel rows */}
         <div className="col-span-1 lg:col-span-9">
-          <style>{`
-            .carousel-viewport {
-              overflow: hidden;
-              position: relative;
-            }
-            
-            .carousel-track {
-              display: flex;
-              gap: 1rem;
-              align-items: center;
-              width: fit-content;
-            }
-            
-            .partner-card {
-              flex: 0 0 200px;
-              width: 200px;
-              height: 136px;
-              background: #F2F3F5;
-              border-radius: 12px;
-              padding: 16px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              border: 1px solid rgba(0,0,0,0.04);
-              transition: transform 0.3s ease;
-            }
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:hidden">
+            {logoPartners.map((partner) => (
+              <div
+                key={partner.logo}
+                className="flex min-h-[110px] items-center justify-center rounded-xl border border-black/5 bg-[#F2F3F5] p-4"
+              >
+                <Image
+                  src={partner.logo}
+                  alt=""
+                  width={180}
+                  height={72}
+                  sizes="(min-width: 1024px) 22vw, (min-width: 640px) 30vw, 44vw"
+                  className="h-auto max-h-[72px] w-auto max-w-full object-contain"
+                />
+              </div>
+            ))}
+          </div>
 
-            .partner-card:hover {
-              transform: translateY(-5px);
-            }
-
-            .partner-card img {
-              max-width: 100%;
-              max-height: 80px;
-              width: auto;
-              height: auto;
-              object-fit: contain;
-            }
-
-            /* Smooth continuous scroll animation */
-            @keyframes scroll-left {
-              0% {
-                transform: translateX(0);
+          <div className="hidden xl:block">
+            <style>{`
+              .carousel-viewport {
+                overflow: hidden;
+                position: relative;
               }
-              100% {
-                transform: translateX(-50%);
+
+              .carousel-track {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                width: fit-content;
               }
-            }
 
-            .track-1 {
-              animation: scroll-left 30s linear infinite;
-            }
-            
-            .track-2 {
-              animation: scroll-left 35s linear infinite;
-            }
-            
-            .track-3 {
-              animation: scroll-left 40s linear infinite;
-            }
+              .partner-card {
+                flex: 0 0 200px;
+                width: 200px;
+                height: 136px;
+                background: #F2F3F5;
+                border-radius: 12px;
+                padding: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid rgba(0,0,0,0.04);
+                transition: transform 0.3s ease;
+              }
 
-            /* Pause on hover */
-            .carousel-track:hover {
-              animation-play-state: paused;
-            }
-          `}</style>
+              .partner-card:hover {
+                transform: translateY(-5px);
+              }
 
-          <div className="space-y-6">
-            {rows.map((row, rowIndex) => {
-              // Double the content for seamless looping
-              const doubledRow = [...row, ...row];
+              .partner-card img {
+                max-width: 100%;
+                max-height: 80px;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+              }
 
-              return (
-                <div key={rowIndex} className="carousel-viewport">
-                  <div className={`carousel-track track-${rowIndex + 1}`}>
-                    {doubledRow.map((partner, itemIndex) => (
-                      <div
-                        key={`${rowIndex}-${itemIndex}`}
-                        className="partner-card"
-                      >
-                        <img src={partner.logo} alt="" loading="lazy" />
-                      </div>
-                    ))}
+              @keyframes scroll-left {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(-50%);
+                }
+              }
+
+              .track-1 {
+                animation: scroll-left 30s linear infinite;
+              }
+
+              .track-2 {
+                animation: scroll-left 35s linear infinite;
+              }
+
+              .track-3 {
+                animation: scroll-left 40s linear infinite;
+              }
+
+              .carousel-track:hover {
+                animation-play-state: paused;
+              }
+            `}</style>
+
+            <div className="space-y-6">
+              {rows.map((row, rowIndex) => {
+                const doubledRow = [...row, ...row];
+
+                return (
+                  <div key={rowIndex} className="carousel-viewport">
+                    <div className={`carousel-track track-${rowIndex + 1}`}>
+                      {doubledRow.map((partner, itemIndex) => (
+                        <div
+                          key={`${rowIndex}-${itemIndex}`}
+                          className="partner-card"
+                        >
+                          <Image
+                            src={partner.logo}
+                            alt=""
+                            width={200}
+                            height={80}
+                            sizes="200px"
+                            className="h-auto max-h-[80px] w-auto max-w-full object-contain"
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

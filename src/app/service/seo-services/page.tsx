@@ -1,5 +1,5 @@
+import dynamic from "next/dynamic";
 import type { Metadata } from "next";
-import ServiceDetailClient from "../[id]/ServiceDetailClient";
 import { getServiceById } from "@/data/services";
 
 import ServiceHero from "./components/ServiceHero";
@@ -12,9 +12,11 @@ import SuccessStories from "./components/SuccessStories";
 import WhyChoose from "./components/WhyChoose";
 import SEOComparison from "./components/SEOComparison";
 import Testimonials from "./components/Testimonials";
-import ClaimFreeCall from "./components/ClaimFreeCall";
 import ServiceFAQs from "./components/ServiceFAQs";
-import ContactFormTwo from "@/components/sections/ContactFormTwo";
+
+const ContactFormTwo = dynamic(() => import("@/components/sections/ContactFormTwo"), {
+  ssr: false,
+});
 
 const SERVICE_ID = "seo-services";
 
@@ -46,8 +48,8 @@ export default function SeoServicesPage() {
     <main>
       <script
         type="application/ld+json"
-	        dangerouslySetInnerHTML={{
-	          __html: `{
+        dangerouslySetInnerHTML={{
+          __html: `{
 	  "@context": "https://schema.org",
 	  "@type": "Service",
 	  "@id": "https://www.webfoundersusa.com/service/seo-services/#service",
@@ -95,23 +97,22 @@ export default function SeoServicesPage() {
 	    "availability": "https://schema.org/InStock"
 	  }
 	}`,
-	        }}
+        }}
       />
-    <section className="text-black">
-      <ServiceHero />
-      <ExpertsPage params={undefined} />
-      <OurPartners />
-      <LocalSEOServices />
-      <AIDiscoveryChannels />
-      <SEOProcess />
-      <SuccessStories />
-      <WhyChoose />
-      <SEOComparison />
-      <Testimonials />
-      {/* <ClaimFreeCall /> */}
-      <ContactFormTwo />
-      <ServiceFAQs />
-    </section>
+      <section className="text-black">
+        <ServiceHero />
+        <ExpertsPage params={undefined} />
+        <OurPartners />
+        <LocalSEOServices />
+        <AIDiscoveryChannels />
+        <SEOProcess />
+        <SuccessStories />
+        <WhyChoose />
+        <SEOComparison />
+        <Testimonials />
+        <ContactFormTwo />
+        <ServiceFAQs />
+      </section>
     </main>
   );
 }
