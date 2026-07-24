@@ -25,8 +25,8 @@ import { services as seoServices } from "@/app/service/seo-services/components/s
 const navigationLinks = [
   { id: 1, path: "/", lable: "Home" },
   { id: 2, path: "/about-us", lable: "About Us" },
-  { id: 3, path: "/service", lable: "Service" },
   { id: 4, path: "/service/seo-services/", lable: "SEO Services" },
+  { id: 3, path: "/service", lable: "Service" },
   { id: 5, path: "/portfolio", lable: "Our Work" },
   { id: 6, path: "/pricing", lable: "Pricing Plans" },
   { id: 7, path: "/blog", lable: "Blog" },
@@ -120,15 +120,6 @@ const HeaderTwo = ({ haveOvcanvsIcon, haveShadow }) => {
                                 }`}
                             >
                               <ul className="py-3 max-h-[400px] overflow-y-auto custom-scrollbar">
-                                <li key="seo-service-extra">
-                                  <Link
-                                    href="/service/seo-services"
-                                    className="block w-full text-left px-6 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-gray-100 transition-colors"
-                                    onClick={() => setOpenDropdown(null)}
-                                  >
-                                    SEO services
-                                  </Link>
-                                </li>
                                 {mainServices.map((service) => (
                                   <li key={service.id}>
                                     <Link
