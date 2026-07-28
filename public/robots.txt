@@ -7,6 +7,8 @@ Disallow: /search
 Disallow: /?s=
 Disallow: /?filter=
 Disallow: /*?sort=*
+Disallow: /*?_rsc=
+Disallow: /?_rsc= 
 Disallow: /checkout/
 Disallow: /cart/
 Disallow: /thank-you/

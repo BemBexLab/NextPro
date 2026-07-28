@@ -1,7 +1,7 @@
-import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import { getServiceById } from "@/data/services";
 
+import ContactFormTwo from "@/components/sections/ContactFormTwo";
 import ServiceHero from "./components/ServiceHero";
 import ExpertsPage from "./components/ExpertsPage";
 import OurPartners from "./components/OurPartners";
@@ -13,10 +13,6 @@ import WhyChoose from "./components/WhyChoose";
 import SEOComparison from "./components/SEOComparison";
 import Testimonials from "./components/Testimonials";
 import ServiceFAQs from "./components/ServiceFAQs";
-
-const ContactFormTwo = dynamic(() => import("@/components/sections/ContactFormTwo"), {
-  ssr: false,
-});
 
 const SERVICE_ID = "seo-services";
 

@@ -1,10 +1,7 @@
 import { notFound } from "next/navigation";
-import dynamic from "next/dynamic";
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 import LivePreview from "@/components/LivePreview"; // <--- Make this file (see below)
-
-// Dynamically import the client-only BackButton
-const BackButton = dynamic(() => import("./BackButton"), { ssr: false });
+import BackButton from "./BackButton";
 
 const API_URL =
   "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts?slug=";

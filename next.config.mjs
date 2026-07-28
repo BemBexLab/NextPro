@@ -14,14 +14,20 @@ const nextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: [
-      'localhost',
-      'olive-peafowl-546702.hostingersite.com',
-      'projectdemolink.com',
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+      },
+      {
+        protocol: "https",
+        hostname: "olive-peafowl-546702.hostingersite.com",
+      },
+      {
+        protocol: "https",
+        hostname: "projectdemolink.com",
+      },
     ],
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
   async redirects() {
     return [

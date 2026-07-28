@@ -1,8 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 import Image from 'next/image'
-import ModalVideo from 'react-modal-video';
-import 'react-modal-video/scss/modal-video.scss';
 import { IoIosPlay } from 'react-icons/io';
 import { cn } from '@/lib/utils';
 import Play from '../../../public/icons/play';
@@ -27,14 +25,6 @@ const PlayIcon = ({ playOne, color }) => {
                         </span>
                     </div>
             }
-
-            {/* <ModalVideo
-                channel="youtube"
-                youtube={{ mute: 0, autoplay: 0 }}
-                isOpen={isOpen}
-                videoId="TKnufs85hXk"
-                onClose={() => setOpen(false)}
-            /> */}
         </>
     )
 }

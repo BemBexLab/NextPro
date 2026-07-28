@@ -1,12 +1,9 @@
 import "./globals.css";
-import dynamic from "next/dynamic";
 import Script from "next/script";
 import { ThemeProvider } from "@/contextApi/themeProvider";
 import FooterFour from "@/components/sections/footers/footerFour";
 import HeaderTwo from "@/components/sections/headers/headerTwo";
-const ClientEnhancements = dynamic(() => import("@/components/ClientEnhancements"), {
-  ssr: false,
-});
+import ClientEnhancements from "@/components/ClientEnhancements";
 
 export const metadata = {
   title: "WebFoundersUSA",

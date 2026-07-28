@@ -1,11 +1,9 @@
-
 import React from 'react'
-import dynamic from 'next/dynamic'
 import ContactForm from '@/components/sections/contactForm'
 import PageTitle from '@/components/sections/pageTitle'
 import SubscribeTwo from '@/components/sections/subscribes/subscribeTwo'
 import FreelancerMatchForm from "@/components/sections/contact/contactForm";
-const ContactMap = dynamic(() => import('@/components/sections/map'), { ssr: false })
+import ContactMap from '@/components/sections/map'
 
 export const metadata = {
     title: "Contact Us - Web Founders USA",
