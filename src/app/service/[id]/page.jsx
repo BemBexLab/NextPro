@@ -4,7 +4,7 @@ import { getServiceById } from '@/data/services';
 import { notFound, redirect } from 'next/navigation';
 
 export async function generateMetadata({ params }) {
-  const { id } = params;
+  const { id } = await params;
 
   const service = await getServiceById(id);
   if (!service) {
@@ -52,10 +52,12 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function Page({ params }) {
-  if (!getServiceById(params?.id)) {
+export default async function Page({ params }) {
+  const resolvedParams = await params;
+
+  if (!getServiceById(resolvedParams?.id)) {
     notFound();
   }
 
-  return <ServiceDetailClient params={params} />;
+  return <ServiceDetailClient params={resolvedParams} />;
 }

@@ -3,7 +3,7 @@ import SubServiceDetailClient from './SubServiceDetailClient';
 import { getSubCategory, getServiceById } from '../components/subservices';
 
 export async function generateMetadata({ params }) {
-  const { id, sub } = params;
+  const { id, sub } = await params;
   const serviceId = id || "seo-services";
   const subCategory = await getSubCategory(serviceId, sub);
   const parentService = await getServiceById(serviceId);
@@ -43,8 +43,10 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function Page({ params }) {
-  const serviceId = params?.id || "seo-services";
-  const normalizedParams = { ...params, id: serviceId };
+export default async function Page({ params }) {
+  const resolvedParams = await params;
+  const serviceId = resolvedParams?.id || "seo-services";
+  const normalizedParams = { ...resolvedParams, id: serviceId };
+
   return <SubServiceDetailClient params={normalizedParams} />;
 }
