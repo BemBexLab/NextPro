@@ -5,9 +5,9 @@ import { getAllWpPosts, getPostBySlug, getTextFromHtml } from "../wpPosts";
 import BlogSlugClient from "./BlogSlugClient";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export const revalidate = 900;
@@ -65,7 +65,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const post = await getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
 
   const title =
     post?.yoast_head_json?.title ||
@@ -106,7 +107,8 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params }: PageProps) {
-  const post = await getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
 
   if (!post) {
     notFound();
