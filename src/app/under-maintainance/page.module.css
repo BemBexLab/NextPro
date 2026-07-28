@@ -1,0 +1,170 @@
+.pageShell {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 2rem 1.25rem;
+  background:
+    linear-gradient(rgba(230, 236, 255, 0.18), rgba(230, 236, 255, 0.18)),
+    url("https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aGplaGZ0b2RqZ3Q2dGFuaTBvbXR5M2YwaTA2MHIxcG81cngyY2swYiZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/5UvzpgvjAYHB2OwZfE/giphy.gif")
+      center center / cover;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 300;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.maintenanceBox {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  padding: 2.5rem 3.5rem;
+  border-radius: 3rem;
+  text-align: center;
+  color: #000;
+  box-shadow:
+    0 6px 6px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+}
+
+.maintenanceBox:hover {
+  transform: scale(1.02);
+}
+
+.maintenanceBox,
+.maintenanceBox > div {
+  border-radius: 3rem;
+}
+
+.liquidGlassEffect {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  isolation: isolate;
+  backdrop-filter: blur(3px);
+  filter: url(#glass-distortion);
+}
+
+.liquidGlassTint {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.liquidGlassShine {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow:
+    inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
+    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.liquidGlassText {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 2rem;
+  color: #212a2b;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #212a2b;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #212a2b;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.homeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  margin-top: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #072d7f, #335fd1);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(7, 45, 127, 0.28);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.homeButton:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #0a3b9f, #446ee0);
+  box-shadow: 0 16px 34px rgba(7, 45, 127, 0.32);
+}
+
+.link {
+  line-height: 0;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  fill: #212a2b;
+}
+
+@media (max-width: 640px) {
+  .maintenanceBox {
+    width: 100%;
+    padding: 2rem 1.5rem;
+    border-radius: 2rem;
+  }
+
+  .maintenanceBox,
+  .maintenanceBox > div {
+    border-radius: 2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .homeButton {
+    min-width: 0;
+    width: 100%;
+    font-size: 0.95rem;
+  }
+}
