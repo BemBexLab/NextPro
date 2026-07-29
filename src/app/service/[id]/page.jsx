@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import ServiceDetailClient from "./ServiceDetailClient";
 import { getServiceById, services } from "@/data/services";
+import { withEnUsHreflang } from "@/lib/metadata";
 
 export const dynamicParams = false;
 
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }) {
     service?.id || id
   )}`;
 
-  return {
+  return withEnUsHreflang({
     title,
     description,
     keywords: service?.seo?.keyword
@@ -54,7 +55,7 @@ export async function generateMetadata({ params }) {
       title,
       description,
     },
-  };
+  });
 }
 
 export default async function Page({ params }) {

@@ -1,6 +1,7 @@
 import React from 'react';
 import SubServiceDetailClient from './SubServiceDetailClient';
 import { getSubCategory, getServiceById } from '@/data/services';
+import { withEnUsHreflang } from "@/lib/metadata";
 
 export async function generateMetadata({ params }) {
   const { id, sub } = await params;
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }) {
     parentService?.id || parentService?.name || id
   )}/${slugify(subCategory?.id || sub)}`;
 
-  return {
+  return withEnUsHreflang({
     title,
     description,
     keywords: subCategory?.seo?.keyword
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }) {
       title,
       description,
     },
-  };
+  });
 }
 
 export default async function Page({ params }) {

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { WPPost } from "../wpPosts";
 import { getAllWpPosts, getPostBySlug, getTextFromHtml } from "../wpPosts";
 import BlogSlugClient from "./BlogSlugClient";
+import { withEnUsHreflang } from "@/lib/metadata";
 
 type PageProps = {
   params: Promise<{
@@ -86,7 +87,7 @@ export async function generateMetadata({
     }))
     .filter((image) => image.url);
 
-  return {
+  return withEnUsHreflang({
     title,
     description,
     alternates: canonical ? { canonical } : undefined,
@@ -103,7 +104,7 @@ export async function generateMetadata({
       description,
       images: images?.map((image) => image.url),
     },
-  };
+  });
 }
 
 export default async function Page({ params }: PageProps) {

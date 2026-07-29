@@ -4,8 +4,9 @@ import { ThemeProvider } from "@/contextApi/themeProvider";
 import FooterFour from "@/components/sections/footers/footerFour";
 import HeaderTwo from "@/components/sections/headers/headerTwo";
 import ClientEnhancements from "@/components/ClientEnhancements";
+import { withEnUsHreflang } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
   title: "WebFoundersUSA",
   description:
     "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
@@ -17,7 +18,7 @@ export const metadata = {
       follow: true,
     },
   },
-};
+});
 
 export default function RootLayout({ children }) {
   return (

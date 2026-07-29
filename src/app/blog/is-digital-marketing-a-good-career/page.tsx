@@ -1,19 +1,20 @@
 ﻿import Image from "next/image";
-import { 
+import { withEnUsHreflang } from "@/lib/metadata";
+import {
   Search, Mail, Share2, PenTool, Users, BarChart3, Megaphone, 
   TrendingUp, Globe, CheckCircle2, XCircle, ArrowRight, 
   Briefcase, Lightbulb, Target, Zap, BookOpen, Award, 
   Star, DollarSign, Clock, Monitor
 } from "lucide-react";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
   title: "Is Digital Marketing a Good Career​?",
   description:
     "Is digital marketing a good career in 2026? Discover job opportunities, skills needed, salary potential, and why many choose this fast-growing field.",
   alternates: {
     canonical: "https://www.webfoundersusa.com/blog/is-digital-marketing-a-good-career",
   },  
-};
+});
 
 const faqs = [
   {

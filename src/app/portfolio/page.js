@@ -2,8 +2,9 @@ import React from "react";
 import PageTitle from "@/components/sections/pageTitle";
 import ProjectsTab from "@/components/sections/projectsTab";
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
+import { withEnUsHreflang } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
     title: "Our Portfolio - Web Founders USA",
     description: "Explore the Web Founders USA portfolio featuring successful web design, SEO, and digital marketing projects delivering real business growth.",
 
@@ -14,7 +15,7 @@ export const metadata = {
     alternates: {
     canonical: "https://www.webfoundersusa.com/portfolio",
   },
-};
+});
 
 const Portfolio = () => {
   return (

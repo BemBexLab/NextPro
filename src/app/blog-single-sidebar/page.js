@@ -1,11 +1,12 @@
 import React from 'react'
 import BlogArtical from '@/components/sections/blogs/blogArtical'
 import PageTitle from '@/components/sections/pageTitle'
+import { withEnUsHreflang } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
     title: "WebFoundersUSA",
     description: "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
-};
+});
 
 export const dynamic = 'force-dynamic';
 

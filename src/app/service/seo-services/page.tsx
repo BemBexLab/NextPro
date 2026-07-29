@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getServiceById } from "@/data/services";
+import { withEnUsHreflang } from "@/lib/metadata";
 
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 import ServiceHero from "./components/ServiceHero";
@@ -21,7 +22,7 @@ export function generateMetadata(): Metadata {
   const title = service?.seo?.title || service?.title || "SEO Services - Web Founders USA";
   const description = service?.seo?.description || service?.desc || "Expert SEO services by Web Founders USA. We offer technical audits and strategic solutions to grow your online presence and visibility.";
 
-  return {
+  return withEnUsHreflang({
     title,
     description,
     keywords: service?.seo?.keyword
@@ -36,7 +37,7 @@ export function generateMetadata(): Metadata {
       title,
       description,
     },
-  };
+  });
 }
 
 export default function SeoServicesPage() {

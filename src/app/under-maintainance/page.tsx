@@ -1,5 +1,22 @@
 import Link from "next/link";
 import styles from "./page.module.css";
+import { withEnUsHreflang } from "@/lib/metadata";
+
+export const metadata = withEnUsHreflang({
+  title: "Under Maintenance - Web Founders USA",
+  description: "This Web Founders USA page is temporarily under maintenance.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/under-maintainance",
+  },
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
+});
 
 export default function Page() {
   return (

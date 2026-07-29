@@ -1,6 +1,7 @@
 import ServicesSection from "./ServicesSection.client";
+import { withEnUsHreflang } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
   title: "Service - Web Founders USA",
   description:
     "Explore Web Founders USA services including SEO, web design, and digital marketing solutions built to grow your business.",
@@ -12,7 +13,7 @@ export const metadata = {
     alternates: {
     canonical: "https://www.webfoundersusa.com/service",
   },
-};
+});
 
 export default function Page() {
   return <ServicesSection />;

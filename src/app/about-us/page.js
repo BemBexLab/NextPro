@@ -7,8 +7,9 @@ import SubscribeTwo from '@/components/sections/subscribes/subscribeTwo'
 import TeamGrid from '@/components/sections/teams/teamGrid'
 import TestimonialTwo from '@/components/sections/testimonials/testimonialTwo'
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
+import { withEnUsHreflang } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
     title: "About Us - Web Founders USA ",
     description: "Learn about Web Founders USA, a results-driven digital marketing agency helping businesses grow online with proven strategies.",
 
@@ -19,7 +20,7 @@ export const metadata = {
     alternates: {
     canonical: "https://www.webfoundersusa.com/about-us",
   },
-};
+});
 
 const About = () => {
   return (

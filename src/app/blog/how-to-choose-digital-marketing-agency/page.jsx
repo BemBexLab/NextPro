@@ -1,15 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { withEnUsHreflang } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
   title: "How to Choose a Digital Marketing Agency (Complete 2026 Guide)",
   description:
     "Learn how to choose the right digital marketing agency in 2026. Simple tips to find trusted experts for SEO, ads, and real business growth.",
   alternates: {
     canonical: "https://www.webfoundersusa.com/blog/how-to-choose-digital-marketing-agency",
   },    
-};
+});
 
 const articleSchema = {
   "@context": "https://schema.org",

@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import HeroFour from "@/components/sections/heroes/heroFour";
 import CompaniesSlideer from "@/components/sections/companiesslide/slider";
 import Script from "next/script";
+import { withEnUsHreflang } from "@/lib/metadata";
 
 const ServiceTwo = dynamic(
   () => import("@/components/sections/services/serviceTwo"),
@@ -20,7 +21,7 @@ const ContactFormTwo = dynamic(
 );
 const FAQSection = dynamic(() => import("@/components/sections/faqs/HomeFaqs"));
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
   title: "Complete 360 Online Marketing Services - Web Founders USA",
   description:
     "Web Founders USA provides complete 360 online Digital marketing services to help US businesses boost rankings, traffic, leads, and growth.",
@@ -38,7 +39,7 @@ export const metadata = {
   verification: {
     google: "MXsme6KREETz9zsD6ULOJg-NIi75wmJqABLQiM52Lmk",
   },
-};
+});
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [

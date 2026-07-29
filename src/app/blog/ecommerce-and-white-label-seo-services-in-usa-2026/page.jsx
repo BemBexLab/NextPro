@@ -1,4 +1,5 @@
 import React from "react";
+import { withEnUsHreflang } from "@/lib/metadata";
 import {
   BookOpen,
   ShoppingCart,
@@ -20,14 +21,14 @@ import {
 
 } from "lucide-react";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
   title: "Ecommerce & White Label SEO Services in USA (2026) – Built for Brands That Want to Dominate",
   description:
     "Expert ecommerce and white label SEO services in the USA for 2026. Grow rankings, traffic, and sales with powerful SEO strategies.",
   alternates: {
     canonical: "https://www.webfoundersusa.com/blog/ecommerce-and-white-label-seo-services-in-usa-2026",
   },     
-};
+});
 
 const Blog10 = () => {
   return (

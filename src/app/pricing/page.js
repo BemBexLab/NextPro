@@ -5,8 +5,9 @@ import PriceOne from '@/components/sections/pricing/priceOne'
 import PriceThree from '@/components/sections/pricing/priceThree'
 import SubscribeTwo from '@/components/sections/subscribes/subscribeTwo'
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
+import { withEnUsHreflang } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
     title: "Pricing - Web Founders USA",
     description: "Explore Web Founders USA pricing plans for SEO, web design, and digital marketing services designed to deliver value and results",
     
@@ -17,7 +18,7 @@ export const metadata = {
     alternates: {
     canonical: "https://www.webfoundersusa.com/pricing",
   },
-};
+});
 
 const Pricing = () => {
     return (

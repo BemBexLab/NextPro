@@ -1,7 +1,8 @@
 import Privacy from "@/components/termsandprivacy/privacy"
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
+import { withEnUsHreflang } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
     title: "PrivacyPolicy - Web Founders USA",
     description: "Our Privacy Policy details how information is collected, stored, and used, ensuring transparency, security, and protection of user data.",
 
@@ -9,7 +10,7 @@ export const metadata = {
     canonical: "https://www.webfoundersusa.com/privacy",
     
   },
-};
+});
 const PrivacyPolicy = () => {
     return (
         <main>

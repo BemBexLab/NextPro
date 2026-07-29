@@ -1,7 +1,8 @@
 import TermsAndConditions from "@/components/termsandprivacy/terms"
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
+import { withEnUsHreflang } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
     title: "Terms & Condition - Web Founders USA",
     description: "These Terms & Conditions outline the rules, responsibilities, and usage guidelines for services, content, and interactions on Web Founders USA.",
 
@@ -10,7 +11,7 @@ export const metadata = {
     
   },
 
-};
+});
 
 const Terms = () => {
     return (

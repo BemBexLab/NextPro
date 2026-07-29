@@ -1,4 +1,5 @@
 import React from "react";
+import { withEnUsHreflang } from "@/lib/metadata";
 import {
   BookOpen,
   CheckCircle,
@@ -35,14 +36,14 @@ import {
   Palette,
 } from "lucide-react";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
   title: "Advanced Ecommerce Design & Development USA 2026 – Create High-Converting Online Stores",
   description:
     "Advanced ecommerce design and development services in USA 2026 to build fast, user-friendly, and high-converting online stores for growth.",
   alternates: {
     canonical: "https://www.webfoundersusa.com/blog/advanced-ecommerce-design-development-usa-2026-create-high-converting-online-stores",
   },    
-};
+});
 
 const Blog21 = () => {
   return (

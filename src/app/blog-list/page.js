@@ -3,13 +3,14 @@ import CardThree from '@/components/sections/blogs/cardThree'
 import PageTitle from '@/components/sections/pageTitle'
 import SideBar from '@/components/sections/sideBar'
 import { blogData } from '@/lib/fackData/blogData'
+import { withEnUsHreflang } from "@/lib/metadata";
 
 export const dynamic = 'force-dynamic'; // ✅ THIS LINE FIXES BUILD TIMEOUT
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
     title: "WebFoundersUSA",
     description: "WebFoundersUSA is a leading digital agency specializing in web development, digital marketing, SEO, branding, and e-commerce solutions. We help businesses grow online with custom websites, effective marketing strategies, and measurable results.",
-};
+});
 
 const BlogList = () => {
   return (

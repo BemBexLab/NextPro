@@ -1,4 +1,5 @@
 import React from "react";
+import { withEnUsHreflang } from "@/lib/metadata";
 import {
   BookOpen,
   CheckCircle,
@@ -20,7 +21,7 @@ import {
   Link,
 } from "lucide-react";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
   title:
     "Advanced SEO Services USA 2026 – Professional SEO Strategies for Long-Term Success",
   description:
@@ -29,7 +30,7 @@ export const metadata = {
     canonical:
       "https://www.webfoundersusa.com/blog/advanced-seo-services-usa-2026",
   },
-};
+});
 
 const BlogSEO2026 = () => {
   return (

@@ -9,6 +9,7 @@ import Link from 'next/link'
 import CardOne from '@/components/sections/blogs/cardOne'
 import PageTitle from '@/components/sections/pageTitle'
 import { decodeHtmlEntities, formatDate, getAllWpPosts, getFeaturedImageFromPost } from './wpPosts'
+import { withEnUsHreflang } from "@/lib/metadata";
 
 const blogData = [
     {
@@ -234,7 +235,7 @@ export async function generateMetadata({ searchParams }) {
     const base = "https://www.webfoundersusa.com/blog";
     const canonical = page > 1 ? `${base}?page=${page}` : base;
 
-    return {
+    return withEnUsHreflang({
         title: "Blog - Web Founders USA",
         description:
             "Read the Web Founders USA blog for expert insights, tips, and strategies on SEO, web design, and digital marketing growth.",
@@ -244,7 +245,7 @@ export async function generateMetadata({ searchParams }) {
             follow: true,
             googleBot: { index: true, follow: true },
         },
-    };
+    });
 }
 
 const Blog2 = async ({ searchParams }) => {

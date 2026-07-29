@@ -1,6 +1,7 @@
 import React from "react";
 // import ServiceHero from "../service/seo-services/components/ServiceHero";
 import ServiceBody2 from "@/components/ServiceBody2";
+import { withEnUsHreflang } from "@/lib/metadata";
 // import ExpertsPage from "../service/seo-services/components/ExpertsPage";
 // import OurPartners from "../service/seo-services/components/OurPartners";
 // import LocalSEOServices from "../service/seo-services/components/LocalSEOServices";
@@ -14,6 +15,22 @@ import ServiceBody2 from "@/components/ServiceBody2";
 // import ServiceFAQs from "../service/seo-services/components/ServiceFAQs";
 ;
 // import NavBar from './components/NavBar'
+
+export const metadata = withEnUsHreflang({
+  title: "Service Testing - Web Founders USA",
+  description: "Internal service testing page for Web Founders USA layouts and components.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/service-testing",
+  },
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
+});
 
 const ServiceTesting = () => {
   return (

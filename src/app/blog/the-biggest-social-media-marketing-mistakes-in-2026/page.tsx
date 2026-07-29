@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import React from 'react';
+import { withEnUsHreflang } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
     title: "The Biggest Social Media Marketing Mistakes in 2026",
     description: "Discover the biggest social media marketing mistakes businesses make in 2026 and learn simple strategies to improve engagement, reach, and brand growth.",
     alternates: {
     canonical: "https://www.webfoundersusa.com/blog/the-biggest-social-media-marketing-mistakes-in-2026",
   },    
-};
+});
 
 const SocialMediaMistakes2026: React.FC = () => {
   return (

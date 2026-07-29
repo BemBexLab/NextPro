@@ -1,4 +1,5 @@
 import React from "react";
+import { withEnUsHreflang } from "@/lib/metadata";
 import {
   BookOpen,
   CheckCircle,
@@ -29,14 +30,14 @@ import {
   Package,
 } from "lucide-react";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
   title: "Custom Ecommerce Website Design & Development USA – 2026 Growth Solutions",
   description:
     "Custom ecommerce website design and development in USA, delivering scalable, user-friendly solutions to boost your business growth in 2026.",
   alternates: {
     canonical: "https://www.webfoundersusa.com/blog/custom-ecommerce-website-design-development-usa-2026",
   },    
-};
+});
 
 const Blog19 = () => {
   return (

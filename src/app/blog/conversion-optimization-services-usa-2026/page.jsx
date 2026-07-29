@@ -1,4 +1,5 @@
 import React from "react";
+import { withEnUsHreflang } from "@/lib/metadata";
 import {
   BookOpen,
   CheckCircle,
@@ -29,14 +30,14 @@ import {
   Move,
 } from "lucide-react";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
   title: "Conversion Optimization Services USA 2026 – Boost Conversions, Not Just Visits",
   description:
     "Boost conversions with expert Conversion Optimization Services in USA 2026—turn traffic into real results and maximize ROI.",
   alternates: {
     canonical: "https://www.webfoundersusa.com/blog/conversion-optimization-services-usa-2026",
   },   
-};
+});
 
 const Blog18 = () => {
   return (

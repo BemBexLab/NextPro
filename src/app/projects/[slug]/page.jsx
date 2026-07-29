@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 import LivePreview from "@/components/LivePreview"; // <--- Make this file (see below)
 import BackButton from "./BackButton";
+import { withEnUsHreflang } from "@/lib/metadata";
 
 const API_URL =
   "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts?slug=";
@@ -25,11 +26,73 @@ export async function generateStaticParams() {
   }
 }
 
-export default async function ProjectPage({ params }) {
-  let res;
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
 
   try {
-    res = await fetch(`${API_URL}${params.slug}`, {
+    const res = await fetch(`${API_URL}${slug}`, {
+      next: { revalidate: 60 },
+    });
+
+    if (!res.ok) {
+      return withEnUsHreflang({
+        title: "Project Not Found - Web Founders USA",
+        robots: {
+          index: false,
+          follow: false,
+        },
+      });
+    }
+
+    const data = await res.json();
+    const project = data[0];
+
+    if (!project) {
+      return withEnUsHreflang({
+        title: "Project Not Found - Web Founders USA",
+        robots: {
+          index: false,
+          follow: false,
+        },
+      });
+    }
+
+    const title = `${project.title?.rendered || "Project"} - Web Founders USA`;
+    const description =
+      project.acf?.introduction ||
+      project.excerpt?.rendered ||
+      "Explore recent Web Founders USA project work and case studies.";
+    const canonical = `https://www.webfoundersusa.com/projects/${slug}`;
+
+    return withEnUsHreflang({
+      title,
+      description,
+      alternates: {
+        canonical,
+      },
+      openGraph: {
+        title,
+        description,
+        url: canonical,
+      },
+    });
+  } catch {
+    return withEnUsHreflang({
+      title: "Project Not Found - Web Founders USA",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    });
+  }
+}
+
+export default async function ProjectPage({ params }) {
+  let res;
+  const { slug } = await params;
+
+  try {
+    res = await fetch(`${API_URL}${slug}`, {
       next: { revalidate: 60 },
     });
   } catch {

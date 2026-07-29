@@ -2,11 +2,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { withEnUsHreflang } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = withEnUsHreflang({
   title: 'Top 5 U.S.A Digital Marketing Agencies in 2026',
   description: 'Discover the top digital marketing agencies in the USA for 2026. Expert insights on SEO, PPC, social media marketing, and conversion optimization strategies.',
-};
+});
 
 const articleSchema = {
   "@context": "https://schema.org",

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
+import { withEnUsHreflang } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withEnUsHreflang({
   title:
     "Why Businesses Struggle With SEO in 2026 And How Professional SEO Services Fix Rankings",
   description:
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.webfoundersusa.com/blog/why-businesses-struggle-with-seo-in-2026",
   },   
-};
+});
 
 type ImageData = {
   src: string;

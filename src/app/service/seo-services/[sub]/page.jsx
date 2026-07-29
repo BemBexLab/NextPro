@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import SubServiceDetailClient from "./SubServiceDetailClient";
 import { getSubCategory, getServiceById } from "../components/subservices";
+import { withEnUsHreflang } from "@/lib/metadata";
 
 const SERVICE_ID = "seo-services";
 
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }) {
     parentService?.id || parentService?.name || SERVICE_ID
   )}/${slugify(subCategory?.id || sub)}`;
 
-  return {
+  return withEnUsHreflang({
     title,
     description,
     keywords: subCategory?.seo?.keyword
@@ -61,7 +62,7 @@ export async function generateMetadata({ params }) {
       title,
       description,
     },
-  };
+  });
 }
 
 export default async function Page({ params }) {
