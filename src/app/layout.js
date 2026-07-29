@@ -22,7 +22,7 @@ export const metadata = withEnUsHreflang({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="en-US" suppressHydrationWarning={true}>
       <head />
       <body
         className="font-sans"
