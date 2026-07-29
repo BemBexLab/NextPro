@@ -99,8 +99,8 @@ export default function SubServiceDetailPage({ parent, service, serviceId, sub }
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-        <div className="flex flex-col gap-8 md:flex-row">
-          <div className="flex-1 space-y-4 text-base leading-relaxed text-gray-700 md:text-lg">
+        <div className="flex flex-col h-[50vh] gap-8 md:flex-row">
+          <div className="flex-1 h-full overflow-y-auto pr-4 space-y-4 text-base leading-relaxed text-gray-700 md:text-lg">
             {(service.introParagraphs || []).map((paragraph, index) =>
               renderRichBlock(paragraph, index),
             )}
