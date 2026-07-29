@@ -21,14 +21,14 @@ export const metadata = {
 
 const Pricing = () => {
     return (
-        <min>
+        <>
             {/* <PageTitle pageName={"Pricing Plan"} breadcrumbLink={"Pricing Plan"} /> */}
             <PriceThree/>
             {/* <PriceOne/>
             <FaqTwo/> */}
             <SubscribeTwo/>
             <ContactFormTwo />
-        </min>
+        </>
     )
 }
 
