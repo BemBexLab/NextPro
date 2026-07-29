@@ -1,15 +1,22 @@
-import React from 'react';
-import ServiceDetailClient from './ServiceDetailClient';
-import { getServiceById } from '@/data/services';
-import { notFound, redirect } from 'next/navigation';
+import { notFound } from "next/navigation";
+import ServiceDetailClient from "./ServiceDetailClient";
+import { getServiceById, services } from "@/data/services";
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return services.map((service) => ({
+    id: service.id,
+  }));
+}
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
 
-  const service = await getServiceById(id);
+  const service = getServiceById(id);
   if (!service) {
     return {
-      title: 'Service Not Found',
+      title: "Service Not Found",
       robots: {
         index: false,
         follow: false,
@@ -31,10 +38,8 @@ export async function generateMetadata({ params }) {
       .replace(/^-+|-+$/g, '') || 'service';
 
   const canonical = `https://www.webfoundersusa.com/service/${slugify(
-    service?.id || service?.id || id
+    service?.id || id
   )}`;
-
-
 
   return {
     title,
@@ -53,11 +58,12 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-  const resolvedParams = await params;
+  const { id } = await params;
+  const service = getServiceById(id);
 
-  if (!getServiceById(resolvedParams?.id)) {
+  if (!service) {
     notFound();
   }
 
-  return <ServiceDetailClient params={resolvedParams} />;
+  return <ServiceDetailClient service={service} serviceId={id} />;
 }

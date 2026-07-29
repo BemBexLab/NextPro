@@ -3,7 +3,6 @@ import Image from "next/image";
 import { IoCall } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
-import { getServiceById } from "@/data/services";
 
 function toTitleCase(value) {
   if (!value) return "";
@@ -21,24 +20,7 @@ function formatHtml(value) {
   };
 }
 
-export default function ServiceDetailPage({ params }) {
-  const { id } = params;
-  const service = getServiceById(id);
-
-  if (!service) {
-    return (
-      <div className="py-24 text-center">
-        <h2 className="text-2xl font-bold">Service not found</h2>
-        <p className="mt-4">We couldn&apos;t find the service you&apos;re looking for.</p>
-        <div className="mt-6">
-          <Link href="/service" className="text-[#072d7f] underline">
-            Back to Services
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
+export default function ServiceDetailPage({ service, serviceId }) {
   return (
     <div className="bg-white text-gray-900">
       <FaqJsonLd faqs={service.faqs || []} />
@@ -69,7 +51,9 @@ export default function ServiceDetailPage({ params }) {
                   </Link>
                 </li>
                 <li aria-hidden="true">{">"}</li>
-                <li className="font-medium text-white">{toTitleCase(service.title || id)}</li>
+                <li className="font-medium text-white">
+                  {toTitleCase(service.title || serviceId)}
+                </li>
               </ol>
             </nav>
           </div>
@@ -162,8 +146,8 @@ export default function ServiceDetailPage({ params }) {
       )}
 
       <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-        <div className="flex flex-col gap-8 md:flex-row">
-          <div className="flex-1 space-y-5 text-left text-base leading-relaxed text-gray-700 md:text-lg">
+        <div className="flex flex-col h-[50vh] gap-8 md:flex-row">
+          <div className="flex-1 space-y-5 overflow-y-auto pr-4 text-left text-base leading-relaxed text-gray-700 md:text-lg">
             {(service.introParagraphs || []).map((paragraph, index) => (
               <p key={index} dangerouslySetInnerHTML={formatHtml(paragraph)} />
             ))}
