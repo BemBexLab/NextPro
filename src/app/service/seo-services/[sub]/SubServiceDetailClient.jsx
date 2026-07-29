@@ -3,7 +3,6 @@ import Image from "next/image";
 import { IoCall } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
-import { getServiceById, getSubCategory } from "../components/subservices";
 
 function toTitleCase(value) {
   if (!value) return "";
@@ -29,26 +28,7 @@ function renderRichBlock(content, key) {
   return <div key={key}>{content}</div>;
 }
 
-export default function SubServiceDetailPage({ params }) {
-  const { id, sub } = params;
-  const serviceId = id || "seo-services";
-  const parent = getServiceById(serviceId);
-  const service = getSubCategory(serviceId, sub);
-
-  if (!parent || !service) {
-    return (
-      <div className="py-24 text-center">
-        <h2 className="text-2xl font-bold">Page not found</h2>
-        <p className="mt-4">We couldn&apos;t find the page you&apos;re looking for.</p>
-        <div className="mt-6">
-          <Link href="/service" className="text-[#072d7f] underline">
-            Back to Services
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
+export default function SubServiceDetailPage({ parent, service, serviceId, sub }) {
   return (
     <div className="bg-white text-gray-900">
       <FaqJsonLd faqs={service.faqs || []} />
@@ -124,7 +104,7 @@ export default function SubServiceDetailPage({ params }) {
             {(service.introParagraphs || []).map((paragraph, index) =>
               renderRichBlock(paragraph, index),
             )}
-            {id === "custom-website-design" && (
+            {serviceId === "custom-website-design" && (
               <Link
                 href={`/service/${serviceId}`}
                 className="mt-4 inline-block rounded-lg border border-blue-800 bg-blue-800 p-2 text-white transition-colors hover:bg-white hover:text-blue-800"

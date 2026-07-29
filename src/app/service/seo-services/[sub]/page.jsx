@@ -1,12 +1,33 @@
-import React from 'react';
-import SubServiceDetailClient from './SubServiceDetailClient';
-import { getSubCategory, getServiceById } from '../components/subservices';
+import { notFound } from "next/navigation";
+import SubServiceDetailClient from "./SubServiceDetailClient";
+import { getSubCategory, getServiceById } from "../components/subservices";
+
+const SERVICE_ID = "seo-services";
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  const service = getServiceById(SERVICE_ID);
+
+  return (service?.sub_categories || []).map((subCategory) => ({
+    sub: subCategory.slug || subCategory.id,
+  }));
+}
 
 export async function generateMetadata({ params }) {
-  const { id, sub } = await params;
-  const serviceId = id || "seo-services";
-  const subCategory = await getSubCategory(serviceId, sub);
-  const parentService = await getServiceById(serviceId);
+  const { sub } = await params;
+  const subCategory = getSubCategory(SERVICE_ID, sub);
+  const parentService = getServiceById(SERVICE_ID);
+
+  if (!parentService || !subCategory) {
+    return {
+      title: "Service Not Found",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
 
   const title = subCategory?.seo?.title || subCategory?.title || 'Service';
   const description = subCategory?.seo?.description || subCategory?.desc || '';
@@ -22,7 +43,7 @@ export async function generateMetadata({ params }) {
       .replace(/^-+|-+$/g, '') || 'service';
 
   const canonical = `https://www.webfoundersusa.com/service/${slugify(
-    parentService?.id || parentService?.name || id
+    parentService?.id || parentService?.name || SERVICE_ID
   )}/${slugify(subCategory?.id || sub)}`;
 
   return {
@@ -44,9 +65,20 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-  const resolvedParams = await params;
-  const serviceId = resolvedParams?.id || "seo-services";
-  const normalizedParams = { ...resolvedParams, id: serviceId };
+  const { sub } = await params;
+  const parent = getServiceById(SERVICE_ID);
+  const service = getSubCategory(SERVICE_ID, sub);
 
-  return <SubServiceDetailClient params={normalizedParams} />;
+  if (!parent || !service) {
+    notFound();
+  }
+
+  return (
+    <SubServiceDetailClient
+      parent={parent}
+      service={service}
+      serviceId={SERVICE_ID}
+      sub={sub}
+    />
+  );
 }
