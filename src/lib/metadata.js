@@ -1,8 +1,29 @@
 export const SITE_URL = "https://www.webfoundersusa.com";
 
-function toAbsoluteUrl(value) {
+function normalizePathname(pathname) {
+  if (!pathname || pathname === "/") {
+    return "/";
+  }
+
+  if (pathname.endsWith("/")) {
+    return pathname;
+  }
+
+  const lastSegment = pathname.split("/").pop() || "";
+
+  // Leave asset-like paths unchanged.
+  if (lastSegment.includes(".")) {
+    return pathname;
+  }
+
+  return `${pathname}/`;
+}
+
+export function toAbsoluteUrl(value) {
   if (value instanceof URL) {
-    return value.toString();
+    const url = new URL(value.toString());
+    url.pathname = normalizePathname(url.pathname);
+    return url.toString();
   }
 
   const normalizedValue = String(value || "").trim();
@@ -12,14 +33,19 @@ function toAbsoluteUrl(value) {
   }
 
   if (/^https?:\/\//i.test(normalizedValue)) {
-    return normalizedValue;
+    const url = new URL(normalizedValue);
+    url.pathname = normalizePathname(url.pathname);
+    return url.toString();
   }
 
   const normalizedPath = normalizedValue.startsWith("/")
     ? normalizedValue
     : `/${normalizedValue}`;
 
-  return new URL(normalizedPath, SITE_URL).toString();
+  const url = new URL(normalizedPath, SITE_URL);
+  url.pathname = normalizePathname(url.pathname);
+
+  return url.toString();
 }
 
 export function buildAlternates(canonical) {
