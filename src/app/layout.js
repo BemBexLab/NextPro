@@ -6,6 +6,27 @@ import HeaderTwo from "@/components/sections/headers/headerTwo";
 import ClientEnhancements from "@/components/ClientEnhancements";
 import { withEnUsHreflang } from "@/lib/metadata";
 
+const themeInitScript = `
+(() => {
+  const storageKey = "theme";
+  const defaultTheme = "light";
+  const storedTheme = localStorage.getItem(storageKey);
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+
+  const resolvedTheme =
+    storedTheme === "system"
+      ? systemTheme
+      : storedTheme || defaultTheme;
+
+  const root = document.documentElement;
+  root.classList.remove("light", "dark");
+  root.classList.add(resolvedTheme);
+  root.style.colorScheme = resolvedTheme;
+})();
+`;
+
 export const metadata = withEnUsHreflang({
   title: "WebFoundersUSA",
   description:
@@ -28,6 +49,9 @@ export default function RootLayout({ children }) {
         className="font-sans"
         suppressHydrationWarning={true}
       >
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeInitScript}
+        </Script>
         <Script
           id="google-tag-manager"
           strategy="afterInteractive"
