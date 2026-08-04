@@ -2,6 +2,7 @@ import { getAllWpPosts } from "@/app/blog/wpPosts";
 import { SITE_URL, toAbsoluteUrl } from "@/lib/metadata";
 import { localStaticBlogSlugs } from "@/lib/localStaticBlogSlugs";
 import { services } from "@/data/services";
+import { services as seoServices } from "@/app/service/seo-services/components/subservices";
 
 const PROJECTS_ENDPOINT =
   "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts";
@@ -50,10 +51,10 @@ async function safeFetchJson(url, init) {
   }
 }
 
-function getServiceEntries() {
+function getServiceEntries(serviceList = services) {
   const entries = [];
 
-  for (const service of services) {
+  for (const service of serviceList) {
     entries.push(toSitemapEntry(`/service/${service.id}/`));
 
     for (const subCategory of service.sub_categories || []) {
@@ -109,6 +110,7 @@ export default async function sitemap() {
   const entries = [
     ...staticRoutes.map((route) => toSitemapEntry(route)),
     ...getServiceEntries(),
+    ...getServiceEntries(seoServices),
     ...getLocalBlogEntries(),
     ...(await getCmsBlogEntries()),
     ...(await getProjectEntries()),
