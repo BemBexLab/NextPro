@@ -1,7 +1,18 @@
 import React from 'react';
 import SubServiceDetailClient from './SubServiceDetailClient';
-import { getSubCategory, getServiceById } from '@/data/services';
+import { getSubCategory, getServiceById, services } from '@/data/services';
 import { withEnUsHreflang } from "@/lib/metadata";
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return services.flatMap((service) =>
+    (service.sub_categories || []).map((subCategory) => ({
+      id: service.id,
+      sub: subCategory.slug || subCategory.id,
+    })),
+  );
+}
 
 export async function generateMetadata({ params }) {
   const { id, sub } = await params;
