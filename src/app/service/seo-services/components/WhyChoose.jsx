@@ -1,57 +1,94 @@
-import React from "react";
+function renderParagraph(paragraph, index) {
+  if (typeof paragraph === "string") {
+    return <p key={index}>{paragraph}</p>;
+  }
 
-const WhyChoose = () => {
-  const features = [
-    { text: "SEO Experts Certified for Real Results", color: "bg-[#0052cc]" },
-    { text: "Proven Success Backed by Data", color: "bg-[#ff0000]" },
-    { text: "Clear Reports with Continuous Improvements", color: "bg-[#fbbc05]" },
-    { text: "SEO Strategies Customized for Your Audience", color: "bg-[#0052cc]" },
-    { text: "Personal SEO Manager for Dedicated Support", color: "bg-[#00875a]" },
-    { text: "Reliable Partners Committed to Your Growth", color: "bg-[#ff0000]" },
-  ];
+  return <p key={index}>{paragraph}</p>;
+}
+
+function getFeatureDescription(item) {
+  return item.description ?? item.desc ?? "";
+}
+
+function renderFeatureDescription(item) {
+  const description = getFeatureDescription(item);
+
+  if (item.descHtml) {
+    return (
+      <p
+        className="mt-2 text-sm leading-relaxed text-gray-700"
+        dangerouslySetInnerHTML={{ __html: item.descHtml }}
+      />
+    );
+  }
+
+  if (!description) {
+    return null;
+  }
 
   return (
-    <section className="w-full bg-white py-20">
-      <div className="w-[92%] max-w-[1400px] mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-medium text-[#0749A7]">
-            Why Choose Our SEO Services?
-          </h2>
-        </div>
+    <p className="mt-2 text-sm leading-relaxed text-gray-700">
+      {description}
+    </p>
+  );
+}
 
-        {/* Content Paragraphs */}
-        <div className="max-w-7xl mx-auto mb-16">
-          <div className="space-y-6 text-gray-700 text-[16px] leading-relaxed text-center">
-            <p>
-              Fixing errors lifts rankings fast with focused <strong>on page Digital visibility services</strong>. Spotting hidden problems on your site uncovers roadblocks
-              holding things back. Start with small changes - they deliver
-              speedier outcomes without delay. Pages that run smoother pull in
-              more visitors naturally. Progress shows when layout makes sense
-              plus words say exactly what matters. People stay longer if they
-              find what they need. Over time, interest naturally turns into
-              action through steady <strong>Organic growth services</strong>. No tricks, just hard
-              work behind the scenes.
-            </p>
+const WhyChoose = ({
+  title,
+  paragraphs = [],
+  features = [],
+  className = "",
+  containerClassName = "mx-auto w-[92%] max-w-[1400px]",
+  gridClassName = "grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-6",
+}) => {
+  if (!title && !paragraphs.length && !features.length) {
+    return null;
+  }
+
+  return (
+    <section className={`w-full bg-white py-10 ${className}`}>
+      <div className={containerClassName}>
+        {title ? (
+          <div className="mb-12 text-center">
+            <h2 className="text-4xl font-medium text-[#0749A7]">{title}</h2>
           </div>
-        </div>
+        ) : null}
 
-        {/* --- Image Feature Cards Section --- */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {features.map((item, index) => (
-            <div 
-              key={index} 
-              className="bg-[#F8F9FA] p-6 rounded-lg flex items-start shadow-sm border border-gray-50 h-full"
-            >
-              {/* Vertical Color Bar */}
-              <div className={`w-1 h-full min-h-[60px] ${item.color} mr-4 shrink-0`} />
-              
-              <p className="text-[#3c4043] text-sm font-normal leading-snug self-center">
-                {item.text}
-              </p>
+        {paragraphs.length ? (
+          <div className="mx-auto mb-16 max-w-7xl">
+            <div className="space-y-6 text-center text-[16px] leading-relaxed text-gray-700">
+              {paragraphs.map((paragraph, index) => renderParagraph(paragraph, index))}
             </div>
-          ))}
-        </div>
+          </div>
+        ) : null}
+
+        {features.length ? (
+          <div className={gridClassName}>
+            {features.map((item, index) => (
+              <div
+                key={item.id || item.text || index}
+                className="flex h-full items-start rounded-lg border border-gray-50 bg-[#F8F9FA] p-6 shadow-sm"
+              >
+                <div
+                  className={`mr-4 h-full min-h-[60px] w-1 shrink-0 ${item.color || "bg-[#0052cc]"}`}
+                />
+
+                {item.title ? (
+                  <div className="self-center">
+                    <h3 className="text-lg font-semibold text-[#072d7f]">
+                      {item.title}
+                    </h3>
+                    {renderFeatureDescription(item)}
+                  </div>
+                ) : (
+                  <p className="self-center text-sm font-normal leading-snug text-[#3c4043]">
+                    {item.text}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        ) : null}
       </div>
     </section>
   );

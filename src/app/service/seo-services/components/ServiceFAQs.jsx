@@ -37,7 +37,7 @@ export default function ServiceFAQs({
 
   return (
     <section
-      className={`mt-[130px] flex w-full flex-col items-center justify-center px-4 py-16 ${className}`}
+      className={` flex w-full flex-col items-center justify-center px-4 py-16 ${className}`}
     >
       {includeSchema ? <FaqJsonLd faqs={schemaFaqs} /> : null}
       <div className="w-full max-w-5xl">

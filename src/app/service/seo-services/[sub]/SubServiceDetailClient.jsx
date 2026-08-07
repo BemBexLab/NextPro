@@ -2,7 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { IoCall } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
-import FaqJsonLd from "@/components/seo/FaqJsonLd";
+import SEOProcess from "../components/SEOProcess";
+import WhyChoose from "../components/WhyChoose";
+import ServiceFAQs from "../components/ServiceFAQs";
 
 function toTitleCase(value) {
   if (!value) return "";
@@ -28,11 +30,71 @@ function renderRichBlock(content, key) {
   return <div key={key}>{content}</div>;
 }
 
-export default function SubServiceDetailPage({ parent, service, serviceId, sub }) {
+function getServiceFaqs(service) {
+  return (service.faqs || []).map((faq) => {
+    if (typeof faq.answer !== "string") {
+      return faq;
+    }
+
+    return {
+      ...faq,
+      answerHtml: formatHtml(faq.answer).__html,
+    };
+  });
+}
+
+const whyChooseColors = [
+  "bg-[#0052cc]",
+  "bg-[#ff0000]",
+  "bg-[#fbbc05]",
+  "bg-[#00875a]",
+];
+
+function getServiceWhyChoose(service) {
+  return {
+    title: `Why Choose Our ${service.title}`,
+    features: (service.whyChoose || []).map((item, index) => ({
+      ...item,
+      color: item.color || whyChooseColors[index % whyChooseColors.length],
+      descHtml:
+        typeof item.desc === "string"
+          ? formatHtml(item.desc).__html
+          : undefined,
+    })),
+  };
+}
+
+function getServiceProcess(service) {
+  return {
+    title: service.tab?.title || "",
+    steps: (service.tab?.steps || []).map(
+      ({ id, tab_name, heading, description }, index) => ({
+        id,
+        number: String(index + 1),
+        label: tab_name,
+        title: heading,
+        descriptionHtml:
+          typeof description === "string"
+            ? formatHtml(description).__html
+            : undefined,
+        description,
+      }),
+    ),
+  };
+}
+
+export default function SubServiceDetailPage({
+  parent,
+  service,
+  serviceId,
+  sub,
+}) {
+  const serviceFaqs = getServiceFaqs(service);
+  const serviceWhyChoose = getServiceWhyChoose(service);
+  const serviceProcess = getServiceProcess(service);
+
   return (
     <div className="bg-white text-gray-900">
-      <FaqJsonLd faqs={service.faqs || []} />
-
       <section className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] py-16 text-white md:py-24">
         <div className="mx-auto max-w-7xl px-4 text-center">
           <h1 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
@@ -45,7 +107,10 @@ export default function SubServiceDetailPage({ parent, service, serviceId, sub }
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center justify-center gap-2 text-sm text-gray-200">
                 <li>
-                  <Link href="/" className="text-white transition-colors hover:text-[#d7e6ff]">
+                  <Link
+                    href="/"
+                    className="text-white transition-colors hover:text-[#d7e6ff]"
+                  >
                     Home
                   </Link>
                 </li>
@@ -68,7 +133,9 @@ export default function SubServiceDetailPage({ parent, service, serviceId, sub }
                   </Link>
                 </li>
                 <li aria-hidden="true">{">"}</li>
-                <li className="font-medium text-white">{toTitleCase(service.title || sub)}</li>
+                <li className="font-medium text-white">
+                  {toTitleCase(service.title || sub)}
+                </li>
               </ol>
             </nav>
           </div>
@@ -132,147 +199,20 @@ export default function SubServiceDetailPage({ parent, service, serviceId, sub }
         </div>
       </section>
 
-      {service.tab?.steps?.length > 0 && (
-        <section className="bg-[#F4F6FF] py-12 md:py-20">
-          <div className="mx-auto max-w-[1350px] px-[15px]">
-            <div className="mb-12 flex flex-col items-center">
-              <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#072d7f]">
-                Our Strategy
-              </span>
-              <h2 className="max-w-[800px] pt-4 text-center text-3xl font-bold md:text-4xl">
-                <span className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] bg-clip-text text-transparent">
-                  {service.tab.title}
-                </span>
-              </h2>
-            </div>
+      {serviceProcess.steps.length ? (
+        <SEOProcess title={serviceProcess.title} steps={serviceProcess.steps} />
+      ) : null}
 
-            <div className="grid gap-5 md:gap-6">
-              {service.tab.steps.map(({ id: stepId, tab_name, heading, description }, index) => (
-                <article
-                  key={stepId}
-                  className="rounded-[24px] border border-[#dbe4ff] bg-white px-6 py-6 shadow-sm md:px-8 md:py-8"
-                >
-                  <span className="inline-flex rounded-full bg-[#F4F6FF] px-4 py-2 text-sm font-semibold text-[#072d7f]">
-                    Step {index + 1}: {tab_name}
-                  </span>
-                  <h3 className="mt-4 text-2xl font-bold text-[#072d7f] md:text-3xl">
-                    {heading}
-                  </h3>
-                  <p
-                    className="pt-5 text-base leading-relaxed text-gray-700 md:text-lg"
-                    dangerouslySetInnerHTML={formatHtml(description)}
-                  />
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      {serviceWhyChoose.features.length ? (
+        <WhyChoose
+          title={serviceWhyChoose.title}
+          features={serviceWhyChoose.features}
+          containerClassName="mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10"
+          gridClassName="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
+        />
+      ) : null}
 
-      {service.whyChoose?.length > 0 && (
-        <section className="bg-white py-12 md:py-16">
-          <div className="mx-auto max-w-7xl px-4">
-            <div className="mb-12 text-center md:mb-16">
-              <p className="mb-3 text-sm font-semibold text-[#FF3C1B] md:text-base">Why Choose</p>
-              <h2 className="text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
-                <span className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] bg-clip-text text-transparent">
-                  Why Choose Our {service.title}
-                </span>
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {service.whyChoose.map((item, index) => (
-                <div
-                  key={index}
-                  className="rounded-[20px] border border-transparent bg-[#F4F6FF] p-6 shadow-lg"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full text-[#072d7f]">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M20 6L9 17l-5-5"
-                          stroke="#072d7f"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-[#072d7f]">{item.title}</h3>
-                      <p
-                        className="mt-2 text-sm leading-relaxed text-gray-700"
-                        dangerouslySetInnerHTML={formatHtml(item.desc)}
-                      />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold md:text-4xl">Frequently Asked Questions</h2>
-        </div>
-
-        <div className="space-y-4">
-          {(service.faqs || []).map((faq, index) => (
-            <details
-              key={index}
-              className="group overflow-hidden rounded-xl border border-gray-200 bg-white"
-              open={index === 0}
-            >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 bg-white p-5 text-left transition-colors hover:bg-gray-50">
-                <span className="text-lg font-semibold">{faq.question}</span>
-                <svg
-                  className="shrink-0 transform transition-transform duration-200 group-open:rotate-180"
-                  width={20}
-                  height={20}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="border-t border-gray-200 bg-white p-5 pt-3">
-                {typeof faq.answer === "string" ? (
-                  <p
-                    className="text-gray-700"
-                    dangerouslySetInnerHTML={formatHtml(faq.answer)}
-                  />
-                ) : (
-                  <div className="text-gray-700">{faq.answer}</div>
-                )}
-              </div>
-            </details>
-          ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <Link
-            href="/contact-us"
-            className="inline-block rounded-lg border-2 border-[#072d7f] px-6 py-3 font-semibold text-[#072d7f] transition-colors hover:bg-[#072d7f] hover:text-white"
-          >
-            Start Your Journey
-          </Link>
-        </div>
-      </section>
+      <ServiceFAQs faqs={serviceFaqs} title="Frequently Asked Questions" />
     </div>
   );
 }

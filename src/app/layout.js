@@ -49,9 +49,9 @@ export default function RootLayout({ children }) {
         className="font-sans"
         suppressHydrationWarning={true}
       >
-        <Script id="theme-init" strategy="beforeInteractive">
+        {/* <Script id="theme-init" strategy="beforeInteractive">
           {themeInitScript}
-        </Script>
+        </Script> */}
         <Script
           id="google-tag-manager"
           strategy="afterInteractive"
