@@ -116,7 +116,10 @@ export default function SubServiceHero({
           ) : null}
 
           {title ? (
-            <h1 className="mt-10 text-4xl font-bold leading-tight drop-shadow-md">
+            <h1
+              className="mt-10 text-4xl font-bold leading-tight drop-shadow-md"
+              style={{ width: "50vw", maxWidth: "50vw" }}
+            >
               {title}
             </h1>
           ) : null}
