@@ -1,10 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
-import { IoCall } from "react-icons/io5";
-import { Button } from "@/components/ui/button";
 import SEOProcess from "../components/SEOProcess";
 import WhyChoose from "../components/WhyChoose";
 import ServiceFAQs from "../components/ServiceFAQs";
+import SubServiceHero from "../components/SubServiceHero";
 
 function toTitleCase(value) {
   if (!value) return "";
@@ -83,6 +81,47 @@ function getServiceProcess(service) {
   };
 }
 
+function getServiceHero(parent, service, serviceId, sub) {
+  const introParagraphs = service.introParagraphs || [];
+  const description = (
+    <div className="max-h-[45vh] w-full max-w-full space-y-4 overflow-y-auto pr-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      {introParagraphs.length
+        ? introParagraphs.map((paragraph, index) =>
+            renderRichBlock(paragraph, index),
+          )
+        : renderRichBlock(service.hero?.paragraph || service.desc, 0)}
+      {serviceId === "custom-website-design" && (
+        <Link
+          href={`/service/${serviceId}`}
+          className="mt-4 inline-block rounded-lg border border-white bg-white px-3 py-2 text-[#0b63b8] transition-colors hover:bg-transparent hover:text-white"
+        >
+          Custom Website Design Services
+        </Link>
+      )}
+    </div>
+  );
+
+  return {
+    title: service.title || toTitleCase(sub),
+    description,
+    imageSrc: service.hero?.image,
+    imageAlt: `${service.title || toTitleCase(sub)} hero background`,
+    breadcrumbs: [
+      { label: "Home", href: "/" },
+      { label: "Service", href: "/service" },
+      {
+        label: toTitleCase(parent.title || serviceId),
+        href: `/service/${serviceId}`,
+      },
+      { label: toTitleCase(service.title || sub) },
+    ],
+    actions: [
+      { label: "Contact Us", href: "/contact-us" },
+      { label: "About Us", href: "/about-us", variant: "secondary" },
+    ],
+  };
+}
+
 export default function SubServiceDetailPage({
   parent,
   service,
@@ -92,112 +131,19 @@ export default function SubServiceDetailPage({
   const serviceFaqs = getServiceFaqs(service);
   const serviceWhyChoose = getServiceWhyChoose(service);
   const serviceProcess = getServiceProcess(service);
+  const serviceHero = getServiceHero(parent, service, serviceId, sub);
 
   return (
     <div className="bg-white text-gray-900">
-      <section className="bg-gradient-to-r from-[#072d7f] to-[#A7C7E7] py-16 text-white md:py-24">
-        <div className="mx-auto max-w-7xl px-4 text-center">
-          <h1 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
-            <span className="bg-gradient-to-r from-[#ffb199] to-white bg-clip-text text-transparent">
-              {service.title}
-            </span>
-          </h1>
-
-          <div className="mx-auto max-w-7xl px-4 pt-6">
-            <nav aria-label="Breadcrumb">
-              <ol className="flex items-center justify-center gap-2 text-sm text-gray-200">
-                <li>
-                  <Link
-                    href="/"
-                    className="text-white transition-colors hover:text-[#d7e6ff]"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li aria-hidden="true">{">"}</li>
-                <li>
-                  <Link
-                    href="/service"
-                    className="text-white transition-colors hover:text-[#d7e6ff]"
-                  >
-                    Service
-                  </Link>
-                </li>
-                <li aria-hidden="true">{">"}</li>
-                <li>
-                  <Link
-                    href={`/service/${serviceId}`}
-                    className="text-white transition-colors hover:text-[#d7e6ff]"
-                  >
-                    {toTitleCase(parent.title || serviceId)}
-                  </Link>
-                </li>
-                <li aria-hidden="true">{">"}</li>
-                <li className="font-medium text-white">
-                  {toTitleCase(service.title || sub)}
-                </li>
-              </ol>
-            </nav>
-          </div>
-
-          <div className="mt-8 flex items-center justify-center gap-5">
-            <a
-              href="tel:+14704707392"
-              className="group flex items-center gap-3"
-              aria-label="Call us"
-            >
-              <div className="flex h-14 w-14 items-center justify-center rounded-full border-primary bg-primary transition group-hover:bg-primary/80">
-                <div className="flex items-center justify-center text-white">
-                  <IoCall size={30} />
-                </div>
-              </div>
-              <span className="text-base font-semibold text-white group-hover:underline">
-                +1 470-470-7392
-              </span>
-            </a>
-
-            <Button asChild size="xl">
-              <Link className="text-foreground" href="/contact-us">
-                Contact Us
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-        <div className="flex flex-col h-[50vh] gap-8 md:flex-row">
-          <div className="flex-1 h-full overflow-y-auto pr-4 space-y-4 text-base leading-relaxed text-gray-700 md:text-lg">
-            {(service.introParagraphs || []).map((paragraph, index) =>
-              renderRichBlock(paragraph, index),
-            )}
-            {serviceId === "custom-website-design" && (
-              <Link
-                href={`/service/${serviceId}`}
-                className="mt-4 inline-block rounded-lg border border-blue-800 bg-blue-800 p-2 text-white transition-colors hover:bg-white hover:text-blue-800"
-              >
-                Custom Website Design Services
-              </Link>
-            )}
-          </div>
-
-          <div className="flex flex-1 justify-center">
-            <div className="w-full" style={{ aspectRatio: "1 / 1" }}>
-              {service.hero?.image ? (
-                <Image
-                  src={service.hero.image}
-                  alt={service.title}
-                  width={300}
-                  height={300}
-                  className="h-full w-full rounded-lg object-cover"
-                />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center rounded-lg bg-gray-100" />
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
+      <SubServiceHero
+        title={serviceHero.title}
+        description={serviceHero.description}
+        imageSrc={serviceHero.imageSrc}
+        imageAlt={serviceHero.imageAlt}
+        breadcrumbs={serviceHero.breadcrumbs}
+        actions={serviceHero.actions}
+        containerClassName="relative mx-auto grid w-full grid-cols-12 items-start gap-8 px-4 sm:px-6 lg:px-10"
+      />
 
       {serviceProcess.steps.length ? (
         <SEOProcess title={serviceProcess.title} steps={serviceProcess.steps} />
