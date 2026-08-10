@@ -63,8 +63,13 @@ function getServiceWhyChoose(service) {
 }
 
 function getServiceProcess(service) {
+  const description = service.tab?.description || "";
+
   return {
     title: service.tab?.title || "",
+    description,
+    descriptionHtml:
+      typeof description === "string" ? formatHtml(description).__html : undefined,
     steps: (service.tab?.steps || []).map(
       ({ id, tab_name, heading, description }, index) => ({
         id,
@@ -83,6 +88,10 @@ function getServiceProcess(service) {
 
 function getServiceHero(parent, service, serviceId, sub) {
   const introParagraphs = service.introParagraphs || [];
+  const actions = service.hero?.actions || service.actions || [
+    { label: "Contact Us", href: "/contact-us" },
+    { label: "About Us", href: "/about-us", variant: "secondary" },
+  ];
   const description = (
     <div className="max-h-[45vh] w-full max-w-full space-y-4 overflow-y-auto pr-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {introParagraphs.length
@@ -115,10 +124,7 @@ function getServiceHero(parent, service, serviceId, sub) {
       },
       { label: toTitleCase(service.title || sub) },
     ],
-    actions: [
-      { label: "Contact Us", href: "/contact-us" },
-      { label: "About Us", href: "/about-us", variant: "secondary" },
-    ],
+    actions,
   };
 }
 
@@ -146,7 +152,12 @@ export default function SubServiceDetailPage({
       />
 
       {serviceProcess.steps.length ? (
-        <SEOProcess title={serviceProcess.title} steps={serviceProcess.steps} />
+        <SEOProcess
+          title={serviceProcess.title}
+          description={serviceProcess.description}
+          descriptionHtml={serviceProcess.descriptionHtml}
+          steps={serviceProcess.steps}
+        />
       ) : null}
 
       {serviceWhyChoose.features.length ? (

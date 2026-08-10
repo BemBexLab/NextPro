@@ -19,12 +19,35 @@ function renderStepDescription(step) {
   );
 }
 
+function renderSectionDescription(description, descriptionHtml) {
+  if (descriptionHtml) {
+    return (
+      <p
+        className="mb-16 max-w-4xl text-lg leading-relaxed text-white/90"
+        dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+      />
+    );
+  }
+
+  if (!description) {
+    return null;
+  }
+
+  return (
+    <p className="mb-16 max-w-4xl text-lg leading-relaxed text-white/90">
+      {description}
+    </p>
+  );
+}
+
 function getStepLabel(step) {
   return step?.label ?? step?.tabName ?? step?.tab_name ?? "";
 }
 
 const SEOProcess = ({
   title,
+  description = "",
+  descriptionHtml = "",
   steps = [],
   className = "",
   containerClassName = "mx-auto w-[92%] max-w-[1200px]",
@@ -37,10 +60,12 @@ const SEOProcess = ({
     <section className={`w-full bg-[#0B5FCC] py-20 ${className}`}>
       <div className={containerClassName}>
         {title ? (
-          <h2 className="mb-16 text-[40px] font-semibold leading-snug text-white">
+          <h2 className="mb-6 text-[40px] font-semibold leading-snug text-white">
             {title}
           </h2>
         ) : null}
+
+        {renderSectionDescription(description, descriptionHtml)}
 
         <div className="relative">
           <div className="absolute bottom-0 left-[23px] top-0 w-[2px] bg-white/30"></div>
