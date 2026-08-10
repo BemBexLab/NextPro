@@ -1158,10 +1158,10 @@ export const services = [
           "If you operate a car dealership, auto repair shop, auto parts store, truck company, collision center, or another automotive business, our advanced SEO strategies are built to help you rank higher for the keywords that matter most. From local SEO and technical optimization to content marketing, link building, and reputation management, we create customized campaigns that deliver measurable business growth.",
           "Instead of relying on expensive paid advertising for every lead, invest in a sustainable SEO strategy that consistently generates qualified organic traffic, builds trust with potential customers, and increases your return on investment.",
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug">
               With our automotive SEO services, you can:
             </h2>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>
                 Increase your rankings on Google and other search engines.
               </li>
@@ -1192,7 +1192,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               Drive More Qualified Traffic. Generate More Sales
             </h2>
             <p>
@@ -1212,7 +1212,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               What Are Automotive SEO Services?
             </h2>
             <p>
@@ -1253,7 +1253,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               What Does Automotive SEO Include?
             </h2>
             <p>
@@ -1261,7 +1261,7 @@ export const services = [
               optimization strategies that work together to improve your online
               visibility and drive long-term results. These include:
             </p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>
                 Comprehensive SEO audits to uncover technical and content
                 issues.
@@ -1314,7 +1314,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               Why Automotive Businesses Need Specialized SEO
             </h2>
             <p>
@@ -1343,7 +1343,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               Why SEO Is Essential for Automotive Businesses
             </h2>
             <p>
@@ -1367,7 +1367,7 @@ export const services = [
               qualified traffic, phone calls, and conversions over time.
             </p>
 
-            <h3 className="text-md md:text-xl font-semibold leading-snug text-black">
+            <h3 className="text-md md:text-xl font-semibold leading-snug ">
               Capture High-Intent Customers
             </h3>
             <p>
@@ -1378,7 +1378,7 @@ export const services = [
               audiences reached through interruption-based advertising.
             </p>
             <p>Whether someone searches for:</p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Car dealerships near me</li>
               <li>Auto repair services</li>
               <li>Brake repair</li>
@@ -1395,7 +1395,7 @@ export const services = [
               research to final purchase.
             </p>
 
-            <h3 className="text-md md:text-xl font-semibold leading-snug text-black">
+            <h3 className="text-md md:text-xl font-semibold leading-snug ">
               Dominate Local Search Results
             </h3>
             <p>
@@ -1405,7 +1405,7 @@ export const services = [
               search rankings.
             </p>
             <p>A comprehensive local SEO strategy helps you:</p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Rank higher in Google Maps.</li>
               <li>Improve your Google Business Profile visibility.</li>
               <li>Build consistent local citations.</li>
@@ -1421,7 +1421,7 @@ export const services = [
               purchasing decisions.
             </p>
 
-            <h3 className="text-md md:text-xl font-semibold leading-snug text-black">
+            <h3 className="text-md md:text-xl font-semibold leading-snug ">
               Build Trust Before Customers Contact You
             </h3>
             <p>
@@ -1432,7 +1432,7 @@ export const services = [
             <p>
               That's why successful SEO for the automotive industry includes:
             </p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>High-quality, informative content.</li>
               <li>Fast-loading, mobile-friendly pages.</li>
               <li>Secure and technically optimized websites.</li>
@@ -1447,7 +1447,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               Stay Ahead of Local Competitors
             </h2>
             <p>
@@ -1468,7 +1468,7 @@ export const services = [
               long-term visibility and maintain a competitive edge.
             </p>
 
-            <h3 className="text-md md:text-xl font-semibold leading-snug text-black">
+            <h3 className="text-md md:text-xl font-semibold leading-snug ">
               Generate Sustainable Business Growth
             </h3>
             <p>
@@ -1482,7 +1482,7 @@ export const services = [
               Our automotive SEO agency focuses on measurable outcomes that
               matter most, including:
             </p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Higher keyword rankings.</li>
               <li>Increased organic traffic.</li>
               <li>More qualified leads.</li>
@@ -1503,7 +1503,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               Our Automotive SEO Services
             </h2>
             <p>
@@ -1528,7 +1528,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               Comprehensive SEO Audit for Automotive Websites
             </h2>
             <p>
@@ -1538,7 +1538,7 @@ export const services = [
               strategies, and areas where your website can improve.
             </p>
             <p>Our audit process analyzes:</p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Website structure and navigation.</li>
               <li>Technical SEO issues.</li>
               <li>Page speed and Core Web Vitals.</li>
@@ -1557,7 +1557,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               Automotive Keyword Research & Strategy
             </h2>
             <p>
@@ -1567,7 +1567,7 @@ export const services = [
               and services.
             </p>
             <p>We focus on high intent keywords related to:</p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Vehicle sales.</li>
               <li>Auto repair services.</li>
               <li>Maintenance services.</li>
@@ -1584,7 +1584,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               On-Page SEO Optimization
             </h2>
             <p>
@@ -1594,7 +1594,7 @@ export const services = [
               user experience.
             </p>
             <p>We optimize:</p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Page titles and meta descriptions.</li>
               <li>Heading structures.</li>
               <li>Service pages.</li>
@@ -1614,7 +1614,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               Technical SEO for Automotive Websites
             </h2>
             <p>
@@ -1623,7 +1623,7 @@ export const services = [
               accessibility, and search engine crawlability.
             </p>
             <p>We optimize:</p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Website speed.</li>
               <li>Mobile performance.</li>
               <li>XML sitemaps.</li>
@@ -1642,7 +1642,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               Local SEO for Automotive Businesses
             </h2>
             <p>
@@ -1653,7 +1653,7 @@ export const services = [
             <p>
               Our local SEO services help businesses improve visibility across:
             </p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Google Search.</li>
               <li>Google Maps.</li>
               <li>Local listings.</li>
@@ -1661,7 +1661,7 @@ export const services = [
               <li>Review platforms.</li>
             </ul>
             <p>We optimize:</p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Google Business Profile.</li>
               <li>Local citations.</li>
               <li>NAP consistency.</li>
@@ -1677,7 +1677,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               Automotive Content Marketing
             </h2>
             <p>
@@ -1685,7 +1685,7 @@ export const services = [
               questions, build authority, and rank for valuable search terms.
             </p>
             <p>Our content strategies include:</p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Automotive service pages.</li>
               <li>Location-based content.</li>
               <li>Educational blog articles.</li>
@@ -1702,7 +1702,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               Automotive Link Building & Authority Growth
             </h2>
             <p>
@@ -1712,7 +1712,7 @@ export const services = [
               high-quality backlinks.
             </p>
             <p>Our approach focuses on:</p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Industry-relevant links.</li>
               <li>Digital PR opportunities.</li>
               <li>Local business mentions.</li>
@@ -1726,7 +1726,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               Automotive Reputation Management
             </h2>
             <p>
@@ -1735,7 +1735,7 @@ export const services = [
               dealership, repair shop, or service provider.
             </p>
             <p>Our reputation management solutions help you:</p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Monitor online reviews.</li>
               <li>Encourage positive customer feedback.</li>
               <li>Respond professionally to reviews.</li>
@@ -1749,7 +1749,7 @@ export const services = [
           </div>,
 
           <div className="space-y-3">
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug text-black">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug ">
               SEO Reporting & Performance Tracking
             </h2>
             <p>
@@ -1758,7 +1758,7 @@ export const services = [
               business growth.
             </p>
             <p>We track:</p>
-            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-700">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-base md:text-lg leading-relaxed text-gray-300">
               <li>Keyword rankings.</li>
               <li>Organic traffic.</li>
               <li>Leads generated.</li>
