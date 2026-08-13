@@ -2,7 +2,15 @@ import Link from "next/link";
 import SEOProcess from "../components/SEOProcess";
 import WhyChoose from "../components/WhyChoose";
 import ServiceFAQs from "../components/ServiceFAQs";
-import SubServiceHero from "../components/SubServiceHero";
+import ServiceHero from "../components/ServiceHero";
+import ExpertsPage from "../components/ExpertsPage";
+import OurPartners from "../components/OurPartners";
+import LocalSEOServices from "../components/LocalSEOServices";
+import AIDiscoveryChannels from "../components/AIDiscoveryChannels";
+import SuccessStories from "../components/SuccessStories";
+import SEOComparison from "../components/SEOComparison";
+import Testimonials from "../components/Testimonials";
+import RequestAFree from "../components/RequestAFree";
 
 function toTitleCase(value) {
   if (!value) return "";
@@ -49,16 +57,36 @@ const whyChooseColors = [
 ];
 
 function getServiceWhyChoose(service) {
+  const config = service.whyChooseData || {};
+  const sourceFeatures = config.features || service.whyChoose || [];
+  const features = sourceFeatures.map((item, index) => ({
+    ...item,
+    color: item.color || whyChooseColors[index % whyChooseColors.length],
+    descHtml:
+      item.descHtml ||
+      (typeof item.desc === "string" ? formatHtml(item.desc).__html : undefined),
+  }));
+
   return {
-    title: `Why Choose Our ${service.title}`,
-    features: (service.whyChoose || []).map((item, index) => ({
-      ...item,
-      color: item.color || whyChooseColors[index % whyChooseColors.length],
-      descHtml:
-        typeof item.desc === "string"
-          ? formatHtml(item.desc).__html
-          : undefined,
-    })),
+    title: config.title || `Why Choose Our ${service.title}`,
+    description: config.description,
+    descriptionHtml: config.descriptionHtml,
+    paragraphs: config.paragraphs || [],
+    features,
+    className: config.className,
+    containerClassName:
+      config.containerClassName ||
+      "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
+    gridClassName:
+      config.gridClassName ||
+      "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
+    hasContent: Boolean(
+      config.title ||
+        config.description ||
+        config.descriptionHtml ||
+        config.paragraphs?.length ||
+        features.length,
+    ),
   };
 }
 
@@ -69,7 +97,9 @@ function getServiceProcess(service) {
     title: service.tab?.title || "",
     description,
     descriptionHtml:
-      typeof description === "string" ? formatHtml(description).__html : undefined,
+      typeof description === "string"
+        ? formatHtml(description).__html
+        : undefined,
     steps: (service.tab?.steps || []).map(
       ({ id, tab_name, heading, description }, index) => ({
         id,
@@ -88,10 +118,11 @@ function getServiceProcess(service) {
 
 function getServiceHero(parent, service, serviceId, sub) {
   const introParagraphs = service.introParagraphs || [];
-  const actions = service.hero?.actions || service.actions || [
-    { label: "Contact Us", href: "/contact-us" },
-    { label: "About Us", href: "/about-us", variant: "secondary" },
-  ];
+  const actions = service.hero?.actions ||
+    service.actions || [
+      { label: "Contact Us", href: "/contact-us" },
+      { label: "About Us", href: "/about-us", variant: "secondary" },
+    ];
   const description = (
     <div className="max-h-[45vh] w-full max-w-full space-y-4 overflow-y-auto pr-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {introParagraphs.length
@@ -135,21 +166,71 @@ export default function SubServiceDetailPage({
   sub,
 }) {
   const serviceFaqs = getServiceFaqs(service);
+  const serviceFaqTitle = service.faqTitle || "Frequently Asked Questions";
   const serviceWhyChoose = getServiceWhyChoose(service);
   const serviceProcess = getServiceProcess(service);
   const serviceHero = getServiceHero(parent, service, serviceId, sub);
+  const requestAFreeData = service.requestAFreeData;
 
   return (
     <div className="bg-white text-gray-900">
-      <SubServiceHero
+      <ServiceHero
+        image={{
+          src: "/service-testing/Local-SEO-Agency-LocalMighty.webp",
+          alt: "SEO services hero background",
+        }}
+        breadcrumbs={serviceHero.breadcrumbs}
         title={serviceHero.title}
         description={serviceHero.description}
-        imageSrc={serviceHero.imageSrc}
-        imageAlt={serviceHero.imageAlt}
-        breadcrumbs={serviceHero.breadcrumbs}
         actions={serviceHero.actions}
-        containerClassName="relative mx-auto grid w-full grid-cols-12 items-start gap-8 px-4 sm:px-6 lg:px-10"
+        form={{
+          ariaLabel: "Contact Web Founders USA",
+          fields: [
+            {
+              name: "firstName",
+              placeholder: "First Name",
+              autoComplete: "given-name",
+              colSpan: 1,
+            },
+            {
+              name: "lastName",
+              placeholder: "Last Name",
+              autoComplete: "family-name",
+              colSpan: 1,
+            },
+            {
+              name: "email",
+              type: "email",
+              placeholder: "Email Address",
+              autoComplete: "email",
+            },
+            {
+              name: "website",
+              type: "url",
+              placeholder: "Website URL",
+              autoComplete: "url",
+            },
+            {
+              name: "phone",
+              type: "tel",
+              placeholder: "Phone",
+              autoComplete: "tel",
+            },
+            {
+              as: "textarea",
+              name: "message",
+              placeholder: "Message",
+            },
+          ],
+          submitLabel: "Send",
+        }}
       />
+
+      <ExpertsPage {...(service.expertPage || {})} />
+
+      <OurPartners />
+      <LocalSEOServices {...(service.localSEOserviceData || {})} />
+      <AIDiscoveryChannels {...(service.aiDiscoveryData || {})} />
 
       {serviceProcess.steps.length ? (
         <SEOProcess
@@ -160,16 +241,26 @@ export default function SubServiceDetailPage({
         />
       ) : null}
 
-      {serviceWhyChoose.features.length ? (
-        <WhyChoose
-          title={serviceWhyChoose.title}
-          features={serviceWhyChoose.features}
-          containerClassName="mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10"
-          gridClassName="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
+      <SuccessStories {...(service.successStoriesData || {})} />
+
+      {serviceWhyChoose.hasContent ? (
+        <WhyChoose {...serviceWhyChoose} />
+      ) : null}
+
+      <SEOComparison {...(service.seoComparisonData || {})} />
+
+      <Testimonials />
+
+      {requestAFreeData ? (
+        <RequestAFree
+          title={requestAFreeData.title}
+          paragraphs={requestAFreeData.paragraphs}
+          icon={requestAFreeData.icon}
+          cta={requestAFreeData.cta}
         />
       ) : null}
 
-      <ServiceFAQs faqs={serviceFaqs} title="Frequently Asked Questions" />
+      <ServiceFAQs faqs={serviceFaqs} title={serviceFaqTitle} />
     </div>
   );
 }

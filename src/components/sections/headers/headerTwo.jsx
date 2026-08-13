@@ -69,8 +69,8 @@ const HeaderTwo = ({ haveShadow }) => {
     setIsLoadingServices(true);
 
     try {
-      const module = await import("@/data/services");
-      setServiceLinks(mapServiceLinks(module.services));
+      const serviceModule = await import("@/data/services");
+      setServiceLinks(mapServiceLinks(serviceModule.services));
       setServicesReady(true);
     } finally {
       setIsLoadingServices(false);
@@ -85,8 +85,10 @@ const HeaderTwo = ({ haveShadow }) => {
     setIsLoadingSeo(true);
 
     try {
-      const module = await import("@/app/service/seo-services/components/subservices");
-      setSeoSubServices(mapSeoLinks(module.services));
+      const serviceModule = await import(
+        "@/app/service/seo-services/components/subservices"
+      );
+      setSeoSubServices(mapSeoLinks(serviceModule.services));
       setSeoReady(true);
     } finally {
       setIsLoadingSeo(false);
@@ -97,7 +99,7 @@ const HeaderTwo = ({ haveShadow }) => {
     <StickyHeader>
       <header
         id="header"
-        className="sticky top-0 z-40 w-full bg-background transition-[top] duration-300"
+        className="sticky top-0 z-40 w-full overflow-x-clip bg-background transition-[top] duration-300"
       >
         <div
           id="header-container"
@@ -114,22 +116,22 @@ const HeaderTwo = ({ haveShadow }) => {
                 : ""
             }`}
           >
-            <div className="container relative mx-auto">
+            <div className="relative mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8">
               <span className="block border-t border-accent"></span>
-              <div className="flex items-center justify-between">
-                <div className="py-5">
+              <div className="flex min-h-[72px] items-center justify-between gap-3 sm:min-h-[80px] xl:gap-4">
+                <div className="w-[140px] shrink-0 py-2 sm:w-[170px] lg:w-[190px] xl:w-[150px] 2xl:w-[190px] [&>div]:h-[56px] [&>div]:w-full sm:[&>div]:h-[64px] 2xl:[&>div]:h-[76px]">
                   <Logo />
                 </div>
 
-                <nav className="hidden xl:block">
-                  <ul className="flex items-center gap-6 text-[17px] 2xl:gap-10">
+                <nav className="hidden min-w-0 xl:block">
+                  <ul className="flex items-center gap-3 whitespace-nowrap text-sm 2xl:gap-7 2xl:text-base">
                     {navigationLinks.map(({ id, lable, path }) => {
                       const active = isActive(path);
 
                       if (lable === "Service") {
                         return (
                           <li
-                            className="relative pb-[42px] pt-[43px]"
+                            className="relative py-8 2xl:py-9"
                             key={id}
                             onMouseEnter={() => {
                               setOpenDropdown("service");
@@ -139,14 +141,14 @@ const HeaderTwo = ({ haveShadow }) => {
                           >
                             <Link
                               href={path}
-                              className={`relative flex items-center gap-1 font-semibold leading-[22px] transition-all duration-500 ${
+                              className={`relative flex items-center gap-0.5 font-semibold leading-[22px] transition-all duration-500 ${
                                 active ? "text-primary underline" : "text-muted-foreground"
                               } hover:text-primary-foreground`}
                               onClick={() => setOpenDropdown(null)}
                             >
                               {lable}
                               <svg
-                                className="ml-1 h-5 w-5"
+                                className="h-4 w-4 shrink-0 2xl:ml-0.5 2xl:h-5 2xl:w-5"
                                 fill="none"
                                 stroke="currentColor"
                                 strokeWidth={2}
@@ -157,7 +159,7 @@ const HeaderTwo = ({ haveShadow }) => {
                             </Link>
 
                             <div
-                              className={`absolute left-0 top-full z-30 w-72 rounded-xl bg-white shadow-2xl transition-all duration-200 ${
+                              className={`absolute left-0 top-full z-30 w-72 max-w-[calc(100vw-2rem)] rounded-xl bg-white shadow-2xl transition-all duration-200 ${
                                 openDropdown === "service"
                                   ? "pointer-events-auto translate-y-0 opacity-100"
                                   : "pointer-events-none translate-y-2 opacity-0"
@@ -189,7 +191,7 @@ const HeaderTwo = ({ haveShadow }) => {
                       if (lable === "SEO Services") {
                         return (
                           <li
-                            className="relative pb-[42px] pt-[43px]"
+                            className="relative py-8 2xl:py-9"
                             key={id}
                             onMouseEnter={() => {
                               setOpenDropdown("seo-services");
@@ -199,7 +201,7 @@ const HeaderTwo = ({ haveShadow }) => {
                           >
                             <Link
                               href={path}
-                              className={`relative flex items-center gap-1 font-semibold leading-[22px] transition-all duration-500 ${
+                              className={`relative flex items-center gap-0.5 font-semibold leading-[22px] transition-all duration-500 ${
                                 active
                                   ? "text-primary underline underline-offset-4"
                                   : "text-muted-foreground"
@@ -208,7 +210,7 @@ const HeaderTwo = ({ haveShadow }) => {
                             >
                               {lable}
                               <svg
-                                className="ml-1 h-5 w-5"
+                                className="h-4 w-4 shrink-0 2xl:ml-0.5 2xl:h-5 2xl:w-5"
                                 fill="none"
                                 stroke="currentColor"
                                 strokeWidth={2}
@@ -219,7 +221,7 @@ const HeaderTwo = ({ haveShadow }) => {
                             </Link>
 
                             <div
-                              className={`absolute left-0 top-full z-30 w-80 rounded-xl bg-white shadow-2xl transition-all duration-200 ${
+                              className={`absolute left-0 top-full z-30 w-80 max-w-[calc(100vw-2rem)] rounded-xl bg-white shadow-2xl transition-all duration-200 ${
                                 openDropdown === "seo-services"
                                   ? "pointer-events-auto translate-y-0 opacity-100"
                                   : "pointer-events-none translate-y-2 opacity-0"
@@ -249,7 +251,7 @@ const HeaderTwo = ({ haveShadow }) => {
                       }
 
                       return (
-                        <li className="pb-[42px] pt-[43px]" key={id}>
+                        <li className="py-8 2xl:py-9" key={id}>
                           <Link
                             href={path}
                             className={`relative flex items-center gap-1 font-semibold leading-[22px] transition-all duration-500 ${
@@ -266,19 +268,27 @@ const HeaderTwo = ({ haveShadow }) => {
                   </ul>
                 </nav>
 
-                <div className="hidden items-center gap-5 xl:flex">
-                  <a href="tel:+14704707392" className="group flex items-center gap-3">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full border-primary bg-primary transition group-hover:bg-primary/80">
+                <div className="hidden shrink-0 items-center gap-2 xl:flex 2xl:gap-4">
+                  <a
+                    href="tel:+14704707392"
+                    className="group flex shrink-0 items-center gap-2 2xl:gap-3"
+                    aria-label="Call +1 470-470-7392"
+                  >
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full border-primary bg-primary transition group-hover:bg-primary/80 2xl:h-12 2xl:w-12">
                       <div className="flex items-center justify-center text-white">
-                        <IoCall size={30} />
+                        <IoCall className="h-5 w-5 2xl:h-6 2xl:w-6" />
                       </div>
                     </div>
-                    <span className="text-base font-semibold text-primary group-hover:underline">
+                    <span className="hidden text-sm font-semibold text-primary group-hover:underline 2xl:inline 2xl:text-base">
                       +1 470-470-7392
                     </span>
                   </a>
 
-                  <Button asChild size="xl">
+                  <Button
+                    asChild
+                    size="xl"
+                    className="px-4 py-3 text-sm 2xl:px-7 2xl:text-base"
+                  >
                     <Link className="text-foreground" href="/contact-us">
                       Contact Us
                     </Link>

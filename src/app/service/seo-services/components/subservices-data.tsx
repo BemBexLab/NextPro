@@ -1,5 +1,6 @@
 import { FaSearch } from "react-icons/fa";
 import type React from "react";
+import Link from "next/link";
 
 export const services = [
   {
@@ -3630,14 +3631,19 @@ export const services = [
           "Most legal SEO agencies focus on increasing website traffic. We focus on increasing retained employment law cases.",
           "Our specialized SEO for employment lawyers is designed to position your firm in front of employees actively searching for legal representation after wrongful termination, workplace discrimination, retaliation, unpaid wages, harassment, FMLA violations, and other employment disputes. The result is a stronger pipeline of qualified consultations, higher-value cases, and measurable growth.",
           "Discover exactly where your firm is losing high-value employment law cases and how to outrank your competitors.",
-          <h2 className="text-2xl font-bold text-gray-200">Why Standard SEO Fails Employment Lawyers?</h2>,
+          <h2 className="text-2xl font-bold text-gray-200">
+            Why Standard SEO Fails Employment Lawyers?
+          </h2>,
           "Employment law is one of the most intent-driven legal practice areas.",
           "Potential clients rarely browse casually. They search after losing a job, experiencing discrimination, being denied overtime, or facing retaliation. At that moment, they need immediate answers and a lawyer they trust.",
           "Generic legal SEO campaigns miss these opportunities because they prioritize:",
           <ul className="list-disc pl-6 text-gray-200">
             <li>Broad legal keywords with low conversion intent</li>
             <li>Vanity traffic metrics instead of retained cases</li>
-            <li>Generic legal content that fails to answer employment-specific questions</li>
+            <li>
+              Generic legal content that fails to answer employment-specific
+              questions
+            </li>
             <li>Weak local visibility in competitive metropolitan markets</li>
           </ul>,
           "The result?",
@@ -3649,10 +3655,13 @@ export const services = [
             <li>Marketing budgets producing traffic but not signed clients</li>
           </ul>,
           "Successful employment law marketing and SEO requires identifying individuals at the precise moment they recognize they may have a legal claim.",
-          "That's where specialized strategy creates a measurable competitive advantage."
+          "That's where specialized strategy creates a measurable competitive advantage.",
         ],
         actions: [
-          { label: "Request Your Free Employment Law SEO Audit", href: "/contact-us" },
+          {
+            label: "Request Your Free Employment Law SEO Audit",
+            href: "/contact-us",
+          },
           { label: "About Us", href: "/about-us", variant: "secondary" },
         ],
         // features: [
@@ -3753,6 +3762,671 @@ export const services = [
             desc: "Get clear insights into your <strong>local rankings</strong>, traffic, and conversions with easy-to-understand reports.",
           },
         ],
+      },
+      {
+        id: "locksmith-seo-services",
+        title:
+          "Locksmith SEO Services Built on Strategy, Trust & Results - Web Founders USA",
+        desc: "Expert locksmith SEO services by Web Founders USA. We help emergency, residential, commercial, and automotive locksmiths rank higher, get found on Google Maps, and drive more calls.",
+        seo: {
+          title:
+            "Locksmith SEO Services - Get Found Fast, Get More Calls | Web Founders USA",
+          description:
+            "Expert locksmith SEO services by Web Founders USA. We help emergency, residential, commercial, and automotive locksmiths rank higher, get found on Google Maps, and drive more calls.",
+          keyword:
+            "local seo services, local seo, google business profile optimization, local search engine optimization, map pack ranking",
+        },
+        hero: {
+          paragraph:
+            "The demand for local SEO services is growing rapidly as customers rely on Google search and Maps to find nearby businesses. Our strategies are designed not only to improve your local search rankings but also to bring real customers to your doorstep.",
+          image:
+            "/service-deatil-images/Boost your business visibility online.webp",
+        },
+        introParagraphs: [
+          'At <a class="font-semibold hover:underline" href="/">Web Founders USA</a>, every step we take is based on real results, not quick fixes. Our approach combines sharp <b>locksmith SEO audit services</b> with local search strategy built around the way locksmith customers actually search.',
+          'Imagine appearing right when someone types "locksmith near me" or "emergency lockout service", with clearer local visibility, steady call volume, and a website that turns visitors into customers, all built without tricks. The work stays grounded in what lasts, whether it is fine-tuning your emergency locksmith page or guiding strategy through <b>Professional Locksmith SEO solutions</b>.',
+          "You can make real changes by working hard, being open about how you do things, and planning ahead. That is how visibility grows—not all at once, but call by call.",
+        ],
+        actions: [
+          { label: "Contact Us", href: "/contact-us" },
+          {
+            label: "Get a Free Locksmith SEO Audit",
+            href: "/contact-us",
+            variant: "secondary",
+          },
+        ],
+        requestAFreeData: {
+          title: "Request a Free Locksmith SEO Audit",
+          paragraphs: [
+            "Not sure why your locksmith business isn't getting enough visibility on Google? Let us take a closer look.",
+            "Our audit identifies technical issues, local SEO gaps, service-page opportunities, keyword opportunities, competitor weaknesses, and areas where your website may be losing potential customers.",
+          ],
+          cta: {
+            label: "Get Your Free Locksmith SEO Audit",
+            href: "/contact-us/",
+          },
+        },
+        expertPage: {
+          intro: {
+            title: (
+              <>
+                SEO That Helps Locksmith Businesses
+                <br />
+                Get Found Nearby
+              </>
+            ),
+            description: (
+              <div className="space-y-2">
+                <p>
+                  When someone searches for an emergency locksmith, a car
+                  lockout service, or a locksmith near them, they usually want
+                  help now. Your business needs to be visible at exactly that
+                  moment.
+                </p>
+                <p>
+                  Our specialized <b>locksmith SEO services</b> are designed to
+                  improve your presence across local search, Google Maps, and
+                  organic results. We focus on the searches that bring qualified
+                  customers to your business, not vanity rankings that don't
+                  contribute to growth.
+                </p>
+                <p>
+                  Whether you operate from one location or serve multiple
+                  cities, our strategy connects your website, Google Business
+                  Profile, services, locations, and online authority into one
+                  focused SEO system.
+                </p>
+                <div className="experts-benefits-shell flex w-full justify-center">
+                  <div
+                    className="experts-benefits-carousel flex w-full max-w-[900px] snap-x snap-mandatory justify-start gap-4 overflow-x-auto pb-3 scroll-px-[9%] [scrollbar-width:none] [&>*:first-child]:ml-[9%] [&>*:last-child]:mr-[9%] [&::-webkit-scrollbar]:hidden"
+                    aria-label="Locksmith SEO benefits"
+                  >
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Local Visibility
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Better Search Presence
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        More Opportunities to Get Calls
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ),
+          },
+          // certifications: [
+          //   {
+          //     src: "/service-testing/GA-certified.webp",
+          //     alt: "Google Analytics certification",
+          //   },
+          //   {
+          //     src: "/service-testing/images-300x82.webp",
+          //     alt: "SEO partner certification",
+          //   },
+          //   {
+          //     src: "/service-testing/hubspot.webp",
+          //     alt: "HubSpot certification",
+          //   },
+          //   {
+          //     src: "/service-testing/google-digital-garage-1.webp",
+          //     alt: "Google Digital Garage certification",
+          //   },
+          // ],
+          relatedServices: {
+            title: "Explore Our Locksmith SEO Services",
+            description:
+              "Build a stronger search presence with SEO strategies designed specifically around locksmith services and local customer intent.",
+            exploreLabel: "Explore service",
+            items: [
+              {
+                FaSearchIcon: "fa-solid fa-magnifying-glass",
+                title: "Emergency Locksmith SEO",
+                description:
+                  "Reach customers searching for urgent locksmith help, including 24-hour locksmiths, lockouts, emergency lock repair, and other time-sensitive services.",
+                href: "",
+              },
+              {
+                FaSearchIcon: "fa-solid fa-magnifying-glass",
+                title: "Residential Locksmith SEO",
+                description:
+                  "Build visibility for homeowners searching for rekeying, lock installation, lock repair, key replacement, and residential security services.",
+                href: "",
+              },
+              {
+                FaSearchIcon: "fa-solid fa-magnifying-glass",
+                title: "Commercial Locksmith SEO",
+                description:
+                  "Target businesses, property managers, offices, retail locations, and commercial properties looking for professional locksmith solutions.",
+                href: "",
+              },
+              {
+                FaSearchIcon: "fa-solid fa-magnifying-glass",
+                title: "Automotive Locksmith SEO",
+                description:
+                  "Improve visibility for high-intent searches involving car lockouts, vehicle keys, key replacement, ignition issues, and automotive locksmith services.",
+                href: "",
+              },
+              {
+                FaSearchIcon: "fa-solid fa-magnifying-glass",
+                title: "Local SEO for Locksmiths",
+                description:
+                  "Strengthen your visibility in local search results and Google Maps for the cities and service areas your locksmith business serves.",
+                href: "",
+              },
+              {
+                FaSearchIcon: "fa-solid fa-magnifying-glass",
+                title: "Multi-Location Locksmith SEO",
+                description:
+                  "Create a scalable SEO strategy for legitimate business locations and service areas without relying on thin, duplicate location pages.",
+                href: "",
+              },
+            ],
+          },
+          results: {
+            title: "Real Locksmith SEO Results, Not Just Rankings",
+            description: (
+              <div className="space-y-2">
+                <p>
+                  We do <b>locksmith search engine optimization</b> that gets
+                  you real calls, qualified leads, and steady traffic, not just
+                  pretty reports.
+                </p>
+                <p>
+                  We offer <b>Professional Locksmith SEO solutions</b> to
+                  independent locksmiths, emergency service providers, and
+                  multi-location operations alike. With our organic growth
+                  services, we help your locksmith business grow over time.
+                </p>
+                <p>
+                  With our on-page SEO, we make your site easier to use. And
+                  with our technical ranking strategy, we make it stronger.
+                </p>
+              </div>
+            ),
+            stats: [
+              {
+                label: (
+                  <>
+                    Local Locksmith
+                    <br />
+                    Businesses Supported
+                  </>
+                ),
+                value: "400+",
+              },
+              {
+                label: (
+                  <>
+                    Leads Generated
+                    <br />
+                    Through SEO
+                  </>
+                ),
+                value: "1200K+",
+              },
+              {
+                label: (
+                  <>
+                    Average Organic
+                    <br />
+                    Growth Delivered
+                  </>
+                ),
+                value: "1,000%+",
+              },
+              {
+                label: (
+                  <>
+                    Revenue Influenced
+                    <br />
+                    via SEO
+                  </>
+                ),
+                value: "$200k+",
+              },
+            ],
+          },
+        },
+        localSEOserviceData: {
+          eyebrow: "The Foundation of Local Growth",
+          title: "Our Locksmith SEO Services Built to Grow Your Business",
+          services: [
+            {
+              id: "keyword-strategy",
+              icon: {
+                src: "/service-testing/keyword.webp",
+                alt: "Keyword strategy",
+              },
+              title: "Keyword Strategy for Locksmith Businesses",
+              description: (
+                <>
+                  We identify the searches your potential customers actually use
+                  and organize them around service, location, intent, and
+                  commercial value emergency locksmith, locksmith near me,
+                  residential locksmith, commercial locksmith, automotive
+                  locksmith, car lockout services, key replacement, lock repair,
+                  lock installation, rekeying, safe locksmith services, and
+                  city/neighborhood-specific locksmith searches.
+                </>
+              ),
+            },
+            {
+              id: "full-seo-audit",
+              icon: {
+                src: "/service-testing/seoaudit.webp",
+                alt: "SEO audit",
+              },
+              title: "Complete SEO Audit ",
+              description: (
+                <>
+                  We examine your website and online presence to identify
+                  technical problems, content gaps, local SEO opportunities,
+                  competitor weaknesses, and missed search opportunities
+                  covering site structure, indexing and crawlability, page
+                  speed, mobile usability, on-page SEO, service pages, location
+                  pages, internal linking, Google Business Profile, local
+                  citations, competitor visibility, and content opportunities.
+                </>
+              ),
+            },
+            {
+              id: "on-page-seo",
+              icon: {
+                src: "/service-testing/onpageseo.webp",
+                alt: "On-page SEO optimization",
+              },
+              title: "On-Page SEO Optimization",
+              description: (
+                <>
+                  We optimize your most important pages title tags, meta
+                  descriptions, headings, service-page content, internal links,
+                  image optimization, calls to action, content structure,
+                  location relevance, and search intent alignment so search
+                  engines understand your services and customers find what they
+                  need fast.
+                </>
+              ),
+            },
+            {
+              id: "technical-seo",
+              icon: {
+                src: "/service-testing/technicalseo.webp",
+                alt: "Technical SEO fixes",
+              },
+              title: "Technical SEO",
+              description: (
+                <>
+                  We identify and fix crawlability, indexing, broken links,
+                  redirects, site architecture, mobile performance, page speed,
+                  Core Web Vitals, duplicate content, and structured data
+                  issues, creating a website that's easier for search engines to
+                  crawl and easier for customers to use.
+                </>
+              ),
+            },
+            {
+              id: "authority-link-growth",
+              icon: {
+                src: "/service-testing/linkbuilding.webp",
+                alt: "Authority and link growth",
+              },
+              title: "Authority & Link Building",
+              description: (
+                <>
+                  Relevant backlinks strengthen your website's authority and
+                  credibility. We prioritize legitimate, relevant opportunities
+                  local, <b>industry</b>, community, and editorial instead of
+                  spammy link networks or manipulative tactics.
+                </>
+              ),
+            },
+            {
+              id: "content-copywriting",
+              icon: {
+                src: "/service-testing/contentmarketing.webp",
+                alt: "Content and SEO copywriting",
+              },
+              title: "Content & SEO Copywriting",
+              description: (
+                <>
+                  We create locksmith service pages, location pages, supporting
+                  blog content, customer-focused guides, FAQ content, commercial
+                  and residential locksmith resources, and automotive locksmith
+                  content built around genuine search intent, not keyword
+                  stuffing.
+                </>
+              ),
+            },
+          ],
+        },
+        aiDiscoveryData: {
+          eyebrow: "AI Discovery Channels",
+          title: (
+            <>
+              Get Found Across Google Search,
+              <br />
+              Maps & AI Discovery
+            </>
+          ),
+          description:
+            "Search behavior continues to evolve. Customers may discover a locksmith through traditional Google results, Google Maps, mobile search, or AI-powered search experiences. A modern locksmith SEO strategy makes your business information clear, consistent, useful, and easy for search systems to understand.",
+          strategies: [
+            {
+              id: "traditional-seo",
+              title: "Traditional SEO",
+              description:
+                "Relevant keyword targeting, strong service pages, clear site structure, internal linking, technical SEO, helpful content, and organic authority.",
+            },
+            {
+              id: "local-seo",
+              title: "Local SEO",
+              description:
+                "Google Business Profile optimization, location-specific content, local keywords, reviews, citations, consistent business information, and service-area relevance.",
+            },
+            {
+              id: "ai-search-optimization",
+              title: "AI Search Optimization",
+              description:
+                "Clear, structured information that shows what your locksmith business does, where it operates, and which services it provides, so it is easier for AI-powered search experiences to surface.",
+            },
+          ],
+        },
+
+        tab: {
+          title:
+            "Our Locksmith SEO Framework: Built for Consistent, Trackable Results",
+          steps: [
+            {
+              id: "local-seo-audit",
+              tab_name: "Website & Market Audit",
+              heading: "Website & Market Audit",
+              description:
+                "We start by understanding where your locksmith business stands today reviewing your website, technical SEO, current search visibility, local presence, service coverage, competitors, and opportunities. A clear starting point, not assumptions.",
+            },
+            {
+              id: "google-business-optimization",
+              tab_name: "Keyword & Competitor Research",
+              heading: "Keyword & Competitor Research",
+              description:
+                "We identify valuable searches based on service, location, customer intent, and competition, and analyze competing locksmith businesses to see which services, locations, content, and local signals are helping them compete.",
+            },
+            {
+              id: "local-keyword-research",
+              tab_name: "SEO Roadmap",
+              heading: "SEO Roadmap",
+              description:
+                "We turn the research into a prioritized strategy: technical fixes, service-page optimization, local SEO improvements, content opportunities, location targeting, authority building, and conversion improvements.",
+            },
+            {
+              id: "on-page-local-seo",
+              tab_name: "Website Optimization",
+              heading: "Website Optimization",
+              description:
+                "We optimize the pages that matter most: your homepage, emergency locksmith page, residential and commercial service pages, automotive pages, location pages, and supporting content.",
+            },
+            {
+              id: "citation-building",
+              tab_name: "Local SEO & Google Maps Optimization",
+              heading: "Local SEO & Google Maps Optimization",
+              description:
+                "We strengthen your local search presence by improving relevant local signals and your Google Business Profile, helping you compete for searches where customers are looking for locksmith services in or around your service area.",
+            },
+            {
+              id: "performance-tracking",
+              tab_name: "Content & Authority Building",
+              heading: "Content & Authority Building",
+              description:
+                "We create useful content and pursue legitimate authority-building opportunities that support your most important services and locations.",
+            },
+            {
+              id: "reporting-testing-growth",
+              tab_name: "Reporting, Testing & Growth",
+              heading: "Reporting, Testing & Growth",
+              description:
+                "We monitor search visibility, organic traffic, keyword performance, local visibility, calls, leads, and conversions where tracking is available. What works becomes a priority; what underperforms gets analyzed and improved.",
+            },
+          ],
+        },
+
+        successStoriesData: {
+          eyebrow: "",
+          title: <>Why Choose Our Locksmith SEO Agency?</>,
+          description: (
+            <>
+              Choosing a specialized locksmith SEO agency means your strategy is
+              built around the unique way locksmith customers search. A
+              locksmith doesn't need the same SEO strategy as a dentist, law
+              firm, or e-commerce store.
+            </>
+          ),
+          stories: [
+            {
+              id: "cleaning-business",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Cleaning business SEO growth results",
+              },
+              title: "Industry-Specific Strategy",
+              description:
+                "built around actual locksmith services, customer intent, local competition, and service areas",
+            },
+            {
+              id: "law-firm",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Law firm SEO growth results",
+              },
+              title: "Local Search Expertise",
+              description:
+                'we understand searches like "locksmith near me" and city-specific, service-plus-location queries',
+            },
+            {
+              id: "dental-clinic",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Dental clinic SEO growth results",
+              },
+              title: "Customized SEO",
+              description:
+                "your website, market, competition, services, and goals determine the strategy, not a generic checklist",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "Transparent Reporting",
+              description:
+                "you understand what's being optimized, why it matters, and what the data shows",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "Ethical SEO",
+              description:
+                "sustainable strategies and legitimate authority, not risky shortcuts",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "Lead-Focused Optimization",
+              description:
+                "rankings matter, but the bigger goal is real customers calling your business",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "Clear Communication",
+              description:
+                "priorities, progress, opportunities, and next steps explained clearly",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "No Unrealistic Guarantees",
+              description:
+                "no ethical SEO provider can guarantee a specific ranking, traffic level, or number of calls; we focus on measurable improvements and long-term growth",
+            },
+          ],
+        },
+        faqTitle: "Your Locksmith SEO Questions Answered",
+        faqs: [
+          {
+            question: "Do you work with emergency locksmiths that need calls around the clock? ",
+            answer:
+              "Yes. Our emergency locksmith SEO targets 24-hour, urgent, and lockout-related searches so you're visible exactly when customers need help fastest.",
+          },
+          {
+            question: "Can you help a locksmith business with multiple locations?",
+            answer:
+              "Yes. We build scalable multi-location SEO strategies around your legitimate service areas, without relying on thin or duplicate location pages.",
+          },
+          {
+            question: "How long before locksmith SEO shows results?",
+            answer:
+              "Most locksmith businesses start seeing measurable improvement within a few months, depending on local competition and current site health.",
+          },
+          {
+            question: "Do you optimize Google Business Profile and Maps visibility?",
+            answer:
+              "Yes, Local SEO and Google Maps optimization are core parts of every locksmith SEO strategy we build.",
+          },
+          {
+            question: "Do you offer SEO for residential, commercial, and automotive locksmith services separately?",
+            answer:
+              "Yes. We build service-specific SEO around each residential, commercial, and automotive locksmith searches all have different intent, and we target them accordingly.",
+          },
+        ],
+        // whyChooseData: {
+        //   title: "Why Choose Our Locksmith SEO Agency?",
+        //   containerClassName:
+        //     "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
+        //   gridClassName:
+        //     "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
+        //   features: [
+        //     {
+        //       title: "Local SEO Expertise",
+        //       desc: "We specialize in <strong>local business SEO</strong>, helping you rank in <strong>Google Map Pack</strong> and dominate <strong>location based searches</strong> in your target area.",
+        //     },
+        //     {
+        //       title: "Proven Local Results",
+        //       desc: "Our strategies improve your visibility in <strong>near me searches</strong>, increase <strong>local traffic</strong>, and generate more calls and leads.",
+        //     },
+        //     {
+        //       title: "Custom Location Strategies",
+        //       desc: "We create personalized campaigns based on your <strong>business location</strong>, audience behavior, and local competition.",
+        //     },
+        //     {
+        //       title: "Transparent Reporting",
+        //       desc: "Get clear insights into your <strong>local rankings</strong>, traffic, and conversions with easy-to-understand reports.",
+        //     },
+        //   ],
+        // },
+        seoComparisonData: {
+          title: "Traditional SEO vs Local SEO vs AI SEO (AIO) - for Locksmiths",
+          description: (
+            <>
+              A complete, future-ready search optimization framework. Gone are the days when finding a locksmith meant just clicking blue links on Google. Now customers find you by asking smart speakers, tapping Maps, or getting instant replies from AI assistants.
+            </>
+          ),
+          comparisons: [
+          {
+            id: "traditional-seo",
+            title: "Traditional SEO",
+            subtitle: "",
+            sections: [
+              {
+                title: "What it is:",
+                items: [
+                  <>Keyword identification</>,
+                  <>clear structure (headers, tags, titles)</>,
+                  <>fast site speed and mobile responsiveness</>,
+                  <>credibility built through consistency</>,
+                ],
+              },
+              {
+                title: "Why it matters:",
+                items: [
+                  "Generates consistent",
+                  "long-term organic traffic",
+                  "builds credibility",
+                  'mproves rankings for competitive keywords like "emergency locksmith," and lowers customer acquisition cost over time',
+                ],
+              },
+            ],
+          },
+          {
+            id: "local-seo",
+            title: "Local SEO",
+            subtitle: "",
+            sections: [
+              {
+                title: "What it is:",
+                items: [
+                  "Optimizing for local audiences",
+                  "Google Maps visibility",
+                  "Google Business Profile optimization",
+                  "location-specific keywords",
+                  "consistent NAP citations",
+                  "and review management",
+                ],
+              },
+              {
+                title: "Why it matters:",
+                items: [
+                  'Increases visibility in "near me" and local-intent searches',
+                  "connects you with nearby ready-to-call customers",
+                  "converts Maps impressions into real service calls",
+                ],
+              },
+            ],
+          },
+          {
+            id: "ai-seo",
+            title: "AI SEO / AIO",
+            subtitle:
+              "",
+            sections: [
+              {
+                title: "What it is:",
+                items: [
+                  "Optimizing content for AI-powered search and smart assistants",
+                  "structuring information clearly",
+                  "answering questions directly",
+                ],
+              },
+              {
+                title: "Why it matters:",
+                items: [
+                  "AI answers increasingly replace traditional search clicks being discovered in AI conversations",
+                  "not just search results",
+                  "future-proofs your locksmith business's visibility",
+                ],
+              },
+            ],
+          },
+          ],
+        },
       },
     ],
   },

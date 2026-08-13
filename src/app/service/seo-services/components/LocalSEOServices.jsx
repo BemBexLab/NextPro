@@ -1,163 +1,107 @@
 import Image from "next/image";
 import React from "react";
 
-const getWordCount = (node) => {
-  if (typeof node === "string") {
-    return node.trim().split(/\s+/).filter(Boolean).length;
+function ServiceIcon({ icon, title }) {
+  if (!icon) {
+    return null;
   }
 
-  if (Array.isArray(node)) {
-    return node.reduce((count, child) => count + getWordCount(child), 0);
+  if (React.isValidElement(icon)) {
+    return icon;
   }
 
-  if (React.isValidElement(node)) {
-    return getWordCount(node.props.children);
+  const image = typeof icon === "string" ? { src: icon } : icon;
+
+  if (!image?.src) {
+    return null;
   }
-
-  return 0;
-};
-
-const LocalSEOServices = () => {
-  const services = [
-    {
-      icon: "/service-testing/keyword.webp", // Replace with actual icon/image
-      title: "Keyword Strategy",
-      description: (
-        <>
-          We find the high-intent searches that your customers really use, and
-          then we put the terms that will bring in steady calls, visits, and
-          sales at the top of the list. This is great for{" "}
-          <strong>Professional SEO solutions</strong> and{" "}
-          <strong>Digital visibility services</strong> that want to grow.
-        </>
-      ),
-    },
-    {
-      icon: "/service-testing/seoaudit.webp", // Replace with actual icon/image
-      title: "Full SEO Audit",
-      description: (
-        <>
-          We do a thorough check of your site through{" "}
-          <a
-            href="/service/seo-services/seo-audit/"
-            className="text-blue-800 font-bold hover:underline"
-            rel="noopener noreferrer"
-          >
-            SEO audit services
-          </a>{" "}
-          to find things that are keeping it from ranking, missed chances, and
-          gaps in your competitors' sites. Then we turn that information into an
-          action plan that also helps with{" "}
-          <strong>enterprise Digital visibility services</strong>.
-        </>
-      ),
-    },
-    {
-      icon: "/service-testing/onpageseo.webp", // Replace with actual icon/image
-      title: "On-Page SEO Optimization",
-      description: (
-        <>
-          With <strong>on page Organic growth services</strong> and{" "}
-          <strong>SEO copywriting services</strong>, we improve your pages by
-          giving them better structure, smarter headings, internal links, and
-          on-page signals. This helps Google understand your content and get
-          more users to convert.
-        </>
-      ),
-    },
-    {
-      icon: "/service-testing/technicalseo.webp", // Replace with actual icon/image
-      title: "Technical SEO Fixes",
-      description: (
-        <>
-          We fix crawl issues, indexing problems, site speed, Core Web Vitals,
-          and architecture so that your website works the way it should. These
-          are advanced <strong>technical Digital visibility services</strong> backed by
-          detailed <strong>SEO audit services</strong> that make your site
-          easier to find.
-        </>
-      ),
-    },
-    {
-      icon: "/service-testing/linkbuilding.webp", // Replace with actual icon/image
-      title: "Authority & Link Growth",
-      description: (
-        <>
-          We get quality mentions and backlinks from relevant sources to build
-          trust, improve domain authority, and move competitive pages up. This is
-          all part of our <strong>Professional SEO solutions</strong> approach and long-term{" "}
-          <strong>Organic growth services</strong> mindset, not spammy links.
-        </>
-      ),
-    },
-    {
-      icon: "/service-testing/contentmarketing.webp", // Replace with actual icon/image
-      title: "Content & SEO Copywriting",
-      description: (
-        <>
-          We create content that matches search intent and drives action: service
-          pages, location pages, blogs, and landing pages, high-impact <strong>SEO copywriting services</strong> made for AI + Google results.
-        </>
-      ),
-    },
-  ];
 
   return (
-    <section className="w-full bg-gray-50 py-20">
-      <div className="w-[92%] max-w-[1200px] mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <p className="text-lg font-semibold text-gray-600 mb-3">
-            The Foundation of Local Growth
-          </p>
-          <h2 className="text-4xl font-medium text-gray-900">
-            Organic growth services Built to Win Rankings, Traffic, and Customers
-          </h2>
-        </div>
+    <Image
+      src={image.src}
+      alt={image.alt || title || ""}
+      width={image.width || 64}
+      height={image.height || 64}
+      sizes={image.sizes || "64px"}
+      className={image.className || "mx-auto h-14 w-14 object-contain sm:h-16 sm:w-16"}
+    />
+  );
+}
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => {
-            const hasLongDescription = getWordCount(service.description) > 27;
+export default function LocalSEOServices({
+  eyebrow = null,
+  title = null,
+  description = null,
+  services = [],
+  className = "",
+  containerClassName = "mx-auto w-[92%] max-w-[1200px]",
+  gridClassName = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+} = {}) {
+  const hasHeader = Boolean(eyebrow || title || description);
 
-            return (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow duration-300"
-              >
-                {/* Icon */}
-                <div className="mb-6 text-center text-5xl">
-                  <Image
-                    src={service.icon}
-                    alt={service.title}
-                    width={64}
-                    height={64}
-                    className="mx-auto"
-                  />
-                </div>
+  if (!hasHeader && !services.length) {
+    return null;
+  }
 
-                {/* Title */}
-                <h3 className="text-xl text-center font-medium text-gray-900 mb-1">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p
-                  className={`text-gray-600 text-center text-md leading-relaxed ${
-                    hasLongDescription
-                      ? "max-h-28 overflow-y-auto pr-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-                      : ""
-                  }`}
-                >
-                  {service.description}
-                </p>
+  return (
+    <section className={`w-full bg-gray-50 py-12 sm:py-16 lg:py-20 ${className}`}>
+      <div className={containerClassName}>
+        {hasHeader ? (
+          <div className={`mx-auto max-w-4xl text-center ${services.length ? "mb-8 sm:mb-10 lg:mb-12" : ""}`}>
+            {eyebrow ? (
+              <div className="mb-2 text-sm font-semibold text-gray-600 sm:mb-3 sm:text-base lg:text-lg">
+                {eyebrow}
               </div>
-            );
-          })}
-        </div>
+            ) : null}
+
+            {title ? (
+              <h2 className="text-3xl font-medium leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+                {title}
+              </h2>
+            ) : null}
+
+            {description ? (
+              <div className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
+                {description}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        {services.length ? (
+          <div className={`grid gap-4 sm:gap-6 ${gridClassName}`}>
+            {services.map((service, index) => (
+              <article
+                key={service.id || service.title || index}
+                className={`flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 transition-shadow duration-300 hover:shadow-lg sm:p-6 lg:p-8 ${service.className || ""}`}
+              >
+                {service.icon ? (
+                  <div className="mb-4 flex min-h-14 items-center justify-center text-center sm:mb-6 sm:min-h-16">
+                    <ServiceIcon icon={service.icon} title={service.title} />
+                  </div>
+                ) : null}
+
+                {service.title ? (
+                  <h3 className="mb-2 text-center text-lg font-medium leading-snug text-gray-900 sm:text-xl">
+                    {service.title}
+                  </h3>
+                ) : null}
+
+                {service.descriptionHtml ? (
+                  <div
+                    className="text-center text-sm leading-relaxed text-gray-600 sm:text-base"
+                    dangerouslySetInnerHTML={{ __html: service.descriptionHtml }}
+                  />
+                ) : service.description ? (
+                  <div className="text-center text-sm leading-relaxed text-gray-600 sm:text-base">
+                    {service.description}
+                  </div>
+                ) : null}
+              </article>
+            ))}
+          </div>
+        ) : null}
       </div>
     </section>
   );
-};
-
-export default LocalSEOServices;
+}

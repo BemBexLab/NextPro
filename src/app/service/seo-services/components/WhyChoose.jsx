@@ -42,7 +42,7 @@ const WhyChoose = ({
   gridClassName = "grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-6",
 }) => {
   if (!title && !paragraphs.length && !features.length) {
-    return null;
+    return null;zz
   }
 
   return (

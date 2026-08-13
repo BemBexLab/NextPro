@@ -1,78 +1,123 @@
 import Image from "next/image";
-import React from "react";
 
-const SuccessStories = () => {
-  const caseStudies = [
-    {
-      stats: "/service-testing/bg.webp",
-      title: "Cleaning Business SEO Success Story",
-      description:
-        "6,750% Increase in Organic Leads and 12,300% Traffic Growth for a Cleaning Business",
-    },
-    {
-      stats: "/service-testing/bg.webp",
-      title: "Law Firm SEO Case Study",
-      description:
-        "1,200% Growth in Organic Traffic and 750% Lead Boost for a Law Firm",
-    },
-    {
-      stats: "/service-testing/bg.webp",
-      title: "Dental Clinic SEO Results",
-      description:
-        "350% Rise in Organic Traffic and 480% Increase in Leads for a Dental Clinic",
-    },
-    {
-      stats: "/service-testing/bg.webp",
-      title: "E-commerce SEO Performance Review",
-      description:
-        "800% Increase in Organic Traffic and 950% Growth in Leads for an E-commerce Store",
-    },
-  ];
+function StoryImage({ image, title, priority = false }) {
+  const imageData = typeof image === "string" ? { src: image } : image;
+
+  if (!imageData?.src) {
+    return null;
+  }
 
   return (
-    <section className="w-full bg-gray-50 py-20">
-      <div className="w-[92%] max-w-[1400px] mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-lg text-gray-600 mb-4 font-medium">
-            Success Stories That Speak Louder Than Words
-          </p>
-          <h2 className="text-3xl font-medium text-[#0749A7]">
-            How Smart Digital visibility services Drive<br></br>Real Business Growth
-          </h2>
-        </div>
+    <Image
+      src={imageData.src}
+      alt={imageData.alt || title || ""}
+      fill
+      priority={imageData.priority ?? priority}
+      sizes={
+        imageData.sizes ||
+        "(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 92vw"
+      }
+      className={
+        imageData.className ||
+        "object-cover transition-transform duration-300 group-hover:scale-105"
+      }
+    />
+  );
+}
 
-        {/* Case Studies Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {caseStudies.map((study, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
-            >
-              {/* Image as background with overlay paragraph only */}
-              <div className="relative w-full h-48">
-                <Image
-                  src={study.stats}
-                  alt={study.title}
-                  fill
-                  className="object-cover transition-transform duration-300 transform group-hover:scale-105"
-                />
+export default function SuccessStories({
+  eyebrow = null,
+  title = null,
+  description = null,
+  stories = [],
+  className = "",
+  containerClassName = "mx-auto w-[92%] max-w-[1400px]",
+  gridClassName = "grid-cols-1 sm:grid-cols-2 xl:grid-cols-4",
+} = {}) {
+  const visibleStories = (Array.isArray(stories) ? stories : []).filter(
+    (story) => story && (story.image || story.title || story.description),
+  );
+  const hasHeader = Boolean(eyebrow || title || description);
 
-                <div className="absolute inset-0 flex items-center justify-center text-center px-4 bg-gradient-to-t from-black/60 via-black/30 to-transparent">
-                  <p className="text-white mt-2 text-sm md:text-lg">{study.description}</p>
-                </div>
+  if (!hasHeader && !visibleStories.length) {
+    return null;
+  }
+
+  return (
+    <section className={`w-full bg-gray-50 py-12 sm:py-16 lg:py-20 ${className}`}>
+      <div className={containerClassName}>
+        {hasHeader ? (
+          <div
+            className={`mx-auto max-w-7xl text-center ${
+              visibleStories.length ? "mb-8 sm:mb-12 lg:mb-16" : ""
+            }`}
+          >
+            {eyebrow ? (
+              <div className="mb-3 text-sm font-medium leading-relaxed text-gray-600 sm:text-base lg:mb-4 lg:text-lg">
+                {eyebrow}
               </div>
+            ) : null}
 
-              {/* Title below the image */}
-              <div className="p-6 bg-white text-left">
-                <h4 className="text-gray-900 text-lg font-bold">{study.title}</h4>
+            {title ? (
+              <h2 className="text-3xl font-medium leading-tight text-[#0749A7] sm:text-4xl lg:text-5xl">
+                {title}
+              </h2>
+            ) : null}
+
+            {description ? (
+              <div className="mx-auto mt-4 max-w-5xl text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
+                {description}
               </div>
-            </div>
-          ))}
-        </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        {visibleStories.length ? (
+          <div className={`grid gap-4 sm:gap-6 ${gridClassName}`}>
+            {visibleStories.map((story, index) => {
+              const hasImage = Boolean(
+                typeof story.image === "string" ? story.image : story.image?.src,
+              );
+
+              return (
+                <article
+                  key={`${story.id || story.title || "story"}-${index}`}
+                  className={`group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${story.className || ""}`}
+                >
+                  {hasImage ? (
+                    <div className="relative h-44 w-full overflow-hidden sm:h-48 lg:h-52">
+                      <StoryImage
+                        image={story.image}
+                        title={story.title}
+                        priority={index === 0}
+                      />
+                      {story.description ? (
+                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/70 via-black/35 to-black/5 px-4 text-center sm:px-5">
+                          <div className="text-sm leading-relaxed text-white sm:text-base lg:text-lg">
+                            {story.description}
+                          </div>
+                        </div>
+                      ) : null}
+                    </div>
+                  ) : story.description ? (
+                    <div className="flex min-h-44 items-center justify-center bg-[#0749A7] px-5 py-8 text-center text-sm leading-relaxed text-white sm:min-h-48 sm:text-base lg:min-h-52 lg:text-lg">
+                      {story.description}
+                    </div>
+                  ) : null}
+
+                  {story.title ? (
+                    <div className="flex flex-1 items-start bg-white p-5 sm:p-6">
+                      <h3 className="text-base font-bold leading-snug text-gray-900 sm:text-lg">
+                        {story.title}
+                      </h3>
+                    </div>
+                  ) : null}
+                </article>
+              );
+            })}
+          </div>
+        ) : null}
       </div>
     </section>
   );
-};
-
-export default SuccessStories;
+}
