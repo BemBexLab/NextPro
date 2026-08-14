@@ -22,6 +22,29 @@ function toTitleCase(value) {
     .join(" ");
 }
 
+function getBreadcrumbLabel(service, sub) {
+  if (service.breadcrumbLabel) {
+    return service.breadcrumbLabel;
+  }
+
+  const preservedWords = {
+    b2b: "B2B",
+    ecommerce: "E-commerce",
+    seo: "SEO",
+    shopify: "Shopify",
+    wordpress: "WordPress",
+    woocommerce: "WooCommerce",
+    bigcommerce: "BigCommerce",
+    youtube: "YouTube",
+  };
+
+  return String(sub || service.id || "Service")
+    .split(/[-_\s]+/)
+    .filter(Boolean)
+    .map((word) => preservedWords[word.toLowerCase()] || toTitleCase(word))
+    .join(" ");
+}
+
 function formatHtml(value) {
   return {
     __html: (value || "").toString().replace(/\n/g, "<br/>"),
@@ -153,7 +176,7 @@ function getServiceHero(parent, service, serviceId, sub) {
         label: toTitleCase(parent.title || serviceId),
         href: `/service/${serviceId}`,
       },
-      { label: toTitleCase(service.title || sub) },
+      { label: getBreadcrumbLabel(service, sub) },
     ],
     actions,
   };

@@ -514,6 +514,9 @@ export default function SeoServicesPage() {
             title: "Explore Related Services",
             description: "Dive deeper into specific offerings related to this service.",
             exploreLabel: "Explore service",
+            initialVisibleCount: 12,
+            loadMoreCount: 8,
+            loadMoreLabel: "Load More",
             items:
               seoServiceDetails?.sub_categories?.map((subService) => ({
                 id: subService.id,

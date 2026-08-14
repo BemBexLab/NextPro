@@ -3886,46 +3886,96 @@ export const services = [
             exploreLabel: "Explore service",
             items: [
               {
-                FaSearchIcon: "fa-solid fa-magnifying-glass",
+                icon: FaSearch,
                 title: "Emergency Locksmith SEO",
                 description:
                   "Reach customers searching for urgent locksmith help, including 24-hour locksmiths, lockouts, emergency lock repair, and other time-sensitive services.",
                 href: "",
               },
               {
-                FaSearchIcon: "fa-solid fa-magnifying-glass",
+                icon: FaSearch,
                 title: "Residential Locksmith SEO",
                 description:
                   "Build visibility for homeowners searching for rekeying, lock installation, lock repair, key replacement, and residential security services.",
                 href: "",
               },
               {
-                FaSearchIcon: "fa-solid fa-magnifying-glass",
+                icon: FaSearch,
                 title: "Commercial Locksmith SEO",
                 description:
                   "Target businesses, property managers, offices, retail locations, and commercial properties looking for professional locksmith solutions.",
                 href: "",
               },
               {
-                FaSearchIcon: "fa-solid fa-magnifying-glass",
+                icon: FaSearch,
                 title: "Automotive Locksmith SEO",
                 description:
                   "Improve visibility for high-intent searches involving car lockouts, vehicle keys, key replacement, ignition issues, and automotive locksmith services.",
                 href: "",
               },
               {
-                FaSearchIcon: "fa-solid fa-magnifying-glass",
+                icon: FaSearch,
                 title: "Local SEO for Locksmiths",
                 description:
                   "Strengthen your visibility in local search results and Google Maps for the cities and service areas your locksmith business serves.",
                 href: "",
               },
               {
-                FaSearchIcon: "fa-solid fa-magnifying-glass",
+                icon: FaSearch,
                 title: "Multi-Location Locksmith SEO",
                 description:
                   "Create a scalable SEO strategy for legitimate business locations and service areas without relying on thin, duplicate location pages.",
                 href: "",
+              },
+            ],
+          },
+          subrelatedServices: {
+            title: "Explore Our Other SEO Services",
+            description:
+              "We offer a range of SEO services for different industries and business types. Explore our other specialized SEO services to find the right fit for your business.",
+            exploreLabel: "Explore service",
+            items: [
+              {
+                icon: FaSearch,
+                title: "E-Commerce SEO Services",
+                description:
+                  "Web Founders USA, as a premier E-Commerce SEO agency, helps online stores and e-commerce businesses improve their search visibility, attract more qualified traffic, and increase sales through tailored SEO strategies.",
+                href: "/service/seo-services/ecommerce-seo/",
+              },
+              {
+                icon: FaSearch,
+                title: "B2B SEO Service",
+                description:
+                  "Our B2B SEO services are designed to help businesses that sell products or services to other businesses improve their online visibility, generate qualified leads, and drive revenue through targeted search engine optimization strategies.",
+                href: "/service/seo-services/b2b-seo/",
+              },
+              {
+                icon: FaSearch,
+                title: "Dental SEO Service",
+                description:
+                  "Our Dental SEO services are tailored to help dental practices improve their online presence, attract new patients, and grow their practice through effective search engine optimization strategies.",
+                href: "/service/seo-services/dental-seo/",
+              },
+              {
+                icon: FaSearch,
+                title: "Enterprise SEO Service",
+                description:
+                  "Our Enterprise SEO services are designed to help large organizations and enterprises improve their search engine visibility, drive organic traffic, and achieve their business goals through comprehensive and scalable SEO strategies.",
+                href: "/service/seo-services/enterprise-seo/",
+              },
+              {
+                icon: FaSearch,
+                title: "Automotive SEO Service",
+                description:
+                  "Our Automotive SEO services are tailored to help automotive businesses, including car dealerships, auto repair shops, and automotive service providers, improve their online visibility, attract more customers, and increase sales through effective search engine optimization strategies.",
+                href: "/service/seo-services/automotive-seo/",
+              },
+              {
+                icon: FaSearch,
+                title: "Wordpress SEO Service",
+                description:
+                  "Our WordPress SEO services are designed to help businesses and website owners optimize their WordPress websites for search engines, improve their online visibility, and drive organic traffic through effective SEO strategies.",
+                href: "/service/seo-services/wordpress-seo/ ",
               },
             ],
           },

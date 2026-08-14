@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import LoadMoreCards from "./LoadMoreCards";
 
 function SectionIntro({
   title,
@@ -148,6 +149,7 @@ export default function ExpertsPage({
   experts = [],
   certifications = [],
   relatedServices = null,
+  subrelatedServices = null,
   results = null,
   className = "",
   containerClassName = "mx-auto w-[92%] max-w-[1400px]",
@@ -173,6 +175,11 @@ export default function ExpertsPage({
       relatedServices?.description ||
       relatedServices?.items?.length,
   );
+  const showSubrelatedServices = Boolean(
+    subrelatedServices?.title ||
+      subrelatedServices?.description ||
+      subrelatedServices?.items?.length,
+  );
   const showResults = Boolean(
     results?.title || results?.description || results?.stats?.length,
   );
@@ -182,6 +189,7 @@ export default function ExpertsPage({
     !showExperts &&
     !showCertifications &&
     !showRelatedServices &&
+    !showSubrelatedServices &&
     !showResults
   ) {
     return null;
@@ -327,12 +335,51 @@ export default function ExpertsPage({
           />
 
           {relatedServices.items?.length ? (
+            relatedServices.initialVisibleCount ? (
+              <LoadMoreCards
+                initialCount={relatedServices.initialVisibleCount}
+                increment={relatedServices.loadMoreCount || 8}
+                buttonLabel={relatedServices.loadMoreLabel || "Load More"}
+                gridClassName="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
+              >
+                {relatedServices.items.map((service, index) => (
+                  <RelatedServiceCard
+                    key={service.id || service.href || index}
+                    service={service}
+                    exploreLabel={relatedServices.exploreLabel}
+                  />
+                ))}
+              </LoadMoreCards>
+            ) : (
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+                {relatedServices.items.map((service, index) => (
+                  <RelatedServiceCard
+                    key={service.id || service.href || index}
+                    service={service}
+                    exploreLabel={relatedServices.exploreLabel}
+                  />
+                ))}
+              </div>
+            )
+          ) : null}
+        </div>
+      ) : null}
+
+      {showSubrelatedServices ? (
+        <div className="mx-auto mt-14 w-[92%] max-w-7xl sm:mt-16 lg:mt-20">
+          <SectionIntro
+            title={subrelatedServices.title}
+            description={subrelatedServices.description}
+            className={subrelatedServices.items?.length ? "mb-8 sm:mb-12 lg:mb-16" : ""}
+          />
+
+          {subrelatedServices.items?.length ? (
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-              {relatedServices.items.map((service, index) => (
+              {subrelatedServices.items.map((service, index) => (
                 <RelatedServiceCard
                   key={service.id || service.href || index}
                   service={service}
-                  exploreLabel={relatedServices.exploreLabel}
+                  exploreLabel={subrelatedServices.exploreLabel}
                 />
               ))}
             </div>

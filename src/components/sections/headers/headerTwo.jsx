@@ -159,18 +159,19 @@ const HeaderTwo = ({ haveShadow }) => {
                             </Link>
 
                             <div
-                              className={`absolute left-0 top-full z-30 w-72 max-w-[calc(100vw-2rem)] rounded-xl bg-white shadow-2xl transition-all duration-200 ${
+                              className={`absolute left-0 top-full z-30 w-[840px] max-w-[calc(100vw-2rem)] rounded-xl bg-white shadow-2xl transition-all duration-200 ${
                                 openDropdown === "service"
                                   ? "pointer-events-auto translate-y-0 opacity-100"
                                   : "pointer-events-none translate-y-2 opacity-0"
                               }`}
                             >
-                              <ul className="custom-scrollbar max-h-[400px] overflow-y-auto py-3">
+                              <ul className="custom-scrollbar grid max-h-[min(70vh,420px)] grid-cols-3 gap-1 overflow-y-auto overflow-x-hidden whitespace-normal p-3">
                                 {serviceLinks.map((service) => (
                                   <li key={service.id}>
                                     <Link
                                       href={service.path}
-                                      className="block w-full px-6 py-2 text-left text-muted-foreground transition-colors hover:bg-gray-100 hover:text-primary-foreground"
+                                      title={service.title}
+                                      className="block w-full truncate rounded-lg px-4 py-2.5 text-left text-muted-foreground transition-colors hover:bg-gray-100 hover:text-primary-foreground"
                                       onClick={() => setOpenDropdown(null)}
                                     >
                                       {service.title}
@@ -178,7 +179,7 @@ const HeaderTwo = ({ haveShadow }) => {
                                   </li>
                                 ))}
                                 {!serviceLinks.length && (
-                                  <li className="px-6 py-2 text-muted-foreground">
+                                  <li className="col-span-3 px-4 py-2 text-muted-foreground">
                                     {isLoadingServices ? "Loading services..." : "View all services"}
                                   </li>
                                 )}
@@ -221,18 +222,19 @@ const HeaderTwo = ({ haveShadow }) => {
                             </Link>
 
                             <div
-                              className={`absolute left-0 top-full z-30 w-80 max-w-[calc(100vw-2rem)] rounded-xl bg-white shadow-2xl transition-all duration-200 ${
+                              className={`absolute left-0 top-full z-30 w-[840px] max-w-[calc(100vw-2rem)] rounded-xl bg-white shadow-2xl transition-all duration-200 ${
                                 openDropdown === "seo-services"
                                   ? "pointer-events-auto translate-y-0 opacity-100"
                                   : "pointer-events-none translate-y-2 opacity-0"
                               }`}
                             >
-                              <ul className="custom-scrollbar max-h-[400px] overflow-y-auto py-3">
+                              <ul className="custom-scrollbar grid max-h-[min(70vh,420px)] grid-cols-3 gap-1 overflow-y-auto overflow-x-hidden whitespace-normal p-3">
                                 {seoSubServices.map((service) => (
                                   <li key={service.id}>
                                     <Link
                                       href={service.path}
-                                      className="block w-full px-6 py-2 text-left text-muted-foreground transition-colors hover:bg-gray-100 hover:text-primary-foreground"
+                                      title={service.title}
+                                      className="block w-full truncate rounded-lg px-4 py-2.5 text-left text-muted-foreground transition-colors hover:bg-gray-100 hover:text-primary-foreground"
                                       onClick={() => setOpenDropdown(null)}
                                     >
                                       {service.title}
@@ -240,7 +242,7 @@ const HeaderTwo = ({ haveShadow }) => {
                                   </li>
                                 ))}
                                 {!seoSubServices.length && (
-                                  <li className="px-6 py-2 text-muted-foreground">
+                                  <li className="col-span-3 px-4 py-2 text-muted-foreground">
                                     {isLoadingSeo ? "Loading SEO services..." : "View SEO services"}
                                   </li>
                                 )}
