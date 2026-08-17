@@ -30,11 +30,16 @@ const staticRoutes = [
   "/testimonial/",
 ];
 
-function toSitemapEntry(url, lastModified = new Date()) {
-  return {
+function toSitemapEntry(url, lastModified) {
+  const entry = {
     url: toAbsoluteUrl(url),
-    lastModified,
   };
+
+  if (lastModified) {
+    entry.lastModified = new Date(lastModified);
+  }
+
+  return entry;
 }
 
 async function safeFetchJson(url, init) {
@@ -83,7 +88,7 @@ async function getCmsBlogEntries() {
   return posts
     .filter((post) => post?.slug)
     .map((post) =>
-      toSitemapEntry(`/blog/${post.slug}/`, post.modified || post.date || new Date())
+      toSitemapEntry(`/blog/${post.slug}/`, post.modified || post.date)
     );
 }
 
@@ -101,7 +106,7 @@ async function getProjectEntries() {
     .map((project) =>
       toSitemapEntry(
         `/projects/${project.slug}/`,
-        project.modified || project.date || new Date()
+        project.modified || project.date
       )
     );
 }

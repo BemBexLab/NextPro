@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import ServiceDetailClient from "./ServiceDetailClient";
 import { getServiceById, services } from "@/data/services";
-import { withEnUsHreflang } from "@/lib/metadata";
+import { toAbsoluteUrl, withEnUsHreflang } from "@/lib/metadata";
 
 export const dynamicParams = false;
 
@@ -28,19 +28,7 @@ export async function generateMetadata({ params }) {
   const title = service?.seo?.title || service?.title || 'Service';
   const description = service?.seo?.description || service?.desc || '';
 
-  const slugify = (str) =>
-    str
-      ?.toString()
-      .trim()
-      .toLowerCase()
-      .replace(/[^\w\s-]/g, '')
-      .replace(/\s+/g, '-')
-      .replace(/--+/g, '-')
-      .replace(/^-+|-+$/g, '') || 'service';
-
-  const canonical = `https://www.webfoundersusa.com/service/${slugify(
-    service?.id || id
-  )}`;
+  const canonical = toAbsoluteUrl(`/service/${id}/`);
 
   return withEnUsHreflang({
     title,
@@ -51,9 +39,21 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical,
     },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        maxImagePreview: "large",
+        maxSnippet: -1,
+        maxVideoPreview: -1,
+      },
+    },
     openGraph: {
       title,
       description,
+      url: canonical,
     },
   });
 }

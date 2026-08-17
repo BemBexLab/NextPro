@@ -2,7 +2,7 @@ import "./globals.css";
 import Script from "next/script";
 import { ThemeProvider } from "@/contextApi/themeProvider";
 import FooterFour from "@/components/sections/footers/footerFour";
-import HeaderTwo from "@/components/sections/headers/headerTwo";
+import HeaderTwo from "@/components/sections/headers/HeaderTwoServer";
 import ClientEnhancements from "@/components/ClientEnhancements";
 import { withEnUsHreflang } from "@/lib/metadata";
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import SubServiceDetailClient from './SubServiceDetailClient';
 import { getSubCategory, getServiceById, services } from '@/data/services';
-import { withEnUsHreflang } from "@/lib/metadata";
+import { toAbsoluteUrl, withEnUsHreflang } from "@/lib/metadata";
 
 export const dynamicParams = false;
 
@@ -22,19 +22,7 @@ export async function generateMetadata({ params }) {
   const title = subCategory?.seo?.title || subCategory?.title || 'Service';
   const description = subCategory?.seo?.description || subCategory?.desc || '';
 
-  const slugify = (str) =>
-    str
-      ?.toString()
-      .trim()
-      .toLowerCase()
-      .replace(/[^\w\s-]/g, '')
-      .replace(/\s+/g, '-')
-      .replace(/--+/g, '-')
-      .replace(/^-+|-+$/g, '') || 'service';
-
-  const canonical = `https://www.webfoundersusa.com/service/${slugify(
-    parentService?.id || parentService?.name || id
-  )}/${slugify(subCategory?.id || sub)}`;
+  const canonical = toAbsoluteUrl(`/service/${id}/${sub}/`);
 
   return withEnUsHreflang({
     title,
@@ -47,9 +35,21 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical,
     },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        maxImagePreview: "large",
+        maxSnippet: -1,
+        maxVideoPreview: -1,
+      },
+    },
     openGraph: {
       title,
       description,
+      url: canonical,
     },
   });
 }

@@ -17,7 +17,14 @@ export default function LoadMoreCards({
   return (
     <>
       <div id={gridId} className={gridClassName} aria-live="polite">
-        {cards.slice(0, visibleCount)}
+        {cards.map((card, index) => (
+          <div
+            key={card.key || index}
+            className={index < visibleCount ? "contents" : "hidden"}
+          >
+            {card}
+          </div>
+        ))}
       </div>
 
       {hasMore ? (

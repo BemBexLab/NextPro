@@ -24,34 +24,9 @@ const navigationLinks = [
   { id: 7, path: "/blog", lable: "Blog" },
 ];
 
-function mapServiceLinks(services = []) {
-  return services.map((service) => ({
-    id: service.id,
-    title: service.title,
-    path: `/service/${service.id}`,
-  }));
-}
-
-function mapSeoLinks(services = []) {
-  const seoService = services.find((service) => service.id === "seo-services");
-  const subCategories = seoService?.sub_categories || [];
-
-  return subCategories.map((service) => ({
-    id: service.id,
-    title: service.title,
-    path: `/service/seo-services/${service.id}/`,
-  }));
-}
-
-const HeaderTwo = ({ haveShadow }) => {
+const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
   const pathname = usePathname();
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [serviceLinks, setServiceLinks] = useState([]);
-  const [seoSubServices, setSeoSubServices] = useState([]);
-  const [servicesReady, setServicesReady] = useState(false);
-  const [seoReady, setSeoReady] = useState(false);
-  const [isLoadingServices, setIsLoadingServices] = useState(false);
-  const [isLoadingSeo, setIsLoadingSeo] = useState(false);
 
   const isActive = (path) => {
     if (path === "/") {
@@ -59,40 +34,6 @@ const HeaderTwo = ({ haveShadow }) => {
     }
 
     return pathname.startsWith(path);
-  };
-
-  const loadServiceLinks = async () => {
-    if (servicesReady || isLoadingServices) {
-      return;
-    }
-
-    setIsLoadingServices(true);
-
-    try {
-      const serviceModule = await import("@/data/services");
-      setServiceLinks(mapServiceLinks(serviceModule.services));
-      setServicesReady(true);
-    } finally {
-      setIsLoadingServices(false);
-    }
-  };
-
-  const loadSeoLinks = async () => {
-    if (seoReady || isLoadingSeo) {
-      return;
-    }
-
-    setIsLoadingSeo(true);
-
-    try {
-      const serviceModule = await import(
-        "@/app/service/seo-services/components/subservices"
-      );
-      setSeoSubServices(mapSeoLinks(serviceModule.services));
-      setSeoReady(true);
-    } finally {
-      setIsLoadingSeo(false);
-    }
   };
 
   return (
@@ -133,10 +74,7 @@ const HeaderTwo = ({ haveShadow }) => {
                           <li
                             className="relative py-8 2xl:py-9"
                             key={id}
-                            onMouseEnter={() => {
-                              setOpenDropdown("service");
-                              void loadServiceLinks();
-                            }}
+                            onMouseEnter={() => setOpenDropdown("service")}
                             onMouseLeave={() => setOpenDropdown(null)}
                           >
                             <Link
@@ -180,7 +118,7 @@ const HeaderTwo = ({ haveShadow }) => {
                                 ))}
                                 {!serviceLinks.length && (
                                   <li className="col-span-3 px-4 py-2 text-muted-foreground">
-                                    {isLoadingServices ? "Loading services..." : "View all services"}
+                                    View all services
                                   </li>
                                 )}
                               </ul>
@@ -194,10 +132,7 @@ const HeaderTwo = ({ haveShadow }) => {
                           <li
                             className="relative py-8 2xl:py-9"
                             key={id}
-                            onMouseEnter={() => {
-                              setOpenDropdown("seo-services");
-                              void loadSeoLinks();
-                            }}
+                            onMouseEnter={() => setOpenDropdown("seo-services")}
                             onMouseLeave={() => setOpenDropdown(null)}
                           >
                             <Link
@@ -243,7 +178,7 @@ const HeaderTwo = ({ haveShadow }) => {
                                 ))}
                                 {!seoSubServices.length && (
                                   <li className="col-span-3 px-4 py-2 text-muted-foreground">
-                                    {isLoadingSeo ? "Loading SEO services..." : "View SEO services"}
+                                    View SEO services
                                   </li>
                                 )}
                               </ul>
