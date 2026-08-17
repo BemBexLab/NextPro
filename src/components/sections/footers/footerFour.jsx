@@ -73,12 +73,12 @@ const FooterFour = () => {
                     <p>Designed and Developed By <Link href="/" className='text-primary-foreground font-medium relative hover-underline after:h-[1px]'>WebFounders USA</Link></p>
                     <div className='flex flex-col items-center gap-1 xl:items-end'>
                         <p>Copyright: © 2026. All Rights Reserved</p>
-                        <a
+                        {/* <a
                             href="/sitemap.xml"
                             className='text-[10px] absolute font-normal uppercase tracking-[0.08em] text-white/45 transition-all duration-500 hover:text-white/70'
                         >
                             Sitemap
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </div>
