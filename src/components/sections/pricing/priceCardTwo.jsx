@@ -1,165 +1,170 @@
-import React, { useRef, useEffect, useState } from "react";
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { FaCircleCheck } from "react-icons/fa6";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogTitle,
   DialogTrigger,
-  DialogClose
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
-const PriceCardTwo = ({ plan_name, price, services, old_price }) => {
+const dialogInputClassName =
+  "h-11 min-w-0 w-full rounded border-2 border-gray-300 bg-white px-3 text-sm font-medium text-black outline-none placeholder:text-gray-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 sm:h-12 sm:text-base";
+
+const PriceCardTwo = ({ plan_name, price, services = [], old_price }) => {
   const planNameRef = useRef(null);
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
+    if (!("IntersectionObserver" in window)) {
+      return undefined;
+    }
+
     const observer = new window.IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setAnimate(true);
-          observer.disconnect(); // Animation triggers only once
+          observer.disconnect();
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
-    if (planNameRef.current) observer.observe(planNameRef.current);
+
+    if (planNameRef.current) {
+      observer.observe(planNameRef.current);
+    }
 
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="group bg-[#ffe6e9] border-2 border-black rounded-[22px] flex flex-col justify-between p-8 min-h-[600px] w-[350px] transition mx-auto shadow-sm hover:shadow-md relative">
-      {/* Plan Name */}
-      <div>
-        <div>
-          {/* Plan Name Header - absolute, full width, bg, no spacing */}
-          <div
-            className="absolute top-0 left-0 right-0 bg-[#BF0B30] rounded-t-[22px] flex min-h-16 py-4 z-10"
-            ref={planNameRef}
-          >
-            <span
-              className={`text-lg font-bold text-white uppercase tracking-wider leading-tight mx-5 text-center w-full break-words ${
-                animate ? "price-card-animate" : ""
-              }`}
-            >
-              {plan_name}
-            </span>
-          </div>
+    <article className="group relative mx-auto flex h-full min-h-[560px] w-full max-w-[390px] min-w-0 flex-col overflow-hidden rounded-[22px] border-2 border-black bg-[#ffe6e9] p-5 pt-0 shadow-sm transition hover:shadow-md sm:min-h-[600px] sm:p-8 sm:pt-0">
+      <div
+        className="absolute inset-x-0 top-0 z-10 flex min-h-16 items-center rounded-t-[20px] bg-[#BF0B30] px-4 py-3"
+        ref={planNameRef}
+      >
+        <h2
+          className={`w-full break-words text-center text-base font-bold uppercase leading-tight tracking-wider text-white sm:text-lg ${
+            animate ? "price-card-animate" : ""
+          }`}
+        >
+          {plan_name}
+        </h2>
+      </div>
 
-          <div className="relative inline-block mb-5 mt-15">
-            {/* "NEW" label above current price */}
-            <span className="absolute -top-4 left-0 text-xs font-semibold text-green-600 tracking-wide">
+      <div className="flex h-full min-w-0 flex-col pt-16">
+        <div className="mb-5 mt-5 flex min-w-0 flex-wrap items-end gap-x-3 gap-y-2 sm:mt-6">
+          <div className="relative min-w-0 pt-4">
+            <span className="absolute left-0 top-0 text-xs font-semibold tracking-wide text-green-600">
               NOW
             </span>
-            <span className="text-5xl font-extrabold text-black">${price}</span>
-            {old_price && (
-              <>
-                {/* "OLD" label above old price */}
-                <span className="absolute top-1 -right-15 text-lg text-black/90 font-bold line-through">
-                  ${old_price}
-                </span>
-              </>
-            )}
+            <span className="break-all text-4xl font-extrabold leading-none text-black sm:text-5xl">
+              ${price}
+            </span>
           </div>
+
+          {old_price ? (
+            <span className="mb-1 break-all text-base font-bold text-black/90 line-through sm:text-lg">
+              ${old_price}
+            </span>
+          ) : null}
         </div>
 
-        {/* Service List with custom scrollbar */}
-        <ul
-          className="
-            text-base text-black space-y-3 mb-8 min-h-[210px] max-h-[210px] overflow-y-auto pr-1
-            [&::-webkit-scrollbar]:w-1
-            [&::-webkit-scrollbar-thumb]:bg-[#101129]
-            [&::-webkit-scrollbar-thumb]:rounded-full
-            [&::-webkit-scrollbar-track]:bg-[#e5e7eb]
-            scrollbar-thin
-            scrollbar-thumb-[#101129]
-            scrollbar-track-[#e5e7eb]
-          "
-        >
-          {services.map((service, idx) => (
+        <ul className="mb-6 h-[210px] min-w-0 space-y-3 overflow-y-auto pr-1 text-sm text-black [scrollbar-color:#101129_#e5e7eb] [scrollbar-width:thin] sm:mb-8 sm:text-base [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#101129] [&::-webkit-scrollbar-track]:bg-[#e5e7eb] [&::-webkit-scrollbar]:w-1">
+          {services.map((service, index) => (
             <li
-              key={idx}
-              className="flex items-start gap-3 leading-tight text-gray-900"
+              key={`${typeof service === "string" ? service : service.service}-${index}`}
+              className="flex min-w-0 items-start gap-3 leading-tight text-gray-900"
             >
-              <FaCircleCheck className="mt-1 w-4 h-4 text-primary flex-shrink-0 inline-block" />
-              <span>
+              <FaCircleCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary sm:mt-1" />
+              <span className="min-w-0 break-words">
                 {typeof service === "string" ? service : service.service}
               </span>
             </li>
           ))}
         </ul>
-        <hr className="border-t border-gray-300 mb-4" />
-      </div>
-      {/* Footer Area */}
-      <div className="flex flex-col relative pb-12">
-        <div className="flex items-end justify-between mb-3 w-full">
-          <div>
-            <div className="text-[14px] font-bold text-primary leading-none mb-1">
-              Speak with us
+
+        <hr className="mb-4 border-t border-gray-300" />
+
+        <div className="mt-auto min-w-0">
+          <div className="mb-5 flex min-w-0 flex-wrap items-end justify-between gap-3">
+            <div className="min-w-0">
+              <div className="mb-1 text-sm font-bold leading-none text-primary">
+                Speak with us
+              </div>
+              <a
+                href="tel:+14704707392"
+                className="break-words text-sm font-medium leading-none text-black transition hover:text-primary sm:text-base"
+              >
+                +1 (470) 470-7392
+              </a>
             </div>
-            <a
-              href="tel:+14704707392"
-              className="text-[16px] font-medium text-black leading-none hover:text-primary transition"
+
+            <Link
+              href="/contact-us"
+              className="shrink-0 text-base font-extrabold leading-none text-primary hover:underline sm:text-lg"
             >
-              +1 (470) 470-7392
-            </a>
+              Chat Now
+            </Link>
           </div>
 
-          <Link href="/contact-us">
-            <span className="text-[18px] font-extrabold text-primary leading-none hover:underline cursor-pointer">
-              Chat Now
-            </span>
-          </Link>
-        </div>
-        {/* Overlapping Button */}
-        <div className="w-[90%] left-1/2 -translate-x-1/2 absolute -bottom-14" style={{ zIndex: 10 }}>
           <OrderDialog />
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
 export default PriceCardTwo;
 
-// ---- OrderDialog Component ----
-
 const OrderDialog = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [website, setWebsite] = useState('');
-  const [contactNumber, setContactNumber] = useState('');
-  const [service, setService] = useState('');
-  const [message, setMessage] = useState('');
-  const [status, setStatus] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [service, setService] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus('Sending...');
-    const res = await fetch('/api/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name,
-        email,
-        website,
-        contactNumber,
-        service,
-        message,
-      }),
-    });
-    if (res.ok) {
-      setStatus('Message sent!');
-      setName('');
-      setEmail('');
-      setWebsite('');
-      setContactNumber('');
-      setService('');
-      setMessage('');
-    } else {
-      setStatus('Error sending message.');
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setStatus("Sending...");
+
+    try {
+      const response = await fetch("/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          website,
+          contactNumber,
+          service,
+          message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Submission failed");
+      }
+
+      setStatus("Message sent!");
+      setName("");
+      setEmail("");
+      setWebsite("");
+      setContactNumber("");
+      setService("");
+      setMessage("");
+    } catch {
+      setStatus("Error sending message.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -167,113 +172,132 @@ const OrderDialog = () => {
     <Dialog>
       <DialogTrigger asChild>
         <button
-          className="
-            bg-[#BF0B30] text-white rounded-[7px] px-4 py-3 font-bold text-lg
-            transition hover:bg-[#BF0B30]/90
-            shadow-md flex justify-center items-center w-full
-            group-hover:animate-shake-pause
-          "
+          type="button"
+          className="flex w-full items-center justify-center rounded-[7px] bg-[#BF0B30] px-4 py-3 text-base font-bold text-white shadow-md transition hover:bg-[#BF0B30]/90 group-hover:animate-shake-pause sm:text-lg"
         >
           Place Your Order
         </button>
       </DialogTrigger>
-      <DialogContent
-        className="
-          max-w-[95vw] sm:max-w-[700px]
-          w-[95vw] sm:w-auto
-          p-0
-        "
-      >
-        {/* Header */}
-        <div className='flex items-center justify-between py-4 sm:py-6 border-b border-b-[#dee2e6] px-3 sm:px-4'>
-          <DialogTitle>
-            <h6 className='text-lg sm:text-2xl font-bold text-muted-foreground'>Place Your Order</h6>
+
+      <DialogContent className="max-h-[90vh] w-[calc(100vw-2rem)] max-w-[700px] overflow-y-auto p-0">
+        <div className="flex items-center justify-between border-b border-b-[#dee2e6] px-4 py-4 sm:px-6 sm:py-5">
+          <DialogTitle className="text-lg font-bold text-muted-foreground sm:text-2xl">
+            Place Your Order
           </DialogTitle>
           <DialogClose />
         </div>
-        <div className="px-3 sm:px-4 pb-4">
-          <form className='pt-0' onSubmit={handleSubmit}>
-            <div className="flex flex-col sm:flex-row justify-between gap-3 sm:gap-5">
-              <div className="w-full">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
-                  value={name}
-                  onChange={e => setName(e.target.value)}
-                  required
-                />
-              </div>
-              <div className="w-full">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
-                  required
-                />
-              </div>
+
+        <div className="px-4 pb-5 sm:px-6 sm:pb-6">
+          <form className="min-w-0" onSubmit={handleSubmit}>
+            <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+              <input
+                type="text"
+                aria-label="Name"
+                autoComplete="name"
+                placeholder="Name"
+                className={dialogInputClassName}
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+                required
+              />
+              <input
+                type="email"
+                aria-label="Email"
+                autoComplete="email"
+                placeholder="Email"
+                className={dialogInputClassName}
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                required
+              />
+              <input
+                type="url"
+                aria-label="Website (optional)"
+                autoComplete="url"
+                placeholder="Website (optional)"
+                className={dialogInputClassName}
+                value={website}
+                onChange={(event) => setWebsite(event.target.value)}
+              />
+              <input
+                type="tel"
+                aria-label="Phone Number (optional)"
+                autoComplete="tel"
+                placeholder="Phone Number (optional)"
+                className={dialogInputClassName}
+                value={contactNumber}
+                onChange={(event) => setContactNumber(event.target.value)}
+              />
             </div>
-            <div className="flex flex-col sm:flex-row justify-between gap-3 sm:gap-5 mt-3 sm:mt-4">
-              <div className="w-full">
-                <input
-                  type="text"
-                  placeholder="Website (optional)"
-                  className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
-                  value={website}
-                  onChange={e => setWebsite(e.target.value)}
-                />
-              </div>
-              <div className="w-full">
-                <input
-                  type="text"
-                  placeholder="Phone Number (optional)"
-                  className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
-                  value={contactNumber}
-                  onChange={e => setContactNumber(e.target.value)}
-                />
-              </div>
-            </div>
-            <div className="w-full mt-3 sm:mt-4">
+
+            <div className="mt-3 min-w-0 sm:mt-4">
               <label htmlFor="price-order-service" className="sr-only">
                 Select a service
               </label>
               <select
                 id="price-order-service"
-                className="bg-white border-2 border-gray-300 font-medium text-black w-full rounded px-2 py-2 h-10 sm:px-3 sm:py-2 sm:h-12 text-sm sm:text-base"
+                className={dialogInputClassName}
                 value={service}
-                onChange={e => setService(e.target.value)}
+                onChange={(event) => setService(event.target.value)}
                 required
               >
-                <option value="" disabled>Select a Service</option>
-                <option value="Search Engine Optimization">Search Engine Optimization</option>
-                <option value="Social Media Marketing">Social Media Marketing</option>
+                <option value="" disabled>
+                  Select a Service
+                </option>
+                <option value="Search Engine Optimization">
+                  Search Engine Optimization
+                </option>
+                <option value="Social Media Marketing">
+                  Social Media Marketing
+                </option>
                 <option value="Content Writing">Content Writing</option>
-                <option value="Affiliate Marketing">Affiliate Marketing</option>
+                <option value="Affiliate Marketing">
+                  Affiliate Marketing
+                </option>
                 <option value="Email Marketing">Email Marketing</option>
               </select>
             </div>
-            <div className='mt-3 sm:mt-4'>
-              <textarea
-                placeholder="Message"
-                className="bg-white border-2 border-gray-300 font-medium placeholder:text-gray-400 text-black w-full rounded px-2 py-2 text-sm sm:px-3 sm:py-2 sm:text-base"
-                value={message}
-                onChange={e => setMessage(e.target.value)}
+
+            <textarea
+              aria-label="Message"
+              placeholder="Message"
+              className="mt-3 min-h-28 w-full min-w-0 resize-y rounded border-2 border-gray-300 bg-white px-3 py-3 text-sm font-medium text-black outline-none placeholder:text-gray-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 sm:mt-4 sm:text-base"
+              value={message}
+              onChange={(event) => setMessage(event.target.value)}
+              required
+            />
+
+            <div className="mt-4 flex min-w-0 items-start">
+              <input
+                type="checkbox"
+                id="price-order-consent"
+                className="mt-1 h-4 w-4 shrink-0"
                 required
-                rows={3}
               />
-            </div>
-            <div className='mt-4 flex items-start'>
-              <input type='checkbox' id='price-order-consent' className='w-4 h-4 mt-1' required />
-              <label htmlFor="price-order-consent" className='pl-3 w-[94%] font-medium text-sm sm:text-base'>
-                By using this form you agree with the storage and handling of your data policies of WebFounders USA.
+              <label
+                htmlFor="price-order-consent"
+                className="min-w-0 break-words pl-3 text-sm font-medium sm:text-base"
+              >
+                By using this form you agree with the storage and handling of
+                your data policies of WebFounders USA.
               </label>
             </div>
-            <div className='mt-6 flex justify-end pb-4'>
-              <Button type="submit" className="text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3">Send request</Button>
+
+            <div className="mt-6 flex justify-start sm:justify-end">
+              <Button
+                type="submit"
+                className="w-full px-4 py-2 text-sm sm:w-auto sm:px-6 sm:py-3 sm:text-base"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send request"}
+              </Button>
             </div>
-            {status && <div className="mt-2 text-sm">{status}</div>}
+
+            {status ? (
+              <div className="mt-3 text-sm" aria-live="polite">
+                {status}
+              </div>
+            ) : null}
           </form>
         </div>
       </DialogContent>

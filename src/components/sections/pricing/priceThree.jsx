@@ -1,8 +1,9 @@
 "use client";
+
+import { useState } from "react";
 import SlideUp from "@/components/animations/slideUp";
 import { Button } from "@/components/ui/button";
 import { pricingData } from "@/lib/fackData/pricingData";
-import React, { useState } from "react";
 import PriceCardTwo from "./priceCardTwo";
 
 const categories = [
@@ -18,92 +19,72 @@ const categories = [
 
 const PriceThree = () => {
   const [activeCategory, setActiveCategory] = useState("Logo");
-  const [isChecked, setChecked] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const togglePricing = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setChecked(!isChecked);
-      setIsAnimating(false);
-    }, 300);
-  };
-
-  // Filter pricing data by category
   const filteredData = pricingData.filter(
-    (plan) => plan.category === activeCategory
+    (plan) => plan.category === activeCategory,
   );
 
   return (
-    <section className="lg:py-15 py-9">
-      <div className="max-w-[1350px] mx-auto px-[15px]">
+    <section className="w-full py-10 sm:py-12 lg:py-15">
+      <div className="mx-auto w-[92%] max-w-[1350px]">
         <SlideUp>
-          <div className="flex flex-col items-center">
+          <div className="flex min-w-0 flex-col items-center">
             <Button variant="secondary">Pricing</Button>
-            <h1 className="font-extrabold text-muted-foreground lg:text-5xl sm:text-4.5xl text-3xl lg:leading-[140%] sm:leading-[130%] leading-[120%] pt-6 max-w-full text-center">
+            <h1 className="max-w-full break-words pt-4 text-center text-3xl font-extrabold leading-[120%] text-muted-foreground sm:pt-6 sm:text-4.5xl sm:leading-[130%] lg:text-5xl lg:leading-[140%]">
               OUR PACKAGES
             </h1>
-            <p className="pt-[18px] text-gray-600 text-center max-w-[757px] font-semibold">
+            <p className="max-w-[757px] pt-4 text-center text-sm font-semibold leading-relaxed text-gray-600 sm:pt-[18px] sm:text-base">
               No matter what budget type you have – we welcome you
             </p>
-            {/* Category Tabs */}
-            <div className="flex flex-wrap gap-3 justify-center items-center mt-8">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-2 rounded-md text-sm font-bold uppercase tracking-wide border transition ${activeCategory === cat
-                      ? "bg-primary text-white border-primary shadow"
-                      : "bg-white text-primary border-transparent hover:bg-[#E2E7FF] hover:text-primary"
+
+            <div
+              className="mt-6 grid w-full max-w-5xl grid-cols-2 gap-2 min-[480px]:grid-cols-3 sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3"
+              aria-label="Pricing categories"
+            >
+              {categories.map((category) => {
+                const isActive = activeCategory === category;
+
+                return (
+                  <button
+                    key={category}
+                    type="button"
+                    aria-pressed={isActive}
+                    onClick={() => setActiveCategory(category)}
+                    className={`min-w-0 rounded-md border px-2 py-2 text-xs font-bold uppercase tracking-wide transition sm:min-w-[110px] sm:px-4 sm:text-sm ${
+                      isActive
+                        ? "border-primary bg-primary text-white shadow"
+                        : "border-transparent bg-white text-primary hover:bg-[#E2E7FF] hover:text-primary"
                     }`}
-                  style={{ minWidth: 110 }}
-                >
-                  {cat}
-                </button>
-              ))}
+                  >
+                    <span className="break-words">{category}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </SlideUp>
-        <div className="pt-12.5">
-          <div>
-            <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-y-10  pt-2 lg:px-20">
-              {filteredData.length > 0 ? (
-                filteredData.map(
-                  ({
-                    additionalAdds,
-                    id,
-                    info,
-                    isTag,
-                    link,
-                    plan_name,
-                    price,
-                    old_price, // <-- Add this
-                    services,
-                  }) => (
-                    <PriceCardTwo
-                      key={id}
-                      id={id}
-                      additionalAdds={additionalAdds}
-                      info={info}
-                      isTag={isTag}
-                      link={link}
-                      plan_name={plan_name}
-                      price={price}
-                      old_price={old_price} // <-- Pass as prop
-                      services={services}
-                      cardThree={true}
-                      isAnimating={isAnimating}
-                      isChecked={isChecked}
-                    />
-                  )
-                )
 
-              ) : (
-                <div className="col-span-full text-center text-gray-400 font-semibold">
-                  No packages available in this category.
-                </div>
-              )}
-            </div>
+        <div className="pt-8 sm:pt-10 lg:pt-12.5">
+          <div
+            className="grid min-w-0 grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 md:gap-y-10 xl:grid-cols-3 xl:gap-x-8"
+            aria-live="polite"
+          >
+            {filteredData.length > 0 ? (
+              filteredData.map(
+                ({ id, plan_name, price, old_price, services }) => (
+                  <PriceCardTwo
+                    key={id}
+                    plan_name={plan_name}
+                    price={price}
+                    old_price={old_price}
+                    services={services}
+                  />
+                ),
+              )
+            ) : (
+              <div className="col-span-full py-8 text-center font-semibold text-gray-400">
+                No packages available in this category.
+              </div>
+            )}
           </div>
         </div>
       </div>

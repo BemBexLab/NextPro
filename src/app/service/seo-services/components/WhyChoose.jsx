@@ -52,6 +52,11 @@ function getLastRowStartClass(featureCount, index) {
   return "lg:col-start-2";
 }
 
+const featureCarouselClassName =
+  "flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 pt-1 [scrollbar-width:none] sm:gap-5 lg:!grid lg:overflow-visible lg:py-0 [&::-webkit-scrollbar]:hidden";
+const featureSlideClassName =
+  "min-w-0 flex-[0_0_85%] snap-start sm:basis-[47%] md:basis-[31%] lg:basis-auto lg:snap-none";
+
 const WhyChoose = ({
   title,
   paragraphs = [],
@@ -61,8 +66,13 @@ const WhyChoose = ({
   gridClassName = "grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-6",
 }) => {
   if (!title && !paragraphs.length && !features.length) {
-    return null;zz
+    return null;
   }
+
+  const responsiveGridClassName = gridClassName
+    .split(/\s+/)
+    .filter((utilityClass) => utilityClass !== "grid" && utilityClass !== "flex")
+    .join(" ");
 
   return (
     <section className={`w-full bg-white py-10 ${className}`}>
@@ -82,28 +92,32 @@ const WhyChoose = ({
         ) : null}
 
         {features.length ? (
-          <div className={`${gridClassName} lg:!grid-cols-8`}>
+          <div
+            className={`${featureCarouselClassName} ${responsiveGridClassName} lg:!grid-cols-8`}
+          >
             {features.map((item, index) => (
               <div
                 key={item.id || item.text || index}
-                className={`flex h-full items-start rounded-lg border border-gray-50 bg-[#F8F9FA] p-6 shadow-sm lg:col-span-2 ${getLastRowStartClass(features.length, index)}`}
+                className={`${featureSlideClassName} lg:col-span-2 ${getLastRowStartClass(features.length, index)}`}
               >
-                <div
-                  className={`mr-4 h-full min-h-[60px] w-1 shrink-0 ${item.color || "bg-[#0052cc]"}`}
-                />
+                <article className="flex h-full min-w-0 items-start rounded-lg border border-gray-50 bg-[#F8F9FA] p-6 shadow-sm">
+                  <div
+                    className={`mr-4 h-full min-h-[60px] w-1 shrink-0 ${item.color || "bg-[#0052cc]"}`}
+                  />
 
-                {item.title ? (
-                  <div className="self-center">
-                    <h3 className="text-lg font-semibold text-[#072d7f]">
-                      {item.title}
-                    </h3>
-                    {renderFeatureDescription(item)}
-                  </div>
-                ) : (
-                  <p className="self-center text-sm font-normal leading-snug text-[#3c4043]">
-                    {item.text}
-                  </p>
-                )}
+                  {item.title ? (
+                    <div className="min-w-0 self-center">
+                      <h3 className="break-words text-lg font-semibold text-[#072d7f]">
+                        {item.title}
+                      </h3>
+                      {renderFeatureDescription(item)}
+                    </div>
+                  ) : (
+                    <p className="min-w-0 self-center break-words text-sm font-normal leading-snug text-[#3c4043]">
+                      {item.text}
+                    </p>
+                  )}
+                </article>
               </div>
             ))}
           </div>

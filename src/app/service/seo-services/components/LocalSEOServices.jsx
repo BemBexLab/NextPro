@@ -2,7 +2,11 @@ import Image from "next/image";
 import React from "react";
 
 const serviceDescriptionClassName =
-  "max-h-[15vh] min-w-0 overflow-y-auto overscroll-contain pr-1 text-center text-sm leading-relaxed text-gray-600 break-words [-ms-overflow-style:none] [scrollbar-width:none] sm:text-base [&::-webkit-scrollbar]:hidden [&_p+p]:mt-3 [&_ul]:mx-auto [&_ul]:mt-3 [&_ul]:w-fit [&_ul]:max-w-full [&_ul]:space-y-1 [&_ul]:pl-5 [&_ul]:text-left [&_ol]:mx-auto [&_ol]:mt-3 [&_ol]:w-fit [&_ol]:max-w-full [&_ol]:space-y-1 [&_ol]:pl-5 [&_ol]:text-left [&_li]:pl-1";
+  "max-h-[15vh] min-w-0 overflow-y-auto overscroll-y-auto pr-1 text-center text-sm leading-relaxed text-gray-600 break-words [-ms-overflow-style:none] [scrollbar-width:none] sm:text-base [&::-webkit-scrollbar]:hidden [&_p+p]:mt-3 [&_ul]:mx-auto [&_ul]:mt-3 [&_ul]:w-fit [&_ul]:max-w-full [&_ul]:space-y-1 [&_ul]:pl-5 [&_ul]:text-left [&_ol]:mx-auto [&_ol]:mt-3 [&_ol]:w-fit [&_ol]:max-w-full [&_ol]:space-y-1 [&_ol]:pl-5 [&_ol]:text-left [&_li]:pl-1";
+const serviceCarouselClassName =
+  "flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 pt-1 [scrollbar-width:none] sm:gap-6 lg:grid lg:overflow-visible lg:py-0 [&::-webkit-scrollbar]:hidden";
+const serviceSlideClassName =
+  "min-w-0 flex-[0_0_85%] snap-start sm:basis-[47%] md:basis-[31%] lg:basis-auto lg:snap-none";
 
 function ServiceIcon({ icon, title }) {
   if (!icon) {
@@ -72,35 +76,39 @@ export default function LocalSEOServices({
         ) : null}
 
         {services.length ? (
-          <div className={`grid gap-4 sm:gap-6 ${gridClassName}`}>
+          <div className={`${serviceCarouselClassName} ${gridClassName}`}>
             {services.map((service, index) => (
-              <article
+              <div
                 key={service.id || service.title || index}
-                className={`flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 transition-shadow duration-300 hover:shadow-lg sm:p-6 lg:p-8 ${service.className || ""}`}
+                className={serviceSlideClassName}
               >
-                {service.icon ? (
-                  <div className="mb-4 flex min-h-14 items-center justify-center text-center sm:mb-6 sm:min-h-16">
-                    <ServiceIcon icon={service.icon} title={service.title} />
-                  </div>
-                ) : null}
+                <article
+                  className={`flex h-full min-w-0 flex-col rounded-2xl border border-gray-200 bg-white p-5 transition-shadow duration-300 hover:shadow-lg sm:p-6 lg:p-8 ${service.className || ""}`}
+                >
+                  {service.icon ? (
+                    <div className="mb-4 flex min-h-14 items-center justify-center text-center sm:mb-6 sm:min-h-16">
+                      <ServiceIcon icon={service.icon} title={service.title} />
+                    </div>
+                  ) : null}
 
-                {service.title ? (
-                  <h3 className="mb-2 flex text-center text-lg font-medium leading-snug text-gray-900 sm:min-h-14 sm:items-center sm:justify-center sm:text-xl">
-                    {service.title}
-                  </h3>
-                ) : null}
+                  {service.title ? (
+                    <h3 className="mb-2 flex text-center text-lg font-medium leading-snug text-gray-900 sm:min-h-14 sm:items-center sm:justify-center sm:text-xl">
+                      {service.title}
+                    </h3>
+                  ) : null}
 
-                {service.descriptionHtml ? (
-                  <div
-                    className={serviceDescriptionClassName}
-                    dangerouslySetInnerHTML={{ __html: service.descriptionHtml }}
-                  />
-                ) : service.description ? (
-                  <div className={serviceDescriptionClassName}>
-                    {service.description}
-                  </div>
-                ) : null}
-              </article>
+                  {service.descriptionHtml ? (
+                    <div
+                      className={serviceDescriptionClassName}
+                      dangerouslySetInnerHTML={{ __html: service.descriptionHtml }}
+                    />
+                  ) : service.description ? (
+                    <div className={serviceDescriptionClassName}>
+                      {service.description}
+                    </div>
+                  ) : null}
+                </article>
+              </div>
             ))}
           </div>
         ) : null}

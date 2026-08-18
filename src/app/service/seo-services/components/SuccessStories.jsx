@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+const storiesCarouselClassName =
+  "flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 pt-1 [scrollbar-width:none] sm:gap-6 lg:grid lg:overflow-visible lg:py-0 [&::-webkit-scrollbar]:hidden";
+const storySlideClassName =
+  "min-w-0 flex-[0_0_85%] snap-start sm:basis-[47%] md:basis-[31%] lg:basis-auto lg:snap-none";
+
 function StoryImage({ image, title, priority = false }) {
   const imageData = typeof image === "string" ? { src: image } : image;
 
@@ -73,46 +78,50 @@ export default function SuccessStories({
         ) : null}
 
         {visibleStories.length ? (
-          <div className={`grid gap-4 sm:gap-6 ${gridClassName}`}>
+          <div className={`${storiesCarouselClassName} ${gridClassName}`}>
             {visibleStories.map((story, index) => {
               const hasImage = Boolean(
                 typeof story.image === "string" ? story.image : story.image?.src,
               );
 
               return (
-                <article
+                <div
                   key={`${story.id || story.title || "story"}-${index}`}
-                  className={`group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${story.className || ""}`}
+                  className={storySlideClassName}
                 >
-                  {hasImage ? (
-                    <div className="relative h-44 w-full overflow-hidden sm:h-48 lg:h-52">
-                      <StoryImage
-                        image={story.image}
-                        title={story.title}
-                        priority={index === 0}
-                      />
-                      {story.description ? (
-                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/70 via-black/35 to-black/5 px-4 text-center sm:px-5">
-                          <div className="text-sm leading-relaxed text-white sm:text-base lg:text-lg">
-                            {story.description}
+                  <article
+                    className={`group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl lg:hover:-translate-y-1 ${story.className || ""}`}
+                  >
+                    {hasImage ? (
+                      <div className="relative h-44 w-full overflow-hidden sm:h-48 lg:h-52">
+                        <StoryImage
+                          image={story.image}
+                          title={story.title}
+                          priority={index === 0}
+                        />
+                        {story.description ? (
+                          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/70 via-black/35 to-black/5 px-4 text-center sm:px-5">
+                            <div className="text-sm leading-relaxed text-white sm:text-base lg:text-lg">
+                              {story.description}
+                            </div>
                           </div>
-                        </div>
-                      ) : null}
-                    </div>
-                  ) : story.description ? (
-                    <div className="flex min-h-44 items-center justify-center bg-[#0749A7] px-5 py-8 text-center text-sm leading-relaxed text-white sm:min-h-48 sm:text-base lg:min-h-52 lg:text-lg">
-                      {story.description}
-                    </div>
-                  ) : null}
+                        ) : null}
+                      </div>
+                    ) : story.description ? (
+                      <div className="flex min-h-44 items-center justify-center bg-[#0749A7] px-5 py-8 text-center text-sm leading-relaxed text-white sm:min-h-48 sm:text-base lg:min-h-52 lg:text-lg">
+                        {story.description}
+                      </div>
+                    ) : null}
 
-                  {story.title ? (
-                    <div className="flex flex-1 items-start bg-white p-5 sm:p-6">
-                      <h3 className="text-base font-bold leading-snug text-gray-900 sm:text-lg">
-                        {story.title}
-                      </h3>
-                    </div>
-                  ) : null}
-                </article>
+                    {story.title ? (
+                      <div className="flex flex-1 items-start bg-white p-5 sm:p-6">
+                        <h3 className="text-base font-bold leading-snug text-gray-900 sm:text-lg">
+                          {story.title}
+                        </h3>
+                      </div>
+                    ) : null}
+                  </article>
+                </div>
               );
             })}
           </div>

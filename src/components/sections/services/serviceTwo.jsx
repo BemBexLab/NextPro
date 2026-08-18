@@ -1,9 +1,13 @@
 import Link from 'next/link'
-import React from 'react'
 import SlideUp from '@/components/animations/slideUp'
 import { Button } from '@/components/ui/button'
 import Title from '@/components/ui/title'
 import { servicesDataTwo } from '@/lib/fackData/servicesDataTwo'
+
+const servicesCarouselClassName =
+    'flex snap-x snap-mandatory gap-5 overflow-x-auto overscroll-x-contain pb-4 pt-1 [scrollbar-width:none] sm:gap-6 lg:grid lg:grid-cols-3 lg:overflow-visible lg:py-0 xl:grid-cols-4 [&::-webkit-scrollbar]:hidden'
+const serviceSlideClassName =
+    'min-w-0 flex-[0_0_85%] snap-start sm:basis-[47%] md:basis-[31%] lg:basis-auto lg:snap-none'
 
 const ServiceTwo = () => {
     return (
@@ -17,7 +21,7 @@ const ServiceTwo = () => {
                 </SlideUp>
                 <div className='lg:pt-7.5 pt-2'>
                     <SlideUp>
-                        <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-6
+                        <div className={`${servicesCarouselClassName}
                     [&>*:nth-child(2)_.icon]:bg-[#32A5521A] [&>*:nth-child(2)_.icon]:text-green 
                     [&>*:nth-child(3)_.icon]:bg-[#A22EFE1A] [&>*:nth-child(3)_.icon]:text-purple
                     [&>*:nth-child(4)_.icon]:bg-[#5A55791A] [&>*:nth-child(4)_.icon]:text-[#5A5579]
@@ -25,14 +29,14 @@ const ServiceTwo = () => {
                     [&>*:nth-child(6)_.icon]:bg-[#00A3FF1A] [&>*:nth-child(6)_.icon]:text-[#00A3FF]
                     [&>*:nth-child(7)_.icon]:bg-[#FF00991A] [&>*:nth-child(7)_.icon]:text-[#FF0099]
                     [&>*:nth-child(8)_.icon]:bg-[#009F961A] [&>*:nth-child(8)_.icon]:text-[#009F96]
-                    '>
+                    `}>
                             {
-                                servicesDataTwo.map(({ id, description, icon_1, service_name, link }) => {
+                                servicesDataTwo.map(({ id, icon_1, service_name, link }) => {
                                     return (
                                         <Link
                                             href={link}
                                             key={id}
-                                            className='p-6 lg:p-8 rounded-2xl border border-border bg-background shadow-sm hover:shadow-lg transition-all duration-300 text-center flex flex-col items-center group'
+                                            className={`${serviceSlideClassName} group flex h-full flex-col items-center rounded-2xl border border-border bg-background p-6 text-center shadow-sm transition-all duration-300 hover:shadow-lg lg:p-8`}
                                         >
                                             <div className='md:w-[85px] md:h-[85px] w-16 h-16 md:p-6 p-4 rounded-full flex justify-center items-center mb-6 bg-[rgba(46,77,254,0.10)] icon'>
                                                 <span className='transition-all duration-500 group-hover:scale-90'>{icon_1}</span>

@@ -1,89 +1,71 @@
-import React from 'react'
-import Link from 'next/link'
-import FooterContact from './footerContact'
-import SocialIcons from '@/components/ui/socialIcons'
-import ImportanceLinks from './importanceLinks'
-import TempLinks from './tempLinks'
+import Link from "next/link";
+import FooterContact from "./footerContact";
+import SocialIcons from "@/components/ui/socialIcons";
+import ImportanceLinks from "./importanceLinks";
 
 const FooterFour = () => {
-    const tempLinks = [
-        // Example:
-        {
-            id: 1,
-            title: "SEO Sub Services",
-            links: [
-                { id: 1, path: "/service/seo-services/local-seo-services/", label: "Local SEO Services" },
-                { id: 2, path: "/service/seo-services/youtube-seo/", label: "YouTube SEO Services" },
-                { id: 3, path: "/service/seo-services/bigcommerce-seo/", label: "BigCommerce SEO Services" },
-                { id: 4, path: "/service/seo-services/woocommerce-seo/", label: "WooCommerce SEO Services" },
-                { id: 5, path: "/service/seo-services/seo-content-writing/", label: "SEO Content Writing Services" },
-                { id: 6, path: "/service/seo-services/hotel-seo/", label: "Hotel SEO Services" },
-                { id: 7, path: "/service/seo-services/medical-seo/", label: "Medical SEO Services" },
-                { id: 8, path: "/service/seo-services/seo-audit/", label: "SEO Audit Services" },
-                { id: 9, path: "/service/seo-services/magento-seo/", label: "Magento SEO Services" },
-                { id: 10, path: "/service/seo-services/automotive-seo/", label: "Automotive SEO Services" },
-                { id: 11, path: "/service/seo-services/wordpress-seo/", label: "WordPress SEO Services" },
-                { id: 12, path: "/service/seo-services/dental-seo/", label: "Dental SEO Services" },
-                { id: 13, path: "/service/seo-services/ecommerce-seo/", label: "E-commerce SEO Services" },
-                { id: 14, path: "/service/seo-services/shopify-seo/", label: "Shopify SEO Services" },
-                { id: 15, path: "/service/seo-services/healthcare-seo/", label: "Healthcare SEO Services" },
-                { id: 16, path: "/service/seo-services/b2b-seo/", label: "B2B SEO Services" },
-                { id: 17, path: "/service/seo-services/enterprise-seo/", label: "Enterprise SEO Services" },
-                { id: 18, path: "/service/seo-services/white-label-seo/", label: "White Label SEO Services" },
-                { id: 19, path: "/service/seo-services/multilingual-seo/", label: "Multilingual SEO Services" },
-                { id: 20, path: "/service/seo-services/boutique-seo/", label: "Boutique SEO Services" },
-                { id: 21, path: "/service/seo-services/roofing-seo/", label: "Roofing SEO Services" },
-                { id: 22, path: "/service/seo-services/outsource-seo/", label: "Outsource SEO Services" },
-                { id: 23, path: "/service/seo-services/construction-seo/", label: "Construction SEO Services" },
-            ]
-        }
-    ]
+  return (
+    <footer className="relative w-full overflow-hidden rounded-t-[20px] bg-primary pt-12 sm:rounded-t-[30px] sm:pt-16 md:pt-20 lg:pt-28 xl:pt-40 2xl:pt-[200px]">
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-full bg-contain bg-top bg-no-repeat opacity-20"
+        style={{
+          backgroundImage: "url(/images/background/services-bg1-1.webp)",
+        }}
+        aria-hidden="true"
+      />
 
-    return (
-        <footer className='bg-primary rounded-t-[30px] pt-[200px] relative'>
-            <div className='w-full h-full bg-no-repeat bg-contain bg-top absolute top-0 left-0 opacity-20' style={{ backgroundImage: `url(/images/background/services-bg1-1.webp)` }}>  </div>
-            <div className='container relative z-2'>
-                <div className='max-w-full mx-auto px-[15px]'>
-                    <FooterContact white_logo={false} bgColor={"bg-white"} color="text-white" />
-                    <span className='inline-block bg-white h-[1px] w-full mb-12.5 mt-[45px]'></span>
-                    <div className='grid xl:grid-cols-[auto_65%] lg:grid-cols-[auto_60%] grid-cols-1 gap-x-7 justify-between'>
-                        <div>
+      <div className="relative z-10 mx-auto w-full max-w-[1680px] px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-[1400px]">
+          <FooterContact
+            white_logo={false}
+            bgColor="bg-white"
+            color="text-white"
+          />
 
-                            {/* <h3 className='text-1xl font-semibold text-muted-foreground lg:pb-7.5 pb-3 text-white'>About</h3> */}
+          <div className="my-8 h-px w-full bg-white/80 sm:my-10 lg:my-12" />
 
-                            <p className='pb-[38px] text-sm text-white'>Web Founders USA - The No.1 Award-Winning Digital Marketing Agency in the USA. We Don’t Just Market - We Build Digital Empires.</p>
-                            <SocialIcons color={"text-white"} hoverColor={"hover:text-white"} />
-                        </div>
-                        <div>
-                            <ImportanceLinks color={"text-white"} linkHoverColor={"hover:text-white hover:underline"} />
-                            {/* <div className='mt-10'>
-                                <TempLinks
-                                    sections={tempLinks}
-                                    color={"text-white"}
-                                    linkHoverColor={"hover:text-white hover:underline"}
-                                    scrollable={true}
-                                />
-                            </div> */}
-                        </div>
-                    </div>
-                </div>
+          <div className="grid min-w-0 grid-cols-1 gap-10 lg:grid-cols-[minmax(240px,0.8fr)_minmax(0,2fr)] lg:gap-12 xl:grid-cols-[minmax(260px,0.7fr)_minmax(0,2.3fr)] xl:gap-16">
+            <div className="min-w-0">
+              <p className="max-w-xl break-words pb-6 text-sm leading-relaxed text-white sm:text-base lg:pb-8">
+                Web Founders USA - The No.1 Award-Winning Digital Marketing
+                Agency in the USA. We Don&apos;t Just Market - We Build Digital
+                Empires.
+              </p>
+              <SocialIcons
+                color="text-white"
+                hoverColor="hover:text-white"
+              />
             </div>
-            <div className='bg-muted dark:bg-accent mt-[54px] relative z-10'>
-                <div className='max-w-[1350px] mx-auto px-[15px] flex xl:flex-row flex-col justify-between items-center gap-3 py-7.5 text-white'>
-                    <p>Designed and Developed By <Link href="/" className='text-primary-foreground font-medium relative hover-underline after:h-[1px]'>WebFounders USA</Link></p>
-                    <div className='flex flex-col items-center gap-1 xl:items-end'>
-                        <p>Copyright: © 2026. All Rights Reserved</p>
-                        {/* <a
-                            href="/sitemap.xml"
-                            className='text-[10px] absolute font-normal uppercase tracking-[0.08em] text-white/45 transition-all duration-500 hover:text-white/70'
-                        >
-                            Sitemap
-                        </a> */}
-                    </div>
-                </div>
-            </div>
-        </footer>
-    )
-}
 
-export default FooterFour
+            <div className="min-w-0">
+              <ImportanceLinks
+                color="text-white"
+                linkHoverColor="hover:text-white hover:underline"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative z-10 mt-10 bg-muted text-white dark:bg-accent sm:mt-12 lg:mt-[54px]">
+        <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center justify-between gap-3 px-4 py-5 text-center text-sm sm:px-6 sm:py-6 sm:text-base md:flex-row md:text-left lg:px-8 lg:py-7.5">
+          <p className="min-w-0 break-words">
+            Designed and Developed By{" "}
+            <Link
+              href="/"
+              className="relative font-medium text-primary-foreground hover-underline after:h-px"
+            >
+              WebFounders USA
+            </Link>
+          </p>
+
+          <p className="min-w-0 break-words md:text-right">
+            Copyright: © 2026. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default FooterFour;

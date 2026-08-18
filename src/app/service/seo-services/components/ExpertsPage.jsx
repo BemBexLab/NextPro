@@ -2,6 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import LoadMoreCards from "./LoadMoreCards";
 
+const scrollableCardGridClassName =
+  "flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 pt-1 [scrollbar-width:none] sm:gap-6 lg:grid lg:overflow-visible lg:py-0 [&::-webkit-scrollbar]:hidden";
+const scrollableCardSlideClassName =
+  "min-w-0 flex-[0_0_85%] snap-start sm:basis-[47%] md:basis-[31%] lg:basis-auto lg:snap-none";
+
 function SectionIntro({
   title,
   description,
@@ -51,7 +56,7 @@ function ExpertCard({ expert }) {
 
   return (
     <article
-      className={`flex h-full flex-col items-center rounded-2xl border border-gray-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-6 ${expert.className || ""}`}
+      className={`flex h-full flex-col items-center rounded-2xl border border-gray-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:shadow-lg sm:p-6 lg:hover:-translate-y-1 ${expert.className || ""}`}
     >
       {image?.src ? (
         <div className="relative mb-4 h-20 w-20 overflow-hidden rounded-full bg-gray-100 sm:h-24 sm:w-24">
@@ -96,7 +101,7 @@ function RelatedServiceCard({ service, exploreLabel }) {
   return (
     <CardWrapper
       {...cardProps}
-      className="group flex h-full flex-col rounded-2xl bg-[#072d7f] p-5 text-white transition-transform duration-300 hover:-translate-y-1 sm:rounded-[30px] sm:p-6 lg:p-8"
+      className="group flex h-full flex-col rounded-2xl bg-[#072d7f] p-5 text-white transition-transform duration-300 sm:rounded-[30px] sm:p-6 lg:p-8 lg:hover:-translate-y-1"
     >
       {Icon || service.image?.src ? (
         <div className="mb-4 flex h-14 w-14 shrink-0 items-center justify-center rounded-[18px] border border-transparent bg-white/10 transition-colors duration-300 group-hover:border-[#DE2F04] sm:mb-6 sm:h-16 sm:w-16 sm:rounded-[20px]">
@@ -279,46 +284,50 @@ export default function ExpertsPage({
 
           {showExperts ? (
             <div
-              className={`grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 ${
+              className={`${scrollableCardGridClassName} ${
                 visibleExperts.length >= 4
                   ? "lg:grid-cols-4"
                   : visibleExperts.length === 3
                     ? "lg:grid-cols-3"
                     : visibleExperts.length === 2
                       ? "lg:grid-cols-2"
-                      : "mx-auto max-w-sm"
+                      : "lg:mx-auto lg:max-w-sm"
               } ${showCertifications ? "mb-8 sm:mb-10 lg:mb-12" : ""}`}
             >
               {visibleExperts.map((expert, index) => (
-                <ExpertCard
+                <div
                   key={expert.id || expert.name || expert.title || index}
-                  expert={expert}
-                />
+                  className={scrollableCardSlideClassName}
+                >
+                  <ExpertCard expert={expert} />
+                </div>
               ))}
             </div>
           ) : null}
 
           {showCertifications ? (
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+            <div className={`${scrollableCardGridClassName} lg:grid-cols-4`}>
               {visibleCertifications.map((certification, index) => (
                 <div
                   key={certification.id || certification.src || index}
-                  className="flex min-h-28 items-center justify-center rounded-2xl border border-gray-200 bg-white p-5 sm:min-h-[120px] sm:p-6 lg:p-8"
+                  className={scrollableCardSlideClassName}
                 >
-                  <Image
-                    src={certification.src}
-                    alt={certification.alt || ""}
-                    width={certification.width || 220}
-                    height={certification.height || 80}
-                    sizes={
-                      certification.sizes ||
-                      "(min-width: 1024px) 220px, (min-width: 640px) 45vw, 88vw"
-                    }
-                    className={
-                      certification.className ||
-                      "h-14 w-auto max-w-full object-contain sm:h-16 lg:h-20"
-                    }
-                  />
+                  <div className="flex h-full min-h-28 items-center justify-center rounded-2xl border border-gray-200 bg-white p-5 sm:min-h-[120px] sm:p-6 lg:p-8">
+                    <Image
+                      src={certification.src}
+                      alt={certification.alt || ""}
+                      width={certification.width || 220}
+                      height={certification.height || 80}
+                      sizes={
+                        certification.sizes ||
+                        "(min-width: 1024px) 220px, (min-width: 640px) 45vw, 88vw"
+                      }
+                      className={
+                        certification.className ||
+                        "h-14 w-auto max-w-full object-contain sm:h-16 lg:h-20"
+                      }
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -340,24 +349,32 @@ export default function ExpertsPage({
                 initialCount={relatedServices.initialVisibleCount}
                 increment={relatedServices.loadMoreCount || 8}
                 buttonLabel={relatedServices.loadMoreLabel || "Load More"}
-                gridClassName="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
+                gridClassName={`${scrollableCardGridClassName} lg:grid-cols-3`}
               >
                 {relatedServices.items.map((service, index) => (
-                  <RelatedServiceCard
+                  <div
                     key={service.id || service.href || index}
-                    service={service}
-                    exploreLabel={relatedServices.exploreLabel}
-                  />
+                    className={scrollableCardSlideClassName}
+                  >
+                    <RelatedServiceCard
+                      service={service}
+                      exploreLabel={relatedServices.exploreLabel}
+                    />
+                  </div>
                 ))}
               </LoadMoreCards>
             ) : (
-              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+              <div className={`${scrollableCardGridClassName} lg:grid-cols-3`}>
                 {relatedServices.items.map((service, index) => (
-                  <RelatedServiceCard
+                  <div
                     key={service.id || service.href || index}
-                    service={service}
-                    exploreLabel={relatedServices.exploreLabel}
-                  />
+                    className={scrollableCardSlideClassName}
+                  >
+                    <RelatedServiceCard
+                      service={service}
+                      exploreLabel={relatedServices.exploreLabel}
+                    />
+                  </div>
                 ))}
               </div>
             )
@@ -374,13 +391,17 @@ export default function ExpertsPage({
           />
 
           {subrelatedServices.items?.length ? (
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+            <div className={`${scrollableCardGridClassName} lg:grid-cols-3`}>
               {subrelatedServices.items.map((service, index) => (
-                <RelatedServiceCard
+                <div
                   key={service.id || service.href || index}
-                  service={service}
-                  exploreLabel={subrelatedServices.exploreLabel}
-                />
+                  className={scrollableCardSlideClassName}
+                >
+                  <RelatedServiceCard
+                    service={service}
+                    exploreLabel={subrelatedServices.exploreLabel}
+                  />
+                </div>
               ))}
             </div>
           ) : null}
@@ -410,23 +431,25 @@ export default function ExpertsPage({
             ) : null}
 
             {results.stats?.length ? (
-              <div className="grid grid-cols-1 gap-4 min-[480px]:grid-cols-2 sm:gap-6">
+              <div className={`${scrollableCardGridClassName} lg:grid-cols-2`}>
                 {results.stats.map((stat, index) => (
                   <div
                     key={stat.id || `${stat.label}-${stat.value}-${index}`}
-                    className="rounded-lg border border-gray-200 bg-gray-50 p-5 sm:p-6 lg:p-8"
+                    className={scrollableCardSlideClassName}
                   >
-                    {stat.label ? (
-                      <div className="mb-4 text-center font-semibold text-gray-800">
-                        {stat.label}
-                      </div>
-                    ) : null}
-                    <div className="mx-auto mb-5 h-1 w-20 bg-gradient-to-r from-purple-600 to-red-600 sm:mb-6 sm:w-24" />
-                    {stat.value ? (
-                      <p className="break-words text-center text-4xl font-bold text-[#0b63b8] sm:text-5xl">
-                        {stat.value}
-                      </p>
-                    ) : null}
+                    <div className="h-full rounded-lg border border-gray-200 bg-gray-50 p-5 sm:p-6 lg:p-8">
+                      {stat.label ? (
+                        <div className="mb-4 text-center font-semibold text-gray-800">
+                          {stat.label}
+                        </div>
+                      ) : null}
+                      <div className="mx-auto mb-5 h-1 w-20 bg-gradient-to-r from-purple-600 to-red-600 sm:mb-6 sm:w-24" />
+                      {stat.value ? (
+                        <p className="break-words text-center text-4xl font-bold text-[#0b63b8] sm:text-5xl">
+                          {stat.value}
+                        </p>
+                      ) : null}
+                    </div>
                   </div>
                 ))}
               </div>

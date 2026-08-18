@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
-import React from 'react'
 
 const ImportanceLinks = ({ color, linkHoverColor }) => {
     const importanceLinks = [
@@ -57,9 +56,9 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
         },
     ]
     return (
-        <div className='grid md:grid-cols-4 grid-cols-2'>
+        <div className='grid min-w-0 grid-cols-1 gap-x-5 gap-y-8 min-[420px]:grid-cols-2 lg:grid-cols-4 lg:gap-x-6'>
             {importanceLinks.map(({ id, links, title }) => (
-                <div key={id} className='mt-7.5 lg:mt-0'>
+                <div key={id} className='min-w-0'>
                     <h3 className={cn(`font-semibold text-1xl text-muted-foreground lg:pb-5 pb-3`, color)}>{title}</h3>
                     <ul>
                         {links.map(({ id: linkId, label, path }) => (
@@ -70,7 +69,7 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={cn(
-                                            `font-semibold hover:text-primary-foreground transition-all duration-500`,
+                                            `break-words font-semibold hover:text-primary-foreground transition-all duration-500`,
                                             color,
                                             linkHoverColor
                                         )}
@@ -81,7 +80,7 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
                                     <Link
                                         href={path}
                                         className={cn(
-                                            `font-semibold hover:text-primary-foreground transition-all duration-500`,
+                                            `break-words font-semibold hover:text-primary-foreground transition-all duration-500`,
                                             color,
                                             linkHoverColor
                                         )}
