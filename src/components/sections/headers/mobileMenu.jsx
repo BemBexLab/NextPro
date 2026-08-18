@@ -1,28 +1,39 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { MdMenu } from "react-icons/md";
 import MobileExtraInfo from "./mobileExtraInfo";
-import { usePathname } from "next/navigation";
 
 const MobileMenu = ({ data }) => {
-  const pathName = usePathname();
   const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathName]);
 
   return (
     <div className="xl:hidden block">
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetTrigger>
+        <SheetTrigger aria-label="Open navigation menu">
           <MdMenu className="text-primary-foreground text-5xl -mb-2" />
         </SheetTrigger>
         <SheetContent side="left" className="bg-muted dark:bg-accent">
-          <div className="overflow-y-auto overflow-x-hidden no-scrollbar h-full px-0 py-7.5">
+          <SheetTitle className="sr-only">Main navigation</SheetTitle>
+          <SheetDescription className="sr-only">
+            Browse the main website navigation and contact information.
+          </SheetDescription>
+          <div
+            className="overflow-y-auto overflow-x-hidden no-scrollbar h-full px-0 py-7.5"
+            onClick={(event) => {
+              if (event.target.closest?.("a")) {
+                setOpen(false);
+              }
+            }}
+          >
             <div className="flex justify-start mt-7">
               <Link href={"/"}>
                 <Image
