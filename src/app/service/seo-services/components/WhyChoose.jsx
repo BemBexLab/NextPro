@@ -33,6 +33,25 @@ function renderFeatureDescription(item) {
   );
 }
 
+function getLastRowStartClass(featureCount, index) {
+  const remainder = featureCount % 4;
+  const lastRowStart = featureCount - remainder;
+
+  if (!remainder || index !== lastRowStart) {
+    return "";
+  }
+
+  if (remainder === 1) {
+    return "lg:col-start-4";
+  }
+
+  if (remainder === 2) {
+    return "lg:col-start-3";
+  }
+
+  return "lg:col-start-2";
+}
+
 const WhyChoose = ({
   title,
   paragraphs = [],
@@ -49,13 +68,13 @@ const WhyChoose = ({
     <section className={`w-full bg-white py-10 ${className}`}>
       <div className={containerClassName}>
         {title ? (
-          <div className="mb-12 text-center">
+          <div className="mb-5 text-center">
             <h2 className="text-4xl font-medium text-[#0749A7]">{title}</h2>
           </div>
         ) : null}
 
         {paragraphs.length ? (
-          <div className="mx-auto mb-16 max-w-7xl">
+          <div className="mx-auto mb-7 max-w-7xl">
             <div className="space-y-6 text-center text-[16px] leading-relaxed text-gray-700">
               {paragraphs.map((paragraph, index) => renderParagraph(paragraph, index))}
             </div>
@@ -63,11 +82,11 @@ const WhyChoose = ({
         ) : null}
 
         {features.length ? (
-          <div className={gridClassName}>
+          <div className={`${gridClassName} lg:!grid-cols-8`}>
             {features.map((item, index) => (
               <div
                 key={item.id || item.text || index}
-                className="flex h-full items-start rounded-lg border border-gray-50 bg-[#F8F9FA] p-6 shadow-sm"
+                className={`flex h-full items-start rounded-lg border border-gray-50 bg-[#F8F9FA] p-6 shadow-sm lg:col-span-2 ${getLastRowStartClass(features.length, index)}`}
               >
                 <div
                   className={`mr-4 h-full min-h-[60px] w-1 shrink-0 ${item.color || "bg-[#0052cc]"}`}

@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
+const serviceDescriptionClassName =
+  "max-h-[15vh] min-w-0 overflow-y-auto overscroll-contain pr-1 text-center text-sm leading-relaxed text-gray-600 break-words [-ms-overflow-style:none] [scrollbar-width:none] sm:text-base [&::-webkit-scrollbar]:hidden [&_p+p]:mt-3 [&_ul]:mx-auto [&_ul]:mt-3 [&_ul]:w-fit [&_ul]:max-w-full [&_ul]:space-y-1 [&_ul]:pl-5 [&_ul]:text-left [&_ol]:mx-auto [&_ol]:mt-3 [&_ol]:w-fit [&_ol]:max-w-full [&_ol]:space-y-1 [&_ol]:pl-5 [&_ol]:text-left [&_li]:pl-1";
+
 function ServiceIcon({ icon, title }) {
   if (!icon) {
     return null;
@@ -82,18 +85,18 @@ export default function LocalSEOServices({
                 ) : null}
 
                 {service.title ? (
-                  <h3 className="mb-2 text-center text-lg font-medium leading-snug text-gray-900 sm:text-xl">
+                  <h3 className="mb-2 flex text-center text-lg font-medium leading-snug text-gray-900 sm:min-h-14 sm:items-center sm:justify-center sm:text-xl">
                     {service.title}
                   </h3>
                 ) : null}
 
                 {service.descriptionHtml ? (
                   <div
-                    className="text-center text-sm leading-relaxed text-gray-600 sm:text-base"
+                    className={serviceDescriptionClassName}
                     dangerouslySetInnerHTML={{ __html: service.descriptionHtml }}
                   />
                 ) : service.description ? (
-                  <div className="text-center text-sm leading-relaxed text-gray-600 sm:text-base">
+                  <div className={serviceDescriptionClassName}>
                     {service.description}
                   </div>
                 ) : null}

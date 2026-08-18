@@ -3612,156 +3612,721 @@ export const services = [
       {
         id: "employment-lawyers-seo",
         title:
-          "SEO for Employment Lawyers: Generate More High Intent Employment Law Cases - Not More Unqualified Calls",
-        desc: "Boost your business with Local SEO services. Rank higher on Google Maps, attract local customers, and increase calls and leads.",
+          "Employment Lawyer SEO Services Built on Strategy, Trust & Results",
+        desc: "Specialized SEO for employment lawyers by Web Founders USA. We help firms rank higher, get found by employees searching for legal help, and generate qualified employment law consultations.",
         seo: {
-          title: "Employment Lawyers SEO - Web Founders USA",
+          title:
+            "Employment Lawyer SEO Services - Generate More High-Intent Cases | Web Founders USA",
           description:
-            "Generate more high-intent employment law cases with our targeted SEO strategies. Rank higher in local search results and attract qualified leads.",
+            "Specialized SEO for employment lawyers by Web Founders USA. We help firms rank higher, get found by employees searching for legal help, and generate qualified employment law consultations.",
           keyword:
-            "employment lawyers seo, seo for employment lawyers, employment law firm seo, employment law seo services",
+            "local seo services, local seo, google business profile optimization, local search engine optimization, map pack ranking",
         },
         hero: {
           paragraph:
-            "Attract Wrongful Termination, Discrimination, and Wage & Hour Cases with a Specialized Employment Law SEO Strategy.",
-          image: "/service-deatil-images/seo.webp",
+            "At Web Founders USA, every step we take is based on real results, not quick fixes. Our approach combines sharp employment law SEO audit services with a search strategy built around the way employees actually search after something goes wrong at work.",
+          image:
+            "/service-deatil-images/Boost your business visibility online.webp",
         },
         introParagraphs: [
-          "Attract Wrongful Termination, Discrimination, and Wage & Hour Cases with a Specialized Employment Law SEO Strategy.",
-          "Most legal SEO agencies focus on increasing website traffic. We focus on increasing retained employment law cases.",
-          "Our specialized SEO for employment lawyers is designed to position your firm in front of employees actively searching for legal representation after wrongful termination, workplace discrimination, retaliation, unpaid wages, harassment, FMLA violations, and other employment disputes. The result is a stronger pipeline of qualified consultations, higher-value cases, and measurable growth.",
-          "Discover exactly where your firm is losing high-value employment law cases and how to outrank your competitors.",
-          <h2 className="text-2xl font-bold text-gray-200">
-            Why Standard SEO Fails Employment Lawyers?
-          </h2>,
-          "Employment law is one of the most intent-driven legal practice areas.",
-          "Potential clients rarely browse casually. They search after losing a job, experiencing discrimination, being denied overtime, or facing retaliation. At that moment, they need immediate answers and a lawyer they trust.",
-          "Generic legal SEO campaigns miss these opportunities because they prioritize:",
-          <ul className="list-disc pl-6 text-gray-200">
-            <li>Broad legal keywords with low conversion intent</li>
-            <li>Vanity traffic metrics instead of retained cases</li>
-            <li>
-              Generic legal content that fails to answer employment-specific
-              questions
-            </li>
-            <li>Weak local visibility in competitive metropolitan markets</li>
-          </ul>,
-          "The result?",
-          "Many employment firms experience:",
-          <ul className="list-disc pl-6 text-gray-200">
-            <li>Large volumes of phone calls that never qualify</li>
-            <li>Intake teams overwhelmed with weak inquiries</li>
-            <li>Poor rankings for profitable employment law searches</li>
-            <li>Marketing budgets producing traffic but not signed clients</li>
-          </ul>,
-          "Successful employment law marketing and SEO requires identifying individuals at the precise moment they recognize they may have a legal claim.",
-          "That's where specialized strategy creates a measurable competitive advantage.",
+          'At Web Founders USA, every step we take is based on real results, not quick fixes. Our approach combines sharp employment law SEO audit services with a search strategy built around the way employees actually search after something goes wrong at work.',
+          'Imagine appearing right when someone types "wrongful termination attorney" or "employment lawyer near me" clearer visibility, steadier consultation volume, and a website that turns visitors into retained clients, all built without tricks. The work stays grounded in what lasts, whether it\'s fine-tuning your wrongful termination page or guiding strategy through Professional Employment Law SEO solutions.',
+          "You can make real changes by working hard, being open about how you do things, and planning ahead. That's how visibility grows not all at once, but case by case.",
         ],
         actions: [
+          { label: "Contact Us", href: "/contact-us" },
           {
             label: "Request Your Free Employment Law SEO Audit",
             href: "/contact-us",
+            variant: "secondary",
           },
-          { label: "About Us", href: "/about-us", variant: "secondary" },
         ],
-        // features: [
-        //   "Complete <strong>local SEO audit</strong> and competitor analysis",
-        //   "<strong>Google Business Profile (GBP) optimization</strong>",
-        //   "<strong>Local citations and directory submissions</strong>",
-        //   "<strong>Location based keyword research</strong>",
-        //   "<strong>On-page SEO for local landing pages</strong>",
-        //   "<strong>Review and reputation management</strong>",
-        //   "<strong>Ongoing performance tracking and reporting</strong>",
-        // ],
-        tab: {
-          title: "Our Core Pillars of Employment Law SEO Strategy",
-          description:
-            "Our employment law SEO strategy is built on four core pillars that work together to attract high-intent clients and convert them into retained cases.",
-          steps: [
+        requestAFreeData: {
+          title: "Request a Free Employment Law SEO Audit",
+          paragraphs: [
+            "Not sure why your firm isn't getting enough visibility on Google? Let us take a closer look.",
+            "Our audit identifies technical issues, local SEO gaps, practice-area page opportunities, keyword opportunities, competitor weaknesses, and areas where your website may be losing potential clients.",
+          ],
+          cta: {
+            label: "Get Your Free Employment Law SEO Audit",
+            href: "/contact-us/",
+          },
+        },
+        expertPage: {
+          intro: {
+            title: (
+              <>
+                SEO That Helps Employment Law Firms Get Found by the Right Clients
+              </>
+            ),
+            description: (
+              <div className="space-y-2">
+                <p>
+                  When someone searches for a wrongful termination attorney, a discrimination lawyer, or an employment lawyer near them, they're usually searching after a serious workplace event. Your firm needs to be visible at exactly that moment.
+                </p>
+                <p>
+                  Our specialized SEO for employment lawyers is designed to improve your presence across local search, Google Maps, and organic results. We focus on the searches that bring qualified, high-intent clients to your firm not vanity rankings that don't contribute to case growth.
+                </p>
+                <p>
+                  Whether you operate from one office or serve multiple markets, our strategy connects your website, Google Business Profile, practice areas, locations, and legal authority into one focused SEO system.
+                </p>
+                <div className="experts-benefits-shell flex w-full justify-center">
+                  <div
+                    className="experts-benefits-carousel flex w-full max-w-[900px] snap-x snap-mandatory justify-start gap-4 overflow-x-auto pb-3 scroll-px-[9%] [scrollbar-width:none] [&>*:first-child]:ml-[9%] [&>*:last-child]:mr-[9%] [&::-webkit-scrollbar]:hidden"
+                    aria-label="Locksmith SEO benefits"
+                  >
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Local Visibility
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Stronger Search Presence
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        More Qualified Consultations
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ),
+          },
+          // certifications: [
+          //   {
+          //     src: "/service-testing/GA-certified.webp",
+          //     alt: "Google Analytics certification",
+          //   },
+          //   {
+          //     src: "/service-testing/images-300x82.webp",
+          //     alt: "SEO partner certification",
+          //   },
+          //   {
+          //     src: "/service-testing/hubspot.webp",
+          //     alt: "HubSpot certification",
+          //   },
+          //   {
+          //     src: "/service-testing/google-digital-garage-1.webp",
+          //     alt: "Google Digital Garage certification",
+          //   },
+          // ],
+          relatedServices: {
+            title: "Explore Our Employment Law SEO Services",
+            description:
+              "Build a stronger search presence with SEO strategies designed specifically around employment law practice areas and client intent.",
+            exploreLabel: "Explore service",
+            items: [
+              {
+                icon: FaSearch,
+                title: "Wrongful Termination SEO",
+                description:
+                  "Reach employees searching for help after being fired unlawfully, including retaliatory termination, breach of contract, and related wrongful discharge claims.",
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Discrimination & Harassment SEO",
+                description:
+                  "Build visibility for clients searching for representation in race, gender, age, disability, pregnancy discrimination, sexual harassment, and hostile work environment cases.",
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Wage & Hour SEO",
+                description:
+                  "Target employees searching for help with unpaid overtime, misclassification, unpaid wages, and other wage and hour violations.",
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Retaliation & Whistleblower SEO",
+                description:
+                  "Improve visibility for high-intent searches involving workplace retaliation, whistleblower protections, and FMLA violations.",
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Local SEO for Employment Lawyers",
+                description:
+                  "Strengthen your visibility in local search results and Google Maps for the cities and markets your firm serves.",
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Multi-Location Employment Law SEO",
+                description:
+                  "Create a scalable SEO strategy for legitimate office locations and service areas without relying on thin, duplicate location pages.",
+                href: "",
+              },
+            ],
+          },
+          subrelatedServices: {
+            title: "Explore Our Other SEO Services",
+            description:
+              "We offer a range of SEO services for different industries and business types. Explore our other specialized SEO services to find the right fit for your business.",
+            exploreLabel: "Explore service",
+            items: [
+              {
+                icon: FaSearch,
+                title: "E-Commerce SEO Services",
+                description:
+                  "Web Founders USA, as a premier E-Commerce SEO agency, helps online stores and e-commerce businesses improve their search visibility, attract more qualified traffic, and increase sales through tailored SEO strategies.",
+                href: "/service/seo-services/ecommerce-seo/",
+              },
+              {
+                icon: FaSearch,
+                title: "B2B SEO Service",
+                description:
+                  "Our B2B SEO services are designed to help businesses that sell products or services to other businesses improve their online visibility, generate qualified leads, and drive revenue through targeted search engine optimization strategies.",
+                href: "/service/seo-services/b2b-seo/",
+              },
+              {
+                icon: FaSearch,
+                title: "Dental SEO Service",
+                description:
+                  "Our Dental SEO services are tailored to help dental practices improve their online presence, attract new patients, and grow their practice through effective search engine optimization strategies.",
+                href: "/service/seo-services/dental-seo/",
+              },
+              {
+                icon: FaSearch,
+                title: "Enterprise SEO Service",
+                description:
+                  "Our Enterprise SEO services are designed to help large organizations and enterprises improve their search engine visibility, drive organic traffic, and achieve their business goals through comprehensive and scalable SEO strategies.",
+                href: "/service/seo-services/enterprise-seo/",
+              },
+              {
+                icon: FaSearch,
+                title: "Automotive SEO Service",
+                description:
+                  "Our Automotive SEO services are tailored to help automotive businesses, including car dealerships, auto repair shops, and automotive service providers, improve their online visibility, attract more customers, and increase sales through effective search engine optimization strategies.",
+                href: "/service/seo-services/automotive-seo/",
+              },
+              {
+                icon: FaSearch,
+                title: "Wordpress SEO Service",
+                description:
+                  "Our WordPress SEO services are designed to help businesses and website owners optimize their WordPress websites for search engines, improve their online visibility, and drive organic traffic through effective SEO strategies.",
+                href: "/service/seo-services/wordpress-seo/ ",
+              },
+            ],
+          },
+          results: {
+            title: "Real Employment Law SEO Results, Not Just Rankings",
+            description: (
+              <div className="space-y-2">
+                <p>
+                  We do employment lawyer search engine optimization that gets you real consultations, qualified cases, and steady traffic - not just pretty reports.
+                </p>
+                <p>
+                  We offer Professional Employment Law SEO solutions to boutique firms, established employment practices, and multi-location firms alike. With our organic growth services, we help your firm grow over time.
+                </p>
+                <p>
+                  With our on-page SEO, we make your site easier to use. And with our technical ranking strategy, we make it stronger.
+                </p>
+              </div>
+            ),
+            stats: [
+              {
+                label: (
+                  <>
+                    Employment Law Firms Supported
+                  </>
+                ),
+                value: "400+",
+              },
+              {
+                label: (
+                  <>
+                    Qualified Consultations Generated Through SEO
+                  </>
+                ),
+                value: "1200K+",
+              },
+              {
+                label: (
+                  <>
+                    Average Organic Growth Delivered
+                  </>
+                ),
+                value: "1,000%+",
+              },
+              {
+                label: (
+                  <>
+                    Case Value Influenced via SEO
+                  </>
+                ),
+                value: "$200k+",
+              },
+            ],
+          },
+        },
+        localSEOserviceData: {
+          eyebrow: "The Foundation of Case Growth",
+          title: "Our Employment Law SEO Services",
+          services: [
             {
-              id: "local-seo-audit",
-              tab_name: "Local SEO Audit",
-              heading: "Comprehensive Local SEO Audit",
-              description:
-                "We analyze your entire local presence including your <strong>Google Business Profile</strong>, <strong>local listings</strong>, website structure, and competitors to identify opportunities for higher rankings in <strong>local search results</strong> and <strong>Google Maps</strong>.",
+              id: "keyword-strategy",
+              icon: {
+                src: "/service-testing/keyword.webp",
+                alt: "Keyword strategy",
+              },
+              title: "Keyword Strategy for Employment Law Firms",
+              description: (
+                <>
+                  <p>We identify the searches your potential clients actually use and organize them around practice area, location, intent, and case value, including:</p>
+                  <ul className="list-disc list-outside">
+                    <li>Wrongful termination</li>
+                    <li>Employment lawyer near me</li>
+                    <li>Discrimination attorney</li>
+                    <li>Sexual harassment lawyer</li>
+                    <li>Wage and hour attorney</li>
+                    <li>Unpaid overtime</li>
+                    <li>Retaliation lawyer</li>
+                    <li>FMLA violations</li>
+                    <li>ADA claims</li>
+                    <li>Whistleblower attorney</li>
+                    <li>Hostile work environment</li>
+                    <li>City/state-specific employment law searches</li>
+                  </ul>
+                </>
+              ),
             },
             {
-              id: "google-business-optimization",
-              tab_name: "Google Business Optimization",
-              heading: "Google Business Optimization",
-              description: "",
+              id: "full-seo-audit",
+              icon: {
+                src: "/service-testing/seoaudit.webp",
+                alt: "SEO audit",
+              },
+              title: "Complete SEO Audit ",
+              description: (
+                <>
+                  <p>We examine your website and online presence to identify technical problems, content gaps, local SEO opportunities, competitor weaknesses, and missed search opportunities, covering:</p>
+                  <ul className="list-disc list-outside">
+                    <li>Site structure, indexing and crawlability</li>
+                    <li>Page speed and mobile usability</li>
+                    <li>On-page SEO</li>
+                    <li>Practice-area pages and location pages</li>
+                    <li>Internal linking</li>
+                    <li>Google Business Profile and local citations</li>
+                    <li>Competitor visibility and content opportunities</li>
+                  </ul>
+                </>
+              ),
             },
             {
-              id: "local-keyword-research",
-              tab_name: "Local Keyword Research",
-              heading: "Local Keyword Research",
-              description: "",
+              id: "on-page-seo",
+              icon: {
+                src: "/service-testing/onpageseo.webp",
+                alt: "On-page SEO optimization",
+              },
+              title: "On-Page SEO Optimization",
+              description: (
+                <>
+                  <p>We optimize your most important pages so search engines understand your practice areas and clients find what they need fast:</p>
+                  <ul className="list-disc list-outside">
+                    <li>Title tags and meta descriptions</li>
+                    <li>Headings and content structure</li>
+                    <li>Practice-area content</li>
+                    <li>Internal links and image optimization</li>
+                    <li>Calls to action</li>
+                    <li>Location relevance and search intent alignment</li>
+                  </ul>
+                </>
+              ),
             },
             {
-              id: "on-page-local-seo",
-              tab_name: "On-Page Local SEO",
-              heading: "On-Page Local SEO",
-              description: "",
+              id: "technical-seo",
+              icon: {
+                src: "/service-testing/technicalseo.webp",
+                alt: "Technical SEO fixes",
+              },
+              title: "Technical SEO",
+              description: (
+                <>
+                  <p>We identify and fix issues that make your website easier for search engines to crawl and easier for clients to use:</p>
+                  <ul className="list-disc list-outside">
+                    <li>Crawlability and indexing</li>
+                    <li>Broken links and redirects</li>
+                    <li>Site architecture</li>
+                    <li>Mobile performance and page speed</li>
+                    <li>Core Web Vitals</li>
+                    <li>Duplicate content and structured data issues</li>
+                  </ul>
+                </>
+              ),
             },
             {
-              id: "citation-building",
-              tab_name: "Citation Building",
-              heading: "Citation Building",
-              description: "",
+              id: "authority-link-growth",
+              icon: {
+                src: "/service-testing/linkbuilding.webp",
+                alt: "Authority and link growth",
+              },
+              title: "Authority & Link Building",
+              description: (
+                <>
+                  <p>Relevant backlinks strengthen your website's authority and credibility. We prioritize legitimate, relevant opportunities instead of spammy link networks or manipulative tactics:</p>
+                  <ul className="list-disc list-outside">
+                    <li>Legal directories</li>
+                    <li>Bar associations</li>
+                    <li>Employment law publications</li>
+                    <li>Editorial coverage</li>
+                  </ul>
+                </>
+              ),
             },
             {
-              id: "performance-tracking",
-              tab_name: "Performance Tracking",
-              heading: "Performance Tracking",
-              description: "",
+              id: "content-copywriting",
+              icon: {
+                src: "/service-testing/contentmarketing.webp",
+                alt: "Content and SEO copywriting",
+              },
+              title: "Content & SEO Copywriting",
+              description: (
+                <>
+                  <p>We create content built around genuine search intent, not keyword stuffing:</p>
+                  <ul className="list-disc list-outside">
+                    <li>Employment law practice-area pages</li>
+                    <li>Location pages</li>
+                    <li>Supporting blog content</li>
+                    <li>Client-focused guides and FAQ content</li>
+                    <li>Workplace-issue resources</li>
+                  </ul>
+                </>
+              ),
             },
           ],
         },
+        aiDiscoveryData: {
+          eyebrow: "AI Discovery Channels",
+          title: (
+            <>
+              Get Found Across Google Search, Maps & AI Discovery
+            </>
+          ),
+          description:
+            "Search behavior continues to evolve. Clients may discover an employment lawyer through traditional Google results, Google Maps, mobile search, or AI-powered search experiences. A modern employment law SEO strategy makes your firm's information clear, consistent, useful, and easy for search systems to understand.",
+          strategies: [
+            {
+              id: "traditional-seo",
+              title: "Traditional SEO",
+              description:
+                "Relevant keyword targeting, strong practice-area pages, clear site structure, internal linking, technical SEO, helpful content, and organic authority.",
+            },
+            {
+              id: "local-seo",
+              title: "Local SEO",
+              description:
+                "Google Business Profile optimization, location-specific content, local keywords, reviews, citations, consistent business information, and service-area relevance.",
+            },
+            {
+              id: "ai-search-optimization",
+              title: "AI Search Optimization",
+              description:
+                "Clear, structured information that shows what your firm does, where it practices, and which employment law claims it handles, so it's easier for AI-powered search experiences to surface.",
+            },
+          ],
+        },
+
+        tab: {
+          title:
+            "Our Employment Law SEO Framework: Built for Consistent, Trackable Results",
+          steps: [
+            {
+              id: "local-seo-audit",
+              tab_name: "Website & Market Audit",
+              heading: "Website & Market Audit",
+              description:
+                "We start by understanding where your firm stands today: reviewing your website, technical SEO, current search visibility, local presence, practice-area coverage, competitors, and opportunities. A clear starting point, not assumptions.",
+            },
+            {
+              id: "google-business-optimization",
+              tab_name: "Keyword & Competitor Research",
+              heading: "Keyword & Competitor Research",
+              description:
+                "We identify valuable searches based on practice area, location, client intent, and competition, and analyze competing employment law firms to see which practice areas, locations, content, and local signals are helping them compete.",
+            },
+            {
+              id: "local-keyword-research",
+              tab_name: "SEO Roadmap",
+              heading: "SEO Roadmap",
+              description:
+                "We turn the research into a prioritized strategy: technical fixes, practice-area page optimization, local SEO improvements, content opportunities, location targeting, authority building, and conversion improvements.",
+            },
+            {
+              id: "on-page-local-seo",
+              tab_name: "Website Optimization",
+              heading: "Website Optimization",
+              description:
+                "We optimize the pages that matter most: your homepage, wrongful termination page, discrimination and harassment pages, wage and hour pages, location pages, and supporting content.",
+            },
+            {
+              id: "citation-building",
+              tab_name: "Local SEO & Google Maps Optimization",
+              heading: "Local SEO & Google Maps Optimization",
+              description:
+                "We strengthen your local search presence by improving relevant local signals and your Google Business Profile, helping you compete for searches where clients are looking for employment lawyers in or around your service area.",
+            },
+            {
+              id: "performance-tracking",
+              tab_name: "Content & Authority Building",
+              heading: "Content & Authority Building",
+              description:
+                "We create useful content and pursue legitimate authority-building opportunities that support your most important practice areas and locations.",
+            },
+            {
+              id: "reporting-testing-growth",
+              tab_name: "Reporting, Testing & Growth",
+              heading: "Reporting, Testing & Growth",
+              description:
+                "We monitor search visibility, organic traffic, keyword performance, local visibility, calls, consultations, and conversions where tracking is available. What works becomes a priority; what underperforms gets analyzed and improved.",
+            },
+          ],
+        },
+
+        successStoriesData: {
+          eyebrow: "",
+          title: <>Why Choose Our Employment Lawyer SEO Agency?</>,
+          description: (
+            <>
+              Choosing a specialized employment law SEO agency means your strategy is built around the unique way employment clients search. A firm handling wrongful termination and discrimination cases doesn't need the same SEO strategy as a personal injury firm, a dentist, or an e-commerce store.
+            </>
+          ),
+          stories: [
+            {
+              id: "cleaning-business",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Cleaning business SEO growth results",
+              },
+              title: "Industry-Specific Strategy",
+              description:
+                "built around actual employment law practice areas, client intent, local competition, and service areas",
+            },
+            {
+              id: "law-firm",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Law firm SEO growth results",
+              },
+              title: "Local Search Expertise",
+              description:
+                'we understand searches like "employment lawyer near me" and city-specific, claim-plus-location queries',
+            },
+            {
+              id: "dental-clinic",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Dental clinic SEO growth results",
+              },
+              title: "Customized SEO",
+              description:
+                "your website, market, competition, practice areas, and goals determine the strategy, not a generic checklist",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "Transparent Reporting",
+              description:
+                "you understand what's being optimized, why it matters, and what the data shows",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "Ethical SEO",
+              description:
+                "sustainable strategies and legitimate authority, not risky shortcuts",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "Case-Focused Optimization",
+              description:
+                "rankings matter, but the bigger goal is qualified clients contacting your firm",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "Clear Communication",
+              description:
+                "priorities, progress, opportunities, and next steps explained clearly",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "No Unrealistic Guarantees",
+              description:
+                "no ethical SEO provider can guarantee a specific ranking, traffic level, or number of cases; we focus on measurable improvements and long-term growth",
+            },
+          ],
+        },
+        faqTitle: "Your Locksmith SEO Questions Answered",
         faqs: [
           {
-            question: "What is Local SEO?",
+            question: "Do you work with emergency locksmiths that need calls around the clock? ",
             answer:
-              "<strong>Local SEO</strong> is the process of optimizing your business to rank in <strong>local search results</strong> and <strong>Google Maps</strong> for nearby customers.",
+              "Yes. Our emergency locksmith SEO targets 24-hour, urgent, and lockout-related searches so you're visible exactly when customers need help fastest.",
           },
           {
-            question: "How does Local SEO help my business?",
+            question: "Can you help a locksmith business with multiple locations?",
             answer:
-              "<strong>Local SEO services</strong> increase your visibility in <strong>near me searches</strong>, bringing more local traffic, calls, and leads.",
+              "Yes. We build scalable multi-location SEO strategies around your legitimate service areas, without relying on thin or duplicate location pages.",
           },
           {
-            question: "What is Google Business Profile optimization?",
+            question: "How long before locksmith SEO shows results?",
             answer:
-              "It is the process of improving your <strong>Google Business Profile (GBP)</strong> to rank higher in <strong>Google Maps listings</strong> and local results.",
+              "Most locksmith businesses start seeing measurable improvement within a few months, depending on local competition and current site health.",
           },
           {
-            question: "How long does Local SEO take?",
+            question: "Do you optimize Google Business Profile and Maps visibility?",
             answer:
-              "Most businesses see results from <strong>local SEO optimization</strong> within 4 to 8 weeks, depending on competition.",
+              "Yes, Local SEO and Google Maps optimization are core parts of every locksmith SEO strategy we build.",
           },
           {
-            question: "Do I need Local SEO for a small business?",
+            question: "Do you offer SEO for residential, commercial, and automotive locksmith services separately?",
             answer:
-              "Yes, <strong>small business local SEO</strong> helps you attract nearby customers and compete with larger brands in your area.",
+              "Yes. We build service-specific SEO around each residential, commercial, and automotive locksmith searches all have different intent, and we target them accordingly.",
           },
         ],
-        whyChoose: [
+        whyChooseData: {
+          title: "SEO for Employment Lawyers: Built Around Your Firm's Goals",
+          containerClassName:
+            "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
+          gridClassName:
+            "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
+          paragraphs: [
+            <>Whether you're a boutique employment law practice, an established firm, or a multi-location operation, your SEO strategy should reflect how your firm actually works. <br /><i>"SEO doesn't guarantee a specific outcome, but a well-executed strategy creates more opportunities for your firm to be discovered by employees actively searching for legal representation."</i></>,
+          ],
+          features: [
+            {
+              title: "Increase local visibility",
+              desc: "compete for more relevant searches in your target market",
+            },
+            {
+              title: "Generate more qualified consultations",
+              desc: "create stronger pathways from search results to contact",
+            },
+            {
+              title: "Improve Google Maps visibility",
+              desc: "strengthen the local presence of your legitimate office location",
+            },
+            {
+              title: "Expand into new markets",
+              desc: "develop useful location and practice-area content where you genuinely operate",
+            },
+            {
+              title: "Build organic traffic",
+              desc: "create a stronger long-term source of relevant search visitors",
+            },
+            {
+              title: "Reduce reliance on paid advertising",
+              desc: "complement advertising with sustainable organic search visibility",
+            },
+          ],
+        },
+        seoComparisonData: {
+          title: "Traditional SEO vs Local SEO vs AI SEO (AIO) - for Employment Lawyers",
+          description: (
+            <>
+              A complete, future-ready search optimization framework. Gone are the days when finding a lawyer meant just clicking blue links on Google. Now clients find you by asking smart speakers, tapping Maps, or getting instant replies from AI assistants.
+            </>
+          ),
+          comparisons: [
           {
-            title: "Local SEO Expertise",
-            desc: "We specialize in <strong>local business SEO</strong>, helping you rank in <strong>Google Map Pack</strong> and dominate <strong>location based searches</strong> in your target area.",
+            id: "traditional-seo",
+            title: "Traditional SEO",
+            subtitle: "",
+            sections: [
+              {
+                title: "What it is:",
+                items: [
+                  <>Keyword identification</>,
+                  <>clear structure (headers, tags, titles)</>,
+                  <>fast site speed and mobile responsiveness</>,
+                  <>credibility built through consistency</>,
+                ],
+              },
+              {
+                title: "Why it matters:",
+                items: [
+                  "Generates consistent",
+                  "long-term organic traffic",
+                  "builds credibility",
+                  'improves rankings for competitive keywords like "wrongful termination attorney," and lowers client acquisition cost over time',
+                ],
+              },
+            ],
           },
           {
-            title: "Proven Local Results",
-            desc: "Our strategies improve your visibility in <strong>near me searches</strong>, increase <strong>local traffic</strong>, and generate more calls and leads.",
+            id: "local-seo",
+            title: "Local SEO",
+            subtitle: "",
+            sections: [
+              {
+                title: "What it is:",
+                items: [
+                  "Optimizing for local audiences",
+                  "Google Maps visibility",
+                  "Google Business Profile optimization",
+                  "location-specific keywords",
+                  "consistent NAP citations",
+                  "and review management",
+                ],
+              },
+              {
+                title: "Why it matters:",
+                items: [
+                  'Increases visibility in "near me" and local-intent searches',
+                  "connects you with nearby ready-to-consult clients",
+                  "converts Maps impressions into real consultations",
+                ],
+              },
+            ],
           },
           {
-            title: "Custom Location Strategies",
-            desc: "We create personalized campaigns based on your <strong>business location</strong>, audience behavior, and local competition.",
+            id: "ai-seo",
+            title: "AI SEO / AIO",
+            subtitle:
+              "",
+            sections: [
+              {
+                title: "What it is:",
+                items: [
+                  "Optimizing content for AI-powered search and smart assistants",
+                  "structuring information clearly",
+                  "answering questions directly",
+                ],
+              },
+              {
+                title: "Why it matters:",
+                items: [
+                  "AI answers increasingly replace traditional search clicks being discovered in AI conversations",
+                  "not just search results",
+                  "future-proofs your firm's visibility",
+                ],
+              },
+            ],
           },
-          {
-            title: "Transparent Reporting",
-            desc: "Get clear insights into your <strong>local rankings</strong>, traffic, and conversions with easy-to-understand reports.",
-          },
-        ],
+          ],
+        },
       },
       {
         id: "locksmith-seo-services",
@@ -4339,32 +4904,32 @@ export const services = [
             },
           ],
         },
-        faqTitle: "Your Locksmith SEO Questions Answered",
+        faqTitle: "Employment Lawyer SEO Questions Answered",
         faqs: [
           {
-            question: "Do you work with emergency locksmiths that need calls around the clock? ",
+            question: "Do you work with firms handling wrongful termination and discrimination cases?",
             answer:
-              "Yes. Our emergency locksmith SEO targets 24-hour, urgent, and lockout-related searches so you're visible exactly when customers need help fastest.",
+              "Yes. Our employment law SEO targets wrongful termination, discrimination, harassment, and retaliation searches so you're visible exactly when employees need help most.",
           },
           {
-            question: "Can you help a locksmith business with multiple locations?",
+            question: "Can you help a firm with multiple office locations?",
             answer:
               "Yes. We build scalable multi-location SEO strategies around your legitimate service areas, without relying on thin or duplicate location pages.",
           },
           {
-            question: "How long before locksmith SEO shows results?",
+            question: "How long before employment lawyer SEO shows results?",
             answer:
-              "Most locksmith businesses start seeing measurable improvement within a few months, depending on local competition and current site health.",
+              "Most firms start seeing measurable improvement within a few months, depending on local competition and current site health. Meaningful growth in qualified consultations typically develops over several months as authority, rankings, and content footprint expand.",
           },
           {
             question: "Do you optimize Google Business Profile and Maps visibility?",
             answer:
-              "Yes, Local SEO and Google Maps optimization are core parts of every locksmith SEO strategy we build.",
+              "Yes, Local SEO and Google Maps optimization are core parts of every employment lawyer SEO strategy we build.",
           },
           {
-            question: "Do you offer SEO for residential, commercial, and automotive locksmith services separately?",
+            question: "Do you offer SEO for wrongful termination, discrimination, and wage & hour cases separately?",
             answer:
-              "Yes. We build service-specific SEO around each residential, commercial, and automotive locksmith searches all have different intent, and we target them accordingly.",
+              "Yes. We build practice-area-specific SEO wrongful termination, discrimination and harassment, and wage and hour searches all have different intent, and we target them accordingly.",
           },
         ],
         // whyChooseData: {
