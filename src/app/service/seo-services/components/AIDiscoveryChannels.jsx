@@ -69,6 +69,7 @@ export default function AIDiscoveryChannels({
   description = null,
   strategies = null,
   platforms = null,
+  footnote = null,
 } = {}) {
   const visibleStrategies = (Array.isArray(strategies) ? strategies : []).filter(
     (strategy) => strategy && (strategy.title || strategy.description),
@@ -76,7 +77,12 @@ export default function AIDiscoveryChannels({
   const visiblePlatforms = getVisiblePlatforms(platforms);
   const hasHeader = Boolean(eyebrow || title || description);
 
-  if (!hasHeader && !visibleStrategies.length && !visiblePlatforms.length) {
+  if (
+    !hasHeader &&
+    !visibleStrategies.length &&
+    !visiblePlatforms.length &&
+    !footnote
+  ) {
     return null;
   }
 
@@ -148,6 +154,12 @@ export default function AIDiscoveryChannels({
         ) : null}
 
         <PlatformGrid platforms={visiblePlatforms} />
+
+        {footnote ? (
+          <p className="mt-6 text-center text-sm leading-relaxed text-gray-600 sm:mt-8 sm:text-base lg:mt-10 lg:text-lg">
+            {footnote}
+          </p>
+        ) : null}
       </div>
     </section>
   );

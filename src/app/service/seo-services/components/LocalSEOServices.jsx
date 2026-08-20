@@ -40,6 +40,7 @@ export default function LocalSEOServices({
   title = null,
   description = null,
   services = [],
+  footnote = null,
   className = "",
   containerClassName = "mx-auto w-[92%] max-w-[1200px]",
   gridClassName = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
@@ -68,7 +69,7 @@ export default function LocalSEOServices({
             ) : null}
 
             {description ? (
-              <div className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
+              <div className="mx-auto mt-4 max-w-7xl text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
                 {description}
               </div>
             ) : null}
@@ -111,6 +112,12 @@ export default function LocalSEOServices({
               </div>
             ))}
           </div>
+        ) : null}
+
+        {footnote ? (
+          <p className="mt-6 text-center text-sm leading-relaxed text-gray-600 sm:mt-8 sm:text-base lg:mt-10 lg:text-lg">
+            {footnote}
+          </p>
         ) : null}
       </div>
     </section>

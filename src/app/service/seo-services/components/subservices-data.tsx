@@ -2908,105 +2908,725 @@ export const services = [
           image: "/service-deatil-images/seo.webp",
         },
         introParagraphs: [
-          "A boutique with a strong online presence gets more clicks, more visitors, and eventually more sales. This is where our boutique <a class='text-gray-300 hover:underline' href='/service/seo-services/'>SEO agency</a> comes in.",
-          "At <a class='text-gray-300 hover:underline' href='/'>Web Founders USA</a>, we help boutiques improve their online visibility through simple, effective, and practical SEO strategies. From choosing the right keywords to improving your rankings on Google, our goal is to make sure shoppers find your boutique before they find your competitors.",
-          "Whether you run a small online shop or a well-known boutique store, our boutique SEO services help you reach customers who are actually searching for your products.",
+          'A strong online presence starts with being easy to find. Our boutique SEO agency helps businesses improve search visibility, reach the right audience, and turn website visitors into customers. We create simple, focused SEO strategies based on your business, audience, industry, and goals.',
+          'Unlike large agencies that often use the same process for every client, a boutique SEO agency provides a more personal approach. We take time to understand your brand and build a strategy that fits your needs.',
         ],
-        features: [
-          "Website Audit",
-          "Backlink Support",
-          "SEO Content for Pages & Products",
-          "Keyword Integration",
-          "Competitor Check",
-          "Ongoing Monitoring",
+        actions: [
+          { label: "Contact Us", href: "/contact-us" },
+          {
+            label: "Get a Free Locksmith SEO Audit",
+            href: "/contact-us",
+            variant: "secondary",
+          },
         ],
+        requestAFreeData: {
+          title: "Request a Free Locksmith SEO Audit",
+          paragraphs: [
+            "Not sure why your locksmith business isn't getting enough visibility on Google? Let us take a closer look.",
+            "Our audit identifies technical issues, local SEO gaps, service-page opportunities, keyword opportunities, competitor weaknesses, and areas where your website may be losing potential customers.",
+          ],
+          cta: {
+            label: "Get Your Free Locksmith SEO Audit",
+            href: "/contact-us/",
+          },
+        },
+        expertPage: {
+          intro: {
+            title: (
+              <>
+                What Is a Boutique SEO Agency?
+              </>
+            ),
+            description: (
+              <div className="space-y-2">
+                <p>
+                  A <b>boutique SEO agency</b> is a specialized SEO company that works with a smaller number of clients. This allows the team to give each project more attention and create a customized strategy.
+                </p>
+                <p>
+                  Our approach to <b>boutique SEO</b> focuses on quality, relevance, and long-term growth. We analyze your website, competitors, keywords, content, technical performance, and search intent before creating an SEO plan.
+                </p>
+                <p>
+                  The goal is simple: help your business become more visible in search, attract relevant visitors, and generate better business opportunities.
+                </p>
+              </div>
+            ),
+          },
+          // certifications: [
+          //   {
+          //     src: "/service-testing/GA-certified.webp",
+          //     alt: "Google Analytics certification",
+          //   },
+          //   {
+          //     src: "/service-testing/images-300x82.webp",
+          //     alt: "SEO partner certification",
+          //   },
+          //   {
+          //     src: "/service-testing/hubspot.webp",
+          //     alt: "HubSpot certification",
+          //   },
+          //   {
+          //     src: "/service-testing/google-digital-garage-1.webp",
+          //     alt: "Google Digital Garage certification",
+          //   },
+          // ],
+          relatedServices: {
+            title: "Why Choose a Boutique SEO Agency?",
+            description:
+              <>A boutique SEO agency gives you a more personalized SEO experience. Instead of following a one-size-fits-all package, your strategy is built around your business. <br /><b><i>Key benefits include:</i></b></>,
+            exploreLabel: "Explore service",
+            items: [
+              {
+                // icon: ,
+                title: "Personalized SEO strategies",
+                description:
+                  "",
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "Direct and clear communication",
+                description:
+                  "",
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "Focused SEO expertise",
+                description:
+                  "",
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "Flexible campaigns",
+                description:
+                  "",
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "Industry-specific research",
+                description:
+                  "",
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "Better attention to content and technical SEO",
+                description:
+                  "",
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "Strategies designed around search intent",
+                description:
+                  "",
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "Long-term organic growth",
+                description:
+                  "",
+                href: "",
+              },
+            ],
+            footnote: <><b><i>This focused approach can be especially valuable for small businesses, niche brands, e-commerce stores, and businesses operating in competitive markets.</i></b></>,
+          },
+          subrelatedServices: {
+            title: "Our Boutique SEO Services",
+            description:
+              <>Our <b>boutique SEO services</b> cover the key areas needed to build a stronger organic search presence. Depending on your goals, your strategy may include:</>,
+            exploreLabel: "Explore service",
+            items: [
+              {
+                // icon: FaSearch,
+                title: "SEO Audit Services",
+                description:
+                  "Finds technical, content, and ranking problems",
+                // href: "/service/seo-services/ecommerce-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Keyword Strategy",
+                description:
+                  "Improves titles, headings, content, URLs, and internal links",
+                // href: "/service/seo-services/b2b-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "On-Page SEO Services",
+                description:
+                  "Improves titles, headings, content, URLs, and internal links",
+                // href: "/service/seo-services/dental-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Technical SEO",
+                description:
+                  "Improves crawling, indexing, site structure, and performance",
+                // href: "/service/seo-services/enterprise-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "SEO Copywriting Services",
+                description:
+                  "Creates useful, search-friendly website content",
+                // href: "/service/seo-services/automotive-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Local SEO Services",
+                description:
+                  "Helps businesses reach customers in specific locations",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Authority & Link Building",
+                description:
+                  "Builds website authority and relevant links",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "SEO Consulting Services",
+                description:
+                  "Provides expert guidance for SEO strategy and growth",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+            ],
+            footnote: <><b><i>Every service is selected according to your website's current needs. We do not recommend unnecessary work just to make a package look bigger.</i></b></>,
+          },
+          results: {
+            title: "Keyword Research and SEO Strategy",
+            description: (
+              <div className="space-y-2">
+                <p>
+                  Effective SEO starts with understanding what your customers search for. We research relevant keywords, search intent, competition, and long-tail opportunities to create a strong keyword strategy.
+                </p>
+                <p>
+                  For a boutique brand, this can include product keywords, service keywords, location-based searches, informational queries, and commercial terms.
+                </p>
+                <p>
+                  A focused keyword strategy also creates better opportunities for internal linking. Related pages can connect naturally through descriptive anchor text, helping users and search engines discover more useful content.
+                </p>
+              </div>
+            ),
+            stats: [
+              {
+                label: (
+                  <>
+                    Local Boutique
+                    <br />
+                    Businesses Supported
+                  </>
+                ),
+                value: "400+",
+              },
+              {
+                label: (
+                  <>
+                    Leads Generated
+                    <br />
+                    Through SEO
+                  </>
+                ),
+                value: "1200K+",
+              },
+              {
+                label: (
+                  <>
+                    Average Organic
+                    <br />
+                    Growth Delivered
+                  </>
+                ),
+                value: "1,000%+",
+              },
+              {
+                label: (
+                  <>
+                    Revenue Influenced
+                    <br />
+                    via SEO
+                  </>
+                ),
+                value: "$200k+",
+              },
+            ],
+          },
+        },
+        localSEOserviceData: {
+          eyebrow: "The Foundation of Local Growth",
+          title: "Technical and On-Page SEO",
+          description: <>Strong content needs a strong technical foundation. Our technical SEO process looks at areas such as crawling, indexing, website structure, mobile usability, internal links, and other technical issues. <br />Our <b>on-page SEO services</b> can include:</>,
+          services: [
+            {
+              id: "keyword-strategy",
+              // icon: {
+              //   src: "/service-testing/keyword.webp",
+              //   alt: "Keyword strategy",
+              // },
+              title: "Page titles and meta descriptions",
+              description: (
+                <>
+                  
+                </>
+              ),
+            },
+            {
+              id: "full-seo-audit",
+              // icon: {
+              //   src: "/service-testing/seoaudit.webp",
+              //   alt: "SEO audit",
+              // },
+              title: "H1, H2, and H3 heading structure",
+              description: (
+                <>
+                  
+                </>
+              ),
+            },
+            {
+              id: "on-page-seo",
+              // icon: {
+              //   src: "/service-testing/onpageseo.webp",
+              //   alt: "On-page SEO optimization",
+              // },
+              title: "Content optimization",
+              description: (
+                <>
+                  
+                </>
+              ),
+            },
+            {
+              id: "technical-seo",
+              // icon: {
+              //   src: "/service-testing/technicalseo.webp",
+              //   alt: "Technical SEO fixes",
+              // },
+              title: "Image optimization",
+              description: (
+                <>
+                  
+                </>
+              ),
+            },
+            {
+              id: "authority-link-growth",
+              // icon: {
+              //   src: "/service-testing/linkbuilding.webp",
+              //   alt: "Authority and link growth",
+              // },
+              title: "Internal linking",
+              description: (
+                <>
+                  
+                </>
+              ),
+            },
+            {
+              id: "content-copywriting",
+              // icon: {
+              //   src: "/service-testing/contentmarketing.webp",
+              //   alt: "Content and SEO copywriting",
+              // },
+              title: "URL structure",
+              description: (
+                <>
+                  
+                </>
+              ),
+            },
+            {
+              id: "search-intent-alignment",
+              // icon: {
+              //   src: "/service-testing/contentmarketing.webp",
+              //   alt: "Content and SEO copywriting",
+              // },
+              title: "Search intent alignment",
+              description: (
+                <>
+                  
+                </>
+              ),
+            },
+            {
+              id: "content-hierarchy",
+              // icon: {
+              //   src: "/service-testing/contentmarketing.webp",
+              //   alt: "Content and SEO copywriting",
+              // },
+              title: "Content hierarchy",
+              description: (
+                <>
+                  
+                </>
+              ),
+            },
+          ],
+          footnote: <><b><i>These improvements help search engines understand your pages while making your website easier for visitors to navigate.</i></b></>,
+        },
+        aiDiscoveryData: {
+          eyebrow: "",
+          title: (
+            <>
+              SEO for Boutiques
+            </>
+          ),
+          description:
+            <><b>SEO for boutiques</b> requires a strategy that connects your products, brand, and customers with the searches they make online. <br />Whether you operate a fashion boutique, beauty brand, lifestyle store, or another niche business, SEO can help potential customers discover your products and services. <br /><b>A boutique SEO strategy may focus on:</b></>,
+          strategies: [
+            {
+              id: "traditional-seo",
+              title: "Product and category pages",
+              description:
+                "",
+            },
+            {
+              id: "local-seo",
+              title: "Local search visibility",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization",
+              title: "Commercial keywords",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization0",
+              title: "Informational content",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization1",
+              title: "Brand-related searches",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization2",
+              title: "Product descriptions",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization3",
+              title: "Internal linking",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization4",
+              title: "Mobile-friendly user experience",
+              description:
+                "",
+            },
+          ],
+          footnote: <><b><i>For e-commerce businesses, specialized e-commerce SEO services can help improve category pages, product pages, technical SEO, and organic product visibility.</i></b></>,
+        },
+
         tab: {
-          title: "Features of Our Boutique SEO Services",
+          title:
+            "Specialized SEO Services",
+          description: <>Different businesses have different search needs. A good boutique SEO agency can adapt its strategy to your industry and platform. <br />Some specialized SEO solutions include:</>,
           steps: [
             {
-              id: "website-audit",
-              tab_name: "Website Audit",
-              heading: "Website Audit",
+              id: "local-seo-audit",
+              tab_name: "e-commerce-seo-services",
+              heading: "E-commerce SEO Services",
               description:
-                "Before we begin anything, we check your entire website. Our team studies what might be stopping your pages from ranking well—slow speed, missing keywords, poor structure, or anything else. This audit helps us understand the exact issues and fix them properly, not randomly.",
+                "",
             },
             {
-              id: "backlink-support",
-              tab_name: "Backlink Support",
-              heading: "Backlink Support",
+              id: "google-business-optimization",
+              tab_name: "Keyword & Competitor Research",
+              heading: "Keyword & Competitor Research",
               description:
-                "Backlinks play a huge role in Google rankings. As a reliable boutique SEO company, we build clean and strong backlinks that genuinely improve your online visibility. We use the right tools and methods, avoiding shortcuts that harm your website.",
+                "We identify valuable searches based on service, location, customer intent, and competition, and analyze competing locksmith businesses to see which services, locations, content, and local signals are helping them compete.",
             },
             {
-              id: "seo-content",
-              tab_name: "SEO Content for Pages & Products",
-              heading: "SEO Content for Pages & Products",
+              id: "local-keyword-research",
+              tab_name: "SEO Roadmap",
+              heading: "SEO Roadmap",
               description:
-                "Your boutique needs more than good pictures. It needs words that help Google understand what you sell. We create simple, search friendly content—product descriptions, category content, meta titles, and meta descriptions—that support better ranking. Everything is written in normal, everyday language so customers feel connected, not confused.",
+                "We turn the research into a prioritized strategy: technical fixes, service-page optimization, local SEO improvements, content opportunities, location targeting, authority building, and conversion improvements.",
             },
             {
-              id: "keyword-integration",
-              tab_name: "Keyword Integration",
-              heading: "Keyword Integration",
+              id: "on-page-local-seo",
+              tab_name: "Website Optimization",
+              heading: "Website Optimization",
               description:
-                "We find the keywords people use when looking for boutiques like yours. Then we add them into your content naturally, not forcefully. This helps your boutique appear in search results whenever customers are actively shopping online.",
+                "We optimize the pages that matter most: your homepage, emergency locksmith page, residential and commercial service pages, automotive pages, location pages, and supporting content.",
             },
             {
-              id: "competitor-check",
-              tab_name: "Competitor Check",
-              heading: "Competitor Check",
+              id: "citation-building",
+              tab_name: "Local SEO & Google Maps Optimization",
+              heading: "Local SEO & Google Maps Optimization",
               description:
-                "We look at what other boutiques are doing online. This helps us understand what works and what doesn’t. By doing this, your boutique gets a better chance to stand out in a crowded market.",
+                "We strengthen your local search presence by improving relevant local signals and your Google Business Profile, helping you compete for searches where customers are looking for locksmith services in or around your service area.",
             },
             {
-              id: "ongoing-monitoring",
-              tab_name: "Ongoing Monitoring",
-              heading: "Ongoing Monitoring",
+              id: "performance-tracking",
+              tab_name: "Content & Authority Building",
+              heading: "Content & Authority Building",
               description:
-                "Our job doesn’t end after optimization. We keep checking your website performance—clicks, impressions, traffic, and rankings—to make sure your boutique continues to grow online.",
+                "We create useful content and pursue legitimate authority-building opportunities that support your most important services and locations.",
+            },
+            {
+              id: "reporting-testing-growth",
+              tab_name: "Reporting, Testing & Growth",
+              heading: "Reporting, Testing & Growth",
+              description:
+                "We monitor search visibility, organic traffic, keyword performance, local visibility, calls, leads, and conversions where tracking is available. What works becomes a priority; what underperforms gets analyzed and improved.",
             },
           ],
         },
+
+        successStoriesData: {
+          eyebrow: "",
+          title: <>Why Choose Our Locksmith SEO Agency?</>,
+          description: (
+            <>
+              Choosing a specialized locksmith SEO agency means your strategy is
+              built around the unique way locksmith customers search. A
+              locksmith doesn't need the same SEO strategy as a dentist, law
+              firm, or e-commerce store.
+            </>
+          ),
+          stories: [
+            {
+              id: "cleaning-business",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Cleaning business SEO growth results",
+              },
+              title: "Industry-Specific Strategy",
+              description:
+                "built around actual locksmith services, customer intent, local competition, and service areas",
+            },
+            {
+              id: "law-firm",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Law firm SEO growth results",
+              },
+              title: "Local Search Expertise",
+              description:
+                'we understand searches like "locksmith near me" and city-specific, service-plus-location queries',
+            },
+            {
+              id: "dental-clinic",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Dental clinic SEO growth results",
+              },
+              title: "Customized SEO",
+              description:
+                "your website, market, competition, services, and goals determine the strategy, not a generic checklist",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "Transparent Reporting",
+              description:
+                "you understand what's being optimized, why it matters, and what the data shows",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "Ethical SEO",
+              description:
+                "sustainable strategies and legitimate authority, not risky shortcuts",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "Lead-Focused Optimization",
+              description:
+                "rankings matter, but the bigger goal is real customers calling your business",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "Clear Communication",
+              description:
+                "priorities, progress, opportunities, and next steps explained clearly",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "E-commerce SEO growth results",
+              },
+              title: "No Unrealistic Guarantees",
+              description:
+                "no ethical SEO provider can guarantee a specific ranking, traffic level, or number of calls; we focus on measurable improvements and long-term growth",
+            },
+          ],
+        },
+        faqTitle: "Employment Lawyer SEO Questions Answered",
         faqs: [
           {
-            question: "Do I really need SEO for my boutique?",
+            question:
+              "Do you work with firms handling wrongful termination and discrimination cases?",
             answer:
-              "Yes. Most customers search online before buying. SEO helps them find your boutique first.",
+              "Yes. Our employment law SEO targets wrongful termination, discrimination, harassment, and retaliation searches so you're visible exactly when employees need help most.",
           },
           {
-            question: "How long before I see results?",
+            question: "Can you help a firm with multiple office locations?",
             answer:
-              "You will notice small improvements in a few weeks, and stronger results in a couple of months.",
+              "Yes. We build scalable multi-location SEO strategies around your legitimate service areas, without relying on thin or duplicate location pages.",
           },
           {
-            question: "Will you also optimize my product pages?",
+            question: "How long before employment lawyer SEO shows results?",
             answer:
-              "Yes. We work on product titles, descriptions, and keywords to help them rank better.",
+              "Most firms start seeing measurable improvement within a few months, depending on local competition and current site health. Meaningful growth in qualified consultations typically develops over several months as authority, rankings, and content footprint expand.",
           },
           {
-            question: "Can you help my boutique rank locally?",
+            question:
+              "Do you optimize Google Business Profile and Maps visibility?",
             answer:
-              "Yes. We optimize your local presence so nearby customers can find your store easily.",
+              "Yes, Local SEO and Google Maps optimization are core parts of every employment lawyer SEO strategy we build.",
+          },
+          {
+            question:
+              "Do you offer SEO for wrongful termination, discrimination, and wage & hour cases separately?",
+            answer:
+              "Yes. We build practice-area-specific SEO wrongful termination, discrimination and harassment, and wage and hour searches all have different intent, and we target them accordingly.",
           },
         ],
-        whyChoose: [
-          {
-            title: "Experience in Fashion & Boutique Niche",
-            desc: "We have worked with different industries, including fashion and boutique stores—so we know what resonates with your audience.",
-          },
-          {
-            title: "Shopper-Centric Approach",
-            desc: "We understand what online shoppers look for: clear product info, fast load times, and trustworthy content—and we optimize for that.",
-          },
-          {
-            title: "Simple, Actionable Strategies",
-            desc: "We focus on simple, real strategies—not complicated theories—so you see results without confusion.",
-          },
-          {
-            title: "Your Boutique, Our Priority",
-            desc: "We treat your boutique like a brand that deserves attention, with personalized care and consistent support.",
-          },
-        ],
+        // whyChooseData: {
+        //   title: "Why Choose Our Locksmith SEO Agency?",
+        //   containerClassName:
+        //     "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
+        //   gridClassName:
+        //     "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
+        //   features: [
+        //     {
+        //       title: "Local SEO Expertise",
+        //       desc: "We specialize in <strong>local business SEO</strong>, helping you rank in <strong>Google Map Pack</strong> and dominate <strong>location based searches</strong> in your target area.",
+        //     },
+        //     {
+        //       title: "Proven Local Results",
+        //       desc: "Our strategies improve your visibility in <strong>near me searches</strong>, increase <strong>local traffic</strong>, and generate more calls and leads.",
+        //     },
+        //     {
+        //       title: "Custom Location Strategies",
+        //       desc: "We create personalized campaigns based on your <strong>business location</strong>, audience behavior, and local competition.",
+        //     },
+        //     {
+        //       title: "Transparent Reporting",
+        //       desc: "Get clear insights into your <strong>local rankings</strong>, traffic, and conversions with easy-to-understand reports.",
+        //     },
+        //   ],
+        // },
+        seoComparisonData: {
+          title:
+            "Traditional SEO vs Local SEO vs AI SEO (AIO) - for Locksmiths",
+          description: (
+            <>
+              A complete, future-ready search optimization framework. Gone are
+              the days when finding a locksmith meant just clicking blue links
+              on Google. Now customers find you by asking smart speakers,
+              tapping Maps, or getting instant replies from AI assistants.
+            </>
+          ),
+          comparisons: [
+            {
+              id: "traditional-seo",
+              title: "Traditional SEO",
+              subtitle: "",
+              sections: [
+                {
+                  title: "What it is:",
+                  items: [
+                    <>Keyword identification</>,
+                    <>clear structure (headers, tags, titles)</>,
+                    <>fast site speed and mobile responsiveness</>,
+                    <>credibility built through consistency</>,
+                  ],
+                },
+                {
+                  title: "Why it matters:",
+                  items: [
+                    "Generates consistent",
+                    "long-term organic traffic",
+                    "builds credibility",
+                    'mproves rankings for competitive keywords like "emergency locksmith," and lowers customer acquisition cost over time',
+                  ],
+                },
+              ],
+            },
+            {
+              id: "local-seo",
+              title: "Local SEO",
+              subtitle: "",
+              sections: [
+                {
+                  title: "What it is:",
+                  items: [
+                    "Optimizing for local audiences",
+                    "Google Maps visibility",
+                    "Google Business Profile optimization",
+                    "location-specific keywords",
+                    "consistent NAP citations",
+                    "and review management",
+                  ],
+                },
+                {
+                  title: "Why it matters:",
+                  items: [
+                    'Increases visibility in "near me" and local-intent searches',
+                    "connects you with nearby ready-to-call customers",
+                    "converts Maps impressions into real service calls",
+                  ],
+                },
+              ],
+            },
+            {
+              id: "ai-seo",
+              title: "AI SEO / AIO",
+              subtitle: "",
+              sections: [
+                {
+                  title: "What it is:",
+                  items: [
+                    "Optimizing content for AI-powered search and smart assistants",
+                    "structuring information clearly",
+                    "answering questions directly",
+                  ],
+                },
+                {
+                  title: "Why it matters:",
+                  items: [
+                    "AI answers increasingly replace traditional search clicks being discovered in AI conversations",
+                    "not just search results",
+                    "future-proofs your locksmith business's visibility",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
       },
       {
         id: "youtube-seo",
@@ -3629,7 +4249,7 @@ export const services = [
             "/service-deatil-images/Boost your business visibility online.webp",
         },
         introParagraphs: [
-          'At Web Founders USA, every step we take is based on real results, not quick fixes. Our approach combines sharp employment law SEO audit services with a search strategy built around the way employees actually search after something goes wrong at work.',
+          "At Web Founders USA, every step we take is based on real results, not quick fixes. Our approach combines sharp employment law SEO audit services with a search strategy built around the way employees actually search after something goes wrong at work.",
           'Imagine appearing right when someone types "wrongful termination attorney" or "employment lawyer near me" clearer visibility, steadier consultation volume, and a website that turns visitors into retained clients, all built without tricks. The work stays grounded in what lasts, whether it\'s fine-tuning your wrongful termination page or guiding strategy through Professional Employment Law SEO solutions.',
           "You can make real changes by working hard, being open about how you do things, and planning ahead. That's how visibility grows not all at once, but case by case.",
         ],
@@ -3656,19 +4276,30 @@ export const services = [
           intro: {
             title: (
               <>
-                SEO That Helps Employment Law Firms Get Found by the Right Clients
+                SEO That Helps Employment Law Firms Get Found by the Right
+                Clients
               </>
             ),
             description: (
               <div className="space-y-2">
                 <p>
-                  When someone searches for a wrongful termination attorney, a discrimination lawyer, or an employment lawyer near them, they're usually searching after a serious workplace event. Your firm needs to be visible at exactly that moment.
+                  When someone searches for a wrongful termination attorney, a
+                  discrimination lawyer, or an employment lawyer near them,
+                  they're usually searching after a serious workplace event.
+                  Your firm needs to be visible at exactly that moment.
                 </p>
                 <p>
-                  Our specialized SEO for employment lawyers is designed to improve your presence across local search, Google Maps, and organic results. We focus on the searches that bring qualified, high-intent clients to your firm not vanity rankings that don't contribute to case growth.
+                  Our specialized SEO for employment lawyers is designed to
+                  improve your presence across local search, Google Maps, and
+                  organic results. We focus on the searches that bring
+                  qualified, high-intent clients to your firm not vanity
+                  rankings that don't contribute to case growth.
                 </p>
                 <p>
-                  Whether you operate from one office or serve multiple markets, our strategy connects your website, Google Business Profile, practice areas, locations, and legal authority into one focused SEO system.
+                  Whether you operate from one office or serve multiple markets,
+                  our strategy connects your website, Google Business Profile,
+                  practice areas, locations, and legal authority into one
+                  focused SEO system.
                 </p>
                 <div className="experts-benefits-shell flex w-full justify-center">
                   <div
@@ -3818,47 +4449,37 @@ export const services = [
             description: (
               <div className="space-y-2">
                 <p>
-                  We do employment lawyer search engine optimization that gets you real consultations, qualified cases, and steady traffic - not just pretty reports.
+                  We do employment lawyer search engine optimization that gets
+                  you real consultations, qualified cases, and steady traffic -
+                  not just pretty reports.
                 </p>
                 <p>
-                  We offer Professional Employment Law SEO solutions to boutique firms, established employment practices, and multi-location firms alike. With our organic growth services, we help your firm grow over time.
+                  We offer Professional Employment Law SEO solutions to boutique
+                  firms, established employment practices, and multi-location
+                  firms alike. With our organic growth services, we help your
+                  firm grow over time.
                 </p>
                 <p>
-                  With our on-page SEO, we make your site easier to use. And with our technical ranking strategy, we make it stronger.
+                  With our on-page SEO, we make your site easier to use. And
+                  with our technical ranking strategy, we make it stronger.
                 </p>
               </div>
             ),
             stats: [
               {
-                label: (
-                  <>
-                    Employment Law Firms Supported
-                  </>
-                ),
+                label: <>Employment Law Firms Supported</>,
                 value: "400+",
               },
               {
-                label: (
-                  <>
-                    Qualified Consultations Generated Through SEO
-                  </>
-                ),
+                label: <>Qualified Consultations Generated Through SEO</>,
                 value: "1200K+",
               },
               {
-                label: (
-                  <>
-                    Average Organic Growth Delivered
-                  </>
-                ),
+                label: <>Average Organic Growth Delivered</>,
                 value: "1,000%+",
               },
               {
-                label: (
-                  <>
-                    Case Value Influenced via SEO
-                  </>
-                ),
+                label: <>Case Value Influenced via SEO</>,
                 value: "$200k+",
               },
             ],
@@ -3877,7 +4498,11 @@ export const services = [
               title: "Keyword Strategy for Employment Law Firms",
               description: (
                 <>
-                  <p>We identify the searches your potential clients actually use and organize them around practice area, location, intent, and case value, including:</p>
+                  <p>
+                    We identify the searches your potential clients actually use
+                    and organize them around practice area, location, intent,
+                    and case value, including:
+                  </p>
                   <ul className="list-disc list-outside">
                     <li>Wrongful termination</li>
                     <li>Employment lawyer near me</li>
@@ -3904,7 +4529,12 @@ export const services = [
               title: "Complete SEO Audit ",
               description: (
                 <>
-                  <p>We examine your website and online presence to identify technical problems, content gaps, local SEO opportunities, competitor weaknesses, and missed search opportunities, covering:</p>
+                  <p>
+                    We examine your website and online presence to identify
+                    technical problems, content gaps, local SEO opportunities,
+                    competitor weaknesses, and missed search opportunities,
+                    covering:
+                  </p>
                   <ul className="list-disc list-outside">
                     <li>Site structure, indexing and crawlability</li>
                     <li>Page speed and mobile usability</li>
@@ -3926,7 +4556,11 @@ export const services = [
               title: "On-Page SEO Optimization",
               description: (
                 <>
-                  <p>We optimize your most important pages so search engines understand your practice areas and clients find what they need fast:</p>
+                  <p>
+                    We optimize your most important pages so search engines
+                    understand your practice areas and clients find what they
+                    need fast:
+                  </p>
                   <ul className="list-disc list-outside">
                     <li>Title tags and meta descriptions</li>
                     <li>Headings and content structure</li>
@@ -3947,7 +4581,10 @@ export const services = [
               title: "Technical SEO",
               description: (
                 <>
-                  <p>We identify and fix issues that make your website easier for search engines to crawl and easier for clients to use:</p>
+                  <p>
+                    We identify and fix issues that make your website easier for
+                    search engines to crawl and easier for clients to use:
+                  </p>
                   <ul className="list-disc list-outside">
                     <li>Crawlability and indexing</li>
                     <li>Broken links and redirects</li>
@@ -3968,7 +4605,12 @@ export const services = [
               title: "Authority & Link Building",
               description: (
                 <>
-                  <p>Relevant backlinks strengthen your website's authority and credibility. We prioritize legitimate, relevant opportunities instead of spammy link networks or manipulative tactics:</p>
+                  <p>
+                    Relevant backlinks strengthen your website's authority and
+                    credibility. We prioritize legitimate, relevant
+                    opportunities instead of spammy link networks or
+                    manipulative tactics:
+                  </p>
                   <ul className="list-disc list-outside">
                     <li>Legal directories</li>
                     <li>Bar associations</li>
@@ -3987,7 +4629,10 @@ export const services = [
               title: "Content & SEO Copywriting",
               description: (
                 <>
-                  <p>We create content built around genuine search intent, not keyword stuffing:</p>
+                  <p>
+                    We create content built around genuine search intent, not
+                    keyword stuffing:
+                  </p>
                   <ul className="list-disc list-outside">
                     <li>Employment law practice-area pages</li>
                     <li>Location pages</li>
@@ -4002,11 +4647,7 @@ export const services = [
         },
         aiDiscoveryData: {
           eyebrow: "AI Discovery Channels",
-          title: (
-            <>
-              Get Found Across Google Search, Maps & AI Discovery
-            </>
-          ),
+          title: <>Get Found Across Google Search, Maps & AI Discovery</>,
           description:
             "Search behavior continues to evolve. Clients may discover an employment lawyer through traditional Google results, Google Maps, mobile search, or AI-powered search experiences. A modern employment law SEO strategy makes your firm's information clear, consistent, useful, and easy for search systems to understand.",
           strategies: [
@@ -4092,7 +4733,11 @@ export const services = [
           title: <>Why Choose Our Employment Lawyer SEO Agency?</>,
           description: (
             <>
-              Choosing a specialized employment law SEO agency means your strategy is built around the unique way employment clients search. A firm handling wrongful termination and discrimination cases doesn't need the same SEO strategy as a personal injury firm, a dentist, or an e-commerce store.
+              Choosing a specialized employment law SEO agency means your
+              strategy is built around the unique way employment clients search.
+              A firm handling wrongful termination and discrimination cases
+              doesn't need the same SEO strategy as a personal injury firm, a
+              dentist, or an e-commerce store.
             </>
           ),
           stories: [
@@ -4181,12 +4826,14 @@ export const services = [
         faqTitle: "Your Locksmith SEO Questions Answered",
         faqs: [
           {
-            question: "Do you work with emergency locksmiths that need calls around the clock? ",
+            question:
+              "Do you work with emergency locksmiths that need calls around the clock? ",
             answer:
               "Yes. Our emergency locksmith SEO targets 24-hour, urgent, and lockout-related searches so you're visible exactly when customers need help fastest.",
           },
           {
-            question: "Can you help a locksmith business with multiple locations?",
+            question:
+              "Can you help a locksmith business with multiple locations?",
             answer:
               "Yes. We build scalable multi-location SEO strategies around your legitimate service areas, without relying on thin or duplicate location pages.",
           },
@@ -4196,24 +4843,34 @@ export const services = [
               "Most locksmith businesses start seeing measurable improvement within a few months, depending on local competition and current site health.",
           },
           {
-            question: "Do you optimize Google Business Profile and Maps visibility?",
+            question:
+              "Do you optimize Google Business Profile and Maps visibility?",
             answer:
               "Yes, Local SEO and Google Maps optimization are core parts of every locksmith SEO strategy we build.",
           },
           {
-            question: "Do you offer SEO for residential, commercial, and automotive locksmith services separately?",
+            question:
+              "Do you offer SEO for residential, commercial, and automotive locksmith services separately?",
             answer:
               "Yes. We build service-specific SEO around each residential, commercial, and automotive locksmith searches all have different intent, and we target them accordingly.",
           },
         ],
         whyChooseData: {
           title: "SEO for Employment Lawyers: Built Around Your Firm's Goals",
-          containerClassName:
-            "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
-          gridClassName:
-            "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
+          containerClassName: "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
+          gridClassName: "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
           paragraphs: [
-            <>Whether you're a boutique employment law practice, an established firm, or a multi-location operation, your SEO strategy should reflect how your firm actually works. <br /><i>"SEO doesn't guarantee a specific outcome, but a well-executed strategy creates more opportunities for your firm to be discovered by employees actively searching for legal representation."</i></>,
+            <>
+              Whether you're a boutique employment law practice, an established
+              firm, or a multi-location operation, your SEO strategy should
+              reflect how your firm actually works. <br />
+              <i>
+                "SEO doesn't guarantee a specific outcome, but a well-executed
+                strategy creates more opportunities for your firm to be
+                discovered by employees actively searching for legal
+                representation."
+              </i>
+            </>,
           ],
           features: [
             {
@@ -4243,88 +4900,91 @@ export const services = [
           ],
         },
         seoComparisonData: {
-          title: "Traditional SEO vs Local SEO vs AI SEO (AIO) - for Employment Lawyers",
+          title:
+            "Traditional SEO vs Local SEO vs AI SEO (AIO) - for Employment Lawyers",
           description: (
             <>
-              A complete, future-ready search optimization framework. Gone are the days when finding a lawyer meant just clicking blue links on Google. Now clients find you by asking smart speakers, tapping Maps, or getting instant replies from AI assistants.
+              A complete, future-ready search optimization framework. Gone are
+              the days when finding a lawyer meant just clicking blue links on
+              Google. Now clients find you by asking smart speakers, tapping
+              Maps, or getting instant replies from AI assistants.
             </>
           ),
           comparisons: [
-          {
-            id: "traditional-seo",
-            title: "Traditional SEO",
-            subtitle: "",
-            sections: [
-              {
-                title: "What it is:",
-                items: [
-                  <>Keyword identification</>,
-                  <>clear structure (headers, tags, titles)</>,
-                  <>fast site speed and mobile responsiveness</>,
-                  <>credibility built through consistency</>,
-                ],
-              },
-              {
-                title: "Why it matters:",
-                items: [
-                  "Generates consistent",
-                  "long-term organic traffic",
-                  "builds credibility",
-                  'improves rankings for competitive keywords like "wrongful termination attorney," and lowers client acquisition cost over time',
-                ],
-              },
-            ],
-          },
-          {
-            id: "local-seo",
-            title: "Local SEO",
-            subtitle: "",
-            sections: [
-              {
-                title: "What it is:",
-                items: [
-                  "Optimizing for local audiences",
-                  "Google Maps visibility",
-                  "Google Business Profile optimization",
-                  "location-specific keywords",
-                  "consistent NAP citations",
-                  "and review management",
-                ],
-              },
-              {
-                title: "Why it matters:",
-                items: [
-                  'Increases visibility in "near me" and local-intent searches',
-                  "connects you with nearby ready-to-consult clients",
-                  "converts Maps impressions into real consultations",
-                ],
-              },
-            ],
-          },
-          {
-            id: "ai-seo",
-            title: "AI SEO / AIO",
-            subtitle:
-              "",
-            sections: [
-              {
-                title: "What it is:",
-                items: [
-                  "Optimizing content for AI-powered search and smart assistants",
-                  "structuring information clearly",
-                  "answering questions directly",
-                ],
-              },
-              {
-                title: "Why it matters:",
-                items: [
-                  "AI answers increasingly replace traditional search clicks being discovered in AI conversations",
-                  "not just search results",
-                  "future-proofs your firm's visibility",
-                ],
-              },
-            ],
-          },
+            {
+              id: "traditional-seo",
+              title: "Traditional SEO",
+              subtitle: "",
+              sections: [
+                {
+                  title: "What it is:",
+                  items: [
+                    <>Keyword identification</>,
+                    <>clear structure (headers, tags, titles)</>,
+                    <>fast site speed and mobile responsiveness</>,
+                    <>credibility built through consistency</>,
+                  ],
+                },
+                {
+                  title: "Why it matters:",
+                  items: [
+                    "Generates consistent",
+                    "long-term organic traffic",
+                    "builds credibility",
+                    'improves rankings for competitive keywords like "wrongful termination attorney," and lowers client acquisition cost over time',
+                  ],
+                },
+              ],
+            },
+            {
+              id: "local-seo",
+              title: "Local SEO",
+              subtitle: "",
+              sections: [
+                {
+                  title: "What it is:",
+                  items: [
+                    "Optimizing for local audiences",
+                    "Google Maps visibility",
+                    "Google Business Profile optimization",
+                    "location-specific keywords",
+                    "consistent NAP citations",
+                    "and review management",
+                  ],
+                },
+                {
+                  title: "Why it matters:",
+                  items: [
+                    'Increases visibility in "near me" and local-intent searches',
+                    "connects you with nearby ready-to-consult clients",
+                    "converts Maps impressions into real consultations",
+                  ],
+                },
+              ],
+            },
+            {
+              id: "ai-seo",
+              title: "AI SEO / AIO",
+              subtitle: "",
+              sections: [
+                {
+                  title: "What it is:",
+                  items: [
+                    "Optimizing content for AI-powered search and smart assistants",
+                    "structuring information clearly",
+                    "answering questions directly",
+                  ],
+                },
+                {
+                  title: "Why it matters:",
+                  items: [
+                    "AI answers increasingly replace traditional search clicks being discovered in AI conversations",
+                    "not just search results",
+                    "future-proofs your firm's visibility",
+                  ],
+                },
+              ],
+            },
           ],
         },
       },
@@ -4907,7 +5567,8 @@ export const services = [
         faqTitle: "Employment Lawyer SEO Questions Answered",
         faqs: [
           {
-            question: "Do you work with firms handling wrongful termination and discrimination cases?",
+            question:
+              "Do you work with firms handling wrongful termination and discrimination cases?",
             answer:
               "Yes. Our employment law SEO targets wrongful termination, discrimination, harassment, and retaliation searches so you're visible exactly when employees need help most.",
           },
@@ -4922,12 +5583,14 @@ export const services = [
               "Most firms start seeing measurable improvement within a few months, depending on local competition and current site health. Meaningful growth in qualified consultations typically develops over several months as authority, rankings, and content footprint expand.",
           },
           {
-            question: "Do you optimize Google Business Profile and Maps visibility?",
+            question:
+              "Do you optimize Google Business Profile and Maps visibility?",
             answer:
               "Yes, Local SEO and Google Maps optimization are core parts of every employment lawyer SEO strategy we build.",
           },
           {
-            question: "Do you offer SEO for wrongful termination, discrimination, and wage & hour cases separately?",
+            question:
+              "Do you offer SEO for wrongful termination, discrimination, and wage & hour cases separately?",
             answer:
               "Yes. We build practice-area-specific SEO wrongful termination, discrimination and harassment, and wage and hour searches all have different intent, and we target them accordingly.",
           },
@@ -4958,88 +5621,91 @@ export const services = [
         //   ],
         // },
         seoComparisonData: {
-          title: "Traditional SEO vs Local SEO vs AI SEO (AIO) - for Locksmiths",
+          title:
+            "Traditional SEO vs Local SEO vs AI SEO (AIO) - for Locksmiths",
           description: (
             <>
-              A complete, future-ready search optimization framework. Gone are the days when finding a locksmith meant just clicking blue links on Google. Now customers find you by asking smart speakers, tapping Maps, or getting instant replies from AI assistants.
+              A complete, future-ready search optimization framework. Gone are
+              the days when finding a locksmith meant just clicking blue links
+              on Google. Now customers find you by asking smart speakers,
+              tapping Maps, or getting instant replies from AI assistants.
             </>
           ),
           comparisons: [
-          {
-            id: "traditional-seo",
-            title: "Traditional SEO",
-            subtitle: "",
-            sections: [
-              {
-                title: "What it is:",
-                items: [
-                  <>Keyword identification</>,
-                  <>clear structure (headers, tags, titles)</>,
-                  <>fast site speed and mobile responsiveness</>,
-                  <>credibility built through consistency</>,
-                ],
-              },
-              {
-                title: "Why it matters:",
-                items: [
-                  "Generates consistent",
-                  "long-term organic traffic",
-                  "builds credibility",
-                  'mproves rankings for competitive keywords like "emergency locksmith," and lowers customer acquisition cost over time',
-                ],
-              },
-            ],
-          },
-          {
-            id: "local-seo",
-            title: "Local SEO",
-            subtitle: "",
-            sections: [
-              {
-                title: "What it is:",
-                items: [
-                  "Optimizing for local audiences",
-                  "Google Maps visibility",
-                  "Google Business Profile optimization",
-                  "location-specific keywords",
-                  "consistent NAP citations",
-                  "and review management",
-                ],
-              },
-              {
-                title: "Why it matters:",
-                items: [
-                  'Increases visibility in "near me" and local-intent searches',
-                  "connects you with nearby ready-to-call customers",
-                  "converts Maps impressions into real service calls",
-                ],
-              },
-            ],
-          },
-          {
-            id: "ai-seo",
-            title: "AI SEO / AIO",
-            subtitle:
-              "",
-            sections: [
-              {
-                title: "What it is:",
-                items: [
-                  "Optimizing content for AI-powered search and smart assistants",
-                  "structuring information clearly",
-                  "answering questions directly",
-                ],
-              },
-              {
-                title: "Why it matters:",
-                items: [
-                  "AI answers increasingly replace traditional search clicks being discovered in AI conversations",
-                  "not just search results",
-                  "future-proofs your locksmith business's visibility",
-                ],
-              },
-            ],
-          },
+            {
+              id: "traditional-seo",
+              title: "Traditional SEO",
+              subtitle: "",
+              sections: [
+                {
+                  title: "What it is:",
+                  items: [
+                    <>Keyword identification</>,
+                    <>clear structure (headers, tags, titles)</>,
+                    <>fast site speed and mobile responsiveness</>,
+                    <>credibility built through consistency</>,
+                  ],
+                },
+                {
+                  title: "Why it matters:",
+                  items: [
+                    "Generates consistent",
+                    "long-term organic traffic",
+                    "builds credibility",
+                    'mproves rankings for competitive keywords like "emergency locksmith," and lowers customer acquisition cost over time',
+                  ],
+                },
+              ],
+            },
+            {
+              id: "local-seo",
+              title: "Local SEO",
+              subtitle: "",
+              sections: [
+                {
+                  title: "What it is:",
+                  items: [
+                    "Optimizing for local audiences",
+                    "Google Maps visibility",
+                    "Google Business Profile optimization",
+                    "location-specific keywords",
+                    "consistent NAP citations",
+                    "and review management",
+                  ],
+                },
+                {
+                  title: "Why it matters:",
+                  items: [
+                    'Increases visibility in "near me" and local-intent searches',
+                    "connects you with nearby ready-to-call customers",
+                    "converts Maps impressions into real service calls",
+                  ],
+                },
+              ],
+            },
+            {
+              id: "ai-seo",
+              title: "AI SEO / AIO",
+              subtitle: "",
+              sections: [
+                {
+                  title: "What it is:",
+                  items: [
+                    "Optimizing content for AI-powered search and smart assistants",
+                    "structuring information clearly",
+                    "answering questions directly",
+                  ],
+                },
+                {
+                  title: "Why it matters:",
+                  items: [
+                    "AI answers increasingly replace traditional search clicks being discovered in AI conversations",
+                    "not just search results",
+                    "future-proofs your locksmith business's visibility",
+                  ],
+                },
+              ],
+            },
           ],
         },
       },

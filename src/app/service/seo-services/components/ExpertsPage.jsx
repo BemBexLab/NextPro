@@ -379,6 +379,12 @@ export default function ExpertsPage({
               </div>
             )
           ) : null}
+
+          {relatedServices.footnote ? (
+            <p className="mt-6 text-center text-sm leading-relaxed text-gray-600 sm:text-base">
+              {relatedServices.footnote}
+            </p>
+          ) : null}
         </div>
       ) : null}
 
@@ -404,6 +410,12 @@ export default function ExpertsPage({
                 </div>
               ))}
             </div>
+          ) : null}
+
+          {subrelatedServices.footnote ? (
+            <p className="mt-6 text-center text-sm leading-relaxed text-gray-600 sm:text-base">
+              {subrelatedServices.footnote}
+            </p>
           ) : null}
         </div>
       ) : null}
