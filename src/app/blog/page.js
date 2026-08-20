@@ -7,9 +7,8 @@
 
 import Link from 'next/link'
 import CardOne from '@/components/sections/blogs/cardOne'
-import PageTitle from '@/components/sections/pageTitle'
 import { decodeHtmlEntities, formatDate, getAllWpPosts, getFeaturedImageFromPost } from './wpPosts'
-import { withEnUsHreflang } from "@/lib/metadata";
+import { SITE_URL, toAbsoluteUrl, withEnUsHreflang } from "@/lib/metadata";
 
 const blogData = [
     {
@@ -139,15 +138,6 @@ const blogData = [
         url: '/blog/pay-per-click-advertising-services-in-usa-2026'
     },
     {
-        id: 15,
-        title: "Advanced Pay Per Click (PPC) Services USA Scalable Ad Strategies for 2026",
-        thumb: '/blogs/blog 15.webp',
-        author: 'Web Founders USA',
-        date: 'Mar 20, 2026',
-        category: 'PPC',
-        url: '/blog/advanced-pay-per-click-ppc-services-usa-scalable-ad-strategies-for-2026'
-    },
-    {
         id: 16,
         title: "Advanced Conversion Optimization Services USA – Data-Driven CRO for 2026",
         thumb: '/blogs/blog 16.webp',
@@ -232,8 +222,9 @@ function mapWpPostToCard(post, index) {
 export async function generateMetadata({ searchParams }) {
     const resolvedSearchParams = await searchParams;
     const page = Math.max(1, parseInt(resolvedSearchParams?.page || "1", 10));
-    const base = "https://www.webfoundersusa.com/blog";
-    const canonical = page > 1 ? `${base}?page=${page}` : base;
+    const canonical = page > 1
+        ? toAbsoluteUrl(`/blog/?page=${page}`)
+        : toAbsoluteUrl('/blog/');
 
     return withEnUsHreflang({
         title: "Blog - Web Founders USA",
@@ -247,6 +238,20 @@ export async function generateMetadata({ searchParams }) {
         },
     });
 }
+
+const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    '@id': `${SITE_URL}/blog/#blog`,
+    url: `${SITE_URL}/blog/`,
+    name: 'Web Founders USA Blog',
+    description: 'Expert insights, tips, and strategies on SEO, web design, and digital marketing growth.',
+    publisher: {
+        '@type': 'Organization',
+        name: 'Web Founders USA',
+        url: `${SITE_URL}/`,
+    },
+};
 
 const Blog2 = async ({ searchParams }) => {
     const resolvedSearchParams = await searchParams
@@ -275,6 +280,11 @@ const Blog2 = async ({ searchParams }) => {
 
     return (
         <main>
+            <section className='mx-auto max-w-[1000px] px-[15px] pt-10 text-center lg:pt-16' aria-labelledby='blog-heading'>
+                <p className='mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#072D7F]'>Web Founders USA</p>
+                <h1 id='blog-heading' className='text-3xl font-extrabold text-[#072D7F] md:text-5xl'>Digital Marketing, SEO &amp; Web Design Insights</h1>
+                <p className='mx-auto mt-5 max-w-3xl text-base leading-7 text-gray-600 md:text-lg'>Explore practical guidance from Web Founders USA on search engine optimization, web design, digital marketing, content, ecommerce, and conversion growth.</p>
+            </section>
             <div className='lg:py-15 py-9'>
                 <div className='max-w-[1350px] mx-auto px-[15px]'>
                     {/* Optional: <PageTitle title="Our Blog" /> */}
@@ -352,6 +362,10 @@ const Blog2 = async ({ searchParams }) => {
                     )}
                 </div>
             </div>
+            <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+            />
             {/* <ContactFormTwo /> */}
         </main>
     )

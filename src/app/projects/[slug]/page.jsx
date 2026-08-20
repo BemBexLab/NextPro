@@ -3,6 +3,7 @@ import ContactFormTwo from "@/components/sections/ContactFormTwo";
 import LivePreview from "@/components/LivePreview"; // <--- Make this file (see below)
 import BackButton from "./BackButton";
 import { withEnUsHreflang } from "@/lib/metadata";
+import { invalidLegacyProjectSlugs } from "@/lib/invalidLegacyProjectSlugs";
 
 const API_URL =
   "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts?slug=";
@@ -20,7 +21,9 @@ export async function generateStaticParams() {
     }
 
     const posts = await res.json();
-    return posts.map((post) => ({ slug: post.slug }));
+    return posts
+      .filter((post) => !invalidLegacyProjectSlugs.has(post.slug))
+      .map((post) => ({ slug: post.slug }));
   } catch {
     return [];
   }
@@ -28,6 +31,16 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
+
+  if (invalidLegacyProjectSlugs.has(slug)) {
+    return withEnUsHreflang({
+      title: "Project Not Found - Web Founders USA",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    });
+  }
 
   try {
     const res = await fetch(`${API_URL}${slug}`, {
@@ -90,6 +103,10 @@ export async function generateMetadata({ params }) {
 export default async function ProjectPage({ params }) {
   let res;
   const { slug } = await params;
+
+  if (invalidLegacyProjectSlugs.has(slug)) {
+    notFound();
+  }
 
   try {
     res = await fetch(`${API_URL}${slug}`, {

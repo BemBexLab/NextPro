@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { WPPost } from "../wpPosts";
 import { getAllWpPosts, getPostBySlug, getTextFromHtml } from "../wpPosts";
 import BlogSlugClient from "./BlogSlugClient";
-import { withEnUsHreflang } from "@/lib/metadata";
+import { toAbsoluteUrl, withEnUsHreflang } from "@/lib/metadata";
 
 type PageProps = {
   params: Promise<{
@@ -77,7 +77,9 @@ export async function generateMetadata({
     post?.yoast_head_json?.description ||
     getPlainText(post?.excerpt?.rendered || post?.content?.rendered).slice(0, 160) ||
     "Read expert insights from Web Founders USA on SEO, web design, and digital marketing growth.";
-  const canonical = post?.yoast_head_json?.canonical || post?.link;
+  // The CMS is only the content source. Every public post must canonicalize
+  // to its Web Founders USA URL, never to the CMS domain or an old permalink.
+  const canonical = toAbsoluteUrl(`/blog/${slug}/`);
   const images = post?.yoast_head_json?.og_image
     ?.map((image) => ({
       url: image.url || "",
@@ -103,6 +105,14 @@ export async function generateMetadata({
       title,
       description,
       images: images?.map((image) => image.url),
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+      },
     },
   });
 }

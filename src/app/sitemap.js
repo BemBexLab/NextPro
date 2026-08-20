@@ -3,6 +3,7 @@ import { SITE_URL, toAbsoluteUrl } from "@/lib/metadata";
 import { localStaticBlogSlugs } from "@/lib/localStaticBlogSlugs";
 import { services } from "@/data/services";
 import { services as seoServices } from "@/app/service/seo-services/components/subservices";
+import { invalidLegacyProjectSlugs } from "@/lib/invalidLegacyProjectSlugs";
 
 const PROJECTS_ENDPOINT =
   "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts";
@@ -102,7 +103,10 @@ async function getProjectEntries() {
   }
 
   return projects
-    .filter((project) => project?.slug)
+    .filter(
+      (project) =>
+        project?.slug && !invalidLegacyProjectSlugs.has(project.slug)
+    )
     .map((project) =>
       toSitemapEntry(
         `/projects/${project.slug}/`,
