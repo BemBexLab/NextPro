@@ -29,11 +29,11 @@ const Blog8 = () => {
   return (
     <div className="min-h-screen bg-slate-50 font-sans selection:bg-indigo-100 selection:text-indigo-900">
       {/* --- HEADER / HERO SECTION --- */}
-      <header className="relative bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/50 to-slate-900 z-0"></div>
+      <header className="relative overflow-hidden">
+        <div className="absolute inset-0 z-0"></div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 z-0"></div>
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 md:py-28 text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-200 text-xs font-bold tracking-wider uppercase mb-6 backdrop-blur-sm">
+          <span className="inline-block py-1 px-3 rounded-full bg-indigo-500/20 border border-[#002768] text-[#002768] text-xs font-bold tracking-wider uppercase mb-6 backdrop-blur-sm">
             Web Founders USA
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight ">
@@ -149,7 +149,7 @@ const Blog8 = () => {
               </p>
               <br />
               <p>
-                Local SEO allows your dental clinic to appear in Google search
+                <a className="hover:underline text-blue-500 font-semibold" href="/service/seo-services/local-seo-services/">Local SEO</a> allows your dental clinic to appear in Google search
                 results and on Google Maps when individuals in the area search
                 for dental services. When your clinic is visible in these
                 searches, it becomes easier for more people to discover you. A
@@ -160,7 +160,7 @@ const Blog8 = () => {
               <p>
                 In 2026, there is a lot of competition between dental clinics.
                 Clinics that use <b>local dental SEO</b> and{" "}
-                <b>dental clinic digital marketing</b> often get more patients.
+                <b><a className="hover:underline text-blue-500 font-semibold" href="/blog/how-to-choose-digital-marketing-agency/">dental clinic digital marketing</a></b> often get more patients.
               </p>
               <p>
                 This guide explains how <b>local SEO helps dentists</b> bring in
@@ -203,7 +203,7 @@ const Blog8 = () => {
                 <ul className="space-y-3 my-6">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="text-indigo-600 w-5 h-5 shrink-0 mt-0.5" />
-                    <span>Google Maps listings</span>
+                    <span><a className="hover:underline text-blue-500 font-semibold" href="https://business.google.com/us/business-profile/">Google Maps listings</a></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="text-indigo-600 w-5 h-5 shrink-0 mt-0.5" />
@@ -227,7 +227,9 @@ const Blog8 = () => {
                     <li className="flex items-start gap-3">
                       <CheckCircle className="text-indigo-600 w-5 h-5 shrink-0 mt-0.5" />
                       <span>
-                        Increase <b>Google ranking for dentists</b>
+                        <a href="/blog/how-seo-works-in-2026/" className="text-blue-500 hover:underline">
+                          <b>Increase Google ranking for dentists</b>
+                        </a>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -295,8 +297,8 @@ const Blog8 = () => {
                     Business Profile
                   </li>
                   <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
-                    <Link2 size={16} className="text-indigo-500" /> Local
-                    citations
+                    <Link2 size={16} className="text-indigo-500" /> <a className="hover:underline text-blue-500 font-semibold" href="https://moz.com/learn/seo/local-citations">Local
+                    citations</a>
                   </li>
                   <li className="flex items-center gap-2 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                     <Star size={16} className="text-indigo-500" /> Online
@@ -345,7 +347,7 @@ const Blog8 = () => {
                     Google Maps
                   </span>
                   <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-lg font-medium ">
-                    Local pack results
+                    <a className="hover:underline text-blue-500 font-semibold" href="https://www.brightlocal.com/learn/google-local-pack/">Local pack results</a>
                   </span>
                   <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-lg font-medium ">
                     "Dentist near me" searches
@@ -370,7 +372,7 @@ const Blog8 = () => {
                       <li>Address</li>
                       <li>Phone number</li>
                       <li>Business hours</li>
-                      <li>Website link</li>
+                      <li><a className="hover:underline text-blue-500 font-semibold" href="/">Website link</a></li>
                     </ul>
                     <p className="mt-3">
                       This information is called{" "}
@@ -414,7 +416,7 @@ const Blog8 = () => {
                     <p className="mb-3">Photos build trust.</p>
                     <p>Add pictures of:</p>
                     <ul className="list-disc pl-6 space-y-1">
-                      <li>your dental office</li>
+                      <li><a className="hover:underline text-blue-500 font-semibold" href="https://marcincinfamilydental.com/">your dental office</a></li>
                       <li>treatment rooms</li>
                       <li>dental equipment</li>
                       <li>team members</li>
@@ -615,19 +617,19 @@ const Blog8 = () => {
                 <p>Common examples include:</p>
                 <div className="flex flex-wrap gap-3 my-4">
                   <span className="bg-slate-100 text-slate-800 px-4 py-2 rounded-lg font-medium ">
-                    Yelp
+                    <a className="text-blue-500 font-semibold hover:underline" href="https://www.yelp.com/">Yelp</a>
                   </span>
                   <span className="bg-slate-100 text-slate-800 px-4 py-2 rounded-lg font-medium ">
-                    Healthgrades
+                    <a className="text-blue-500 font-semibold hover:underline" href="https://www.healthgrades.com/">Healthgrades</a>
                   </span>
                   <span className="bg-slate-100 text-slate-800 px-4 py-2 rounded-lg font-medium ">
-                    Zocdoc
+                    <a className="text-blue-500 font-semibold hover:underline" href="https://www.zocdoc.com/">Zocdoc</a>
                   </span>
                   <span className="bg-slate-100 text-slate-800 px-4 py-2 rounded-lg font-medium ">
-                    Yellow Pages
+                    <a className="text-blue-500 font-semibold hover:underline" href="https://www.yellowpages.com/">Yellow Pages</a>
                   </span>
                   <span className="bg-slate-100 text-slate-800 px-4 py-2 rounded-lg font-medium ">
-                    dental directories
+                    <a className="text-blue-500 font-semibold hover:underline" href="https://findadentist.ada.org/">dental directories</a>
                   </span>
                 </div>
                 <p>
@@ -684,7 +686,7 @@ const Blog8 = () => {
                   </span>
                 </div>
                 <p>
-                  Google prioritizes <b>mobile-friendly websites</b>.
+                  Google prioritizes <b><a className="text-blue-500 font-semibold hover:underline" href="/service/custom-website-design/">mobile-friendly websites</a></b>.
                 </p>
                 <p>
                   If your <b>dental website SEO</b> is not optimized for mobile
@@ -954,7 +956,7 @@ const Blog8 = () => {
                     <p>This often includes:</p>
                     <ul className="list-disc pl-6 space-y-1 mt-2">
                       <li>keyword research</li>
-                      <li>technical SEO</li>
+                      <li><a className="text-blue-500 font-semibold hover:underline"  href="/blog/technical-seo-issues-that-kill-rankings/">technical SEO</a></li>
                       <li>citation building</li>
                       <li>content marketing</li>
                       <li>reputation management</li>
