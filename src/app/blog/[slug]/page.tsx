@@ -45,6 +45,10 @@ function getClientPost(post: WPPost): WPPost {
       ? {
           "wp:featuredmedia": [
             {
+              guid: {
+                rendered:
+                  post._embedded["wp:featuredmedia"][0]?.guid?.rendered,
+              },
               source_url:
                 post._embedded["wp:featuredmedia"][0]?.source_url,
               alt_text: post._embedded["wp:featuredmedia"][0]?.alt_text,

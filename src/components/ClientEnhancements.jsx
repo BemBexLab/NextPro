@@ -32,13 +32,17 @@ export default function ClientEnhancements() {
     return null;
   }
 
+  const isTouchDevice =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
+
   return (
     <>
       <AutoFaqJsonLd />
       <ContactPopup />
       <Setting />
-      <ScrollCircle />
-      <CustomCursor />
+      {!isTouchDevice && <ScrollCircle />}
+      {!isTouchDevice && <CustomCursor />}
     </>
   );
 }

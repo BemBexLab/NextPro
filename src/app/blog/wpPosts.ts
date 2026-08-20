@@ -22,6 +22,7 @@ export type WPPost = {
   };
   _embedded?: {
     ["wp:featuredmedia"]?: Array<{
+      guid?: { rendered?: string };
       source_url?: string;
       alt_text?: string;
     }>;
@@ -119,8 +120,11 @@ export function getFirstImageFromHtml(html: string) {
 }
 
 export function getFeaturedImageFromPost(post?: WPPost | null) {
+  const featuredMedia = post?._embedded?.["wp:featuredmedia"]?.[0];
+
   return (
-    post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+    featuredMedia?.guid?.rendered ||
+    featuredMedia?.source_url ||
     post?.yoast_head_json?.og_image?.[0]?.url ||
     getFirstImageFromHtml(
       post?.content?.rendered || post?.excerpt?.rendered || ""

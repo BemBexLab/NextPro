@@ -43,6 +43,7 @@ const GalleryCarousel = () => {
                     return hasImage && isWebDev;
                 });
                 setProjects(filtered);
+                setActiveIndex(filtered.length);
             } catch (err) {
                 console.error("Failed to load projects", err);
             }
@@ -50,18 +51,11 @@ const GalleryCarousel = () => {
         fetchProjects();
     }, []);
 
-    // 2. On projects load, start in the middle copy for seamless loop
-    useEffect(() => {
-        if (projects.length > 0) {
-            setActiveIndex(projects.length); // Start at middle
-        }
-    }, [projects]);
-
-    // 3. Triple your projects for infinite effect
+    // 2. Triple your projects for infinite effect
     const tripleProjects = [...projects, ...projects, ...projects];
     const projectsCount = projects.length;
 
-    // 4. Auto-play
+    // 3. Auto-play
     useEffect(() => {
         if (isHovering || projectsCount === 0) return;
         const interval = setInterval(() => {
@@ -70,7 +64,7 @@ const GalleryCarousel = () => {
         return () => clearInterval(interval);
     }, [isHovering, projectsCount, activeIndex]);
 
-    // 5. Smooth scroll to active index, or instant if shouldSmoothScroll === false
+    // 4. Smooth scroll to active index, or instant if shouldSmoothScroll === false
     useEffect(() => {
         if (!carouselRef.current || itemsRef.current.length === 0) return;
         const activeItem = itemsRef.current[activeIndex];
@@ -86,7 +80,7 @@ const GalleryCarousel = () => {
         }
     }, [activeIndex, shouldSmoothScroll]);
 
-    // 6. Looping logic: teleport to center set when you reach either end
+    // 5. Looping logic: teleport to center set when you reach either end
     useEffect(() => {
         if (projectsCount === 0) return;
 
@@ -103,12 +97,10 @@ const GalleryCarousel = () => {
                 setShouldSmoothScroll(false);
                 setActiveIndex(activeIndex + projectsCount);
             }, 400);
-        } else {
-            setShouldSmoothScroll(true);
         }
     }, [activeIndex, projectsCount]);
 
-    // 7. Mouse drag navigation
+    // 6. Mouse drag navigation
     useEffect(() => {
         const carousel = carouselRef.current;
         if (!carousel) return;
@@ -237,6 +229,11 @@ const GalleryCarousel = () => {
                             <img
                                 src={imageUrl}
                                 alt={projectTitle}
+                                width="800"
+                                height="500"
+                                loading="lazy"
+                                decoding="async"
+                                fetchPriority="low"
                                 className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
