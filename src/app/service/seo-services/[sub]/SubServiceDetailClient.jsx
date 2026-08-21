@@ -123,6 +123,7 @@ function getServiceProcess(service) {
       typeof description === "string"
         ? formatHtml(description).__html
         : undefined,
+    footnote: service.tab?.footnote || null,
     steps: (service.tab?.steps || []).map(
       ({ id, tab_name, heading, description }, index) => ({
         id,
@@ -261,6 +262,7 @@ export default function SubServiceDetailPage({
           description={serviceProcess.description}
           descriptionHtml={serviceProcess.descriptionHtml}
           steps={serviceProcess.steps}
+          footnote={serviceProcess.footnote}
         />
       ) : null}
 

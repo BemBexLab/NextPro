@@ -3339,65 +3339,77 @@ export const services = [
           steps: [
             {
               id: "local-seo-audit",
-              tab_name: "e-commerce-seo-services",
-              heading: "E-commerce SEO Services",
+              tab_name: "E-commerce SEO Services",
+              heading: <><a href="/service/seo-services/ecommerce-seo/">E-commerce SEO Services</a></>,
               description:
                 "",
             },
             {
               id: "google-business-optimization",
-              tab_name: "Keyword & Competitor Research",
-              heading: "Keyword & Competitor Research",
+              tab_name: "B2B SEO Services",
+              heading: <><a href="/service/seo-services/b2b-seo/">B2B SEO Services</a></>,
               description:
-                "We identify valuable searches based on service, location, customer intent, and competition, and analyze competing locksmith businesses to see which services, locations, content, and local signals are helping them compete.",
+                "",
             },
             {
               id: "local-keyword-research",
-              tab_name: "SEO Roadmap",
-              heading: "SEO Roadmap",
+              tab_name: "Enterprise SEO Services",
+              heading: <><a href="/service/seo-services/enterprise-seo/">Enterprise SEO Services</a></>,
               description:
-                "We turn the research into a prioritized strategy: technical fixes, service-page optimization, local SEO improvements, content opportunities, location targeting, authority building, and conversion improvements.",
+                "",
             },
             {
               id: "on-page-local-seo",
-              tab_name: "Website Optimization",
-              heading: "Website Optimization",
+              tab_name: "Dental SEO Services",
+              heading: <><a href="/service/seo-services/dental-seo/">Dental SEO Services</a></>,
               description:
-                "We optimize the pages that matter most: your homepage, emergency locksmith page, residential and commercial service pages, automotive pages, location pages, and supporting content.",
+                "",
             },
             {
               id: "citation-building",
-              tab_name: "Local SEO & Google Maps Optimization",
-              heading: "Local SEO & Google Maps Optimization",
+              tab_name: "Healthcare SEO Services",
+              heading: <><a href="/service/seo-services/healthcare-seo/">Healthcare SEO Services</a></>,
               description:
-                "We strengthen your local search presence by improving relevant local signals and your Google Business Profile, helping you compete for searches where customers are looking for locksmith services in or around your service area.",
+                "",
             },
             {
               id: "performance-tracking",
-              tab_name: "Content & Authority Building",
-              heading: "Content & Authority Building",
+              tab_name: "Shopify SEO Services",
+              heading: <><a href="/service/seo-services/shopify-seo/">Shopify SEO Services</a></>,
               description:
-                "We create useful content and pursue legitimate authority-building opportunities that support your most important services and locations.",
+                "",
             },
             {
               id: "reporting-testing-growth",
-              tab_name: "Reporting, Testing & Growth",
-              heading: "Reporting, Testing & Growth",
+              tab_name: "WooCommerce SEO Services",
+              heading: <><a href="/service/seo-services/woocommerce-seo/">WooCommerce SEO Services</a></>,
               description:
-                "We monitor search visibility, organic traffic, keyword performance, local visibility, calls, leads, and conversions where tracking is available. What works becomes a priority; what underperforms gets analyzed and improved.",
+                "",
+            },
+            {
+              id: "reporting-testing-growth",
+              tab_name: "WordPress SEO Services",
+              heading: <><a href="/service/seo-services/wordpress-seo/">WordPress SEO Services</a></>,
+              description:
+                "",
+            },
+            {
+              id: "reporting-testing-growth",
+              tab_name: "Local SEO Services",
+              heading: <><a href="/service/seo-services/local-seo-services/">Local SEO Services</a></>,
+              description:
+                "",
             },
           ],
+          footnote: <><b><i>These services can be combined with technical SEO, content SEO, keyword research, and authority building to create a more complete search strategy.</i></b></>,
         },
 
         successStoriesData: {
           eyebrow: "",
-          title: <>Why Choose Our Locksmith SEO Agency?</>,
+          title: <>Aesthetic SEO Agency</>,
           description: (
             <>
-              Choosing a specialized locksmith SEO agency means your strategy is
-              built around the unique way locksmith customers search. A
-              locksmith doesn't need the same SEO strategy as a dentist, law
-              firm, or e-commerce store.
+              An <b></b> combines search optimization with a strong understanding of visual brands and customer experience. <br /> This is important for businesses where appearance, design, style, and brand identity influence customer decisions. Your website should look professional, but it also needs to be discoverable through search. <br /> Our approach to <b>aesthetic marketing SEO</b> connects visual branding with search-friendly content, technical optimization, keyword strategy, and user experience. <br /> The goal is not to fill a beautiful website with keywords. Instead, we create content and SEO elements that feel natural while helping search engines understand what your business offers.
             </>
           ),
           stories: [

@@ -23,7 +23,7 @@ function renderSectionDescription(description, descriptionHtml) {
   if (descriptionHtml) {
     return (
       <p
-        className="mb-8 max-w-4xl break-words text-sm leading-relaxed text-white/90 [overflow-wrap:anywhere] sm:mb-10 sm:text-base lg:mb-14 lg:text-lg"
+        className="mb-8 max-w-7xl break-words text-sm leading-relaxed text-white/90 [overflow-wrap:anywhere] sm:mb-10 sm:text-base lg:mb-14 lg:text-lg"
         dangerouslySetInnerHTML={{ __html: descriptionHtml }}
       />
     );
@@ -34,7 +34,7 @@ function renderSectionDescription(description, descriptionHtml) {
   }
 
   return (
-    <p className="mb-8 max-w-4xl break-words text-sm leading-relaxed text-white/90 [overflow-wrap:anywhere] sm:mb-10 sm:text-base lg:mb-14 lg:text-lg">
+    <p className="mb-8 max-w-7xl break-words text-sm leading-relaxed text-white/90 [overflow-wrap:anywhere] sm:mb-10 sm:text-base lg:mb-14 lg:text-lg">
       {description}
     </p>
   );
@@ -49,6 +49,7 @@ const SEOProcess = ({
   description = "",
   descriptionHtml = "",
   steps = [],
+  footnote = null,
   className = "",
   containerClassName = "mx-auto w-[92%] max-w-[1200px]",
 }) => {
@@ -110,6 +111,12 @@ const SEOProcess = ({
               ))}
             </div>
           </div>
+        ) : null}
+
+        {footnote ? (
+          <p className="mt-6 text-center text-sm leading-relaxed text-white/90 sm:mt-8 sm:text-base lg:mt-10 lg:text-lg">
+            {footnote}
+          </p>
         ) : null}
       </div>
     </section>

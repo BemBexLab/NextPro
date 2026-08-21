@@ -70,7 +70,7 @@ export default function SuccessStories({
             ) : null}
 
             {description ? (
-              <div className="mx-auto mt-4 max-w-5xl text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
+              <div className="mx-auto mt-4 max-w-7xl text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
                 {description}
               </div>
             ) : null}
