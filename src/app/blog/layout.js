@@ -1,4 +1,5 @@
 import { withEnUsHreflang } from "@/lib/metadata";
+import BlogAuthorFooter from "@/components/BlogAuthorFooter";
 
 export const metadata = withEnUsHreflang({
   robots: {
@@ -15,6 +16,7 @@ export default function BlogLayout({ children }) {
   return (
     <>
       {children}
+      <BlogAuthorFooter />
     </>
   );
 }

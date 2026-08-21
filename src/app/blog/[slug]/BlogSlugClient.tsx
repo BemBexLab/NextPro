@@ -318,6 +318,7 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
               }}
             />
           </div>
+
         </article>
       </section>
     </main>

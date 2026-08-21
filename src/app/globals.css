@@ -943,6 +943,106 @@ html {
   width: 100%;
 }
 
+.wp-post-author-box {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+  width: 100%;
+  margin: 2.35rem auto 0;
+  overflow: hidden;
+  border: 1px solid #dbe4f1;
+  border-left: 5px solid #072d7f;
+  border-radius: 0.35rem;
+  background: linear-gradient(112deg, #f5f9ff 0%, #ffffff 62%, #fff8f6 100%);
+  box-shadow: 0 14px 30px rgba(7, 45, 127, 0.08);
+  padding: 2rem 2.25rem;
+  color: #111827;
+}
+
+.blog-author-footer {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 1rem 2.5rem;
+}
+
+.wp-post-author-box::after {
+  position: absolute;
+  right: 2rem;
+  bottom: -2.5rem;
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid rgba(191, 11, 48, 0.12);
+  border-radius: 50%;
+  content: "";
+}
+
+.wp-post-author-portrait {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 138px;
+  padding: 0.35rem;
+  border: 1px solid #cbd8eb;
+  border-radius: 0.8rem;
+  background: #fff;
+  box-shadow: 7px 7px 0 rgba(191, 11, 48, 0.12);
+}
+
+.wp-post-author-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 138 / 150;
+  border-radius: 0.55rem;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(1);
+}
+
+.wp-post-author-copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding-top: 0.05rem;
+}
+
+.wp-post-author-eyebrow {
+  margin: 0 0 0.35rem;
+  color: #bf0b30;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.wp-post-author-copy h2 {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #072d7f;
+}
+
+.wp-post-author-role {
+  margin: 0.25rem 0 0.7rem;
+  color: #5c6671;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.wp-post-author-description {
+  max-width: 1000px;
+  margin: 0;
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.65;
+  font-weight: 400;
+  color: #273241;
+}
+
 @media (max-width: 1023px) {
   .wp-post-body-grid {
     grid-template-columns: 1fr;
@@ -954,6 +1054,10 @@ html {
 }
 
 @media (max-width: 767px) {
+  .blog-author-footer {
+    padding: 0 1rem 1.5rem;
+  }
+
   .wp-post-hero {
     margin-bottom: 1.5rem;
   }
@@ -976,5 +1080,27 @@ html {
     float: none;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .wp-post-author-box {
+    flex-direction: column;
+    gap: 1.15rem;
+    border-left-width: 4px;
+    padding: 1.35rem 1.25rem 1.5rem;
+  }
+
+.wp-post-author-portrait {
+    flex-basis: auto;
+  }
+
+  .wp-post-author-image {
+    width: 118px;
+    height: 128px;
+    aspect-ratio: 118 / 128;
+  }
+
+  .wp-post-author-box::after {
+    right: -2.5rem;
+    bottom: -3rem;
   }
 }
