@@ -3710,6 +3710,7 @@ export const services = [
           },
         ],
       },
+
       {
         id: "roofing-seo",
         title: "Roofing SEO Services",
@@ -3727,105 +3728,899 @@ export const services = [
           image: "/service-deatil-images/seo.webp",
         },
         introParagraphs: [
-          "At <a class='text-gray-300 hover:underline' href='/'>Web Founders USA</a>, we understand how tough the competition is in the roofing industry.",
-          "Customers search online before calling any roofing company, and your website needs to show up at the right time, in the right place. Our roofing <a class='text-gray-300 hover:underline' href='/service/seo-services/'>SEO agency</a> helps roofing contractors strengthen their online presence, get more qualified leads, and grow their brand without struggling.",
-          "Most roofing companies lose clients because their website is not optimised. Our SEO for roofing companies focuses on fixing that.",
-          "We improve your website structure, add the right roofing SEO keywords, optimise speed, work on local visibility, and give your business the push it needs to attract customers.",
-          "Whether you want more roof repair calls, new roof installation leads, or insurance roofing clients, our roofing SEO expert team works on simple strategies that actually bring results.",
+          <>We help roofing companies get found by more customers on Google and other search platforms. Our <b>roofing SEO services</b> are designed to improve your online visibility, attract qualified local traffic, and turn website visitors into calls, quote requests, and roofing jobs.</>,
+          <>When someone searches for “roof repair near me,” “roof replacement company,” or “roofing contractor in [city],” your business needs to be visible at the right moment. We build an SEO strategy around your roofing services, target locations, customers, and business goals.</>,
+          <>Our approach combines traditional SEO, local SEO, technical optimization, helpful content, GEO, AEO, and LLM optimization to help your roofing company stay visible as search continues to change.</>
         ],
-        features: [
-          "Full Website Check-up",
-          "Dedicated Roofing Content",
-          "Local SEO for Roofing Companies",
-          "Backlinks & Authority Building",
-          "Ongoing Support & Monitoring",
+        actions: [
+          { label: "Contact Us", href: "/contact-us" },
+          {
+            label: "Get a Free Roofing SEO Audit",
+            href: "/contact-us",
+            variant: "secondary",
+          },
         ],
-        tab: {
-          title: "What Our Roofing SEO Services Include",
-          steps: [
+        requestAFreeData: {
+          title: "Grow Your Business With Boutique SEO",
+          paragraphs: [
+            <>Your business deserves an SEO strategy built around your goals not a generic package. Our <b>boutique SEO agency</b> provides focused <b>boutique SEO services</b> designed to improve visibility, attract relevant customers, and support sustainable organic growth.</>,
+            <>From <b>SEO for boutiques</b> and <b>aesthetic marketing SEO</b> to technical SEO, local SEO, e-commerce SEO, content optimization, and AEO/GEO strategies, every part of your campaign can work together to create a stronger search presence.</>,
+          ],
+          cta: {
+            label: "Get Your Free Boutique SEO Audit",
+            href: "/contact-us/",
+          },
+        },
+        expertPage: {
+          intro: {
+            title: (
+              <>
+                Why Do Roofing Companies Need SEO?
+              </>
+            ),
+            description: (
+              <div className="space-y-2">
+                <p>
+                  Roofing customers usually search online before contacting a contractor. They compare companies, check reviews, look at services, and often visit several websites before requesting an estimate.
+                </p>
+                <p>
+                  If your roofing company does not appear for these searches, your competitors have a better chance of getting those customers.
+                </p>
+                <p>
+                  We help you target searches related to:
+                </p>
+                <div className="experts-benefits-shell flex w-full justify-center">
+                  <div
+                    className="experts-benefits-carousel flex w-full max-w-[900px] snap-x snap-mandatory justify-start gap-4 overflow-x-auto pb-3 scroll-px-[9%] [scrollbar-width:none] [&>*:first-child]:ml-[9%] [&>*:last-child]:mr-[9%] [&::-webkit-scrollbar]:hidden"
+                    aria-label="Roofing SEO benefits"
+                  >
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Roof repair
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Roof replacement
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        New roof installation
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Emergency roofing
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Storm damage repair
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Roof inspections
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Residential roofing
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Commercial roofing
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Shingle roofing
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Metal roofing
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Insurance roof claims
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Local roofing contractors
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className=""><i>Our comprehensive <a className="font-semibold text-blue-500 hover:underline" href="/service/seo-services/">SEO Services</a> are built to improve visibility, traffic, and lead generation through a structured search strategy.</i></p>
+              </div>
+            ),
+          },
+          // certifications: [
+          //   {
+          //     src: "/service-testing/GA-certified.webp",
+          //     alt: "Google Analytics certification",
+          //   },
+          //   {
+          //     src: "/service-testing/images-300x82.webp",
+          //     alt: "SEO partner certification",
+          //   },
+          //   {
+          //     src: "/service-testing/hubspot.webp",
+          //     alt: "HubSpot certification",
+          //   },
+          //   {
+          //     src: "/service-testing/google-digital-garage-1.webp",
+          //     alt: "Google Digital Garage certification",
+          //   },
+          // ],
+          relatedServices: {
+            title: "Our Roofing SEO Services",
+            description:
+              <>We use a complete SEO process instead of focusing only on keyword rankings.</>,
+            exploreLabel: "Explore service",
+            items: [
+              {
+                // icon: ,
+                title: "Technical SEO",
+                description:
+                  <>
+                  <h4 className="font-semibold text-md">What We Do:</h4>
+                  <p>Fix crawl, indexing, speed, mobile, and website structure issues</p>
+                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                  <p>Makes your website easier for search engines to understand</p>
+                  </>,
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "Local SEO",
+                description:
+                  <>
+                  <h4 className="font-semibold text-md">What We Do:</h4>
+                  <p>Improve local visibility, location signals, and business information</p>
+                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                  <p>Helps you reach customers in your service areas</p>
+                  </>,
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "Keyword Strategy",
+                description:
+                  <>
+                  <h4 className="font-semibold text-md">What We Do:</h4>
+                  <p>Find high-intent roofing searches and location terms</p>
+                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                  <p>Targets people who are more likely to become customers</p>
+                  </>,
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "On-Page SEO",
+                description:
+                  <>
+                  <h4 className="font-semibold text-md">What We Do:</h4>
+                  <p>Optimize headings, titles, URLs, content, images, and internal links</p>
+                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                  <p>Improves relevance and search visibility</p>
+                  </>,
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "Content Optimization",
+                description:
+                  <>
+                  <h4 className="font-semibold text-md">What We Do:</h4>
+                  <p>Create useful service pages and customer-focused content</p>
+                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                  <p>Builds topical relevance and answers search intent</p>
+                  </>,
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "Authority Building",
+                description:
+                  <>
+                  <h4 className="font-semibold text-md">What We Do:</h4>
+                  <p>Develop relevant trust and authority signals</p>
+                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                  <p>Supports stronger organic visibility</p>
+                  </>,
+                href: "",
+              },
+              {
+                // icon: FaSearch,
+                title: "Conversion SEO",
+                description:
+                  <>
+                  <h4 className="font-semibold text-md">What We Do:</h4>
+                  <p>Improve calls-to-action, forms, and user experience</p>
+                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                  <p>Helps turn visitors into leads</p>
+                  </>,
+                href: "",
+              },
+            ],
+            footnote: <></>,
+          },
+          subrelatedServices: {
+            title: "Technical SEO for Roofing Websites",
+            description:
+              <>We first check the technical health of your website. Even a well designed roofing website can struggle in search when search engines cannot properly crawl, index, or understand its pages. <br /><i>Our technical SEO work can include:</i></>,
+            exploreLabel: "Explore service",
+            items: [
+              {
+                // icon: FaSearch,
+                title: "Website speed optimization",
+                description:
+                  "",
+                // href: "/service/seo-services/ecommerce-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Mobile usability",
+                description:
+                  "",
+                // href: "/service/seo-services/b2b-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Core Web Vitals",
+                description:
+                  "",
+                // href: "/service/seo-services/dental-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Crawlability",
+                description:
+                  "",
+                // href: "/service/seo-services/enterprise-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Indexing",
+                description:
+                  "",
+                // href: "/service/seo-services/automotive-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "XML sitemap",
+                description:
+                  "",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Robots.txt",
+                description:
+                  "",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "URL structure",
+                description:
+                  "",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Broken links",
+                description:
+                  "",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Redirects",
+                description:
+                  "",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Internal linking",
+                description:
+                  "",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Duplicate content",
+                description:
+                  "",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Image optimization",
+                description:
+                  "",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Meta titles and descriptions",
+                description:
+                  "",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Heading structure",
+                description:
+                  "",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Website architecture",
+                description:
+                  "",
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+            ],
+            footnote: <>We make sure your most important roofing service pages are easy to find, understand, and navigate. <br />Our <a className="font-semibold text-blue-500 hover:underline" href="/service/seo-services/">SEO Services</a> include technical SEO, keyword strategy, on-page optimization, authority building, and ongoing performance improvements.</>,
+          },
+          results: {
+            title: "Local SEO for Roofing Contractors",
+            description: (
+              <div className="space-y-2">
+                <p>
+                  Roofing is a location-based business. Most customers want a roofing contractor who serves their city, neighborhood, or surrounding area.
+                </p>
+                <p>
+                  That makes <b>Local SEO Services</b> an important part of your roofing SEO strategy.
+                </p>
+                <p>
+                  We optimize your online presence for searches such as:
+                </p>
+                <ul className="list-disc list-outside">
+                  <li>Roofing contractor near me</li>
+                  <li>Roof repair in [city]</li>
+                  <li>Roof replacement near me</li>
+                  <li>Best roofing company in [city]</li>
+                  <li>Emergency roofer in [city]</li>
+                  <li>Storm damage roofer near me</li>
+                </ul>
+
+                <p>Our local SEO strategy can focus on:</p>
+                <ul className="list-disc list-outside">
+                  <li>Google Business Profile optimization</li>
+                  <li>Local keyword targeting</li>
+                  <li>Service-area optimization</li>
+                  <li>Location pages</li>
+                  <li>Business information consistency</li>
+                  <li>Local search signals</li>
+                  <li>Review and reputation signals</li>
+                  <li>Local website content</li>
+                  <li>Map visibility</li>
+                </ul>
+
+                <p>The goal is not to rank your roofing company everywhere. We focus on the locations that can actually generate business for you. <br />Web Founders USA specifically lists <a className="font-semibold text-blue-500 hover:underline" href="/service/seo-services/local-seo-services/">Local SEO Services</a> as part of its SEO offerings.</p>
+              </div>
+            ),
+            stats: [
+              {
+                label: (
+                  <>
+                    Local Roofing
+                    <br />
+                    Businesses Supported
+                  </>
+                ),
+                value: "400+",
+              },
+              {
+                label: (
+                  <>
+                    Leads Generated
+                    <br />
+                    Through SEO
+                  </>
+                ),
+                value: "1200K+",
+              },
+              {
+                label: (
+                  <>
+                    Average Organic
+                    <br />
+                    Growth Delivered
+                  </>
+                ),
+                value: "1,000%+",
+              },
+              {
+                label: (
+                  <>
+                    Revenue Influenced
+                    <br />
+                    via SEO
+                  </>
+                ),
+                value: "$200k+",
+              },
+            ],
+          },
+        },
+        localSEOserviceData: {
+          eyebrow: "The Foundation of Local Growth",
+          title: "Roofing Keyword Research and Search Intent",
+          description: <>We do not choose keywords only because they have high search volume. <br />We look for searches that show real customer intent. <br /><i>For example, these searches can have very different purposes:</i></>,
+          services: [
             {
-              id: "website-audit",
-              tab_name: "Full Website Check-up",
-              heading: "Full Website Check-up",
-              description:
-                "Before working on anything, we analyze your current website to see what’s stopping you from ranking. This includes technical issues, content gaps, and competitor analysis. This helps us understand exactly how to boost your visibility.",
+              id: "keyword-strategy",
+              // icon: {
+              //   src: "/service-testing/keyword.webp",
+              //   alt: "Keyword strategy",
+              // },
+              title: "",
+              description: (
+                <>
+                  <div className="w-full overflow-x-auto">
+                    <table className="w-full min-w-[28rem] border-collapse text-left text-xs sm:text-sm">
+                      <thead>
+                        <tr className="border-b border-gray-300">
+                          <th className="px-2 py-2 font-semibold text-gray-800">
+                            Search
+                          </th>
+                          <th className="px-2 py-2 font-semibold text-gray-800">
+                            User Intent
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-gray-200">
+                          <td className="px-2 py-2">What is a roof?</td>
+                          <td className="px-2 py-2">Informational</td>
+                        </tr>
+                        <tr className="border-b border-gray-200">
+                          <td className="px-2 py-2">How long does a roof last?</td>
+                          <td className="px-2 py-2">Research</td>
+                        </tr>
+                        <tr className="border-b border-gray-200">
+                          <td className="px-2 py-2">Roof replacement cost</td>
+                          <td className="px-2 py-2">Commercial research</td>
+                        </tr>
+                        <tr className="border-b border-gray-200">
+                          <td className="px-2 py-2">Roof replacement company</td>
+                          <td className="px-2 py-2">High commercial intent</td>
+                        </tr>
+                        <tr>
+                          <td className="px-2 py-2">Roof repair near me</td>
+                          <td className="px-2 py-2">Local and high intent</td>
+                        </tr>
+                        <tr>
+                          <td className="px-2 py-2">Emergency roofer near me</td>
+                          <td className="px-2 py-2">Urgent and high intent</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </>
+              ),
             },
+          ],
+          footnote: <><b><i>We build your website around these different search intentions so customers can find the right information at the right stage.</i></b></>,
+        },
+        aiDiscoveryData: {
+          eyebrow: "",
+          title: (
+            <>
+              Roofing Content That Answers Real Questions
+            </>
+          ),
+          description:
+            <>We create clear and useful content around the questions your customers ask before hiring a roofer. <br />Examples include:</>,
+          strategies: [
             {
-              id: "roofing-content",
-              tab_name: "Dedicated Roofing Content",
-              heading: "Dedicated Roofing Content",
+              id: "traditional-seo",
+              title: "How much does a roof replacement cost?",
               description:
-                "Our team writes content that matches your roofing services and customer needs. With the right roofing SEO keywords and problem solving tone, the content helps visitors stay longer on your site and trust your business.",
+                "",
             },
             {
               id: "local-seo",
-              tab_name: "Local SEO for Roofing Companies",
-              heading: "Local SEO for Roofing Companies",
+              title: "How long does a roof replacement take?",
               description:
-                "Most roofing clients come from nearby areas. That’s why we focus strongly on local SEO for roofing companies, including Google Business Profile optimization, local citations, and geo focused content.",
+                "",
             },
             {
-              id: "backlinks",
-              tab_name: "Backlinks & Authority Building",
-              heading: "Backlinks & Authority Building",
+              id: "ai-search-optimization",
+              title: "Should I repair or replace my roof?",
               description:
-                "Your website gets high quality backlinks that show Google your roofing company is credible. This improves rankings and pushes your website ahead of other roofers in your region.",
+                "",
             },
             {
-              id: "ongoing-support",
-              tab_name: "Ongoing Support & Monitoring",
-              heading: "Ongoing Support & Monitoring",
+              id: "ai-search-optimization0",
+              title: "What are the signs of roof damage?",
               description:
-                "You get a dedicated project manager and team that regularly tracks progress and updates you. We don’t disappear after delivering the work—we stay connected and help your business grow month after month.",
+                "",
+            },
+            {
+              id: "ai-search-optimization1",
+              title: "How often should I inspect my roof?",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization2",
+              title: "Does homeowners insurance cover roof damage?",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization3",
+              title: "How long does a shingle roof last?",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization4",
+              title: "What should I do after a roof leak?",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization5",
+              title: "How much does storm damage repair cost?",
+              description:
+                "",
+            },
+          ],
+          footnote: <>Our content strategy focuses on people first. We use natural language, clear explanations, relevant keywords, and useful information instead of keyword stuffing.</>,
+        },
+
+        tab: {
+          title:
+            "GEO Optimization for Roofing Companies",
+          description: <>Search is no longer limited to traditional Google results. <br /> People are increasingly using AI-powered search platforms to find information, compare businesses, and get recommendations. <br /><b>Generative Engine Optimization (GEO)</b> helps make your business information easier for AI-powered search systems to understand. <br />We structure your website around clear information about:</>,
+          steps: [
+            {
+              id: "local-seo-audit",
+              tab_name: "Your company",
+              heading: <>Your company</>,
+              description:
+                "",
+            },
+            {
+              id: "google-business-optimization",
+              tab_name: "Your roofing services",
+              heading: <>Your roofing services</>,
+              description:
+                "",
+            },
+            {
+              id: "local-keyword-research",
+              tab_name: "Your service areas",
+              heading: <>Your service areas</>,
+              description:
+                "",
+            },
+            {
+              id: "on-page-local-seo",
+              tab_name: "Your experience",
+              heading: <>Your experience</>,
+              description:
+                "",
+            },
+            {
+              id: "citation-building",
+              tab_name: "Your specialties",
+              heading: <>Your specialties</>,
+              description:
+                "",
+            },
+            {
+              id: "performance-tracking",
+              tab_name: "Your customers",
+              heading: <>Your customers</>,
+              description:
+                "",
+            },
+            {
+              id: "reporting-testing-growth",
+              tab_name: "Common roofing problems",
+              heading: <>Common roofing problems</>,
+              description:
+                "",
+            },
+            {
+              id: "reporting-testing-growth",
+              tab_name: "Your solutions",
+              heading: <>Your solutions</>,
+              description:
+                "",
+            },
+          ],
+          footnote: <><b><i>This gives search engines and AI systems better context about what your business does and who you serve.</i></b></>,
+        },
+
+        successStoriesData: {
+          eyebrow: "",
+          title: <>AEO for Roofing Businesses</>,
+          description: (
+            <>
+              <b>Answer Engine Optimization (AEO)</b> focuses on providing direct and useful answers to customer questions. <br /> We create clear sections that answer important questions in simple language.
+            </>
+          ),
+          stories: [
+            {
+              id: "cleaning-business",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "When should you replace a roof?",
+              },
+              title: "When should you replace a roof?",
+              description:
+                <>
+                You should consider replacing your roof when it has reached the end of its expected life, has widespread damage, or requires frequent repairs. A professional inspection can help determine whether repair or replacement is the better option. <br /> This answer-focused structure makes information easier for customers to understand and easier for search systems to process.
+                </>,
+            },
+            {
+              id: "cleaning-business1",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "LLMO and AI Search Optimization",
+              },
+              title: "LLMO and AI Search Optimization",
+              description:
+                <>
+                  We also consider <b>Large Language Model Optimization (LLMO)</b> when developing your roofing website. <br />AI systems need clear information to understand your company, services, locations, and expertise. <br />We strengthen these signals through:
+                  <ul className="list-disc list-outside">
+                    <li>Clear service descriptions</li>
+                    <li>Location-specific information</li>
+                    <li>Helpful roofing content</li>
+                    <li>Consistent company information</li>
+                    <li>Strong internal linking</li>
+                    <li>Structured page layouts</li>
+                    <li>Relevant FAQs</li>
+                    <li>Clear business expertise</li>
+                    <li>Trust and authority signals</li>
+                  </ul>
+                  <p className="mt-5">We do not write content only for AI. We write useful content for real people and structure it so modern search systems can understand the information more easily.</p>
+                </>,
+            },
+            {
+              id: "cleaning-business2",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Roofing Service Pages Built to Convert",
+              },
+              title: "Roofing Service Pages Built to Convert",
+              description:
+                <>
+                 Ranking is only one part of SEO. <br />Your website also needs to turn visitors into leads. <br />We can optimize dedicated pages for services such as:
+                 <ul className="list-disc list-outside">
+                    <li>Roof Repair</li>
+                    <li>Roof Replacement</li>
+                    <li>New Roof Installation</li>
+                    <li>Emergency Roof Repair</li>
+                    <li>Storm Damage Roofing</li>
+                    <li>Residential Roofing</li>
+                    <li>Commercial Roofing</li>
+                    <li>Roof Inspection</li>
+                  </ul>
+                  Each service page should clearly explain:
+                  <ul className="list-disc list-outside">
+                    <li>What the service is</li>
+                    <li>When a customer may need it</li>
+                    <li>What your process includes</li>
+                    <li>Which areas you serve</li>
+                    <li>Why customers should choose your company</li>
+                    <li>What the next step should be</li>
+                  </ul>
+                  <p className="mt-5">We can also improve the conversion journey through <a className="font-semibold text-blue-500 hover:underline" href="/service/conversion-optimization/">Conversion Optimization Services</a>, helping your website turn more of its existing traffic into inquiries and leads.</p>
+                </>,
+            },
+            {
+              id: "cleaning-business3",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "SEO for Commercial and B2B Roofing Companies",
+              },
+              title: "SEO for Commercial and B2B Roofing Companies",
+              description:
+                <>
+                  If your roofing company works with property managers, builders, developers, commercial property owners, or other businesses, your SEO strategy may need a different approach.
+                  <br />
+                  Commercial roofing searches often involve longer buying cycles and more than one decision-maker.
+                  <br />
+                  Our <a className="text-blue-500 font-semibold hover:underline" href="/service/seo-services/b2b-seo/">B2B SEO Services</a> are designed for businesses that need to reach qualified commercial audiences and generate leads through organic search.
+                  <br />
+                  For a roofing company that primarily serves homeowners, we keep the strategy focused on residential and local search intent.
+                </>,
+            },
+            {
+              id: "cleaning-business4",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "SEO for Large Roofing Organizations",
+              },
+              title: "SEO for Large Roofing Organizations",
+              description:
+                <>
+                  Large roofing companies with multiple locations, service areas, or complex websites need a scalable SEO structure.
+                  <br />
+                  They may need:
+                  <ul className="list-disc list-outside">
+                    <li>Multiple location pages</li>
+                    <li>Large service-page networks</li>
+                    <li>Strong internal linking</li>
+                    <li>Technical SEO management</li>
+                    <li>Scalable content</li>
+                    <li>Multiple business locations</li>
+                    <li>Centralized SEO reporting</li>
+                  </ul>
+                  <p className="mt-5">For larger organizations, our <a className="font-semibold text-blue-500 hover:underline" href="/service/seo-services/enterprise-seo/">Enterprise SEO Services</a> can support a more scalable search strategy. Web Founders USA lists Enterprise SEO among its specialized SEO offerings.</p>
+                </>,
             },
           ],
         },
+        faqTitle: "Frequently Asked Questions",
         faqs: [
           {
-            question: "How long does roofing SEO take to show results?",
+            question:
+              "What is a boutique SEO agency?",
             answer:
-              "Most roofing businesses start seeing better visibility and calls within a few weeks, depending on competition.",
+              "A boutique SEO agency is a specialized SEO team that provides personalized search optimization strategies for a smaller number of clients.",
           },
           {
-            question: "Can you work on an existing roofing website?",
+            question: "What are boutique SEO services?",
             answer:
-              "Yes, we can improve your current website or help you build a new one.",
+              <><b>Boutique SEO services</b> include customized keyword research, technical SEO, on-page SEO, content optimization, local SEO, link building, and SEO consulting.</>,
           },
           {
-            question: "Do you handle local SEO for roofers?",
+            question: "What is SEO for boutiques?",
             answer:
-              "Yes, our local SEO focuses on helping you get more calls from nearby homeowners.",
+              <><b>SEO for boutiques</b> is the process of optimizing a boutique business website so it can reach potential customers through relevant organic searches.</>,
           },
           {
-            question: "Will you write roofing service pages as well?",
+            question:
+              "How long does boutique SEO take?",
             answer:
-              "Yes, our content team creates complete roofing service pages with the right keywords.",
-          },
-          {
-            question: "Is SEO better than paid ads for roofers?",
-            answer:
-              "SEO brings long-term, consistent leads without paying for every click.",
+              "SEO is a long-term strategy. Results depend on competition, website quality, industry, content, authority, and the current search visibility of the website.",
           },
         ],
-        whyChoose: [
-          {
-            title: "Dedicated Team Support",
-            desc: "A complete team of SEO experts, content creators, and analysts works together to grow your roofing enterprise online—month after month.",
-          },
-          {
-            title: "Data-Driven, Results-Focuse",
-            desc: "The seo for roofers provided by us relies on actual data, insights from competitors, and uncomplicated techniques that result in calls, leads, and customers for the long term.",
-          },
-          {
-            title: "Our Strategy for Roofing SEO",
-            desc: "We consider your site as a genuine business asset and through a regular roofing search engine optimization strategy, we lead it to continuous growth.",
-          },
-          {
-            title: "Your Website = Your Sales Engine",
-            desc: "We treat your site as a genuine business asset and through a regular roofing search engine optimization strategy, we lead it to continuous growth.",
-          },
-        ],
+        whyChooseData: {
+          title: "Boutique SEO vs. Large SEO Agencies",
+          paragraphs: [
+            "The biggest difference is often the level of attention and customization.",
+          ],
+          containerClassName:
+            "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
+          gridClassName:
+            "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
+          features: [
+            {
+              title: "Boutique SEO Agency",
+              desc: <>
+              <ul className="list-disc list-outside">
+                <li>Personalized strategy</li>
+                <li>More focused client attention</li>
+                <li>Flexible campaigns</li>
+                <li>Direct communication</li>
+                <li>Niche-focused strategies</li>
+                <li>Strategy built around your goals</li>
+              </ul>
+              </>,
+            },
+            {
+              title: "Large SEO Agency",
+              desc: <>
+              <ul className="list-disc list-outside">
+                <li>Standardized packages</li>
+                <li>Larger client portfolios</li>
+                <li>Fixed processes</li>
+                <li>Multiple layers of teams</li>
+                <li>Broader service models</li>
+                <li>Often template-driven</li>
+              </ul>
+              </>,
+            },
+          ],
+          footnote: <i>For businesses that want a closer working relationship and a strategy built specifically for their market, a boutique SEO agency can be a strong choice.</i>,
+        },
+        seoComparisonData: {
+          title:
+            "Who Needs Boutique SEO?",
+          description: (
+            <>
+              Boutique SEO can benefit businesses that want focused search growth without a complicated agency experience.
+            </>
+          ),
+          comparisons: [
+            {
+              id: "traditional-seo",
+              title: "It can be a good fit for:",
+              subtitle: "",
+              sections: [
+                {
+                  title: "",
+                  items: [
+                    <>Small and medium-sized businesses</>,
+                    <>Fashion boutiques</>,
+                    <>Beauty and aesthetic brands</>,
+                    <>Local businesses</>,
+                    <>E-commerce stores</>,
+                    <>Startups</>,
+                    <>Professional service companies</>,
+                    <>Creative brands</>,
+                    <>Niche businesses</>,
+                  ],
+                },
+                {
+                  title: "",
+                  items: [
+                    <>Whether you need <b>local SEO services</b>, technical optimization, content creation, e-commerce SEO, or a complete SEO strategy, your campaign can be built around your specific goals.</>,
+                  ],
+                },
+              ],
+            },
+            // {
+            //   id: "local-seo",
+            //   title: "Local SEO",
+            //   subtitle: "",
+            //   sections: [
+            //     {
+            //       title: "What it is:",
+            //       items: [
+            //         "Optimizing for local audiences",
+            //         "Google Maps visibility",
+            //         "Google Business Profile optimization",
+            //         "location-specific keywords",
+            //         "consistent NAP citations",
+            //         "and review management",
+            //       ],
+            //     },
+            //     {
+            //       title: "Why it matters:",
+            //       items: [
+            //         'Increases visibility in "near me" and local-intent searches',
+            //         "connects you with nearby ready-to-call customers",
+            //         "converts Maps impressions into real service calls",
+            //       ],
+            //     },
+            //   ],
+            // },
+            // {
+            //   id: "ai-seo",
+            //   title: "AI SEO / AIO",
+            //   subtitle: "",
+            //   sections: [
+            //     {
+            //       title: "What it is:",
+            //       items: [
+            //         "Optimizing content for AI-powered search and smart assistants",
+            //         "structuring information clearly",
+            //         "answering questions directly",
+            //       ],
+            //     },
+            //     {
+            //       title: "Why it matters:",
+            //       items: [
+            //         "AI answers increasingly replace traditional search clicks being discovered in AI conversations",
+            //         "not just search results",
+            //         "future-proofs your locksmith business's visibility",
+            //       ],
+            //     },
+            //   ],
+            // },
+          ],
+        },
       },
+
       {
         id: "outsource-seo",
         title: "Outsource SEO Services",

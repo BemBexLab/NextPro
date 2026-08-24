@@ -3,7 +3,7 @@ import Link from "next/link";
 import LoadMoreCards from "./LoadMoreCards";
 
 const scrollableCardGridClassName =
-  "flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 pt-1 [scrollbar-width:none] sm:gap-6 lg:grid lg:overflow-visible lg:py-0 [&::-webkit-scrollbar]:hidden";
+  "flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 pt-1 [scrollbar-width:none] sm:gap-6 lg:grid lg:overflow-visible lg:py-0 [&::-webkit-scrollbar]:hidden";
 const scrollableCardSlideClassName =
   "min-w-0 flex-[0_0_85%] snap-start sm:basis-[47%] md:basis-[31%] lg:basis-auto lg:snap-none";
 
@@ -435,7 +435,7 @@ export default function ExpertsPage({
                   </h2>
                 ) : null}
                 {results.description ? (
-                  <div className="text-base leading-relaxed text-gray-600 sm:text-lg">
+                  <div className="max-h-[35vh] overflow-y-auto pr-1 text-base leading-relaxed text-gray-600 break-words [-ms-overflow-style:none] [scrollbar-width:none] sm:text-lg [&::-webkit-scrollbar]:hidden [&_ul]:list-disc [&_ul]:list-outside [&_ul]:pl-5">
                     {results.description}
                   </div>
                 ) : null}

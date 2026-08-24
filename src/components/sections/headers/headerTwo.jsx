@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoCall } from "react-icons/io5";
 
-import Logo from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
 import StickyHeader from "@/components/ui/stickyHeader";
 
@@ -60,8 +59,27 @@ const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
             <div className="relative mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8">
               <span className="block border-t border-accent"></span>
               <div className="flex min-h-[72px] items-center justify-between gap-3 sm:min-h-[80px] xl:gap-4">
-                <div className="w-[140px] shrink-0 py-2 sm:w-[170px] lg:w-[190px] xl:w-[150px] 2xl:w-[190px] [&>div]:h-[56px] [&>div]:w-full sm:[&>div]:h-[64px] 2xl:[&>div]:h-[76px]">
-                  <Logo />
+                <div className="w-[140px] shrink-0 py-2 sm:w-[170px] lg:w-[190px] xl:w-[150px] 2xl:w-[190px]">
+                  <Link
+                    href="/"
+                    className="block h-[56px] w-full sm:h-[64px] 2xl:h-[76px]"
+                    aria-label="Web Founders USA home"
+                  >
+                    <video
+                      className="block h-full w-full object-contain"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="metadata"
+                      aria-label="Web Founders USA"
+                    >
+                      <source
+                        src="/videos/web founder logo animate 1.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </Link>
                 </div>
 
                 <nav className="hidden min-w-0 xl:block">

@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 const serviceDescriptionClassName =
-  "max-h-[15vh] min-w-0 overflow-y-auto overscroll-y-auto pr-1 text-center text-sm leading-relaxed text-gray-600 break-words [-ms-overflow-style:none] [scrollbar-width:none] sm:text-base [&::-webkit-scrollbar]:hidden [&_p+p]:mt-3 [&_ul]:mx-auto [&_ul]:mt-3 [&_ul]:w-fit [&_ul]:max-w-full [&_ul]:space-y-1 [&_ul]:pl-5 [&_ul]:text-left [&_ol]:mx-auto [&_ol]:mt-3 [&_ol]:w-fit [&_ol]:max-w-full [&_ol]:space-y-1 [&_ol]:pl-5 [&_ol]:text-left [&_li]:pl-1";
+  "max-h-[15vh] min-w-0 overflow-y-auto pr-1 text-center text-sm leading-relaxed text-gray-600 break-words [-ms-overflow-style:none] [scrollbar-width:none] sm:text-base [&::-webkit-scrollbar]:hidden [&_p+p]:mt-3 [&_ul]:mx-auto [&_ul]:mt-3 [&_ul]:w-fit [&_ul]:max-w-full [&_ul]:space-y-1 [&_ul]:pl-5 [&_ul]:text-left [&_ol]:mx-auto [&_ol]:mt-3 [&_ol]:w-fit [&_ol]:max-w-full [&_ol]:space-y-1 [&_ol]:pl-5 [&_ol]:text-left [&_li]:pl-1";
 const serviceCarouselClassName =
-  "flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 pt-1 [scrollbar-width:none] sm:gap-6 lg:grid lg:overflow-visible lg:py-0 [&::-webkit-scrollbar]:hidden";
+  "flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 pt-1 [scrollbar-width:none] sm:gap-6 lg:grid lg:overflow-visible lg:py-0 [&::-webkit-scrollbar]:hidden";
 const serviceSlideClassName =
   "min-w-0 flex-[0_0_85%] snap-start sm:basis-[47%] md:basis-[31%] lg:basis-auto lg:snap-none";
 
