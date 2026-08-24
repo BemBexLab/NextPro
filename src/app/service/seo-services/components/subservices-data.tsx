@@ -2920,13 +2920,13 @@ export const services = [
           },
         ],
         requestAFreeData: {
-          title: "Request a Free Locksmith SEO Audit",
+          title: "Grow Your Business With Boutique SEO",
           paragraphs: [
-            "Not sure why your locksmith business isn't getting enough visibility on Google? Let us take a closer look.",
-            "Our audit identifies technical issues, local SEO gaps, service-page opportunities, keyword opportunities, competitor weaknesses, and areas where your website may be losing potential customers.",
+            <>Your business deserves an SEO strategy built around your goals not a generic package. Our <b>boutique SEO agency</b> provides focused <b>boutique SEO services</b> designed to improve visibility, attract relevant customers, and support sustainable organic growth.</>,
+            <>From <b>SEO for boutiques</b> and <b>aesthetic marketing SEO</b> to technical SEO, local SEO, e-commerce SEO, content optimization, and AEO/GEO strategies, every part of your campaign can work together to create a stronger search presence.</>,
           ],
           cta: {
-            label: "Get Your Free Locksmith SEO Audit",
+            label: "Get Your Free Boutique SEO Audit",
             href: "/contact-us/",
           },
         },
@@ -3409,7 +3409,7 @@ export const services = [
           title: <>Aesthetic SEO Agency</>,
           description: (
             <>
-              An <b></b> combines search optimization with a strong understanding of visual brands and customer experience. <br /> This is important for businesses where appearance, design, style, and brand identity influence customer decisions. Your website should look professional, but it also needs to be discoverable through search. <br /> Our approach to <b>aesthetic marketing SEO</b> connects visual branding with search-friendly content, technical optimization, keyword strategy, and user experience. <br /> The goal is not to fill a beautiful website with keywords. Instead, we create content and SEO elements that feel natural while helping search engines understand what your business offers.
+              An <b>Aesthetic SEO Agency</b> combines search optimization with a strong understanding of visual brands and customer experience. <br /> This is important for businesses where appearance, design, style, and brand identity influence customer decisions. Your website should look professional, but it also needs to be discoverable through search. <br /> Our approach to <b>aesthetic marketing SEO</b> connects visual branding with search-friendly content, technical optimization, keyword strategy, and user experience. <br /> The goal is not to fill a beautiful website with keywords. Instead, we create content and SEO elements that feel natural while helping search engines understand what your business offers.
             </>
           ),
           stories: [
@@ -3417,226 +3417,173 @@ export const services = [
               id: "cleaning-business",
               image: {
                 src: "/service-testing/bg.webp",
-                alt: "Cleaning business SEO growth results",
+                alt: "Modern SEO, AEO, and GEO",
               },
-              title: "Industry-Specific Strategy",
+              title: "Modern SEO, AEO, and GEO",
               description:
-                "built around actual locksmith services, customer intent, local competition, and service areas",
-            },
-            {
-              id: "law-firm",
-              image: {
-                src: "/service-testing/bg.webp",
-                alt: "Law firm SEO growth results",
-              },
-              title: "Local Search Expertise",
-              description:
-                'we understand searches like "locksmith near me" and city-specific, service-plus-location queries',
-            },
-            {
-              id: "dental-clinic",
-              image: {
-                src: "/service-testing/bg.webp",
-                alt: "Dental clinic SEO growth results",
-              },
-              title: "Customized SEO",
-              description:
-                "your website, market, competition, services, and goals determine the strategy, not a generic checklist",
-            },
-            {
-              id: "ecommerce",
-              image: {
-                src: "/service-testing/bg.webp",
-                alt: "E-commerce SEO growth results",
-              },
-              title: "Transparent Reporting",
-              description:
-                "you understand what's being optimized, why it matters, and what the data shows",
-            },
-            {
-              id: "ecommerce",
-              image: {
-                src: "/service-testing/bg.webp",
-                alt: "E-commerce SEO growth results",
-              },
-              title: "Ethical SEO",
-              description:
-                "sustainable strategies and legitimate authority, not risky shortcuts",
-            },
-            {
-              id: "ecommerce",
-              image: {
-                src: "/service-testing/bg.webp",
-                alt: "E-commerce SEO growth results",
-              },
-              title: "Lead-Focused Optimization",
-              description:
-                "rankings matter, but the bigger goal is real customers calling your business",
-            },
-            {
-              id: "ecommerce",
-              image: {
-                src: "/service-testing/bg.webp",
-                alt: "E-commerce SEO growth results",
-              },
-              title: "Clear Communication",
-              description:
-                "priorities, progress, opportunities, and next steps explained clearly",
-            },
-            {
-              id: "ecommerce",
-              image: {
-                src: "/service-testing/bg.webp",
-                alt: "E-commerce SEO growth results",
-              },
-              title: "No Unrealistic Guarantees",
-              description:
-                "no ethical SEO provider can guarantee a specific ranking, traffic level, or number of calls; we focus on measurable improvements and long-term growth",
+                <>Search is no longer limited to traditional blue links. People increasingly use AI-powered search tools and answer engines to find information. <br /> That is why modern <b>boutique SEO</b> should also consider Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). <br /> <i>Our approach focuses on:</i>
+                <ul className="list-disc list-outside">
+                  <li>Clear answers to common customer questions</li>
+                  <li>Helpful and original content</li>
+                  <li>Strong heading structures</li>
+                  <li>Direct definitions and explanations</li>
+                  <li>Relevant entities and topics</li>
+                  <li>Natural keyword usage</li>
+                  <li>Content organized around search intent</li>
+                </ul> <br /> <i>This makes your content easier for users, search engines, answer engines, and AI-powered search systems to understand.</i>
+                </>,
             },
           ],
         },
-        faqTitle: "Employment Lawyer SEO Questions Answered",
+        faqTitle: "Frequently Asked Questions",
         faqs: [
           {
             question:
-              "Do you work with firms handling wrongful termination and discrimination cases?",
+              "What is a boutique SEO agency?",
             answer:
-              "Yes. Our employment law SEO targets wrongful termination, discrimination, harassment, and retaliation searches so you're visible exactly when employees need help most.",
+              "A boutique SEO agency is a specialized SEO team that provides personalized search optimization strategies for a smaller number of clients.",
           },
           {
-            question: "Can you help a firm with multiple office locations?",
+            question: "What are boutique SEO services?",
             answer:
-              "Yes. We build scalable multi-location SEO strategies around your legitimate service areas, without relying on thin or duplicate location pages.",
+              <><b>Boutique SEO services</b> include customized keyword research, technical SEO, on-page SEO, content optimization, local SEO, link building, and SEO consulting.</>,
           },
           {
-            question: "How long before employment lawyer SEO shows results?",
+            question: "What is SEO for boutiques?",
             answer:
-              "Most firms start seeing measurable improvement within a few months, depending on local competition and current site health. Meaningful growth in qualified consultations typically develops over several months as authority, rankings, and content footprint expand.",
-          },
-          {
-            question:
-              "Do you optimize Google Business Profile and Maps visibility?",
-            answer:
-              "Yes, Local SEO and Google Maps optimization are core parts of every employment lawyer SEO strategy we build.",
+              <><b>SEO for boutiques</b> is the process of optimizing a boutique business website so it can reach potential customers through relevant organic searches.</>,
           },
           {
             question:
-              "Do you offer SEO for wrongful termination, discrimination, and wage & hour cases separately?",
+              "How long does boutique SEO take?",
             answer:
-              "Yes. We build practice-area-specific SEO wrongful termination, discrimination and harassment, and wage and hour searches all have different intent, and we target them accordingly.",
+              "SEO is a long-term strategy. Results depend on competition, website quality, industry, content, authority, and the current search visibility of the website.",
           },
         ],
-        // whyChooseData: {
-        //   title: "Why Choose Our Locksmith SEO Agency?",
-        //   containerClassName:
-        //     "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
-        //   gridClassName:
-        //     "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
-        //   features: [
-        //     {
-        //       title: "Local SEO Expertise",
-        //       desc: "We specialize in <strong>local business SEO</strong>, helping you rank in <strong>Google Map Pack</strong> and dominate <strong>location based searches</strong> in your target area.",
-        //     },
-        //     {
-        //       title: "Proven Local Results",
-        //       desc: "Our strategies improve your visibility in <strong>near me searches</strong>, increase <strong>local traffic</strong>, and generate more calls and leads.",
-        //     },
-        //     {
-        //       title: "Custom Location Strategies",
-        //       desc: "We create personalized campaigns based on your <strong>business location</strong>, audience behavior, and local competition.",
-        //     },
-        //     {
-        //       title: "Transparent Reporting",
-        //       desc: "Get clear insights into your <strong>local rankings</strong>, traffic, and conversions with easy-to-understand reports.",
-        //     },
-        //   ],
-        // },
+        whyChooseData: {
+          title: "Boutique SEO vs. Large SEO Agencies",
+          paragraphs: [
+            "The biggest difference is often the level of attention and customization.",
+          ],
+          containerClassName:
+            "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
+          gridClassName:
+            "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
+          features: [
+            {
+              title: "Boutique SEO Agency",
+              desc: <>
+              <ul className="list-disc list-outside">
+                <li>Personalized strategy</li>
+                <li>More focused client attention</li>
+                <li>Flexible campaigns</li>
+                <li>Direct communication</li>
+                <li>Niche-focused strategies</li>
+                <li>Strategy built around your goals</li>
+              </ul>
+              </>,
+            },
+            {
+              title: "Large SEO Agency",
+              desc: <>
+              <ul className="list-disc list-outside">
+                <li>Standardized packages</li>
+                <li>Larger client portfolios</li>
+                <li>Fixed processes</li>
+                <li>Multiple layers of teams</li>
+                <li>Broader service models</li>
+                <li>Often template-driven</li>
+              </ul>
+              </>,
+            },
+          ],
+          footnote: <i>For businesses that want a closer working relationship and a strategy built specifically for their market, a boutique SEO agency can be a strong choice.</i>,
+        },
         seoComparisonData: {
           title:
-            "Traditional SEO vs Local SEO vs AI SEO (AIO) - for Locksmiths",
+            "Who Needs Boutique SEO?",
           description: (
             <>
-              A complete, future-ready search optimization framework. Gone are
-              the days when finding a locksmith meant just clicking blue links
-              on Google. Now customers find you by asking smart speakers,
-              tapping Maps, or getting instant replies from AI assistants.
+              Boutique SEO can benefit businesses that want focused search growth without a complicated agency experience.
             </>
           ),
           comparisons: [
             {
               id: "traditional-seo",
-              title: "Traditional SEO",
+              title: "It can be a good fit for:",
               subtitle: "",
               sections: [
                 {
-                  title: "What it is:",
+                  title: "",
                   items: [
-                    <>Keyword identification</>,
-                    <>clear structure (headers, tags, titles)</>,
-                    <>fast site speed and mobile responsiveness</>,
-                    <>credibility built through consistency</>,
+                    <>Small and medium-sized businesses</>,
+                    <>Fashion boutiques</>,
+                    <>Beauty and aesthetic brands</>,
+                    <>Local businesses</>,
+                    <>E-commerce stores</>,
+                    <>Startups</>,
+                    <>Professional service companies</>,
+                    <>Creative brands</>,
+                    <>Niche businesses</>,
                   ],
                 },
                 {
-                  title: "Why it matters:",
+                  title: "",
                   items: [
-                    "Generates consistent",
-                    "long-term organic traffic",
-                    "builds credibility",
-                    'mproves rankings for competitive keywords like "emergency locksmith," and lowers customer acquisition cost over time',
+                    <>Whether you need <b>local SEO services</b>, technical optimization, content creation, e-commerce SEO, or a complete SEO strategy, your campaign can be built around your specific goals.</>,
                   ],
                 },
               ],
             },
-            {
-              id: "local-seo",
-              title: "Local SEO",
-              subtitle: "",
-              sections: [
-                {
-                  title: "What it is:",
-                  items: [
-                    "Optimizing for local audiences",
-                    "Google Maps visibility",
-                    "Google Business Profile optimization",
-                    "location-specific keywords",
-                    "consistent NAP citations",
-                    "and review management",
-                  ],
-                },
-                {
-                  title: "Why it matters:",
-                  items: [
-                    'Increases visibility in "near me" and local-intent searches',
-                    "connects you with nearby ready-to-call customers",
-                    "converts Maps impressions into real service calls",
-                  ],
-                },
-              ],
-            },
-            {
-              id: "ai-seo",
-              title: "AI SEO / AIO",
-              subtitle: "",
-              sections: [
-                {
-                  title: "What it is:",
-                  items: [
-                    "Optimizing content for AI-powered search and smart assistants",
-                    "structuring information clearly",
-                    "answering questions directly",
-                  ],
-                },
-                {
-                  title: "Why it matters:",
-                  items: [
-                    "AI answers increasingly replace traditional search clicks being discovered in AI conversations",
-                    "not just search results",
-                    "future-proofs your locksmith business's visibility",
-                  ],
-                },
-              ],
-            },
+            // {
+            //   id: "local-seo",
+            //   title: "Local SEO",
+            //   subtitle: "",
+            //   sections: [
+            //     {
+            //       title: "What it is:",
+            //       items: [
+            //         "Optimizing for local audiences",
+            //         "Google Maps visibility",
+            //         "Google Business Profile optimization",
+            //         "location-specific keywords",
+            //         "consistent NAP citations",
+            //         "and review management",
+            //       ],
+            //     },
+            //     {
+            //       title: "Why it matters:",
+            //       items: [
+            //         'Increases visibility in "near me" and local-intent searches',
+            //         "connects you with nearby ready-to-call customers",
+            //         "converts Maps impressions into real service calls",
+            //       ],
+            //     },
+            //   ],
+            // },
+            // {
+            //   id: "ai-seo",
+            //   title: "AI SEO / AIO",
+            //   subtitle: "",
+            //   sections: [
+            //     {
+            //       title: "What it is:",
+            //       items: [
+            //         "Optimizing content for AI-powered search and smart assistants",
+            //         "structuring information clearly",
+            //         "answering questions directly",
+            //       ],
+            //     },
+            //     {
+            //       title: "Why it matters:",
+            //       items: [
+            //         "AI answers increasingly replace traditional search clicks being discovered in AI conversations",
+            //         "not just search results",
+            //         "future-proofs your locksmith business's visibility",
+            //       ],
+            //     },
+            //   ],
+            // },
           ],
         },
       },

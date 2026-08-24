@@ -1,9 +1,11 @@
 import Image from "next/image";
 
 const storiesCarouselClassName =
-  "flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 pt-1 [scrollbar-width:none] sm:gap-6 lg:grid lg:overflow-visible lg:py-0 [&::-webkit-scrollbar]:hidden";
+  "flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 pt-1 [scrollbar-width:none] sm:gap-6 lg:grid lg:overflow-visible lg:py-0 [&::-webkit-scrollbar]:hidden";
 const storySlideClassName =
   "min-w-0 flex-[0_0_85%] snap-start sm:basis-[47%] md:basis-[31%] lg:basis-auto lg:snap-none";
+const storyDescriptionClassName =
+  "max-h-[15vh] min-w-0 overflow-y-auto pr-1 text-center text-sm leading-relaxed text-white break-words [-ms-overflow-style:none] [scrollbar-width:none] sm:text-base lg:text-lg [&::-webkit-scrollbar]:hidden [&_ul]:mx-auto [&_ul]:mt-3 [&_ul]:w-fit [&_ul]:max-w-full [&_ul]:space-y-1 [&_ul]:pl-5 [&_ul]:text-left [&_li]:pl-1";
 
 function StoryImage({ image, title, priority = false }) {
   const imageData = typeof image === "string" ? { src: image } : image;
@@ -101,7 +103,7 @@ export default function SuccessStories({
                         />
                         {story.description ? (
                           <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/70 via-black/35 to-black/5 px-4 text-center sm:px-5">
-                            <div className="text-sm leading-relaxed text-white sm:text-base lg:text-lg">
+                            <div className={storyDescriptionClassName}>
                               {story.description}
                             </div>
                           </div>

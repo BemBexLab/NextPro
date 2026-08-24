@@ -95,6 +95,7 @@ function getServiceWhyChoose(service) {
     description: config.description,
     descriptionHtml: config.descriptionHtml,
     paragraphs: config.paragraphs || [],
+    footnote: config.footnote || null,
     features,
     className: config.className,
     containerClassName:
@@ -108,6 +109,7 @@ function getServiceWhyChoose(service) {
         config.description ||
         config.descriptionHtml ||
         config.paragraphs?.length ||
+        config.footnote ||
         features.length,
     ),
   };

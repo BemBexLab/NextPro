@@ -10,13 +10,16 @@ function getFeatureDescription(item) {
   return item.description ?? item.desc ?? "";
 }
 
+const featureDescriptionClassName =
+  "mt-2 max-h-[15vh] min-w-0 overflow-y-auto pr-1 text-sm leading-relaxed text-gray-700 break-words [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&_ul]:mt-2 [&_ul]:pl-5 [&_ul]:text-left [&_li]:pl-1";
+
 function renderFeatureDescription(item) {
   const description = getFeatureDescription(item);
 
   if (item.descHtml) {
     return (
-      <p
-        className="mt-2 text-sm leading-relaxed text-gray-700"
+      <div
+        className={featureDescriptionClassName}
         dangerouslySetInnerHTML={{ __html: item.descHtml }}
       />
     );
@@ -27,9 +30,9 @@ function renderFeatureDescription(item) {
   }
 
   return (
-    <p className="mt-2 text-sm leading-relaxed text-gray-700">
+    <div className={featureDescriptionClassName}>
       {description}
-    </p>
+    </div>
   );
 }
 
@@ -53,13 +56,14 @@ function getLastRowStartClass(featureCount, index) {
 }
 
 const featureCarouselClassName =
-  "flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 pt-1 [scrollbar-width:none] sm:gap-5 lg:!grid lg:overflow-visible lg:py-0 [&::-webkit-scrollbar]:hidden";
+  "flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 pt-1 [scrollbar-width:none] sm:gap-5 lg:!grid lg:overflow-visible lg:py-0 [&::-webkit-scrollbar]:hidden";
 const featureSlideClassName =
   "min-w-0 flex-[0_0_85%] snap-start sm:basis-[47%] md:basis-[31%] lg:basis-auto lg:snap-none";
 
 const WhyChoose = ({
   title,
   paragraphs = [],
+  footnote = null,
   features = [],
   className = "",
   containerClassName = "mx-auto w-[92%] max-w-[1400px]",
@@ -121,6 +125,11 @@ const WhyChoose = ({
               </div>
             ))}
           </div>
+        ) : null}
+        {footnote ? (
+          <p className="mt-6 text-center text-sm leading-relaxed text-gray-700 sm:text-base">
+            {footnote}
+          </p>
         ) : null}
       </div>
     </section>
