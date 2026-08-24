@@ -3741,10 +3741,12 @@ export const services = [
           },
         ],
         requestAFreeData: {
-          title: "Grow Your Business With Boutique SEO",
+          title: "Get More Roofing Leads From Search",
           paragraphs: [
-            <>Your business deserves an SEO strategy built around your goals not a generic package. Our <b>boutique SEO agency</b> provides focused <b>boutique SEO services</b> designed to improve visibility, attract relevant customers, and support sustainable organic growth.</>,
-            <>From <b>SEO for boutiques</b> and <b>aesthetic marketing SEO</b> to technical SEO, local SEO, e-commerce SEO, content optimization, and AEO/GEO strategies, every part of your campaign can work together to create a stronger search presence.</>,
+            <>We help roofing companies build a stronger online presence that works across Google, local search, answer engines, and AI-powered search.</>,
+            <>From technical SEO and <a className="font-semibold text-blue-500 hover:underline" href="/service/seo-services/local-seo-services/">Local SEO Services</a> to keyword research, content optimization, GEO, AEO, and LLM optimization, we build a strategy around your services, locations, customers, and growth goals.</>,
+            <>If you want more people to find your roofing company when they need a repair, replacement, inspection, or new roof, we are ready to help.</>,
+            <>Ready to grow your roofing business through search? Contact us today and let’s build an SEO strategy that brings your company more qualified leads.</>,
           ],
           cta: {
             label: "Get Your Free Boutique SEO Audit",
@@ -4472,31 +4474,43 @@ export const services = [
         faqs: [
           {
             question:
-              "What is a boutique SEO agency?",
+              "How long does roofing SEO take to work?",
             answer:
-              "A boutique SEO agency is a specialized SEO team that provides personalized search optimization strategies for a smaller number of clients.",
+              "SEO is a long-term strategy. Results depend on your website, competition, target locations, authority, content, and current online presence. Some improvements can appear within a few months, while competitive markets usually require consistent optimization.",
           },
           {
-            question: "What are boutique SEO services?",
+            question: "Can SEO help my roofing company get more leads?",
             answer:
-              <><b>Boutique SEO services</b> include customized keyword research, technical SEO, on-page SEO, content optimization, local SEO, link building, and SEO consulting.</>,
+              <>Yes. SEO can bring your website in front of people who are actively searching for roofing services. When your pages match their needs and provide a clear next step, organic traffic can become a valuable source of qualified leads.</>,
           },
           {
-            question: "What is SEO for boutiques?",
+            question: "Do you offer Local SEO Services for roofing companies?",
             answer:
-              <><b>SEO for boutiques</b> is the process of optimizing a boutique business website so it can reach potential customers through relevant organic searches.</>,
+              <>Yes. Local SEO is an important part of our strategy for roofing companies that serve specific cities, neighborhoods, and service areas.</>,
           },
           {
             question:
-              "How long does boutique SEO take?",
+              "Can you optimize an existing roofing website?",
             answer:
-              "SEO is a long-term strategy. Results depend on competition, website quality, industry, content, authority, and the current search visibility of the website.",
+              "Yes. We can review your current website and identify technical, content, local SEO, on-page, and conversion opportunities.",
+          },
+          {
+            question:
+              "Can roofing SEO help with AI search?",
+            answer:
+              "Yes. We create clear, useful, well-structured content that can be understood by traditional search engines, answer engines, and AI-powered search systems. No agency can guarantee that an AI platform will mention a business, but strong content, clear business information, topical relevance, and authority can support broader search visibility.",
+          },
+          {
+            question:
+              "Should I use SEO or paid advertising?",
+            answer:
+              "Both can have a role. SEO builds long-term organic visibility, while paid advertising can provide faster visibility. The right approach depends on your market, goals, competition, and budget.",
           },
         ],
         whyChooseData: {
-          title: "Boutique SEO vs. Large SEO Agencies",
+          title: "Our Roofing SEO Process",
           paragraphs: [
-            "The biggest difference is often the level of attention and customization.",
+            "",
           ],
           containerClassName:
             "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
@@ -4504,119 +4518,129 @@ export const services = [
             "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
           features: [
             {
-              title: "Boutique SEO Agency",
+              title: "Steps",
               desc: <>
               <ul className="list-disc list-outside">
-                <li>Personalized strategy</li>
-                <li>More focused client attention</li>
-                <li>Flexible campaigns</li>
-                <li>Direct communication</li>
-                <li>Niche-focused strategies</li>
-                <li>Strategy built around your goals</li>
+                <li>Website Audit</li>
+                <li>Market Research</li>
+                <li>Keyword Research</li>
+                <li>SEO Strategy</li>
+                <li>On-Page Optimization</li>
+                <li>Local SEO</li>
+                <li>Content Optimization</li>
+                <li>Authority Building</li>
+                <li>Performance Tracking</li>
+                <li>Continuous Improvement</li>
               </ul>
               </>,
             },
             {
-              title: "Large SEO Agency",
+              title: "What We Do",
               desc: <>
               <ul className="list-disc list-outside">
-                <li>Standardized packages</li>
-                <li>Larger client portfolios</li>
-                <li>Fixed processes</li>
-                <li>Multiple layers of teams</li>
-                <li>Broader service models</li>
-                <li>Often template-driven</li>
+                <li>Find technical, content, local, and on-page SEO issues</li>
+                <li>Analyze competitors, locations, services, and customer searches</li>
+                <li>Identify valuable roofing and location-based searches</li>
+                <li>Create a clear roadmap based on your business goals</li>
+                <li>Improve service pages, headings, metadata, content, and links</li>
+                <li>Strengthen your visibility in your target service areas</li>
+                <li>Build useful content around customer questions and search intent</li>
+                <li>Develop relevant trust and authority signals</li>
+                <li>Monitor visibility, traffic, leads, and conversions</li>
+                <li>Keep improving the strategy based on performance</li>
               </ul>
               </>,
             },
           ],
-          footnote: <i>For businesses that want a closer working relationship and a strategy built specifically for their market, a boutique SEO agency can be a strong choice.</i>,
+          footnote: <i></i>,
         },
         seoComparisonData: {
           title:
-            "Who Needs Boutique SEO?",
+            "Why Choose Our Roofing SEO Services?",
           description: (
             <>
-              Boutique SEO can benefit businesses that want focused search growth without a complicated agency experience.
+              
             </>
           ),
           comparisons: [
             {
               id: "traditional-seo",
-              title: "It can be a good fit for:",
+              title: "",
               subtitle: "",
               sections: [
                 {
-                  title: "",
+                  title: "Roofing-Focused Strategy",
                   items: [
-                    <>Small and medium-sized businesses</>,
-                    <>Fashion boutiques</>,
-                    <>Beauty and aesthetic brands</>,
-                    <>Local businesses</>,
-                    <>E-commerce stores</>,
-                    <>Startups</>,
-                    <>Professional service companies</>,
-                    <>Creative brands</>,
-                    <>Niche businesses</>,
-                  ],
-                },
-                {
-                  title: "",
-                  items: [
-                    <>Whether you need <b>local SEO services</b>, technical optimization, content creation, e-commerce SEO, or a complete SEO strategy, your campaign can be built around your specific goals.</>,
+                    <>We build your SEO strategy around your roofing services, customers, locations, competition, and business goals.</>,
                   ],
                 },
               ],
             },
-            // {
-            //   id: "local-seo",
-            //   title: "Local SEO",
-            //   subtitle: "",
-            //   sections: [
-            //     {
-            //       title: "What it is:",
-            //       items: [
-            //         "Optimizing for local audiences",
-            //         "Google Maps visibility",
-            //         "Google Business Profile optimization",
-            //         "location-specific keywords",
-            //         "consistent NAP citations",
-            //         "and review management",
-            //       ],
-            //     },
-            //     {
-            //       title: "Why it matters:",
-            //       items: [
-            //         'Increases visibility in "near me" and local-intent searches',
-            //         "connects you with nearby ready-to-call customers",
-            //         "converts Maps impressions into real service calls",
-            //       ],
-            //     },
-            //   ],
-            // },
-            // {
-            //   id: "ai-seo",
-            //   title: "AI SEO / AIO",
-            //   subtitle: "",
-            //   sections: [
-            //     {
-            //       title: "What it is:",
-            //       items: [
-            //         "Optimizing content for AI-powered search and smart assistants",
-            //         "structuring information clearly",
-            //         "answering questions directly",
-            //       ],
-            //     },
-            //     {
-            //       title: "Why it matters:",
-            //       items: [
-            //         "AI answers increasingly replace traditional search clicks being discovered in AI conversations",
-            //         "not just search results",
-            //         "future-proofs your locksmith business's visibility",
-            //       ],
-            //     },
-            //   ],
-            // },
+            {
+              id: "traditional-seo1",
+              title: "",
+              subtitle: "",
+              sections: [
+                {
+                  title: "Simple, Human Content",
+                  items: [
+                    <>We avoid unnecessary jargon and keyword stuffing. We create content that sounds natural and gives customers useful answers.</>,
+                  ],
+                },
+              ],
+            },
+            {
+              id: "traditional-seo2",
+              title: "",
+              subtitle: "",
+              sections: [
+                {
+                  title: "Local Search Focus",
+                  items: [
+                    <>We help your business become more visible in the areas where you actually provide roofing services.</>,
+                  ],
+                },
+              ],
+            },
+            {
+              id: "traditional-seo3",
+              title: "",
+              subtitle: "",
+              sections: [
+                {
+                  title: "Modern Search Strategy",
+                  items: [
+                    <>We consider traditional SEO, local search, GEO, AEO, AI search, and LLM-based discovery.</>,
+                  ],
+                },
+              ],
+            },
+            {
+              id: "traditional-seo4",
+              title: "",
+              subtitle: "",
+              sections: [
+                {
+                  title: "Data-Driven Decisions",
+                  items: [
+                    <>We track important performance signals and use the data to improve your SEO strategy over time.</>,
+                  ],
+                },
+              ],
+            },
+            {
+              id: "traditional-seo5",
+              title: "",
+              subtitle: "",
+              sections: [
+                {
+                  title: "Clear Reporting",
+                  items: [
+                    <>You should know what is being worked on, what is improving, and where new opportunities exist.</>,
+                  ],
+                },
+              ],
+            },
           ],
         },
       },
