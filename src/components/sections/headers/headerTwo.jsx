@@ -21,6 +21,7 @@ const navigationLinks = [
   { id: 5, path: "/portfolio", lable: "Our Work" },
   { id: 6, path: "/pricing", lable: "Pricing Plans" },
   { id: 7, path: "/blog", lable: "Blog" },
+  { id: 8, path: "/locations", lable: "Locations" },
 ];
 
 const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {

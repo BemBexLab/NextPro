@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowCircleRight } from "react-icons/fa";
 
 const actionStyles = {
   primary:
@@ -152,7 +153,7 @@ export default function ServiceHero({
                   {action.label}
                   {action.showArrow === false ? null : (
                     <span className="ml-3 inline-block" aria-hidden="true">
-                      &gt;
+                      <FaArrowCircleRight />
                     </span>
                   )}
                 </Link>
