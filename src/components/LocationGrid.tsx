@@ -61,7 +61,7 @@ const LocationGrid = () => {
     <button
       key={state}
       type="button"
-      className="flex h-[41px] w-full items-center justify-center rounded-[4px] bg-[#ff2f43] px-3 text-center text-[14px] font-extrabold uppercase leading-none tracking-[-0.02em] text-white shadow-[0_5px_12px_rgba(0,0,0,0.2)] transition-colors hover:bg-[#ed2639] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff2f43] focus-visible:ring-offset-2"
+      className="inline-flex h-[41px] w-fit items-center justify-center whitespace-nowrap rounded-[4px] bg-[#ff2f43] px-5 py-0 text-center text-md font-semibold leading-[1.1] tracking-[-0.02em] text-white shadow-[0_5px_12px_rgba(0,0,0,0.2)] transition-colors hover:bg-[#ed2639] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff2f43] focus-visible:ring-offset-2"
     >
       {state}
     </button>
@@ -69,24 +69,24 @@ const LocationGrid = () => {
 
   return (
       <section className="bg-white px-5 pt-[62px] text-[#082b4a] sm:px-8 py-20">
-        <div className="mx-auto max-w-[1012px] text-center">
+        <div className="mx-auto max-w-1/2 text-center">
           <h2 className="text-[34px] font-bold leading-[1.2] tracking-[-0.035em] sm:text-[36px]">
             Online Services For Businesses Across The USA
           </h2>
 
-          <p className="mx-auto mt-[20px] max-w-[825px] text-[16px] leading-[1.68] tracking-[0.035em] sm:text-[17px]">
-            At Websvent, we provide top-notch web design and development services to businesses of all
+          <p className="mx-auto mt-[20px] max-w-[1400px] text-[16px] leading-[1.68] tracking-[0.035em] sm:text-[17px]">
+            At WebFoundersUSA, we provide top-notch web design and development services to businesses of all
             sizes, located anywhere in the USA. Our team of experts is dedicated to delivering custom
             solutions that help businesses succeed online. Whether you need a new website or want to
             improve your existing online presence, we&apos;re here to help. Contact us today to learn more about
             our services and how we can help your business grow.
           </p>
 
-          <div className="mt-[40px] grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="mt-[40px] flex flex-wrap justify-center gap-5">
             {primaryStates.map(renderStateButton)}
           </div>
 
-          <div className="mx-auto mt-5 grid max-w-[668px] grid-cols-2 gap-5 sm:grid-cols-4">
+          <div className="mx-auto mt-5 flex max-w-[1968px] flex-wrap justify-center gap-5">
             {finalRowStates.map((state) => (
               renderStateButton(state)
             ))}

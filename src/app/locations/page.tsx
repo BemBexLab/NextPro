@@ -16,7 +16,7 @@ const page = () => {
           { label: "Locations" },
         ]}
         title="Explore Our Locations"
-        description="WebsVent is dedicated to helping businesses across the USA achieve their online goals. With our team of expert web designers and developers, you can rest assured that your website will be responsive, user-friendly, and optimized for search engines."
+        description="WebFoundersUSA is dedicated to helping businesses across the USA achieve their online goals. With our team of expert web designers and developers, you can rest assured that your website will be responsive, user-friendly, and optimized for search engines."
         actions={[
           { label: "Contact Us", href: "/contact-us" },
         //   {
