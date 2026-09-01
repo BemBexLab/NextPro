@@ -2,6 +2,21 @@ import React from "react";
 import ServiceHero from "../service/seo-services/components/ServiceHero";
 import LocationGrid from "@/components/LocationGrid";
 import BlogsGridLocation from "@/components/BlogsGridLocation";
+import { withEnUsHreflang } from "@/lib/metadata";
+
+export const metadata = withEnUsHreflang({
+  title: "Locations - Web Founders USA",
+  description:
+    "Explore Web Founders USA services including SEO, web design, and digital marketing solutions built to grow your business.",
+    
+    keywords: [
+    "locations",
+  ],
+    
+    alternates: {
+    canonical: "https://www.webfoundersusa.com/locations",
+  },
+});
 
 const page = () => {
   return (
