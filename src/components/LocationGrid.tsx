@@ -53,15 +53,27 @@ const states = [
   "Wyoming",
 ];
 
-const finalRowStates = states.slice(-4);
-const primaryStates = states.slice(0, -4);
+const bentoLayouts = [
+  "lg:col-span-3 lg:row-span-2 sm:col-span-2",
+  "lg:col-span-2",
+  "lg:col-span-3",
+  "lg:col-span-2 lg:row-span-2 sm:col-span-2",
+  "lg:col-span-2",
+  "lg:col-span-2",
+  "lg:col-span-3 sm:col-span-2",
+  "lg:col-span-2",
+  "lg:col-span-2 lg:row-span-2 sm:col-span-2",
+  "lg:col-span-3",
+  "lg:col-span-2",
+  "lg:col-span-3 sm:col-span-2",
+];
 
 const LocationGrid = () => {
-  const renderStateButton = (state: string) => (
+  const renderStateButton = (state: string, index: number) => (
     <button
       key={state}
       type="button"
-      className="inline-flex h-[41px] w-fit items-center justify-center whitespace-nowrap rounded-[4px] bg-[#ff2f43] px-5 py-0 text-center text-md font-semibold leading-[1.1] tracking-[-0.02em] text-white shadow-[0_5px_12px_rgba(0,0,0,0.2)] transition-colors hover:bg-[#ed2639] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff2f43] focus-visible:ring-offset-2"
+      className={`flex min-h-[72px] min-w-0 items-center justify-center rounded-[20px] border border-[#ff7180] bg-gradient-to-br from-[#ff4657] to-[#e92239] px-4 py-3 text-center text-sm font-bold uppercase leading-tight tracking-[-0.02em] text-white shadow-[0_8px_18px_rgba(255,47,67,0.2)] transition-all duration-200 hover:-translate-y-1 hover:from-[#ff5968] hover:to-[#d91b32] hover:shadow-[0_12px_24px_rgba(255,47,67,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff2f43] focus-visible:ring-offset-2 lg:min-h-[74px] ${bentoLayouts[index % bentoLayouts.length]}`}
     >
       {state}
     </button>
@@ -69,7 +81,7 @@ const LocationGrid = () => {
 
   return (
       <section className="bg-white px-5 pt-[62px] text-[#082b4a] sm:px-8 py-20">
-        <div className="mx-auto max-w-1/2 text-center">
+        <div className="mx-auto max-w-[1400px] text-center">
           <h2 className="text-[34px] font-bold leading-[1.2] tracking-[-0.035em] sm:text-[36px]">
             Online Services For Businesses Across The USA
           </h2>
@@ -82,14 +94,8 @@ const LocationGrid = () => {
             our services and how we can help your business grow.
           </p>
 
-          <div className="mt-[40px] flex flex-wrap justify-center gap-5">
-            {primaryStates.map(renderStateButton)}
-          </div>
-
-          <div className="mx-auto mt-5 flex max-w-[1968px] flex-wrap justify-center gap-5">
-            {finalRowStates.map((state) => (
-              renderStateButton(state)
-            ))}
+          <div className="mx-auto mt-[40px] grid auto-rows-[72px] grid-cols-2 gap-3 text-left sm:grid-cols-4 sm:gap-4 lg:auto-rows-[74px] lg:grid-cols-12 lg:gap-5">
+            {states.map(renderStateButton)}
           </div>
         </div>
       </section>
