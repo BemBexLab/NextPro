@@ -1,4 +1,5 @@
 export const SITE_URL = "https://www.webfoundersusa.com";
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/image123.webp`;
 
 function normalizePathname(pathname) {
   if (!pathname || pathname === "/") {
@@ -66,6 +67,10 @@ export function withEnUsHreflang(metadata = {}) {
   return {
     ...metadata,
     metadataBase: metadata?.metadataBase || new URL(SITE_URL),
+    openGraph: {
+      ...(metadata?.openGraph || {}),
+      images: [DEFAULT_OG_IMAGE],
+    },
     alternates: {
       ...(metadata?.alternates || {}),
       ...(canonicalUrl ? { canonical: canonicalUrl } : {}),
