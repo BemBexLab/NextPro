@@ -115,7 +115,7 @@ export default function LocalSEOServices({
         ) : null}
 
         {footnote ? (
-          <p className="mt-6 text-center text-sm leading-relaxed text-gray-600 sm:mt-8 sm:text-base lg:mt-10 lg:text-lg">
+          <p className="mt-6 text-center italic text-sm leading-relaxed text-gray-600 sm:mt-8 sm:text-base lg:mt-10 lg:text-lg">
             {footnote}
           </p>
         ) : null}

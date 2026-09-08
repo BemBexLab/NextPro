@@ -276,7 +276,7 @@ export default function SubServiceDetailPage({
 
       <SEOComparison {...(service.seoComparisonData || {})} />
 
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {requestAFreeData ? (
         <RequestAFree

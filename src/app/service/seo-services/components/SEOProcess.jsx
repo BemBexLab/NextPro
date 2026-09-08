@@ -12,11 +12,17 @@ function renderStepDescription(step) {
     );
   }
 
-  return (
-    <p className="break-words text-sm leading-relaxed text-gray-700 [overflow-wrap:anywhere] sm:text-base">
-      {getStepDescription(step)}
-    </p>
-  );
+  const description = getStepDescription(step);
+  const className =
+    "break-words text-sm leading-relaxed text-gray-700 [overflow-wrap:anywhere] sm:text-base";
+
+  // JSX descriptions can contain block elements such as lists and paragraphs.
+  // Keep those out of a wrapping <p> to avoid invalid HTML and browser reflow.
+  if (typeof description === "string" || typeof description === "number") {
+    return <p className={className}>{description}</p>;
+  }
+
+  return <div className={className}>{description}</div>;
 }
 
 function renderSectionDescription(description, descriptionHtml) {
