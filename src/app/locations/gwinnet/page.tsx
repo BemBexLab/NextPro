@@ -394,7 +394,7 @@ export default function SEOGwinnettCountyPage() {
               SEO Services in Gwinnett County
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-pretty text-base leading-relaxed text-gray-600 sm:text-lg">
-              Every business is different. That is why we create an SEO plan based on your goals. We focus on the things that can help your website get better search visibility. Our <Link href="/service/seo-services" className="font-semibold text-[#0b63b8] hover:underline">SEO</Link> Services can help with.
+              Every business is different. That is why we create an SEO plan based on your goals. We focus on the things that can help your website get better search visibility. Our <Link href="/service/seo-services" className="font-semibold text-[#0b63b8] hover:underline">SEO Services</Link> can help with.
             </p>
           </div>
 
