@@ -13,6 +13,16 @@ const MobileMenu = dynamic(() => import("./mobileMenu"), {
   ssr: false,
 });
 
+const locationSubNavLinks = [
+  { id: "elk-river", path: "/locations/elk-river", title: "Elk River" },
+  {
+    id: "gainesville-ga",
+    path: "/locations/gainesville-ga",
+    title: "Gainesville, GA",
+  },
+  { id: "gwinnet", path: "/locations/gwinnet", title: "Gwinnett" },
+];
+
 const navigationLinks = [
   { id: 1, path: "/", lable: "Home" },
   { id: 2, path: "/about-us", lable: "About Us" },
@@ -21,7 +31,7 @@ const navigationLinks = [
   { id: 5, path: "/portfolio", lable: "Our Work" },
   { id: 6, path: "/pricing", lable: "Pricing Plans" },
   { id: 7, path: "/blog", lable: "Blog" },
-  { id: 8, path: "/locations", lable: "Locations" },
+  { id: 8, path: "/locations", lable: "Locations", children: locationSubNavLinks },
 ];
 
 const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
@@ -85,7 +95,7 @@ const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
 
                 <nav className="hidden min-w-0 xl:block">
                   <ul className="flex items-center gap-3 whitespace-nowrap text-sm 2xl:gap-7 2xl:text-base">
-                    {navigationLinks.map(({ id, lable, path }) => {
+                    {navigationLinks.map(({ id, lable, path, children = [] }) => {
                       const active = isActive(path);
 
                       if (lable === "Service") {
@@ -200,6 +210,61 @@ const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
                                     View SEO services
                                   </li>
                                 )}
+                              </ul>
+                            </div>
+                          </li>
+                        );
+                      }
+
+                      if (lable === "Locations") {
+                        return (
+                          <li
+                            className="relative py-8 2xl:py-9"
+                            key={id}
+                            onMouseEnter={() => setOpenDropdown("locations")}
+                            onMouseLeave={() => setOpenDropdown(null)}
+                          >
+                            <Link
+                              href={path}
+                              className={`relative flex items-center gap-0.5 font-semibold leading-[22px] transition-all duration-500 ${
+                                active
+                                  ? "text-primary underline underline-offset-4"
+                                  : "text-muted-foreground"
+                              } hover:text-primary-foreground`}
+                              onClick={() => setOpenDropdown(null)}
+                            >
+                              {lable}
+                              <svg
+                                className="h-4 w-4 shrink-0 2xl:ml-0.5 2xl:h-5 2xl:w-5"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M19 9l-7 7-7-7" />
+                              </svg>
+                            </Link>
+
+                            <div
+                              className={`absolute right-0 top-full z-30 w-64 rounded-xl bg-white shadow-2xl transition-all duration-200 ${
+                                openDropdown === "locations"
+                                  ? "pointer-events-auto translate-y-0 opacity-100"
+                                  : "pointer-events-none translate-y-2 opacity-0"
+                              }`}
+                            >
+                              <ul className="space-y-1 whitespace-normal p-3">
+                                {children.map((location) => (
+                                  <li key={location.id}>
+                                    <Link
+                                      href={location.path}
+                                      title={location.title}
+                                      className="block w-full rounded-lg px-4 py-2.5 text-left text-muted-foreground transition-colors hover:bg-gray-100 hover:text-primary-foreground"
+                                      onClick={() => setOpenDropdown(null)}
+                                    >
+                                      {location.title}
+                                    </Link>
+                                  </li>
+                                ))}
                               </ul>
                             </div>
                           </li>

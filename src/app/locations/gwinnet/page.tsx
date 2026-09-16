@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
+import { Metadata } from "next"; // <-- ADD THIS LINE
 
 // --- Hero Section Components ---
 const actionStyles = {
@@ -330,6 +331,11 @@ const faqItems = [
     answer: "Yes. SEO can be created for local, regional, and wider markets.",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "SEO Company Gwinnett County",
+  description: "Grow your Gwinnett County business with expert SEO services. Get better local rankings, more website traffic, and more qualified leads.",
+};
 
 // --- Main Page Component ---
 export default function SEOGwinnettCountyPage() {
