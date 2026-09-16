@@ -46,7 +46,7 @@ const MobileMenu = ({ data }) => {
               </Link>
             </div>
             <ul className="pt-9 pb-8">
-              {data.map(({ id, path, lable }) => {
+              {data.map(({ id, path, lable, children = [] }) => {
                 return (
                   <li key={id}>
                     <Link
@@ -56,6 +56,21 @@ const MobileMenu = ({ data }) => {
                     >
                       {lable}
                     </Link>
+                    {children.length > 0 && (
+                      <ul className="pb-2 pl-4">
+                        {children.map((child) => (
+                          <li key={child.id}>
+                            <Link
+                              href={child.path}
+                              className="flex items-center px-4 py-2 text-sm font-semibold leading-[100%] text-secondary-foreground/80 transition-colors hover:text-primary-foreground dark:text-muted-foreground"
+                              onClick={() => setOpen(false)}
+                            >
+                              {child.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 );
               })}
