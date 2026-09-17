@@ -14,13 +14,13 @@ const MobileMenu = dynamic(() => import("./mobileMenu"), {
 });
 
 const locationSubNavLinks = [
-  { id: "elk-river", path: "/locations/elk-river", title: "Elk River" },
+  { id: "elk-river", path: "/locations/web-design-elk-river", title: "Elk River" },
   {
     id: "gainesville-ga",
-    path: "/locations/gainesville-ga",
+    path: "/locations/web-design-gainesville-ga",
     title: "Gainesville, GA",
   },
-  { id: "gwinnet", path: "/locations/gwinnet", title: "Gwinnett" },
+  { id: "gwinnet", path: "/locations/seo-gwinnet", title: "Gwinnett" },
 ];
 
 const navigationLinks = [
