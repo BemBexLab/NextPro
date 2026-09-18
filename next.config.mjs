@@ -83,6 +83,21 @@ const nextConfig = {
     return [
       ...legacyPortfolioRedirects,
       {
+        source: "/locations/gainesville-ga",
+        destination: "/locations/web-design-gainesville-ga",
+        permanent: true,
+      },
+      {
+        source: "/locations/elk-river",
+        destination: "/locations/web-design-elk-river",
+        permanent: true,
+      },
+      {
+        source: "/locations/gwinnet",
+        destination: "/locations/seo-gwinnet",
+        permanent: true,
+      },
+      {
         source: '/home/:path*',
         destination: '/',
         permanent: true, // 301 redirect /home -> /

@@ -11,6 +11,10 @@ const PROJECTS_ENDPOINT =
 const staticRoutes = [
   "/",
   "/about-us/",
+  "/locations/",
+  "/locations/web-design-gainesville-ga/",
+  "/locations/web-design-elk-river/",
+  "/locations/seo-gwinnet/",
   "/blog/",
   "/blog-list/",
   "/blog-single-no-siderbar/",
