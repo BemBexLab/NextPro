@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
-import { Metadata } from "next"; // <-- ADD THIS LINE
+import type { Metadata } from "next";
+import { withEnUsHreflang } from "@/lib/metadata";
 
 // --- Hero Section Components ---
 const actionStyles = {
@@ -332,10 +333,13 @@ const faqItems = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "SEO Company Gwinnett County",
-  description: "Grow your Gwinnett County business with expert SEO services. Get better local rankings, more website traffic, and more qualified leads.",
-};
+export const metadata: Metadata = withEnUsHreflang({
+  title: "Gwinnett County SEO Company | Web Founders USA",
+  description: "Gwinnett County SEO Company | Web Founders USA helps local businesses grow online with SEO. Call +1 470-470-7392 today for expert SEO!",
+  alternates: {
+    canonical: "/locations/seo-gwinnet/",
+  },
+});
 
 // --- Main Page Component ---
 export default function SEOGwinnettCountyPage() {

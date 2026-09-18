@@ -288,8 +288,8 @@ const faqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: "Website Design Elk River, MN | Web Founders USA",
-  description: "Looking for website design in Elk River, MN? Web Founders USA builds custom, WordPress, and eCommerce websites designed to attract visitors and grow your business.",
+  title: "Website Design in Elk River | Web Founders USA",
+  description: "Website Design in Elk River by Web Founders USA. Get a modern, SEO-friendly website that grows your business. Call +1 470-470-7392 now!",
 };
 
 // --- Main Page Component ---

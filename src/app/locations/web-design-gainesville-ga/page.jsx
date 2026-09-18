@@ -332,6 +332,14 @@ const faqItems = [
   },
 ];
 
+export const metadata = {
+  title: "Web Design Gainesville GA | Web Founders USA",
+  description: "Web Design Gainesville GA by Web Founders USA. Get a modern, SEO-friendly website that grows your business. Call +1 470-470-7392 now!  ",
+  alternates: {
+    canonical: "/locations/web-design-gainesville-ga/",
+  },
+};
+
 // --- Main Page Component ---
 export default function WebDesignGainesvillePage() {
   return (
