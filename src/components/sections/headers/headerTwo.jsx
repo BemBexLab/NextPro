@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoCall } from "react-icons/io5";
 
+import { countyPosts } from "@/data/county";
 import { Button } from "@/components/ui/button";
 import StickyHeader from "@/components/ui/stickyHeader";
 
@@ -13,14 +14,31 @@ const MobileMenu = dynamic(() => import("./mobileMenu"), {
   ssr: false,
 });
 
-const locationSubNavLinks = [
-  { id: "elk-river", path: "/locations/web-design-elk-river", title: "Elk River" },
+const hardCodedLocationSubNavLinks = [
+  {
+    id: "elk-river",
+    path: "/locations/web-design-elk-river/",
+    title: "Elk River",
+  },
   {
     id: "gainesville-ga",
-    path: "/locations/web-design-gainesville-ga",
+    path: "/locations/web-design-gainesville-ga/",
     title: "Gainesville, GA",
   },
-  { id: "gwinnet", path: "/locations/seo-gwinnet", title: "Gwinnett" },
+  {
+    id: "gwinnet",
+    path: "/locations/seo-gwinnet/",
+    title: "Gwinnett",
+  },
+];
+
+const locationSubNavLinks = [
+  ...hardCodedLocationSubNavLinks,
+  ...countyPosts.map((post) => ({
+    id: `county-${post.id}`,
+    path: `/locations/${post.slug}/`,
+    title: post.title,
+  })),
 ];
 
 const navigationLinks = [
