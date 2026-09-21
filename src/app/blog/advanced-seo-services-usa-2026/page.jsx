@@ -1221,7 +1221,7 @@ const BlogSEO2026 = () => {
                 <div className="space-y-3">
                   {[
                     {
-                      href: "/blog/how-to-choose-a-digital-marketing-agency",
+                      href: "/blog/how-to-choose-digital-marketing-agency",
                       label:
                         "How to Choose a Digital Marketing Agency (Complete 2026 Guide)",
                     },
