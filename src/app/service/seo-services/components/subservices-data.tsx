@@ -3105,136 +3105,733 @@ export const services = [
           },
         ],
       },
+
+      // Multilingual SEO
       {
         id: "multilingual-seo",
-        title: "Multilingual SEO Services",
-        desc: "Looking for Multilingual SEO Services? At Web Founders USA the SEO team is here to do maximum optimization to increase the visibility and sales.",
+        title:
+          "Multilingual SEO Agency",
+        desc: "Do you want more people to find your website in different languages?",
         seo: {
-          title: "Multilingual SEO Services - Web Founders USA",
+          title:
+            "Multilingual SEO Services - Web Founders USA",
           description:
             "Reach global audiences with Multilingual SEO Services - Web Founders USA. Expert strategies, multi-language optimization, and better rankings.",
           keyword:
-            "multilingual seo agency, multilingual seo services, multilingual seo consultancy",
+            "SEO for insurance brokers, insurance broker SEO services, insurance agency SEO, local SEO for insurance brokers, insurance marketing, insurance lead generation, insurance website optimization, insurance search engine optimization, insurance broker online marketing, insurance broker digital marketing",
         },
         hero: {
           paragraph:
-            "Nowadays, customers discover brands from every corner of the globe, your online presence shouldn't be confined to a single language. To grow truly internationally, your business needs robust multilingual SEO services that connect you with audiences in their native language.",
-          image: "/service-deatil-images/seo.webp",
+            "",
+          image:
+            "/service-deatil-images/Boost your business visibility online.webp",
         },
         introParagraphs: [
-          "At <a class='text-gray-300 hover:underline' href='/'>Web Founders USA</a>, our multilingual <a class='text-gray-300 hover:underline' href='/service/seo-services/'>SEO agency</a> helps companies expand into new regions, strengthens global rankings, and creates meaningful visibility within more than one market.",
-          "Professional multilingual SEO companies work with you to stay on top of how search differs around the world, is spoken differently, and expects locally tuned content.",
-          "Our team puts in the work so that your website will feel natural, rank correctly, and perform strongly within every target language.",
-          "Search behavior changes in every different language. The words, the tone, the queries, and the cultural expectations change, which is why you need a dedicated multilingual SEO agency in the United States. We don't just translate your strategy—we localize it. From keyword research to on page optimization and technical updates, everything is adjusted to the linguistic and cultural requirements of every region.",
-          "Our multilingual SEO consultancy identifies the right markets for your brand, studies competitors in those regions, and delivers personalized strategies that match search engine requirements around the world.",
-          "Your business can, with a multilingual approach: Expand customer base internationally, grow international traffic, increase trust with localized content, and obtain more leads and conversions from different countries.",
+          'Do you want more people to find your website in different languages?',
+          "Your website may have SEO problems that you cannot see.",
+          <>Our <b>Multilingual SEO Agency</b> helps businesses reach customers who speak different languages. We help your website show up when people search online.</>,
+          <>A website with many languages needs more than simple translation. Each language needs the right words, useful content, and a clear website structure.</>,
+          "Our goal is simple. We help the right people find the right pages on your website.",
         ],
-        features: [
-          "Native Language Keyword Research",
-          "Localized Content Optimization",
-          "Technical SEO for International Markets",
-          "Multilingual Link Building",
-          "Multilingual SEM Support",
-          "Ongoing SEO Consultancy",
+        actions: [
+          { label: "Contact Us", href: "/contact-us" },
+          {
+            label: "Get a Free Multilingual SEO Audit",
+            href: "/contact-us",
+            variant: "secondary",
+          },
         ],
-        tab: {
-          title: "Our Multilingual SEO Service Process",
-          steps: [
+        // requestAFreeData: {
+        //   title: "SEO for Insurance Brokers That Focuses on Business Growth",
+        //   paragraphs: [
+        //     "The goal of SEO is not simply to generate more website traffic.",
+        //     "The goal is to help your insurance business become visible when potential customers are searching for the services you provide.",
+        //     "From technical SEO and local search to keyword research, content optimization, GEO, AEO, LLM optimization, and conversion improvements, we create an SEO strategy around your business.",
+        //     "Whether you are an independent insurance broker, local agency, multi-location brokerage, insurance agent, or larger insurance company, we can build a search strategy designed around your market and growth goals."
+        //   ],
+        //   cta: {
+        //     label: "Get Your Free Insurance SEO Audit",
+        //     href: "/contact-us/",
+        //   },
+        // },
+        expertPage: {
+          intro: {
+            title: (
+              <>
+                Multilingual SEO Services
+              </>
+            ),
+            description: (
+              <div className="space-y-2">
+                <p>Our <b>Multilingual SEO Services</b> help businesses reach customers in different language markets.</p>
+                <p><b>We can help with:</b></p>
+                <div className="experts-benefits-shell flex w-full justify-center">
+                  <div
+                    className="experts-benefits-carousel flex w-full max-w-[900px] snap-x snap-mandatory justify-start gap-4 overflow-x-auto pb-3 scroll-px-[9%] [scrollbar-width:none] [&>*:first-child]:ml-[9%] [&>*:last-child]:mr-[9%] [&::-webkit-scrollbar]:hidden"
+                    aria-label="Locksmith SEO benefits"
+                  >
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Keyword research
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Website optimization
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Local SEO
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Content optimization
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Technical SEO
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Page titles and descriptions
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Internal links
+                      </div>
+                    </div>
+
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Website structure
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Competitor research
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Search intent
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        International SEO
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-1">
+                  <p><i>We create a plan that fits your business and the languages you want to target.</i></p>
+                  <p><i>For businesses that need a complete SEO plan, our <a href="/service/seo-services/" className="hover:text-blue-500 font-semibold underline">SEO Services</a> can cover many important parts of your website.</i></p>
+                </div>
+              </div>
+            ),
+          },
+          relatedServices: {
+            title: "Why Does Multilingual SEO Matter?",
+            description:
+              <div className=""><p>People like to search in their own language.</p> <p>If your website only targets one language, you may miss many potential customers.</p> <p>For example, a business may want to reach English, Spanish, French, German, or other language users.</p> <p>Good multilingual SEO helps each group find the right information.</p> <p>It also helps search engines understand which page is made for each language.</p></div>,
+            exploreLabel: "Explore service",
+            items: [
+              {
+                icon: FaSearch,
+                title: "Multilingual SEO Company",
+                description:
+                  <div>
+                    <p>Working with the right <b>Multilingual SEO Company</b> can make your website easier to find in different markets.</p>
+                    <p>We look at your website, target countries, languages, keywords, and competitors.</p>
+                    <p>We do not just translate the same page into another language.</p>
+                    <p>We look at how people search in each market. This helps us create content that feels natural and useful.</p>
+                  </div>,
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Multilingual SEO Consultancy",
+                description:
+                  <div>
+                    <p>Not sure where to start?</p>
+                    <p>Our <b>Multilingual SEO Consultancy</b> can help.</p>
+                    <p>We can review your website and find areas that need work. We can also help you choose the right languages and markets for your business.</p>
+                    <p>You get a simple plan that shows what you should do next.</p>
+                  </div>,
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Work With a Multilingual SEO Expert",
+                description:
+                  <div>
+                    <p>A <b>Multilingual SEO Expert</b> knows that people may use different words to search for the same thing.</p>
+                    <p>A word that works well in one language may not work well in another.</p>
+                    <p>We research the words people actually use. Then we use those words in your pages and content.</p>
+                    <p>This helps your website reach real people instead of relying on simple word-for-word translation.</p>
+                  </div>,
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Local SEO for Different Languages",
+                description:
+                  <div>
+                    <p>Some businesses serve people who speak different languages in the same city.</p>
+                    <p>For these businesses, <a href="/service/seo-services/local-seo-services/" className="hover:text-blue-500 underline font-semibold">Local SEO Services</a> can be very helpful.</p>
+                    <p>We can improve your local pages, business information, location content, and other local search signals.</p>
+                    <p>This can help people find your business when they search for your services in their own language.</p>
+                  </div>,
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "SEO Content for Multiple Languages",
+                description:
+                  <div>
+                    <p>Good content is a big part of multilingual SEO.</p>
+                    <p>Our <a href="/service/seo-services/seo-content-writing/" className="hover:text-blue-500 underline font-semibold">SEO Content Writing Services</a> help create clear and useful content for your website.</p>
+                    <p>We can create:</p>
+                    <ul className="list-disc list-inside">
+                      <li>Service pages</li>
+                      <li>Location pages</li>
+                      <li>Blog posts</li>
+                      <li>FAQs</li>
+                      <li>Product pages</li>
+                      <li>Landing pages</li>
+                      <li>Business pages</li>
+                    </ul>
+                    <p>We focus on simple language that people can understand.</p>
+                    <p>Our Multilingual SEO Services can then help optimize this content for the right language and search market.</p>
+                  </div>,
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Multilingual SEO for Different Businesses",
+                description:
+                  <div>
+                    <p>Different businesses have different SEO needs.</p>
+                    <p>We can help businesses in many industries.</p>
+                    <p>For companies that sell to other businesses, our <a href="/service/seo-services/b2b-seo/" className="hover:text-blue-500 underline font-semibold">B2B SEO Services</a> can help bring the right business customers to their website.</p>
+                    <p>Larger companies can use our <a href="/service/seo-services/enterprise-seo/" className="hover:text-blue-500 underline font-semibold">Enterprise SEO Services</a> to manage SEO across many pages, products, or locations.</p>
+                    <p>We also work with different industries, including:</p>
+                    <ul className="list-disc list-inside">
+                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/healthcare-seo/">Healthcare SEO Services</Link> for healthcare businesses</li>
+                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/medical-seo/">Medical SEO Services</Link> for medical practices</li>
+                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/dental-seo/">Dental SEO Services</Link> for dental offices</li>
+                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/construction-seo/">Construction SEO Services</Link> for construction companies</li>
+                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/roofing-seo/">Roofing SEO Services</Link> for roofing companies</li>
+                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/roofing-seo/">Hotel SEO Service</Link>s for hotels and hospitality businesses</li>
+                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/boutique-seo/">Boutique SEO Services</Link> for boutique businesses</li>
+                    </ul>
+                    <p>Each industry has its own customers and search terms. That is why we build the SEO plan around the business.</p>
+                  </div>,
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Multilingual SEO for Online Stores",
+                description:
+                  <div>
+                    <p>Online stores can sell products to people in many countries.</p>
+                    <p>But customers need to find products in the language they use.</p>
+                    <p>Our <a href="/service/seo-services/ecommerce-seo/" className="font-semibold underline hover:text-blue-500">E-commerce SEO Services</a> can help online stores improve product pages, category pages, website content, and site structure.</p>
+                    <p>For stores using Shopify, our <a href="/service/seo-services/shopify-seo/" className="font-semibold underline hover:text-blue-500">Shopify SEO Services</a> can help improve the website and product pages for search.</p>
+                    <p>The goal is simple. Help more customers find the products they want.</p>
+                  </div>,
+                href: "",
+              },
+            ],
+          },
+          subrelatedServices: {
+            title: "SEO Audit for Multilingual Websites",
+            description:
+              <div>
+                <p>A multilingual website can have many pages. This can make SEO problems harder to find.</p>
+                <p>Our <a href="/service/seo-services/seo-audit/" className="font-semibold underline hover:text-blue-500">SEO Audit Services</a> can help check your website for common issues.</p>
+                <p>We can look at:</p>
+              </div>,
+            exploreLabel: "Explore service",
+            items: [
+              {
+                // icon: FaSearch,
+                title: "Broken links",
+                description:(<></>),
+                // href: "/service/seo-services/ecommerce-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Page speed",
+                description:(<></>),
+                // href: "/service/seo-services/b2b-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Duplicate content",
+                description:(<></>),
+                // href: "/service/seo-services/dental-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Website structure",
+                description:<></>,
+                // href: "/service/seo-services/enterprise-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Language pages",
+                description:
+                  <></>,
+                // href: "/service/seo-services/automotive-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Page titles",
+                description:
+                  <></>,
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Meta descriptions",
+                description:
+                  <></>,
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Internal links",
+                description:
+                  <></>,
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "Mobile usability",
+                description:
+                  <></>,
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+            ],
+            footnote:
+              "Finding these problems early can help your website perform better.",
+          },
+          results: {
+            title: "Our Multilingual SEO Process",
+            description: (
+              <div className="grid gap-4 sm:grid-cols-2">
+                <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">01</span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">Website Review</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">First, we look at your website and learn about your business.</p>
+                </article>
+                <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">02</span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">SEO Audit</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">We check your website and find areas that need improvement.</p>
+                </article>
+                <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">03</span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">Language Research</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">We learn which languages and markets you want to reach.</p>
+                </article>
+                <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">04</span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">Keyword Research</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">We find useful search terms for each language.</p>
+                </article>
+                <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">05</span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">Competitor Research</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">We check what other businesses are doing in your target markets.</p>
+                </article>
+                <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">06</span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">SEO Strategy</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">We create a simple plan for each language.</p>
+                </article>
+                <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">07</span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">Website Optimization</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">We improve your pages, content, structure, and other SEO areas.</p>
+                </article>
+                <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">08</span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">Track and Improve</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">We watch your traffic, rankings, and other results.</p>
+                </article>
+                <p><i>Then we keep improving the plan.</i></p>
+              </div>
+            ),
+            stats: [
+              {
+                label: (
+                  <>
+                    Local Multilingual
+                    <br />
+                    Businesses Supported
+                  </>
+                ),
+                value: "400+",
+              },
+              {
+                label: (
+                  <>
+                    Leads Generated
+                    <br />
+                    Through SEO
+                  </>
+                ),
+                value: "1200K+",
+              },
+              {
+                label: (
+                  <>
+                    Average Organic
+                    <br />
+                    Growth Delivered
+                  </>
+                ),
+                value: "1,000%+",
+              },
+              {
+                label: (
+                  <>
+                    Revenue Influenced
+                    <br />
+                    via SEO
+                  </>
+                ),
+                value: "$200k+",
+              },
+            ],
+          },
+        },
+        localSEOserviceData: {
+          // eyebrow: "The Foundation of Local Growth",
+          title: "Why Choose Our Multilingual SEO Agency?",
+          description: <div>
+            <p>We keep SEO simple.</p>
+            <p>You do not need to understand every SEO term. We explain the work in easy words.</p>
+            <p><b>Our team focuses on:</b></p>
+          </div>,
+          services: [
             {
-              id: "keyword-research",
-              tab_name: "Native Language Keyword Research",
-              heading: "Native Language Keyword Research",
-              description:
-                "Our multilingual SEO experts analyze trending search terms in each language so as to make sure your website ranks for what users actually search.",
+              id: "keyword-strategy",
+              // icon: (
+              //   <FaUserTie
+              //     aria-hidden="true"
+              //     className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+              //   />
+              // ),
+              title: "Clear SEO plans",
+              description: (
+                <>
+                </>
+              ),
             },
             {
-              id: "content-localization",
-              tab_name: "Localized Content Optimization",
-              heading: "Localized Content Optimization",
-              description:
-                "We rewrite and optimize content so that it sounds natural and culturally aligned, and not robotic or translated.",
+              id: "full-seo-audit",
+              // icon: (
+              //   <FaBuilding
+              //     aria-hidden="true"
+              //     className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+              //   />
+              // ),
+              title: "Natural content",
+              description: (
+                <>
+                </>
+              ),
+            },
+            {
+              id: "on-page-seo",
+              // icon: (
+              //   <FaHandshake
+              //     aria-hidden="true"
+              //     className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+              //   />
+              // ),
+              title: "Better search visibility",
+              description: (
+                <>
+                </>
+              ),
             },
             {
               id: "technical-seo",
-              tab_name: "Technical SEO for International Markets",
-              heading: "Technical SEO for International Markets",
-              description:
-                "From hreflang tags to region based sitemaps, our multiple language SEO agency will make sure your site is indexed correctly across the world.",
+              // icon: (
+              //   <FaUsers
+              //     aria-hidden="true"
+              //     className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+              //   />
+              // ),
+              title: "Different language markets",
+              description: (
+                <>
+                </>
+              ),
             },
             {
-              id: "link-building",
-              tab_name: "Multilingual Link Building",
-              heading: "Multilingual Link Building",
-              description:
-                "We create high quality, language specific backlinks in order to raise domain authority in various countries.",
+              id: "authority-link-growth",
+              // icon: (
+              //   <FaMapMarkerAlt
+              //     aria-hidden="true"
+              //     className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+              //   />
+              // ),
+              title: "Local and international SEO",
+              description: (
+                <>
+                </>
+              ),
             },
             {
-              id: "sem-support",
-              tab_name: "Multilingual SEM Support",
-              heading: "Multilingual SEM Support",
-              description:
-                "At our multilingual SEM agency, we will also support paid search campaigns in multiple languages for faster international growth.",
+              id: "content-copywriting",
+              // icon: (
+              //   <FaShieldAlt
+              //     aria-hidden="true"
+              //     className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+              //   />
+              // ),
+              title: "Useful website pages",
+              description: (
+                <>
+                </>
+              ),
             },
             {
-              id: "consultancy",
-              tab_name: "Ongoing SEO Consultancy",
-              heading: "Ongoing SEO Consultancy",
-              description:
-                "Your multilingual SEO consultancy that monitors performance, provides insights, and will adjust strategies as your international traffic grows. Whether Spanish, Arabic, German, French, or Chinese whatever the target language, your multilingual search marketing agency delivers results that help you stand out on a global scale.",
+              id: "regional-insurance-businesses",
+              // icon: (
+              //   <FaBuilding
+              //     aria-hidden="true"
+              //     className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+              //   />
+              // ),
+              title: "Long-term growth",
+              description: (
+                <>
+                </>
+              ),
             },
           ],
+          footnote: (
+            <>We want your website to be easy for people to use and easy for search engines to understand.</>
+          ),
         },
+        // aiDiscoveryData: {
+        //   eyebrow: "",
+        //   title: (
+        //     <>
+        //       When Should You Get an SEO Audit?
+        //     </>
+        //   ),
+        //   description:
+        //     <>You may need an SEO audit if:</>,
+        //   strategies: [
+        //     {
+        //       id: "traditional-seo",
+        //       title: "Your website is not ranking",
+        //       description:
+        //         "",
+        //     },
+        //     {
+        //       id: "local-seo",
+        //       title: "Your traffic has dropped",
+        //       description:
+        //         "",
+        //     },
+        //     {
+        //       id: "ai-search-optimization",
+        //       title: "Your leads are low",
+        //       description:
+        //         "",
+        //     },
+        //     {
+        //       id: "ai-search-optimization1",
+        //       title: "Your website is very old",
+        //       description:
+        //         "",
+        //     },
+        //     {
+        //       id: "ai-search-optimization2",
+        //       title: "You recently changed your website",
+        //       description:
+        //         "",
+        //     },
+        //     {
+        //       id: "ai-search-optimization3",
+        //       title: "You launched a new website",
+        //       description:
+        //         "",
+        //     },
+        //     {
+        //       id: "ai-search-optimization4",
+        //       title: "Google is not indexing your pages",
+        //       description:
+        //         "",
+        //     },
+        //     {
+        //       id: "ai-search-optimization5",
+        //       title: "Your competitors are getting more traffic",
+        //       description:
+        //         "",
+        //     },
+        //     {
+        //       id: "ai-search-optimization6",
+        //       title: "You want to improve your SEO plan",
+        //       description:
+        //         "",
+        //     },
+        //   ],
+        //   footnote: <>An audit can help you find the problem before you spend more time and money on the wrong SEO work.</>,
+        // },
+
+        tab: {
+          title:
+            "Grow Your Business With Multilingual SEO",
+          description: (
+            <div className="relative overflow-hidden rounded-3xl border border-[#dbe7ff] bg-gradient-to-br from-[#f7fbff] via-white to-[#eef5ff] p-6 shadow-sm sm:p-8">
+              <div
+                className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#b9d5ff]/30 blur-3xl"
+                aria-hidden="true"
+              />
+              <div className="relative space-y-4 text-base leading-7 text-slate-600 sm:text-lg">
+                <p className="max-w-2xl text-xl font-bold leading-tight text-[#072d7f] sm:text-2xl">
+                  Your next customer may speak a different language.
+                </p>
+                <p>Your website should still be ready to help them.</p>
+                <p>
+                  With the right SEO plan, your website can reach more people in more markets.
+                </p>
+                <p className="border-l-4 border-[#ff8066] bg-white/70 py-3 pl-4 font-medium text-[#334155]">
+                  If you are looking for a <b>Multilingual SEO Agency</b>, we can help you build a clear plan for your business and target languages.
+                </p>
+              </div>
+            </div>
+          ),
+          steps: [
+          ],
+        },
+        faqTitle: "Frequently Asked Questions",
         faqs: [
           {
-            question: "Why do I need multilingual SEO services?",
+            question:
+              "What is a Multilingual SEO Agency?",
             answer:
-              "Multilingual SEO services help your business appear in global search results, reach customers in their native language, and increase international sales.",
+              "A Multilingual SEO Agency helps businesses improve their website for people who search in different languages.",
           },
           {
-            question: "What does a multilingual SEO agency do?",
+            question: "What are Multilingual SEO Services?",
             answer:
-              "A multilingual SEO agency optimizes your website for different languages by performing native keyword research, content localization, technical SEO, and global ranking improvements.",
+              "Multilingual SEO Services help websites reach customers in different languages. This includes keyword research, content, website structure, and other SEO work.",
+          },
+          {
+            question: "Is translation enough for multilingual SEO?",
+            answer:
+              "No. Translation is only one part. Each language also needs the right keywords, useful content, and a good website structure.",
           },
           {
             question:
-              "In what ways does a multilingual SEO company differ from a translator?",
+              "Can multilingual SEO help local businesses?",
             answer:
-              "A multilingual SEO company doesn’t just translate—it localizes your entire SEO strategy so it ranks correctly in each target language and region.",
+              "Yes. Multilingual SEO can help local businesses reach customers who speak different languages in the same area.",
           },
           {
             question:
-              "Do you provide multilingual SEO consultancy before starting the work?",
+              "Can multilingual SEO help an online store?",
             answer:
-              "Yes. Our multilingual SEO consultancy evaluates your target markets, website structure, and language opportunities before building your strategy.",
+              <>Yes. It can help online stores reach customers in different countries and language markets.</>,
           },
           {
-            question: "Can multilingual SEO increase global traffic?",
+            question:
+              "Do I need a Multilingual SEO Expert?",
             answer:
-              "Absolutely. With the help of a multilingual SEO expert, your website becomes more visible to international audiences, driving more traffic and conversions.",
+              <>An expert can help you choose the right keywords, languages, markets, and SEO strategy for your website.</>,
+          },
+          {
+            question:
+              "Can you help with many languages?",
+            answer:
+              "Yes. We can help businesses create SEO strategies for websites that target multiple languages and markets.",
           },
         ],
-        whyChoose: [
-          {
-            title: "Geographically Specific Work",
-            desc: "We tailor every strategy to the unique search behaviors, cultural nuances, and competitive landscapes of each target region.",
-          },
-          {
-            title: "Human-Written, Native Content",
-            desc: "All content is crafted by native speakers—not automated translation—ensuring authenticity, clarity, and engagement.",
-          },
-          {
-            title: "Strong International Ranking Strategies",
-            desc: "From hreflang implementation to localized backlink outreach, we deploy proven tactics that drive rankings across global markets.",
-          },
-          {
-            title: "Transparent Reporting",
-            desc: "Receive clear, actionable insights on performance by language, region, and keyword—so you always know your ROI.",
-          },
-          {
-            title: "Long-Term Growth Through Research-Based Data",
-            desc: "Our strategies are built on deep market analysis, competitor benchmarking, and ongoing optimization for sustainable international success.",
-          },
-        ],
+        // whyChooseData: {
+        //   title: "Why Choose Our Locksmith SEO Agency?",
+        //   containerClassName:
+        //     "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
+        //   gridClassName:
+        //     "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
+        //   features: [
+        //     {
+        //       title: "Local SEO Expertise",
+        //       desc: "We specialize in <strong>local business SEO</strong>, helping you rank in <strong>Google Map Pack</strong> and dominate <strong>location based searches</strong> in your target area.",
+        //     },
+        //     {
+        //       title: "Proven Local Results",
+        //       desc: "Our strategies improve your visibility in <strong>near me searches</strong>, increase <strong>local traffic</strong>, and generate more calls and leads.",
+        //     },
+        //     {
+        //       title: "Custom Location Strategies",
+        //       desc: "We create personalized campaigns based on your <strong>business location</strong>, audience behavior, and local competition.",
+        //     },
+        //     {
+        //       title: "Transparent Reporting",
+        //       desc: "Get clear insights into your <strong>local rankings</strong>, traffic, and conversions with easy-to-understand reports.",
+        //     },
+        //   ],
+        // },
+        // seoComparisonData: {
+        //   title:
+        //     "Why Choose Our SEO Services for Insurance?",
+        //   description: (
+        //     <>
+        //     </>
+        //   ),
+        //   comparisons: [
+        //     {
+        //       id: "traditional-seo",
+        //       title: "Insurance Focused Strategy",
+        //       subtitle: "We build your SEO strategy around your insurance services, customers, locations, competition, and business objectives.",
+        //     },
+        //     {
+        //       id: "local-seo",
+        //       title: "Human-Focused Content",
+        //       subtitle: "We avoid unnecessary jargon and keyword stuffing. Our content is designed to answer real customer questions clearly.",
+        //     },
+        //     {
+        //       id: "ai-seo",
+        //       title: "Local Search Expertise",
+        //       subtitle: "We help insurance brokers, agents, and agencies improve visibility in the markets where they actually operate.",
+        //     },
+        //     {
+        //       id: "ai-seo1",
+        //       title: "Modern Search Strategy",
+        //       subtitle: "Our approach considers traditional SEO, local search, GEO, AEO, AI search, and LLM-based discovery.",
+        //     },
+        //     {
+        //       id: "ai-seo2",
+        //       title: "Scalable SEO",
+        //       subtitle: "Whether you operate from one location or manage multiple insurance offices, we build a structure that can grow with your business.",
+        //     },
+        //     {
+        //       id: "ai-seo3",
+        //       title: "Data-Driven Decisions",
+        //       subtitle: "We monitor important SEO and business signals and use the data to improve the strategy over time.",
+        //     },
+        //     {
+        //       id: "ai-seo4",
+        //       title: "Clear Reporting",
+        //       subtitle: "You should understand what is being optimized, what is improving, and where new opportunities exist.",
+        //     },
+        //   ],
+        // },
       },
       {
         id: "seo-content-writing",
