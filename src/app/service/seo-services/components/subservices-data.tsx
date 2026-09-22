@@ -2146,149 +2146,1349 @@ export const services = [
           },
         ],
       },
+
       {
         id: "seo-audit",
-        title: "SEO Audit Services",
-        desc: "Looking for SEO Audit Services? Web Founders USA is here to help you with practical solutions. Improve ranking and increase visibility.",
+        title:
+          "SEO Audit Services",
+        desc: "Is your website not getting enough visitors from Google?",
         seo: {
-          title: "SEO Audit Service - Web Founders USA",
+          title:
+            "SEO Audit Service - Web Founders USA",
           description:
             "Web Founders USA delivers comprehensive SEO audit services. Local, technical, and website audits identify issues and drive growth for your business.",
           keyword:
-            "seo audit services, technical seo audit service, website audit service, seo technical audit service",
+            "SEO for insurance brokers, insurance broker SEO services, insurance agency SEO, local SEO for insurance brokers, insurance marketing, insurance lead generation, insurance website optimization, insurance search engine optimization, insurance broker online marketing, insurance broker digital marketing",
         },
         hero: {
           paragraph:
-            "If your website is not performing as expected, even though you are using the right keywords, there may be hidden issues holding back your visibility. At Web Founders USA, our SEO audit agency identifies these problems and helps you fix them with actionable, practical solutions.",
-          image: "/service-deatil-images/seo.webp",
+            "",
+          image:
+            "/service-deatil-images/Boost your business visibility online.webp",
         },
         introParagraphs: [
-          "At <a class='text-gray-300 hover:underline' href='/'>Web Founders USA</a>, our SEO audit agency identifies these problems and helps you fix them with actionable, practical solutions. We don't just optimize your site; our team of experts examines every aspect of your website to detect hurdles that could prevent your site from ranking higher on Google.",
-          "A thorough SEO audit service can reveal whether low visibility is due to keyword placement, weak backlinks, technical errors, or other optimization challenges. Strong backlinks, for example, are essential for ranking higher, and our audit process makes sure your site leverages every opportunity to improve.",
-          "With professional SEO audit services, we help businesses understand exactly where their website stands and what steps are needed to maximize online performance.",
+          'Is your website not getting enough visitors from Google?',
+          "Your website may have SEO problems that you cannot see.",
+          <>Our <b>SEO Audit Services</b> help you find these problems. We check your website and show you what needs to be fixed.</>,
+          <>A good SEO audit can help you understand why your website is not ranking well. It can also show you ways to improve your traffic, pages, and user experience.</>,
+          "We keep the process simple. You do not need to know SEO to understand our audit.",
         ],
-        features: [
-          "Comprehensive Website Audit",
-          "Technical SEO Audit",
-          "Keyword Analysis & Optimization",
-          "Backlink & Authority Review",
-          "Content Quality & Structure Review",
-          "Local SEO Audit Services",
-          "E-commerce SEO Audit Services",
-          "Performance Tracking & Reporting",
+        actions: [
+          { label: "Contact Us", href: "/contact-us" },
+          {
+            label: "Get a Free Insurance SEO Audit",
+            href: "/contact-us",
+            variant: "secondary",
+          },
         ],
+        requestAFreeData: {
+          title: "SEO for Insurance Brokers That Focuses on Business Growth",
+          paragraphs: [
+            "The goal of SEO is not simply to generate more website traffic.",
+            "The goal is to help your insurance business become visible when potential customers are searching for the services you provide.",
+            "From technical SEO and local search to keyword research, content optimization, GEO, AEO, LLM optimization, and conversion improvements, we create an SEO strategy around your business.",
+            "Whether you are an independent insurance broker, local agency, multi-location brokerage, insurance agent, or larger insurance company, we can build a search strategy designed around your market and growth goals."
+          ],
+          cta: {
+            label: "Get Your Free Insurance SEO Audit",
+            href: "/contact-us/",
+          },
+        },
+        expertPage: {
+          intro: {
+            title: (
+              <>
+                What Is an SEO Audit?
+              </>
+            ),
+            description: (
+              <div className="space-y-2">
+                <p>
+                  An SEO audit is a full check of your website.
+                </p>
+                <p>
+                  We look at the parts of your website that can affect search rankings and visitors.
+                </p>
+                <p>
+                  <b>We check things like:</b>
+                </p>
+                <div className="experts-benefits-shell flex w-full justify-center">
+                  <div
+                    className="experts-benefits-carousel flex w-full max-w-[900px] snap-x snap-mandatory justify-start gap-4 overflow-x-auto pb-3 scroll-px-[9%] [scrollbar-width:none] [&>*:first-child]:ml-[9%] [&>*:last-child]:mr-[9%] [&::-webkit-scrollbar]:hidden"
+                    aria-label="Locksmith SEO benefits"
+                  >
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Website speed
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Mobile experience
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Page titles
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Meta descriptions
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Headings
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Content
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Keywords
+                      </div>
+                    </div>
+
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Internal links
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Broken links
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Website structure
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Technical issues
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        Local SEO
+                      </div>
+                    </div>
+                    <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
+                      <div className="font-semibold text-gray-900">
+                        E-commerce pages
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className=""><i>After the audit, we give you clear information about what is working and what needs help.</i></p>
+              </div>
+            ),
+          },
+          relatedServices: {
+            title: "Professional SEO Audit Services",
+            description:
+              <div className=""><p>Our <b>Professional SEO Audit Services</b> are made for businesses that want a clear view of their website.</p> <p>We do not only look at one or two pages.</p> <p>We check the bigger picture.</p> <p>We look at your technical SEO, content, keywords, links, website structure, and other important areas.</p> <p>The goal is to help you understand your website and make better SEO decisions.</p></div>,
+            exploreLabel: "Explore service",
+            items: [
+              {
+                icon: FaSearch,
+                title: "SEO Audit Agency",
+                description:
+                  <div>
+                    <p>Choosing the right <b>SEO Audit Agency</b> can make the process much easier.</p>
+                    <p>Our team checks your website carefully and explains the problems in simple words.</p>
+                    <p>You get useful information that you can use to improve your website.</p>
+                    <p>We can also help you create a plan after the audit so you know what to fix first.</p>
+                  </div>,
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Technical SEO Audit Services",
+                description:
+                  <div>
+                    <p>Technical problems can make it hard for search engines to understand your website.</p>
+                    <p>Our <b>Technical SEO Audit Services</b> check the technical parts of your site.</p>
+                    <p><b>We can review:</b></p>
+                    <ul className="list-disc list-inside">
+                      <li>Website speed</li>
+                      <li>Mobile performance</li>
+                      <li>Crawl issues</li>
+                      <li>Indexing problems</li>
+                      <li>Broken pages</li>
+                      <li>Redirects</li>
+                      <li>Site structure</li>
+                      <li>XML sitemap</li>
+                      <li>Robots.txt</li>
+                      <li>HTTPS</li>
+                      <li>Duplicate pages</li>
+                      <li>Canonical tags</li>
+                    </ul>
+                    <p>Fixing these problems can help search engines crawl and understand your website better.</p>
+                  </div>,
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Website Audit Services",
+                description:
+                  <div>
+                    <p>Our <b>Website Audit Services</b> look at more than just technical SEO.</p>
+                    <p>We also review your pages and content.</p>
+                    <p>We check if your website is easy to use and easy to understand.</p>
+                    <p>We look at whether your pages clearly explain your services and whether visitors can easily find what they need.</p>
+                    <p>A website should work for both people and search engines.</p>
+                  </div>,
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "SEO Audit Companies",
+                description:
+                  <div>
+                    <p>There are many <b>SEO Audit Companies</b> that offer website audits.</p>
+                    <p>But not every audit gives you useful information.</p>
+                    <p>We focus on finding real problems and giving you clear next steps.</p>
+                    <p>We do not want to give you a long list of confusing SEO words.</p>
+                    <p>We want you to know what is wrong, why it matters, and what you can do about it.</p>
+                  </div>,
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "SEO Auditing Services for Better Rankings",
+                description:
+                  <div>
+                    <p>Our <b>SEO Auditing Services</b> help you find areas that may be holding your website back.</p>
+                    <p>We review your current SEO and look for opportunities to improve.</p>
+                    <p>This can include better keywords, stronger content, improved pages, technical fixes, and better internal links.</p>
+                    <p>For businesses that need a complete SEO plan after the audit, our SEO Services can help with ongoing optimization.</p>
+                  </div>,
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "SEO Audit Service Company",
+                description:
+                  <div>
+                    <p>As an SEO Audit Service Company, we help businesses understand their current SEO health.</p>
+                    <p>We can audit new websites, old websites, local websites, large websites, and online stores.</p>
+                    <p>Every website is different.</p>
+                    <p>That is why we do not use the same audit plan for every business.</p>
+                  </div>,
+                href: "",
+              },
+              {
+                icon: FaSearch,
+                title: "Search Engine Optimization Audit Services",
+                description:
+                  <div>
+                    <p>Our Search Engine Optimization Audit Services cover the main areas that can affect your website's search performance.</p>
+                    <p>We check how well your website is set up for search engines and users.</p>
+                    <p>We also look for areas where your competitors may be doing better.</p>
+                    <p>This helps you see where your website has room to grow.</p>
+                  </div>,
+                href: "",
+              },
+            ],
+          },
+          subrelatedServices: {
+            title: "SEO Website Audit Service",
+            description:
+              <div>
+                <p>An SEO Website Audit Service can be useful when your website has traffic but very few leads.</p>
+                <p>It can also help when your rankings have dropped or when your website is not ranking for the keywords you want.</p>
+                <p>We check your pages and find possible reasons for the problem.</p>
+                <p>Then we help you understand what should be done next.</p>
+              </div>,
+            exploreLabel: "Explore service",
+            items: [
+              {
+                // icon: FaSearch,
+                title: "Local SEO Audit Services",
+                description:
+                  <div>
+                    <p>Local businesses need to be easy to find in their area.</p>
+                    <p>Our Local SEO Audit Services check the local parts of your website and online presence.</p>
+                    <p><b>We can review:</b></p>
+                    <ul className="list-disc list-inside">
+                      <li>Google Business Profile</li>
+                      <li>Local keywords</li>
+                      <li>Location pages</li>
+                      <li>Business information</li>
+                      <li>Local listings</li>
+                      <li>Reviews</li>
+                      <li>Local content</li>
+                      <li>NAP information</li>
+                    </ul>
+                    <p>If you need more help with local search after the audit, our <a href="/service/seo-services/local-seo-services/" className="hover:text-blue-500 font-semibold underline">Local SEO Services</a> can help improve your local visibility.</p>
+                  </div>,
+                // href: "/service/seo-services/ecommerce-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "E-commerce SEO Audit Services",
+                description:
+                  <div>
+                    <p>Online stores have many pages.</p>
+                    <p>Product pages, category pages, filters, and other parts of an online store can create SEO problems.</p>
+                    <p>Our E-commerce SEO Audit Services check these areas.</p>
+                    <p>We can review product pages, category pages, internal links, duplicate content, site structure, and other important parts.</p>
+                    <p>If your store uses Shopify, our <a href="/service/seo-services/shopify-seo/" className="hover:text-blue-500 underline font-semibold">Shopify SEO Services</a> can also help improve your online store after the audit.</p>
+                  </div>,
+                // href: "/service/seo-services/b2b-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "Technical SEO Site Audit Agency",
+                description:
+                  <div>
+                    <p>As a Technical SEO Site Audit Agency, we can check the technical health of your website.</p>
+                    <p>We look for problems that may stop search engines from crawling or indexing your pages.</p>
+                    <p>We also check if your website works well on mobile devices and loads quickly.</p>
+                    <p>These basic things can have a big effect on the user experience.</p>
+                  </div>,
+                // href: "/service/seo-services/dental-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "SEO Technical Audit Services",
+                description:
+                  <div>
+                    <p>Our <b>SEO Technical Audit Services</b> focus on the technical side of SEO.</p>
+                    <p><b>We can check your website for:</b></p>
+                    <ul className="list-disc list-inside">
+                      <li>Crawl errors</li>
+                      <li>Indexing issues</li>
+                      <li>Slow pages</li>
+                      <li>Mobile problems</li>
+                      <li>Broken links</li>
+                      <li>Redirect issues</li>
+                      <li>Sitemap problems</li>
+                      <li>Duplicate content</li>
+                      <li>Security issues</li>
+                    </ul>
+                    <p>Once we find problems, we explain what needs to be fixed.</p>
+                  </div>,
+                // href: "/service/seo-services/enterprise-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "SEO Audit for Your Website Content",
+                description:
+                  <div>
+                    <p>Content is an important part of SEO.</p>
+                    <p>Your website should answer the questions your customers ask.</p>
+                    <p>Our <a href="/service/seo-services/seo-content-writing/" className="font-semibold hover:text-blue-500 underline">SEO Content Writing Services</a> can help improve or create useful content after your audit.</p>
+                    <p>We can help with service pages, location pages, blog posts, FAQs, and other website content.</p>
+                    <p>If your business serves customers in different languages, <a href="/service/seo-services/multilingual-seo/" className="font-semibold hover:text-blue-500 underline">Multilingual SEO Services</a> can also help you reach those users.</p>
+                  </div>,
+                // href: "/service/seo-services/automotive-seo/",
+              },
+              {
+                // icon: FaSearch,
+                title: "SEO Audits for Different Businesses",
+                description:
+                  <div>
+                    <p>Different businesses have different SEO needs.</p>
+                    <p>We can audit websites for many types of businesses.</p>
+                    <p><b>For example:</b></p>
+                    <ul className="list-disc list-inside">
+                      <li><Link className="font-semibold hover:text-blue-500 underline" href="">B2B SEO Services</Link> for companies that sell to other businesses</li>
+                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/enterprise-seo/">Enterprise SEO Services</Link> for large websites</li>
+                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/healthcare-seo/">Healthcare SEO Services</Link> for healthcare companies</li>
+                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/medical-seo/">Medical SEO Services</Link> for medical practices</li>
+                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/dental-seo/">Dental SEO Services</Link> for dental offices</li>
+                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/construction-seo/">Construction SEO Services</Link> for construction companies</li>
+                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/roofing-seo/">Roofing SEO Services</Link> for roofing businesses</li>
+                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/hotel-seo/">Hotel SEO Services</Link> for hotels</li>
+                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/boutique-seo/">Boutique SEO Services</Link> for boutique businesses</li>
+                    </ul>
+                    <p>We look at the needs of your industry when reviewing your website.</p>
+                  </div>,
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "E-commerce and Online Store Audits",
+                description:
+                  <div>
+                    <p>Online stores need special attention.</p>
+                    <p>A store can have hundreds or even thousands of pages.</p>
+                    <p>Some pages may not be useful for search engines. Others may have thin or duplicate content.</p>
+                    <p>Our <a href="/service/seo-services/ecommerce-seo/" className="hover:text-blue-500 underline font-semibold">E-commerce SEO Services</a> can help improve your online store after the audit.</p>
+                    <p>We can also help businesses that use other e-commerce platforms and create a plan based on their website.</p>
+                  </div>,
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+              {
+                // icon: FaSearch,
+                title: "What Does an SEO Audit Check?",
+                description:
+                  <div>
+                    <p>A complete SEO audit can check many parts of your website.</p>
+                    <p><b>Technical SEO:</b></p>
+                    <p>We check the technical health of your website.</p>
+
+                    <p><b>On-Page SEO:</b></p>
+                    <p>We check titles, headings, content, keywords, images, and internal links.</p>
+
+                    <p><b>Content:</b></p>
+                    <p>We check if your content is useful, clear, and relevant.</p>
+
+                    <p><b>Local SEO:</b></p>
+                    <p>We check your local search signals and business information.</p>
+
+                    <p><b>User Experience:</b></p>
+                    <p>We check if visitors can easily use your website.</p>
+
+                    <p><b>Competitors:</b></p>
+                    <p>We look at what competing websites are doing well.</p>
+
+                    <p><b>Search Visibility</b></p>
+                    <p>We look for opportunities to improve your rankings and reach more customers.</p>
+                  </div>,
+                // href: "/service/seo-services/wordpress-seo/ ",
+              },
+            ],
+          },
+          results: {
+            title: "Our SEO Audit Process",
+            description: (
+              <div className="space-y-2">
+                <h3>Website Review</h3>
+                <p>First, we look at your website and learn about your business.</p>
+
+                <h3>Technical Check</h3>
+                <p>We check the technical parts of your website.</p>
+
+                <h3>Content Check</h3>
+                <p>We review your pages and website content.</p>
+
+                <h3>Keyword Review</h3>
+                <p>We check the keywords you target and find new opportunities.</p>
+
+                <h3>Competitor Check</h3>
+                <p>We compare your website with other websites in your market.</p>
+
+                <h3>Local SEO Check</h3>
+                <p>If you are a local business, we review your local SEO.</p>
+                
+                <h3>Audit Report</h3>
+                <p>We put our findings into a clear report.</p>
+
+                <h3>Action Plan</h3>
+                <p>We explain what you should fix first and what can be done later.</p>
+              </div>
+            ),
+            stats: [
+              {
+                label: (
+                  <>
+                    Local Locksmith
+                    <br />
+                    Businesses Supported
+                  </>
+                ),
+                value: "400+",
+              },
+              {
+                label: (
+                  <>
+                    Leads Generated
+                    <br />
+                    Through SEO
+                  </>
+                ),
+                value: "1200K+",
+              },
+              {
+                label: (
+                  <>
+                    Average Organic
+                    <br />
+                    Growth Delivered
+                  </>
+                ),
+                value: "1,000%+",
+              },
+              {
+                label: (
+                  <>
+                    Revenue Influenced
+                    <br />
+                    via SEO
+                  </>
+                ),
+                value: "$200k+",
+              },
+            ],
+          },
+        },
+        localSEOserviceData: {
+          // eyebrow: "The Foundation of Local Growth",
+          title: "SEO for Insurance Agents and Agencies",
+          description: <>Insurance agents and agencies often compete for many of the same searches as larger insurance companies. A focused SEO strategy can help smaller and independent businesses establish visibility around their services, expertise, and local markets. <br /><b>Our strategy can support:</b></>,
+          services: [
+            {
+              id: "keyword-strategy",
+              icon: (
+                <FaUserTie
+                  aria-hidden="true"
+                  className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+                />
+              ),
+              title: "Independent insurance agents",
+              description: (
+                <>
+                </>
+              ),
+            },
+            {
+              id: "full-seo-audit",
+              icon: (
+                <FaBuilding
+                  aria-hidden="true"
+                  className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+                />
+              ),
+              title: "Insurance agencies",
+              description: (
+                <>
+                </>
+              ),
+            },
+            {
+              id: "on-page-seo",
+              icon: (
+                <FaHandshake
+                  aria-hidden="true"
+                  className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+                />
+              ),
+              title: "Insurance brokers",
+              description: (
+                <>
+                </>
+              ),
+            },
+            {
+              id: "technical-seo",
+              icon: (
+                <FaUsers
+                  aria-hidden="true"
+                  className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+                />
+              ),
+              title: "Multi-agent insurance offices",
+              description: (
+                <>
+                </>
+              ),
+            },
+            {
+              id: "authority-link-growth",
+              icon: (
+                <FaMapMarkerAlt
+                  aria-hidden="true"
+                  className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+                />
+              ),
+              title: "Local insurance firms",
+              description: (
+                <>
+                </>
+              ),
+            },
+            {
+              id: "content-copywriting",
+              icon: (
+                <FaShieldAlt
+                  aria-hidden="true"
+                  className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+                />
+              ),
+              title: "Specialty insurance agencies",
+              description: (
+                <>
+                </>
+              ),
+            },
+            {
+              id: "regional-insurance-businesses",
+              icon: (
+                <FaBuilding
+                  aria-hidden="true"
+                  className="mx-auto h-14 w-14 text-black sm:h-16 sm:w-16"
+                />
+              ),
+              title: "Regional insurance businesses",
+              description: (
+                <>
+                </>
+              ),
+            },
+          ],
+          footnote: (
+            <>We build pages around specific services, locations, customer questions, and commercial search terms rather than trying to make one page rank for everything.
+            <br />
+            This approach allows an insurance website to develop stronger topical relevance while creating dedicated opportunities for different customer segments.
+            </>
+          ),
+        },
+        aiDiscoveryData: {
+          eyebrow: "",
+          title: (
+            <>
+              SEO for Insurance Companies
+            </>
+          ),
+          description:
+            <>Large insurance companies and established organizations often have hundreds or thousands of pages covering products, locations, policies, resources, and customer needs. <br /> That scale creates opportunities but it can also create SEO challenges. <br /> <b><i>Our SEO for insurance companies strategy can address:</i></b></>,
+          strategies: [
+            {
+              id: "traditional-seo",
+              title: "Large website architecture",
+              description:
+                "",
+            },
+            {
+              id: "local-seo",
+              title: "Product and service pages",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization",
+              title: "Location pages",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization1",
+              title: "Content scalability",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization2",
+              title: "Internal linking",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization3",
+              title: "Technical SEO",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization4",
+              title: "Duplicate content",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization5",
+              title: "Indexation management",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization6",
+              title: "Search intent",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization7",
+              title: "Brand visibility",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization8",
+              title: "Authority building",
+              description:
+                "",
+            },
+            {
+              id: "ai-search-optimization9",
+              title: "Conversion optimization",
+              description:
+                "",
+            },
+          ],
+          footnote: <>We create an SEO framework that allows different sections of your website to support one another while maintaining clear relevance for customers and search engines.</>,
+        },
+
         tab: {
-          title: "Features of Our SEO Audit Services",
+          title:
+            "SEO for Insurance Websites",
+          description: <>Your website is the foundation of your organic search strategy. <br /> A strong insurance website should make it easy for visitors to understand:</>,
           steps: [
             {
-              id: "comprehensive-audit",
-              tab_name: "Comprehensive Website Audit",
-              heading: "Comprehensive Website Audit",
+              id: "local-seo-audit",
+              tab_name: "Who you are",
+              heading: "Who you are",
               description:
-                "The service provided by us for auditing a website comprehensively inspects the site in all aspects from all sides, checking the page layout, navigation, and speed performance. We detect the problems that hinder the ranks of a website in the search engines and present the solutions along with their respective pros and cons in a very understandable way.",
+                "",
             },
             {
-              id: "technical-audit",
-              tab_name: "Technical SEO Audit",
-              heading: "Technical SEO Audit",
+              id: "google-business-optimization",
+              tab_name: "What types of insurance you provide",
+              heading: "What types of insurance you provide",
               description:
-                "We conduct a technical SEO audit service, focusing on such components as site speed, mobile usability, crawl errors, duplicate content, and indexing problems. This verifies that the website is tech savvy and user friendly to the maximum extent.",
+                "",
             },
             {
-              id: "keyword-analysis",
-              tab_name: "Keyword Analysis & Optimization",
-              heading: "Keyword Analysis & Optimization",
+              id: "local-keyword-research",
+              tab_name: "Who you serve",
+              heading: "Who you serve",
               description:
-                "We analyze the present keywords for your website and also discover opportunities. In case your site is not appearing in search results for the relevant keywords, our SEO auditing service will reveal such chances and recommend improvements that can be done right away.",
+                "",
             },
             {
-              id: "backlink-review",
-              tab_name: "Backlink & Authority Review",
-              heading: "Backlink & Authority Review",
+              id: "on-page-local-seo",
+              tab_name: "Where you operate",
+              heading: "Where you operate",
               description:
-                "Quality backlinks have always been an important determinant of Google rankings. The process of our SEO audit services involves evaluating your link profile, recognizing the bad quality links, and coming up with proposals for the buildup of authority and thereby increasing visibility.",
+                "",
             },
             {
-              id: "content-review",
-              tab_name: "Content Quality & Structure Review",
-              heading: "Content Quality & Structure Review",
+              id: "citation-building",
+              tab_name: "What makes your business different",
+              heading: "What makes your business different",
               description:
-                "We conduct an assessment to evaluate the quality, significance, and structure of the content on your website. The SEO website audit service we offer makes sure that your pages are user friendly as well as search engine friendly, leading to increased engagement and ranking.",
+                "",
             },
             {
-              id: "local-audit",
-              tab_name: "Local SEO Audit Services",
-              heading: "Local SEO Audit Services",
+              id: "performance-tracking",
+              tab_name: "How your process works",
+              heading: "How your process works",
               description:
-                "Local businesses can benefit from our local SEO audit services that assess Google Business Profile, citations, and location based SEO factors to rank higher in local search results.",
+                "",
             },
             {
-              id: "ecommerce-audit",
-              tab_name: "E-commerce SEO Audit Services",
-              heading: "E-commerce SEO Audit Services",
+              id: "reporting-testing-growth",
+              tab_name: "What customers should do next",
+              heading: "What customers should do next",
               description:
-                "Our e-commerce SEO audit services check the performance of your product pages, category pages, and technical features to make sure the online store is ready for search and conversions.",
+                "",
             },
             {
-              id: "reporting",
-              tab_name: "Performance Tracking & Reporting",
-              heading: "Performance Tracking & Reporting",
+              id: "reporting-testing-growth1",
+              tab_name: "We optimize insurance websites",
+              heading: "Optimize Insurance Websites",
               description:
-                "We deliver clear, actionable reports from our technical SEO audit services, which demonstrate the strengths, weaknesses, and opportunities of your website. This allows your team to set priorities for improvements and to monitor progress.",
+                "We optimize insurance websites around both search visibility and customer experience.",
+            },
+            {
+              id: "reporting-testing-growth2",
+              tab_name: "Important pages may include:",
+              heading: "Important pages may include:",
+              description:
+                <>
+                  <ul className="grid list-outside list-disc gap-x-10 gap-y-2 pl-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <li>Insurance service pages</li>
+                    <li>Product pages</li>
+                    <li>Location pages</li>
+                    <li>Agent or broker pages</li>
+                    <li>Industry-specific insurance pages</li>
+                    <li>Resource pages</li>
+                    <li>FAQs</li>
+                    <li>About pages</li>
+                    <li>Contact and quote pages</li>
+                  </ul>
+                  <p className="mt-5 border-t border-gray-200 pt-4 italic text-gray-600">Every important page should have a clear purpose and contribute to the broader website structure.</p>
+                </>,
+            },
+            {
+              id: "reporting-testing-growth3",
+              tab_name: "Insurance Keyword Research and Search Intent",
+              heading: "Insurance Keyword Research and Search Intent",
+              description:
+                <>
+                  <p className="mt-5">We do not choose insurance keywords simply because they have high search volume.<br />We look for searches that demonstrate different levels of customer intent.</p>
+
+                  <div className="mt-5 w-full overflow-x-auto">
+                    <table className="w-full min-w-[36rem] border-collapse text-left text-sm text-gray-700">
+                      <caption className="sr-only">
+                        Insurance keyword search intent examples
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th className="w-1/2 border border-gray-300 bg-gray-50 px-3 py-2 text-center font-semibold text-gray-900">
+                            Search
+                          </th>
+                          <th className="w-1/2 border border-gray-300 bg-gray-50 px-3 py-2 text-center font-semibold text-gray-900">
+                            User Intent
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td className="border border-gray-300 px-3 py-2">
+                            What is liability insurance?
+                          </td>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Informational
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-3 py-2">
+                            How does life insurance work?
+                          </td>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Research
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-3 py-2">
+                            How much does business insurance cost?
+                          </td>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Commercial research
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Best insurance broker
+                          </td>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Commercial
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Insurance broker near me
+                          </td>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Local + high intent
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Business insurance broker in [city]
+                          </td>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Local + commercial
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Get an insurance quote
+                          </td>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Transactional
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Life insurance agent near me
+                          </td>
+                          <td className="border border-gray-300 px-3 py-2">
+                            Local + high intent
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <p className="mt-5">This allows us to build a website that supports customers throughout their research journey from their first question to the moment they are ready to request a quote or speak with an insurance professional.</p>
+                </>,
+            },
+            {
+              id: "reporting-testing-growth4",
+              tab_name: "Insurance Content That Answers Real Customer Questions",
+              heading: "Insurance Content That Answers Real Customer Questions",
+              description:
+                <>
+                  <p className="mt-5">Strong insurance SEO requires content that answers the questions customers actually ask.<br />We develop content around topics such as:</p>
+
+                  <div className="mt-5 w-full overflow-x-auto">
+                    <dl className="max-w-4xl space-y-6 h-25">
+                      <div>
+                        <dt className="text-base font-semibold leading-snug text-gray-900 sm:text-lg">
+                          How much does insurance cost?
+                        </dt>
+                        <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
+                          Explain the factors that influence premiums and help customers understand what may affect their coverage costs.
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-base font-semibold leading-snug text-gray-900 sm:text-lg">
+                          What type of insurance do I need?
+                        </dt>
+                        <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
+                          Create clear explanations that help customers understand different coverage options based on their situation.
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-base font-semibold leading-snug text-gray-900 sm:text-lg">
+                          What does an insurance broker do?
+                        </dt>
+                        <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
+                          Explain the role of a broker and how working with one can help customers compare and understand insurance options.
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-base font-semibold leading-snug text-gray-900 sm:text-lg">
+                          What is the difference between an insurance agent and a broker?
+                        </dt>
+                        <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
+                          Answer an important comparison-based search while demonstrating industry expertise.
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-base font-semibold leading-snug text-gray-900 sm:text-lg">
+                          How do I choose an insurance broker?
+                        </dt>
+                        <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
+                          Provide practical guidance around experience, coverage options, service, reputation, and local expertise.
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-base font-semibold leading-snug text-gray-900 sm:text-lg">
+                          How does a life insurance policy work?
+                        </dt>
+                        <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
+                          Create accessible educational content for customers researching life insurance.
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-base font-semibold leading-snug text-gray-900 sm:text-lg">
+                          What does commercial insurance cover?
+                        </dt>
+                        <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
+                          Answer questions from business owners researching insurance for their organizations.
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-base font-semibold leading-snug text-gray-900 sm:text-lg">
+                          How often should I review my insurance coverage?
+                        </dt>
+                        <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
+                          Give customers useful information that encourages them to evaluate their current policies and speak with a qualified professional. <br />Our content strategy prioritizes people first. We use natural language, useful information, relevant keywords, clear organization, and strong internal linking instead of keyword stuffing.
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  <p className="mt-5">This allows us to build a website that supports customers throughout their research journey from their first question to the moment they are ready to request a quote or speak with an insurance professional.</p>
+                </>,
+            },
+            {
+              id: "reporting-testing-growth5",
+              tab_name: "GEO Optimization for Insurance Businesses",
+              heading: "GEO Optimization for Insurance Businesses",
+              description:
+                <>
+                  <p className="mt-5">Search is changing beyond traditional Google results. Customers increasingly use AI-powered platforms and other search experiences to research businesses, compare services, and find answers. <br />Generative Engine Optimization (GEO) helps organize business information so modern search systems can better understand what an insurance business does and who it serves. <br /><br /><b><i>We structure your website around clear information about:</i></b></p>
+
+                  <div className="mt-1 w-full overflow-x-auto">
+                    <ul className="list-disc pl-5">
+                      <li>Your insurance business</li>
+                      <li>Your insurance services</li>
+                      <li>Your locations</li>
+                      <li>Your expertise</li>
+                      <li>Your insurance specialties</li>
+                      <li>Your target customers</li>
+                      <li>Common insurance questions</li>
+                      <li>Your solutions</li>
+                    </ul>
+                  </div>
+
+                  <p className="mt-5">Clear and consistent information gives search systems stronger context about your business.</p>
+                </>,
+            },
+            {
+              id: "reporting-testing-growth6",
+              tab_name: "AEO for Insurance Businesses",
+              heading: "AEO for Insurance Businesses",
+              description:
+                <>
+                  <p className="mt-5">Answer Engine Optimization focuses on providing direct answers to questions people ask.</p>
+                  <p className="mt-2">Insurance customers often have complex questions before they are ready to speak with a broker. Your website should answer those questions clearly.</p>
+                  <p className="mt-2">For example:</p>
+
+                  <h4 className="text-lg font-bold mt-4">What is an insurance broker?</h4>
+                  <p>An insurance broker helps customers evaluate insurance options and find coverage that fits their needs. Depending on the type of insurance and market, a broker may work with multiple insurance providers to help customers compare available options.</p>
+
+                  <p className="mt-1">Answer-focused content can help your website become more useful to customers while making important information easier for search engines and answer engines to process.</p>
+                </>,
+            },
+            {
+              id: "reporting-testing-growth7",
+              tab_name: "LLMO and AI Search Optimization for Insurance",
+              heading: "LLMO and AI Search Optimization for Insurance",
+              description:
+                <>
+                  <p className="mt-5">We also consider Large Language Model Optimization when developing an insurance SEO strategy.</p>
+                  <p className="">AI-powered search systems need clear information to understand your company, services, locations, expertise, and areas of specialization.</p>
+                  <p className="mt-1"><b>We strengthen these signals through:</b></p>
+
+                  <ul className="list-disc pl-5 mt-2">
+                    <li>Clear insurance service descriptions</li>
+                    <li>Location-specific information</li>
+                    <li>Helpful insurance content</li>
+                    <li>Consistent business information</li>
+                    <li>Strong internal linking</li>
+                    <li>Structured page layouts</li>
+                    <li>Relevant FAQs</li>
+                    <li>Clear business expertise</li>
+                    <li>Trust and authority signals</li>
+                    <li>Well-organized service and location pages</li>
+                  </ul>
+
+                  <p className="mt-1">We do not create content only for AI.</p>
+                  <p className="">We create useful information for real customers and structure it so modern search systems can understand the information more effectively.</p>
+                </>,
+            },
+            {
+              id: "reporting-testing-growth8",
+              tab_name: "Insurance Service Pages Built to Convert",
+              heading: "Insurance Service Pages Built to Convert",
+              description:
+                <>
+                  <p className="mt-5">Ranking is only one part of insurance SEO.</p>
+                  <p className="">Your website also needs to turn visitors into inquiries, quote requests, and conversations.</p>
+                  <p className="mt-1"><b>We can optimize dedicated pages for services such as:</b></p>
+
+                  <ul className="list-disc pl-5 mt-2">
+                    <li>Life insurance</li>
+                    <li>Auto insurance</li>
+                    <li>Home insurance</li>
+                    <li>Commercial insurance</li>
+                    <li>Business insurance</li>
+                    <li>Liability insurance</li>
+                    <li>Property insurance</li>
+                    <li>Health insurance</li>
+                    <li>Specialty insurance</li>
+                    <li>Insurance claims support</li>
+                  </ul>
+
+                  <p className="mt-4"><b>Each service page should clearly explain:</b></p>
+                  <ul className="list-disc pl-5 mt-2">
+                    <li>What the insurance service is</li>
+                    <li>Who may need it</li>
+                    <li>What coverage options may be available</li>
+                    <li>Important considerations</li>
+                    <li>Your process</li>
+                    <li>The locations you serve</li>
+                    <li>Why customers should choose your brokerage</li>
+                    <li>What the next step should be</li>
+                  </ul>
+                  <p className="mt-4">Clear service pages help visitors quickly understand whether your business can meet their needs.</p>
+                </>,
+            },
+            {
+              id: "reporting-testing-growth9",
+              tab_name: "SEO for Commercial and B2B Insurance",
+              heading: "SEO for Commercial and B2B Insurance",
+              description:
+                <>
+                  <p className="mt-5">Insurance businesses serving companies, property owners, contractors, manufacturers, professional firms, and other organizations often need a different SEO strategy from businesses focused primarily on consumers.</p>
+                  <p className="mt-4"><b>B2B insurance searches may involve:</b></p>
+
+                  <ul className="list-disc pl-5 mt-2">
+                    <li>Longer research cycles</li>
+                    <li>Multiple decision-makers</li>
+                    <li>Industry-specific coverage</li>
+                    <li>Higher-value policies</li>
+                    <li>More detailed questions</li>
+                    <li>Specialized insurance terminology</li>
+                  </ul>
+
+                  <p className="mt-4">Your website should therefore provide content that addresses the needs of business decision-makers.</p>
+                </>,
+            },
+            {
+              id: "reporting-testing-growth10",
+              tab_name: "SEO for Multi-Location Insurance Brokerages",
+              heading: "SEO for Multi-Location Insurance Brokerages",
+              description:
+                <>
+                  <p className="mt-5">Multi-location insurance brokerages require a scalable SEO structure.</p>
+                  <p className="mt-1">Creating a large number of location pages without a clear strategy can lead to thin or repetitive content. Instead, each location should provide genuinely useful information about the market, services, customers, and local presence.</p>
+                  <p className="mt-4"><b>A multi-location insurance SEO strategy may include:</b></p>
+
+                  <ul className="list-disc pl-5 mt-2">
+                    <li>Individual location pages</li>
+                    <li>Location-specific service pages</li>
+                    <li>Local keyword targeting</li>
+                    <li>Google Business Profile optimization</li>
+                    <li>Consistent business information</li>
+                    <li>Local content</li>
+                    <li>Internal linking between locations and services</li>
+                    <li>Scalable technical SEO</li>
+                    <li>Centralized reporting</li>
+                  </ul>
+
+                  <p className="mt-4">The objective is to build visibility across your target markets without sacrificing content quality or website structure.</p>
+                </>,
             },
           ],
         },
+
+        successStoriesData: {
+          eyebrow: "",
+          title: <>Our Insurance SEO Process</>,
+          description: (
+            <>
+            </>
+          ),
+          stories: [
+            {
+              id: "cleaning-business",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Website Audit",
+              },
+              title: "Website Audit",
+              description:
+                "We identify technical, content, local, on-page, UX, and conversion opportunities.",
+            },
+            {
+              id: "law-firm",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Market Research",
+              },
+              title: "Market Research",
+              description:
+                'We analyze competitors, insurance services, locations, customer behavior, and search opportunities.',
+            },
+            {
+              id: "dental-clinic",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Keyword Research",
+              },
+              title: "Keyword Research",
+              description:
+                "We identify valuable insurance, service, commercial, informational, and location-based searches.",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "SEO Strategy",
+              },
+              title: "SEO Strategy",
+              description:
+                "We develop a roadmap based on your business objectives, target audience, competition, services, and markets.",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "On-Page Optimization",
+              },
+              title: "On-Page Optimization",
+              description:
+                "We improve service pages, headings, metadata, content, URLs, images, and internal links.",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Technical SEO",
+              },
+              title: "Technical SEO",
+              description:
+                "We address crawling, indexing, speed, mobile usability, architecture, redirects, and other technical opportunities.",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Local SEO",
+              },
+              title: "Local SEO",
+              description:
+                "We strengthen your visibility in the cities and service areas that matter to your business.",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Content Optimization",
+              },
+              title: "Content Optimization",
+              description:
+                "We create and improve content around customer questions, insurance services, and search intent.",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Authority Building",
+              },
+              title: "Authority Building",
+              description:
+                "We develop relevant authority and trust signals to support long-term organic visibility.",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Performance Tracking",
+              },
+              title: "Performance Tracking",
+              description:
+                "We monitor rankings, organic traffic, leads, conversions, and other meaningful SEO signals.",
+            },
+            {
+              id: "ecommerce",
+              image: {
+                src: "/service-testing/bg.webp",
+                alt: "Continuous Improvement",
+              },
+              title: "Continuous Improvement",
+              description:
+                "We use performance data to identify new opportunities and continually improve the strategy.",
+            },
+          ],
+        },
+        faqTitle: "Frequently Asked Questions",
         faqs: [
           {
-            question: "What does the SEO audit service provide?",
+            question:
+              "What is SEO for insurance brokers?",
             answer:
-              "SEO audit service comprises the technical checks, keyword analysis, content review, and backlink analysis, along with performance monitoring.",
+              "SEO for insurance brokers is the process of improving a brokerage website's visibility in search engines for relevant insurance, service, location, and customer-related searches. The goal is to attract qualified organic traffic and create more opportunities for calls, inquiries, and quote requests.",
           },
           {
-            question: "What is the benefit of having an SEO audit agency?",
+            question: "Why do insurance brokers need SEO?",
             answer:
-              "An SEO audit agency that is dedicated offers the skill, equipment, and experience to pinpoint and repair the problems that may go unnoticed by the general teams.",
+              "Insurance customers often research online before contacting a broker. SEO helps your business appear when potential customers are searching for insurance services, comparing options, researching coverage, or looking for a local broker.",
+          },
+          {
+            question: "Can SEO help insurance agents generate more leads?",
+            answer:
+              "Yes. A well-planned SEO strategy can help insurance agents appear for relevant searches made by potential customers. When optimized pages provide useful information and clear next steps, organic search traffic can contribute to lead generation.",
           },
           {
             question:
-              "Is it possible for an online store to get the advantages of an SEO audit?",
+              "Does local SEO work for insurance brokers?",
             answer:
-              "Indeed. Our e-commerce SEO audit services are meant to perfect the visibility of product pages, categories, and the technical aspects of online stores.",
+              "Yes. Local SEO can help brokers become more visible for searches involving specific cities, neighborhoods, and service areas. It can include Google Business Profile optimization, local content, location pages, reviews, and other local search signals.",
           },
           {
-            question: "What is the recommended frequency for SEO audits?",
+            question:
+              "Can you provide SEO for insurance companies and agencies?",
             answer:
-              "At least once or twice a year, we recommend professional SEO audit services or at the time of major website changes.",
+              "Yes. SEO strategies can be developed for independent agents, insurance agencies, brokers, regional businesses, and larger insurance companies. The strategy depends on the organization's size, services, locations, competition, and business objectives.",
           },
           {
-            question: "Are local SEO audits available to you?",
+            question:
+              "How long does insurance SEO take to work?",
             answer:
-              "Of course. Our local SEO audit services are centered on making your site visible in the local search, thus enabling you to gain more customers from the nearby area.",
+              "SEO is a long-term strategy. Results depend on your website's current condition, competition, target locations, authority, content, and existing online presence. Some improvements may appear within a few months, while competitive markets generally require consistent optimization.",
+          },
+          {
+            question:
+              "Can SEO help a multi-location insurance brokerage?",
+            answer:
+              "Yes. Multi-location businesses can benefit from a scalable structure that combines location pages, local SEO, service pages, internal linking, technical SEO, and centralized performance tracking.",
+          },
+          {
+            question:
+              "Should an insurance broker focus on local SEO or national SEO?",
+            answer:
+              "It depends on the business model. A local broker primarily serving specific cities may benefit heavily from local SEO, while a larger insurance organization serving customers across multiple markets may require a broader national or enterprise strategy.",
+          },
+          {
+            question:
+              "Can insurance SEO help with AI search?",
+            answer:
+              "Yes. Clear business information, useful content, strong topical relevance, structured pages, internal linking, FAQs, and authority signals can help modern search systems better understand your business. However, no SEO agency can guarantee that an AI platform will mention or recommend a particular company.",
+          },
+          {
+            question:
+              "Should insurance companies use SEO or paid advertising?",
+            answer:
+              "Both can have a role. Paid advertising can provide faster visibility, while SEO focuses on building long-term organic visibility. The right mix depends on your market, competition, business goals, and budget.",
           },
         ],
-        whyChoose: [
-          {
-            title: "Expert Team of SEO Specialists",
-            desc: "The SEO audit company we work with is made up of skilled professionals who are well aware of the technical and content optimization aspects of all types of websites.",
-          },
-          {
-            title: "Customized Audit Solutions",
-            desc: "There is no such thing as an identical website. Our SEO audit service company conducts audits based on your business's needs, objectives, and market sector.",
-          },
-          {
-            title: "Actionable Insights",
-            desc: "We don't merely identify issues. Our search engine optimization audit services provide comprehensive advice on how to resolve problems and enhance performance.",
-          },
-          {
-            title: "Comprehensive Reporting",
-            desc: "When you partner with our SEO audit companies, you obtain thorough, uncomplicated reports that address every single aspect of your website's SEO vitality.",
-          },
-          {
-            title: "Ongoing Support",
-            desc: "Our team provides SEO audit services, not only conducting audits but also helping to put suggestions into operation, monitoring progress, and keeping your website optimized.",
-          },
-        ],
+        // whyChooseData: {
+        //   title: "Why Choose Our Locksmith SEO Agency?",
+        //   containerClassName:
+        //     "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
+        //   gridClassName:
+        //     "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
+        //   features: [
+        //     {
+        //       title: "Local SEO Expertise",
+        //       desc: "We specialize in <strong>local business SEO</strong>, helping you rank in <strong>Google Map Pack</strong> and dominate <strong>location based searches</strong> in your target area.",
+        //     },
+        //     {
+        //       title: "Proven Local Results",
+        //       desc: "Our strategies improve your visibility in <strong>near me searches</strong>, increase <strong>local traffic</strong>, and generate more calls and leads.",
+        //     },
+        //     {
+        //       title: "Custom Location Strategies",
+        //       desc: "We create personalized campaigns based on your <strong>business location</strong>, audience behavior, and local competition.",
+        //     },
+        //     {
+        //       title: "Transparent Reporting",
+        //       desc: "Get clear insights into your <strong>local rankings</strong>, traffic, and conversions with easy-to-understand reports.",
+        //     },
+        //   ],
+        // },
+        seoComparisonData: {
+          title:
+            "Why Choose Our SEO Services for Insurance?",
+          description: (
+            <>
+            </>
+          ),
+          comparisons: [
+            {
+              id: "traditional-seo",
+              title: "Insurance Focused Strategy",
+              subtitle: "We build your SEO strategy around your insurance services, customers, locations, competition, and business objectives.",
+            },
+            {
+              id: "local-seo",
+              title: "Human-Focused Content",
+              subtitle: "We avoid unnecessary jargon and keyword stuffing. Our content is designed to answer real customer questions clearly.",
+            },
+            {
+              id: "ai-seo",
+              title: "Local Search Expertise",
+              subtitle: "We help insurance brokers, agents, and agencies improve visibility in the markets where they actually operate.",
+            },
+            {
+              id: "ai-seo1",
+              title: "Modern Search Strategy",
+              subtitle: "Our approach considers traditional SEO, local search, GEO, AEO, AI search, and LLM-based discovery.",
+            },
+            {
+              id: "ai-seo2",
+              title: "Scalable SEO",
+              subtitle: "Whether you operate from one location or manage multiple insurance offices, we build a structure that can grow with your business.",
+            },
+            {
+              id: "ai-seo3",
+              title: "Data-Driven Decisions",
+              subtitle: "We monitor important SEO and business signals and use the data to improve the strategy over time.",
+            },
+            {
+              id: "ai-seo4",
+              title: "Clear Reporting",
+              subtitle: "You should understand what is being optimized, what is improving, and where new opportunities exist.",
+            },
+          ],
+        },
       },
+      
       {
         id: "hotel-seo",
         title: "Hotel SEO Services",
