@@ -8,6 +8,7 @@ import {
   getCountyPostDescriptionText,
 } from "@/data/county";
 import { withEnUsHreflang } from "@/lib/metadata";
+import CountiesCTA from "@/components/CountiesCTA";
 
 type CountyPageProps = {
   params: Promise<{
@@ -172,6 +173,7 @@ export default async function CountyPage({ params }: CountyPageProps) {
           ))}
         </div>
       </article>
+      <CountiesCTA />
     </section>
   );
 }

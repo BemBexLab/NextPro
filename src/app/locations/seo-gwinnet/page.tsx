@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
 import type { Metadata } from "next";
 import { withEnUsHreflang } from "@/lib/metadata";
+import CountiesCTA from "@/components/CountiesCTA";
 
 // --- Hero Section Components ---
 const actionStyles = {
@@ -682,6 +683,7 @@ export default function SEOGwinnettCountyPage() {
           </div>
         </div>
       </section>
+      <CountiesCTA />
     </main>
   );
 }

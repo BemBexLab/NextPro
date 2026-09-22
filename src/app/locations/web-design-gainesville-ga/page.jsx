@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
+import CountiesCTA from "@/components/CountiesCTA";
 
 // --- Hero Section Components ---
 const actionStyles = {
@@ -643,6 +644,7 @@ export default function WebDesignGainesvillePage() {
           </div>
         </div>
       </section>
+      <CountiesCTA />
     </main>
   );
 }

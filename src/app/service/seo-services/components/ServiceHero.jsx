@@ -66,6 +66,40 @@ function HeroField({ field }) {
   );
 }
 
+export function ServiceContactForm({ form, className = "" }) {
+  if (!form) return null;
+
+  return (
+    <form
+      action={form.action}
+      method={form.method || "post"}
+      aria-label={form.ariaLabel || "Contact form"}
+      className={`relative mx-auto w-full max-w-[520px] rounded-3xl border border-white/80 bg-white p-5 shadow-[0_24px_70px_rgba(2,8,23,0.32)] sm:p-7 lg:max-w-[440px] ${className}`}
+    >
+      <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-4">
+        {(form.fields || []).map((field, index) => (
+          <HeroField
+            key={field.id || field.name || index}
+            field={field}
+          />
+        ))}
+      </div>
+
+      {form.submitLabel ? (
+        <button
+          type={form.action ? "submit" : "button"}
+          className={
+            form.submitClassName ||
+            "mt-6 w-full rounded-xl bg-[#0b63b8] px-6 py-3.5 font-semibold text-white shadow-md shadow-blue-900/15 transition duration-200 hover:-translate-y-0.5 hover:bg-[#075aa6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b63b8] focus-visible:ring-offset-2 sm:mt-7"
+          }
+        >
+          {form.submitLabel}
+        </button>
+      ) : null}
+    </form>
+  );
+}
+
 export default function ServiceHero({
   image,
   overlayClassName = "bg-gradient-to-br from-slate-950/90 via-slate-950/75 to-blue-950/85",
@@ -186,33 +220,7 @@ export default function ServiceHero({
               aria-hidden="true"
               className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-sky-400/20 via-blue-500/10 to-indigo-500/20 blur-xl"
             />
-            <form
-              action={form.action}
-              method={form.method || "post"}
-              aria-label={form.ariaLabel || "Contact form"}
-              className="relative mx-auto w-full max-w-[520px] rounded-3xl border border-white/80 bg-white p-5 shadow-[0_24px_70px_rgba(2,8,23,0.32)] sm:p-7 lg:ml-auto lg:max-w-[440px]"
-            >
-              <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-4">
-                {(form.fields || []).map((field, index) => (
-                  <HeroField
-                    key={field.id || field.name || index}
-                    field={field}
-                  />
-                ))}
-              </div>
-
-              {form.submitLabel ? (
-                <button
-                  type={form.action ? "submit" : "button"}
-                  className={
-                    form.submitClassName ||
-                    "mt-6 w-full rounded-xl bg-[#0b63b8] px-6 py-3.5 font-semibold text-white shadow-md shadow-blue-900/15 transition duration-200 hover:-translate-y-0.5 hover:bg-[#075aa6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b63b8] focus-visible:ring-offset-2 sm:mt-7"
-                  }
-                >
-                  {form.submitLabel}
-                </button>
-              ) : null}
-            </form>
+            <ServiceContactForm form={form} className="lg:ml-auto" />
           </aside>
         ) : null}
       </div>
