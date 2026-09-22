@@ -26,10 +26,13 @@ function renderStepDescription(step) {
 }
 
 function renderSectionDescription(description, descriptionHtml) {
+  const className =
+    "mb-8 max-w-7xl break-words text-sm leading-relaxed text-white/90 [overflow-wrap:anywhere] sm:mb-10 sm:text-base lg:mb-14 lg:text-lg";
+
   if (descriptionHtml) {
     return (
       <p
-        className="mb-8 max-w-7xl break-words text-sm leading-relaxed text-white/90 [overflow-wrap:anywhere] sm:mb-10 sm:text-base lg:mb-14 lg:text-lg"
+        className={className}
         dangerouslySetInnerHTML={{ __html: descriptionHtml }}
       />
     );
@@ -39,11 +42,14 @@ function renderSectionDescription(description, descriptionHtml) {
     return null;
   }
 
-  return (
-    <p className="mb-8 max-w-7xl break-words text-sm leading-relaxed text-white/90 [overflow-wrap:anywhere] sm:mb-10 sm:text-base lg:mb-14 lg:text-lg">
-      {description}
-    </p>
-  );
+  // Rich JSX descriptions can contain block elements such as divs and
+  // paragraphs. Keep those out of a wrapping <p> to avoid invalid HTML and
+  // hydration mismatches.
+  if (typeof description === "string" || typeof description === "number") {
+    return <p className={className}>{description}</p>;
+  }
+
+  return <div className={className}>{description}</div>;
 }
 
 function getStepLabel(step) {
@@ -61,7 +67,7 @@ const SEOProcess = ({
 }) => {
   const visibleSteps = (Array.isArray(steps) ? steps : []).filter(Boolean);
 
-  if (!title && !visibleSteps.length) {
+  if (!title && !description && !descriptionHtml && !footnote) {
     return null;
   }
 

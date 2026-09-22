@@ -142,6 +142,66 @@ function getServiceProcess(service) {
   };
 }
 
+function ServiceResults({ results }) {
+  const stats = Array.isArray(results?.stats) ? results.stats.filter(Boolean) : [];
+
+  if (!results?.title && !results?.description && !stats.length) {
+    return null;
+  }
+
+  return (
+    <section className="relative isolate w-full overflow-hidden bg-[#071f5c] py-14 sm:py-16 lg:py-20">
+      <div
+        className="pointer-events-none absolute -left-24 top-16 -z-10 h-72 w-72 rounded-full bg-[#2d8cff]/20 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -right-24 bottom-0 -z-10 h-80 w-80 rounded-full bg-[#ff8b6a]/15 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div className="mx-auto w-[92%] max-w-[1400px]">
+        {results.title ? (
+          <div className="mx-auto mb-9 max-w-4xl text-center sm:mb-12">
+            <span className="mb-3 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#b9d5ff] sm:text-sm">
+              Results that move your business forward
+            </span>
+            <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+              {results.title}
+            </h2>
+          </div>
+        ) : null}
+
+        {results.description ? (
+          <div className="mx-auto mb-8 max-w-6xl rounded-3xl bg-white p-4 shadow-2xl shadow-black/10 sm:mb-10 sm:p-6 lg:p-8">
+            <div className="min-w-0 break-words text-gray-700 [overflow-wrap:anywhere] [&_li]:ml-5 [&_li]:pl-1 [&_p]:leading-relaxed [&_ul]:space-y-2">
+              {results.description}
+            </div>
+          </div>
+        ) : null}
+
+        {stats.length ? (
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat, index) => (
+              <article
+                key={`${stat.value || "stat"}-${index}`}
+                className="rounded-2xl border border-white/15 bg-white/10 p-5 text-center backdrop-blur-sm transition-colors duration-300 hover:border-[#ffb199]/70 hover:bg-white/15 sm:p-6"
+              >
+                <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                  {stat.value}
+                </p>
+                <div className="mt-2 text-sm leading-6 text-blue-100 sm:text-base">
+                  {stat.label}
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
 function getServiceHero(parent, service, serviceId, sub) {
   const introParagraphs = service.introParagraphs || [];
   const actions = service.hero?.actions ||
@@ -258,7 +318,11 @@ export default function SubServiceDetailPage({
       <LocalSEOServices {...(service.localSEOserviceData || {})} />
       <AIDiscoveryChannels {...(service.aiDiscoveryData || {})} />
 
-      {serviceProcess.steps.length ? (
+      {serviceProcess.title ||
+      serviceProcess.description ||
+      serviceProcess.descriptionHtml ||
+      serviceProcess.footnote ||
+      serviceProcess.steps.length ? (
         <SEOProcess
           title={serviceProcess.title}
           description={serviceProcess.description}
@@ -267,6 +331,8 @@ export default function SubServiceDetailPage({
           footnote={serviceProcess.footnote}
         />
       ) : null}
+
+      <ServiceResults results={service.results} />
 
       <SuccessStories {...(service.successStoriesData || {})} />
 
