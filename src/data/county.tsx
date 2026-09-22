@@ -224,23 +224,23 @@ export const countyPosts: CountyPost[] = [
             <h3 className={countySubheadingClassName}>Construction and Local Contractors</h3>,
             "Construction companies and contractors often depend on local searches to generate new project opportunities. Targeted service pages, location pages, project-related content, and local SEO can help these businesses reach customers searching for their services.",
             <p className="">Our <a href="/service/seo-services/construction-seo/" className="hover:text-blue-500 font-semibold">Construction SEO Services</a> can be tailored around specific construction services, project types, locations, and customer needs.</p>,
-            <p>Roofing businesses can also benefit from dedicated service and location strategies. Our <a href="/service/seo-services/roofing-seo/" className="hover:text-blue-500 font-semibold">Roofing SEO Services</a> focus on improving visibility for roofing-related searches, including repairs, replacements, inspections, and other high-intent services.</p>,
+            <p>Roofing businesses can also benefit from dedicated service and location strategies. Our <a href="/service/seo-services/roofing-seo/" className="hover:text-blue-500 font-semibold underline">Roofing SEO Services</a> focus on improving visibility for roofing-related searches, including repairs, replacements, inspections, and other high-intent services.</p>,
 
             <h3 className={countySubheadingClassName}>Healthcare and Medical Businesses</h3>,
             "Healthcare businesses compete for highly specific service and location searches. Patients often research providers, treatments, services, and locations before making contact.",
-            <p className="">Our <a href="/service/seo-services/healthcare-seo/" className="hover:text-blue-500 font-semibold">Healthcare SEO Services</a> can help healthcare organizations build stronger search visibility through optimized service pages, local SEO, helpful content, and technical improvements.</p>,
-            <p>For medical practices, <a href="/service/seo-services/medical-seo/" className="hover:text-blue-500 font-semibold">Medical SEO Services</a> can support visibility around relevant medical services, locations, and patient questions while maintaining a clear and trustworthy content structure.</p>,
-            <p>Dental practices can also benefit from a focused strategy. <a href="/service/seo-services/dental-seo/" className="hover:text-blue-500 font-semibold">Dental SEO Services</a> can target dental services, local searches, patient questions, and practice-specific information.</p>,
+            <p className="">Our <a href="/service/seo-services/healthcare-seo/" className="hover:text-blue-500 font-semibold underline">Healthcare SEO Services</a> can help healthcare organizations build stronger search visibility through optimized service pages, local SEO, helpful content, and technical improvements.</p>,
+            <p>For medical practices, <a href="/service/seo-services/medical-seo/" className="hover:text-blue-500 font-semibold underline">Medical SEO Services</a> can support visibility around relevant medical services, locations, and patient questions while maintaining a clear and trustworthy content structure.</p>,
+            <p>Dental practices can also benefit from a focused strategy. <a href="/service/seo-services/dental-seo/" className="hover:text-blue-500 font-semibold underline">Dental SEO Services</a> can target dental services, local searches, patient questions, and practice-specific information.</p>,
 
 
             <h3 className={countySubheadingClassName}>B2B Businesses</h3>,
             "B2B companies often have longer customer journeys and more specialized search behavior. Potential clients may research solutions for weeks or months before contacting a provider.",
-            <p className="">Our <a href="/service/seo-services/b2b-seo/" className="hover:text-blue-500 font-semibold">B2B SEO Services</a> help businesses target decision-makers through commercial keywords, industry-specific content, service pages, and educational resources.</p>,
+            <p className="">Our <a href="/service/seo-services/b2b-seo/" className="hover:text-blue-500 font-semibold underline">B2B SEO Services</a> help businesses target decision-makers through commercial keywords, industry-specific content, service pages, and educational resources.</p>,
             "The strategy can focus on both high-intent searches and informational topics that support customers throughout the buying journey.",
 
             <h3 className={countySubheadingClassName}>E-Commerce Businesses</h3>,
             "E-commerce websites require SEO strategies that account for products, categories, transactional searches, technical performance, and user experience.",
-            <p className="">Our <a href="/service/seo-services/ecommerce-seo/" className="hover:text-blue-500 font-semibold">E-commerce SEO Services</a> can help optimize:</p>,
+            <p className="">Our <a href="/service/seo-services/ecommerce-seo/" className="hover:text-blue-500 font-semibold underline">E-commerce SEO Services</a> can help optimize:</p>,
             <ul className={countyListClassName}>
               <li>Product pages</li>
               <li>Category pages</li>
@@ -251,15 +251,15 @@ export const countyPosts: CountyPost[] = [
               <li>Technical SEO</li>
               <li>Transactional keywords</li>
             </ul>,
-            <p>For businesses using Shopify, our <a href="/service/seo-services/shopify-seo/" className="hover:text-blue-500 font-semibold">Shopify SEO Services</a> can focus on technical configuration, product visibility, collection pages, site structure, and search optimization.</p>,
+            <p>For businesses using Shopify, our <a href="/service/seo-services/shopify-seo/" className="hover:text-blue-500 font-semibold underline">Shopify SEO Services</a> can focus on technical configuration, product visibility, collection pages, site structure, and search optimization.</p>,
 
             <h3 className={countySubheadingClassName}>Hospitality Businesses</h3>,
             "Hotels and hospitality businesses compete for highly localized and travel-related searches. Customers may search for accommodations, destinations, amenities, nearby attractions, and booking options.",
-            <p className="">Our <a href="/service/seo-services/hotel-seo/" className="hover:text-blue-500 font-semibold">Hotel SEO Services</a> help hospitality businesses build visibility around relevant searches and create a stronger organic presence in their target markets.</p>,
+            <p className="">Our <a href="/service/seo-services/hotel-seo/" className="hover:text-blue-500 font-semibold underline">Hotel SEO Services</a> help hospitality businesses build visibility around relevant searches and create a stronger organic presence in their target markets.</p>,
 
             <h3 className={countySubheadingClassName}>Specialized and Boutique Businesses</h3>,
             "Smaller or specialized businesses often need a highly focused SEO strategy rather than a broad campaign.",
-            <p className="/service/seo-services/boutique-seo/">Our <a href="" className="hover:text-blue-500 font-semibold">Boutique SEO Services</a> can be customized around a specific niche, target audience, service area, and competitive environment.</p>,
+            <p className="/service/seo-services/boutique-seo/">Our <a href="" className="hover:text-blue-500 font-semibold underline">Boutique SEO Services</a> can be customized around a specific niche, target audience, service area, and competitive environment.</p>,
           ],
       },
       {
@@ -279,7 +279,7 @@ export const countyPosts: CountyPost[] = [
             <li>Location-specific content</li>
             <li>Product and service explanations</li>
           </ul>,
-          <p>Our <a href="/service/seo-services/seo-content-writing/" className="hover:text-blue-500 font-semibold">SEO Content Writing Services</a> focus on creating useful, easy-to-read content that supports your target keywords and broader website strategy.</p>,
+          <p>Our <a href="/service/seo-services/seo-content-writing/" className="hover:text-blue-500 font-semibold underline">SEO Content Writing Services</a> focus on creating useful, easy-to-read content that supports your target keywords and broader website strategy.</p>,
           <p>Good SEO content should answer the user's question first. Keywords should fit naturally into the content rather than interrupting the reading experience.</p>
         ],
       },
@@ -288,7 +288,7 @@ export const countyPosts: CountyPost[] = [
         paragraphs: [
           "Businesses serving diverse audiences may need content in more than one language.",
           "A multilingual website requires more than simply translating existing pages. Search behavior, keywords, language variations, page structures, and user expectations can differ between audiences.",
-          <p>Our <a href="/service/seo-services/multilingual-seo/" className="hover:text-blue-500 font-semibold">Multilingual SEO Services</a> can help businesses develop a more effective search strategy across multiple languages and markets.</p>,
+          <p>Our <a href="/service/seo-services/multilingual-seo/" className="hover:text-blue-500 font-semibold underline">Multilingual SEO Services</a> can help businesses develop a more effective search strategy across multiple languages and markets.</p>,
           "This can include:",
           <ul className={countyListClassName}>
             <li>Multilingual keyword research</li>
@@ -306,7 +306,7 @@ export const countyPosts: CountyPost[] = [
         paragraphs: [
           "Before starting an SEO campaign, it is important to understand what is already working and where opportunities exist.",
           <p>Our <a href="/service/seo-services/seo-audit/" className="hover:text-blue-500 font-semibold">SEO Audit Services</a> evaluate the major factors that influence your website's organic performance.</p>,
-          <p>Our <a href="/service/seo-services/multilingual-seo/" className="hover:text-blue-500 font-semibold">Multilingual SEO Services</a> can help businesses develop a more effective search strategy across multiple languages and markets.</p>,
+          <p>Our <a href="/service/seo-services/multilingual-seo/" className="hover:text-blue-500 font-semibold underline">Multilingual SEO Services</a> can help businesses develop a more effective search strategy across multiple languages and markets.</p>,
           "We may review:",
           <ul className={countyListClassName}>
             <li>Technical SEO</li>
