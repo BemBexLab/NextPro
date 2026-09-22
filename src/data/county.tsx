@@ -68,7 +68,7 @@ export type CountyPost = {
 export const countyPosts: CountyPost[] = [
   {
     id: 1,
-    slug: "seo-company-union-county-usa",
+    slug: "seo-company-union-county-ga",
     metaTitle: "SEO Company Union County GA | Web Founders USA",
     metaDescription: "Grow your Union County business with expert SEO services. Improve local rankings, attract qualified traffic, and generate more leads in Canton and beyond.",
     title: "SEO Company in Union County, GA",
