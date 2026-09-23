@@ -4,6 +4,7 @@ import Highlight from '../ui/highlight'
 import Title from '../ui/title'
 import { Button } from '../ui/button'
 import SlideUp from '../animations/slideUp'
+import { isInvalidLegacyProjectHref } from "@/lib/invalidLegacyProjectSlugs";
 
 const DRAG_THRESHOLD = 30;
 const PROJECTS_API_BASE = "https://projects-api-bembexlab.vercel.app";
@@ -40,7 +41,11 @@ const GalleryCarousel = () => {
                     const isWebDev =
                         category.includes("website development") ||
                         category.includes("web development");
-                    return hasImage && isWebDev;
+                    return (
+                        hasImage &&
+                        isWebDev &&
+                        !isInvalidLegacyProjectHref(project.href_url)
+                    );
                 });
                 setProjects(filtered);
                 setActiveIndex(filtered.length);

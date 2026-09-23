@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { isInvalidLegacyProjectHref } from "@/lib/invalidLegacyProjectSlugs";
 
 const PROJECTS_API_BASE = "https://projects-api-bembexlab.vercel.app";
 const PROJECTS_API_URL = `${PROJECTS_API_BASE}/api/images/`;
@@ -91,7 +92,9 @@ const ProjectsTab = () => {
         const res = await fetch(PROJECTS_API_URL);
         const data = await res.json();
         const projectPosts = (data.projects || []).filter(
-          (post) => post.cover_image_url || post.images?.[0]?.image_url
+          (post) =>
+            (post.cover_image_url || post.images?.[0]?.image_url) &&
+            !isInvalidLegacyProjectHref(post.href_url)
         );
         setPosts(projectPosts);
       } catch (err) {
