@@ -34,13 +34,21 @@ export async function POST(req) {
       },
     });
 
+    const smtpHost = process.env.SMTP_HOST || "smtp.gmail.com";
+    const smtpPort = Number(process.env.SMTP_PORT || 465);
+    const smtpSecure =
+      String(process.env.SMTP_SECURE || "true").toLowerCase() === "true";
     const smtpUser = process.env.SMTP_USER;
-    const smtpPass = process.env.SMTP_PASS;
+    // Google displays app passwords in groups; remove whitespace before auth.
+    const smtpPass = process.env.SMTP_PASS?.replace(/\s+/g, "");
+    const emailTo = process.env.EMAIL_TO || "info@webfoundersusa.com";
 
     if (smtpUser && smtpPass) {
       try {
         const transporter = nodemailer.createTransport({
-          service: "gmail",
+          host: smtpHost,
+          port: smtpPort,
+          secure: smtpSecure,
           auth: {
             user: smtpUser,
             pass: smtpPass,
@@ -49,7 +57,7 @@ export async function POST(req) {
 
         await transporter.sendMail({
           from: `"Website Contact" <${smtpUser}>`,
-          to: "info@webfoundersusa.com",
+          to: emailTo,
           subject: "New Contact Form Submission",
           html: `
             <h2>New Contact Form Submission</h2>
