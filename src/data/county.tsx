@@ -45,6 +45,36 @@ function CountyFaqItem({ id, question, answer }: CountyFaqItemProps) {
   );
 }
 
+type CountyProcessStepProps = {
+  number: number;
+  title: string;
+  description: string;
+};
+
+function CountyProcessStep({
+  number,
+  title,
+  description,
+}: CountyProcessStepProps) {
+  return (
+    <article className="relative rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md sm:p-5">
+      <div className="flex items-start gap-4">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-700 text-sm font-bold text-white shadow-sm ring-4 ring-blue-100">
+          {String(number).padStart(2, "0")}
+        </span>
+        <div className="min-w-0 pt-0.5">
+          <h3 className="text-lg font-bold leading-tight tracking-tight text-slate-900">
+            {title}
+          </h3>
+          <p className="mt-2 text-sm leading-7 text-slate-600 sm:text-base">
+            {description}
+          </p>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 export type CountyContentSection = {
   heading?: string;
   paragraphs: ReactNode[];
@@ -525,8 +555,8 @@ export const countyPosts: CountyPost[] = [
   {
     id: 2,
     slug: "alpharetta-seo-services",
-    metaTitle: "SEO Company Union County GA | Web Founders USA",
-    metaDescription: "Grow your Union County business with expert SEO services. Improve local rankings, attract qualified traffic, and generate more leads in Canton and beyond.",
+    metaTitle: "SEO Company Alpharetta | Web Founders USA",
+    metaDescription: "Grow your Alpharetta business with expert SEO services. Improve local rankings, attract qualified traffic, and generate more leads in Canton and beyond.",
     title: "Alpharetta SEO Services",
     description: (
       <div className="space-y-3">
@@ -1137,6 +1167,639 @@ export const countyPosts: CountyPost[] = [
       },
     ],
   },
+  {
+    id: 3,
+    slug: "seo-company-suwanee-ga",
+    metaTitle: "SEO Company Suwanee, GA | Web Founders USA",
+    metaDescription: "Grow your Suwanee, GA business with expert SEO services. Improve local rankings, attract qualified traffic, and generate more leads in Canton and beyond.",
+    title: "SEO Company Suwanee, GA",
+    description: (
+      <div className="space-y-3">
+        <p>
+          Web Founders USA provides professional SEO services in Suwanee GA to help businesses improve their online visibility, attract relevant local customers, and build a stronger presence in organic search results. Our SEO strategies are customized around your business, industry, target audience, competition, and service area.
+        </p>
+        <p>
+          From local SEO Suwanee and keyword research to technical SEO, content optimization, Google Business Profile optimization, and SEO friendly web design, we focus on the key areas that support long term search visibility.
+        </p>
+        <p>
+          Whether you operate a local service business, e-commerce store, healthcare practice, B2B company, or growing organization, <a href="" className="font-semibold hover:text-blue-500 underline">Web Founders USA</a> can create an SEO strategy based on your specific goals.
+        </p>
+      </div>
+    ),
+    actions: [
+      {
+        label: "Ready to improve your visibility in Suwanee, GA?",
+        href: "/contact-us",
+      },
+    ],
+    submitLabel: "Request a Free SEO Audit.",
+    image: "",
+    publishedAt: "2026-09-24",
+    content: [
+      {
+        heading: "SEO Services in Suwanee GA",
+        paragraphs: [
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <p>
+              Our SEO services Suwanee GA are designed to improve your
+              website's relevance, technical health, local visibility, and
+              organic search performance.
+            </p>
+          </div>,
+          <p className="font-semibold text-slate-800">
+            Our SEO solutions include:
+          </p>,
+          <ul className={countyListClassName}>
+            <li>Local SEO</li>
+            <li>On-page SEO</li>
+            <li>Technical SEO</li>
+            <li>Keyword research</li>
+            <li>SEO content optimization</li>
+            <li>Competitor analysis</li>
+            <li>SEO audits</li>
+            <li>Google Business Profile optimization</li>
+            <li>Local citation building</li>
+            <li>Internal linking</li>
+            <li>Schema markup</li>
+            <li>Mobile SEO</li>
+            <li>Website speed optimization</li>
+            <li>Conversion-focused SEO</li>
+          </ul>,
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+            Businesses looking to strengthen their local search presence can
+            also explore our{" "}
+            <a
+              href="/service/seo-services/local-seo-services/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Local SEO Services
+            </a>{" "}
+            for a broader approach to location-based search optimization.
+          </p>,
+        ],
+      },
+      {
+        heading: "Local SEO Suwanee",
+        paragraphs: [
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <div className="space-y-4">
+              <p>
+                Local SEO Suwanee helps businesses improve their visibility
+                when people search for products and services in Suwanee and
+                nearby areas.
+              </p>
+              <p>
+                Customers may use searches that include a service, business
+                category, city name, or terms such as “near me.” Local search
+                optimization helps your business provide relevant information
+                for these searches.
+              </p>
+            </div>
+          </div>,
+          <p className="font-semibold text-slate-800">
+            Our local SEO process may include:
+          </p>,
+          <ul className={countyListClassName}>
+            <li>Google Business Profile optimization</li>
+            <li>Local keyword research</li>
+            <li>Location page optimization</li>
+            <li>Local citations</li>
+            <li>NAP consistency</li>
+            <li>Local directory listings</li>
+            <li>Google Maps optimization</li>
+            <li>Local content</li>
+            <li>Review strategy</li>
+            <li>Local competitor research</li>
+          </ul>,
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+            We focus on accurate business information, relevant local content,
+            and useful website pages to help search engines better understand
+            your business and service area.
+          </p>,
+        ],
+      },
+      {
+        heading: "Suwanee SEO Company",
+        paragraphs: [
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <div className="space-y-4">
+              <p>
+                As a <b>Suwanee SEO company</b>, Web Founders USA takes a
+                customized approach to search engine optimization. We do not
+                assume that every business needs the same SEO campaign.
+              </p>
+              <p>
+                We first review your website, current organic visibility,
+                target keywords, competitors, content, technical SEO, and local
+                search presence.
+              </p>
+              <p>
+                Based on the findings, we can develop a strategy covering:
+              </p>
+            </div>
+          </div>,
+          <h3 className={countySubheadingClassName}>Keyword Research</h3>,
+          "We identify relevant commercial, informational, local, branded, and long-tail keywords related to your products and services.",
+          <h3 className={countySubheadingClassName}>On-Page SEO</h3>,
+          "We optimize page titles, meta descriptions, headings, content, URLs, images, internal links, and other important page elements.",
+          <h3 className={countySubheadingClassName}>Technical SEO</h3>,
+          "We identify technical issues that may affect crawling, indexing, performance, or user experience. This can include broken links, redirects, sitemap issues, mobile usability, website speed, structured data, and Core Web Vitals.",
+          <h3 className={countySubheadingClassName}>SEO Content</h3>,
+          <p>
+            Useful content can help answer customer questions and build topical
+            relevance. Our{" "}
+            <a
+              href="/service/seo-services/seo-content-writing/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              SEO Content Writing Services
+            </a>{" "}
+            can support service pages, location pages, blogs, FAQs, and other
+            search-focused content.
+          </p>,
+          <h3 className={countySubheadingClassName}>SEO Audits</h3>,
+          <p>
+            Our{" "}
+            <a
+              href="/service/seo-services/seo-audit/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              SEO Audit Services
+            </a>{" "}
+            can help identify technical, content, keyword, on-page, and
+            structural issues that may affect your website's organic
+            performance.
+          </p>,
+        ],
+      },
+      {
+        heading: "SEO Company Suwanee GA for Local Businesses",
+        paragraphs: [
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <p>
+              Local businesses need to reach people who are actively searching
+              for their services. A strong SEO strategy can help connect your
+              website with relevant searches.
+            </p>
+          </div>,
+          <p className="font-semibold text-slate-800">
+            Web Founders USA can help businesses optimize for:
+          </p>,
+          <ul className={countyListClassName}>
+            <li>Local service keywords</li>
+            <li>Suwanee-related searches</li>
+            <li>Long-tail keywords</li>
+            <li>“Near me” searches</li>
+            <li>Commercial search terms</li>
+            <li>Informational searches</li>
+            <li>Service-area keywords</li>
+            <li>Google Maps searches</li>
+          </ul>,
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+            Our goal is to create useful pages that match what customers are
+            looking for rather than simply repeating keywords.
+          </p>,
+        ],
+      },
+      {
+        heading: "Suwanee Web Design",
+        paragraphs: [
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <p>
+              SEO and web design should work together. A website should not
+              only look professional but also be easy to use, mobile-friendly,
+              fast, and structured in a way that supports search visibility.
+            </p>
+          </div>,
+          <p className="font-semibold text-slate-800">
+            Our <span className="font-bold">Suwanee web design</span> services can include:
+          </p>,
+          <ul className={countyListClassName}>
+            <li>Custom website design</li>
+            <li>Responsive web design</li>
+            <li>Mobile-friendly websites</li>
+            <li>Website redesign</li>
+            <li>SEO-friendly web development</li>
+            <li>E-commerce website design</li>
+            <li>Landing page design</li>
+            <li>Conversion-focused web design</li>
+            <li>Website navigation</li>
+            <li>Page speed optimization</li>
+          </ul>,
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+            For businesses targeting local customers, website design Suwanee GA
+            can be combined with SEO to create a website that supports both
+            user experience and organic search visibility.
+          </p>,
+        ],
+      },
+      {
+        heading: "Web Design Suwanee GA",
+        paragraphs: [
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <p>
+              A properly designed website gives visitors a clear path to find
+              your services, contact your business, or make a purchase.
+            </p>
+          </div>,
+          <p className="font-semibold text-slate-800">
+            Our <span className="font-bold">web design Suwanee GA</span> solutions focus on:
+          </p>,
+          <ul className={countyListClassName}>
+            <li>Clear website structure</li>
+            <li>Responsive layouts</li>
+            <li>Easy navigation</li>
+            <li>Mobile usability</li>
+            <li>Fast-loading pages</li>
+            <li>SEO-friendly architecture</li>
+            <li>Strong calls to action</li>
+            <li>Conversion-focused pages</li>
+          </ul>,
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+            We can also help businesses that already have a website but need a redesign, improved performance, or better SEO structure.
+          </p>,
+        ],
+      },
+      {
+        heading: "Industries We Serve",
+        paragraphs: [
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <p>
+              Our SEO strategies can be adapted to different industries and
+              business models.
+            </p>
+          </div>,
+          <h3 className={countySubheadingClassName}>E-commerce SEO</h3>,
+          "Online stores need optimized product pages, category pages, content, internal links, and technical SEO.",
+          <p>
+            Our E-commerce SEO Services help online businesses improve organic visibility for relevant product and commercial searches.
+          </p>,
+          <p>
+            We also provide specialized{" "}
+            <a
+              href="/service/seo-services/shopify-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Shopify SEO Services
+            </a>
+            ,{" "}
+            <a
+              href="/service/seo-services/woocommerce-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              WooCommerce SEO Services
+            </a>
+            ,{" "}
+            <a
+              href="/service/seo-services/magento-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Magento SEO Services
+            </a>
+            , and{" "}
+            <a
+              href="/service/seo-services/bigcommerce-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              BigCommerce SEO Services
+            </a>
+            .
+          </p>,
+          <h3 className={countySubheadingClassName}>B2B SEO</h3>,
+          <p>
+            B2B businesses often target specific services, industries, and
+            decision-makers. Our{" "}
+            <a
+              href="/service/seo-services/b2b-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              B2B SEO Services
+            </a>{" "}
+            focus on commercial keywords, service pages, educational content,
+            and organic search visibility.
+          </p>,
+          <h3 className={countySubheadingClassName}>
+            Healthcare & Medical SEO
+          </h3>,
+          <p>
+            Healthcare organizations need clear and useful online information.
+            Our{" "}
+            <a
+              href="/service/seo-services/healthcare-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Healthcare SEO Services
+            </a>{" "}
+            can help healthcare businesses improve their search presence.
+          </p>,
+          <p>
+            We also offer{" "}
+            <a
+              href="/service/seo-services/medical-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Medical SEO Services
+            </a>{" "}
+            for businesses targeting medical services and related searches.
+          </p>,
+          <h3 className={countySubheadingClassName}>Dental SEO</h3>,
+          "Dental practices can benefit from location-focused service pages, treatment-related content, local keyword targeting, and Google Business Profile optimization.",
+          <p>
+            Our{" "}
+            <a
+              href="/service/seo-services/dental-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Dental SEO Services
+            </a>{" "}
+            are customized around the services and locations a dental practice
+            wants to target.
+          </p>,
+          <h3 className={countySubheadingClassName}>Construction SEO</h3>,
+          <p>
+            Construction companies often compete for local searches related to
+            specific services. Our{" "}
+            <a
+              href="/service/seo-services/construction-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Construction SEO Services
+            </a>{" "}
+            can focus on service pages, local keywords, content, and
+            lead-generation opportunities.
+          </p>,
+          <h3 className={countySubheadingClassName}>Roofing SEO</h3>,
+          "Roofing businesses can target searches related to roof repair, replacement, installation, inspections, and other roofing services.",
+          <p>
+            Our{" "}
+            <a
+              href="/service/seo-services/roofing-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Roofing SEO Services
+            </a>{" "}
+            focus on relevant local and service-specific search terms.
+          </p>,
+          <h3 className={countySubheadingClassName}>Automotive SEO</h3>,
+          "Automotive businesses can target searches related to repairs, maintenance, dealerships, parts, and other vehicle services.",
+          <p>
+            Our{" "}
+            <a
+              href="/service/seo-services/automotive-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Automotive SEO Services That Drive More Leads, Sales & Service
+              Appointments
+            </a>{" "}
+            can be customized around the business's services and target market.
+          </p>,
+          <h3 className={countySubheadingClassName}>Legal SEO</h3>,
+          "Law firms often need service-specific and location-specific SEO strategies.",
+          <p>
+            Web Founders USA provides specialized solutions such as{" "}
+            <a
+              href="/service/seo-services/employment-lawyers-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Employment Lawyer SEO Services
+            </a>{" "}
+            Built on Strategy, Trust & Results.
+          </p>,
+          <h3 className={countySubheadingClassName}>Insurance SEO</h3>,
+          <p>
+            Insurance businesses operate in highly competitive search markets.
+            Our{" "}
+            <a
+              href="/service/seo-services/insurance-broker-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              SEO for Insurance Brokers
+            </a>{" "}
+            can focus on local visibility, service pages, content, keyword
+            research, and commercial search intent.
+          </p>,
+          <h3 className={countySubheadingClassName}>Hospitality SEO</h3>,
+          "Hotels and hospitality businesses need strong online visibility when potential guests search for accommodation.",
+          <p>
+            Our{" "}
+            <a
+              href="/service/seo-services/hotel-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Hotel SEO Services
+            </a>{" "}
+            focus on relevant search terms, location information, content, and
+            website optimization.
+          </p>,
+        ],
+      },
+      {
+        heading: "Specialized SEO Services",
+        paragraphs: [
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <p>
+              Web Founders USA also provides specialized{" "}
+              <a
+                href="/service/seo-services/"
+                className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                SEO solutions
+              </a>{" "}
+              for different platforms, industries, and business requirements.
+            </p>
+          </div>,
+          <p className="font-semibold text-slate-800">These include:</p>,
+          <ul className={countyListClassName}>
+            <li>
+              <a
+                href="/service/seo-services/enterprise-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                Enterprise SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/white-label-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                White Label SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/wordpress-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                WordPress SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/multilingual-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                Multilingual SEO Agency
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/youtube-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                YouTube SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/boutique-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                Boutique SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/outsource-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                Outsource SEO Services
+              </a>
+            </li>
+          </ul>,
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+            Agencies that need additional SEO support can explore our{" "}
+            <a
+              href="/service/seo-services/white-label-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              White Label SEO Services
+            </a>
+            , while businesses targeting multiple languages or markets can use
+            our multilingual SEO solutions.
+          </p>,
+        ],
+      },
+      {
+        heading: "Why Choose Our Suwanee SEO Company?",
+        paragraphs: [
+          <h3 className={countySubheadingClassName}>
+            Customized SEO Strategy
+          </h3>,
+          "Every business has different customers, competitors, services, and goals. We build your SEO strategy around those factors.",
+          <h3 className={countySubheadingClassName}>
+            Local Search Focus
+          </h3>,
+          "For businesses targeting Suwanee customers, we focus on local keywords, location relevance, Google Business Profile optimization, local content, and other local SEO factors.",
+          <h3 className={countySubheadingClassName}>
+            SEO-Friendly Content
+          </h3>,
+          "We create content around search intent and customer questions, helping your pages provide useful information while naturally targeting relevant topics.",
+          <h3 className={countySubheadingClassName}>
+            Technical SEO Support
+          </h3>,
+          "We work on technical areas such as crawlability, indexability, website speed, mobile usability, redirects, internal linking, structured data, and site architecture.",
+          <h3 className={countySubheadingClassName}>
+            Conversion-Focused Approach
+          </h3>,
+          "SEO traffic is more useful when visitors can easily understand your services and take the next step. We consider user experience and conversion opportunities as part of website optimization.",
+        ],
+      },
+      {
+        heading: "Our SEO Process",
+        paragraphs: [
+          <div className="relative overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-br from-slate-50 via-white to-blue-50/50 p-4 shadow-sm sm:p-6">
+            <div
+              aria-hidden="true"
+              className="absolute bottom-8 left-[2.25rem] top-8 hidden w-px bg-blue-200 sm:block"
+            />
+            <div className="relative space-y-3 sm:space-y-4">
+              <CountyProcessStep
+                number={1}
+                title="Step 1: Understand Your Business"
+                description="We learn about your business, services, target customers, competitors, locations, and marketing goals."
+              />
+              <CountyProcessStep
+                number={2}
+                title="Step 2: Website & SEO Audit"
+                description="We review your website's technical health, content, keywords, page structure, internal links, local SEO, and overall search presence."
+              />
+              <CountyProcessStep
+                number={3}
+                title="Step 3: Keyword Research"
+                description="We identify relevant keywords, including local, commercial, informational, branded, and long-tail searches."
+              />
+              <CountyProcessStep
+                number={4}
+                title="Step 4: Competitor Analysis"
+                description="We review competing websites to understand their content, keywords, website structure, local presence, and search strategies."
+              />
+              <CountyProcessStep
+                number={5}
+                title="Step 5: SEO Implementation"
+                description="We optimize relevant website pages, content, metadata, internal links, technical elements, and other areas identified during the audit."
+              />
+              <CountyProcessStep
+                number={6}
+                title="Step 6: Content & Local Optimization"
+                description="We improve existing content and create new content where needed. Local search elements are also optimized for your target service area."
+              />
+              <CountyProcessStep
+                number={7}
+                title="Step 7: Monitor & Improve"
+                description="We monitor organic visibility, keyword performance, website health, traffic, and other relevant SEO metrics to identify opportunities for continued improvement."
+              />
+            </div>
+          </div>,
+        ],
+      },
+      {
+        heading: "SEO Services for Suwanee & Nearby Areas",
+        paragraphs: [
+          <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-blue-700 shadow-sm">
+              <span
+                aria-hidden="true"
+                className="h-2 w-2 rounded-full bg-blue-600"
+              />
+              Local coverage
+            </div>
+            <div className="space-y-4">
+              <p>
+                Businesses in Suwanee may also serve customers across nearby
+                communities and broader Georgia service areas.
+              </p>
+              <p>
+                For businesses targeting multiple locations, SEO pages should
+                be created around genuine service areas and provide useful
+                local information. Avoiding duplicate location content helps
+                create a clearer website structure and stronger topical
+                relevance.
+              </p>
+            </div>
+          </div>,
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+            Web Founders USA can also support businesses targeting other
+            Georgia markets, including{" "}
+            <a
+              href="/locations/seo-gwinnet/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Gwinnett County SEO Company
+            </a>{" "}
+            services and{" "}
+            <a
+              href="/locations/seo-company-union-county-ga/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              SEO Company in Union County, GA
+            </a>{" "}
+            solutions.
+          </p>,
+        ],
+      },
+    ],
+  }
 ];
 
 function getReactNodeText(node: ReactNode): string {

@@ -136,11 +136,11 @@ export default async function CountyPage({ params }: CountyPageProps) {
           </div>
         )}
 
-        {post.publishedAt?.trim() && (
+        {/* {post.publishedAt?.trim() && (
           <p className="mt-5 italic text-sm text-[#8b8b8b] sm:text-base">
             By Web Founders USA | {post.publishedAt.trim()}
           </p>
-        )}
+        )} */}
 
         <div className="mt-7 space-y-10">
           {post.content.map((section, sectionIndex) => (
