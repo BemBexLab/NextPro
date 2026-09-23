@@ -522,6 +522,71 @@ export const countyPosts: CountyPost[] = [
       },
     ],
   },
+  {
+    id: 2,
+    slug: "alpharetta-seo-services",
+    metaTitle: "SEO Company Union County GA | Web Founders USA",
+    metaDescription: "Grow your Union County business with expert SEO services. Improve local rankings, attract qualified traffic, and generate more leads in Canton and beyond.",
+    title: "Alpharetta SEO Services",
+    description: (
+      <div className="space-y-3">
+        <p>
+          Web Founders USA provides professional Alpharetta SEO services to help businesses improve their online visibility, reach local customers, and generate more qualified traffic from search engines. Our SEO team creates customized strategies based on your business goals, industry, competition, target audience, and service area.
+        </p>
+        <p>
+          From local SEO in Alpharetta GA and keyword research to technical SEO, on-page optimization, content optimization, and Google Business Profile optimization, we focus on the key factors that support stronger organic search visibility.
+        </p>
+        <p>
+          Whether you run a local service business, e-commerce store, healthcare practice, B2B company, or growing enterprise, <a href="/" className="hover:text-blue-500 underline font-semibold">Web Founders USA</a> can develop an SEO strategy designed around your specific needs.
+        </p>
+      </div>
+    ),
+    actions: [
+      {
+        label: "Ready to improve your visibility in Alpharetta GA?",
+        href: "/contact-us",
+      },
+    ],
+    submitLabel: "Request a Free SEO Audit.",
+    image: "",
+    publishedAt: "2026-09-21",
+    content: [
+      {
+        heading: "SEO Services in Alpharetta GA",
+        paragraphs: [
+          "Our SEO services in Alpharetta GA are designed to improve your website's visibility for relevant searches and help potential customers find your business online.",
+          "We look at your complete website and search presence rather than focusing on only one ranking factor.",
+          "Our SEO services include:",
+          <ul className={countyListClassName}>
+            <li>Local SEO</li>
+            <li>On-page SEO</li>
+            <li>Technical SEO</li>
+            <li>Keyword research</li>
+            <li>SEO content optimization</li>
+            <li>Competitor analysis</li>
+            <li>SEO audits</li>
+            <li>Google Business Profile optimization</li>
+            <li>Local citation building</li>
+            <li>Internal linking</li>
+            <li>Schema markup</li>
+            <li>Mobile SEO</li>
+            <li>Website speed optimization</li>
+            <li>Conversion-focused SEO</li>
+          </ul>,
+          <p>
+            If your business serves customers in Alpharetta and nearby areas, our{" "}
+            <a
+              href="/service/seo-services/local-seo-services/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Local SEO Services
+            </a>{" "}
+            can help build a stronger location focused search strategy.
+          </p>,
+        ],
+      },
+    ],
+  },
 ];
 
 function getReactNodeText(node: ReactNode): string {

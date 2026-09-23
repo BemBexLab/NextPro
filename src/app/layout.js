@@ -42,6 +42,13 @@ export const metadata = withEnUsHreflang({
 });
 
 export default function RootLayout({ children }) {
+  const tawkPropertyId = process.env.PROPERTY_ID;
+  const tawkWidgetId = process.env.WIDGET_ID;
+  const tawkWidgetUrl =
+    tawkPropertyId && tawkWidgetId
+      ? `https://embed.tawk.to/${tawkPropertyId}/${tawkWidgetId}`
+      : null;
+
   return (
     <html lang="en-US" suppressHydrationWarning={true}>
       <head />
@@ -98,6 +105,25 @@ fbq('track', 'PageView');
             alt=""
           />
         </noscript>
+        {tawkWidgetUrl ? (
+          <Script
+            id="tawk-to"
+            strategy="lazyOnload"
+            dangerouslySetInnerHTML={{
+              __html: `
+var Tawk_API = window.Tawk_API || {}, Tawk_LoadStart = new Date();
+(function () {
+  var s1 = document.createElement("script");
+  var s0 = document.getElementsByTagName("script")[0];
+  s1.async = true;
+  s1.src = "${tawkWidgetUrl}";
+  s1.charset = "UTF-8";
+  s1.setAttribute("crossorigin", "*");
+  s0.parentNode.insertBefore(s1, s0);
+})();`,
+            }}
+          />
+        ) : null}
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
