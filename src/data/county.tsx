@@ -13,7 +13,7 @@ const countyHeroLinkClassName =
 type CountyFaqItemProps = {
   id: string;
   question: string;
-  answer: string;
+  answer: ReactNode;
 };
 
 function CountyFaqItem({ id, question, answer }: CountyFaqItemProps) {
@@ -554,7 +554,7 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "SEO Services in Alpharetta GA",
         paragraphs: [
-          "Our SEO services in Alpharetta GA are designed to improve your website's visibility for relevant searches and help potential customers find your business online.",
+          <>Our <b>SEO services in Alpharetta GA</b> are designed to improve your website's visibility for relevant searches and help potential customers find your business online.</>,
           "We look at your complete website and search presence rather than focusing on only one ranking factor.",
           "Our SEO services include:",
           <ul className={countyListClassName}>
@@ -583,6 +583,556 @@ export const countyPosts: CountyPost[] = [
             </a>{" "}
             can help build a stronger location focused search strategy.
           </p>,
+        ],
+      },
+      {
+        heading: "Local SEO Alpharetta GA",
+        paragraphs: [
+          "Local SEO Alpharetta GA helps businesses improve their visibility when customers search for products and services in their local area.",
+          "People may search for a service using terms such as “near me,” a specific service name, or a city name. A strong local SEO strategy helps your website and business profile provide relevant information for these searches.",
+          "Our local SEO strategy may include:",
+          <ul className={countyListClassName}>
+            <li>Google Business Profile optimization</li>
+            <li>Local keyword research</li>
+            <li>Location page optimization</li>
+            <li>Local citations</li>
+            <li>NAP consistency</li>
+            <li>Local directory listings</li>
+            <li>Google Maps optimization</li>
+            <li>Local content creation</li>
+            <li>Customer review strategy</li>
+            <li>Local competitor analysis</li>
+          </ul>,
+          "Our goal is to help search engines understand your business, services, location, and relevance to local customers.",
+        ],
+      },
+      {
+        heading: "Alpharetta SEO Expert",
+        paragraphs: [
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <div className="space-y-4">
+              <p>
+                An Alpharetta SEO expert should understand that every website
+                has different SEO requirements. A local service business does
+                not need the same strategy as an e-commerce store or
+                enterprise company.
+              </p>
+              <p>
+                At Web Founders USA, we first review your website, current
+                search visibility, target keywords, competitors, content,
+                technical SEO, and local presence.
+              </p>
+              <p>
+                Based on the findings, we can develop a customized SEO
+                strategy covering:
+              </p>
+            </div>
+          </div>,
+          <h3 className={countySubheadingClassName}>Keyword Research</h3>,
+          "We research relevant commercial, informational, local, branded, and long-tail keywords related to your products and services.",
+          <h3 className={countySubheadingClassName}>On-Page SEO</h3>,
+          "We optimize page titles, meta descriptions, headings, content, URLs, images, internal links, and other on-page elements around relevant search intent.",
+          <h3 className={countySubheadingClassName}>Technical SEO</h3>,
+          "Technical SEO helps search engines crawl, understand, and index your website. We can identify issues involving broken links, redirects, crawlability, indexability, mobile usability, website speed, structured data, and Core Web Vitals.",
+          <h3 className={countySubheadingClassName}>
+            SEO Content Optimization
+          </h3>,
+          <p>
+            Useful content can help answer customer questions and build
+            topical relevance. Our{" "}
+            <a
+              href="/service/seo-services/seo-content-writing/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              SEO Content Writing Services
+            </a>{" "}
+            focus on creating clear, useful, search focused content without
+            unnecessary keyword stuffing.
+          </p>,
+          <h3 className={countySubheadingClassName}>
+            SEO Audits
+          </h3>,
+          <p>
+            Our <a href="/service/seo-services/seo-audit/" className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500">SEO Audit Services</a> can identify technical, content, on-page, keyword, and structural issues that may affect your website's organic performance.
+          </p>,
+        ],
+      },
+      {
+        heading: "SEO Company Alpharetta GA",
+        paragraphs: [
+          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+            <div className="space-y-4">
+              <p>
+                Choosing an SEO company Alpharetta GA businesses can start
+                with understanding your actual goals and market.
+              </p>
+              <p>
+                Web Founders USA creates SEO strategies based on your website,
+                industry, competition, target customers, and service locations.
+                We can work with businesses that need local visibility as well
+                as companies targeting customers across multiple cities,
+                states, or markets.
+              </p>
+              <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+                Depending on your business model, we also provide specialized
+                solutions such as{" "}
+                <a
+                  href="/service/seo-services/b2b-seo/"
+                  className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                >
+                  B2B SEO Services
+                </a>
+                ,{" "}
+                <a
+                  href="/service/seo-services/ecommerce-seo/"
+                  className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                >
+                  E-commerce SEO Services
+                </a>
+                ,{" "}
+                <a
+                  href="/service/seo-services/healthcare-seo/"
+                  className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                >
+                  Healthcare SEO Services
+                </a>
+                , and{" "}
+                <a
+                  href="/service/seo-services/enterprise-seo/"
+                  className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                >
+                  Enterprise SEO Services
+                </a>
+                .
+              </p>
+            </div>
+          </div>,
+        ],
+      },
+      {
+        heading: "SEO for Alpharetta Businesses",
+        paragraphs: [
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <p>
+              Different industries have different customers, search behavior,
+              and levels of competition. That is why we provide industry
+              specific SEO solutions.
+            </p>
+          </div>,
+          <h3 className={countySubheadingClassName}>E-commerce SEO</h3>,
+          "Online stores need optimized product pages, category pages, useful content, technical SEO, and a strong internal linking structure.",
+          <p>
+            Our{" "}
+            <a
+              href="/service/seo-services/ecommerce-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              E-commerce SEO Services
+            </a>{" "}
+            help online businesses improve their visibility for relevant
+            product and commercial searches.
+          </p>,
+          "For businesses using specific platforms, we also provide:",
+          <ul className={countyListClassName}>
+            <li>
+              <a
+                href="/service/seo-services/shopify-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                Shopify SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/woocommerce-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                WooCommerce SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/magento-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                Magento SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/bigcommerce-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                BigCommerce SEO Services
+              </a>
+            </li>
+          </ul>,
+          <h3 className={countySubheadingClassName}>B2B SEO</h3>,
+          <p>
+            B2B businesses often target specific services, industries, and
+            decision-makers. Our{" "}
+            <a
+              href="/service/seo-services/b2b-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              B2B SEO Services
+            </a>{" "}
+            focus on commercial keywords, service pages, educational content,
+            and long-term organic visibility.
+          </p>,
+          <h3 className={countySubheadingClassName}>Healthcare SEO</h3>,
+          <p>
+            Healthcare businesses need clear and useful information for
+            patients and potential customers. Our{" "}
+            <a
+              href="/service/seo-services/healthcare-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Healthcare SEO Services
+            </a>{" "}
+            can support clinics, healthcare organizations, and other healthcare
+            businesses.
+          </p>,
+          <p>
+            We also provide{" "}
+            <a
+              href="/service/seo-services/medical-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Medical SEO Services
+            </a>{" "}
+            for businesses targeting medical services and related search terms.
+          </p>,
+          <h3 className={countySubheadingClassName}>Dental SEO</h3>,
+          "Dental practices can benefit from local service pages, treatment-related content, Google Business Profile optimization, and location-focused SEO.",
+          <p>
+            Our{" "}
+            <a
+              href="/service/seo-services/dental-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Dental SEO Services
+            </a>{" "}
+            can be customized around the services, locations, and audience of
+            your dental practice.
+          </p>,
+          <h3 className={countySubheadingClassName}>Construction SEO</h3>,
+          <p>
+            Construction companies often compete for valuable local searches.
+            Our{" "}
+            <a
+              href="/service/seo-services/construction-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Construction SEO Services
+            </a>{" "}
+            focus on service keywords, location pages, useful content, local
+            search optimization, and lead-generation opportunities.
+          </p>,
+          <h3 className={countySubheadingClassName}>Roofing SEO</h3>,
+          "Roofing companies need visibility when homeowners search for roofing services, repairs, replacements, and related solutions.",
+          <p>
+            Our{" "}
+            <a
+              href="/service/seo-services/roofing-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Roofing SEO Services
+            </a>{" "}
+            focus on relevant local and service-based search terms.
+          </p>,
+          <h3 className={countySubheadingClassName}>Automotive SEO</h3>,
+          "Automotive businesses can target searches related to repairs, maintenance, dealerships, parts, and other vehicle services.",
+          <p>
+            Our{" "}
+            <a
+              href="/service/seo-services/automotive-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Automotive SEO Services That Drive More Leads, Sales & Service
+              Appointments
+            </a>{" "}
+            can be tailored to the business's services and target market.
+          </p>,
+          <h3 className={countySubheadingClassName}>Legal SEO</h3>,
+          "Law firms often need specific service and location pages to reach people searching for legal assistance.",
+          <p>
+            Web Founders USA provides specialized solutions such as{" "}
+            <a
+              href="/service/seo-services/employment-lawyers-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Employment Lawyer SEO Services
+            </a>{" "}
+            Built on Strategy, Trust & Results.
+          </p>,
+          <h3 className={countySubheadingClassName}>Insurance SEO</h3>,
+          <p>
+            Insurance brokers and agencies operate in competitive search
+            markets. Our{" "}
+            <a
+              href="/service/seo-services/insurance-broker-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              SEO for Insurance Brokers
+            </a>{" "}
+            can focus on local search, service pages, informational content,
+            keyword research, and relevant commercial searches.
+          </p>,
+          <h3 className={countySubheadingClassName}>Hospitality SEO</h3>,
+          "Hotels and hospitality businesses depend on online visibility when people search for accommodation and travel services.",
+          <p>
+            Our{" "}
+            <a
+              href="/service/seo-services/hotel-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Hotel SEO Services
+            </a>{" "}
+            focus on relevant location, service, and hospitality-related search
+            opportunities.
+          </p>,
+        ],
+      },
+      {
+        heading: "Specialized SEO Solutions",
+        paragraphs: [
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <p>
+              Web Founders USA also provides SEO solutions for different
+              website types, industries, and marketing requirements.
+            </p>
+          </div>,
+          <p className="font-semibold text-slate-800">These include:</p>,
+          <ul className={countyListClassName}>
+            <li>
+              <a
+                href="/service/seo-services/enterprise-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                Enterprise SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/white-label-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                White Label SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/wordpress-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                WordPress SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/multilingual-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                Multilingual SEO Agency
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/youtube-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                YouTube SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/boutique-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                Boutique SEO Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service/seo-services/outsource-seo/"
+                className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                Outsource SEO Services
+              </a>
+            </li>
+          </ul>,
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+            Agencies can use our{" "}
+            <a
+              href="/service/seo-services/white-label-seo/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              White Label SEO Services
+            </a>{" "}
+            when they need additional SEO support for their clients. Businesses
+            targeting multiple languages or markets can explore our
+            multilingual SEO solutions.
+          </p>,
+        ],
+      },
+      {
+        heading: "Why Choose Our Alpharetta SEO Agency?",
+        paragraphs: [
+          <h3 className={countySubheadingClassName}>
+            Customized SEO Strategy
+          </h3>,
+          "We do not use the same SEO strategy for every business. Your campaign is based on your website, industry, competition, audience, and goals.",
+          <h3 className={countySubheadingClassName}>Local SEO Knowledge</h3>,
+          "For businesses targeting Alpharetta customers, we focus on local search optimization, location-based keywords, Google Business Profile signals, local content, and relevant local search factors.",
+          <h3 className={countySubheadingClassName}>SEO-Friendly Content</h3>,
+          "We create content around user needs and search intent. The goal is to provide useful information while naturally targeting relevant keywords and topics.",
+          <h3 className={countySubheadingClassName}>Technical SEO Support</h3>,
+          "Technical SEO provides an important foundation for organic search. We identify issues related to crawling, indexing, website performance, mobile usability, redirects, structured data, and site architecture.",
+          <h3 className={countySubheadingClassName}>
+            Data-Focused Optimization
+          </h3>,
+          "SEO requires ongoing monitoring and improvement. We review relevant performance data to identify opportunities and make informed optimization decisions.",
+        ],
+      },
+      {
+        heading: "Our Alpharetta SEO Process",
+        paragraphs: [
+          <h3 className={countySubheadingClassName}>
+            Step 1: Understand Your Business
+          </h3>,
+          "We learn about your business, services, target audience, competitors, locations, and marketing goals.",
+          <h3 className={countySubheadingClassName}>
+            Step 2: Website & SEO Audit
+          </h3>,
+          "We review your website's technical health, content, keywords, page structure, internal links, local SEO, and other important areas.",
+          <h3 className={countySubheadingClassName}>
+            Step 3: Keyword Research
+          </h3>,
+          "We identify relevant search terms, including local, commercial, informational, and long-tail keywords related to your business.",
+          <h3 className={countySubheadingClassName}>
+            Step 4: Competitor Analysis
+          </h3>,
+          "We research competing websites to understand their keyword targeting, content structure, website optimization, and local search presence.",
+          <h3 className={countySubheadingClassName}>
+            Step 5: SEO Implementation
+          </h3>,
+          "We optimize website pages, content, metadata, internal links, technical elements, and other relevant areas identified during the audit.",
+          <h3 className={countySubheadingClassName}>
+            Step 6: Content & Local Optimization
+          </h3>,
+          "We improve existing content and create new content where needed. Local SEO elements are also optimized for businesses targeting Alpharetta customers.",
+          <h3 className={countySubheadingClassName}>
+            Step 7: Monitor & Improve
+          </h3>,
+          "We monitor organic visibility, keyword performance, website health, traffic, and other relevant SEO metrics to identify opportunities for continued improvement.",
+        ],
+      },
+      {
+        heading: "SEO Services for Alpharetta & Nearby Areas",
+        paragraphs: [
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+            <p>
+              Many businesses in Alpharetta also serve customers in
+              surrounding communities and counties. A local SEO strategy can
+              therefore be structured around the actual service area rather
+              than focusing on one location alone.
+            </p>
+          </div>,
+          <p>
+            Web Founders USA also provides SEO solutions for businesses
+            targeting other Georgia markets, including{" "}
+            <a
+              href="/locations/seo-gwinnet/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              Gwinnett County SEO Company
+            </a>{" "}
+            services and{" "}
+            <a
+              href="/locations/seo-company-union-county-ga/"
+              className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+            >
+              SEO Company in Union County, GA
+            </a>{" "}
+            solutions.
+          </p>,
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+            Location focused SEO should be based on real service areas and
+            useful local information rather than creating multiple pages with
+            nearly identical content.
+          </p>,
+        ],
+      },
+      {
+        heading: "Frequently Asked Questions",
+        paragraphs: [
+          <div className="mx-auto w-full max-w-5xl space-y-4">
+            <CountyFaqItem
+              id="alpharetta-faq-1"
+              question="What is Alpharetta SEO?"
+              answer="Alpharetta SEO is the process of optimizing a business website and online presence to improve visibility for relevant searches from customers in Alpharetta, Georgia, and surrounding areas."
+            />
+            <CountyFaqItem
+              id="alpharetta-faq-2"
+              question="What does an Alpharetta SEO company do?"
+              answer="An Alpharetta SEO company can provide keyword research, local SEO, technical SEO, on-page optimization, content optimization, competitor analysis, website audits, and Google Business Profile optimization."
+            />
+            <CountyFaqItem
+              id="alpharetta-faq-3"
+              question="How can local SEO help my Alpharetta business?"
+              answer="Local SEO can help your business improve visibility for location-based searches. It may include Google Business Profile optimization, local citations, location pages, local content, reviews, and other local search activities."
+            />
+            <CountyFaqItem
+              id="alpharetta-faq-4"
+              question="Can SEO improve Google Maps visibility?"
+              answer="Local SEO can support Google Maps visibility through Google Business Profile optimization, accurate business information, local relevance, citations, reviews, and other local search signals."
+            />
+            <CountyFaqItem
+              id="alpharetta-faq-5"
+              question="Do you provide SEO audits?"
+              answer={
+                <>
+                  Yes. Our <b>SEO Audit Services</b> can review technical SEO,
+                  website structure, content, keywords, internal linking,
+                  performance, and other factors that may affect organic
+                  visibility.
+                </>
+              }
+            />
+            <CountyFaqItem
+              id="alpharetta-faq-6"
+              question="Do you provide web design in Alpharetta GA?"
+              answer={
+                <>
+                  Yes. Web Founders USA provides{" "}
+                  <b>web design Alpharetta GA</b> services, including custom
+                  website design, responsive websites, website redesign,
+                  e-commerce websites, and SEO-friendly web development.
+                </>
+              }
+            />
+            <CountyFaqItem
+              id="alpharetta-faq-7"
+              question="Do you work with small businesses?"
+              answer="Yes. SEO strategies can be customized for small businesses according to their industry, competition, location, services, budget, and target customers."
+            />
+            <CountyFaqItem
+              id="alpharetta-faq-8"
+              question="How long does SEO take to show results?"
+              answer="SEO timelines vary depending on factors such as website condition, competition, industry, target keywords, content, authority, and the amount of optimization required. SEO is generally an ongoing marketing process."
+            />
+            <CountyFaqItem
+              id="alpharetta-faq-9"
+              question="Can you optimize an existing website?"
+              answer="Yes. An existing website can be optimized for technical SEO, content, keywords, page structure, internal linking, mobile usability, speed, metadata, and other relevant SEO factors."
+            />
+            <CountyFaqItem
+              id="alpharetta-faq-10"
+              question="Do you provide specialized SEO services?"
+              answer="Yes. Web Founders USA provides specialized SEO solutions for e-commerce, B2B, healthcare, dental, medical, enterprise, automotive, roofing, construction, insurance, hospitality, legal, and other industries."
+            />
+          </div>,
         ],
       },
     ],

@@ -176,7 +176,7 @@ export default function ServiceHero({
           ) : null}
 
           {title ? (
-            <h1 className="max-w-[760px] break-words text-4xl font-extrabold leading-[1.04] tracking-[-0.04em] text-balance drop-shadow-md sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-[760px] break-words text-4xl font-semibold leading-[1.04] tracking-[-0.04em] text-balance drop-shadow-md sm:text-5xl lg:text-6xl">
               {title}
             </h1>
           ) : null}
