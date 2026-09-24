@@ -1,11 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
-import { services } from "@/data/services";
-import { services as seoServices } from "@/app/service/seo-services/components/subservices";
+import {
+  seoSubServiceNavigation,
+  serviceNavigation,
+} from "@/data/navigation";
 import HeaderTwo from "./headerTwo";
 
 function getServiceLinks() {
-  return services.map((service) => ({
+  return serviceNavigation.map((service) => ({
     id: service.id,
     title: service.title,
     path: `/service/${service.id}/`,
@@ -13,11 +15,7 @@ function getServiceLinks() {
 }
 
 function getSeoServiceLinks() {
-  const seoService = seoServices.find(
-    (service) => service.id === "seo-services",
-  );
-
-  const dataLinks = (seoService?.sub_categories || []).map((service) => ({
+  const dataLinks = seoSubServiceNavigation.map((service) => ({
     id: service.id,
     title: service.title,
     path: `/service/seo-services/${service.slug || service.id}/`,

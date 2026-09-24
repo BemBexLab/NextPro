@@ -129,7 +129,6 @@ export default async function CountyPage({ params }: CountyPageProps) {
               src={post.image.trim()}
               alt={post.title}
               fill
-              unoptimized
               sizes="(max-width: 1023px) 100vw, 980px"
               className="object-cover"
             />

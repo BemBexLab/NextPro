@@ -18,22 +18,55 @@ const resolveProjectImageUrl = (path) => {
 
 const GalleryCarousel = () => {
     const [projects, setProjects] = useState([]);
+    const [isVisible, setIsVisible] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0); // Will be set on data load
     const [isHovering, setIsHovering] = useState(false);
     const [shouldSmoothScroll, setShouldSmoothScroll] = useState(true);
 
     const carouselRef = useRef(null);
+    const sectionRef = useRef(null);
     const itemsRef = useRef([]);
     const isDragging = useRef(false);
     const startX = useRef(0);
     const scrollLeft = useRef(0);
     const dragDelta = useRef(0);
 
-    // 1. Fetch projects
+    // Start loading shortly before the carousel enters the viewport instead of
+    // competing with the hero and above-the-fold resources on page load.
     useEffect(() => {
+        const section = sectionRef.current;
+        if (!section) return undefined;
+
+        if (!("IntersectionObserver" in window)) {
+            const fallbackId = window.setTimeout(() => setIsVisible(true), 0);
+            return () => window.clearTimeout(fallbackId);
+        }
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: "800px 0px" },
+        );
+
+        observer.observe(section);
+        return () => observer.disconnect();
+    }, []);
+
+    // Fetch projects only when the section is near the viewport.
+    useEffect(() => {
+        if (!isVisible) return undefined;
+
+        const controller = new AbortController();
+
         const fetchProjects = async () => {
             try {
-                const res = await fetch(PROJECTS_API_URL);
+                const res = await fetch(PROJECTS_API_URL, {
+                    signal: controller.signal,
+                });
                 const data = await res.json();
                 const filtered = (data.projects || []).filter((project) => {
                     const hasImage = project.cover_image_url || project.images?.[0]?.image_url;
@@ -50,11 +83,15 @@ const GalleryCarousel = () => {
                 setProjects(filtered);
                 setActiveIndex(filtered.length);
             } catch (err) {
-                console.error("Failed to load projects", err);
+                if (err?.name !== "AbortError") {
+                    console.error("Failed to load projects", err);
+                }
             }
         };
         fetchProjects();
-    }, []);
+
+        return () => controller.abort();
+    }, [isVisible]);
 
     // 2. Triple your projects for infinite effect
     const tripleProjects = [...projects, ...projects, ...projects];
@@ -165,7 +202,7 @@ const GalleryCarousel = () => {
 
     if (projectsCount === 0) {
         return (
-            <div className="text-center py-10">
+            <div ref={sectionRef} className="text-center py-10">
                 <div className="text-lg text-gray-600">Loading Projects...</div>
             </div>
         );
@@ -173,6 +210,7 @@ const GalleryCarousel = () => {
 
     return (
         <div
+            ref={sectionRef}
             className="relative w-full overflow-hidden"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}

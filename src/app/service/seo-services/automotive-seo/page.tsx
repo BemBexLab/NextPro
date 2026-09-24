@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import SubServiceDetailPage from "../[sub]/SubServiceDetailClient";
 import ServiceHero from "../components/ServiceHero";
 import Section2 from "./components/Section2";
 import Section3 from "./components/Section3";

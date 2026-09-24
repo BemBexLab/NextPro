@@ -16,7 +16,7 @@ function hasFaqHeading(container) {
 }
 
 function getFaqContainers() {
-  const containers = Array.from(document.querySelectorAll("section, article, div"));
+  const containers = Array.from(document.querySelectorAll("section, article"));
 
   return containers.filter((container) => {
     if (!hasFaqHeading(container)) {
@@ -66,26 +66,36 @@ const AutoFaqJsonLd = () => {
   const [schemaJson, setSchemaJson] = useState("");
 
   useEffect(() => {
-    const hasExistingFaqSchema = Array.from(
-      document.querySelectorAll('script[type="application/ld+json"]')
-    ).some((script) => {
-      if (script.id === "auto-faq-jsonld") {
-        return false;
+    const buildSchema = () => {
+      const hasExistingFaqSchema = Array.from(
+        document.querySelectorAll('script[type="application/ld+json"]')
+      ).some((script) => {
+        if (script.id === "auto-faq-jsonld") {
+          return false;
+        }
+
+        return /"@type"\s*:\s*"FAQPage"/.test(script.textContent || "");
+      });
+
+      if (hasExistingFaqSchema) {
+        setSchemaJson("");
+        return;
       }
 
-      return /"@type"\s*:\s*"FAQPage"/.test(script.textContent || "");
-    });
+      const containers = getFaqContainers();
+      const faqs = containers.flatMap((container) => extractFaqsFromContainer(container));
+      const schema = buildFaqSchema(faqs);
 
-    if (hasExistingFaqSchema) {
-      setSchemaJson("");
-      return;
+      setSchemaJson(schema ? JSON.stringify(schema) : "");
+    };
+
+    if ("requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(buildSchema, { timeout: 2000 });
+      return () => window.cancelIdleCallback(idleId);
     }
 
-    const containers = getFaqContainers();
-    const faqs = containers.flatMap((container) => extractFaqsFromContainer(container));
-    const schema = buildFaqSchema(faqs);
-
-    setSchemaJson(schema ? JSON.stringify(schema) : "");
+    const timeoutId = window.setTimeout(buildSchema, 500);
+    return () => window.clearTimeout(timeoutId);
   }, [pathname]);
 
   if (!schemaJson) {
