@@ -308,7 +308,7 @@ export default function SubServiceDetailPage({
               placeholder: "Message",
             },
           ],
-          submitLabel: "Send",
+          submitLabel: service.submitLabel || "Send",
         }}
       />
 
