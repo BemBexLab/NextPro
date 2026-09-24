@@ -41,7 +41,7 @@ export async function POST(req) {
     const smtpUser = process.env.SMTP_USER;
     // Google displays app passwords in groups; remove whitespace before auth.
     const smtpPass = process.env.SMTP_PASS?.replace(/\s+/g, "");
-    const emailTo = process.env.EMAIL_TO || "info@webfoundersusa.com";
+    const emailTo = process.env.EMAIL_TO || "contact@webfoundersusa.com";
 
     if (smtpUser && smtpPass) {
       try {
