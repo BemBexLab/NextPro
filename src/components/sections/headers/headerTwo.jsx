@@ -6,40 +6,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoCall } from "react-icons/io5";
 
-import { countyPosts } from "@/data/county";
+import { locationNavigation } from "@/data/navigation";
 import { Button } from "@/components/ui/button";
 import StickyHeader from "@/components/ui/stickyHeader";
 
 const MobileMenu = dynamic(() => import("./mobileMenu"), {
   ssr: false,
 });
-
-const hardCodedLocationSubNavLinks = [
-  {
-    id: "elk-river",
-    path: "/locations/web-design-elk-river/",
-    title: "Elk River",
-  },
-  {
-    id: "gainesville-ga",
-    path: "/locations/web-design-gainesville-ga/",
-    title: "Gainesville, GA",
-  },
-  {
-    id: "gwinnet",
-    path: "/locations/seo-gwinnet/",
-    title: "Gwinnett",
-  },
-];
-
-const locationSubNavLinks = [
-  ...hardCodedLocationSubNavLinks,
-  ...countyPosts.map((post) => ({
-    id: `county-${post.id}`,
-    path: `/locations/${post.slug}/`,
-    title: post.title,
-  })),
-];
 
 const navigationLinks = [
   { id: 1, path: "/", lable: "Home" },
@@ -49,7 +22,7 @@ const navigationLinks = [
   { id: 5, path: "/portfolio", lable: "Our Work" },
   { id: 6, path: "/pricing", lable: "Pricing Plans" },
   { id: 7, path: "/blog", lable: "Blog" },
-  { id: 8, path: "/locations", lable: "Locations", children: locationSubNavLinks },
+  { id: 8, path: "/locations", lable: "Locations", children: locationNavigation },
 ];
 
 const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {

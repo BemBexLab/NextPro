@@ -1,4 +1,5 @@
 export const SITE_URL = "https://www.webfoundersusa.com";
+export const SITE_LANGUAGE = "en-US";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/image123.webp`;
 
 function normalizePathname(pathname) {
@@ -55,7 +56,7 @@ export function buildAlternates(canonical) {
   return {
     canonical: canonicalUrl,
     languages: {
-      "en-us": canonicalUrl,
+      [SITE_LANGUAGE]: canonicalUrl,
     },
   };
 }
@@ -76,7 +77,7 @@ export function withEnUsHreflang(metadata = {}) {
       ...(canonicalUrl ? { canonical: canonicalUrl } : {}),
       languages: {
         ...(metadata?.alternates?.languages || {}),
-        "en-us": canonicalUrl || "./",
+        [SITE_LANGUAGE]: canonicalUrl || "./",
       },
     },
   };

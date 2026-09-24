@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 import LivePreview from "@/components/LivePreview"; // <--- Make this file (see below)
 import BackButton from "./BackButton";
@@ -136,10 +137,13 @@ export default async function ProjectPage({ params }) {
 
         {/* Project Image */}
         <div className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-xl mb-12">
-          <img
+          <Image
             src={imageUrl}
             alt={project.title.rendered}
-            className="w-full h-auto object-cover"
+            width={1200}
+            height={800}
+            sizes="(max-width: 1024px) 100vw, 896px"
+            className="h-auto w-full object-cover"
           />
         </div>
 

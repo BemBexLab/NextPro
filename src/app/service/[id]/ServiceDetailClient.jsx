@@ -112,9 +112,11 @@ export default function ServiceDetailPage({ service, serviceId }) {
                       {Icon ? (
                         <Icon className="h-6 w-6 text-[#f84318] md:h-8 md:w-8" />
                       ) : (
-                        <img
+                        <Image
                           src={sub.hero?.image || service.hero?.image}
                           alt={sub.title}
+                          width={32}
+                          height={32}
                           className="h-6 w-6 object-contain md:h-8 md:w-8"
                         />
                       )}
@@ -270,13 +272,12 @@ export default function ServiceDetailPage({ service, serviceId }) {
               },
             ].map(({ src, alt, width, height }) => (
               <div key={alt} className="flex justify-center transition-all duration-300">
-                <img
+                <Image
                   src={src}
                   alt={alt}
                   width={width}
                   height={height}
                   className="h-auto max-w-full object-contain"
-                  loading="lazy"
                 />
               </div>
             ))}

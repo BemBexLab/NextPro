@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/contextApi/themeProvider";
 import FooterFour from "@/components/sections/footers/footerFour";
 import HeaderTwo from "@/components/sections/headers/HeaderTwoServer";
 import ClientEnhancements from "@/components/ClientEnhancements";
-import { withEnUsHreflang } from "@/lib/metadata";
+import { SITE_LANGUAGE, withEnUsHreflang } from "@/lib/metadata";
 
 const themeInitScript = `
 (() => {
@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
       : null;
 
   return (
-    <html lang="en-US" suppressHydrationWarning={true}>
+    <html lang={SITE_LANGUAGE} suppressHydrationWarning={true}>
       <head />
       <body
         className="font-sans"

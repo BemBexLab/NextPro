@@ -47,3 +47,28 @@ export const seoSubServiceNavigation = [
   { id: "locksmith-seo-services", title: "Locksmith SEO Services" },
   { id: "insurance-broker-seo", title: "Insurance Broker SEO Services" },
 ];
+
+export const locationNavigation = [
+  { id: "elk-river", path: "/locations/web-design-elk-river/", title: "Elk River" },
+  {
+    id: "gainesville-ga",
+    path: "/locations/web-design-gainesville-ga/",
+    title: "Gainesville, GA",
+  },
+  { id: "gwinnet", path: "/locations/seo-gwinnet/", title: "Gwinnett" },
+  {
+    id: "county-1",
+    path: "/locations/seo-company-union-county-ga/",
+    title: "SEO Company in Union County, GA",
+  },
+  {
+    id: "county-2",
+    path: "/locations/alpharetta-seo-services/",
+    title: "Alpharetta SEO Services",
+  },
+  {
+    id: "county-3",
+    path: "/locations/seo-company-suwanee-ga/",
+    title: "SEO Company Suwanee, GA",
+  },
+];
