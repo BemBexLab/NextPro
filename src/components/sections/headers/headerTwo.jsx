@@ -55,6 +55,11 @@ const navigationLinks = [
 const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
   const pathname = usePathname();
   const [openDropdown, setOpenDropdown] = useState(null);
+  const mobileNavigationLinks = navigationLinks.map((link) =>
+    link.lable === "SEO Services"
+      ? { ...link, children: seoSubServices }
+      : link,
+  );
 
   const isActive = (path) => {
     if (path === "/") {
@@ -334,7 +339,7 @@ const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
                   </Button>
                 </div>
 
-                <MobileMenu data={navigationLinks} />
+                <MobileMenu data={mobileNavigationLinks} />
               </div>
             </div>
           </div>
