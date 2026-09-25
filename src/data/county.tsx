@@ -1799,7 +1799,1036 @@ export const countyPosts: CountyPost[] = [
         ],
       },
     ],
-  }
+  },
+  {
+    id: 4,
+    slug: "maryland-seo-company",
+    metaTitle: "Maryland  SEO Company | Web Founders USA",
+    metaDescription: "Grow your Maryland  SEO Company business with expert SEO services. Improve local rankings, attract qualified traffic, and generate more leads in Canton and beyond.",
+    title: "Maryland SEO Company",
+    description: (
+      <div className="space-y-3">
+        <p>
+          Web Founders USA provides <a href="/service/seo-services/" className="hover:text-blue-500 font-semibold underline">professional SEO services</a> in Maryland to help businesses improve their online visibility, reach local customers, and build a stronger presence in organic search results.
+        </p>
+        <p>
+          Our Maryland SEO company creates customized strategies based on your business, industry, target audience, competition, and service area. From keyword research and local SEO to technical optimization, content, and website improvements, we focus on the areas that can support long-term search visibility.
+        </p>
+        <p>
+          Ready to improve your visibility in Maryland? Contact <a href="/" className="hover:text-blue-500 underline font-semibold">Web Founders USA</a> today for a free SEO consultation.
+        </p>
+        <p></p>
+      </div>
+    ),
+    actions: [
+      {
+        label: "Ready to improve your visibility in Maryland",
+        href: "/contact-us",
+      },
+    ],
+    submitLabel: "Request a Free SEO Audit.",
+    image: "",
+    publishedAt: "2026-09-24",
+    content: [
+      {
+        heading: "SEO Services in Maryland",
+        paragraphs: [
+          <div
+            key="seo-services-maryland-content"
+            className="space-y-12 text-[1.02rem] leading-8 text-slate-600 sm:text-lg"
+          >
+            <div className="grid gap-8 border-b border-slate-300 pb-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
+              <p className="max-w-xl text-xl font-semibold leading-tight tracking-[-0.025em] text-slate-950 sm:text-2xl">
+                Our <a href="/service/seo-services/" className="hover:text-blue-500 underline ">SEO services</a>{" "}are designed to improve your website&apos;s
+                relevance, technical health, local visibility, and organic search
+                performance.
+              </p>
+              <p className="max-w-3xl self-end font-medium text-slate-700">
+                As a Maryland SEO firm, we can help with:
+              </p>
+            </div>
+
+            <ul className="grid list-none gap-x-12 md:grid-cols-2">
+              {[
+                "Local SEO",
+                "On-page SEO",
+                "Technical SEO",
+                "Keyword research",
+                "SEO content optimization",
+                "Competitor research",
+                "SEO audits",
+                "Google Business Profile optimization",
+                "Local citation building",
+                "Internal linking",
+                "Schema markup",
+                "Mobile SEO",
+                "Website speed optimization",
+                "Conversion-focused SEO",
+              ].map((item, index) => (
+                <li
+                  key={item}
+                  className="flex items-baseline gap-4 border-t border-slate-200 py-4 text-[1.02rem] font-medium leading-7 text-slate-700 sm:text-lg"
+                >
+                  <span className="min-w-7 font-mono text-sm font-semibold tracking-wide text-blue-700">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="max-w-5xl border-l-2 border-blue-700 pl-5 font-medium text-slate-700 sm:pl-6">
+              Businesses that want to improve their location-based visibility can
+              also explore our{" "}
+              <a
+                href="/service/seo-services/local-seo-services/"
+                className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                Local SEO Services
+              </a>{" "}
+              for a broader local search strategy.
+            </p>
+          </div>,
+        ],
+      },
+      {
+        heading: "Local SEO Maryland",
+        paragraphs: [
+          <div
+            key="maryland-local-seo-content"
+            className="space-y-10"
+          >
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
+              <div className="max-w-2xl space-y-5">
+                <p className="text-[1.02rem] leading-8 text-slate-600 sm:text-lg">
+                Local search is important for businesses that serve customers in
+                a specific city, county, or service area.
+                </p>
+                <p className="text-[1.02rem] leading-8 text-slate-600 sm:text-lg">
+                  Our <b className="font-bold text-slate-900">local SEO Maryland</b>{" "}
+                  strategies help businesses improve their visibility when
+                  potential customers search for products and services nearby.
+                </p>
+                <p className="text-[1.02rem] leading-8 text-slate-600 sm:text-lg">
+                  People may search using a service name, business category, city,
+                  or phrases such as &quot;near me.&quot; A well planned local SEO
+                  strategy helps your website provide useful information for these
+                  searches.
+                </p>
+              </div>
+
+              <div className="border-t border-slate-300 pt-7 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+                <p className="text-base font-bold tracking-tight text-slate-900 sm:text-lg">
+                  Our local SEO process may include:
+                </p>
+                <ul className="mt-5 grid list-none gap-x-8 sm:grid-cols-2">
+                  {[
+                    "Google Business Profile optimization",
+                    "Local keyword research",
+                    "Location page optimization",
+                    "Local citations",
+                    "NAP consistency",
+                    "Local directory listings",
+                    "Google Maps optimization",
+                    "Local content",
+                    "Review strategy",
+                    "Local competitor research",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="border-t border-slate-200 py-3 text-[0.98rem] font-medium leading-6 text-slate-700 before:mr-3 before:inline-block before:h-1.5 before:w-1.5 before:rounded-full before:bg-blue-700 before:content-['']"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <p className="max-w-4xl border-t-2 border-blue-700 pt-5 text-base font-medium leading-7 text-slate-700 sm:text-lg">
+              We focus on accurate business information, useful content, and
+              strong location signals to help search engines understand your
+              business and service area.
+            </p>
+          </div>,
+        ],
+      },
+      {
+        heading: "Maryland Search Engine Optimization",
+        paragraphs: [
+          <div
+            key="maryland-search-engine-optimization-content"
+            className="space-y-10"
+          >
+            <p className="max-w-4xl text-[1.05rem] leading-8 text-slate-600 sm:text-xl">
+              Effective Maryland search engine optimization is about more than
+              adding keywords to your website.
+            </p>
+
+            <div className="grid gap-8 border-t border-slate-300 pt-8 text-[1.02rem] leading-8 text-slate-600 sm:text-lg lg:grid-cols-2 lg:gap-16 lg:pt-10">
+              <p>
+                Your website needs helpful content, a clear structure, strong
+                internal links, good technical performance, and pages that match
+                what your customers are searching for.
+              </p>
+              <p>
+                Our SEO strategy starts with understanding your business and then
+                identifying opportunities that can improve your organic search
+                presence.
+              </p>
+            </div>
+
+            <div className="space-y-10 border-t border-slate-300 pt-10">
+              <section className="max-w-4xl space-y-4">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Keyword Research
+                </h3>
+                <div className="space-y-5 text-[1.02rem] leading-8 text-slate-600 sm:text-lg">
+                  <p>
+                    We research commercial, informational, local, branded, and
+                    long-tail keywords related to your services.
+                  </p>
+                  <p>
+                    The goal is to find keywords that match real customer searches
+                    and search intent.
+                  </p>
+                </div>
+              </section>
+
+              <div className="grid gap-x-16 gap-y-12 md:grid-cols-2">
+                <section className="space-y-4">
+                  <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                    On-Page SEO
+                  </h3>
+                  <p className="text-[1.02rem] leading-8 text-slate-600 sm:text-lg">
+                    We optimize page titles, meta descriptions, headings, content,
+                    URLs, images, internal links, and other important page elements.
+                  </p>
+                </section>
+
+                <section className="space-y-4">
+                  <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                    Technical SEO
+                  </h3>
+                  <div className="space-y-5 text-[1.02rem] leading-8 text-slate-600 sm:text-lg">
+                    <p>
+                      Technical SEO helps search engines crawl, index, and
+                      understand your website.
+                    </p>
+                    <p>
+                      We can identify issues involving broken links, redirects,
+                      sitemap problems, mobile usability, page speed, structured
+                      data, and website architecture.
+                    </p>
+                  </div>
+                </section>
+
+                <section className="space-y-4">
+                  <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                    SEO Content
+                  </h3>
+                  <div className="space-y-5 text-[1.02rem] leading-8 text-slate-600 sm:text-lg">
+                    <p>
+                      Helpful content can answer customer questions and build
+                      topical relevance.
+                    </p>
+                    <p>
+                      Our{" "}
+                      <a
+                        href="/service/seo-services/seo-content-writing/"
+                        className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                      >
+                        SEO Content Writing Services
+                      </a>{" "}
+                      can support service pages, location pages, blogs, FAQs, and
+                      other search-focused content.
+                    </p>
+                  </div>
+                </section>
+
+                <section className="space-y-4">
+                  <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                    SEO Audits
+                  </h3>
+                  <p className="text-[1.02rem] leading-8 text-slate-600 sm:text-lg">
+                    A detailed website review can uncover technical, content,
+                    keyword, on-page, and structural issues.
+                  </p>
+                </section>
+              </div>
+
+              <p className="border-t-2 border-blue-700 pt-6 text-[1.02rem] font-medium leading-8 text-slate-700 sm:text-lg">
+                Our{" "}
+                <a
+                  href="/service/seo-services/seo-audit/"
+                  className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                >
+                  SEO Audit Services
+                </a>{" "}
+                can help identify areas that may need improvement before a larger
+                SEO campaign begins.
+              </p>
+            </div>
+          </div>,
+        ],
+      },
+      {
+        heading: "SEO Company in Westminster, MD",
+        paragraphs: [
+          <div
+            key="westminster-seo-company-content"
+            className="grid gap-8 border-t border-slate-300 pt-8 text-[1.02rem] leading-8 text-slate-600 sm:text-lg lg:grid-cols-2 lg:gap-x-16 lg:gap-y-10 lg:pt-10"
+          >
+            <p>
+              If your business serves <b>Westminster</b> and nearby communities,
+              local search visibility can help you connect with people looking
+              for your services.
+            </p>
+            <p>
+              As an <b>SEO company Westminster</b> businesses can work with, Web
+              Founders USA creates SEO strategies around your services, target
+              customers, and local competition.
+            </p>
+            <p>
+              We can optimize location pages, service pages, local keywords,
+              website content, and other important search signals.
+            </p>
+            <p>
+              The goal is to create a website that clearly tells both customers
+              and search engines what your business offers and where you provide
+              your services.
+            </p>
+          </div>,
+        ],
+      },
+      {
+        heading: "Elkton MD Search Engine Optimization",
+        paragraphs: [
+          <div
+            key="elkton-search-engine-optimization-content"
+            className="space-y-6 text-[1.02rem] leading-8 text-slate-600 sm:text-lg"
+          >
+            <p>
+              Businesses serving Elkton need a search strategy that reflects the
+              local market.
+            </p>
+            <p>
+              Our <b>Elkton MD search engine optimization services</b> focus on
+              helping businesses target relevant searches related to their
+              services and location.
+            </p>
+            <p>
+              We can research local search terms, improve existing website pages,
+              create location-focused content, and strengthen your overall SEO
+              structure.
+            </p>
+            <p>
+              For businesses targeting Elkton and nearby areas, search engine
+              optimization Elkton MD can become an important part of a long term{" "}
+              <a
+                href="/service/digital-marketing/"
+                className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                digital marketing
+              </a>{" "}
+              strategy.
+            </p>
+          </div>,
+        ],
+      },
+      {
+        heading: "SEO Company Maryland Businesses Can Trust",
+        paragraphs: [
+          <div
+            key="maryland-seo-company-trust-content"
+            className="space-y-3 text-[1.02rem] leading-8 text-slate-600 sm:text-lg"
+          >
+            <p className="max-w-4xl">
+              Choosing the right <b>SEO company Maryland</b> businesses can work
+              with starts with understanding your actual goals.
+            </p>
+
+            <div className="space-y-3">
+              <p className="max-w-5xl">
+                We do not believe every business needs the same SEO campaign. A
+                local contractor, online store, healthcare provider, and B2B
+                company can have very different customers and search behavior.
+              </p>
+              <p className="font-semibold">That is why we consider:</p>
+              <ul className="grid list-disc gap-x-16 gap-y-2 border-t border-slate-200 pt-6 pl-6 text-[1.02rem] leading-7 text-slate-700 sm:text-lg md:grid-cols-2">
+                <li>Your business model</li>
+                <li>Your target audience</li>
+                <li>Your service areas</li>
+                <li>Your existing website</li>
+                <li>Your competitors</li>
+                <li>Your important keywords</li>
+                <li>Your content</li>
+                <li>Your technical SEO</li>
+                <li>Your local search presence</li>
+              </ul>
+              <p className="border-t-2 border-blue-700 pt-5 font-medium text-slate-700">
+                This allows us to create a more focused SEO plan for your business.
+              </p>
+            </div>
+          </div>,
+        ],
+      },
+      {
+        heading: "Local SEO Company in Maryland",
+        paragraphs: [
+          <div
+            key="local-seo-company-maryland-content"
+            className="space-y-10 text-[1.02rem] leading-8 text-slate-600 sm:text-lg"
+          >
+            <div className="max-w-4xl space-y-5">
+              <p>
+                A strong <b>local SEO company in Maryland</b> should understand
+                how local search connects customers with businesses.
+              </p>
+              <p>
+                Our local SEO strategy can help businesses improve important areas
+                such as:
+              </p>
+            </div>
+
+            <div className="grid gap-x-16 gap-y-12 border-t border-slate-300 pt-10 md:grid-cols-2">
+              <section className="space-y-3">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Google Business Profile
+                </h3>
+                <p>
+                  Your Google Business Profile gives potential customers important
+                  information about your business, services, location, hours, and
+                  contact details.
+                </p>
+              </section>
+
+              <section className="space-y-3">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Local Keywords
+                </h3>
+                <p>
+                  We identify location-based keywords that are relevant to your
+                  services and use them naturally throughout your website.
+                </p>
+              </section>
+
+              <section className="space-y-3">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Location Pages
+                </h3>
+                <p>
+                  Well-written location pages can explain which areas you serve
+                  and what customers can expect from your business.
+                </p>
+              </section>
+
+              <section className="space-y-3">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Local Citations
+                </h3>
+                <p>
+                  Consistent business information across relevant online directories
+                  can support your local online presence.
+                </p>
+              </section>
+
+              <section className="space-y-3 md:col-span-2 md:max-w-[calc(50%-2rem)]">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Customer Reviews
+                </h3>
+                <p>
+                  Genuine customer reviews can provide useful information to
+                  potential customers and contribute to your overall online
+                  presence.
+                </p>
+              </section>
+            </div>
+          </div>,
+        ],
+      },
+      {
+        heading: "Search Engine Marketing in Maryland",
+        paragraphs: [
+          <div
+            key="search-engine-marketing-maryland-content"
+            className="space-y-5 text-[1.02rem] leading-8 text-slate-600 sm:text-lg"
+          >
+            <p className="max-w-5xl">
+              Search engine marketing in Maryland can include both organic SEO
+              and paid search strategies.
+            </p>
+            <p className="max-w-5xl">
+              SEO focuses on building organic visibility over time, while paid
+              search can provide another way to reach people who are actively
+              searching for specific products or services.
+            </p>
+            <p>
+              Depending on your business goals, your search marketing strategy may
+              include:
+            </p>
+            <ul className="grid list-disc gap-x-16 gap-y-2 border-y border-slate-300 py-6 pl-6 text-[1.02rem] leading-7 text-slate-700 sm:text-lg md:grid-cols-2">
+              <li>SEO</li>
+              <li>Local SEO</li>
+              <li>Content marketing</li>
+              <li>Paid search</li>
+              <li>Landing page optimization</li>
+              <li>Conversion optimization</li>
+              <li>Website improvements</li>
+            </ul>
+            <p className="max-w-5xl font-medium text-slate-700">
+              The right strategy depends on your market, competition, budget, and
+              business objectives.
+            </p>
+          </div>,
+        ],
+      },
+      {
+        heading: "Organic SEO in Maryland",
+        paragraphs: [
+          <div
+            key="organic-seo-maryland-content"
+            className="space-y-12 text-[1.02rem] leading-8 text-slate-600 sm:text-lg"
+          >
+            <div className="grid gap-8 border-b border-slate-300 pb-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
+              <p className="max-w-xl text-xl font-semibold leading-tight tracking-[-0.025em] text-slate-950 sm:text-2xl">
+                Organic SEO in Maryland is a long-term approach to improving your
+                website&apos;s visibility in search engines.
+              </p>
+              <p className="max-w-3xl self-end">
+                Instead of relying only on paid advertising, organic SEO focuses on
+                improving your website, content, technical structure, and relevance.
+              </p>
+            </div>
+
+            <div>
+              <p className="mb-5 text-sm font-bold uppercase tracking-[0.16em] text-slate-500">
+                Our process can include:
+              </p>
+              <ol className="grid max-w-5xl list-none gap-x-12 md:grid-cols-2">
+                {[
+                  "Website analysis",
+                  "Keyword research",
+                  "Competitor research",
+                  "Content planning",
+                  "On-page optimization",
+                  "Technical SEO",
+                  "Local SEO",
+                  "Content creation",
+                  "Internal linking",
+                  "Performance monitoring",
+                ].map((item, index) => (
+                  <li
+                    key={item}
+                    className="flex items-baseline gap-4 border-t border-slate-200 py-4 text-[1.02rem] font-medium leading-7 text-slate-700 sm:text-lg"
+                  >
+                    <span className="min-w-7 font-mono text-sm font-semibold tracking-wide text-blue-700">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <p className="max-w-5xl border-t-2 border-blue-700 pt-6 font-medium text-slate-700">
+              SEO takes consistent work. Search behavior, competitors, websites,
+              and search results can change, so your strategy should be reviewed
+              and improved over time.
+            </p>
+          </div>,
+        ],
+      },
+      {
+        heading: "Maryland SEO Expert for Local Businesses",
+        paragraphs: [
+          <div
+            key="maryland-seo-expert-local-businesses-content"
+            className="space-y-12 text-[1.02rem] leading-8 text-slate-600 sm:text-lg"
+          >
+            <div className="grid gap-8 border-b border-slate-300 pb-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
+              <p className="max-w-xl text-xl font-semibold leading-tight tracking-[-0.025em] text-slate-950 sm:text-2xl">
+                Working with a <b>Maryland SEO expert</b> can help you create a
+                strategy based on your actual market rather than a generic SEO
+                plan.
+              </p>
+              <p className="max-w-3xl self-end">
+                We look at your business, services, customers, competitors, and
+                target locations to identify opportunities.
+              </p>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.35fr)_minmax(0,0.65fr)] lg:gap-16">
+              <p className="text-sm font-bold uppercase tracking-[0.16em] text-slate-500">
+                Our team can help businesses improve:
+              </p>
+              <ul className="grid list-none sm:grid-cols-2">
+                {[
+                  "Organic visibility",
+                  "Local search presence",
+                  "Website structure",
+                  "Content quality",
+                  "Keyword targeting",
+                  "Technical SEO",
+                  "Internal linking",
+                  "Conversion opportunities",
+                ].map((item, index) => (
+                  <li
+                    key={item}
+                    className="flex items-baseline gap-4 border-t border-slate-200 py-4 text-[1.02rem] font-medium leading-7 text-slate-700 sm:text-lg"
+                  >
+                    <span className="min-w-7 font-mono text-sm font-semibold tracking-wide text-blue-700">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <p className="max-w-5xl border-l-2 border-blue-700 pl-5 font-medium text-slate-700 sm:pl-6">
+              The goal is to make your website more useful for customers while
+              giving search engines clearer information about your business.
+            </p>
+          </div>,
+        ],
+      },
+      {
+        heading: "Maryland SEO Services for Different Industries",
+        paragraphs: [
+          <div
+            key="maryland-seo-services-industries-content"
+            className="space-y-14 text-[1.02rem] leading-8 text-slate-600 sm:text-lg"
+          >
+            <p className="max-w-4xl border-b border-slate-300 pb-10 text-xl font-semibold leading-tight tracking-[-0.025em] text-slate-950 sm:text-2xl">
+              Different industries have different search needs. Our SEO strategies
+              can be adapted to your business model and target audience.
+            </p>
+
+            <div className="grid gap-x-12 gap-y-14 lg:grid-cols-12 lg:gap-x-16 lg:gap-y-16">
+              <section className="space-y-6 border-t-2 border-blue-700 pt-6 lg:col-span-7">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  E-Commerce SEO
+                </h3>
+                <p>
+                  Online stores need optimized product pages, category pages,
+                  useful content, internal links, and strong technical SEO.
+                </p>
+                <p>
+                  For businesses using different e-commerce platforms, we also
+                  provide:
+                </p>
+                <ul className="grid list-disc gap-x-10 gap-y-2 border-t border-slate-200 pt-4 pl-6 text-slate-700 sm:grid-cols-2">
+                  <li>
+                    <a
+                      href="/service/seo-services/shopify-seo/"
+                      className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                    >
+                      Shopify SEO Services
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/service/seo-services/woocommerce-seo/"
+                      className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                    >
+                      WooCommerce SEO Services
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/service/seo-services/magento-seo/"
+                      className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                    >
+                      Magento SEO Services
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/service/seo-services/bigcommerce-seo/"
+                      className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                    >
+                      BigCommerce SEO Services
+                    </a>
+                  </li>
+                </ul>
+              </section>
+
+              <section className="space-y-6 border-t-2 border-blue-700 pt-6 lg:col-span-5">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  B2B SEO
+                </h3>
+                <p>
+                  B2B businesses often target specific services, industries, and
+                  decision-makers.
+                </p>
+                <p>
+                  Our{" "}
+                  <a
+                    href="/service/seo-services/b2b-seo/"
+                    className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                  >
+                    B2B SEO Services
+                  </a>{" "}
+                  can focus on commercial keywords, service pages, educational
+                  content, and organic search visibility.
+                </p>
+              </section>
+
+              <section className="space-y-6 border-t-2 border-blue-700 pt-6 lg:col-span-7">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Healthcare and Medical SEO
+                </h3>
+                <p>
+                  Healthcare businesses need clear, useful, and easy-to-understand
+                  information.
+                </p>
+                <p>
+                  Our{" "}
+                  <a
+                    href="/service/seo-services/healthcare-seo/"
+                    className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                  >
+                    Healthcare SEO Services
+                  </a>{" "}
+                  can help healthcare organizations improve their online search
+                  presence.
+                </p>
+                <p>
+                  We also provide{" "}
+                  <a
+                    href="/service/seo-services/medical-seo/"
+                    className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                  >
+                    Medical SEO Services
+                  </a>{" "}
+                  for businesses targeting medical services and related searches.
+                </p>
+              </section>
+
+              <section className="space-y-6 border-t-2 border-slate-300 pt-6 lg:col-span-5">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Dental SEO
+                </h3>
+                <p>
+                  Dental practices can benefit from location-focused pages,
+                  treatment-related content, local keyword targeting, and Google
+                  Business Profile optimization.
+                </p>
+                <p>
+                  Our{" "}
+                  <a
+                    href="/service/seo-services/dental-seo/"
+                    className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                  >
+                    Dental SEO Services
+                  </a>{" "}
+                  can be customized around the treatments and locations a dental
+                  practice wants to target.
+                </p>
+              </section>
+
+              <section className="space-y-6 border-t-2 border-slate-300 pt-6 lg:col-span-5">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Construction SEO
+                </h3>
+                <p>
+                  Construction companies often compete for local searches related
+                  to specific services.
+                </p>
+                <p>
+                  Our{" "}
+                  <a
+                    href="/service/seo-services/construction-seo/"
+                    className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                  >
+                    Construction SEO Services
+                  </a>{" "}
+                  can focus on service pages, local keywords, helpful content, and
+                  lead-generation opportunities.
+                </p>
+              </section>
+
+              <section className="space-y-6 border-t-2 border-slate-300 pt-6 lg:col-span-7">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Roofing SEO
+                </h3>
+                <p>
+                  Roofing companies can target searches related to roof repair,
+                  replacement, installation, inspections, and other roofing
+                  services.
+                </p>
+                <p>
+                  Our{" "}
+                  <a
+                    href="/service/seo-services/roofing-seo/"
+                    className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                  >
+                    Roofing SEO Services
+                  </a>{" "}
+                  focus on relevant local and service-specific search terms.
+                </p>
+              </section>
+
+              <section className="space-y-6 border-t-2 border-slate-300 pt-6 lg:col-span-5">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Automotive SEO
+                </h3>
+                <p>
+                  Automotive businesses can target searches related to repairs,
+                  maintenance, dealerships, parts, and other vehicle services.
+                </p>
+                <p>
+                  Our{" "}
+                  <a
+                    href="/service/seo-services/automotive-seo/"
+                    className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                  >
+                    Automotive SEO Services
+                  </a>{" "}
+                  can be customized around your services and target market.
+                </p>
+              </section>
+
+              <section className="space-y-6 border-t-2 border-slate-300 pt-6 lg:col-span-7">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Legal SEO
+                </h3>
+                <p>
+                  Law firms often need service-specific and location-specific SEO
+                  strategies.
+                </p>
+                <p>
+                  Our{" "}
+                  <a
+                    href="/service/seo-services/employment-lawyers-seo/"
+                    className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                  >
+                    Employment Lawyer SEO Services
+                  </a>{" "}
+                  can help employment law practices build content around relevant
+                  legal services and search intent.
+                </p>
+              </section>
+
+              <section className="space-y-6 border-t-2 border-slate-300 pt-6 lg:col-span-5">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Insurance SEO
+                </h3>
+                <p>
+                  Insurance businesses operate in competitive search markets.
+                </p>
+                <p>
+                  Our{" "}
+                  <a
+                    href="/service/seo-services/insurance-broker-seo/"
+                    className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                  >
+                    SEO for Insurance Brokers
+                  </a>{" "}
+                  can focus on local visibility, service pages, content, keyword
+                  research, and commercial search intent.
+                </p>
+              </section>
+
+              <section className="space-y-6 border-t-2 border-slate-300 pt-6 lg:col-span-7">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Hospitality SEO
+                </h3>
+                <p>
+                  Hotels and hospitality businesses need to be visible when
+                  potential guests search for accommodation.
+                </p>
+                <p>
+                  Our{" "}
+                  <a
+                    href="/service/seo-services/hotel-seo/"
+                    className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+                  >
+                    Hotel SEO Services
+                  </a>{" "}
+                  focus on relevant search terms, location information, content,
+                  and website optimization.
+                </p>
+              </section>
+            </div>
+          </div>,
+        ],
+      },
+      {
+        heading: "Why Choose WebFounders USA for Maryland SEO?",
+        paragraphs: [
+          <div
+            key="why-choose-webfounders-maryland-seo-content"
+            className="space-y-12 text-[1.02rem] leading-8 text-slate-600 sm:text-lg"
+          >
+            <div className="grid gap-x-12 gap-y-14 lg:grid-cols-12 lg:gap-x-16 lg:gap-y-16">
+              <section className="space-y-5 border-t-2 border-blue-700 pt-6 lg:col-span-6">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Customized SEO Strategy
+                </h3>
+                <p>
+                  Every business has different customers, competitors, services,
+                  and goals. We build your strategy around these factors.
+                </p>
+              </section>
+
+              <section className="space-y-5 border-t-2 border-blue-700 pt-6 lg:col-span-6">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Local Search Focus
+                </h3>
+                <p>
+                  For businesses targeting Maryland customers, we focus on local
+                  keywords, location relevance, Google Business Profile
+                  optimization, local content, and other local SEO factors.
+                </p>
+              </section>
+
+              <section className="space-y-5 border-t-2 border-slate-300 pt-6 lg:col-span-4">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  SEO-Friendly Content
+                </h3>
+                <p>
+                  We create content around search intent and customer questions
+                  instead of simply repeating keywords.
+                </p>
+              </section>
+
+              <section className="space-y-5 border-t-2 border-slate-300 pt-6 lg:col-span-4">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Technical SEO Support
+                </h3>
+                <p>
+                  We work on crawlability, indexability, website speed, mobile
+                  usability, redirects, internal linking, structured data, and
+                  site architecture.
+                </p>
+              </section>
+
+              <section className="space-y-5 border-t-2 border-slate-300 pt-6 lg:col-span-4">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                  Conversion-Focused Approach
+                </h3>
+                <p>
+                  Getting website traffic is only one part of digital marketing.
+                  Your visitors should also be able to understand your services
+                  and easily take the next step.
+                </p>
+              </section>
+            </div>
+          </div>,
+        ],
+      },
+      {
+        heading: "Our Maryland SEO Process",
+        paragraphs: [
+          <div
+            key="our-maryland-seo-process-content"
+            className="relative"
+          >
+            <div
+              aria-hidden="true"
+              className="absolute bottom-6 left-5 top-6 hidden w-px bg-slate-300 sm:block"
+            />
+            <ol className="relative list-none space-y-8 p-0 sm:space-y-2">
+              {[
+                {
+                  title: "Step 1: Understand Your Business",
+                  description:
+                    "We learn about your services, target customers, competitors, locations, and marketing goals.",
+                },
+                {
+                  title: "Step 2: Website and SEO Audit",
+                  description:
+                    "We review your technical SEO, content, keywords, page structure, internal links, local SEO, and overall search presence.",
+                },
+                {
+                  title: "Step 3: Keyword Research",
+                  description:
+                    "We identify relevant local, commercial, informational, branded, and long-tail searches.",
+                },
+                {
+                  title: "Step 4: Competitor Analysis",
+                  description:
+                    "We review competing websites to understand their content, keywords, website structure, and local presence.",
+                },
+                {
+                  title: "Step 5: SEO Implementation",
+                  description:
+                    "We optimize relevant website pages, content, metadata, internal links, technical elements, and other areas identified during the audit.",
+                },
+                {
+                  title: "Step 6: Content and Local Optimization",
+                  description:
+                    "We improve existing content and create new pages where needed. Local search elements are also optimized for your target service areas.",
+                },
+                {
+                  title: "Step 7: Monitor and Improve",
+                  description:
+                    "We review SEO performance and identify opportunities for continued improvement.",
+                },
+              ].map((step, index) => (
+                <li
+                  key={step.title}
+                  className="grid gap-4 sm:grid-cols-[2.5rem_minmax(0,1fr)] sm:gap-6"
+                >
+                  <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border border-blue-700 bg-slate-50 font-mono text-xs font-bold text-blue-700">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <div className="border-b border-slate-200 pb-7 sm:pb-8">
+                    <h3 className="text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
+                      {step.title}
+                    </h3>
+                    <p className="mt-3 max-w-5xl text-[1.02rem] leading-8 text-slate-600 sm:text-lg">
+                      {step.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>,
+        ],
+      },
+      {
+        heading: "SEO Services for Maryland and Nearby Areas",
+        paragraphs: [
+          <div
+            key="seo-services-maryland-nearby-areas-content"
+            className="space-y-10 text-[1.02rem] leading-8 text-slate-600 sm:text-lg"
+          >
+            <p className="max-w-5xl">
+              Businesses in Maryland may serve customers across multiple cities
+              and communities.
+            </p>
+            <p className="max-w-5xl">
+              For businesses targeting more than one location, location pages
+              should be useful, unique, and connected to genuine service areas.
+              Creating helpful location content can give your website a clearer
+              structure and stronger local relevance.
+            </p>
+            <p className="max-w-5xl border-l-2 border-blue-700 pl-5 font-medium text-slate-700 sm:pl-6">
+              Businesses looking to expand beyond Maryland can also explore
+              location focused SEO solutions such as{" "}
+              <a
+                href="/locations/seo-gwinnet/"
+                className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                Gwinnett County SEO Company
+              </a>{" "}
+              and{" "}
+              <a
+                href="/locations/seo-company-union-county-ga/"
+                className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
+              >
+                SEO Company in Union County, GA
+              </a>
+              .
+            </p>
+          </div>,
+        ],
+      },
+    ],
+  },
 ];
 
 function getReactNodeText(node: ReactNode): string {

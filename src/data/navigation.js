@@ -71,4 +71,9 @@ export const locationNavigation = [
     path: "/locations/seo-company-suwanee-ga/",
     title: "SEO Company Suwanee, GA",
   },
+  {
+    id: "county-4",
+    path: "/locations/maryland-seo-company/",
+    title: "Maryland SEO Company",
+  },
 ];

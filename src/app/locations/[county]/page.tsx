@@ -148,6 +148,23 @@ export default async function CountyPage({ params }: CountyPageProps) {
               className={
                 section.heading === "Frequently Asked Questions"
                   ? "border-t border-slate-100 pt-8 sm:pt-10"
+                  : [
+                        "Local SEO Maryland",
+                        "Maryland Search Engine Optimization",
+                        "SEO Company in Westminster, MD",
+                        "Elkton MD Search Engine Optimization",
+                        "SEO Company Maryland Businesses Can Trust",
+                        "Local SEO Company in Maryland",
+                        "Search Engine Marketing in Maryland",
+                        "Organic SEO in Maryland",
+                        "Maryland SEO Expert for Local Businesses",
+                        "Maryland SEO Services for Different Industries",
+                        "Why Choose WebFounders USA for Maryland SEO?",
+                        "Our Maryland SEO Process",
+                        "SEO Services for Maryland and Nearby Areas",
+                        "SEO Services in Maryland",
+                      ].includes(section.heading ?? "")
+                    ? "relative left-1/2 w-screen -translate-x-1/2 border-y border-slate-200 bg-slate-50 px-4 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20"
                   : undefined
               }
             >
@@ -156,6 +173,23 @@ export default async function CountyPage({ params }: CountyPageProps) {
                   className={
                     section.heading === "Frequently Asked Questions"
                       ? "mb-8 text-center text-3xl font-bold leading-tight tracking-[-0.035em] text-slate-950 sm:text-4xl"
+                      : [
+                            "Local SEO Maryland",
+                            "Maryland Search Engine Optimization",
+                            "SEO Company in Westminster, MD",
+                            "Elkton MD Search Engine Optimization",
+                            "SEO Company Maryland Businesses Can Trust",
+                            "Local SEO Company in Maryland",
+                            "Search Engine Marketing in Maryland",
+                            "Organic SEO in Maryland",
+                            "Maryland SEO Expert for Local Businesses",
+                            "Maryland SEO Services for Different Industries",
+                            "Why Choose WebFounders USA for Maryland SEO?",
+                            "Our Maryland SEO Process",
+                            "SEO Services for Maryland and Nearby Areas",
+                            "SEO Services in Maryland",
+                          ].includes(section.heading ?? "")
+                        ? "mx-auto mb-10 max-w-7xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-slate-950 sm:mb-12 sm:text-5xl"
                       : "mb-5 text-2xl font-medium leading-[1.15] tracking-[-0.035em] text-[#282828] sm:text-3xl"
                   }
                 >
@@ -163,7 +197,28 @@ export default async function CountyPage({ params }: CountyPageProps) {
                 </h2>
               )}
 
-              <div className="space-y-5 text-base leading-[1.8] text-[#555555] sm:text-lg">
+              <div
+                className={
+                  [
+                    "Local SEO Maryland",
+                    "Maryland Search Engine Optimization",
+                    "SEO Company in Westminster, MD",
+                    "Elkton MD Search Engine Optimization",
+                    "SEO Company Maryland Businesses Can Trust",
+                    "Local SEO Company in Maryland",
+                    "Search Engine Marketing in Maryland",
+                    "Organic SEO in Maryland",
+                    "Maryland SEO Expert for Local Businesses",
+                    "Maryland SEO Services for Different Industries",
+                    "Why Choose WebFounders USA for Maryland SEO?",
+                    "Our Maryland SEO Process",
+                    "SEO Services for Maryland and Nearby Areas",
+                    "SEO Services in Maryland",
+                  ].includes(section.heading ?? "")
+                    ? "mx-auto max-w-7xl space-y-5 text-base leading-[1.8] text-[#555555] sm:text-lg"
+                    : "space-y-5 text-base leading-[1.8] text-[#555555] sm:text-lg"
+                }
+              >
                 {section.paragraphs.map((paragraph, paragraphIndex) => (
                   <div key={`${sectionIndex}-${paragraphIndex}`}>{paragraph}</div>
                 ))}
