@@ -1,20 +1,30 @@
 "use client";
 
 import { useState } from "react";
+import {
+  FaBullhorn,
+  FaCartShopping,
+  FaChartSimple,
+  FaDesktop,
+  FaGear,
+  FaLayerGroup,
+  FaPenNib,
+  FaRegCirclePlay,
+} from "react-icons/fa6";
 import SlideUp from "@/components/animations/slideUp";
 import { Button } from "@/components/ui/button";
 import { pricingData } from "@/lib/fackData/pricingData";
 import PriceCardTwo from "./priceCardTwo";
 
 const categories = [
-  "Logo",
-  "E-Commerce",
-  "Website Design",
-  "SMM",
-  "Video Animation",
-  "SEO",
-  "Maintenance",
-  "Branding",
+  { label: "Logo", icon: FaPenNib },
+  { label: "E-Commerce", icon: FaCartShopping },
+  { label: "Website Design", icon: FaDesktop },
+  { label: "SMM", icon: FaBullhorn },
+  { label: "Video Animation", icon: FaRegCirclePlay },
+  { label: "SEO", icon: FaChartSimple },
+  { label: "Maintenance", icon: FaGear },
+  { label: "Branding", icon: FaLayerGroup },
 ];
 
 const PriceThree = () => {
@@ -25,37 +35,44 @@ const PriceThree = () => {
 
   return (
     <section className="w-full py-10 sm:py-12 lg:py-15">
-      <div className="mx-auto w-[92%] max-w-[1350px]">
+      <div className="mx-auto w-[92%] max-w-[1400px]">
         <SlideUp>
           <div className="flex min-w-0 flex-col items-center">
-            <Button variant="secondary">Pricing</Button>
-            <h1 className="max-w-full break-words pt-4 text-center text-3xl font-extrabold leading-[120%] text-muted-foreground sm:pt-6 sm:text-4.5xl sm:leading-[130%] lg:text-5xl lg:leading-[140%]">
-              OUR PACKAGES
+            <Button
+              variant="secondary"
+              className="h-9 max-h-none rounded-full border-0 bg-[#eaf0ff] px-5 py-2 text-[12px] font-bold text-[#2d60b8] shadow-[0_4px_12px_rgba(45,96,184,0.12)] hover:bg-[#e1eaff] hover:text-[#24539f] sm:text-[13px]"
+            >
+              Pricing
+            </Button>
+            <h1 className="max-w-full break-words pt-4 text-center text-4xl font-bold leading-[1.05] tracking-[-0.04em] sm:pt-5 sm:text-5xl lg:text-6xl">
+              <span className="text-[#102f5b]">OUR </span>
+              <span className="text-[#e5002d]">PACKAGES</span>
             </h1>
-            <p className="max-w-[757px] pt-4 text-center text-sm font-semibold leading-relaxed text-gray-600 sm:pt-[18px] sm:text-base">
+            <p className="mt-2 max-w-[800px] text-center text-lg font-semibold leading-relaxed text-[#4e5d73] sm:mt-3">
               No matter what budget type you have – we welcome you
             </p>
 
             <div
-              className="mt-6 grid w-full max-w-5xl grid-cols-2 gap-2 min-[480px]:grid-cols-3 sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3"
+              className="mt-6 flex w-full max-w-[1307px] flex-wrap items-center justify-center gap-2.5 sm:mt-8 sm:gap-3"
               aria-label="Pricing categories"
             >
-              {categories.map((category) => {
-                const isActive = activeCategory === category;
+              {categories.map(({ label, icon: Icon }) => {
+                const isActive = activeCategory === label;
 
                 return (
                   <button
-                    key={category}
+                    key={label}
                     type="button"
                     aria-pressed={isActive}
-                    onClick={() => setActiveCategory(category)}
-                    className={`min-w-0 rounded-md border px-2 py-2 text-xs font-bold uppercase tracking-wide transition sm:min-w-[110px] sm:px-4 sm:text-sm ${
+                    onClick={() => setActiveCategory(label)}
+                    className={`inline-flex min-h-14 items-center justify-center gap-2.5 whitespace-nowrap rounded-[7px] border px-6 py-3 text-[13px] font-extrabold uppercase leading-none tracking-tight transition sm:min-h-10 sm:px-8 sm:text-[14px] ${
                       isActive
-                        ? "border-primary bg-primary text-white shadow"
-                        : "border-transparent bg-white text-primary hover:bg-[#E2E7FF] hover:text-primary"
+                        ? "border-[#12376f] bg-[#12376f] text-white shadow-[0_4px_10px_rgba(18,55,111,0.18)]"
+                        : "border-[#e1e8f0] bg-white text-[#17345f] hover:border-[#b8c8dc] hover:bg-[#f5f8fc]"
                     }`}
                   >
-                    <span className="break-words">{category}</span>
+                    <Icon className="h-5 w-5 shrink-0 sm:h-6 sm:w-6" />
+                    <span>{label}</span>
                   </button>
                 );
               })}
@@ -70,13 +87,14 @@ const PriceThree = () => {
           >
             {filteredData.length > 0 ? (
               filteredData.map(
-                ({ id, plan_name, price, old_price, services }) => (
+                ({ id, plan_name, price, old_price, services }, index) => (
                   <PriceCardTwo
                     key={id}
                     plan_name={plan_name}
                     price={price}
                     old_price={old_price}
                     services={services}
+                    cardIndex={index}
                   />
                 ),
               )

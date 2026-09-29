@@ -1,9 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import { MdOutlineMail } from "react-icons/md";
 import { Button } from "../ui/button";
-import Title from "../ui/title";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
 import {
   showSubmissionError,
   showSubmissionLoading,
@@ -12,7 +18,7 @@ import {
 } from "@/lib/submission";
 
 const inputClassName =
-  "h-12 min-w-0 w-full rounded-lg border-2 border-[#C0C0C0] bg-background px-4 text-sm outline-none transition-colors placeholder:text-gray-500 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 sm:h-14 sm:px-5 sm:text-base";
+  "h-11 min-w-0 w-full rounded-lg border border-[#d7e0eb] bg-white px-4 text-sm font-semibold text-[#102f5b] shadow-[0_2px_8px_rgba(13,45,89,0.03)] outline-none transition placeholder:text-[#8e9caf] focus:border-[#12376f] focus:ring-2 focus:ring-[#12376f]/10 sm:h-12 sm:px-5 sm:text-base";
 
 const ContactFormTwo = () => {
   const [name, setName] = useState("");
@@ -25,6 +31,11 @@ const ContactFormTwo = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!service) {
+      return;
+    }
+
     setIsSubmitting(true);
     showSubmissionLoading();
 
@@ -53,34 +64,25 @@ const ContactFormTwo = () => {
   };
 
   return (
-    <section className="mt-9 w-full px-4 sm:px-6 lg:mt-15 lg:px-8">
-      <div className="relative z-[1] mx-auto mb-0 w-full max-w-[1320px] rounded-[20px] bg-gray-200 px-4 py-8 drop-shadow-4xl sm:rounded-[30px] sm:px-6 sm:py-10 md:px-8 lg:-mb-28 lg:px-10 lg:py-12 xl:px-12.5 xl:pb-12.5 xl:pt-20">
-        <div className="grid min-w-0 grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-[minmax(260px,0.8fr)_minmax(0,1.2fr)] lg:gap-12 xl:grid-cols-[minmax(320px,0.85fr)_minmax(0,1.15fr)] xl:gap-14">
-          <div className="min-w-0 lg:pb-6 xl:pb-11">
-            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-lg bg-white drop-shadow-3xl sm:h-16 sm:w-16 lg:h-[75px] lg:w-[75px]">
-              <Image
-                src="/images/shapes/Frame 209.webp"
-                width={45}
-                height={50}
-                sizes="(min-width: 1024px) 45px, 36px"
-                className="h-auto w-8 sm:w-9 lg:w-[45px]"
-                alt="Website audit"
-              />
+    <section className="relative z-20 mt-9 w-full px-4 pt-2 sm:px-6 lg:mt-15 lg:px-8 lg:-mb-48">
+      <div className="relative z-30 mx-auto mb-0 w-full max-w-[1800px] bg-transparent">
+        <div className="grid min-w-0 grid-cols-1 items-center gap-10 rounded-[20px] border border-[#e3ebf4] bg-gradient-to-br from-white via-white to-[#f6faff] px-6 py-8 shadow-[0_18px_42px_rgba(13,45,89,0.1)] sm:gap-12 sm:px-10 sm:py-10 lg:grid-cols-[minmax(300px,0.82fr)_minmax(0,1.18fr)] lg:gap-0 lg:px-10 lg:py-10 xl:grid-cols-[minmax(350px,0.85fr)_minmax(0,1.15fr)] xl:px-12 xl:py-12">
+          <div className="min-w-0 border-b border-[#e7edf5] pb-7 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10 xl:pr-12">
+            <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-[#eef4fc] text-[#12376f] shadow-[0_10px_22px_rgba(18,55,111,0.1)] sm:h-24 sm:w-24">
+              <MdOutlineMail className="h-11 w-11 sm:h-14 sm:w-14" />
             </div>
 
-            <Title
-              size="5xl"
-              className="break-words pt-2 text-balance md:leading-[140%]"
-            >
-              Request a free Audit of your website
-            </Title>
-            <p className="mt-4 max-w-[449px] text-sm font-semibold leading-relaxed text-muted-foreground sm:text-base">
+            <h2 className="max-w-[620px] break-words text-[42px] font-bold leading-[1.03] tracking-[-0.045em] sm:text-[52px] lg:text-[58px]">
+              <span className="text-[#102f5b]">Request a free Audit</span>
+              <span className="block text-[#e5002d]">of your website</span>
+            </h2>
+            <p className="mt-6 max-w-[620px] text-base font-semibold leading-relaxed text-[#52647e] sm:text-lg">
               Find quick answers to common queries in our FAQ section, ensuring
               a clear understanding of your digital journey with us.
             </p>
           </div>
 
-          <div className="min-w-0">
+          <div className="min-w-0 lg:pl-10 xl:pl-12">
             <form className="min-w-0" onSubmit={handleSubmit}>
               <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                 <div className="min-w-0">
@@ -150,72 +152,73 @@ const ContactFormTwo = () => {
                 <label htmlFor="contact-form-service" className="sr-only">
                   Select a service
                 </label>
-                <select
-                  id="contact-form-service"
+                <Select
                   value={service}
-                  onChange={(event) => setService(event.target.value)}
-                  required
-                  className={`${inputClassName} appearance-none truncate pr-10`}
+                  onValueChange={setService}
                 >
-                  <option value="" disabled>
-                    Select a Service
-                  </option>
-                  <option value="Search Engine Optimization">
-                    Search Engine Optimization
-                  </option>
-                  <option value="Social Media Marketing">
-                    Social Media Marketing
-                  </option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Content Writing">Content Writing</option>
-                  <option value="Pay Per Click">Pay Per Click</option>
-                  <option value="Conversion Optimization Services">
-                    Conversion Optimization Services
-                  </option>
-                  <option value="eCommerce Website Design & Development">
-                    eCommerce Website Design & Development
-                  </option>
-                  <option value="Graphics Design Services">
-                    Graphic Design Services
-                  </option>
-                  <option value="Brand Strategy Services">
-                    Brand Strategy Services
-                  </option>
-                  <option value="Website Maintainance Services">
-                    Website Maintainance Services
-                  </option>
-                  <option value="eCommerce Marketing Services">
-                    eCommerce Marketing Services
-                  </option>
-                  <option value="Video Animation Services">
-                    Video Animation Services
-                  </option>
-                  <option value="Affiliate Marketing">
-                    Affiliate Marketing
-                  </option>
-                  <option value="Email Marketing">Email Marketing</option>
-                  <option value="Custom Website Design Services">
-                    Custom Website Design Services
-                  </option>
-                  <option value="Website Development Services">
-                    Website Development Services
-                  </option>
-                </select>
-                <svg
-                  className="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
+                  <SelectTrigger
+                    id="contact-form-service"
+                    aria-label="Select a service"
+                    aria-required="true"
+                    className={`${inputClassName} data-[state=open]:border-[#12376f] data-[state=open]:ring-2 data-[state=open]:ring-[#12376f]/10 [&>svg]:h-5 [&>svg]:w-5 [&>svg]:text-[#12376f]`}
+                  >
+                    <SelectValue placeholder="Select a Service" />
+                  </SelectTrigger>
+                  <SelectContent
+                    position="item-aligned"
+                    className="z-[60] max-h-80 rounded-xl border-[#d7e0eb] bg-white p-1 text-[#102f5b] shadow-[0_16px_36px_rgba(13,45,89,0.18)]"
+                  >
+                    <SelectItem value="Search Engine Optimization" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Search Engine Optimization
+                    </SelectItem>
+                    <SelectItem value="Social Media Marketing" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Social Media Marketing
+                    </SelectItem>
+                    <SelectItem value="Digital Marketing" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Digital Marketing
+                    </SelectItem>
+                    <SelectItem value="Content Writing" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Content Writing
+                    </SelectItem>
+                    <SelectItem value="Pay Per Click" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Pay Per Click
+                    </SelectItem>
+                    <SelectItem value="Conversion Optimization Services" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Conversion Optimization Services
+                    </SelectItem>
+                    <SelectItem value="eCommerce Website Design & Development" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      eCommerce Website Design &amp; Development
+                    </SelectItem>
+                    <SelectItem value="Graphics Design Services" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Graphic Design Services
+                    </SelectItem>
+                    <SelectItem value="Brand Strategy Services" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Brand Strategy Services
+                    </SelectItem>
+                    <SelectItem value="Website Maintainance Services" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Website Maintainance Services
+                    </SelectItem>
+                    <SelectItem value="eCommerce Marketing Services" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      eCommerce Marketing Services
+                    </SelectItem>
+                    <SelectItem value="Video Animation Services" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Video Animation Services
+                    </SelectItem>
+                    <SelectItem value="Affiliate Marketing" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Affiliate Marketing
+                    </SelectItem>
+                    <SelectItem value="Email Marketing" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Email Marketing
+                    </SelectItem>
+                    <SelectItem value="Custom Website Design Services" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Custom Website Design Services
+                    </SelectItem>
+                    <SelectItem value="Website Development Services" className="cursor-pointer rounded-lg px-3 py-2.5 text-sm font-semibold focus:bg-[#eef4ff] focus:text-[#12376f]">
+                      Website Development Services
+                    </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
 
               <div className="mt-3 min-w-0 sm:mt-4">
                 <label htmlFor="contact-form-message" className="sr-only">
@@ -225,7 +228,7 @@ const ContactFormTwo = () => {
                   id="contact-form-message"
                   name="message"
                   placeholder="Message"
-                  className="min-h-36 w-full min-w-0 resize-y rounded-lg border-2 border-[#C0C0C0] bg-background px-4 py-4 text-sm outline-none transition-colors placeholder:text-gray-500 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 sm:min-h-48 sm:px-5 sm:text-base"
+                  className="min-h-28 w-full min-w-0 resize-y rounded-lg border border-[#d7e0eb] bg-white px-4 py-4 text-sm font-semibold text-[#102f5b] shadow-[0_2px_8px_rgba(13,45,89,0.03)] outline-none transition placeholder:text-[#8e9caf] focus:border-[#12376f] focus:ring-2 focus:ring-[#12376f]/10 sm:min-h-36 sm:px-5 sm:text-base"
                   value={message}
                   onChange={(event) => setMessage(event.target.value)}
                   required
@@ -235,7 +238,7 @@ const ContactFormTwo = () => {
               <div className="mt-3 flex w-full justify-stretch sm:mt-4 sm:justify-end">
                 <Button
                   type="submit"
-                  className="w-full sm:w-auto"
+                  className="h-12 w-full max-w-none rounded-lg border-0 bg-gradient-to-r from-[#ef1640] to-[#ce002b] px-7 text-sm font-extrabold text-white shadow-[0_7px_14px_rgba(229,0,45,0.18)] hover:scale-100 hover:border-[#b90026] hover:bg-[#ce002b] hover:from-[#d90835] hover:to-[#b90026] hover:text-white hover:shadow-[0_9px_18px_rgba(185,0,38,0.22)] focus:ring-2 focus:ring-[#e5002d]/20 sm:w-auto sm:px-9 sm:text-base"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send request"}

@@ -1,8 +1,8 @@
 'use client'
-import Image from 'next/image'
 import React, { useState } from 'react'
+import { FaArrowRightLong } from 'react-icons/fa6'
 import { Button } from '@/components/ui/button'
-import Title from '@/components/ui/title'
+import { MdOutlineCalendarMonth } from "react-icons/md"
 import {
     showSubmissionError,
     showSubmissionLoading,
@@ -20,18 +20,25 @@ import SlideUp from '@/components/animations/slideUp'
 
 const SubscribeTwo = () => {
     return (
-        <section className='lg:py-15 py-9'>
+        <section className=''>
             <SlideUp>
-                <div className='max-w-[1350px] mx-auto px-[15px] relative overflow-x-hidden'>
-                    <div className='rounded-[30px] bg-gray-200 lg:px-12.5 px-7.5 lg:pt-14 pt-7.5 lg:pb-16 pb-7.5 flex lg:flex-row flex-col justify-between lg:items-center'>
-                        <div className='pb-6 max-w-[750px] w-full relative'>
-                            <Title size={"5xl"} className={"max-w-[707px]"}>Ready to Transform Your Digital Presence?</Title>
-                            <p>Schedule a 30 minutes Meeting with Our Experts to Propel Your Online Success.</p>
-                            <div className='absolute -right-20 top-1/2 -translate-y-1/2 lg:block hidden'>
-                                <Image src={"/images/shapes/business-consultant-cta-arrow.webp"} width={188} height={39} className='dark:brightness-100 dark:invert' alt='arrow' />
-                            </div>
+                <div className='mx-auto w-[95%] max-w-[1650px]'>
+                    <div className='relative flex flex-col justify-between gap-10 overflow-hidden rounded-[26px] border border-[#e1ebf7] bg-gradient-to-r from-[#eef6ff] via-[#f5faff] to-[#edf5fd] px-8 py-10 shadow-[0_14px_38px_rgba(18,55,111,0.08)] sm:px-12 sm:py-11 lg:flex-row lg:items-center lg:gap-16 lg:px-16 lg:py-12'>
+                        <span aria-hidden='true' className='pointer-events-none absolute -right-10 -top-16 h-36 w-36 rounded-full border border-[#d8e7f8] bg-white/30' />
+                        <div className='relative min-w-0 max-w-[760px]'>
+                            <h2 className='max-w-[900px] text-[42px] font-extrabold leading-[1.02] tracking-[-0.045em] sm:text-[54px] lg:text-[60px]'>
+                                <span className='block text-[#102f5b]'>Ready to Transform Your</span>
+                                <span className='block text-[#e5002d]'>Digital Presence?</span>
+                            </h2>
+                            <p className='mt-4 max-w-[760px] text-base font-medium leading-relaxed text-[#435979] sm:text-lg'>
+                                Schedule a 30 minutes Meeting with Our Experts to Propel Your Online Success.
+                            </p>
                         </div>
-                        <div className='relative flex items-center justify-between'>
+
+                        <div className='relative flex shrink-0 items-center justify-end gap-7 lg:gap-10'>
+                            <div className='flex h-20 w-20 shrink-0 items-center justify-center border-r border-[#cbd9ea] pr-6 text-[#102f5b] lg:h-24 lg:w-24'>
+                                <MdOutlineCalendarMonth className='h-16 w-16 lg:h-20 lg:w-20' />
+                            </div>
                             <Form />
                         </div>
                     </div>
@@ -84,10 +91,11 @@ const Form = () => {
 
     return (
        <Dialog>
-  <DialogTrigger>
-    <span className="group rounded-full px-[38px] py-[18px] border-2 border-[#BF0B30] font-bold max-h-12.5 bg-[#BF0B30] text-secondary-foreground dark:text-muted-foreground flex justify-center items-center gap-2.5 transition-all duration-500 hover:bg-transparent hover:text-[#BF0B30]">
+  <DialogTrigger asChild>
+    <button type="button" className="group inline-flex h-12 items-center justify-center gap-3 rounded-full bg-gradient-to-r from-[#ef1640] to-[#ce002b] px-7 text-sm font-extrabold text-white shadow-[0_7px_14px_rgba(229,0,45,0.2)] transition hover:from-[#d90835] hover:to-[#b90026] hover:shadow-[0_10px_20px_rgba(185,0,38,0.2)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#e5002d]/20 sm:h-14 sm:px-8 sm:text-base">
       Schedule a Meeting
-    </span>
+      <FaArrowRightLong className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+    </button>
   </DialogTrigger>
   <DialogContent
     className="
