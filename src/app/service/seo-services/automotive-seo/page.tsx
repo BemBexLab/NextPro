@@ -11,6 +11,7 @@ import Section9 from "./components/Section9";
 import Section10 from "./components/Section10";
 import Section11 from "./components/Section11";
 import Section12 from "./components/Section12";
+import CaseStudy from "../components/CaseStudy";
 
 export const metadata: Metadata = {
   title: "Automotive SEO Services | Web Founders USA",
@@ -84,7 +85,7 @@ export default function AutomotiveSeoPage() {
           submitLabel: "Contact Us",
         }}
       />
-
+      <CaseStudy />
       <Section2 />
       <Section3 />
       <Section4 />

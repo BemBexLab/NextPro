@@ -175,6 +175,14 @@ export default function ServiceHero({
             </nav>
           ) : null}
 
+          <Image
+            src="/images/Gemini_Generated_Image_n6ykdzn6ykdzn6yk__1_-removebg-preview.webp"
+            alt="Google Verified Reviews"
+            width={654}
+            height={381}
+            className="mb-4 h-auto w-20 object-contain object-left sm:w-24"
+          />
+
           {title ? (
             <h1 className="max-w-[760px] break-words text-4xl font-semibold leading-[1.04] tracking-[-0.04em] text-balance drop-shadow-md sm:text-5xl lg:text-6xl">
               {title}
