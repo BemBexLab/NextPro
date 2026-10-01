@@ -38,7 +38,7 @@ const CaseStudy: React.FC = () => {
           {images.map((image) => (
             <article
               key={image.src}
-              className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-neutral-200"
+              className="overflow-hidden bg-white"
             >
               <img
                 src={image.src}

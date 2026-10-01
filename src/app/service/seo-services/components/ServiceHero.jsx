@@ -180,7 +180,7 @@ export default function ServiceHero({
             alt="Google Verified Reviews"
             width={654}
             height={381}
-            className="mb-4 h-auto w-20 object-contain object-left sm:w-24"
+            className="mb-4 h-auto w-20 object-contain object-left sm:w-44"
           />
 
           {title ? (
