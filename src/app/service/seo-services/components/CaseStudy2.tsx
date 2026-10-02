@@ -1,22 +1,22 @@
 import React from "react";
 import { HiOutlineSparkles } from "react-icons/hi2";
 
-const CaseStudy: React.FC = () => {
+const CaseStudy2: React.FC = () => {
   const images = [
     {
-      src: "/images/TX Auto Group Houston Case Study 2.png",
+      src: "/TX Auto Group Houston SEO Case Study.png",
       alt: "Case study image 1",
     },
     {
-      src: "/images/Elite Auto Service Case Study.png",
+      src: "/Elite Auto Service SEO Growth Case Study.png",
       alt: "Case study image 2",
     },
     {
-      src: "/images/River Oaks Auto Sales_ SEO Growth Case Study.png",
+      src: "/River Oaks Auto Sales SEO Results.png",
       alt: "Case study image 3",
     },
     {
-      src: "/images/Mountain View Auto Sales Case Study.png",
+      src: "/Mountain View Auto Sales SEO Case Study.png",
       alt: "Case study image 4",
     },
   ];
@@ -30,7 +30,7 @@ const CaseStudy: React.FC = () => {
           <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full border border-white/10 bg-white/5 blur-sm" />
           <div className="pointer-events-none absolute bottom-0 right-24 h-24 w-24 rounded-full bg-cyan-300/20 blur-2xl" />
           <h2 className="relative max-w-full text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl uppercase">
-            our automotive repair shop connected for seo
+            Real Growth GSC Snap Shots
           </h2>
         </div>
 
@@ -53,4 +53,4 @@ const CaseStudy: React.FC = () => {
   );
 };
 
-export default CaseStudy;
+export default CaseStudy2;
