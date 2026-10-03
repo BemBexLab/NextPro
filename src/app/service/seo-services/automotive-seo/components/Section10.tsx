@@ -7,7 +7,7 @@ const Section10 = () => {
       <div className="relative mx-auto w-full max-w-none">
         <div className="relative isolate overflow-hidden border-b border-blue-900/20 bg-gradient-to-br from-[#061f59] via-[#073b91] to-[#0b63b8] px-5 py-9 shadow-lg shadow-blue-950/10 sm:px-8 sm:py-12 lg:px-16 lg:py-14">
           <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full border border-white/10 bg-white/5 blur-sm" />
-          <h2 className="relative max-w-5xl text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl">
+          <h2 className="relative max-w-5xl text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl mx-auto text-center">
             Automotive SEO Case Study: Auto Repair Business
           </h2>
         </div>

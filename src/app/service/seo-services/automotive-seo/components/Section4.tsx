@@ -9,7 +9,7 @@ const Section4 = () => {
       <div className="relative mx-auto w-full max-w-none">
         <div className="relative isolate overflow-hidden border-b border-blue-900/20 bg-gradient-to-br from-[#061f59] via-[#073b91] to-[#0b63b8] px-5 py-9 shadow-lg shadow-blue-950/10 sm:px-8 sm:py-12 lg:px-16 lg:py-14">
           <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full border border-white/10 bg-white/5 blur-sm" />
-          <h2 className="relative max-w-4xl text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl">
+          <h2 className="relative max-w-4xl text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl mx-auto text-center">
             SEO for Automotive Businesses, Repair Shops &amp; Mechanics
           </h2>
         </div>
@@ -17,22 +17,29 @@ const Section4 = () => {
         <div className="w-full space-y-9 px-5 py-10 sm:px-8 sm:py-14 lg:space-y-12 lg:px-16 lg:py-16">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-20">
             <p className="border-l-2 border-blue-400 pl-5 text-base leading-8 text-slate-700 sm:text-lg">
-              Our seo for automotive businesses strategy goes beyond dealerships. We work with mechanics, repair shops, body shops, detailing businesses, parts companies, and specialized automotive service providers.
+              Our seo for automotive businesses strategy goes beyond
+              dealerships. We work with mechanics, repair shops, body shops,
+              detailing businesses, parts companies, and specialized automotive
+              service providers.
             </p>
             <p className="border-l-2 border-slate-300 pl-5 text-base leading-8 text-slate-700 sm:text-lg">
-              Our seo for automotive campaigns focus on the services and searches that matter to your customers.
+              Our seo for automotive campaigns focus on the services and
+              searches that matter to your customers.
             </p>
           </div>
 
-          <p className="max-w-6xl border-l-4 border-blue-600 bg-white/80 px-6 py-5 text-base leading-8 text-slate-700 shadow-sm ring-1 ring-blue-100 sm:text-lg">
-            For repair businesses, our seo services for auto repair strategy can target maintenance, diagnostics, brake repair, transmission services, engine repair, inspections, and other high-intent searches.
+          <p className="mx-auto max-w-6xl border-l-4 border-blue-600 bg-white/80 px-6 py-5 text-center text-base leading-8 text-slate-700 shadow-sm ring-1 ring-blue-100 sm:text-lg">
+            For repair businesses, our seo services for auto repair strategy can
+            target maintenance, diagnostics, brake repair, transmission
+            services, engine repair, inspections, and other high-intent
+            searches.
           </p>
 
           <div className="w-full">
             <p className="mb-6 text-lg font-bold leading-7 tracking-tight text-[#072d7f] sm:text-xl">
               We provide specialized strategies for:
             </p>
-            <ul className="grid gap-x-12 gap-y-1 border-y border-slate-200 py-3 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="grid gap-x-12 gap-y-1 border-t border-slate-200 py-3 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 "Mechanic SEO",
                 "SEO for auto AC repair",
@@ -55,9 +62,12 @@ const Section4 = () => {
             </ul>
           </div>
 
-          <div className="max-w-6xl border-t border-blue-200 pt-8">
+          <div className="max-w-6xl mx-auto border-t border-blue-200 pt-8 text-center">
             <p className="text-base leading-8 text-slate-700 sm:text-lg">
-              When customers search for “brake repair near me,” “mechanic near me,” or “auto AC repair,” they are often looking for a business they can contact quickly. Your website needs dedicated, useful pages that match those search intents.
+              When customers search for “brake repair near me,” “mechanic near
+              me,” or “auto AC repair,” they are often looking for a business
+              they can contact quickly. Your website needs dedicated, useful
+              pages that match those search intents.
             </p>
             <p className="mt-6 text-base leading-8 text-slate-700 sm:text-lg">
               Learn more about customer search behavior in{" "}

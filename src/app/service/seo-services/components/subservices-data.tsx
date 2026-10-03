@@ -1396,28 +1396,32 @@ export const services = [
       // SEO Audit
       {
         id: "seo-audit",
-        title:
-          "SEO Audit Services",
+        title: "SEO Audit Services",
         desc: "Is your website not getting enough visitors from Google?",
         seo: {
-          title:
-            "SEO Audit Service - Web Founders USA",
+          title: "SEO Audit Service - Web Founders USA",
           description:
             "Web Founders USA delivers comprehensive SEO audit services. Local, technical, and website audits identify issues and drive growth for your business.",
           keyword:
             "SEO for insurance brokers, insurance broker SEO services, insurance agency SEO, local SEO for insurance brokers, insurance marketing, insurance lead generation, insurance website optimization, insurance search engine optimization, insurance broker online marketing, insurance broker digital marketing",
         },
         hero: {
-          paragraph:
-            "",
+          paragraph: "",
           image:
             "/service-deatil-images/Boost your business visibility online.webp",
         },
         introParagraphs: [
-          'Is your website not getting enough visitors from Google?',
+          "Is your website not getting enough visitors from Google?",
           "Your website may have SEO problems that you cannot see.",
-          <>Our <b>SEO Audit Services</b> help you find these problems. We check your website and show you what needs to be fixed.</>,
-          <>A good SEO audit can help you understand why your website is not ranking well. It can also show you ways to improve your traffic, pages, and user experience.</>,
+          <>
+            Our <b>SEO Audit Services</b> help you find these problems. We check
+            your website and show you what needs to be fixed.
+          </>,
+          <>
+            A good SEO audit can help you understand why your website is not
+            ranking well. It can also show you ways to improve your traffic,
+            pages, and user experience.
+          </>,
           "We keep the process simple. You do not need to know SEO to understand our audit.",
         ],
         actions: [
@@ -1443,18 +1447,13 @@ export const services = [
         // },
         expertPage: {
           intro: {
-            title: (
-              <>
-                What Is an SEO Audit?
-              </>
-            ),
+            title: <>What Is an SEO Audit?</>,
             description: (
               <div className="space-y-2">
+                <p>An SEO audit is a full check of your website.</p>
                 <p>
-                  An SEO audit is a full check of your website.
-                </p>
-                <p>
-                  We look at the parts of your website that can affect search rankings and visitors.
+                  We look at the parts of your website that can affect search
+                  rankings and visitors.
                 </p>
                 <p>
                   <b>We check things like:</b>
@@ -1490,9 +1489,7 @@ export const services = [
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
-                      <div className="font-semibold text-gray-900">
-                        Content
-                      </div>
+                      <div className="font-semibold text-gray-900">Content</div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
@@ -1532,36 +1529,78 @@ export const services = [
                     </div>
                   </div>
                 </div>
-                <p className=""><i>After the audit, we give you clear information about what is working and what needs help.</i></p>
+                <p className="">
+                  <i>
+                    After the audit, we give you clear information about what is
+                    working and what needs help.
+                  </i>
+                </p>
               </div>
             ),
           },
           relatedServices: {
             title: "Professional SEO Audit Services",
-            description:
-              <div className=""><p>Our <b>Professional SEO Audit Services</b> are made for businesses that want a clear view of their website.</p> <p>We do not only look at one or two pages.</p> <p>We check the bigger picture.</p> <p>We look at your technical SEO, content, keywords, links, website structure, and other important areas.</p> <p>The goal is to help you understand your website and make better SEO decisions.</p></div>,
+            description: (
+              <div className="">
+                <p>
+                  Our <b>Professional SEO Audit Services</b> are made for
+                  businesses that want a clear view of their website.
+                </p>{" "}
+                <p>We do not only look at one or two pages.</p>{" "}
+                <p>We check the bigger picture.</p>{" "}
+                <p>
+                  We look at your technical SEO, content, keywords, links,
+                  website structure, and other important areas.
+                </p>{" "}
+                <p>
+                  The goal is to help you understand your website and make
+                  better SEO decisions.
+                </p>
+              </div>
+            ),
             exploreLabel: "Explore service",
             items: [
               {
                 icon: FaSearch,
                 title: "SEO Audit Agency",
-                description:
+                description: (
                   <div>
-                    <p>Choosing the right <b>SEO Audit Agency</b> can make the process much easier.</p>
-                    <p>Our team checks your website carefully and explains the problems in simple words.</p>
-                    <p>You get useful information that you can use to improve your website.</p>
-                    <p>We can also help you create a plan after the audit so you know what to fix first.</p>
-                  </div>,
+                    <p>
+                      Choosing the right <b>SEO Audit Agency</b> can make the
+                      process much easier.
+                    </p>
+                    <p>
+                      Our team checks your website carefully and explains the
+                      problems in simple words.
+                    </p>
+                    <p>
+                      You get useful information that you can use to improve
+                      your website.
+                    </p>
+                    <p>
+                      We can also help you create a plan after the audit so you
+                      know what to fix first.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Technical SEO Audit Services",
-                description:
+                description: (
                   <div>
-                    <p>Technical problems can make it hard for search engines to understand your website.</p>
-                    <p>Our <b>Technical SEO Audit Services</b> check the technical parts of your site.</p>
-                    <p><b>We can review:</b></p>
+                    <p>
+                      Technical problems can make it hard for search engines to
+                      understand your website.
+                    </p>
+                    <p>
+                      Our <b>Technical SEO Audit Services</b> check the
+                      technical parts of your site.
+                    </p>
+                    <p>
+                      <b>We can review:</b>
+                    </p>
                     <ul className="list-disc list-inside">
                       <li>Website speed</li>
                       <li>Mobile performance</li>
@@ -1576,93 +1615,177 @@ export const services = [
                       <li>Duplicate pages</li>
                       <li>Canonical tags</li>
                     </ul>
-                    <p>Fixing these problems can help search engines crawl and understand your website better.</p>
-                  </div>,
+                    <p>
+                      Fixing these problems can help search engines crawl and
+                      understand your website better.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Website Audit Services",
-                description:
+                description: (
                   <div>
-                    <p>Our <b>Website Audit Services</b> look at more than just technical SEO.</p>
+                    <p>
+                      Our <b>Website Audit Services</b> look at more than just
+                      technical SEO.
+                    </p>
                     <p>We also review your pages and content.</p>
-                    <p>We check if your website is easy to use and easy to understand.</p>
-                    <p>We look at whether your pages clearly explain your services and whether visitors can easily find what they need.</p>
-                    <p>A website should work for both people and search engines.</p>
-                  </div>,
+                    <p>
+                      We check if your website is easy to use and easy to
+                      understand.
+                    </p>
+                    <p>
+                      We look at whether your pages clearly explain your
+                      services and whether visitors can easily find what they
+                      need.
+                    </p>
+                    <p>
+                      A website should work for both people and search engines.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "SEO Audit Companies",
-                description:
+                description: (
                   <div>
-                    <p>There are many <b>SEO Audit Companies</b> that offer website audits.</p>
+                    <p>
+                      There are many <b>SEO Audit Companies</b> that offer
+                      website audits.
+                    </p>
                     <p>But not every audit gives you useful information.</p>
-                    <p>We focus on finding real problems and giving you clear next steps.</p>
-                    <p>We do not want to give you a long list of confusing SEO words.</p>
-                    <p>We want you to know what is wrong, why it matters, and what you can do about it.</p>
-                  </div>,
+                    <p>
+                      We focus on finding real problems and giving you clear
+                      next steps.
+                    </p>
+                    <p>
+                      We do not want to give you a long list of confusing SEO
+                      words.
+                    </p>
+                    <p>
+                      We want you to know what is wrong, why it matters, and
+                      what you can do about it.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "SEO Auditing Services for Better Rankings",
-                description:
+                description: (
                   <div>
-                    <p>Our <b>SEO Auditing Services</b> help you find areas that may be holding your website back.</p>
-                    <p>We review your current SEO and look for opportunities to improve.</p>
-                    <p>This can include better keywords, stronger content, improved pages, technical fixes, and better internal links.</p>
-                    <p>For businesses that need a complete SEO plan after the audit, our SEO Services can help with ongoing optimization.</p>
-                  </div>,
+                    <p>
+                      Our <b>SEO Auditing Services</b> help you find areas that
+                      may be holding your website back.
+                    </p>
+                    <p>
+                      We review your current SEO and look for opportunities to
+                      improve.
+                    </p>
+                    <p>
+                      This can include better keywords, stronger content,
+                      improved pages, technical fixes, and better internal
+                      links.
+                    </p>
+                    <p>
+                      For businesses that need a complete SEO plan after the
+                      audit, our SEO Services can help with ongoing
+                      optimization.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "SEO Audit Service Company",
-                description:
+                description: (
                   <div>
-                    <p>As an SEO Audit Service Company, we help businesses understand their current SEO health.</p>
-                    <p>We can audit new websites, old websites, local websites, large websites, and online stores.</p>
+                    <p>
+                      As an SEO Audit Service Company, we help businesses
+                      understand their current SEO health.
+                    </p>
+                    <p>
+                      We can audit new websites, old websites, local websites,
+                      large websites, and online stores.
+                    </p>
                     <p>Every website is different.</p>
-                    <p>That is why we do not use the same audit plan for every business.</p>
-                  </div>,
+                    <p>
+                      That is why we do not use the same audit plan for every
+                      business.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Search Engine Optimization Audit Services",
-                description:
+                description: (
                   <div>
-                    <p>Our Search Engine Optimization Audit Services cover the main areas that can affect your website's search performance.</p>
-                    <p>We check how well your website is set up for search engines and users.</p>
-                    <p>We also look for areas where your competitors may be doing better.</p>
-                    <p>This helps you see where your website has room to grow.</p>
-                  </div>,
+                    <p>
+                      Our Search Engine Optimization Audit Services cover the
+                      main areas that can affect your website's search
+                      performance.
+                    </p>
+                    <p>
+                      We check how well your website is set up for search
+                      engines and users.
+                    </p>
+                    <p>
+                      We also look for areas where your competitors may be doing
+                      better.
+                    </p>
+                    <p>
+                      This helps you see where your website has room to grow.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
             ],
           },
           subrelatedServices: {
             title: "SEO Website Audit Service",
-            description:
+            description: (
               <div>
-                <p>An SEO Website Audit Service can be useful when your website has traffic but very few leads.</p>
-                <p>It can also help when your rankings have dropped or when your website is not ranking for the keywords you want.</p>
-                <p>We check your pages and find possible reasons for the problem.</p>
+                <p>
+                  An SEO Website Audit Service can be useful when your website
+                  has traffic but very few leads.
+                </p>
+                <p>
+                  It can also help when your rankings have dropped or when your
+                  website is not ranking for the keywords you want.
+                </p>
+                <p>
+                  We check your pages and find possible reasons for the problem.
+                </p>
                 <p>Then we help you understand what should be done next.</p>
-              </div>,
+              </div>
+            ),
             exploreLabel: "Explore service",
             items: [
               {
                 // icon: FaSearch,
                 title: "Local SEO Audit Services",
-                description:
+                description: (
                   <div>
-                    <p>Local businesses need to be easy to find in their area.</p>
-                    <p>Our Local SEO Audit Services check the local parts of your website and online presence.</p>
-                    <p><b>We can review:</b></p>
+                    <p>
+                      Local businesses need to be easy to find in their area.
+                    </p>
+                    <p>
+                      Our Local SEO Audit Services check the local parts of your
+                      website and online presence.
+                    </p>
+                    <p>
+                      <b>We can review:</b>
+                    </p>
                     <ul className="list-disc list-inside">
                       <li>Google Business Profile</li>
                       <li>Local keywords</li>
@@ -1673,42 +1796,88 @@ export const services = [
                       <li>Local content</li>
                       <li>NAP information</li>
                     </ul>
-                    <p>If you need more help with local search after the audit, our <a href="/service/seo-services/local-seo-services/" className="hover:text-blue-500 font-semibold underline">Local SEO Services</a> can help improve your local visibility.</p>
-                  </div>,
+                    <p>
+                      If you need more help with local search after the audit,
+                      our{" "}
+                      <a
+                        href="/service/seo-services/local-seo-services/"
+                        className="hover:text-blue-500 font-semibold underline"
+                      >
+                        Local SEO Services
+                      </a>{" "}
+                      can help improve your local visibility.
+                    </p>
+                  </div>
+                ),
                 // href: "/service/seo-services/ecommerce-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "E-commerce SEO Audit Services",
-                description:
+                description: (
                   <div>
                     <p>Online stores have many pages.</p>
-                    <p>Product pages, category pages, filters, and other parts of an online store can create SEO problems.</p>
+                    <p>
+                      Product pages, category pages, filters, and other parts of
+                      an online store can create SEO problems.
+                    </p>
                     <p>Our E-commerce SEO Audit Services check these areas.</p>
-                    <p>We can review product pages, category pages, internal links, duplicate content, site structure, and other important parts.</p>
-                    <p>If your store uses Shopify, our <a href="/service/seo-services/shopify-seo/" className="hover:text-blue-500 underline font-semibold">Shopify SEO Services</a> can also help improve your online store after the audit.</p>
-                  </div>,
+                    <p>
+                      We can review product pages, category pages, internal
+                      links, duplicate content, site structure, and other
+                      important parts.
+                    </p>
+                    <p>
+                      If your store uses Shopify, our{" "}
+                      <a
+                        href="/service/seo-services/shopify-seo/"
+                        className="hover:text-blue-500 underline font-semibold"
+                      >
+                        Shopify SEO Services
+                      </a>{" "}
+                      can also help improve your online store after the audit.
+                    </p>
+                  </div>
+                ),
                 // href: "/service/seo-services/b2b-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "Technical SEO Site Audit Agency",
-                description:
+                description: (
                   <div>
-                    <p>As a Technical SEO Site Audit Agency, we can check the technical health of your website.</p>
-                    <p>We look for problems that may stop search engines from crawling or indexing your pages.</p>
-                    <p>We also check if your website works well on mobile devices and loads quickly.</p>
-                    <p>These basic things can have a big effect on the user experience.</p>
-                  </div>,
+                    <p>
+                      As a Technical SEO Site Audit Agency, we can check the
+                      technical health of your website.
+                    </p>
+                    <p>
+                      We look for problems that may stop search engines from
+                      crawling or indexing your pages.
+                    </p>
+                    <p>
+                      We also check if your website works well on mobile devices
+                      and loads quickly.
+                    </p>
+                    <p>
+                      These basic things can have a big effect on the user
+                      experience.
+                    </p>
+                  </div>
+                ),
                 // href: "/service/seo-services/dental-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "SEO Technical Audit Services",
-                description:
+                description: (
                   <div>
-                    <p>Our <b>SEO Technical Audit Services</b> focus on the technical side of SEO.</p>
-                    <p><b>We can check your website for:</b></p>
+                    <p>
+                      Our <b>SEO Technical Audit Services</b> focus on the
+                      technical side of SEO.
+                    </p>
+                    <p>
+                      <b>We can check your website for:</b>
+                    </p>
                     <ul className="list-disc list-inside">
                       <li>Crawl errors</li>
                       <li>Indexing issues</li>
@@ -1720,86 +1889,237 @@ export const services = [
                       <li>Duplicate content</li>
                       <li>Security issues</li>
                     </ul>
-                    <p>Once we find problems, we explain what needs to be fixed.</p>
-                  </div>,
+                    <p>
+                      Once we find problems, we explain what needs to be fixed.
+                    </p>
+                  </div>
+                ),
                 // href: "/service/seo-services/enterprise-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "SEO Audit for Your Website Content",
-                description:
+                description: (
                   <div>
                     <p>Content is an important part of SEO.</p>
-                    <p>Your website should answer the questions your customers ask.</p>
-                    <p>Our <a href="/service/seo-services/seo-content-writing/" className="font-semibold hover:text-blue-500 underline">SEO Content Writing Services</a> can help improve or create useful content after your audit.</p>
-                    <p>We can help with service pages, location pages, blog posts, FAQs, and other website content.</p>
-                    <p>If your business serves customers in different languages, <a href="/service/seo-services/multilingual-seo/" className="font-semibold hover:text-blue-500 underline">Multilingual SEO Services</a> can also help you reach those users.</p>
-                  </div>,
+                    <p>
+                      Your website should answer the questions your customers
+                      ask.
+                    </p>
+                    <p>
+                      Our{" "}
+                      <a
+                        href="/service/seo-services/seo-content-writing/"
+                        className="font-semibold hover:text-blue-500 underline"
+                      >
+                        SEO Content Writing Services
+                      </a>{" "}
+                      can help improve or create useful content after your
+                      audit.
+                    </p>
+                    <p>
+                      We can help with service pages, location pages, blog
+                      posts, FAQs, and other website content.
+                    </p>
+                    <p>
+                      If your business serves customers in different languages,{" "}
+                      <a
+                        href="/service/seo-services/multilingual-seo/"
+                        className="font-semibold hover:text-blue-500 underline"
+                      >
+                        Multilingual SEO Services
+                      </a>{" "}
+                      can also help you reach those users.
+                    </p>
+                  </div>
+                ),
                 // href: "/service/seo-services/automotive-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "SEO Audits for Different Businesses",
-                description:
+                description: (
                   <div>
                     <p>Different businesses have different SEO needs.</p>
                     <p>We can audit websites for many types of businesses.</p>
-                    <p><b>For example:</b></p>
+                    <p>
+                      <b>For example:</b>
+                    </p>
                     <ul className="list-disc list-inside">
-                      <li><Link className="font-semibold hover:text-blue-500 underline" href="">B2B SEO Services</Link> for companies that sell to other businesses</li>
-                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/enterprise-seo/">Enterprise SEO Services</Link> for large websites</li>
-                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/healthcare-seo/">Healthcare SEO Services</Link> for healthcare companies</li>
-                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/medical-seo/">Medical SEO Services</Link> for medical practices</li>
-                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/dental-seo/">Dental SEO Services</Link> for dental offices</li>
-                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/construction-seo/">Construction SEO Services</Link> for construction companies</li>
-                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/roofing-seo/">Roofing SEO Services</Link> for roofing businesses</li>
-                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/hotel-seo/">Hotel SEO Services</Link> for hotels</li>
-                      <li><Link className="font-semibold hover:text-blue-500 underline" href="/service/seo-services/boutique-seo/">Boutique SEO Services</Link> for boutique businesses</li>
+                      <li>
+                        <Link
+                          className="font-semibold hover:text-blue-500 underline"
+                          href=""
+                        >
+                          B2B SEO Services
+                        </Link>{" "}
+                        for companies that sell to other businesses
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold hover:text-blue-500 underline"
+                          href="/service/seo-services/enterprise-seo/"
+                        >
+                          Enterprise SEO Services
+                        </Link>{" "}
+                        for large websites
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold hover:text-blue-500 underline"
+                          href="/service/seo-services/healthcare-seo/"
+                        >
+                          Healthcare SEO Services
+                        </Link>{" "}
+                        for healthcare companies
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold hover:text-blue-500 underline"
+                          href="/service/seo-services/medical-seo/"
+                        >
+                          Medical SEO Services
+                        </Link>{" "}
+                        for medical practices
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold hover:text-blue-500 underline"
+                          href="/service/seo-services/dental-seo/"
+                        >
+                          Dental SEO Services
+                        </Link>{" "}
+                        for dental offices
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold hover:text-blue-500 underline"
+                          href="/service/seo-services/construction-seo/"
+                        >
+                          Construction SEO Services
+                        </Link>{" "}
+                        for construction companies
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold hover:text-blue-500 underline"
+                          href="/service/seo-services/roofing-seo/"
+                        >
+                          Roofing SEO Services
+                        </Link>{" "}
+                        for roofing businesses
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold hover:text-blue-500 underline"
+                          href="/service/seo-services/hotel-seo/"
+                        >
+                          Hotel SEO Services
+                        </Link>{" "}
+                        for hotels
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold hover:text-blue-500 underline"
+                          href="/service/seo-services/boutique-seo/"
+                        >
+                          Boutique SEO Services
+                        </Link>{" "}
+                        for boutique businesses
+                      </li>
                     </ul>
-                    <p>We look at the needs of your industry when reviewing your website.</p>
-                  </div>,
+                    <p>
+                      We look at the needs of your industry when reviewing your
+                      website.
+                    </p>
+                  </div>
+                ),
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "E-commerce and Online Store Audits",
-                description:
+                description: (
                   <div>
                     <p>Online stores need special attention.</p>
                     <p>A store can have hundreds or even thousands of pages.</p>
-                    <p>Some pages may not be useful for search engines. Others may have thin or duplicate content.</p>
-                    <p>Our <a href="/service/seo-services/ecommerce-seo/" className="hover:text-blue-500 underline font-semibold">E-commerce SEO Services</a> can help improve your online store after the audit.</p>
-                    <p>We can also help businesses that use other e-commerce platforms and create a plan based on their website.</p>
-                  </div>,
+                    <p>
+                      Some pages may not be useful for search engines. Others
+                      may have thin or duplicate content.
+                    </p>
+                    <p>
+                      Our{" "}
+                      <a
+                        href="/service/seo-services/ecommerce-seo/"
+                        className="hover:text-blue-500 underline font-semibold"
+                      >
+                        E-commerce SEO Services
+                      </a>{" "}
+                      can help improve your online store after the audit.
+                    </p>
+                    <p>
+                      We can also help businesses that use other e-commerce
+                      platforms and create a plan based on their website.
+                    </p>
+                  </div>
+                ),
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "What Does an SEO Audit Check?",
-                description:
+                description: (
                   <div>
-                    <p>A complete SEO audit can check many parts of your website.</p>
-                    <p><b>Technical SEO:</b></p>
+                    <p>
+                      A complete SEO audit can check many parts of your website.
+                    </p>
+                    <p>
+                      <b>Technical SEO:</b>
+                    </p>
                     <p>We check the technical health of your website.</p>
 
-                    <p><b>On-Page SEO:</b></p>
-                    <p>We check titles, headings, content, keywords, images, and internal links.</p>
+                    <p>
+                      <b>On-Page SEO:</b>
+                    </p>
+                    <p>
+                      We check titles, headings, content, keywords, images, and
+                      internal links.
+                    </p>
 
-                    <p><b>Content:</b></p>
-                    <p>We check if your content is useful, clear, and relevant.</p>
+                    <p>
+                      <b>Content:</b>
+                    </p>
+                    <p>
+                      We check if your content is useful, clear, and relevant.
+                    </p>
 
-                    <p><b>Local SEO:</b></p>
-                    <p>We check your local search signals and business information.</p>
+                    <p>
+                      <b>Local SEO:</b>
+                    </p>
+                    <p>
+                      We check your local search signals and business
+                      information.
+                    </p>
 
-                    <p><b>User Experience:</b></p>
+                    <p>
+                      <b>User Experience:</b>
+                    </p>
                     <p>We check if visitors can easily use your website.</p>
 
-                    <p><b>Competitors:</b></p>
+                    <p>
+                      <b>Competitors:</b>
+                    </p>
                     <p>We look at what competing websites are doing well.</p>
 
-                    <p><b>Search Visibility</b></p>
-                    <p>We look for opportunities to improve your rankings and reach more customers.</p>
-                  </div>,
+                    <p>
+                      <b>Search Visibility</b>
+                    </p>
+                    <p>
+                      We look for opportunities to improve your rankings and
+                      reach more customers.
+                    </p>
+                  </div>
+                ),
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
             ],
@@ -1809,44 +2129,94 @@ export const services = [
             description: (
               <div className="grid gap-4 sm:grid-cols-2">
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">01</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Website Review</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">First, we look at your website and learn about your business.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    01
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Website Review
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    First, we look at your website and learn about your
+                    business.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">02</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Technical Check</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We check the technical parts of your website.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    02
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Technical Check
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We check the technical parts of your website.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">03</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Content Check</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We review your pages and website content.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    03
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Content Check
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We review your pages and website content.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">04</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Keyword Review</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We check the keywords you target and find new opportunities.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    04
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Keyword Review
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We check the keywords you target and find new opportunities.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">05</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Competitor Check</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We compare your website with other websites in your market.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    05
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Competitor Check
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We compare your website with other websites in your market.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">06</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Local SEO Check</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">If you are a local business, we review your local SEO.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    06
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Local SEO Check
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    If you are a local business, we review your local SEO.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">07</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Audit Report</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We put our findings into a clear report.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    07
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Audit Report
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We put our findings into a clear report.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">08</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Action Plan</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We explain what you should fix first and what can be done later.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    08
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Action Plan
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We explain what you should fix first and what can be done
+                    later.
+                  </p>
                 </article>
               </div>
             ),
@@ -1897,11 +2267,18 @@ export const services = [
         localSEOserviceData: {
           // eyebrow: "The Foundation of Local Growth",
           title: "Why Choose Our SEO Audit Services?",
-          description: <div>
-            <p>We make SEO easy to understand.</p>
-            <p>Our team focuses on real problems instead of using confusing words.</p>
-            <p><b>You can expect:</b></p>
-          </div>,
+          description: (
+            <div>
+              <p>We make SEO easy to understand.</p>
+              <p>
+                Our team focuses on real problems instead of using confusing
+                words.
+              </p>
+              <p>
+                <b>You can expect:</b>
+              </p>
+            </div>
+          ),
           services: [
             {
               id: "keyword-strategy",
@@ -1912,10 +2289,7 @@ export const services = [
               //   />
               // ),
               title: "Clear SEO findings",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "full-seo-audit",
@@ -1926,10 +2300,7 @@ export const services = [
               //   />
               // ),
               title: "Simple explanations",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "on-page-seo",
@@ -1940,10 +2311,7 @@ export const services = [
               //   />
               // ),
               title: "Practical recommendations",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "technical-seo",
@@ -1954,10 +2322,7 @@ export const services = [
               //   />
               // ),
               title: "Technical checks",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "authority-link-growth",
@@ -1968,10 +2333,7 @@ export const services = [
               //   />
               // ),
               title: "Content checks",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "content-copywriting",
@@ -1982,10 +2344,7 @@ export const services = [
               //   />
               // ),
               title: "Local SEO checks",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "regional-insurance-businesses",
@@ -1996,10 +2355,7 @@ export const services = [
               //   />
               // ),
               title: "Competitor research",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "actionable-next-step",
@@ -2010,87 +2366,77 @@ export const services = [
               //   />
               // ),
               title: "Actionable next steps",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
           ],
           footnote: (
-            <>We want you to finish the audit knowing exactly what your website needs.</>
+            <>
+              We want you to finish the audit knowing exactly what your website
+              needs.
+            </>
           ),
         },
         aiDiscoveryData: {
           eyebrow: "",
-          title: (
-            <>
-              When Should You Get an SEO Audit?
-            </>
-          ),
-          description:
-            <>You may need an SEO audit if:</>,
+          title: <>When Should You Get an SEO Audit?</>,
+          description: <>You may need an SEO audit if:</>,
           strategies: [
             {
               id: "traditional-seo",
               title: "Your website is not ranking",
-              description:
-                "",
+              description: "",
             },
             {
               id: "local-seo",
               title: "Your traffic has dropped",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization",
               title: "Your leads are low",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization1",
               title: "Your website is very old",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization2",
               title: "You recently changed your website",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization3",
               title: "You launched a new website",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization4",
               title: "Google is not indexing your pages",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization5",
               title: "Your competitors are getting more traffic",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization6",
               title: "You want to improve your SEO plan",
-              description:
-                "",
+              description: "",
             },
           ],
-          footnote: <>An audit can help you find the problem before you spend more time and money on the wrong SEO work.</>,
+          footnote: (
+            <>
+              An audit can help you find the problem before you spend more time
+              and money on the wrong SEO work.
+            </>
+          ),
         },
 
         tab: {
-          title:
-            "Get a Complete SEO Audit",
+          title: "Get a Complete SEO Audit",
           description: (
             <div className="relative overflow-hidden rounded-3xl border border-[#dbe7ff] bg-gradient-to-br from-[#f7fbff] via-white to-[#eef5ff] p-6 shadow-sm sm:p-8">
               <div
@@ -2110,22 +2456,22 @@ export const services = [
                   >
                     SEO Audit Services
                   </a>{" "}
-                  give you a clear look at your website and show you where improvements can be made.
+                  give you a clear look at your website and show you where
+                  improvements can be made.
                 </p>
                 <p className="border-l-4 border-[#ff8066] bg-white/70 py-3 pl-4 font-medium text-[#334155]">
-                  Whether you need a technical check, website review, local SEO audit, or e-commerce audit, we can help.
+                  Whether you need a technical check, website review, local SEO
+                  audit, or e-commerce audit, we can help.
                 </p>
               </div>
             </div>
           ),
-          steps: [
-          ],
+          steps: [],
         },
         faqTitle: "Frequently Asked Questions",
         faqs: [
           {
-            question:
-              "What are SEO Audit Services?",
+            question: "What are SEO Audit Services?",
             answer:
               "SEO Audit Services are used to check a website for SEO problems and opportunities. The audit looks at technical SEO, content, keywords, links, local SEO, and other important areas.",
           },
@@ -2140,32 +2486,36 @@ export const services = [
               "A technical SEO audit checks the technical parts of your website. It can find problems with crawling, indexing, speed, mobile use, redirects, links, and website structure.",
           },
           {
-            question:
-              "Can an SEO audit improve rankings?",
+            question: "Can an SEO audit improve rankings?",
             answer:
               "An audit itself does not improve rankings. It finds problems and opportunities. Fixing those issues can help improve your website's SEO performance.",
           },
           {
-            question:
-              "Do you audit local business websites?",
-            answer:
-              <>Yes. Our <b>Local SEO Audit Services</b> can check the main local SEO areas that help businesses appear in local search.</>,
+            question: "Do you audit local business websites?",
+            answer: (
+              <>
+                Yes. Our <b>Local SEO Audit Services</b> can check the main
+                local SEO areas that help businesses appear in local search.
+              </>
+            ),
           },
           {
-            question:
-              "Can you audit an e-commerce website?",
-            answer:
-              <>Yes. Our <b>E-commerce SEO Audit Services</b> can check product pages, category pages, site structure, internal links, and other areas of an online store.</>,
+            question: "Can you audit an e-commerce website?",
+            answer: (
+              <>
+                Yes. Our <b>E-commerce SEO Audit Services</b> can check product
+                pages, category pages, site structure, internal links, and other
+                areas of an online store.
+              </>
+            ),
           },
           {
-            question:
-              "Do I need an SEO audit for a new website?",
+            question: "Do I need an SEO audit for a new website?",
             answer:
               "Yes. An audit can help find problems early and make sure your new website has a good SEO foundation.",
           },
           {
-            question:
-              "Can you help after the audit?",
+            question: "Can you help after the audit?",
             answer:
               "Yes. After the audit, we can help you create and follow an SEO plan to fix problems and improve your website over time.",
           },
@@ -2241,7 +2591,7 @@ export const services = [
         //   ],
         // },
       },
-      
+
       {
         id: "hotel-seo",
         title: "Hotel SEO Services",
@@ -2356,28 +2706,33 @@ export const services = [
       // Multilingual SEO
       {
         id: "multilingual-seo",
-        title:
-          "Multilingual SEO Agency",
+        title: "Multilingual SEO Agency",
         desc: "Do you want more people to find your website in different languages?",
         seo: {
-          title:
-            "Multilingual SEO Services - Web Founders USA",
+          title: "Multilingual SEO Services - Web Founders USA",
           description:
             "Reach global audiences with Multilingual SEO Services - Web Founders USA. Expert strategies, multi-language optimization, and better rankings.",
           keyword:
             "SEO for insurance brokers, insurance broker SEO services, insurance agency SEO, local SEO for insurance brokers, insurance marketing, insurance lead generation, insurance website optimization, insurance search engine optimization, insurance broker online marketing, insurance broker digital marketing",
         },
         hero: {
-          paragraph:
-            "",
+          paragraph: "",
           image:
             "/service-deatil-images/Boost your business visibility online.webp",
         },
         introParagraphs: [
-          'Do you want more people to find your website in different languages?',
+          "Do you want more people to find your website in different languages?",
           "Your website may have SEO problems that you cannot see.",
-          <>Our <b>Multilingual SEO Agency</b> helps businesses reach customers who speak different languages. We help your website show up when people search online.</>,
-          <>A website with many languages needs more than simple translation. Each language needs the right words, useful content, and a clear website structure.</>,
+          <>
+            Our <b>Multilingual SEO Agency</b> helps businesses reach customers
+            who speak different languages. We help your website show up when
+            people search online.
+          </>,
+          <>
+            A website with many languages needs more than simple translation.
+            Each language needs the right words, useful content, and a clear
+            website structure.
+          </>,
           "Our goal is simple. We help the right people find the right pages on your website.",
         ],
         actions: [
@@ -2403,15 +2758,16 @@ export const services = [
         // },
         expertPage: {
           intro: {
-            title: (
-              <>
-                Multilingual SEO Services
-              </>
-            ),
+            title: <>Multilingual SEO Services</>,
             description: (
               <div className="space-y-2">
-                <p>Our <b>Multilingual SEO Services</b> help businesses reach customers in different language markets.</p>
-                <p><b>We can help with:</b></p>
+                <p>
+                  Our <b>Multilingual SEO Services</b> help businesses reach
+                  customers in different language markets.
+                </p>
+                <p>
+                  <b>We can help with:</b>
+                </p>
                 <div className="experts-benefits-shell flex w-full justify-center">
                   <div
                     className="experts-benefits-carousel flex w-full max-w-[900px] snap-x snap-mandatory justify-start gap-4 overflow-x-auto pb-3 scroll-px-[9%] [scrollbar-width:none] [&>*:first-child]:ml-[9%] [&>*:last-child]:mr-[9%] [&::-webkit-scrollbar]:hidden"
@@ -2476,73 +2832,171 @@ export const services = [
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <p><i>We create a plan that fits your business and the languages you want to target.</i></p>
-                  <p><i>For businesses that need a complete SEO plan, our <a href="/service/seo-services/" className="hover:text-blue-500 font-semibold underline">SEO Services</a> can cover many important parts of your website.</i></p>
+                  <p>
+                    <i>
+                      We create a plan that fits your business and the languages
+                      you want to target.
+                    </i>
+                  </p>
+                  <p>
+                    <i>
+                      For businesses that need a complete SEO plan, our{" "}
+                      <a
+                        href="/service/seo-services/"
+                        className="hover:text-blue-500 font-semibold underline"
+                      >
+                        SEO Services
+                      </a>{" "}
+                      can cover many important parts of your website.
+                    </i>
+                  </p>
                 </div>
               </div>
             ),
           },
           relatedServices: {
             title: "Why Does Multilingual SEO Matter?",
-            description:
-              <div className=""><p>People like to search in their own language.</p> <p>If your website only targets one language, you may miss many potential customers.</p> <p>For example, a business may want to reach English, Spanish, French, German, or other language users.</p> <p>Good multilingual SEO helps each group find the right information.</p> <p>It also helps search engines understand which page is made for each language.</p></div>,
+            description: (
+              <div className="">
+                <p>People like to search in their own language.</p>{" "}
+                <p>
+                  If your website only targets one language, you may miss many
+                  potential customers.
+                </p>{" "}
+                <p>
+                  For example, a business may want to reach English, Spanish,
+                  French, German, or other language users.
+                </p>{" "}
+                <p>
+                  Good multilingual SEO helps each group find the right
+                  information.
+                </p>{" "}
+                <p>
+                  It also helps search engines understand which page is made for
+                  each language.
+                </p>
+              </div>
+            ),
             exploreLabel: "Explore service",
             items: [
               {
                 icon: FaSearch,
                 title: "Multilingual SEO Company",
-                description:
+                description: (
                   <div>
-                    <p>Working with the right <b>Multilingual SEO Company</b> can make your website easier to find in different markets.</p>
-                    <p>We look at your website, target countries, languages, keywords, and competitors.</p>
-                    <p>We do not just translate the same page into another language.</p>
-                    <p>We look at how people search in each market. This helps us create content that feels natural and useful.</p>
-                  </div>,
+                    <p>
+                      Working with the right <b>Multilingual SEO Company</b> can
+                      make your website easier to find in different markets.
+                    </p>
+                    <p>
+                      We look at your website, target countries, languages,
+                      keywords, and competitors.
+                    </p>
+                    <p>
+                      We do not just translate the same page into another
+                      language.
+                    </p>
+                    <p>
+                      We look at how people search in each market. This helps us
+                      create content that feels natural and useful.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Multilingual SEO Consultancy",
-                description:
+                description: (
                   <div>
                     <p>Not sure where to start?</p>
-                    <p>Our <b>Multilingual SEO Consultancy</b> can help.</p>
-                    <p>We can review your website and find areas that need work. We can also help you choose the right languages and markets for your business.</p>
-                    <p>You get a simple plan that shows what you should do next.</p>
-                  </div>,
+                    <p>
+                      Our <b>Multilingual SEO Consultancy</b> can help.
+                    </p>
+                    <p>
+                      We can review your website and find areas that need work.
+                      We can also help you choose the right languages and
+                      markets for your business.
+                    </p>
+                    <p>
+                      You get a simple plan that shows what you should do next.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Work With a Multilingual SEO Expert",
-                description:
+                description: (
                   <div>
-                    <p>A <b>Multilingual SEO Expert</b> knows that people may use different words to search for the same thing.</p>
-                    <p>A word that works well in one language may not work well in another.</p>
-                    <p>We research the words people actually use. Then we use those words in your pages and content.</p>
-                    <p>This helps your website reach real people instead of relying on simple word-for-word translation.</p>
-                  </div>,
+                    <p>
+                      A <b>Multilingual SEO Expert</b> knows that people may use
+                      different words to search for the same thing.
+                    </p>
+                    <p>
+                      A word that works well in one language may not work well
+                      in another.
+                    </p>
+                    <p>
+                      We research the words people actually use. Then we use
+                      those words in your pages and content.
+                    </p>
+                    <p>
+                      This helps your website reach real people instead of
+                      relying on simple word-for-word translation.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Local SEO for Different Languages",
-                description:
+                description: (
                   <div>
-                    <p>Some businesses serve people who speak different languages in the same city.</p>
-                    <p>For these businesses, <a href="/service/seo-services/local-seo-services/" className="hover:text-blue-500 underline font-semibold">Local SEO Services</a> can be very helpful.</p>
-                    <p>We can improve your local pages, business information, location content, and other local search signals.</p>
-                    <p>This can help people find your business when they search for your services in their own language.</p>
-                  </div>,
+                    <p>
+                      Some businesses serve people who speak different languages
+                      in the same city.
+                    </p>
+                    <p>
+                      For these businesses,{" "}
+                      <a
+                        href="/service/seo-services/local-seo-services/"
+                        className="hover:text-blue-500 underline font-semibold"
+                      >
+                        Local SEO Services
+                      </a>{" "}
+                      can be very helpful.
+                    </p>
+                    <p>
+                      We can improve your local pages, business information,
+                      location content, and other local search signals.
+                    </p>
+                    <p>
+                      This can help people find your business when they search
+                      for your services in their own language.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "SEO Content for Multiple Languages",
-                description:
+                description: (
                   <div>
                     <p>Good content is a big part of multilingual SEO.</p>
-                    <p>Our <a href="/service/seo-services/seo-content-writing/" className="hover:text-blue-500 underline font-semibold">SEO Content Writing Services</a> help create clear and useful content for your website.</p>
+                    <p>
+                      Our{" "}
+                      <a
+                        href="/service/seo-services/seo-content-writing/"
+                        className="hover:text-blue-500 underline font-semibold"
+                      >
+                        SEO Content Writing Services
+                      </a>{" "}
+                      help create clear and useful content for your website.
+                    </p>
                     <p>We can create:</p>
                     <ul className="list-disc list-inside">
                       <li>Service pages</li>
@@ -2553,116 +3007,238 @@ export const services = [
                       <li>Landing pages</li>
                       <li>Business pages</li>
                     </ul>
-                    <p>We focus on simple language that people can understand.</p>
-                    <p>Our Multilingual SEO Services can then help optimize this content for the right language and search market.</p>
-                  </div>,
+                    <p>
+                      We focus on simple language that people can understand.
+                    </p>
+                    <p>
+                      Our Multilingual SEO Services can then help optimize this
+                      content for the right language and search market.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Multilingual SEO for Different Businesses",
-                description:
+                description: (
                   <div>
                     <p>Different businesses have different SEO needs.</p>
                     <p>We can help businesses in many industries.</p>
-                    <p>For companies that sell to other businesses, our <a href="/service/seo-services/b2b-seo/" className="hover:text-blue-500 underline font-semibold">B2B SEO Services</a> can help bring the right business customers to their website.</p>
-                    <p>Larger companies can use our <a href="/service/seo-services/enterprise-seo/" className="hover:text-blue-500 underline font-semibold">Enterprise SEO Services</a> to manage SEO across many pages, products, or locations.</p>
+                    <p>
+                      For companies that sell to other businesses, our{" "}
+                      <a
+                        href="/service/seo-services/b2b-seo/"
+                        className="hover:text-blue-500 underline font-semibold"
+                      >
+                        B2B SEO Services
+                      </a>{" "}
+                      can help bring the right business customers to their
+                      website.
+                    </p>
+                    <p>
+                      Larger companies can use our{" "}
+                      <a
+                        href="/service/seo-services/enterprise-seo/"
+                        className="hover:text-blue-500 underline font-semibold"
+                      >
+                        Enterprise SEO Services
+                      </a>{" "}
+                      to manage SEO across many pages, products, or locations.
+                    </p>
                     <p>We also work with different industries, including:</p>
                     <ul className="list-disc list-inside">
-                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/healthcare-seo/">Healthcare SEO Services</Link> for healthcare businesses</li>
-                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/medical-seo/">Medical SEO Services</Link> for medical practices</li>
-                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/dental-seo/">Dental SEO Services</Link> for dental offices</li>
-                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/construction-seo/">Construction SEO Services</Link> for construction companies</li>
-                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/roofing-seo/">Roofing SEO Services</Link> for roofing companies</li>
-                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/roofing-seo/">Hotel SEO Service</Link>s for hotels and hospitality businesses</li>
-                      <li><Link className="font-semibold underline hover:text-blue-500" href="/service/seo-services/boutique-seo/">Boutique SEO Services</Link> for boutique businesses</li>
+                      <li>
+                        <Link
+                          className="font-semibold underline hover:text-blue-500"
+                          href="/service/seo-services/healthcare-seo/"
+                        >
+                          Healthcare SEO Services
+                        </Link>{" "}
+                        for healthcare businesses
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold underline hover:text-blue-500"
+                          href="/service/seo-services/medical-seo/"
+                        >
+                          Medical SEO Services
+                        </Link>{" "}
+                        for medical practices
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold underline hover:text-blue-500"
+                          href="/service/seo-services/dental-seo/"
+                        >
+                          Dental SEO Services
+                        </Link>{" "}
+                        for dental offices
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold underline hover:text-blue-500"
+                          href="/service/seo-services/construction-seo/"
+                        >
+                          Construction SEO Services
+                        </Link>{" "}
+                        for construction companies
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold underline hover:text-blue-500"
+                          href="/service/seo-services/roofing-seo/"
+                        >
+                          Roofing SEO Services
+                        </Link>{" "}
+                        for roofing companies
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold underline hover:text-blue-500"
+                          href="/service/seo-services/roofing-seo/"
+                        >
+                          Hotel SEO Service
+                        </Link>
+                        s for hotels and hospitality businesses
+                      </li>
+                      <li>
+                        <Link
+                          className="font-semibold underline hover:text-blue-500"
+                          href="/service/seo-services/boutique-seo/"
+                        >
+                          Boutique SEO Services
+                        </Link>{" "}
+                        for boutique businesses
+                      </li>
                     </ul>
-                    <p>Each industry has its own customers and search terms. That is why we build the SEO plan around the business.</p>
-                  </div>,
+                    <p>
+                      Each industry has its own customers and search terms. That
+                      is why we build the SEO plan around the business.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Multilingual SEO for Online Stores",
-                description:
+                description: (
                   <div>
-                    <p>Online stores can sell products to people in many countries.</p>
-                    <p>But customers need to find products in the language they use.</p>
-                    <p>Our <a href="/service/seo-services/ecommerce-seo/" className="font-semibold underline hover:text-blue-500">E-commerce SEO Services</a> can help online stores improve product pages, category pages, website content, and site structure.</p>
-                    <p>For stores using Shopify, our <a href="/service/seo-services/shopify-seo/" className="font-semibold underline hover:text-blue-500">Shopify SEO Services</a> can help improve the website and product pages for search.</p>
-                    <p>The goal is simple. Help more customers find the products they want.</p>
-                  </div>,
+                    <p>
+                      Online stores can sell products to people in many
+                      countries.
+                    </p>
+                    <p>
+                      But customers need to find products in the language they
+                      use.
+                    </p>
+                    <p>
+                      Our{" "}
+                      <a
+                        href="/service/seo-services/ecommerce-seo/"
+                        className="font-semibold underline hover:text-blue-500"
+                      >
+                        E-commerce SEO Services
+                      </a>{" "}
+                      can help online stores improve product pages, category
+                      pages, website content, and site structure.
+                    </p>
+                    <p>
+                      For stores using Shopify, our{" "}
+                      <a
+                        href="/service/seo-services/shopify-seo/"
+                        className="font-semibold underline hover:text-blue-500"
+                      >
+                        Shopify SEO Services
+                      </a>{" "}
+                      can help improve the website and product pages for search.
+                    </p>
+                    <p>
+                      The goal is simple. Help more customers find the products
+                      they want.
+                    </p>
+                  </div>
+                ),
                 href: "",
               },
             ],
           },
           subrelatedServices: {
             title: "SEO Audit for Multilingual Websites",
-            description:
+            description: (
               <div>
-                <p>A multilingual website can have many pages. This can make SEO problems harder to find.</p>
-                <p>Our <a href="/service/seo-services/seo-audit/" className="font-semibold underline hover:text-blue-500">SEO Audit Services</a> can help check your website for common issues.</p>
+                <p>
+                  A multilingual website can have many pages. This can make SEO
+                  problems harder to find.
+                </p>
+                <p>
+                  Our{" "}
+                  <a
+                    href="/service/seo-services/seo-audit/"
+                    className="font-semibold underline hover:text-blue-500"
+                  >
+                    SEO Audit Services
+                  </a>{" "}
+                  can help check your website for common issues.
+                </p>
                 <p>We can look at:</p>
-              </div>,
+              </div>
+            ),
             exploreLabel: "Explore service",
             items: [
               {
                 // icon: FaSearch,
                 title: "Broken links",
-                description:(<></>),
+                description: <></>,
                 // href: "/service/seo-services/ecommerce-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "Page speed",
-                description:(<></>),
+                description: <></>,
                 // href: "/service/seo-services/b2b-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "Duplicate content",
-                description:(<></>),
+                description: <></>,
                 // href: "/service/seo-services/dental-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "Website structure",
-                description:<></>,
+                description: <></>,
                 // href: "/service/seo-services/enterprise-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "Language pages",
-                description:
-                  <></>,
+                description: <></>,
                 // href: "/service/seo-services/automotive-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "Page titles",
-                description:
-                  <></>,
+                description: <></>,
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "Meta descriptions",
-                description:
-                  <></>,
+                description: <></>,
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "Internal links",
-                description:
-                  <></>,
+                description: <></>,
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "Mobile usability",
-                description:
-                  <></>,
+                description: <></>,
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
             ],
@@ -2674,46 +3250,99 @@ export const services = [
             description: (
               <div className="grid gap-4 sm:grid-cols-2">
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">01</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Website Review</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">First, we look at your website and learn about your business.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    01
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Website Review
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    First, we look at your website and learn about your
+                    business.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">02</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">SEO Audit</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We check your website and find areas that need improvement.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    02
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    SEO Audit
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We check your website and find areas that need improvement.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">03</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Language Research</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We learn which languages and markets you want to reach.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    03
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Language Research
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We learn which languages and markets you want to reach.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">04</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Keyword Research</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We find useful search terms for each language.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    04
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Keyword Research
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We find useful search terms for each language.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">05</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Competitor Research</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We check what other businesses are doing in your target markets.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    05
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Competitor Research
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We check what other businesses are doing in your target
+                    markets.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">06</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">SEO Strategy</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We create a simple plan for each language.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    06
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    SEO Strategy
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We create a simple plan for each language.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">07</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Website Optimization</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We improve your pages, content, structure, and other SEO areas.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    07
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Website Optimization
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We improve your pages, content, structure, and other SEO
+                    areas.
+                  </p>
                 </article>
                 <article className="group rounded-2xl border border-[#dbe7ff] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8db7ff] hover:shadow-lg">
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">08</span>
-                  <h3 className="text-lg font-bold text-[#072d7f]">Track and Improve</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">We watch your traffic, rankings, and other results.</p>
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#eaf2ff] text-sm font-bold text-[#0B5FCC]">
+                    08
+                  </span>
+                  <h3 className="text-lg font-bold text-[#072d7f]">
+                    Track and Improve
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    We watch your traffic, rankings, and other results.
+                  </p>
                 </article>
-                <p><i>Then we keep improving the plan.</i></p>
+                <p>
+                  <i>Then we keep improving the plan.</i>
+                </p>
               </div>
             ),
             stats: [
@@ -2763,11 +3392,18 @@ export const services = [
         localSEOserviceData: {
           // eyebrow: "The Foundation of Local Growth",
           title: "Why Choose Our Multilingual SEO Agency?",
-          description: <div>
-            <p>We keep SEO simple.</p>
-            <p>You do not need to understand every SEO term. We explain the work in easy words.</p>
-            <p><b>Our team focuses on:</b></p>
-          </div>,
+          description: (
+            <div>
+              <p>We keep SEO simple.</p>
+              <p>
+                You do not need to understand every SEO term. We explain the
+                work in easy words.
+              </p>
+              <p>
+                <b>Our team focuses on:</b>
+              </p>
+            </div>
+          ),
           services: [
             {
               id: "keyword-strategy",
@@ -2778,10 +3414,7 @@ export const services = [
               //   />
               // ),
               title: "Clear SEO plans",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "full-seo-audit",
@@ -2792,10 +3425,7 @@ export const services = [
               //   />
               // ),
               title: "Natural content",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "on-page-seo",
@@ -2806,10 +3436,7 @@ export const services = [
               //   />
               // ),
               title: "Better search visibility",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "technical-seo",
@@ -2820,10 +3447,7 @@ export const services = [
               //   />
               // ),
               title: "Different language markets",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "authority-link-growth",
@@ -2834,10 +3458,7 @@ export const services = [
               //   />
               // ),
               title: "Local and international SEO",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "content-copywriting",
@@ -2848,10 +3469,7 @@ export const services = [
               //   />
               // ),
               title: "Useful website pages",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "regional-insurance-businesses",
@@ -2862,14 +3480,14 @@ export const services = [
               //   />
               // ),
               title: "Long-term growth",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
           ],
           footnote: (
-            <>We want your website to be easy for people to use and easy for search engines to understand.</>
+            <>
+              We want your website to be easy for people to use and easy for
+              search engines to understand.
+            </>
           ),
         },
         // aiDiscoveryData: {
@@ -2941,8 +3559,7 @@ export const services = [
         // },
 
         tab: {
-          title:
-            "Grow Your Business With Multilingual SEO",
+          title: "Grow Your Business With Multilingual SEO",
           description: (
             <div className="relative overflow-hidden rounded-3xl border border-[#dbe7ff] bg-gradient-to-br from-[#f7fbff] via-white to-[#eef5ff] p-6 shadow-sm sm:p-8">
               <div
@@ -2955,22 +3572,23 @@ export const services = [
                 </p>
                 <p>Your website should still be ready to help them.</p>
                 <p>
-                  With the right SEO plan, your website can reach more people in more markets.
+                  With the right SEO plan, your website can reach more people in
+                  more markets.
                 </p>
                 <p className="border-l-4 border-[#ff8066] bg-white/70 py-3 pl-4 font-medium text-[#334155]">
-                  If you are looking for a <b>Multilingual SEO Agency</b>, we can help you build a clear plan for your business and target languages.
+                  If you are looking for a <b>Multilingual SEO Agency</b>, we
+                  can help you build a clear plan for your business and target
+                  languages.
                 </p>
               </div>
             </div>
           ),
-          steps: [
-          ],
+          steps: [],
         },
         faqTitle: "Frequently Asked Questions",
         faqs: [
           {
-            question:
-              "What is a Multilingual SEO Agency?",
+            question: "What is a Multilingual SEO Agency?",
             answer:
               "A Multilingual SEO Agency helps businesses improve their website for people who search in different languages.",
           },
@@ -2985,26 +3603,30 @@ export const services = [
               "No. Translation is only one part. Each language also needs the right keywords, useful content, and a good website structure.",
           },
           {
-            question:
-              "Can multilingual SEO help local businesses?",
+            question: "Can multilingual SEO help local businesses?",
             answer:
               "Yes. Multilingual SEO can help local businesses reach customers who speak different languages in the same area.",
           },
           {
-            question:
-              "Can multilingual SEO help an online store?",
-            answer:
-              <>Yes. It can help online stores reach customers in different countries and language markets.</>,
+            question: "Can multilingual SEO help an online store?",
+            answer: (
+              <>
+                Yes. It can help online stores reach customers in different
+                countries and language markets.
+              </>
+            ),
           },
           {
-            question:
-              "Do I need a Multilingual SEO Expert?",
-            answer:
-              <>An expert can help you choose the right keywords, languages, markets, and SEO strategy for your website.</>,
+            question: "Do I need a Multilingual SEO Expert?",
+            answer: (
+              <>
+                An expert can help you choose the right keywords, languages,
+                markets, and SEO strategy for your website.
+              </>
+            ),
           },
           {
-            question:
-              "Can you help with many languages?",
+            question: "Can you help with many languages?",
             answer:
               "Yes. We can help businesses create SEO strategies for websites that target multiple languages and markets.",
           },
@@ -3466,8 +4088,8 @@ export const services = [
           image: "/service-deatil-images/seo.webp",
         },
         introParagraphs: [
-          'A strong online presence starts with being easy to find. Our boutique SEO agency helps businesses improve search visibility, reach the right audience, and turn website visitors into customers. We create simple, focused SEO strategies based on your business, audience, industry, and goals.',
-          'Unlike large agencies that often use the same process for every client, a boutique SEO agency provides a more personal approach. We take time to understand your brand and build a strategy that fits your needs.',
+          "A strong online presence starts with being easy to find. Our boutique SEO agency helps businesses improve search visibility, reach the right audience, and turn website visitors into customers. We create simple, focused SEO strategies based on your business, audience, industry, and goals.",
+          "Unlike large agencies that often use the same process for every client, a boutique SEO agency provides a more personal approach. We take time to understand your brand and build a strategy that fits your needs.",
         ],
         actions: [
           { label: "Contact Us", href: "/contact-us" },
@@ -3480,8 +4102,19 @@ export const services = [
         requestAFreeData: {
           title: "Grow Your Business With Boutique SEO",
           paragraphs: [
-            <>Your business deserves an SEO strategy built around your goals not a generic package. Our <b>boutique SEO agency</b> provides focused <b>boutique SEO services</b> designed to improve visibility, attract relevant customers, and support sustainable organic growth.</>,
-            <>From <b>SEO for boutiques</b> and <b>aesthetic marketing SEO</b> to technical SEO, local SEO, e-commerce SEO, content optimization, and AEO/GEO strategies, every part of your campaign can work together to create a stronger search presence.</>,
+            <>
+              Your business deserves an SEO strategy built around your goals not
+              a generic package. Our <b>boutique SEO agency</b> provides focused{" "}
+              <b>boutique SEO services</b> designed to improve visibility,
+              attract relevant customers, and support sustainable organic
+              growth.
+            </>,
+            <>
+              From <b>SEO for boutiques</b> and <b>aesthetic marketing SEO</b>{" "}
+              to technical SEO, local SEO, e-commerce SEO, content optimization,
+              and AEO/GEO strategies, every part of your campaign can work
+              together to create a stronger search presence.
+            </>,
           ],
           cta: {
             label: "Get Your Free Boutique SEO Audit",
@@ -3490,22 +4123,61 @@ export const services = [
         },
         expertPage: {
           intro: {
-            title: (
-              <>
-                What Is a Boutique SEO Agency?
-              </>
-            ),
+            title: <>What Is a Boutique SEO Agency?</>,
             description: (
-              <div className="space-y-2">
-                <p>
-                  A <b>boutique SEO agency</b> is a specialized SEO company that works with a smaller number of clients. This allows the team to give each project more attention and create a customized strategy.
-                </p>
-                <p>
-                  Our approach to <b>boutique SEO</b> focuses on quality, relevance, and long-term growth. We analyze your website, competitors, keywords, content, technical performance, and search intent before creating an SEO plan.
-                </p>
-                <p>
-                  The goal is simple: help your business become more visible in search, attract relevant visitors, and generate better business opportunities.
-                </p>
+              <div>
+                <div className="space-y-2">
+                  <p>
+                    A <b>boutique SEO agency</b> is a specialized SEO company
+                    that works with a smaller number of clients. This allows the
+                    team to give each project more attention and create a
+                    customized strategy.
+                  </p>
+                  <p>
+                    Our approach to <b>boutique SEO</b> focuses on quality,
+                    relevance, and long-term growth. We analyze your website,
+                    competitors, keywords, content, technical performance, and
+                    search intent before creating an SEO plan.
+                  </p>
+                  <p>
+                    The goal is simple: help your business become more visible
+                    in search, attract relevant visitors, and generate better
+                    business opportunities.
+                  </p>
+                </div>
+
+                {/* Custom Chips Div */}
+                <div className="mt-8 rounded-2xl border border-blue-100 bg-gradient-to-br from-slate-50 via-white to-blue-50 p-5 shadow-sm sm:p-7">
+                  <p className="mb-4 text-center text-sm font-bold uppercase tracking-wider text-blue-900">
+                    Explore our SEO services
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-3" aria-label="Related SEO services">
+                    {[
+                      { label: "SEO Services", href: "/service/seo-services/" },
+                      { label: "E-commerce SEO Services", href: "/service/seo-services/ecommerce-seo/" },
+                      { label: "Healthcare SEO Services", href: "/service/seo-services/healthcare-seo/" },
+                      { label: "B2B SEO Services", href: "/service/seo-services/b2b-seo/" },
+                      { label: "Enterprise SEO Services", href: "/service/seo-services/enterprise-seo/" },
+                      { label: "White Label SEO Services", href: "/service/seo-services/white-label-seo/" },
+                      { label: "WordPress SEO Services", href: "/service/seo-services/wordpress-seo/" },
+                      { label: "SEO Audit Services", href: "/service/seo-services/seo-audit/" },
+                      { label: "Hotel SEO Services", href: "/service/seo-services/hotel-seo/" },
+                      { label: "Magento SEO Services", href: "/service/seo-services/magento-seo/" },
+                      { label: "Multilingual SEO Agency", href: "/service/seo-services/multilingual-seo/" },
+                      { label: "Roofing SEO Services", href: "/service/seo-services/roofing-seo/" },
+                      { label: "Local SEO Services", href: "/service/seo-services/local-seo-services/" },
+                      { label: "Automotive SEO", href: "/service/seo-services/automotive-seo/" },
+                    ].map(({ label, href }) => (
+                      <Link
+                        key={href}
+                        href={href}
+                        className="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-all duration-200 hover:bg-blue-700 hover:text-white"
+                      >
+                        {label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
             ),
           },
@@ -3529,80 +4201,94 @@ export const services = [
           // ],
           relatedServices: {
             title: "Why Choose a Boutique SEO Agency?",
-            description:
-              <>A boutique SEO agency gives you a more personalized SEO experience. Instead of following a one-size-fits-all package, your strategy is built around your business. <br /><b><i>Key benefits include:</i></b></>,
+            description: (
+              <>
+                A boutique SEO agency gives you a more personalized SEO
+                experience. Instead of following a one-size-fits-all package,
+                your strategy is built around your business. <br />
+                <b>
+                  <i>Key benefits include:</i>
+                </b>
+              </>
+            ),
             exploreLabel: "Explore service",
             items: [
               {
                 // icon: ,
                 title: "Personalized SEO strategies",
-                description:
-                  "",
+                description: "",
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "Direct and clear communication",
-                description:
-                  "",
+                description: "",
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "Focused SEO expertise",
-                description:
-                  "",
+                description: "",
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "Flexible campaigns",
-                description:
-                  "",
+                description: "",
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "Industry-specific research",
-                description:
-                  "",
+                description: "",
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "Better attention to content and technical SEO",
-                description:
-                  "",
+                description: "",
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "Strategies designed around search intent",
-                description:
-                  "",
+                description: "",
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "Long-term organic growth",
-                description:
-                  "",
+                description: "",
                 href: "",
               },
             ],
-            footnote: <><b><i>This focused approach can be especially valuable for small businesses, niche brands, e-commerce stores, and businesses operating in competitive markets.</i></b></>,
+            footnote: (
+              <>
+                <b>
+                  <i>
+                    This focused approach can be especially valuable for small
+                    businesses, niche brands, e-commerce stores, and businesses
+                    operating in competitive markets.
+                  </i>
+                </b>
+              </>
+            ),
           },
           subrelatedServices: {
             title: "Our Boutique SEO Services",
-            description:
-              <>Our <b>boutique SEO services</b> cover the key areas needed to build a stronger organic search presence. Depending on your goals, your strategy may include:</>,
+            description: (
+              <>
+                Our <b>boutique SEO services</b> cover the key areas needed to
+                build a stronger organic search presence. Depending on your
+                goals, your strategy may include:
+              </>
+            ),
             exploreLabel: "Explore service",
             items: [
               {
                 // icon: FaSearch,
                 title: "SEO Audit Services",
-                description:
-                  "Finds technical, content, and ranking problems",
+                description: "Finds technical, content, and ranking problems",
                 // href: "/service/seo-services/ecommerce-seo/",
               },
               {
@@ -3629,8 +4315,7 @@ export const services = [
               {
                 // icon: FaSearch,
                 title: "SEO Copywriting Services",
-                description:
-                  "Creates useful, search-friendly website content",
+                description: "Creates useful, search-friendly website content",
                 // href: "/service/seo-services/automotive-seo/",
               },
               {
@@ -3643,8 +4328,7 @@ export const services = [
               {
                 // icon: FaSearch,
                 title: "Authority & Link Building",
-                description:
-                  "Builds website authority and relevant links",
+                description: "Builds website authority and relevant links",
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
@@ -3655,20 +4339,38 @@ export const services = [
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
             ],
-            footnote: <><b><i>Every service is selected according to your website's current needs. We do not recommend unnecessary work just to make a package look bigger.</i></b></>,
+            footnote: (
+              <>
+                <b>
+                  <i>
+                    Every service is selected according to your website's
+                    current needs. We do not recommend unnecessary work just to
+                    make a package look bigger.
+                  </i>
+                </b>
+              </>
+            ),
           },
           results: {
             title: "Keyword Research and SEO Strategy",
             description: (
               <div className="space-y-2">
                 <p>
-                  Effective SEO starts with understanding what your customers search for. We research relevant keywords, search intent, competition, and long-tail opportunities to create a strong keyword strategy.
+                  Effective SEO starts with understanding what your customers
+                  search for. We research relevant keywords, search intent,
+                  competition, and long-tail opportunities to create a strong
+                  keyword strategy.
                 </p>
                 <p>
-                  For a boutique brand, this can include product keywords, service keywords, location-based searches, informational queries, and commercial terms.
+                  For a boutique brand, this can include product keywords,
+                  service keywords, location-based searches, informational
+                  queries, and commercial terms.
                 </p>
                 <p>
-                  A focused keyword strategy also creates better opportunities for internal linking. Related pages can connect naturally through descriptive anchor text, helping users and search engines discover more useful content.
+                  A focused keyword strategy also creates better opportunities
+                  for internal linking. Related pages can connect naturally
+                  through descriptive anchor text, helping users and search
+                  engines discover more useful content.
                 </p>
               </div>
             ),
@@ -3719,7 +4421,15 @@ export const services = [
         localSEOserviceData: {
           eyebrow: "The Foundation of Local Growth",
           title: "Technical and On-Page SEO",
-          description: <>Strong content needs a strong technical foundation. Our technical SEO process looks at areas such as crawling, indexing, website structure, mobile usability, internal links, and other technical issues. <br />Our <b>on-page SEO services</b> can include:</>,
+          description: (
+            <>
+              Strong content needs a strong technical foundation. Our technical
+              SEO process looks at areas such as crawling, indexing, website
+              structure, mobile usability, internal links, and other technical
+              issues. <br />
+              Our <b>on-page SEO services</b> can include:
+            </>
+          ),
           services: [
             {
               id: "keyword-strategy",
@@ -3728,11 +4438,7 @@ export const services = [
               //   alt: "Keyword strategy",
               // },
               title: "Page titles and meta descriptions",
-              description: (
-                <>
-                  
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "full-seo-audit",
@@ -3741,11 +4447,7 @@ export const services = [
               //   alt: "SEO audit",
               // },
               title: "H1, H2, and H3 heading structure",
-              description: (
-                <>
-                  
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "on-page-seo",
@@ -3754,11 +4456,7 @@ export const services = [
               //   alt: "On-page SEO optimization",
               // },
               title: "Content optimization",
-              description: (
-                <>
-                  
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "technical-seo",
@@ -3767,11 +4465,7 @@ export const services = [
               //   alt: "Technical SEO fixes",
               // },
               title: "Image optimization",
-              description: (
-                <>
-                  
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "authority-link-growth",
@@ -3780,11 +4474,7 @@ export const services = [
               //   alt: "Authority and link growth",
               // },
               title: "Internal linking",
-              description: (
-                <>
-                  
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "content-copywriting",
@@ -3793,11 +4483,7 @@ export const services = [
               //   alt: "Content and SEO copywriting",
               // },
               title: "URL structure",
-              description: (
-                <>
-                  
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "search-intent-alignment",
@@ -3806,11 +4492,7 @@ export const services = [
               //   alt: "Content and SEO copywriting",
               // },
               title: "Search intent alignment",
-              description: (
-                <>
-                  
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "content-hierarchy",
@@ -3819,147 +4501,218 @@ export const services = [
               //   alt: "Content and SEO copywriting",
               // },
               title: "Content hierarchy",
-              description: (
-                <>
-                  
-                </>
-              ),
+              description: <></>,
             },
           ],
-          footnote: <><b><i>These improvements help search engines understand your pages while making your website easier for visitors to navigate.</i></b></>,
+          footnote: (
+            <>
+              <b>
+                <i>
+                  These improvements help search engines understand your pages
+                  while making your website easier for visitors to navigate.
+                </i>
+              </b>
+            </>
+          ),
         },
         aiDiscoveryData: {
           eyebrow: "",
-          title: (
+          title: <>SEO for Boutiques</>,
+          description: (
             <>
-              SEO for Boutiques
+              <b>SEO for boutiques</b> requires a strategy that connects your
+              products, brand, and customers with the searches they make online.{" "}
+              <br />
+              Whether you operate a fashion boutique, beauty brand, lifestyle
+              store, or another niche business, SEO can help potential customers
+              discover your products and services. <br />
+              <b>A boutique SEO strategy may focus on:</b>
             </>
           ),
-          description:
-            <><b>SEO for boutiques</b> requires a strategy that connects your products, brand, and customers with the searches they make online. <br />Whether you operate a fashion boutique, beauty brand, lifestyle store, or another niche business, SEO can help potential customers discover your products and services. <br /><b>A boutique SEO strategy may focus on:</b></>,
           strategies: [
             {
               id: "traditional-seo",
               title: "Product and category pages",
-              description:
-                "",
+              description: "",
             },
             {
               id: "local-seo",
               title: "Local search visibility",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization",
               title: "Commercial keywords",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization0",
               title: "Informational content",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization1",
               title: "Brand-related searches",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization2",
               title: "Product descriptions",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization3",
               title: "Internal linking",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization4",
               title: "Mobile-friendly user experience",
-              description:
-                "",
+              description: "",
             },
           ],
-          footnote: <><b><i>For e-commerce businesses, specialized e-commerce SEO services can help improve category pages, product pages, technical SEO, and organic product visibility.</i></b></>,
+          footnote: (
+            <>
+              <b>
+                <i>
+                  For e-commerce businesses, specialized e-commerce SEO services
+                  can help improve category pages, product pages, technical SEO,
+                  and organic product visibility.
+                </i>
+              </b>
+            </>
+          ),
         },
 
         tab: {
-          title:
-            "Specialized SEO Services",
-          description: <>Different businesses have different search needs. A good boutique SEO agency can adapt its strategy to your industry and platform. <br />Some specialized SEO solutions include:</>,
+          title: "Specialized SEO Services",
+          description: (
+            <>
+              Different businesses have different search needs. A good boutique
+              SEO agency can adapt its strategy to your industry and platform.{" "}
+              <br />
+              Some specialized SEO solutions include:
+            </>
+          ),
           steps: [
             {
               id: "local-seo-audit",
               tab_name: "E-commerce SEO Services",
-              heading: <><a href="/service/seo-services/ecommerce-seo/">E-commerce SEO Services</a></>,
-              description:
-                "",
+              heading: (
+                <>
+                  <a href="/service/seo-services/ecommerce-seo/">
+                    E-commerce SEO Services
+                  </a>
+                </>
+              ),
+              description: "",
             },
             {
               id: "google-business-optimization",
               tab_name: "B2B SEO Services",
-              heading: <><a href="/service/seo-services/b2b-seo/">B2B SEO Services</a></>,
-              description:
-                "",
+              heading: (
+                <>
+                  <a href="/service/seo-services/b2b-seo/">B2B SEO Services</a>
+                </>
+              ),
+              description: "",
             },
             {
               id: "local-keyword-research",
               tab_name: "Enterprise SEO Services",
-              heading: <><a href="/service/seo-services/enterprise-seo/">Enterprise SEO Services</a></>,
-              description:
-                "",
+              heading: (
+                <>
+                  <a href="/service/seo-services/enterprise-seo/">
+                    Enterprise SEO Services
+                  </a>
+                </>
+              ),
+              description: "",
             },
             {
               id: "on-page-local-seo",
               tab_name: "Dental SEO Services",
-              heading: <><a href="/service/seo-services/dental-seo/">Dental SEO Services</a></>,
-              description:
-                "",
+              heading: (
+                <>
+                  <a href="/service/seo-services/dental-seo/">
+                    Dental SEO Services
+                  </a>
+                </>
+              ),
+              description: "",
             },
             {
               id: "citation-building",
               tab_name: "Healthcare SEO Services",
-              heading: <><a href="/service/seo-services/healthcare-seo/">Healthcare SEO Services</a></>,
-              description:
-                "",
+              heading: (
+                <>
+                  <a href="/service/seo-services/healthcare-seo/">
+                    Healthcare SEO Services
+                  </a>
+                </>
+              ),
+              description: "",
             },
             {
               id: "performance-tracking",
               tab_name: "Shopify SEO Services",
-              heading: <><a href="/service/seo-services/shopify-seo/">Shopify SEO Services</a></>,
-              description:
-                "",
+              heading: (
+                <>
+                  <a href="/service/seo-services/shopify-seo/">
+                    Shopify SEO Services
+                  </a>
+                </>
+              ),
+              description: "",
             },
             {
               id: "reporting-testing-growth",
               tab_name: "WooCommerce SEO Services",
-              heading: <><a href="/service/seo-services/woocommerce-seo/">WooCommerce SEO Services</a></>,
-              description:
-                "",
+              heading: (
+                <>
+                  <a href="/service/seo-services/woocommerce-seo/">
+                    WooCommerce SEO Services
+                  </a>
+                </>
+              ),
+              description: "",
             },
             {
               id: "reporting-testing-growth",
               tab_name: "WordPress SEO Services",
-              heading: <><a href="/service/seo-services/wordpress-seo/">WordPress SEO Services</a></>,
-              description:
-                "",
+              heading: (
+                <>
+                  <a href="/service/seo-services/wordpress-seo/">
+                    WordPress SEO Services
+                  </a>
+                </>
+              ),
+              description: "",
             },
             {
               id: "reporting-testing-growth",
               tab_name: "Local SEO Services",
-              heading: <><a href="/service/seo-services/local-seo-services/">Local SEO Services</a></>,
-              description:
-                "",
+              heading: (
+                <>
+                  <a href="/service/seo-services/local-seo-services/">
+                    Local SEO Services
+                  </a>
+                </>
+              ),
+              description: "",
             },
           ],
-          footnote: <><b><i>These services can be combined with technical SEO, content SEO, keyword research, and authority building to create a more complete search strategy.</i></b></>,
+          footnote: (
+            <>
+              <b>
+                <i>
+                  These services can be combined with technical SEO, content
+                  SEO, keyword research, and authority building to create a more
+                  complete search strategy.
+                </i>
+              </b>
+            </>
+          ),
         },
 
         successStoriesData: {
@@ -3967,7 +4720,18 @@ export const services = [
           title: <>Aesthetic SEO Agency</>,
           description: (
             <>
-              An <b>Aesthetic SEO Agency</b> combines search optimization with a strong understanding of visual brands and customer experience. <br /> This is important for businesses where appearance, design, style, and brand identity influence customer decisions. Your website should look professional, but it also needs to be discoverable through search. <br /> Our approach to <b>aesthetic marketing SEO</b> connects visual branding with search-friendly content, technical optimization, keyword strategy, and user experience. <br /> The goal is not to fill a beautiful website with keywords. Instead, we create content and SEO elements that feel natural while helping search engines understand what your business offers.
+              An <b>Aesthetic SEO Agency</b> combines search optimization with a
+              strong understanding of visual brands and customer experience.{" "}
+              <br /> This is important for businesses where appearance, design,
+              style, and brand identity influence customer decisions. Your
+              website should look professional, but it also needs to be
+              discoverable through search. <br /> Our approach to{" "}
+              <b>aesthetic marketing SEO</b> connects visual branding with
+              search-friendly content, technical optimization, keyword strategy,
+              and user experience. <br /> The goal is not to fill a beautiful
+              website with keywords. Instead, we create content and SEO elements
+              that feel natural while helping search engines understand what
+              your business offers.
             </>
           ),
           stories: [
@@ -3978,42 +4742,62 @@ export const services = [
                 alt: "Modern SEO, AEO, and GEO",
               },
               title: "Modern SEO, AEO, and GEO",
-              description:
-                <>Search is no longer limited to traditional blue links. People increasingly use AI-powered search tools and answer engines to find information. <br /> That is why modern <b>boutique SEO</b> should also consider Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). <br /> <i>Our approach focuses on:</i>
-                <ul className="list-disc list-outside">
-                  <li>Clear answers to common customer questions</li>
-                  <li>Helpful and original content</li>
-                  <li>Strong heading structures</li>
-                  <li>Direct definitions and explanations</li>
-                  <li>Relevant entities and topics</li>
-                  <li>Natural keyword usage</li>
-                  <li>Content organized around search intent</li>
-                </ul> <br /> <i>This makes your content easier for users, search engines, answer engines, and AI-powered search systems to understand.</i>
-                </>,
+              description: (
+                <>
+                  Search is no longer limited to traditional blue links. People
+                  increasingly use AI-powered search tools and answer engines to
+                  find information. <br /> That is why modern{" "}
+                  <b>boutique SEO</b> should also consider Answer Engine
+                  Optimization (AEO) and Generative Engine Optimization (GEO).{" "}
+                  <br /> <i>Our approach focuses on:</i>
+                  <ul className="list-disc list-outside">
+                    <li>Clear answers to common customer questions</li>
+                    <li>Helpful and original content</li>
+                    <li>Strong heading structures</li>
+                    <li>Direct definitions and explanations</li>
+                    <li>Relevant entities and topics</li>
+                    <li>Natural keyword usage</li>
+                    <li>Content organized around search intent</li>
+                  </ul>{" "}
+                  <br />{" "}
+                  <i>
+                    This makes your content easier for users, search engines,
+                    answer engines, and AI-powered search systems to understand.
+                  </i>
+                </>
+              ),
             },
           ],
         },
         faqTitle: "Frequently Asked Questions",
         faqs: [
           {
-            question:
-              "What is a boutique SEO agency?",
+            question: "What is a boutique SEO agency?",
             answer:
               "A boutique SEO agency is a specialized SEO team that provides personalized search optimization strategies for a smaller number of clients.",
           },
           {
             question: "What are boutique SEO services?",
-            answer:
-              <><b>Boutique SEO services</b> include customized keyword research, technical SEO, on-page SEO, content optimization, local SEO, link building, and SEO consulting.</>,
+            answer: (
+              <>
+                <b>Boutique SEO services</b> include customized keyword
+                research, technical SEO, on-page SEO, content optimization,
+                local SEO, link building, and SEO consulting.
+              </>
+            ),
           },
           {
             question: "What is SEO for boutiques?",
-            answer:
-              <><b>SEO for boutiques</b> is the process of optimizing a boutique business website so it can reach potential customers through relevant organic searches.</>,
+            answer: (
+              <>
+                <b>SEO for boutiques</b> is the process of optimizing a boutique
+                business website so it can reach potential customers through
+                relevant organic searches.
+              </>
+            ),
           },
           {
-            question:
-              "How long does boutique SEO take?",
+            question: "How long does boutique SEO take?",
             answer:
               "SEO is a long-term strategy. Results depend on competition, website quality, industry, content, authority, and the current search visibility of the website.",
           },
@@ -4023,46 +4807,54 @@ export const services = [
           paragraphs: [
             "The biggest difference is often the level of attention and customization.",
           ],
-          containerClassName:
-            "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
-          gridClassName:
-            "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
+          containerClassName: "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
+          gridClassName: "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
           features: [
             {
               title: "Boutique SEO Agency",
-              desc: <>
-              <ul className="list-disc list-outside">
-                <li>Personalized strategy</li>
-                <li>More focused client attention</li>
-                <li>Flexible campaigns</li>
-                <li>Direct communication</li>
-                <li>Niche-focused strategies</li>
-                <li>Strategy built around your goals</li>
-              </ul>
-              </>,
+              desc: (
+                <>
+                  <ul className="list-disc list-outside">
+                    <li>Personalized strategy</li>
+                    <li>More focused client attention</li>
+                    <li>Flexible campaigns</li>
+                    <li>Direct communication</li>
+                    <li>Niche-focused strategies</li>
+                    <li>Strategy built around your goals</li>
+                  </ul>
+                </>
+              ),
             },
             {
               title: "Large SEO Agency",
-              desc: <>
-              <ul className="list-disc list-outside">
-                <li>Standardized packages</li>
-                <li>Larger client portfolios</li>
-                <li>Fixed processes</li>
-                <li>Multiple layers of teams</li>
-                <li>Broader service models</li>
-                <li>Often template-driven</li>
-              </ul>
-              </>,
+              desc: (
+                <>
+                  <ul className="list-disc list-outside">
+                    <li>Standardized packages</li>
+                    <li>Larger client portfolios</li>
+                    <li>Fixed processes</li>
+                    <li>Multiple layers of teams</li>
+                    <li>Broader service models</li>
+                    <li>Often template-driven</li>
+                  </ul>
+                </>
+              ),
             },
           ],
-          footnote: <i>For businesses that want a closer working relationship and a strategy built specifically for their market, a boutique SEO agency can be a strong choice.</i>,
+          footnote: (
+            <i>
+              For businesses that want a closer working relationship and a
+              strategy built specifically for their market, a boutique SEO
+              agency can be a strong choice.
+            </i>
+          ),
         },
         seoComparisonData: {
-          title:
-            "Who Needs Boutique SEO?",
+          title: "Who Needs Boutique SEO?",
           description: (
             <>
-              Boutique SEO can benefit businesses that want focused search growth without a complicated agency experience.
+              Boutique SEO can benefit businesses that want focused search
+              growth without a complicated agency experience.
             </>
           ),
           comparisons: [
@@ -4088,7 +4880,12 @@ export const services = [
                 {
                   title: "",
                   items: [
-                    <>Whether you need <b>local SEO services</b>, technical optimization, content creation, e-commerce SEO, or a complete SEO strategy, your campaign can be built around your specific goals.</>,
+                    <>
+                      Whether you need <b>local SEO services</b>, technical
+                      optimization, content creation, e-commerce SEO, or a
+                      complete SEO strategy, your campaign can be built around
+                      your specific goals.
+                    </>,
                   ],
                 },
               ],
@@ -4286,9 +5083,25 @@ export const services = [
           image: "/service-deatil-images/seo.webp",
         },
         introParagraphs: [
-          <>We help roofing companies get found by more customers on Google and other search platforms. Our <b>roofing SEO services</b> are designed to improve your online visibility, attract qualified local traffic, and turn website visitors into calls, quote requests, and roofing jobs.</>,
-          <>When someone searches for “roof repair near me,” “roof replacement company,” or “roofing contractor in [city],” your business needs to be visible at the right moment. We build an SEO strategy around your roofing services, target locations, customers, and business goals.</>,
-          <>Our approach combines traditional SEO, local SEO, technical optimization, helpful content, GEO, AEO, and LLM optimization to help your roofing company stay visible as search continues to change.</>
+          <>
+            We help roofing companies get found by more customers on Google and
+            other search platforms. Our <b>roofing SEO services</b> are designed
+            to improve your online visibility, attract qualified local traffic,
+            and turn website visitors into calls, quote requests, and roofing
+            jobs.
+          </>,
+          <>
+            When someone searches for “roof repair near me,” “roof replacement
+            company,” or “roofing contractor in [city],” your business needs to
+            be visible at the right moment. We build an SEO strategy around your
+            roofing services, target locations, customers, and business goals.
+          </>,
+          <>
+            Our approach combines traditional SEO, local SEO, technical
+            optimization, helpful content, GEO, AEO, and LLM optimization to
+            help your roofing company stay visible as search continues to
+            change.
+          </>,
         ],
         actions: [
           { label: "Contact Us", href: "/contact-us" },
@@ -4301,10 +5114,33 @@ export const services = [
         requestAFreeData: {
           title: "Get More Roofing Leads From Search",
           paragraphs: [
-            <>We help roofing companies build a stronger online presence that works across Google, local search, answer engines, and AI-powered search.</>,
-            <>From technical SEO and <a className="font-semibold text-blue-500 hover:underline" href="/service/seo-services/local-seo-services/">Local SEO Services</a> to keyword research, content optimization, GEO, AEO, and LLM optimization, we build a strategy around your services, locations, customers, and growth goals.</>,
-            <>If you want more people to find your roofing company when they need a repair, replacement, inspection, or new roof, we are ready to help.</>,
-            <>Ready to grow your roofing business through search? Contact us today and let’s build an SEO strategy that brings your company more qualified leads.</>,
+            <>
+              We help roofing companies build a stronger online presence that
+              works across Google, local search, answer engines, and AI-powered
+              search.
+            </>,
+            <>
+              From technical SEO and{" "}
+              <a
+                className="font-semibold text-blue-500 hover:underline"
+                href="/service/seo-services/local-seo-services/"
+              >
+                Local SEO Services
+              </a>{" "}
+              to keyword research, content optimization, GEO, AEO, and LLM
+              optimization, we build a strategy around your services, locations,
+              customers, and growth goals.
+            </>,
+            <>
+              If you want more people to find your roofing company when they
+              need a repair, replacement, inspection, or new roof, we are ready
+              to help.
+            </>,
+            <>
+              Ready to grow your roofing business through search? Contact us
+              today and let’s build an SEO strategy that brings your company
+              more qualified leads.
+            </>,
           ],
           cta: {
             label: "Get Your Free Boutique SEO Audit",
@@ -4313,22 +5149,21 @@ export const services = [
         },
         expertPage: {
           intro: {
-            title: (
-              <>
-                Why Do Roofing Companies Need SEO?
-              </>
-            ),
+            title: <>Why Do Roofing Companies Need SEO?</>,
             description: (
               <div className="space-y-2">
                 <p>
-                  Roofing customers usually search online before contacting a contractor. They compare companies, check reviews, look at services, and often visit several websites before requesting an estimate.
+                  Roofing customers usually search online before contacting a
+                  contractor. They compare companies, check reviews, look at
+                  services, and often visit several websites before requesting
+                  an estimate.
                 </p>
                 <p>
-                  If your roofing company does not appear for these searches, your competitors have a better chance of getting those customers.
+                  If your roofing company does not appear for these searches,
+                  your competitors have a better chance of getting those
+                  customers.
                 </p>
-                <p>
-                  We help you target searches related to:
-                </p>
+                <p>We help you target searches related to:</p>
                 <div className="experts-benefits-shell flex w-full justify-center">
                   <div
                     className="experts-benefits-carousel flex w-full max-w-[900px] snap-x snap-mandatory justify-start gap-4 overflow-x-auto pb-3 scroll-px-[9%] [scrollbar-width:none] [&>*:first-child]:ml-[9%] [&>*:last-child]:mr-[9%] [&::-webkit-scrollbar]:hidden"
@@ -4396,7 +5231,19 @@ export const services = [
                     </div>
                   </div>
                 </div>
-                <p className=""><i>Our comprehensive <a className="font-semibold text-blue-500 hover:underline" href="/service/seo-services/">SEO Services</a> are built to improve visibility, traffic, and lead generation through a structured search strategy.</i></p>
+                <p className="">
+                  <i>
+                    Our comprehensive{" "}
+                    <a
+                      className="font-semibold text-blue-500 hover:underline"
+                      href="/service/seo-services/"
+                    >
+                      SEO Services
+                    </a>{" "}
+                    are built to improve visibility, traffic, and lead
+                    generation through a structured search strategy.
+                  </i>
+                </p>
               </div>
             ),
           },
@@ -4420,92 +5267,118 @@ export const services = [
           // ],
           relatedServices: {
             title: "Our Roofing SEO Services",
-            description:
-              <>We use a complete SEO process instead of focusing only on keyword rankings.</>,
+            description: (
+              <>
+                We use a complete SEO process instead of focusing only on
+                keyword rankings.
+              </>
+            ),
             exploreLabel: "Explore service",
             items: [
               {
                 // icon: ,
                 title: "Technical SEO",
-                description:
+                description: (
                   <>
-                  <h4 className="font-semibold text-md">What We Do:</h4>
-                  <p>Fix crawl, indexing, speed, mobile, and website structure issues</p>
-                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
-                  <p>Makes your website easier for search engines to understand</p>
-                  </>,
+                    <h4 className="font-semibold text-md">What We Do:</h4>
+                    <p>
+                      Fix crawl, indexing, speed, mobile, and website structure
+                      issues
+                    </p>
+                    <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                    <p>
+                      Makes your website easier for search engines to understand
+                    </p>
+                  </>
+                ),
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "Local SEO",
-                description:
+                description: (
                   <>
-                  <h4 className="font-semibold text-md">What We Do:</h4>
-                  <p>Improve local visibility, location signals, and business information</p>
-                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
-                  <p>Helps you reach customers in your service areas</p>
-                  </>,
+                    <h4 className="font-semibold text-md">What We Do:</h4>
+                    <p>
+                      Improve local visibility, location signals, and business
+                      information
+                    </p>
+                    <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                    <p>Helps you reach customers in your service areas</p>
+                  </>
+                ),
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "Keyword Strategy",
-                description:
+                description: (
                   <>
-                  <h4 className="font-semibold text-md">What We Do:</h4>
-                  <p>Find high-intent roofing searches and location terms</p>
-                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
-                  <p>Targets people who are more likely to become customers</p>
-                  </>,
+                    <h4 className="font-semibold text-md">What We Do:</h4>
+                    <p>Find high-intent roofing searches and location terms</p>
+                    <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                    <p>
+                      Targets people who are more likely to become customers
+                    </p>
+                  </>
+                ),
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "On-Page SEO",
-                description:
+                description: (
                   <>
-                  <h4 className="font-semibold text-md">What We Do:</h4>
-                  <p>Optimize headings, titles, URLs, content, images, and internal links</p>
-                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
-                  <p>Improves relevance and search visibility</p>
-                  </>,
+                    <h4 className="font-semibold text-md">What We Do:</h4>
+                    <p>
+                      Optimize headings, titles, URLs, content, images, and
+                      internal links
+                    </p>
+                    <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                    <p>Improves relevance and search visibility</p>
+                  </>
+                ),
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "Content Optimization",
-                description:
+                description: (
                   <>
-                  <h4 className="font-semibold text-md">What We Do:</h4>
-                  <p>Create useful service pages and customer-focused content</p>
-                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
-                  <p>Builds topical relevance and answers search intent</p>
-                  </>,
+                    <h4 className="font-semibold text-md">What We Do:</h4>
+                    <p>
+                      Create useful service pages and customer-focused content
+                    </p>
+                    <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                    <p>Builds topical relevance and answers search intent</p>
+                  </>
+                ),
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "Authority Building",
-                description:
+                description: (
                   <>
-                  <h4 className="font-semibold text-md">What We Do:</h4>
-                  <p>Develop relevant trust and authority signals</p>
-                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
-                  <p>Supports stronger organic visibility</p>
-                  </>,
+                    <h4 className="font-semibold text-md">What We Do:</h4>
+                    <p>Develop relevant trust and authority signals</p>
+                    <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                    <p>Supports stronger organic visibility</p>
+                  </>
+                ),
                 href: "",
               },
               {
                 // icon: FaSearch,
                 title: "Conversion SEO",
-                description:
+                description: (
                   <>
-                  <h4 className="font-semibold text-md">What We Do:</h4>
-                  <p>Improve calls-to-action, forms, and user experience</p>
-                  <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
-                  <p>Helps turn visitors into leads</p>
-                  </>,
+                    <h4 className="font-semibold text-md">What We Do:</h4>
+                    <p>Improve calls-to-action, forms, and user experience</p>
+                    <h4 className="font-semibold text-md mt-3">Main Benefit</h4>
+                    <p>Helps turn visitors into leads</p>
+                  </>
+                ),
                 href: "",
               },
             ],
@@ -4513,138 +5386,144 @@ export const services = [
           },
           subrelatedServices: {
             title: "Technical SEO for Roofing Websites",
-            description:
-              <>We first check the technical health of your website. Even a well designed roofing website can struggle in search when search engines cannot properly crawl, index, or understand its pages. <br /><i>Our technical SEO work can include:</i></>,
+            description: (
+              <>
+                We first check the technical health of your website. Even a well
+                designed roofing website can struggle in search when search
+                engines cannot properly crawl, index, or understand its pages.{" "}
+                <br />
+                <i>Our technical SEO work can include:</i>
+              </>
+            ),
             exploreLabel: "Explore service",
             items: [
               {
                 // icon: FaSearch,
                 title: "Website speed optimization",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/ecommerce-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "Mobile usability",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/b2b-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "Core Web Vitals",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/dental-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "Crawlability",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/enterprise-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "Indexing",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/automotive-seo/",
               },
               {
                 // icon: FaSearch,
                 title: "XML sitemap",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "Robots.txt",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "URL structure",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "Broken links",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "Redirects",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "Internal linking",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "Duplicate content",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "Image optimization",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "Meta titles and descriptions",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "Heading structure",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
               {
                 // icon: FaSearch,
                 title: "Website architecture",
-                description:
-                  "",
+                description: "",
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
             ],
-            footnote: <>We make sure your most important roofing service pages are easy to find, understand, and navigate. <br />Our <a className="font-semibold text-blue-500 hover:underline" href="/service/seo-services/">SEO Services</a> include technical SEO, keyword strategy, on-page optimization, authority building, and ongoing performance improvements.</>,
+            footnote: (
+              <>
+                We make sure your most important roofing service pages are easy
+                to find, understand, and navigate. <br />
+                Our{" "}
+                <a
+                  className="font-semibold text-blue-500 hover:underline"
+                  href="/service/seo-services/"
+                >
+                  SEO Services
+                </a>{" "}
+                include technical SEO, keyword strategy, on-page optimization,
+                authority building, and ongoing performance improvements.
+              </>
+            ),
           },
           results: {
             title: "Local SEO for Roofing Contractors",
             description: (
               <div className="space-y-2">
                 <p>
-                  Roofing is a location-based business. Most customers want a roofing contractor who serves their city, neighborhood, or surrounding area.
+                  Roofing is a location-based business. Most customers want a
+                  roofing contractor who serves their city, neighborhood, or
+                  surrounding area.
                 </p>
                 <p>
-                  That makes <b>Local SEO Services</b> an important part of your roofing SEO strategy.
+                  That makes <b>Local SEO Services</b> an important part of your
+                  roofing SEO strategy.
                 </p>
-                <p>
-                  We optimize your online presence for searches such as:
-                </p>
+                <p>We optimize your online presence for searches such as:</p>
                 <ul className="list-disc list-outside">
                   <li>Roofing contractor near me</li>
                   <li>Roof repair in [city]</li>
@@ -4667,7 +5546,19 @@ export const services = [
                   <li>Map visibility</li>
                 </ul>
 
-                <p>The goal is not to rank your roofing company everywhere. We focus on the locations that can actually generate business for you. <br />Web Founders USA specifically lists <a className="font-semibold text-blue-500 hover:underline" href="/service/seo-services/local-seo-services/">Local SEO Services</a> as part of its SEO offerings.</p>
+                <p>
+                  The goal is not to rank your roofing company everywhere. We
+                  focus on the locations that can actually generate business for
+                  you. <br />
+                  Web Founders USA specifically lists{" "}
+                  <a
+                    className="font-semibold text-blue-500 hover:underline"
+                    href="/service/seo-services/local-seo-services/"
+                  >
+                    Local SEO Services
+                  </a>{" "}
+                  as part of its SEO offerings.
+                </p>
               </div>
             ),
             stats: [
@@ -4717,7 +5608,16 @@ export const services = [
         localSEOserviceData: {
           eyebrow: "The Foundation of Local Growth",
           title: "Roofing Keyword Research and Search Intent",
-          description: <>We do not choose keywords only because they have high search volume. <br />We look for searches that show real customer intent. <br /><i>For example, these searches can have very different purposes:</i></>,
+          description: (
+            <>
+              We do not choose keywords only because they have high search
+              volume. <br />
+              We look for searches that show real customer intent. <br />
+              <i>
+                For example, these searches can have very different purposes:
+              </i>
+            </>
+          ),
           services: [
             {
               id: "keyword-strategy",
@@ -4746,7 +5646,9 @@ export const services = [
                           <td className="px-2 py-2">Informational</td>
                         </tr>
                         <tr className="border-b border-gray-200">
-                          <td className="px-2 py-2">How long does a roof last?</td>
+                          <td className="px-2 py-2">
+                            How long does a roof last?
+                          </td>
                           <td className="px-2 py-2">Research</td>
                         </tr>
                         <tr className="border-b border-gray-200">
@@ -4754,7 +5656,9 @@ export const services = [
                           <td className="px-2 py-2">Commercial research</td>
                         </tr>
                         <tr className="border-b border-gray-200">
-                          <td className="px-2 py-2">Roof replacement company</td>
+                          <td className="px-2 py-2">
+                            Roof replacement company
+                          </td>
                           <td className="px-2 py-2">High commercial intent</td>
                         </tr>
                         <tr>
@@ -4762,7 +5666,9 @@ export const services = [
                           <td className="px-2 py-2">Local and high intent</td>
                         </tr>
                         <tr>
-                          <td className="px-2 py-2">Emergency roofer near me</td>
+                          <td className="px-2 py-2">
+                            Emergency roofer near me
+                          </td>
                           <td className="px-2 py-2">Urgent and high intent</td>
                         </tr>
                       </tbody>
@@ -4772,139 +5678,157 @@ export const services = [
               ),
             },
           ],
-          footnote: <><b><i>We build your website around these different search intentions so customers can find the right information at the right stage.</i></b></>,
+          footnote: (
+            <>
+              <b>
+                <i>
+                  We build your website around these different search intentions
+                  so customers can find the right information at the right
+                  stage.
+                </i>
+              </b>
+            </>
+          ),
         },
         aiDiscoveryData: {
           eyebrow: "",
-          title: (
+          title: <>Roofing Content That Answers Real Questions</>,
+          description: (
             <>
-              Roofing Content That Answers Real Questions
+              We create clear and useful content around the questions your
+              customers ask before hiring a roofer. <br />
+              Examples include:
             </>
           ),
-          description:
-            <>We create clear and useful content around the questions your customers ask before hiring a roofer. <br />Examples include:</>,
           strategies: [
             {
               id: "traditional-seo",
               title: "How much does a roof replacement cost?",
-              description:
-                "",
+              description: "",
             },
             {
               id: "local-seo",
               title: "How long does a roof replacement take?",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization",
               title: "Should I repair or replace my roof?",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization0",
               title: "What are the signs of roof damage?",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization1",
               title: "How often should I inspect my roof?",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization2",
               title: "Does homeowners insurance cover roof damage?",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization3",
               title: "How long does a shingle roof last?",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization4",
               title: "What should I do after a roof leak?",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization5",
               title: "How much does storm damage repair cost?",
-              description:
-                "",
+              description: "",
             },
           ],
-          footnote: <>Our content strategy focuses on people first. We use natural language, clear explanations, relevant keywords, and useful information instead of keyword stuffing.</>,
+          footnote: (
+            <>
+              Our content strategy focuses on people first. We use natural
+              language, clear explanations, relevant keywords, and useful
+              information instead of keyword stuffing.
+            </>
+          ),
         },
 
         tab: {
-          title:
-            "GEO Optimization for Roofing Companies",
-          description: <>Search is no longer limited to traditional Google results. <br /> People are increasingly using AI-powered search platforms to find information, compare businesses, and get recommendations. <br /><b>Generative Engine Optimization (GEO)</b> helps make your business information easier for AI-powered search systems to understand. <br />We structure your website around clear information about:</>,
+          title: "GEO Optimization for Roofing Companies",
+          description: (
+            <>
+              Search is no longer limited to traditional Google results. <br />{" "}
+              People are increasingly using AI-powered search platforms to find
+              information, compare businesses, and get recommendations. <br />
+              <b>Generative Engine Optimization (GEO)</b> helps make your
+              business information easier for AI-powered search systems to
+              understand. <br />
+              We structure your website around clear information about:
+            </>
+          ),
           steps: [
             {
               id: "local-seo-audit",
               tab_name: "Your company",
               heading: <>Your company</>,
-              description:
-                "",
+              description: "",
             },
             {
               id: "google-business-optimization",
               tab_name: "Your roofing services",
               heading: <>Your roofing services</>,
-              description:
-                "",
+              description: "",
             },
             {
               id: "local-keyword-research",
               tab_name: "Your service areas",
               heading: <>Your service areas</>,
-              description:
-                "",
+              description: "",
             },
             {
               id: "on-page-local-seo",
               tab_name: "Your experience",
               heading: <>Your experience</>,
-              description:
-                "",
+              description: "",
             },
             {
               id: "citation-building",
               tab_name: "Your specialties",
               heading: <>Your specialties</>,
-              description:
-                "",
+              description: "",
             },
             {
               id: "performance-tracking",
               tab_name: "Your customers",
               heading: <>Your customers</>,
-              description:
-                "",
+              description: "",
             },
             {
               id: "reporting-testing-growth",
               tab_name: "Common roofing problems",
               heading: <>Common roofing problems</>,
-              description:
-                "",
+              description: "",
             },
             {
               id: "reporting-testing-growth",
               tab_name: "Your solutions",
               heading: <>Your solutions</>,
-              description:
-                "",
+              description: "",
             },
           ],
-          footnote: <><b><i>This gives search engines and AI systems better context about what your business does and who you serve.</i></b></>,
+          footnote: (
+            <>
+              <b>
+                <i>
+                  This gives search engines and AI systems better context about
+                  what your business does and who you serve.
+                </i>
+              </b>
+            </>
+          ),
         },
 
         successStoriesData: {
@@ -4912,7 +5836,9 @@ export const services = [
           title: <>AEO for Roofing Businesses</>,
           description: (
             <>
-              <b>Answer Engine Optimization (AEO)</b> focuses on providing direct and useful answers to customer questions. <br /> We create clear sections that answer important questions in simple language.
+              <b>Answer Engine Optimization (AEO)</b> focuses on providing
+              direct and useful answers to customer questions. <br /> We create
+              clear sections that answer important questions in simple language.
             </>
           ),
           stories: [
@@ -4923,10 +5849,17 @@ export const services = [
                 alt: "When should you replace a roof?",
               },
               title: "When should you replace a roof?",
-              description:
+              description: (
                 <>
-                You should consider replacing your roof when it has reached the end of its expected life, has widespread damage, or requires frequent repairs. A professional inspection can help determine whether repair or replacement is the better option. <br /> This answer-focused structure makes information easier for customers to understand and easier for search systems to process.
-                </>,
+                  You should consider replacing your roof when it has reached
+                  the end of its expected life, has widespread damage, or
+                  requires frequent repairs. A professional inspection can help
+                  determine whether repair or replacement is the better option.{" "}
+                  <br /> This answer-focused structure makes information easier
+                  for customers to understand and easier for search systems to
+                  process.
+                </>
+              ),
             },
             {
               id: "cleaning-business1",
@@ -4935,9 +5868,14 @@ export const services = [
                 alt: "LLMO and AI Search Optimization",
               },
               title: "LLMO and AI Search Optimization",
-              description:
+              description: (
                 <>
-                  We also consider <b>Large Language Model Optimization (LLMO)</b> when developing your roofing website. <br />AI systems need clear information to understand your company, services, locations, and expertise. <br />We strengthen these signals through:
+                  We also consider{" "}
+                  <b>Large Language Model Optimization (LLMO)</b> when
+                  developing your roofing website. <br />
+                  AI systems need clear information to understand your company,
+                  services, locations, and expertise. <br />
+                  We strengthen these signals through:
                   <ul className="list-disc list-outside">
                     <li>Clear service descriptions</li>
                     <li>Location-specific information</li>
@@ -4949,8 +5887,13 @@ export const services = [
                     <li>Clear business expertise</li>
                     <li>Trust and authority signals</li>
                   </ul>
-                  <p className="mt-5">We do not write content only for AI. We write useful content for real people and structure it so modern search systems can understand the information more easily.</p>
-                </>,
+                  <p className="mt-5">
+                    We do not write content only for AI. We write useful content
+                    for real people and structure it so modern search systems
+                    can understand the information more easily.
+                  </p>
+                </>
+              ),
             },
             {
               id: "cleaning-business2",
@@ -4959,10 +5902,12 @@ export const services = [
                 alt: "Roofing Service Pages Built to Convert",
               },
               title: "Roofing Service Pages Built to Convert",
-              description:
+              description: (
                 <>
-                 Ranking is only one part of SEO. <br />Your website also needs to turn visitors into leads. <br />We can optimize dedicated pages for services such as:
-                 <ul className="list-disc list-outside">
+                  Ranking is only one part of SEO. <br />
+                  Your website also needs to turn visitors into leads. <br />
+                  We can optimize dedicated pages for services such as:
+                  <ul className="list-disc list-outside">
                     <li>Roof Repair</li>
                     <li>Roof Replacement</li>
                     <li>New Roof Installation</li>
@@ -4981,8 +5926,19 @@ export const services = [
                     <li>Why customers should choose your company</li>
                     <li>What the next step should be</li>
                   </ul>
-                  <p className="mt-5">We can also improve the conversion journey through <a className="font-semibold text-blue-500 hover:underline" href="/service/conversion-optimization/">Conversion Optimization Services</a>, helping your website turn more of its existing traffic into inquiries and leads.</p>
-                </>,
+                  <p className="mt-5">
+                    We can also improve the conversion journey through{" "}
+                    <a
+                      className="font-semibold text-blue-500 hover:underline"
+                      href="/service/conversion-optimization/"
+                    >
+                      Conversion Optimization Services
+                    </a>
+                    , helping your website turn more of its existing traffic
+                    into inquiries and leads.
+                  </p>
+                </>
+              ),
             },
             {
               id: "cleaning-business3",
@@ -4991,16 +5947,31 @@ export const services = [
                 alt: "SEO for Commercial and B2B Roofing Companies",
               },
               title: "SEO for Commercial and B2B Roofing Companies",
-              description:
+              description: (
                 <>
-                  If your roofing company works with property managers, builders, developers, commercial property owners, or other businesses, your SEO strategy may need a different approach.
+                  If your roofing company works with property managers,
+                  builders, developers, commercial property owners, or other
+                  businesses, your SEO strategy may need a different approach.
                   <br />
-                  Commercial roofing searches often involve longer buying cycles and more than one decision-maker.
+                  Commercial roofing searches often involve longer buying cycles
+                  and more than one decision-maker.
                   <br />
-                  Our <a className="text-blue-500 font-semibold hover:underline" href="/service/seo-services/b2b-seo/">B2B SEO Services</a> are designed for businesses that need to reach qualified commercial audiences and generate leads through organic search.
+                  Our{" "}
+                  <a
+                    className="text-blue-500 font-semibold hover:underline"
+                    href="/service/seo-services/b2b-seo/"
+                  >
+                    B2B SEO Services
+                  </a>{" "}
+                  are designed for businesses that need to reach qualified
+                  commercial audiences and generate leads through organic
+                  search.
                   <br />
-                  For a roofing company that primarily serves homeowners, we keep the strategy focused on residential and local search intent.
-                </>,
+                  For a roofing company that primarily serves homeowners, we
+                  keep the strategy focused on residential and local search
+                  intent.
+                </>
+              ),
             },
             {
               id: "cleaning-business4",
@@ -5009,9 +5980,10 @@ export const services = [
                 alt: "SEO for Large Roofing Organizations",
               },
               title: "SEO for Large Roofing Organizations",
-              description:
+              description: (
                 <>
-                  Large roofing companies with multiple locations, service areas, or complex websites need a scalable SEO structure.
+                  Large roofing companies with multiple locations, service
+                  areas, or complex websites need a scalable SEO structure.
                   <br />
                   They may need:
                   <ul className="list-disc list-outside">
@@ -5023,103 +5995,132 @@ export const services = [
                     <li>Multiple business locations</li>
                     <li>Centralized SEO reporting</li>
                   </ul>
-                  <p className="mt-5">For larger organizations, our <a className="font-semibold text-blue-500 hover:underline" href="/service/seo-services/enterprise-seo/">Enterprise SEO Services</a> can support a more scalable search strategy. Web Founders USA lists Enterprise SEO among its specialized SEO offerings.</p>
-                </>,
+                  <p className="mt-5">
+                    For larger organizations, our{" "}
+                    <a
+                      className="font-semibold text-blue-500 hover:underline"
+                      href="/service/seo-services/enterprise-seo/"
+                    >
+                      Enterprise SEO Services
+                    </a>{" "}
+                    can support a more scalable search strategy. Web Founders
+                    USA lists Enterprise SEO among its specialized SEO
+                    offerings.
+                  </p>
+                </>
+              ),
             },
           ],
         },
         faqTitle: "Frequently Asked Questions",
         faqs: [
           {
-            question:
-              "How long does roofing SEO take to work?",
+            question: "How long does roofing SEO take to work?",
             answer:
               "SEO is a long-term strategy. Results depend on your website, competition, target locations, authority, content, and current online presence. Some improvements can appear within a few months, while competitive markets usually require consistent optimization.",
           },
           {
             question: "Can SEO help my roofing company get more leads?",
-            answer:
-              <>Yes. SEO can bring your website in front of people who are actively searching for roofing services. When your pages match their needs and provide a clear next step, organic traffic can become a valuable source of qualified leads.</>,
+            answer: (
+              <>
+                Yes. SEO can bring your website in front of people who are
+                actively searching for roofing services. When your pages match
+                their needs and provide a clear next step, organic traffic can
+                become a valuable source of qualified leads.
+              </>
+            ),
           },
           {
             question: "Do you offer Local SEO Services for roofing companies?",
-            answer:
-              <>Yes. Local SEO is an important part of our strategy for roofing companies that serve specific cities, neighborhoods, and service areas.</>,
+            answer: (
+              <>
+                Yes. Local SEO is an important part of our strategy for roofing
+                companies that serve specific cities, neighborhoods, and service
+                areas.
+              </>
+            ),
           },
           {
-            question:
-              "Can you optimize an existing roofing website?",
+            question: "Can you optimize an existing roofing website?",
             answer:
               "Yes. We can review your current website and identify technical, content, local SEO, on-page, and conversion opportunities.",
           },
           {
-            question:
-              "Can roofing SEO help with AI search?",
+            question: "Can roofing SEO help with AI search?",
             answer:
               "Yes. We create clear, useful, well-structured content that can be understood by traditional search engines, answer engines, and AI-powered search systems. No agency can guarantee that an AI platform will mention a business, but strong content, clear business information, topical relevance, and authority can support broader search visibility.",
           },
           {
-            question:
-              "Should I use SEO or paid advertising?",
+            question: "Should I use SEO or paid advertising?",
             answer:
               "Both can have a role. SEO builds long-term organic visibility, while paid advertising can provide faster visibility. The right approach depends on your market, goals, competition, and budget.",
           },
         ],
         whyChooseData: {
           title: "Our Roofing SEO Process",
-          paragraphs: [
-            "",
-          ],
-          containerClassName:
-            "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
-          gridClassName:
-            "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
+          paragraphs: [""],
+          containerClassName: "mx-auto w-full max-w-none px-4 sm:px-6 lg:px-10",
+          gridClassName: "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
           features: [
             {
               title: "Steps",
-              desc: <>
-              <ul className="list-disc list-outside">
-                <li>Website Audit</li>
-                <li>Market Research</li>
-                <li>Keyword Research</li>
-                <li>SEO Strategy</li>
-                <li>On-Page Optimization</li>
-                <li>Local SEO</li>
-                <li>Content Optimization</li>
-                <li>Authority Building</li>
-                <li>Performance Tracking</li>
-                <li>Continuous Improvement</li>
-              </ul>
-              </>,
+              desc: (
+                <>
+                  <ul className="list-disc list-outside">
+                    <li>Website Audit</li>
+                    <li>Market Research</li>
+                    <li>Keyword Research</li>
+                    <li>SEO Strategy</li>
+                    <li>On-Page Optimization</li>
+                    <li>Local SEO</li>
+                    <li>Content Optimization</li>
+                    <li>Authority Building</li>
+                    <li>Performance Tracking</li>
+                    <li>Continuous Improvement</li>
+                  </ul>
+                </>
+              ),
             },
             {
               title: "What We Do",
-              desc: <>
-              <ul className="list-disc list-outside">
-                <li>Find technical, content, local, and on-page SEO issues</li>
-                <li>Analyze competitors, locations, services, and customer searches</li>
-                <li>Identify valuable roofing and location-based searches</li>
-                <li>Create a clear roadmap based on your business goals</li>
-                <li>Improve service pages, headings, metadata, content, and links</li>
-                <li>Strengthen your visibility in your target service areas</li>
-                <li>Build useful content around customer questions and search intent</li>
-                <li>Develop relevant trust and authority signals</li>
-                <li>Monitor visibility, traffic, leads, and conversions</li>
-                <li>Keep improving the strategy based on performance</li>
-              </ul>
-              </>,
+              desc: (
+                <>
+                  <ul className="list-disc list-outside">
+                    <li>
+                      Find technical, content, local, and on-page SEO issues
+                    </li>
+                    <li>
+                      Analyze competitors, locations, services, and customer
+                      searches
+                    </li>
+                    <li>
+                      Identify valuable roofing and location-based searches
+                    </li>
+                    <li>Create a clear roadmap based on your business goals</li>
+                    <li>
+                      Improve service pages, headings, metadata, content, and
+                      links
+                    </li>
+                    <li>
+                      Strengthen your visibility in your target service areas
+                    </li>
+                    <li>
+                      Build useful content around customer questions and search
+                      intent
+                    </li>
+                    <li>Develop relevant trust and authority signals</li>
+                    <li>Monitor visibility, traffic, leads, and conversions</li>
+                    <li>Keep improving the strategy based on performance</li>
+                  </ul>
+                </>
+              ),
             },
           ],
           footnote: <i></i>,
         },
         seoComparisonData: {
-          title:
-            "Why Choose Our Roofing SEO Services?",
-          description: (
-            <>
-              
-            </>
-          ),
+          title: "Why Choose Our Roofing SEO Services?",
+          description: <></>,
           comparisons: [
             {
               id: "traditional-seo",
@@ -5129,7 +6130,10 @@ export const services = [
                 {
                   title: "Roofing-Focused Strategy",
                   items: [
-                    <>We build your SEO strategy around your roofing services, customers, locations, competition, and business goals.</>,
+                    <>
+                      We build your SEO strategy around your roofing services,
+                      customers, locations, competition, and business goals.
+                    </>,
                   ],
                 },
               ],
@@ -5142,7 +6146,11 @@ export const services = [
                 {
                   title: "Simple, Human Content",
                   items: [
-                    <>We avoid unnecessary jargon and keyword stuffing. We create content that sounds natural and gives customers useful answers.</>,
+                    <>
+                      We avoid unnecessary jargon and keyword stuffing. We
+                      create content that sounds natural and gives customers
+                      useful answers.
+                    </>,
                   ],
                 },
               ],
@@ -5155,7 +6163,10 @@ export const services = [
                 {
                   title: "Local Search Focus",
                   items: [
-                    <>We help your business become more visible in the areas where you actually provide roofing services.</>,
+                    <>
+                      We help your business become more visible in the areas
+                      where you actually provide roofing services.
+                    </>,
                   ],
                 },
               ],
@@ -5168,7 +6179,10 @@ export const services = [
                 {
                   title: "Modern Search Strategy",
                   items: [
-                    <>We consider traditional SEO, local search, GEO, AEO, AI search, and LLM-based discovery.</>,
+                    <>
+                      We consider traditional SEO, local search, GEO, AEO, AI
+                      search, and LLM-based discovery.
+                    </>,
                   ],
                 },
               ],
@@ -5181,7 +6195,10 @@ export const services = [
                 {
                   title: "Data-Driven Decisions",
                   items: [
-                    <>We track important performance signals and use the data to improve your SEO strategy over time.</>,
+                    <>
+                      We track important performance signals and use the data to
+                      improve your SEO strategy over time.
+                    </>,
                   ],
                 },
               ],
@@ -5194,7 +6211,10 @@ export const services = [
                 {
                   title: "Clear Reporting",
                   items: [
-                    <>You should know what is being worked on, what is improving, and where new opportunities exist.</>,
+                    <>
+                      You should know what is being worked on, what is
+                      improving, and where new opportunities exist.
+                    </>,
                   ],
                 },
               ],
@@ -7047,12 +8067,10 @@ export const services = [
       },
       {
         id: "insurance-broker-seo",
-        title:
-          "SEO for Insurance Brokers",
+        title: "SEO for Insurance Brokers",
         desc: "We help insurance brokers build stronger visibility across Google and other search platforms, attract qualified prospects, and turn organic search traffic into quote requests, calls, and new clients.",
         seo: {
-          title:
-            "SEO for Insurance Brokers - Get Quick Ranking Just 30 Days!",
+          title: "SEO for Insurance Brokers - Get Quick Ranking Just 30 Days!",
           description:
             "Grow your insurance business with expert SEO for insurance brokers. Improve rankings, local visibility, qualified traffic, and leads with proven SEO strategies.",
           keyword:
@@ -7065,8 +8083,8 @@ export const services = [
             "/service-deatil-images/Boost your business visibility online.webp",
         },
         introParagraphs: [
-          'We help insurance brokers build stronger visibility across Google and other search platforms, attract qualified prospects, and turn organic search traffic into quote requests, calls, and new clients. Our SEO for insurance brokers strategy is built around your insurance services, target markets, locations, competition, and business goals.',
-          'When potential customers search for an insurance broker, compare coverage options, or look for an agent in their area, your business needs to appear at the right moment. We combine technical SEO, local SEO, keyword research, helpful content, authority building, GEO, AEO, and AI search optimization to create a search strategy designed for long-term growth.',
+          "We help insurance brokers build stronger visibility across Google and other search platforms, attract qualified prospects, and turn organic search traffic into quote requests, calls, and new clients. Our SEO for insurance brokers strategy is built around your insurance services, target markets, locations, competition, and business goals.",
+          "When potential customers search for an insurance broker, compare coverage options, or look for an agent in their area, your business needs to appear at the right moment. We combine technical SEO, local SEO, keyword research, helpful content, authority building, GEO, AEO, and AI search optimization to create a search strategy designed for long-term growth.",
           "Whether you are an independent broker, a multi-location brokerage, an insurance agency, or a larger insurance organization, we create an SEO strategy that helps the right people find your business.",
         ],
         actions: [
@@ -7083,7 +8101,7 @@ export const services = [
             "The goal of SEO is not simply to generate more website traffic.",
             "The goal is to help your insurance business become visible when potential customers are searching for the services you provide.",
             "From technical SEO and local search to keyword research, content optimization, GEO, AEO, LLM optimization, and conversion improvements, we create an SEO strategy around your business.",
-            "Whether you are an independent insurance broker, local agency, multi-location brokerage, insurance agent, or larger insurance company, we can build a search strategy designed around your market and growth goals."
+            "Whether you are an independent insurance broker, local agency, multi-location brokerage, insurance agent, or larger insurance company, we can build a search strategy designed around your market and growth goals.",
           ],
           cta: {
             label: "Get Your Free Insurance SEO Audit",
@@ -7092,18 +8110,20 @@ export const services = [
         },
         expertPage: {
           intro: {
-            title: (
-              <>
-                Why Do Insurance Brokers Need SEO?
-              </>
-            ),
+            title: <>Why Do Insurance Brokers Need SEO?</>,
             description: (
               <div className="space-y-2">
                 <p>
-                  Insurance is a competitive industry where customers often research online before contacting a broker or agent. They may compare providers, explore coverage options, research costs, read reviews, and search for a trusted insurance professional in their area.
+                  Insurance is a competitive industry where customers often
+                  research online before contacting a broker or agent. They may
+                  compare providers, explore coverage options, research costs,
+                  read reviews, and search for a trusted insurance professional
+                  in their area.
                 </p>
                 <p>
-                  If your brokerage does not appear when these prospects are searching, competing insurance companies, agencies, and brokers have an opportunity to capture that traffic.
+                  If your brokerage does not appear when these prospects are
+                  searching, competing insurance companies, agencies, and
+                  brokers have an opportunity to capture that traffic.
                 </p>
                 <p>
                   <b>Our SEO strategy targets searches related to:</b>
@@ -7191,7 +8211,13 @@ export const services = [
                     </div>
                   </div>
                 </div>
-                <p className=""><i>Our comprehensive SEO services focus on improving organic visibility, attracting relevant traffic, and creating more opportunities for qualified leads.</i></p>
+                <p className="">
+                  <i>
+                    Our comprehensive SEO services focus on improving organic
+                    visibility, attracting relevant traffic, and creating more
+                    opportunities for qualified leads.
+                  </i>
+                </p>
 
                 <div className="experts-benefits-shell flex w-full justify-center">
                   <div
@@ -7205,78 +8231,108 @@ export const services = [
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/local-seo-services/">Local SEO Services</a>
+                        <a href="/service/seo-services/local-seo-services/">
+                          Local SEO Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/b2b-seo/">B2B SEO Services</a>
+                        <a href="/service/seo-services/b2b-seo/">
+                          B2B SEO Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/enterprise-seo/">Enterprise SEO Services</a>
+                        <a href="/service/seo-services/enterprise-seo/">
+                          Enterprise SEO Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/seo-audit/">SEO Audit Services</a>
+                        <a href="/service/seo-services/seo-audit/">
+                          SEO Audit Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/seo-content-writing/">SEO Content Writing Services</a>
+                        <a href="/service/seo-services/seo-content-writing/">
+                          SEO Content Writing Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/multilingual-seo/">Multilingual SEO Services</a>
+                        <a href="/service/seo-services/multilingual-seo/">
+                          Multilingual SEO Services
+                        </a>
                       </div>
                     </div>
 
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/healthcare-seo/">Healthcare SEO Services</a>
+                        <a href="/service/seo-services/healthcare-seo/">
+                          Healthcare SEO Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/construction-seo/">Construction SEO Services</a>
+                        <a href="/service/seo-services/construction-seo/">
+                          Construction SEO Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/roofing-seo/">Roofing SEO Services</a>
+                        <a href="/service/seo-services/roofing-seo/">
+                          Roofing SEO Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/dental-seo/">Dental SEO Services</a>
+                        <a href="/service/seo-services/dental-seo/">
+                          Dental SEO Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/medical-seo/">Medical SEO Services</a>
+                        <a href="/service/seo-services/medical-seo/">
+                          Medical SEO Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/ecommerce-seo/">E-commerce SEO Services</a>
+                        <a href="/service/seo-services/ecommerce-seo/">
+                          E-commerce SEO Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/shopify-seo/">Shopify SEO Services</a>
+                        <a href="/service/seo-services/shopify-seo/">
+                          Shopify SEO Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/hotel-seo/">Hotel SEO Services</a>
+                        <a href="/service/seo-services/hotel-seo/">
+                          Hotel SEO Services
+                        </a>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/boutique-seo/">Boutique SEO Services</a>
+                        <a href="/service/seo-services/boutique-seo/">
+                          Boutique SEO Services
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -7293,93 +8349,158 @@ export const services = [
               {
                 icon: FaSearch,
                 title: "Technical SEO",
-                description:
+                description: (
                   <>
                     <h3 className="font-bold">What We Do:</h3>
-                    <p>We identify and resolve technical issues affecting crawling, indexing, website performance, mobile usability, architecture, and search visibility.</p>
+                    <p>
+                      We identify and resolve technical issues affecting
+                      crawling, indexing, website performance, mobile usability,
+                      architecture, and search visibility.
+                    </p>
                     <h3 className="font-bold">Main Benefit:</h3>
-                    <p>A technically sound website gives search engines a clearer understanding of your insurance services and helps important pages become easier to discover.</p>
-                  </>,
+                    <p>
+                      A technically sound website gives search engines a clearer
+                      understanding of your insurance services and helps
+                      important pages become easier to discover.
+                    </p>
+                  </>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Local SEO",
-                description:
+                description: (
                   <>
                     <h3 className="font-bold">What We Do:</h3>
-                    <p>We optimize your local search presence around your brokerage locations, service areas, business information, and local customer searches.</p>
+                    <p>
+                      We optimize your local search presence around your
+                      brokerage locations, service areas, business information,
+                      and local customer searches.
+                    </p>
                     <h3 className="font-bold">Main Benefit:</h3>
-                    <p>You become more visible when prospects search for insurance brokers and agents in the areas you serve.</p>
-                  </>,
+                    <p>
+                      You become more visible when prospects search for
+                      insurance brokers and agents in the areas you serve.
+                    </p>
+                  </>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Insurance Keyword Strategy",
-                description:
+                description: (
                   <>
                     <h3 className="font-bold">What We Do:</h3>
-                    <p>We research insurance-related searches based on search intent, location, service type, competition, and potential business value.</p>
+                    <p>
+                      We research insurance-related searches based on search
+                      intent, location, service type, competition, and potential
+                      business value.
+                    </p>
                     <h3 className="font-bold">Main Benefit:</h3>
-                    <p>Your website targets searches that are relevant to the insurance products and customers you actually want to reach.</p>
-                  </>,
+                    <p>
+                      Your website targets searches that are relevant to the
+                      insurance products and customers you actually want to
+                      reach.
+                    </p>
+                  </>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "On-Page SEO",
-                description:
+                description: (
                   <>
                     <h3 className="font-bold">What We Do:</h3>
-                    <p>We optimize page titles, headings, URLs, content, images, internal links, metadata, and page structure.</p>
+                    <p>
+                      We optimize page titles, headings, URLs, content, images,
+                      internal links, metadata, and page structure.
+                    </p>
                     <h3 className="font-bold">Main Benefit:</h3>
-                    <p>Your pages become more relevant to both search engines and people looking for insurance services.</p>
-                  </>,
+                    <p>
+                      Your pages become more relevant to both search engines and
+                      people looking for insurance services.
+                    </p>
+                  </>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Insurance Content Optimization",
-                description:
+                description: (
                   <>
                     <h3 className="font-bold">What We Do:</h3>
-                    <p>We create and optimize useful content around insurance services, customer questions, coverage topics, and search intent.</p>
+                    <p>
+                      We create and optimize useful content around insurance
+                      services, customer questions, coverage topics, and search
+                      intent.
+                    </p>
                     <h3 className="font-bold">Main Benefit:</h3>
-                    <p>Helpful content builds topical relevance while giving potential customers the information they need before contacting your brokerage.</p>
-                  </>,
+                    <p>
+                      Helpful content builds topical relevance while giving
+                      potential customers the information they need before
+                      contacting your brokerage.
+                    </p>
+                  </>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Authority Building",
-                description:
+                description: (
                   <>
                     <h3 className="font-bold">What We Do:</h3>
-                    <p>We develop relevant authority and trust signals that support your website's long-term organic visibility.</p>
+                    <p>
+                      We develop relevant authority and trust signals that
+                      support your website's long-term organic visibility.
+                    </p>
                     <h3 className="font-bold">Main Benefit:</h3>
-                    <p>A stronger online presence can help your insurance business compete for more valuable searches.</p>
-                  </>,
+                    <p>
+                      A stronger online presence can help your insurance
+                      business compete for more valuable searches.
+                    </p>
+                  </>
+                ),
                 href: "",
               },
               {
                 icon: FaSearch,
                 title: "Conversion SEO",
-                description:
+                description: (
                   <>
                     <h3 className="font-bold">What We Do:</h3>
-                    <p>We improve calls-to-action, contact forms, quote-request journeys, service pages, and user experience.</p>
+                    <p>
+                      We improve calls-to-action, contact forms, quote-request
+                      journeys, service pages, and user experience.
+                    </p>
                     <h3 className="font-bold">Main Benefit:</h3>
-                    <p>More of the traffic reaching your website has an opportunity to become a call, inquiry, quote request, or customer.</p>
-                  </>,
+                    <p>
+                      More of the traffic reaching your website has an
+                      opportunity to become a call, inquiry, quote request, or
+                      customer.
+                    </p>
+                  </>
+                ),
                 href: "",
               },
             ],
           },
           subrelatedServices: {
             title: "Technical SEO for Insurance Websites",
-            description:
-              <>A professional insurance website needs more than strong content. Search engines must be able to crawl, understand, index, and navigate the website properly. <br /><i><b>Our technical SEO process can include:</b></i></>,
+            description: (
+              <>
+                A professional insurance website needs more than strong content.
+                Search engines must be able to crawl, understand, index, and
+                navigate the website properly. <br />
+                <i>
+                  <b>Our technical SEO process can include:</b>
+                </i>
+              </>
+            ),
             exploreLabel: "Explore service",
             items: [
               {
@@ -7483,8 +8604,16 @@ export const services = [
               {
                 // icon: FaSearch,
                 title: "Website Architecture",
-                description:
-                  <>Building a scalable structure that allows insurance services, locations, content, and supporting pages to work together. <br />The goal is to make your most important insurance pages easy for search engines and customers to find, understand, and navigate.</>,
+                description: (
+                  <>
+                    Building a scalable structure that allows insurance
+                    services, locations, content, and supporting pages to work
+                    together. <br />
+                    The goal is to make your most important insurance pages easy
+                    for search engines and customers to find, understand, and
+                    navigate.
+                  </>
+                ),
                 // href: "/service/seo-services/wordpress-seo/ ",
               },
             ],
@@ -7494,14 +8623,15 @@ export const services = [
             description: (
               <div className="space-y-2">
                 <p>
-                  Insurance is often a location-driven service. Customers may prefer a broker who understands their local market and is available to serve them in their city or surrounding area.
+                  Insurance is often a location-driven service. Customers may
+                  prefer a broker who understands their local market and is
+                  available to serve them in their city or surrounding area.
                 </p>
                 <p>
-                  That makes local SEO an important part of an effective strategy for insurance brokers.
+                  That makes local SEO an important part of an effective
+                  strategy for insurance brokers.
                 </p>
-                <p>
-                  We optimize your online presence for searches such as:
-                </p>
+                <p>We optimize your online presence for searches such as:</p>
                 <ul className="list-disc list-outside">
                   <li>Insurance brokers near me</li>
                   <li>Insurance brokers in [City]</li>
@@ -7514,7 +8644,9 @@ export const services = [
                   <li>Commercial insurance broker in [city]</li>
                 </ul>
 
-                <p className="font-semibold mt-4">Our local strategy can include:</p>
+                <p className="font-semibold mt-4">
+                  Our local strategy can include:
+                </p>
                 <ul className="list-disc list-outside">
                   <li>Google Business Profile optimization</li>
                   <li>Local keyword targeting</li>
@@ -7529,7 +8661,11 @@ export const services = [
                   <li>Location-specific service pages</li>
                 </ul>
 
-                <p className="mt-4">We do not focus on ranking an insurance business everywhere. We focus on the locations and markets that can generate meaningful business opportunities.</p>
+                <p className="mt-4">
+                  We do not focus on ranking an insurance business everywhere.
+                  We focus on the locations and markets that can generate
+                  meaningful business opportunities.
+                </p>
               </div>
             ),
             stats: [
@@ -7579,7 +8715,15 @@ export const services = [
         localSEOserviceData: {
           // eyebrow: "The Foundation of Local Growth",
           title: "SEO for Insurance Agents and Agencies",
-          description: <>Insurance agents and agencies often compete for many of the same searches as larger insurance companies. A focused SEO strategy can help smaller and independent businesses establish visibility around their services, expertise, and local markets. <br /><b>Our strategy can support:</b></>,
+          description: (
+            <>
+              Insurance agents and agencies often compete for many of the same
+              searches as larger insurance companies. A focused SEO strategy can
+              help smaller and independent businesses establish visibility
+              around their services, expertise, and local markets. <br />
+              <b>Our strategy can support:</b>
+            </>
+          ),
           services: [
             {
               id: "keyword-strategy",
@@ -7590,10 +8734,7 @@ export const services = [
                 />
               ),
               title: "Independent insurance agents",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "full-seo-audit",
@@ -7604,10 +8745,7 @@ export const services = [
                 />
               ),
               title: "Insurance agencies",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "on-page-seo",
@@ -7618,10 +8756,7 @@ export const services = [
                 />
               ),
               title: "Insurance brokers",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "technical-seo",
@@ -7632,10 +8767,7 @@ export const services = [
                 />
               ),
               title: "Multi-agent insurance offices",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "authority-link-growth",
@@ -7646,10 +8778,7 @@ export const services = [
                 />
               ),
               title: "Local insurance firms",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "content-copywriting",
@@ -7660,10 +8789,7 @@ export const services = [
                 />
               ),
               title: "Specialty insurance agencies",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
             {
               id: "regional-insurance-businesses",
@@ -7674,158 +8800,157 @@ export const services = [
                 />
               ),
               title: "Regional insurance businesses",
-              description: (
-                <>
-                </>
-              ),
+              description: <></>,
             },
           ],
           footnote: (
-            <>We build pages around specific services, locations, customer questions, and commercial search terms rather than trying to make one page rank for everything.
-            <br />
-            This approach allows an insurance website to develop stronger topical relevance while creating dedicated opportunities for different customer segments.
+            <>
+              We build pages around specific services, locations, customer
+              questions, and commercial search terms rather than trying to make
+              one page rank for everything.
+              <br />
+              This approach allows an insurance website to develop stronger
+              topical relevance while creating dedicated opportunities for
+              different customer segments.
             </>
           ),
         },
         aiDiscoveryData: {
           eyebrow: "",
-          title: (
+          title: <>SEO for Insurance Companies</>,
+          description: (
             <>
-              SEO for Insurance Companies
+              Large insurance companies and established organizations often have
+              hundreds or thousands of pages covering products, locations,
+              policies, resources, and customer needs. <br /> That scale creates
+              opportunities but it can also create SEO challenges. <br />{" "}
+              <b>
+                <i>Our SEO for insurance companies strategy can address:</i>
+              </b>
             </>
           ),
-          description:
-            <>Large insurance companies and established organizations often have hundreds or thousands of pages covering products, locations, policies, resources, and customer needs. <br /> That scale creates opportunities but it can also create SEO challenges. <br /> <b><i>Our SEO for insurance companies strategy can address:</i></b></>,
           strategies: [
             {
               id: "traditional-seo",
               title: "Large website architecture",
-              description:
-                "",
+              description: "",
             },
             {
               id: "local-seo",
               title: "Product and service pages",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization",
               title: "Location pages",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization1",
               title: "Content scalability",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization2",
               title: "Internal linking",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization3",
               title: "Technical SEO",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization4",
               title: "Duplicate content",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization5",
               title: "Indexation management",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization6",
               title: "Search intent",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization7",
               title: "Brand visibility",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization8",
               title: "Authority building",
-              description:
-                "",
+              description: "",
             },
             {
               id: "ai-search-optimization9",
               title: "Conversion optimization",
-              description:
-                "",
+              description: "",
             },
           ],
-          footnote: <>We create an SEO framework that allows different sections of your website to support one another while maintaining clear relevance for customers and search engines.</>,
+          footnote: (
+            <>
+              We create an SEO framework that allows different sections of your
+              website to support one another while maintaining clear relevance
+              for customers and search engines.
+            </>
+          ),
         },
 
         tab: {
-          title:
-            "SEO for Insurance Websites",
-          description: <>Your website is the foundation of your organic search strategy. <br /> A strong insurance website should make it easy for visitors to understand:</>,
+          title: "SEO for Insurance Websites",
+          description: (
+            <>
+              Your website is the foundation of your organic search strategy.{" "}
+              <br /> A strong insurance website should make it easy for visitors
+              to understand:
+            </>
+          ),
           steps: [
             {
               id: "local-seo-audit",
               tab_name: "Who you are",
               heading: "Who you are",
-              description:
-                "",
+              description: "",
             },
             {
               id: "google-business-optimization",
               tab_name: "What types of insurance you provide",
               heading: "What types of insurance you provide",
-              description:
-                "",
+              description: "",
             },
             {
               id: "local-keyword-research",
               tab_name: "Who you serve",
               heading: "Who you serve",
-              description:
-                "",
+              description: "",
             },
             {
               id: "on-page-local-seo",
               tab_name: "Where you operate",
               heading: "Where you operate",
-              description:
-                "",
+              description: "",
             },
             {
               id: "citation-building",
               tab_name: "What makes your business different",
               heading: "What makes your business different",
-              description:
-                "",
+              description: "",
             },
             {
               id: "performance-tracking",
               tab_name: "How your process works",
               heading: "How your process works",
-              description:
-                "",
+              description: "",
             },
             {
               id: "reporting-testing-growth",
               tab_name: "What customers should do next",
               heading: "What customers should do next",
-              description:
-                "",
+              description: "",
             },
             {
               id: "reporting-testing-growth1",
@@ -7838,7 +8963,7 @@ export const services = [
               id: "reporting-testing-growth2",
               tab_name: "Important pages may include:",
               heading: "Important pages may include:",
-              description:
+              description: (
                 <>
                   <ul className="grid list-outside list-disc gap-x-10 gap-y-2 pl-5 sm:grid-cols-2 lg:grid-cols-3">
                     <li>Insurance service pages</li>
@@ -7851,16 +8976,26 @@ export const services = [
                     <li>About pages</li>
                     <li>Contact and quote pages</li>
                   </ul>
-                  <p className="mt-5 border-t border-gray-200 pt-4 italic text-gray-600">Every important page should have a clear purpose and contribute to the broader website structure.</p>
-                </>,
+                  <p className="mt-5 border-t border-gray-200 pt-4 italic text-gray-600">
+                    Every important page should have a clear purpose and
+                    contribute to the broader website structure.
+                  </p>
+                </>
+              ),
             },
             {
               id: "reporting-testing-growth3",
               tab_name: "Insurance Keyword Research and Search Intent",
               heading: "Insurance Keyword Research and Search Intent",
-              description:
+              description: (
                 <>
-                  <p className="mt-5">We do not choose insurance keywords simply because they have high search volume.<br />We look for searches that demonstrate different levels of customer intent.</p>
+                  <p className="mt-5">
+                    We do not choose insurance keywords simply because they have
+                    high search volume.
+                    <br />
+                    We look for searches that demonstrate different levels of
+                    customer intent.
+                  </p>
 
                   <div className="mt-5 w-full overflow-x-auto">
                     <table className="w-full min-w-[36rem] border-collapse text-left text-sm text-gray-700">
@@ -7946,16 +9081,28 @@ export const services = [
                     </table>
                   </div>
 
-                  <p className="mt-5">This allows us to build a website that supports customers throughout their research journey from their first question to the moment they are ready to request a quote or speak with an insurance professional.</p>
-                </>,
+                  <p className="mt-5">
+                    This allows us to build a website that supports customers
+                    throughout their research journey from their first question
+                    to the moment they are ready to request a quote or speak
+                    with an insurance professional.
+                  </p>
+                </>
+              ),
             },
             {
               id: "reporting-testing-growth4",
-              tab_name: "Insurance Content That Answers Real Customer Questions",
+              tab_name:
+                "Insurance Content That Answers Real Customer Questions",
               heading: "Insurance Content That Answers Real Customer Questions",
-              description:
+              description: (
                 <>
-                  <p className="mt-5">Strong insurance SEO requires content that answers the questions customers actually ask.<br />We develop content around topics such as:</p>
+                  <p className="mt-5">
+                    Strong insurance SEO requires content that answers the
+                    questions customers actually ask.
+                    <br />
+                    We develop content around topics such as:
+                  </p>
 
                   <div className="mt-5 w-full overflow-x-auto">
                     <dl className="max-w-4xl space-y-6 h-25">
@@ -7964,7 +9111,9 @@ export const services = [
                           How much does insurance cost?
                         </dt>
                         <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
-                          Explain the factors that influence premiums and help customers understand what may affect their coverage costs.
+                          Explain the factors that influence premiums and help
+                          customers understand what may affect their coverage
+                          costs.
                         </dd>
                       </div>
                       <div>
@@ -7972,7 +9121,9 @@ export const services = [
                           What type of insurance do I need?
                         </dt>
                         <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
-                          Create clear explanations that help customers understand different coverage options based on their situation.
+                          Create clear explanations that help customers
+                          understand different coverage options based on their
+                          situation.
                         </dd>
                       </div>
                       <div>
@@ -7980,15 +9131,19 @@ export const services = [
                           What does an insurance broker do?
                         </dt>
                         <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
-                          Explain the role of a broker and how working with one can help customers compare and understand insurance options.
+                          Explain the role of a broker and how working with one
+                          can help customers compare and understand insurance
+                          options.
                         </dd>
                       </div>
                       <div>
                         <dt className="text-base font-semibold leading-snug text-gray-900 sm:text-lg">
-                          What is the difference between an insurance agent and a broker?
+                          What is the difference between an insurance agent and
+                          a broker?
                         </dt>
                         <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
-                          Answer an important comparison-based search while demonstrating industry expertise.
+                          Answer an important comparison-based search while
+                          demonstrating industry expertise.
                         </dd>
                       </div>
                       <div>
@@ -7996,7 +9151,8 @@ export const services = [
                           How do I choose an insurance broker?
                         </dt>
                         <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
-                          Provide practical guidance around experience, coverage options, service, reputation, and local expertise.
+                          Provide practical guidance around experience, coverage
+                          options, service, reputation, and local expertise.
                         </dd>
                       </div>
                       <div>
@@ -8004,7 +9160,8 @@ export const services = [
                           How does a life insurance policy work?
                         </dt>
                         <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
-                          Create accessible educational content for customers researching life insurance.
+                          Create accessible educational content for customers
+                          researching life insurance.
                         </dd>
                       </div>
                       <div>
@@ -8012,7 +9169,8 @@ export const services = [
                           What does commercial insurance cover?
                         </dt>
                         <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
-                          Answer questions from business owners researching insurance for their organizations.
+                          Answer questions from business owners researching
+                          insurance for their organizations.
                         </dd>
                       </div>
                       <div>
@@ -8020,22 +9178,49 @@ export const services = [
                           How often should I review my insurance coverage?
                         </dt>
                         <dd className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
-                          Give customers useful information that encourages them to evaluate their current policies and speak with a qualified professional. <br />Our content strategy prioritizes people first. We use natural language, useful information, relevant keywords, clear organization, and strong internal linking instead of keyword stuffing.
+                          Give customers useful information that encourages them
+                          to evaluate their current policies and speak with a
+                          qualified professional. <br />
+                          Our content strategy prioritizes people first. We use
+                          natural language, useful information, relevant
+                          keywords, clear organization, and strong internal
+                          linking instead of keyword stuffing.
                         </dd>
                       </div>
                     </dl>
                   </div>
 
-                  <p className="mt-5">This allows us to build a website that supports customers throughout their research journey from their first question to the moment they are ready to request a quote or speak with an insurance professional.</p>
-                </>,
+                  <p className="mt-5">
+                    This allows us to build a website that supports customers
+                    throughout their research journey from their first question
+                    to the moment they are ready to request a quote or speak
+                    with an insurance professional.
+                  </p>
+                </>
+              ),
             },
             {
               id: "reporting-testing-growth5",
               tab_name: "GEO Optimization for Insurance Businesses",
               heading: "GEO Optimization for Insurance Businesses",
-              description:
+              description: (
                 <>
-                  <p className="mt-5">Search is changing beyond traditional Google results. Customers increasingly use AI-powered platforms and other search experiences to research businesses, compare services, and find answers. <br />Generative Engine Optimization (GEO) helps organize business information so modern search systems can better understand what an insurance business does and who it serves. <br /><br /><b><i>We structure your website around clear information about:</i></b></p>
+                  <p className="mt-5">
+                    Search is changing beyond traditional Google results.
+                    Customers increasingly use AI-powered platforms and other
+                    search experiences to research businesses, compare services,
+                    and find answers. <br />
+                    Generative Engine Optimization (GEO) helps organize business
+                    information so modern search systems can better understand
+                    what an insurance business does and who it serves. <br />
+                    <br />
+                    <b>
+                      <i>
+                        We structure your website around clear information
+                        about:
+                      </i>
+                    </b>
+                  </p>
 
                   <div className="mt-1 w-full overflow-x-auto">
                     <ul className="list-disc pl-5">
@@ -8050,34 +9235,67 @@ export const services = [
                     </ul>
                   </div>
 
-                  <p className="mt-5">Clear and consistent information gives search systems stronger context about your business.</p>
-                </>,
+                  <p className="mt-5">
+                    Clear and consistent information gives search systems
+                    stronger context about your business.
+                  </p>
+                </>
+              ),
             },
             {
               id: "reporting-testing-growth6",
               tab_name: "AEO for Insurance Businesses",
               heading: "AEO for Insurance Businesses",
-              description:
+              description: (
                 <>
-                  <p className="mt-5">Answer Engine Optimization focuses on providing direct answers to questions people ask.</p>
-                  <p className="mt-2">Insurance customers often have complex questions before they are ready to speak with a broker. Your website should answer those questions clearly.</p>
+                  <p className="mt-5">
+                    Answer Engine Optimization focuses on providing direct
+                    answers to questions people ask.
+                  </p>
+                  <p className="mt-2">
+                    Insurance customers often have complex questions before they
+                    are ready to speak with a broker. Your website should answer
+                    those questions clearly.
+                  </p>
                   <p className="mt-2">For example:</p>
 
-                  <h4 className="text-lg font-bold mt-4">What is an insurance broker?</h4>
-                  <p>An insurance broker helps customers evaluate insurance options and find coverage that fits their needs. Depending on the type of insurance and market, a broker may work with multiple insurance providers to help customers compare available options.</p>
+                  <h4 className="text-lg font-bold mt-4">
+                    What is an insurance broker?
+                  </h4>
+                  <p>
+                    An insurance broker helps customers evaluate insurance
+                    options and find coverage that fits their needs. Depending
+                    on the type of insurance and market, a broker may work with
+                    multiple insurance providers to help customers compare
+                    available options.
+                  </p>
 
-                  <p className="mt-1">Answer-focused content can help your website become more useful to customers while making important information easier for search engines and answer engines to process.</p>
-                </>,
+                  <p className="mt-1">
+                    Answer-focused content can help your website become more
+                    useful to customers while making important information
+                    easier for search engines and answer engines to process.
+                  </p>
+                </>
+              ),
             },
             {
               id: "reporting-testing-growth7",
               tab_name: "LLMO and AI Search Optimization for Insurance",
               heading: "LLMO and AI Search Optimization for Insurance",
-              description:
+              description: (
                 <>
-                  <p className="mt-5">We also consider Large Language Model Optimization when developing an insurance SEO strategy.</p>
-                  <p className="">AI-powered search systems need clear information to understand your company, services, locations, expertise, and areas of specialization.</p>
-                  <p className="mt-1"><b>We strengthen these signals through:</b></p>
+                  <p className="mt-5">
+                    We also consider Large Language Model Optimization when
+                    developing an insurance SEO strategy.
+                  </p>
+                  <p className="">
+                    AI-powered search systems need clear information to
+                    understand your company, services, locations, expertise, and
+                    areas of specialization.
+                  </p>
+                  <p className="mt-1">
+                    <b>We strengthen these signals through:</b>
+                  </p>
 
                   <ul className="list-disc pl-5 mt-2">
                     <li>Clear insurance service descriptions</li>
@@ -8093,18 +9311,30 @@ export const services = [
                   </ul>
 
                   <p className="mt-1">We do not create content only for AI.</p>
-                  <p className="">We create useful information for real customers and structure it so modern search systems can understand the information more effectively.</p>
-                </>,
+                  <p className="">
+                    We create useful information for real customers and
+                    structure it so modern search systems can understand the
+                    information more effectively.
+                  </p>
+                </>
+              ),
             },
             {
               id: "reporting-testing-growth8",
               tab_name: "Insurance Service Pages Built to Convert",
               heading: "Insurance Service Pages Built to Convert",
-              description:
+              description: (
                 <>
-                  <p className="mt-5">Ranking is only one part of insurance SEO.</p>
-                  <p className="">Your website also needs to turn visitors into inquiries, quote requests, and conversations.</p>
-                  <p className="mt-1"><b>We can optimize dedicated pages for services such as:</b></p>
+                  <p className="mt-5">
+                    Ranking is only one part of insurance SEO.
+                  </p>
+                  <p className="">
+                    Your website also needs to turn visitors into inquiries,
+                    quote requests, and conversations.
+                  </p>
+                  <p className="mt-1">
+                    <b>We can optimize dedicated pages for services such as:</b>
+                  </p>
 
                   <ul className="list-disc pl-5 mt-2">
                     <li>Life insurance</li>
@@ -8119,7 +9349,9 @@ export const services = [
                     <li>Insurance claims support</li>
                   </ul>
 
-                  <p className="mt-4"><b>Each service page should clearly explain:</b></p>
+                  <p className="mt-4">
+                    <b>Each service page should clearly explain:</b>
+                  </p>
                   <ul className="list-disc pl-5 mt-2">
                     <li>What the insurance service is</li>
                     <li>Who may need it</li>
@@ -8130,17 +9362,28 @@ export const services = [
                     <li>Why customers should choose your brokerage</li>
                     <li>What the next step should be</li>
                   </ul>
-                  <p className="mt-4">Clear service pages help visitors quickly understand whether your business can meet their needs.</p>
-                </>,
+                  <p className="mt-4">
+                    Clear service pages help visitors quickly understand whether
+                    your business can meet their needs.
+                  </p>
+                </>
+              ),
             },
             {
               id: "reporting-testing-growth9",
               tab_name: "SEO for Commercial and B2B Insurance",
               heading: "SEO for Commercial and B2B Insurance",
-              description:
+              description: (
                 <>
-                  <p className="mt-5">Insurance businesses serving companies, property owners, contractors, manufacturers, professional firms, and other organizations often need a different SEO strategy from businesses focused primarily on consumers.</p>
-                  <p className="mt-4"><b>B2B insurance searches may involve:</b></p>
+                  <p className="mt-5">
+                    Insurance businesses serving companies, property owners,
+                    contractors, manufacturers, professional firms, and other
+                    organizations often need a different SEO strategy from
+                    businesses focused primarily on consumers.
+                  </p>
+                  <p className="mt-4">
+                    <b>B2B insurance searches may involve:</b>
+                  </p>
 
                   <ul className="list-disc pl-5 mt-2">
                     <li>Longer research cycles</li>
@@ -8151,18 +9394,32 @@ export const services = [
                     <li>Specialized insurance terminology</li>
                   </ul>
 
-                  <p className="mt-4">Your website should therefore provide content that addresses the needs of business decision-makers.</p>
-                </>,
+                  <p className="mt-4">
+                    Your website should therefore provide content that addresses
+                    the needs of business decision-makers.
+                  </p>
+                </>
+              ),
             },
             {
               id: "reporting-testing-growth10",
               tab_name: "SEO for Multi-Location Insurance Brokerages",
               heading: "SEO for Multi-Location Insurance Brokerages",
-              description:
+              description: (
                 <>
-                  <p className="mt-5">Multi-location insurance brokerages require a scalable SEO structure.</p>
-                  <p className="mt-1">Creating a large number of location pages without a clear strategy can lead to thin or repetitive content. Instead, each location should provide genuinely useful information about the market, services, customers, and local presence.</p>
-                  <p className="mt-4"><b>A multi-location insurance SEO strategy may include:</b></p>
+                  <p className="mt-5">
+                    Multi-location insurance brokerages require a scalable SEO
+                    structure.
+                  </p>
+                  <p className="mt-1">
+                    Creating a large number of location pages without a clear
+                    strategy can lead to thin or repetitive content. Instead,
+                    each location should provide genuinely useful information
+                    about the market, services, customers, and local presence.
+                  </p>
+                  <p className="mt-4">
+                    <b>A multi-location insurance SEO strategy may include:</b>
+                  </p>
 
                   <ul className="list-disc pl-5 mt-2">
                     <li>Individual location pages</li>
@@ -8176,8 +9433,13 @@ export const services = [
                     <li>Centralized reporting</li>
                   </ul>
 
-                  <p className="mt-4">The objective is to build visibility across your target markets without sacrificing content quality or website structure.</p>
-                </>,
+                  <p className="mt-4">
+                    The objective is to build visibility across your target
+                    markets without sacrificing content quality or website
+                    structure.
+                  </p>
+                </>
+              ),
             },
           ],
         },
@@ -8185,10 +9447,7 @@ export const services = [
         successStoriesData: {
           eyebrow: "",
           title: <>Our Insurance SEO Process</>,
-          description: (
-            <>
-            </>
-          ),
+          description: <></>,
           stories: [
             {
               id: "cleaning-business",
@@ -8208,7 +9467,7 @@ export const services = [
               },
               title: "Market Research",
               description:
-                'We analyze competitors, insurance services, locations, customer behavior, and search opportunities.',
+                "We analyze competitors, insurance services, locations, customer behavior, and search opportunities.",
             },
             {
               id: "dental-clinic",
@@ -8305,8 +9564,7 @@ export const services = [
         faqTitle: "Frequently Asked Questions",
         faqs: [
           {
-            question:
-              "What is SEO for insurance brokers?",
+            question: "What is SEO for insurance brokers?",
             answer:
               "SEO for insurance brokers is the process of improving a brokerage website's visibility in search engines for relevant insurance, service, location, and customer-related searches. The goal is to attract qualified organic traffic and create more opportunities for calls, inquiries, and quote requests.",
           },
@@ -8321,8 +9579,7 @@ export const services = [
               "Yes. A well-planned SEO strategy can help insurance agents appear for relevant searches made by potential customers. When optimized pages provide useful information and clear next steps, organic search traffic can contribute to lead generation.",
           },
           {
-            question:
-              "Does local SEO work for insurance brokers?",
+            question: "Does local SEO work for insurance brokers?",
             answer:
               "Yes. Local SEO can help brokers become more visible for searches involving specific cities, neighborhoods, and service areas. It can include Google Business Profile optimization, local content, location pages, reviews, and other local search signals.",
           },
@@ -8333,14 +9590,12 @@ export const services = [
               "Yes. SEO strategies can be developed for independent agents, insurance agencies, brokers, regional businesses, and larger insurance companies. The strategy depends on the organization's size, services, locations, competition, and business objectives.",
           },
           {
-            question:
-              "How long does insurance SEO take to work?",
+            question: "How long does insurance SEO take to work?",
             answer:
               "SEO is a long-term strategy. Results depend on your website's current condition, competition, target locations, authority, content, and existing online presence. Some improvements may appear within a few months, while competitive markets generally require consistent optimization.",
           },
           {
-            question:
-              "Can SEO help a multi-location insurance brokerage?",
+            question: "Can SEO help a multi-location insurance brokerage?",
             answer:
               "Yes. Multi-location businesses can benefit from a scalable structure that combines location pages, local SEO, service pages, internal linking, technical SEO, and centralized performance tracking.",
           },
@@ -8351,14 +9606,12 @@ export const services = [
               "It depends on the business model. A local broker primarily serving specific cities may benefit heavily from local SEO, while a larger insurance organization serving customers across multiple markets may require a broader national or enterprise strategy.",
           },
           {
-            question:
-              "Can insurance SEO help with AI search?",
+            question: "Can insurance SEO help with AI search?",
             answer:
               "Yes. Clear business information, useful content, strong topical relevance, structured pages, internal linking, FAQs, and authority signals can help modern search systems better understand your business. However, no SEO agency can guarantee that an AI platform will mention or recommend a particular company.",
           },
           {
-            question:
-              "Should insurance companies use SEO or paid advertising?",
+            question: "Should insurance companies use SEO or paid advertising?",
             answer:
               "Both can have a role. Paid advertising can provide faster visibility, while SEO focuses on building long-term organic visibility. The right mix depends on your market, competition, business goals, and budget.",
           },
@@ -8389,47 +9642,50 @@ export const services = [
         //   ],
         // },
         seoComparisonData: {
-          title:
-            "Why Choose Our SEO Services for Insurance?",
-          description: (
-            <>
-            </>
-          ),
+          title: "Why Choose Our SEO Services for Insurance?",
+          description: <></>,
           comparisons: [
             {
               id: "traditional-seo",
               title: "Insurance Focused Strategy",
-              subtitle: "We build your SEO strategy around your insurance services, customers, locations, competition, and business objectives.",
+              subtitle:
+                "We build your SEO strategy around your insurance services, customers, locations, competition, and business objectives.",
             },
             {
               id: "local-seo",
               title: "Human-Focused Content",
-              subtitle: "We avoid unnecessary jargon and keyword stuffing. Our content is designed to answer real customer questions clearly.",
+              subtitle:
+                "We avoid unnecessary jargon and keyword stuffing. Our content is designed to answer real customer questions clearly.",
             },
             {
               id: "ai-seo",
               title: "Local Search Expertise",
-              subtitle: "We help insurance brokers, agents, and agencies improve visibility in the markets where they actually operate.",
+              subtitle:
+                "We help insurance brokers, agents, and agencies improve visibility in the markets where they actually operate.",
             },
             {
               id: "ai-seo1",
               title: "Modern Search Strategy",
-              subtitle: "Our approach considers traditional SEO, local search, GEO, AEO, AI search, and LLM-based discovery.",
+              subtitle:
+                "Our approach considers traditional SEO, local search, GEO, AEO, AI search, and LLM-based discovery.",
             },
             {
               id: "ai-seo2",
               title: "Scalable SEO",
-              subtitle: "Whether you operate from one location or manage multiple insurance offices, we build a structure that can grow with your business.",
+              subtitle:
+                "Whether you operate from one location or manage multiple insurance offices, we build a structure that can grow with your business.",
             },
             {
               id: "ai-seo3",
               title: "Data-Driven Decisions",
-              subtitle: "We monitor important SEO and business signals and use the data to improve the strategy over time.",
+              subtitle:
+                "We monitor important SEO and business signals and use the data to improve the strategy over time.",
             },
             {
               id: "ai-seo4",
               title: "Clear Reporting",
-              subtitle: "You should understand what is being optimized, what is improving, and where new opportunities exist.",
+              subtitle:
+                "You should understand what is being optimized, what is improving, and where new opportunities exist.",
             },
           ],
         },

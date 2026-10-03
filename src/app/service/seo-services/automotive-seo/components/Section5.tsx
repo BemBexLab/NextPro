@@ -7,18 +7,21 @@ const Section5 = () => {
       <div className="relative mx-auto w-full max-w-none">
         <div className="relative isolate overflow-hidden border-b border-blue-900/20 bg-gradient-to-br from-[#061f59] via-[#073b91] to-[#0b63b8] px-5 py-9 shadow-lg shadow-blue-950/10 sm:px-8 sm:py-12 lg:px-16 lg:py-14">
           <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full border border-white/10 bg-white/5 blur-sm" />
-          <h2 className="relative max-w-4xl text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl">
+          <h2 className="relative max-w-4xl text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl mx-auto text-center">
             Automotive Local SEO for Nearby Customers
           </h2>
-          <p className="relative mt-4 max-w-3xl text-base leading-7 text-blue-100 sm:text-lg">
-            Local visibility is essential for automotive businesses that depend on customers in specific cities and service areas.
+          <p className="relative mt-4 max-w-3xl text-base leading-7 text-blue-100 sm:text-lg  mx-auto text-center">
+            Local visibility is essential for automotive businesses that depend
+            on customers in specific cities and service areas.
           </p>
         </div>
 
         <div className="w-full space-y-10 bg-[#f7faff] px-5 py-10 sm:px-8 sm:py-14 lg:space-y-14 lg:px-16 lg:py-16">
-          <div className="max-w-5xl">
-            <p className="border-l-2 border-blue-400 pl-5 text-base leading-8 text-slate-700 sm:text-lg">
-              Our automotive local SEO agency strategies help dealerships, mechanics, repair shops, body shops, and other automotive businesses improve their visibility for location-based searches.
+          <div className="max-w-5xl mx-auto">
+            <p className="border-l-2 border-blue-400 pl-5 text-base leading-8 text-slate-700 sm:text-lg text-center">
+              Our automotive local SEO agency strategies help dealerships,
+              mechanics, repair shops, body shops, and other automotive
+              businesses improve their visibility for location-based searches.
             </p>
           </div>
 
@@ -26,7 +29,7 @@ const Section5 = () => {
             <p className="mb-6 text-lg font-bold leading-7 tracking-tight text-[#072d7f] sm:text-xl">
               As an automotive local SEO company, we can optimize:
             </p>
-            <ul className="grid gap-x-12 gap-y-1 border-y border-slate-200 py-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            <ul className="grid gap-x-12 gap-y-1 border-t border-slate-200 py-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
               {[
                 "Google Business Profile",
                 "Local landing pages",
@@ -52,12 +55,14 @@ const Section5 = () => {
             </ul>
           </div>
 
-          <div className="max-w-5xl space-y-5 border-t border-blue-200 pt-8">
+          <div className="max-w-5xl mx-auto space-y-5 border-t border-blue-200 pt-8 text-center">
             <p className="text-base leading-8 text-slate-700 sm:text-lg">
-              Our automotive local SEO service connects your business with relevant searches in the markets you serve.
+              Our automotive local SEO service connects your business with
+              relevant searches in the markets you serve.
             </p>
             <p className="text-base leading-8 text-slate-700 sm:text-lg">
-              We also provide local SEO for automotive businesses strategies designed for single-location and multi-location companies.
+              We also provide local SEO for automotive businesses strategies
+              designed for single-location and multi-location companies.
             </p>
           </div>
         </div>

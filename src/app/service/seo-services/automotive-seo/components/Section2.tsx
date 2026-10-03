@@ -8,10 +8,10 @@ const Section2 = () => {
 
       <div className="relative mx-auto w-full max-w-none">
         <div className="w-full">
-          <div className="relative isolate overflow-hidden border-b border-blue-900/20 bg-gradient-to-br from-[#061f59] via-[#073b91] to-[#0b63b8] px-5 py-9 shadow-lg shadow-blue-950/10 sm:px-8 sm:py-12 lg:px-16 lg:py-14">
+          <div className="relative isolate flex items-center justify-center overflow-hidden border-b border-blue-900/20 bg-gradient-to-br from-[#061f59] via-[#073b91] to-[#0b63b8] px-5 py-9 text-center shadow-lg shadow-blue-950/10 sm:px-8 sm:py-12 lg:px-16 lg:py-14">
             <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full border border-white/10 bg-white/5 blur-sm" />
             <div className="pointer-events-none absolute bottom-0 right-24 h-24 w-24 rounded-full bg-cyan-300/20 blur-2xl" />
-            <h2 className="relative max-w-4xl text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
+            <h2 className="relative mx-auto max-w-4xl text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
               Specialized SEO for the Automotive Industry
             </h2>
           </div>
@@ -26,7 +26,7 @@ const Section2 = () => {
               </p>
             </div>
 
-            <p className="max-w-6xl border-l-4 border-blue-600 bg-white/80 px-6 py-5 text-base font-semibold leading-8 text-slate-800 shadow-sm ring-1 ring-blue-100 sm:text-lg">
+            <p className="mx-auto max-w-6xl border-l-4 border-blue-600 bg-white/80 px-6 py-5 text-center text-base font-semibold leading-8 text-slate-800 shadow-sm ring-1 ring-blue-100 sm:text-lg">
               Our automotive SEO services are built around your business model, target locations, services, competitors, and customers.
             </p>
 
@@ -62,7 +62,7 @@ const Section2 = () => {
               </ul>
             </div>
 
-            <p className="max-w-6xl border-t border-blue-200 pt-7 text-base leading-8 text-slate-700 sm:text-lg">
+            <p className="max-w-full text-center text-base leading-8 text-slate-700 sm:text-lg">
               If you need broader local visibility, our{" "}
               <Link
                 href="/service/seo-services/local-seo-services/"

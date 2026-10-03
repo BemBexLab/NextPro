@@ -8,19 +8,19 @@ const CaseStudy: React.FC = () => {
 
   const images = [
     {
-      src: "/images/TX Auto Group Houston Case Study 2.png",
+      src: "/images/image (3).png",
       alt: "Case study image 1",
     },
     {
-      src: "/images/Elite Auto Service Case Study.png",
+      src: "/images/image (3).png",
       alt: "Case study image 2",
     },
     {
-      src: "/images/River Oaks Auto Sales_ SEO Growth Case Study.png",
+      src: "/images/image (3).png",
       alt: "Case study image 3",
     },
     {
-      src: "/images/Mountain View Auto Sales Case Study.png",
+      src: "/images/image (3).png",
       alt: "Case study image 4",
     },
   ];

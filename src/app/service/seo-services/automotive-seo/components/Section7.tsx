@@ -9,7 +9,7 @@ const Section7 = () => {
       <div className="relative mx-auto w-full max-w-none">
         <div className="relative isolate overflow-hidden border-b border-blue-900/20 bg-gradient-to-br from-[#061f59] via-[#073b91] to-[#0b63b8] px-5 py-9 shadow-lg shadow-blue-950/10 sm:px-8 sm:py-12 lg:px-16 lg:py-14">
           <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full border border-white/10 bg-white/5 blur-sm" />
-          <h2 className="relative max-w-5xl text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl">
+          <h2 className="relative max-w-5xl text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl mx-auto text-center">
             Automotive SEO Content &amp; Technical Optimization
           </h2>
         </div>
@@ -17,14 +17,19 @@ const Section7 = () => {
         <div className="w-full space-y-8 bg-white px-5 py-10 sm:px-8 sm:py-14 lg:space-y-10 lg:px-16 lg:py-16">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-20">
             <p className="border-l-2 border-blue-400 pl-5 text-base leading-8 text-slate-700 sm:text-lg">
-              Successful automotive SEO requires more than adding keywords to pages. Your website needs a strong technical foundation and useful content that answers real customer questions.
+              Successful automotive SEO requires more than adding keywords to
+              pages. Your website needs a strong technical foundation and useful
+              content that answers real customer questions.
             </p>
             <p className="border-l-2 border-slate-300 pl-5 text-base leading-8 text-slate-700 sm:text-lg">
-              Our automotive SEO optimization company approach includes analysis of crawlability, indexation, page speed, mobile performance, metadata, internal linking, duplicate content, redirects, URL structure, and other technical factors.
+              Our automotive SEO optimization company approach includes analysis
+              of crawlability, indexation, page speed, mobile performance,
+              metadata, internal linking, duplicate content, redirects, URL
+              structure, and other technical factors.
             </p>
           </div>
 
-          <p className="max-w-5xl border-l-4 border-blue-600 bg-blue-50/70 px-6 py-5 text-base font-semibold leading-8 text-slate-800 sm:text-lg">
+          <p className="max-w-5xl mx-auto border-t-4 border-blue-600 bg-blue-50/70 px-6 pt-6 pb-5 text-base font-semibold leading-8 text-slate-800 sm:text-lg text-center">
             We then create content around genuine search intent.
           </p>
 
@@ -32,7 +37,7 @@ const Section7 = () => {
             <p className="mb-6 text-lg font-bold leading-7 tracking-tight text-[#072d7f] sm:text-xl">
               Our SEO Content Writing Services can support:
             </p>
-            <ul className="grid gap-x-12 gap-y-1 border-y border-slate-200 py-3 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="grid gap-x-12 gap-y-1 border-t border-slate-200 py-3 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 "Vehicle buying guides",
                 "Automotive service pages",
@@ -57,7 +62,7 @@ const Section7 = () => {
             </ul>
           </div>
 
-          <div className="max-w-6xl space-y-5 border-t border-blue-200 pt-8">
+          <div className="max-w-6xl mx-auto space-y-5 border-t border-blue-200 pt-8 text-center">
             <p className="text-base leading-8 text-slate-700 sm:text-lg">
               For additional technical guidance, read{" "}
               <Link
