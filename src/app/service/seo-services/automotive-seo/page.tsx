@@ -33,7 +33,12 @@ export default function AutomotiveSeoPage() {
           src: "/service-testing/Local-SEO-Agency-LocalMighty.webp",
           alt: "SEO services hero background",
         }}
-        breadcrumbs={[]}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Service", href: "/service" },
+          { label: "SEO Services", href: "/service/seo-services" },
+          { label: "Automotive SEO Services" },
+        ]}
         title="Automotive SEO Services That Drive More Traffic, Leads & Sales"
         description={<div className="space-y-3">
             <p>Web Founders USA delivers specialized automotive SEO services for car dealerships, auto repair shops, mechanics, auto body shops, auto parts businesses, trucking companies, and other automotive brands. We help automotive businesses improve their visibility on Google, reach high-intent customers, and turn organic traffic into calls, appointments, inquiries, and sales.</p>
@@ -101,7 +106,7 @@ export default function AutomotiveSeoPage() {
       <Section9 />
       <Section10 />
       <Section11 />
-      <Testimonials2 />
+      {/* <Testimonials2 /> */}
       <Section12 />
     </section>
   );
