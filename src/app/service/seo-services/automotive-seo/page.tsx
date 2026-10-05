@@ -15,6 +15,7 @@ import CaseStudy from "../components/CaseStudy";
 import CaseStudy2 from "../components/CaseStudy2";
 import InfiniteLogoSlider from "./components/InfiniteLogoSlider";
 import Testimonials2 from "./components/Testimonials2";
+import InfiniteToolSlider from "./components/InfiniteToolSlider";
 
 export const metadata: Metadata = {
   title: "Automotive SEO Services | Web Founders USA",
@@ -94,6 +95,7 @@ export default function AutomotiveSeoPage() {
         }}
       />
       <InfiniteLogoSlider />
+      <InfiniteToolSlider />
       <CaseStudy />
       <CaseStudy2 />
       <Section2 />
