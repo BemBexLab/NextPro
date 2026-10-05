@@ -8,19 +8,19 @@ const CaseStudy: React.FC = () => {
 
   const images = [
     {
-      src: "/images/image (3).png",
+      src: "/images/image (3).webp",
       alt: "Case study image 1",
     },
     {
-      src: "/images/image (3).png",
+      src: "/images/image (3).webp",
       alt: "Case study image 2",
     },
     {
-      src: "/images/image (3).png",
+      src: "/images/image (3).webp",
       alt: "Case study image 3",
     },
     {
-      src: "/images/image (3).png",
+      src: "/images/image (3).webp",
       alt: "Case study image 4",
     },
   ];
