@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import ServiceHero from "@/app/service/seo-services/components/ServiceHero";
 import {
@@ -59,6 +60,7 @@ export async function generateMetadata({
 export default async function CountyPage({ params }: CountyPageProps) {
   const { county } = await params;
   const post = getCountyPostBySlug(county);
+  const showSeoChips = county === "alpharetta-seo-services";
 
   if (!post) {
     notFound();
@@ -121,6 +123,66 @@ export default async function CountyPage({ params }: CountyPageProps) {
           submitLabel: post.submitLabel,
         }}
       />
+
+      {showSeoChips ? (
+        <div className="mx-auto mt-8 w-[92%] max-w-[1200px] rounded-2xl border border-blue-100 bg-gradient-to-br from-slate-50 via-white to-blue-50 p-5 shadow-sm sm:p-7">
+          <p className="mb-4 text-center text-sm font-bold uppercase tracking-wider text-blue-900">
+            Explore our Seo services
+          </p>
+
+          <div
+            className="flex flex-wrap justify-center gap-3"
+            aria-label="Related Website Design services"
+          >
+            {[
+              {
+                label: "SEO Services",
+                href: "/service/seo-services/",
+              },
+              {
+                label: "Roofing SEO Services",
+                href: "/service/seo-services/roofing-seo/",
+              },
+              {
+                label: "Local SEO Services",
+                href: "/service/seo-services/local-seo-services/",
+              },
+              {
+                label: "Automotive SEO",
+                href: "/service/seo-services/automotive-seo",
+              },
+              {
+                label: "Web Design Gainesville GA",
+                href: "/locations/web-design-elk-river/",
+              },
+              {
+                label: "SEO Company Gwinnett County",
+                href: "/locations/seo-gwinnet/",
+              },
+              {
+                label: "Alpharetta SEO Services",
+                href: "/locations/alpharetta-seo-services/",
+              },
+              {
+                label: "Maryland SEO Company",
+                href: "/locations/maryland-seo-company/",
+              },
+              {
+                label: "SEO Company Suwanee, GA",
+                href: "/locations/seo-company-suwanee-ga/",
+              },
+            ].map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                className="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-all duration-200 hover:bg-blue-700 hover:text-white"
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      ) : null}
 
       <article className="mx-auto max-w-[980px] px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         {post.image?.trim() && (
