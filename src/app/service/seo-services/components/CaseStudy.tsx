@@ -12,15 +12,15 @@ const CaseStudy: React.FC = () => {
       alt: "Case study image 1",
     },
     {
-      src: "/images/image (3).webp",
+      src: "/images/02.jpg",
       alt: "Case study image 2",
     },
     {
-      src: "/images/image (3).webp",
+      src: "/images/03.jpg",
       alt: "Case study image 3",
     },
     {
-      src: "/images/image (3).webp",
+      src: "/images/04.jpg",
       alt: "Case study image 4",
     },
   ];
@@ -46,8 +46,8 @@ const CaseStudy: React.FC = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             aria-hidden="true"
           />
-          <h2 className="relative max-w-full text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl uppercase">
-            our automotive repair shop connected for seo
+          <h2 className="relative max-w-full text-2xl text-center font-bold tracking-tight text-white sm:text-3xl lg:text-4xl uppercase">
+            Case Studies
           </h2>
         </motion.div>
 

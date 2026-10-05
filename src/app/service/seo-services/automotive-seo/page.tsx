@@ -97,7 +97,7 @@ export default function AutomotiveSeoPage() {
       <InfiniteLogoSlider />
       <InfiniteToolSlider />
       <CaseStudy />
-      <CaseStudy2 />
+      {/* <CaseStudy2 /> */}
       <Section2 />
       <Section3 />
       <Section4 />
