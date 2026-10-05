@@ -54,7 +54,7 @@ const CaseStudy: React.FC = () => {
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
           {images.map((image, index) => (
             <motion.article
-              key={image.src}
+              key={`${image.src}-${index}`}
               className="overflow-hidden bg-white"
               initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
               whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}

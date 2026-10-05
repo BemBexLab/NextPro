@@ -106,8 +106,8 @@ export default function AutomotiveSeoPage() {
       <Section9 />
       <Section10 />
       <Section11 />
-      {/* <Testimonials2 /> */}
       <Section12 />
+      <Testimonials2 />
     </section>
   );
 }

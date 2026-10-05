@@ -14,31 +14,15 @@ const Section12 = () => {
           <div className="relative">
             <div className="mb-6 h-1.5 w-16 rounded-full bg-gradient-to-r from-cyan-300 to-blue-400" />
             <h2 className="max-w-4xl text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Ready to Grow Your Automotive Business?
+              Get Your Free Automotive SEO Strategy
             </h2>
-
-            <div className="mt-7 max-w-5xl space-y-5 text-base leading-8 text-blue-50 sm:text-lg">
-              <p>
-                Your customers are already searching for dealerships, vehicles, mechanics, repair shops, auto parts, trucking services, and automotive businesses on Google.
-              </p>
-              <p>
-                The opportunity is to make sure they can find your business when they search.
-              </p>
-              <p>
-                Web Founders USA provides specialized automotive SEO services designed to improve visibility, attract qualified traffic, generate leads, and build long-term organic growth.
-              </p>
-              <p>
-                Whether you need car dealership SEO services, car dealer SEO services, local automotive SEO, auto repair SEO, trucking SEO, or auto parts optimization, we&apos;ll build a strategy around your market and goals.
-              </p>
-            </div>
+            <p className="mt-3 text-base leading-7 text-blue-100 sm:text-lg">
+              Ready to turn automotive searches into real business
+              opportunities?
+            </p>
 
             <div className="mt-10 border-t border-white/15 pt-8">
-              <h3 className="text-2xl font-bold text-white sm:text-3xl">
-                Get Your Free Automotive SEO Strategy
-              </h3>
-              <p className="mt-3 text-base leading-7 text-blue-100 sm:text-lg">
-                Ready to turn automotive searches into real business opportunities?
-              </p>
+              {/* <h3 className="text-2xl font-bold text-white sm:text-3xl"></h3> */}
 
               <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 <Link
