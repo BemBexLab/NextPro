@@ -17,14 +17,21 @@ const StickyHeader = ({ children, top = '0px' }) => {
         let ticking = false;
         let headerHeight = 0;
         let topHeaderHeight = 0;
+        let isPinned = null;
 
         const measure = () => {
             headerHeight = header_container.offsetHeight;
             topHeaderHeight = top_header ? top_header.offsetHeight : 0;
         };
 
-        const setPinnedState = (isPinned) => {
-            if (isPinned) {
+        const setPinnedState = (nextIsPinned, force = false) => {
+            if (!force && nextIsPinned === isPinned) {
+                return;
+            }
+
+            isPinned = nextIsPinned;
+
+            if (nextIsPinned) {
                 header.classList.add("header-pinned");
                 header.style.top = top_header ? `-${topHeaderHeight}px` : top;
                 root.style.setProperty(
@@ -66,6 +73,7 @@ const StickyHeader = ({ children, top = '0px' }) => {
 
         const resizeObserver = new ResizeObserver(() => {
             measure();
+            setPinnedState(isPinned, true);
             handleScroll();
         });
 

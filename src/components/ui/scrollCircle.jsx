@@ -1,14 +1,15 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GoArrowUp } from "react-icons/go";
 
 const ScrollCircle = () => {
-    const [scrollPercentage, setScrollPercentage] = useState(0);
     const [showBackToTop, setShowBackToTop] = useState(false);
+    const progressPathRef = useRef(null);
 
     useEffect(() => {
         let frameId = null;
         let scrollableHeight = 1;
+        let wasBackToTopVisible = false;
 
         const updateScrollBounds = () => {
             const windowHeight = window.innerHeight;
@@ -25,8 +26,16 @@ const ScrollCircle = () => {
                 frameId = null;
                 const scrollPosition = window.scrollY;
                 const scrollPercentage = (scrollPosition / scrollableHeight) * 100;
-                setScrollPercentage(scrollPercentage);
-                setShowBackToTop(scrollPosition > 350);
+                if (progressPathRef.current) {
+                    progressPathRef.current.style.strokeDashoffset =
+                        `${307.919 - (scrollPercentage * 307.919) / 100}`;
+                }
+
+                const shouldShowBackToTop = scrollPosition > 350;
+                if (shouldShowBackToTop !== wasBackToTopVisible) {
+                    wasBackToTopVisible = shouldShowBackToTop;
+                    setShowBackToTop(shouldShowBackToTop);
+                }
             });
         };
 
@@ -70,12 +79,11 @@ const ScrollCircle = () => {
                 strokeLinejoin="round"
             >
                 <path
+                    ref={progressPathRef}
                     d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-                    style={{
-                        strokeDasharray: "307.919, 307.919",
-                        strokeDashoffset: 307.919 - (scrollPercentage * 307.919) / 100,
-                    }}
-                ></path>
+                    strokeDasharray="307.919, 307.919"
+                    strokeDashoffset="307.919"
+                />
             </svg>
             <span className="text-muted-foreground absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <GoArrowUp className="text-2xl" />
