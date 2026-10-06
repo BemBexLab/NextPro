@@ -68,7 +68,7 @@ const Chips = () => {
                 <span className="font-mono text-xs text-[#666666] transition-colors group-hover:text-[#0033CC]">
                   {(index + 1).toString().padStart(2, '0')}
                 </span>
-                <span className="flex-1 text-base font-medium leading-snug tracking-tight md:text-lg">
+                <span className="flex-1 text-base font-medium underline leading-snug tracking-tight md:text-lg">
                   {label}
                 </span>
                 <span className="font-mono text-xs text-[#666666] transition-all group-hover:translate-x-1 group-hover:text-[#0033CC]">
