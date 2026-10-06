@@ -76,4 +76,9 @@ export const locationNavigation = [
     path: "/locations/maryland-seo-company/",
     title: "Maryland SEO Company",
   },
+  {
+    id: "county-5",
+    path: "/locations/alexandria-search-engine-optimization/",
+    title: "Alexandria Search Engine Optimization",
+  },
 ];
