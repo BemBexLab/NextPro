@@ -49,13 +49,13 @@ export const seoSubServiceNavigation = [
 ];
 
 export const locationNavigation = [
-  { id: "elk-river", path: "/locations/web-design-elk-river/", title: "Elk River" },
+  { id: "elk-river", path: "/locations/web-design-elk-river/", title: "Web Design Elk River" },
   {
     id: "gainesville-ga",
     path: "/locations/web-design-gainesville-ga/",
-    title: "Gainesville, GA",
+    title: "Web Design Gainesville, GA",
   },
-  { id: "gwinnet", path: "/locations/seo-gwinnet/", title: "Gwinnett" },
+  { id: "gwinnet", path: "/locations/seo-gwinnet/", title: "SEO Gwinnett" },
   {
     id: "county-1",
     path: "/locations/seo-company-union-county-ga/",
