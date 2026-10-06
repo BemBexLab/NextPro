@@ -142,7 +142,7 @@ export default function CaseStudy01() {
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="h-full w-full object-cover grayscale-[30%] transition-transform duration-[8000ms] ease-linear hover:grayscale-0"
+                      className="h-full w-full object-contain grayscale-[30%] transition-transform duration-[8000ms] ease-linear hover:grayscale-0"
                       style={{
                         transform:
                           index === currentImageIndex
