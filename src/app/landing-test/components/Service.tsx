@@ -1,0 +1,77 @@
+import Link from "next/link";
+import Image from "next/image";
+import SlideUp from "@/components/animations/slideUp";
+import { Button } from "@/components/ui/button";
+import Title from "@/components/ui/title";
+import { servicesDataTwo } from "@/lib/fackData/servicesDataTwo";
+
+const servicesCarouselClassName =
+  "flex snap-x snap-mandatory gap-5 overflow-x-auto overscroll-x-contain pb-4 pt-1 [scrollbar-width:none] sm:gap-6 lg:grid lg:grid-cols-3 lg:overflow-visible lg:py-0 xl:grid-cols-4 [&::-webkit-scrollbar]:hidden";
+const serviceSlideClassName =
+  "min-w-0 flex-[0_0_85%] snap-start sm:basis-[47%] md:basis-[31%] lg:basis-auto lg:snap-none";
+
+const Services = () => {
+  return (
+    <section className="relative isolate pt-8 pb-9 lg:pb-15" id="services">
+      <div className="relative mx-auto max-w-[1350px] px-[15px]">
+        <div className="relative z-10">
+          <SlideUp>
+            <div className="flex flex-col items-center">
+              <Button variant="secondary">Our Services</Button>
+              <Title size={"5xl"} className="max-w-[869px] pt-2 text-center">
+                A Complete Ecosystem for Design, Development & Digital Marketing
+              </Title>
+            </div>
+          </SlideUp>
+          <div className="relative pt-2 lg:pt-7.5">
+            <Image
+              src="/Halloween%20Assets%20Task/image%2019.png"
+              width={240}
+              height={240}
+              alt=""
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-32 -top-32 z-20 hidden h-48 w-48 object-contain sm:block lg:h-64 lg:w-64"
+            />
+            <SlideUp>
+              <div
+                className={`${servicesCarouselClassName}
+                    [&>*:nth-child(2)_.icon]:bg-[#32A5521A] [&>*:nth-child(2)_.icon]:text-green 
+                    [&>*:nth-child(3)_.icon]:bg-[#A22EFE1A] [&>*:nth-child(3)_.icon]:text-purple 
+                    [&>*:nth-child(4)_.icon]:bg-[#5A55791A] [&>*:nth-child(4)_.icon]:text-[#5A5579]
+                    [&>*:nth-child(5)_.icon]:bg-[#FF00001A] [&>*:nth-child(5)_.icon]:text-[#FF0000]
+                    [&>*:nth-child(6)_.icon]:bg-[#00A3FF1A] [&>*:nth-child(6)_.icon]:text-[#00A3FF]
+                    [&>*:nth-child(7)_.icon]:bg-[#FF00991A] [&>*:nth-child(7)_.icon]:text-[#FF0099]
+                    [&>*:nth-child(8)_.icon]:bg-[#009F961A] [&>*:nth-child(8)_.icon]:text-[#009F96]
+                    `}
+              >
+                {servicesDataTwo.map(({ id, icon_1, service_name, link }) => {
+                  return (
+                    <Link
+                      href={link}
+                      key={id}
+                      className={`${serviceSlideClassName} group flex h-full flex-col items-center rounded-2xl border border-border bg-background p-6 text-center shadow-sm transition-all duration-300 hover:shadow-lg lg:p-8`}
+                    >
+                      <div className="md:w-[85px] md:h-[85px] w-16 h-16 md:p-6 p-4 rounded-full flex justify-center items-center mb-6 bg-[rgba(46,77,254,0.10)] icon">
+                        <span className="transition-all duration-500 group-hover:scale-90">
+                          {icon_1}
+                        </span>
+                      </div>
+                      <span className="text-xl font-extrabold text-muted-foreground text-center leading-[140%] multiline-hover">
+                        {service_name}
+                      </span>
+                      {/* <p className='service-description-scroll pt-3 h-[20rem] overflow-y-auto pr-2 text-center'>
+                                                {description}
+                                            </p> */}
+                    </Link>
+                  );
+                })}
+              </div>
+            </SlideUp>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;

@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+import attached404Paths from "./src/data/attached404Paths.mjs";
 
 const nextConfig = {
   // output: "standalone",
@@ -34,6 +35,12 @@ const nextConfig = {
     ],
   },
   async redirects() {
+    const attached404Redirects = attached404Paths.map((source) => ({
+      source,
+      destination: "/",
+      permanent: true,
+    }));
+
     const legacyPortfolioProjectSlugs = [
       "bonsai-spirit-logo",
       "precision-pharma-logo",
@@ -81,6 +88,7 @@ const nextConfig = {
     ];
 
     return [
+      ...attached404Redirects,
       ...legacyPortfolioRedirects,
       {
         source: "/locations/gainesville-ga",
