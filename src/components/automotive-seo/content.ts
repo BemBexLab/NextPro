@@ -5,9 +5,23 @@ type AutomotiveSeoSection = {
   items?: string[];
   paragraphs?: string[];
   outro?: string;
+  finalLine?: string;
 };
 
 const section = (value: AutomotiveSeoSection): AutomotiveSeoSection => value;
+
+type AutomotiveServiceBlock = {
+  title: string;
+  paragraphs: string[];
+  leadIn: string;
+  items: string[];
+  secondaryLeadIn?: string;
+  secondaryItems?: string[];
+  closing: string;
+  finalLine?: string;
+};
+
+const serviceBlock = (value: AutomotiveServiceBlock): AutomotiveServiceBlock => value;
 
 export const automotiveSeoContent = {
   meta: {
@@ -167,7 +181,7 @@ export const automotiveSeoContent = {
     ],
   },
   serviceBlocks: [
-    {
+    serviceBlock({
       title: "Car Dealership SEO",
       paragraphs: [
         "Dealership SEO helps buyers discover your inventory, location, and services while researching their next vehicle.",
@@ -181,8 +195,8 @@ export const automotiveSeoContent = {
       ],
       closing:
         "Clear, useful pages help shoppers find the information they need to take the next step.",
-    },
-    {
+    }),
+    serviceBlock({
       title: "Auto Repair SEO",
       paragraphs: [
         "Auto repair SEO can help local drivers find your shop when they need maintenance, diagnostics, or repairs.",
@@ -196,8 +210,8 @@ export const automotiveSeoContent = {
       ],
       closing:
         "Your website can give customers a clear view of your services and how to contact your shop.",
-    },
-    {
+    }),
+    serviceBlock({
       title: "Automotive Parts SEO",
       paragraphs: [
         "Parts businesses can use SEO to help customers find products, categories, and the information needed to choose the right parts.",
@@ -211,7 +225,7 @@ export const automotiveSeoContent = {
       ],
       closing:
         "An organized catalog helps both customers and search engines understand what you sell.",
-    },
+    }),
   ],
   faqs: {
     id: "automotive-seo-faqs",

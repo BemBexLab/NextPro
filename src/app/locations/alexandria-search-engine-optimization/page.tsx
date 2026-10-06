@@ -55,7 +55,7 @@ export default function AlexandriaSEOPage() {
         }}
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Services", href: "/services" },
+          { label: "Locations", href: "/locations" },
           { label: "Alexandria Search Engine Optimization" },
         ]}
         title="Alexandria Search Engine Optimization - Web Founders USA"
