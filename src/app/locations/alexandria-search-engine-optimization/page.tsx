@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { withEnUsHreflang } from "@/lib/metadata";
 import ServiceHero from "@/app/service/seo-services/components/ServiceHero";
-import CaseStudies from "./components/CaseStudy01";
 import CaseStudy01 from "./components/CaseStudy01";
 import CaseStudy02 from "./components/CaseStudy02";
 import AlexandriaServices from "./components/AlexandriaServices";
@@ -13,83 +12,6 @@ import AlexandriaSEOIntro from "./components/AlexandriaSEOIntro";
 import LocalSEOA_Alexandria from "./components/LocalSEOA_Alexandria";
 import AlexandriaNearbyAreas from "./components/AlexandriaNearbyAreas";
 import AlexandriaFAQ from "./components/AlexandriaFAQ";
-
-const serviceNames = [
-  "Healthcare SEO",
-  "Medical SEO",
-  "Dental SEO",
-  "Employment Lawyer SEO",
-  "E-commerce SEO",
-  "Shopify SEO",
-  "WooCommerce SEO",
-  "WordPress SEO",
-  "Automotive SEO",
-  "Construction SEO",
-  "Roofing SEO",
-  "Hotel & Hospitality SEO",
-  "Insurance SEO",
-  "Locksmith SEO",
-  "Local Business SEO",
-  "Professional Services SEO",
-  "Enterprise SEO",
-  "Multilingual SEO",
-];
-
-const processSteps = [
-  {
-    title: "Website & SEO Audit",
-    description:
-      "We analyze your website's technical health, content, structure, indexing, internal links, existing visibility, and important SEO opportunities.",
-  },
-  {
-    title: "Keyword Research",
-    description:
-      "We identify commercial, local, informational, and long-tail keywords relevant to your services and target customers.",
-  },
-  {
-    title: "Competitor Analysis",
-    description:
-      "We study competing websites to understand their keyword targeting, content, website structure, local presence, and potential gaps that your business can address.",
-  },
-  {
-    title: "SEO Strategy",
-    description:
-      "We organize the research into a practical roadmap covering technical SEO, on-page optimization, content, local search, internal linking, and other relevant improvements.",
-  },
-  {
-    title: "Implementation",
-    description:
-      "We optimize priority pages and address the issues that can have the greatest impact on your website's organic search performance.",
-  },
-  {
-    title: "Monitoring & Improvement",
-    description:
-      "SEO is an ongoing process. We monitor performance, identify new opportunities, and refine the strategy as your website, competitors, and search landscape change.",
-  },
-];
-
-const faqs = [
-  {
-    question: "What is Alexandria SEO?",
-    answer:
-      "Alexandria SEO is the process of optimizing a business website and online presence to improve visibility for relevant searches from customers in Alexandria, Virginia, and surrounding areas.",
-  },
-  {
-    question: "What does an Alexandria SEO company do?",
-    answer:
-      "An SEO company can provide keyword research, local SEO, technical SEO, on-page optimization, content optimization, competitor analysis, SEO audits, and Google Business Profile optimization.",
-  },
-  {
-    question: "How can local SEO help my Alexandria business?",
-    answer:
-      "Local SEO can help your business become more visible for location-based searches and connect with customers searching for your services nearby.",
-  },
-  {
-    question: "How long does SEO take?",
-    answer:
-      "SEO timelines vary depending on your website, competition, industry, target keywords, content, authority, and the amount of optimization required. SEO is generally an ongoing process rather than a one-time activity.",
-  },
-];
 
 export const metadata: Metadata = withEnUsHreflang({
   title: "Alexandria Search Engine Optimization - Web Founders USA",
@@ -134,7 +56,7 @@ export default function AlexandriaSEOPage() {
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services" },
-          { label: "SEO Company Gwinnett County" },
+          { label: "Alexandria Search Engine Optimization" },
         ]}
         title="Alexandria Search Engine Optimization - Web Founders USA"
         description={
