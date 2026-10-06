@@ -141,8 +141,8 @@ export default function CaseStudy02() {
                       style={{
                         transform:
                           index === currentImageIndex
-                            ? "scale(1.05)"
-                            : "scale(1)",
+                            ? ""
+                            : "",
                       }}
                     />
                   </div>
