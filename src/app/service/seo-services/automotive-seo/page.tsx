@@ -16,6 +16,7 @@ import CaseStudy2 from "../components/CaseStudy2";
 import InfiniteLogoSlider from "./components/InfiniteLogoSlider";
 import Testimonials2 from "./components/Testimonials2";
 import InfiniteToolSlider from "./components/InfiniteToolSlider";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Automotive SEO Services | Web Founders USA",
@@ -42,7 +43,7 @@ export default function AutomotiveSeoPage() {
         ]}
         title="Automotive SEO Services That Drive More Traffic, Leads & Sales"
         description={<div className="space-y-3">
-            <p>Web Founders USA delivers specialized automotive SEO services for car dealerships, auto repair shops, mechanics, auto body shops, auto parts businesses, trucking companies, and other automotive brands. We help automotive businesses improve their visibility on Google, reach high-intent customers, and turn organic traffic into calls, appointments, inquiries, and sales.</p>
+            <p><Link className="font-semibold text-white hover:text-slate-400 underline" href="/">Web Founders USA</Link> delivers specialized automotive <Link className="font-semibold text-white hover:text-slate-400 underline" href={"/service/seo-services/"}>SEO services</Link> for car dealerships, auto repair shops, mechanics, auto body shops, auto parts businesses, trucking companies, and other automotive brands. We help automotive businesses improve their visibility on Google, reach high-intent customers, and turn organic traffic into calls, appointments, inquiries, and sales.</p>
             <p>Today, customers search online before buying a vehicle, finding a dealership, booking a repair, comparing services, or purchasing automotive parts. Our automotive search engine optimization strategies help your business appear when those searches happen.</p>
         </div>}
         actions={[
