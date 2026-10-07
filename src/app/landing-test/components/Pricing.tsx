@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import SlideUp from "@/components/animations/slideUp";
 import { Button } from "@/components/ui/button";
 import { pricingData } from "@/lib/fackData/pricingData2";
@@ -30,8 +31,57 @@ const Pricing = () => {
   );
 
   return (
-    <section className="w-full bg-[#FAFBFE] py-10 dark:bg-gray-900 sm:py-12 lg:py-16">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative isolate w-full overflow-hidden bg-[#FAFBFE] py-10 dark:bg-gray-900 sm:py-12 lg:py-16">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-full bg-no-repeat"
+        style={{
+          backgroundImage: "url('/Halloween%20Assets%20Task/part-01.webp')",
+          backgroundSize: "100% auto",
+          backgroundPosition: "center bottom",
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-[1] overflow-hidden"
+      >
+        <Image
+          src="/Halloween Assets Task/image 24.png"
+          width={160}
+          height={160}
+          alt=""
+          className="absolute left-[5%] top-[14%] h-7 w-7 -rotate-12 object-contain opacity-35 sm:h-10 sm:w-10 lg:h-14 lg:w-14"
+        />
+        <Image
+          src="/Halloween Assets Task/image 24.png"
+          width={160}
+          height={160}
+          alt=""
+          className="absolute right-[7%] top-[21%] h-9 w-9 scale-y-[-1] rotate-6 object-contain opacity-30 sm:h-12 sm:w-12 lg:h-16 lg:w-16"
+        />
+        <Image
+          src="/Halloween Assets Task/image 24.png"
+          width={160}
+          height={160}
+          alt=""
+          className="absolute left-[19%] bottom-[22%] h-6 w-6 rotate-[18deg] object-contain opacity-25 sm:h-9 sm:w-9 lg:h-12 lg:w-12"
+        />
+        <Image
+          src="/Halloween Assets Task/image 24.png"
+          width={160}
+          height={160}
+          alt=""
+          className="absolute right-[24%] bottom-[12%] h-8 w-8 -rotate-6 object-contain opacity-30 sm:h-11 sm:w-11 lg:h-14 lg:w-14"
+        />
+        <Image
+          src="/Halloween Assets Task/image 24.png"
+          width={160}
+          height={160}
+          alt=""
+          className="absolute left-[53%] top-[42%] h-5 w-5 scale-y-[-1] rotate-[-20deg] object-contain opacity-20 sm:h-8 sm:w-8 lg:h-10 lg:w-10"
+        />
+      </div>
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <SlideUp>
           <div className="flex min-w-0 flex-col items-center">
             <Button variant="secondary" className="mb-3">
