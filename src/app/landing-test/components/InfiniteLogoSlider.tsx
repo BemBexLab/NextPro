@@ -1,12 +1,20 @@
 "use client";
 
-const logoSrc = "https://navneetdwivedi.github.io/Logo_Slider/logo.png";
-const logos = Array.from({ length: 25 }, (_, index) => index);
+const logos = [
+  { src: "/images/slider/clients01.webp", alt: "IAQ-EMF Consulting Inc. logo" },
+  { src: "/images/slider/clients02.webp", alt: "The Go To Car Guy logo" },
+  { src: "/images/slider/clients03.webp", alt: "Smartax logo" },
+  { src: "/images/slider/clients04.webp", alt: "Alser Logistics logo" },
+  { src: "/images/slider/clients05.webp", alt: "Answer I.T. logo" },
+  { src: "/images/slider/clients06.webp", alt: "Professional Bookkeeping Services logo" },
+  { src: "/images/slider/clients07.webp", alt: "USCyberCall logo" },
+  { src: "/images/slider/clients08.webp", alt: "Roche Electric & Consulting logo" },
+];
 
 export default function InfiniteLogoSlider() {
   return (
     <section 
-      aria-label="Partner logos" 
+      aria-label="Client logos" 
       className="relative w-full overflow-hidden bg-[#FAFBFE] py-4 dark:bg-gray-900 sm:py-6"
     >
       {/* Left Edge Fade */}
@@ -23,11 +31,11 @@ export default function InfiniteLogoSlider() {
               aria-hidden={copy === 1}
               className="flex shrink-0 items-center gap-4 pr-4 sm:gap-6 sm:pr-6 md:gap-8 md:pr-8"
             >
-              {logos.map((logo) => (
+              {logos.map(({ src, alt }) => (
                 <img
-                  key={`${copy}-${logo}`}
-                  src={logoSrc}
-                  alt="Partner logo"
+                  key={`${copy}-${src}`}
+                  src={src}
+                  alt={copy === 1 ? "" : alt}
                   width={180}
                   height={90}
                   loading="lazy"
