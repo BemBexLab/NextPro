@@ -1,7 +1,12 @@
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 
-const ImportanceLinks = ({ color, linkHoverColor }) => {
+const ImportanceLinks = ({
+    color,
+    linkHoverColor,
+    excludeGroups = [],
+    excludeLinksByGroup = {},
+}) => {
     const importanceLinks = [
         {
             id: 1,
@@ -38,8 +43,8 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
             id: 4,
             title: "Other links",
             links: [
-                { id: 1, path: "/terms", label: "Terms" },
-                { id: 2, path: "/privacy", label: "Privacy" },
+                { id: 1, path: "/terms", label: "Terms & Conditions" },
+                { id: 2, path: "/privacy", label: "Privacy Policy" },
                 { id: 3, path: "/service/seo-services/", label: "SEO Services" },
                 { id: 4, path: "/blog/", label: "Blogs" },
             ]
@@ -55,13 +60,27 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
             ]
         },
     ]
+    const visibleLinks = importanceLinks.filter(
+        ({ title }) => !excludeGroups.includes(title),
+    )
+
     return (
-        <div className='grid min-w-0 grid-cols-1 gap-x-5 gap-y-8 min-[420px]:grid-cols-2 lg:grid-cols-4 lg:gap-x-6'>
-            {importanceLinks.map(({ id, links, title }) => (
+        <div
+            className={`grid min-w-0 gap-y-8 ${
+                excludeGroups.length
+                    ? "grid-cols-[max-content_max-content] justify-end gap-x-4"
+                    : "grid-cols-1 gap-x-5 min-[420px]:grid-cols-2 lg:grid-cols-4 lg:gap-x-6"
+            }`}
+        >
+            {visibleLinks.map(({ id, links, title }) => {
+                const excludedLinks = excludeLinksByGroup[title] || []
+                const groupLinks = links.filter(({ label }) => !excludedLinks.includes(label))
+
+                return (
                 <div key={id} className='min-w-0'>
                     <h3 className={cn(`font-semibold text-1xl text-muted-foreground lg:pb-5 pb-3`, color)}>{title}</h3>
                     <ul>
-                        {links.map(({ id: linkId, label, path }) => (
+                        {groupLinks.map(({ id: linkId, label, path }) => (
                             <li key={linkId} className='mt-2.5'>
                                 {title === "Social" ? (
                                     <a
@@ -92,7 +111,8 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
                         ))}
                     </ul>
                 </div>
-            ))}
+                )
+            })}
         </div>
     )
 }

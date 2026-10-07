@@ -61,7 +61,7 @@ const RequestAFreeAudit = () => {
   };
 
   return (
-    <section className="relative isolate w-full bg-gradient-to-b from-[#F0F5FF] via-[#F6F8FE] to-[#FAFBFE] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+    <section id="request-audit" className="relative isolate w-full scroll-mt-24 bg-gradient-to-b from-[#F0F5FF] via-[#F6F8FE] to-[#FAFBFE] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       {/* Background Image - Changed from 100% 100% to bg-cover to prevent mobile distortion */}
       <div
         aria-hidden="true"

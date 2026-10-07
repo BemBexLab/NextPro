@@ -21,7 +21,7 @@ const halloweenPhantom = localFont({
 export default function Page() {
   return (
     <div className={`landing-test-headings ${halloweenPhantom.variable}`}>
-      <HalloweenHeader haveShadow={undefined} />
+      <HalloweenHeader />
       <section className="relative isolate w-full bg-[#FAFBFE]">
         <div
           aria-hidden="true"

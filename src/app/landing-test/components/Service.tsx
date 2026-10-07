@@ -70,8 +70,7 @@ const Services = () => {
                 `}
               >
                 {servicesDataTwo.map(({ id, icon_1, service_name, link }) => (
-                  <Link
-                    href={link}
+                  <div
                     key={id}
                     className={serviceSlideClassName}
                   >
@@ -83,7 +82,7 @@ const Services = () => {
                     <span className="text-lg font-extrabold leading-[140%] text-muted-foreground multiline-hover dark:text-gray-200 sm:text-xl">
                       {service_name}
                     </span>
-                  </Link>
+                  </div>
                 ))}
               </div>
             </SlideUp>

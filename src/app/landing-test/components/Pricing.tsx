@@ -148,6 +148,7 @@ const Pricing = () => {
                       old_price={old_price}
                       services={services}
                       imageSrc={planImages[index % planImages.length]}
+                      auditHref="#request-audit"
                     />
                   </div>
                 ),

@@ -4,8 +4,6 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoCall } from "react-icons/io5";
-
-import { locationNavigation } from "@/data/navigation";
 import { Button } from "@/components/ui/button";
 import StickyHeader from "@/components/ui/stickyHeader";
 
@@ -13,30 +11,9 @@ const MobileMenu = dynamic(() => import("./mobileMenu"), {
   ssr: false,
 });
 
-const navigationLinks = [
-  { id: 1, path: "/", lable: "Home" },
-  { id: 2, path: "/about-us", lable: "About Us" },
-  { id: 4, path: "/service/seo-services/", lable: "SEO Services" },
-  { id: 3, path: "/service", lable: "Services" },
-  { id: 5, path: "/portfolio", lable: "Our Work" },
-  { id: 6, path: "/pricing", lable: "Pricing" },
-  { id: 7, path: "/blog", lable: "Blog" },
-  { id: 8, path: "/locations", lable: "Locations", children: locationNavigation },
-];
 
-const HalloweenHeader = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
+const HalloweenHeader = () => {
   const pathname = usePathname();
-  const mobileNavigationLinks = navigationLinks.map((link) => {
-    if (link.lable === "SEO Services") {
-      return { ...link, children: seoSubServices };
-    }
-
-    if (link.lable === "Services") {
-      return { ...link, children: serviceLinks };
-    }
-
-    return link;
-  });
 
   return (
     <StickyHeader>
@@ -44,16 +21,17 @@ const HalloweenHeader = ({ haveShadow, serviceLinks = [], seoSubServices = [] })
         id="header"
         className="sticky top-0 z-40 w-full bg-[#F7F8FE] transition-[top] duration-300"
       >
+        <span className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[#072D7F] via-[#BF0B30] to-[#F59E0B]" />
         <div
           id="header-container"
-          className={`${haveShadow ? "shadow-3xl dark:shadow-[0px_14px_21px_0px_rgba(0,0,0,0.3)]" : ""} ${
+          className={`"shadow-3xl dark:shadow-[0px_14px_21px_0px_rgba(0,0,0,0.3)]" : ""} ${
             pathname !== "/home-2"
               ? "[.header-pinned_&]:shadow-[0_12px_32px_rgba(15,23,42,0.12)]"
               : ""
           }`}
         >
           <div className="relative mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8">
-            <span className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[#072D7F] via-[#BF0B30] to-[#F59E0B]" />
+            
             <div className="flex min-h-[76px] items-center justify-between gap-3 sm:min-h-[86px] xl:gap-6">
               <Link
                 href="/"
@@ -94,7 +72,7 @@ const HalloweenHeader = ({ haveShadow, serviceLinks = [], seoSubServices = [] })
                   asChild
                   className="h-11 rounded-full bg-[#BF0B30] px-5 text-sm font-bold text-white shadow-[0_7px_18px_rgba(191,11,48,0.2)] transition-all hover:-translate-y-0.5 hover:bg-[#A60929] hover:shadow-[0_10px_24px_rgba(191,11,48,0.27)] focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 2xl:px-6"
                 >
-                  <Link href="/contact-us">Let&apos;s Talk</Link>
+                  <Link href="#request-audit">Let&apos;s Talk</Link>
                 </Button>
               </div>
 
@@ -119,9 +97,8 @@ const HalloweenHeader = ({ haveShadow, serviceLinks = [], seoSubServices = [] })
                   asChild
                   className="hidden h-10 rounded-full bg-[#BF0B30] px-4 text-xs font-bold text-white shadow-[0_6px_16px_rgba(191,11,48,0.18)] transition-all hover:-translate-y-0.5 hover:bg-[#A60929] hover:shadow-[0_9px_22px_rgba(191,11,48,0.25)] focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 sm:inline-flex"
                 >
-                  <Link href="/contact-us">Let&apos;s Talk</Link>
+                  <Link href="#request-audit">Let&apos;s Talk</Link>
                 </Button>
-                <MobileMenu data={mobileNavigationLinks} />
               </div>
             </div>
           </div>

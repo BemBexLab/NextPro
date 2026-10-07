@@ -133,7 +133,7 @@ const Approach = () => {
                       <Title className="" size={"4xl"}>{heading}</Title>
                       <p className="pt-5 pb-7.5">{description}</p>
                       <Button asChild variant="outline">
-                        <Link href="/about-us">
+                        <Link href="#request-audit">
                           Discover more
                           <FaArrowRight aria-hidden="true" className="text-lg" />
                         </Link>
@@ -195,7 +195,7 @@ const Approach = () => {
                     className="rounded-2xl"
                   />
                   <Button asChild variant="outline" className="mt-4">
-                    <Link href="/about-us">
+                    <Link href="#request-audit">
                       Discover more
                       <FaArrowRight aria-hidden="true" className="text-sm" />
                     </Link>

@@ -22,6 +22,7 @@ const PriceCardTwo = ({
   old_price,
   imageSrc = "/Halloween Assets Task/image 28.webp",
   showImage = true,
+  auditHref,
 }) => {
   const planNameRef = useRef(null);
   const [animate, setAnimate] = useState(false);
@@ -119,14 +120,23 @@ const PriceCardTwo = ({
             </div>
 
             <Link
-              href="/contact-us"
+              href={auditHref || "/contact-us"}
               className="shrink-0 text-base font-extrabold leading-none text-primary hover:underline sm:text-lg"
             >
               Chat Now
             </Link>
           </div>
 
-          <OrderDialog />
+          {auditHref ? (
+            <Link
+              href={auditHref}
+              className="flex w-full items-center justify-center rounded-[7px] bg-[#BF0B30] px-4 py-3 text-base font-bold text-white shadow-md transition hover:bg-[#BF0B30]/90 sm:text-lg"
+            >
+              Request an Audit
+            </Link>
+          ) : (
+            <OrderDialog />
+          )}
         </div>
       </div>
     </article>
