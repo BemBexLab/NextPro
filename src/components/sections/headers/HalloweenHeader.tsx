@@ -72,7 +72,7 @@ const HalloweenHeader = () => {
                   asChild
                   className="h-11 rounded-full bg-[#BF0B30] px-5 text-sm font-bold text-white shadow-[0_7px_18px_rgba(191,11,48,0.2)] transition-all hover:-translate-y-0.5 hover:bg-[#A60929] hover:shadow-[0_10px_24px_rgba(191,11,48,0.27)] focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 2xl:px-6"
                 >
-                  <Link href="#request-audit">Let&apos;s Talk</Link>
+                  <a href="#request-audit">Let&apos;s Talk</a>
                 </Button>
               </div>
 
@@ -97,7 +97,7 @@ const HalloweenHeader = () => {
                   asChild
                   className="hidden h-10 rounded-full bg-[#BF0B30] px-4 text-xs font-bold text-white shadow-[0_6px_16px_rgba(191,11,48,0.18)] transition-all hover:-translate-y-0.5 hover:bg-[#A60929] hover:shadow-[0_9px_22px_rgba(191,11,48,0.25)] focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 sm:inline-flex"
                 >
-                  <Link href="#request-audit">Let&apos;s Talk</Link>
+                  <a href="#request-audit">Let&apos;s Talk</a>
                 </Button>
               </div>
             </div>

@@ -61,12 +61,18 @@ const FooterFour = () => {
         <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center justify-between gap-3 px-4 py-5 text-center text-sm sm:px-6 sm:py-6 sm:text-base md:flex-row md:text-left lg:px-8 lg:py-7.5">
           <p className="min-w-0 break-words">
             Designed and Developed By{" "}
-            <Link
-              href="/"
-              className="relative font-medium text-primary-foreground hover-underline after:h-px"
-            >
-              WebFounders USA
-            </Link>
+            {isLandingTest ? (
+              <span className="relative font-medium text-primary-foreground">
+                WebFounders USA
+              </span>
+            ) : (
+              <Link
+                href="/"
+                className="relative font-medium text-primary-foreground hover-underline after:h-px"
+              >
+                WebFounders USA
+              </Link>
+            )}
           </p>
 
           <p className="min-w-0 break-words md:text-right">

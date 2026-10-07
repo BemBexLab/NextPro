@@ -99,12 +99,12 @@ export default function FAQ() {
         </div>
 
         <div className="mt-12 text-center">
-          <Link
+          <a
             href="#request-audit"
             className="inline-block rounded-lg border-2 border-[#072d7f] px-6 py-3 font-semibold text-[#072d7f] transition-colors hover:bg-[#072d7f] hover:text-white"
           >
             Start Your Journey
-          </Link>
+          </a>
         </div>
       </div>
     </section>

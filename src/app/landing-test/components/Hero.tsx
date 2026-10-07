@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { FaArrowRight } from "react-icons/fa6";
@@ -22,9 +21,9 @@ const Hero = () => {
             </p>
             <div className="flex flex-col gap-4 pt-6 pb-4 sm:flex-row sm:items-center sm:gap-8 sm:pt-8 sm:pb-5 md:pt-10 md:pb-6 lg:pt-[55px] lg:pb-[22px] lg:gap-[32px]">
               <Button asChild size="lg" className="w-full sm:w-auto">
-                <Link className="flex items-center justify-center gap-2" href="#request-audit">
+                <a className="flex items-center justify-center gap-2" href="#request-audit">
                   Contact Us <FaArrowRight />
-                </Link>
+                </a>
               </Button>
             </div>
           </div>

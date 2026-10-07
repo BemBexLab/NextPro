@@ -133,10 +133,10 @@ const Approach = () => {
                       <Title className="" size={"4xl"}>{heading}</Title>
                       <p className="pt-5 pb-7.5">{description}</p>
                       <Button asChild variant="outline">
-                        <Link href="#request-audit">
+                        <a href="#request-audit">
                           Discover more
                           <FaArrowRight aria-hidden="true" className="text-lg" />
-                        </Link>
+                        </a>
                       </Button>
                     </div>
                     <div className="pr-7.5 pl-7.5 lg:pl-0 lg:max-w-[720px] w-full pt-7.5 lg:pt-0">
@@ -195,10 +195,10 @@ const Approach = () => {
                     className="rounded-2xl"
                   />
                   <Button asChild variant="outline" className="mt-4">
-                    <Link href="#request-audit">
+                    <a href="#request-audit">
                       Discover more
                       <FaArrowRight aria-hidden="true" className="text-sm" />
-                    </Link>
+                    </a>
                   </Button>
                 </div>
               )}

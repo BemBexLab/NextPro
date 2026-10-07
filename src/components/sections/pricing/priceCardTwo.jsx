@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { FaCircleCheck } from "react-icons/fa6";
 import {
   Dialog,
@@ -119,21 +118,21 @@ const PriceCardTwo = ({
               </a>
             </div>
 
-            <Link
+            <a
               href={auditHref || "/contact-us"}
               className="shrink-0 text-base font-extrabold leading-none text-primary hover:underline sm:text-lg"
             >
               Chat Now
-            </Link>
+            </a>
           </div>
 
           {auditHref ? (
-            <Link
+            <a
               href={auditHref}
               className="flex w-full items-center justify-center rounded-[7px] bg-[#BF0B30] px-4 py-3 text-base font-bold text-white shadow-md transition hover:bg-[#BF0B30]/90 sm:text-lg"
             >
               Request an Audit
-            </Link>
+            </a>
           ) : (
             <OrderDialog />
           )}
