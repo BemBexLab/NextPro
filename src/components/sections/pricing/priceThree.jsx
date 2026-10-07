@@ -77,6 +77,7 @@ const PriceThree = () => {
                     price={price}
                     old_price={old_price}
                     services={services}
+                    showImage={false}
                   />
                 ),
               )

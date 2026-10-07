@@ -13,7 +13,7 @@ import RequestAFreeAudit from "./components/RequestAFreeAudit";
 export default function Page() {
   return (
     <>
-      <HalloweenHeader haveShadow={undefined} />
+      {/* <HalloweenHeader haveShadow={undefined} /> */}
       <section
         className="w-full bg-cover bg-center bg-no-repeat"
         style={{
@@ -34,7 +34,7 @@ export default function Page() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-20 overflow-hidden"
+          className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
         >
           <Image
             src="/Halloween Assets Task/image 24.png"
@@ -64,41 +64,20 @@ export default function Page() {
             alt=""
             className="absolute right-[28%] bottom-[18%] h-10 w-10 -rotate-12 scale-x-[-1] object-contain opacity-40 sm:h-14 sm:w-14"
           />
-          <Image
+          {/* <Image
             src="/Halloween Assets Task/image 24.png"
             width={256}
             height={256}
             alt=""
-            className="absolute left-[12%] bottom-[6%] h-8 w-8 rotate-12 object-contain opacity-50 sm:h-12 sm:w-12 lg:h-16 lg:w-16"
-          />
-          <Image
-            src="/Halloween Assets Task/image 24.png"
-            width={256}
-            height={256}
-            alt=""
-            className="absolute left-[20%] top-[66%] h-7 w-7 -rotate-6 scale-x-[-1] object-contain opacity-45 sm:h-10 sm:w-10"
-          />
-          <Image
-            src="/Halloween Assets Task/image 24.png"
-            width={256}
-            height={256}
-            alt=""
-            className="absolute right-[42%] top-[54%] h-9 w-9 rotate-12 object-contain opacity-40 sm:h-14 sm:w-14"
-          />
-          <Image
+            className="absolute bg-red-500 left-[12%] bottom-[6%] h-8 w-8 rotate-12 object-contain opacity-50 sm:h-12 sm:w-12 lg:h-16 lg:w-16"
+          /> */}
+          {/* <Image
             src="/Halloween Assets Task/image 24.png"
             width={256}
             height={256}
             alt=""
             className="absolute right-[12%] bottom-[5%] h-10 w-10 -rotate-12 scale-x-[-1] object-contain opacity-45 sm:h-16 sm:w-16 lg:h-20 lg:w-20"
-          />
-          <Image
-            src="/Halloween Assets Task/image 24.png"
-            width={256}
-            height={256}
-            alt=""
-            className="absolute left-[55%] bottom-[30%] h-8 w-8 rotate-6 object-contain opacity-35 sm:h-12 sm:w-12 lg:h-16 lg:w-16"
-          />
+          /> */}
           <Image
             src="/Halloween Assets Task/image 24.png"
             width={256}

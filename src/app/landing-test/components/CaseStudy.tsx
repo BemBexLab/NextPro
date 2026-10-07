@@ -21,7 +21,6 @@ const GalleryCarousel = () => {
   const [projects, setProjects] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0); // Will be set on data load
-  const [isHovering, setIsHovering] = useState(false);
   const [shouldSmoothScroll, setShouldSmoothScroll] = useState(true);
 
   const carouselRef = useRef(null);
@@ -101,12 +100,12 @@ const GalleryCarousel = () => {
 
   // 3. Auto-play
   useEffect(() => {
-    if (isHovering || projectsCount === 0) return;
+    if (projectsCount === 0) return;
     const interval = setInterval(() => {
       handleNext();
     }, 3000);
     return () => clearInterval(interval);
-  }, [isHovering, projectsCount, activeIndex]);
+  }, [projectsCount, activeIndex]);
 
   // 4. Smooth scroll to active index, or instant if shouldSmoothScroll === false
   useEffect(() => {
@@ -214,14 +213,12 @@ const GalleryCarousel = () => {
     <div
       ref={sectionRef}
       className="relative w-full overflow-hidden"
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
     >
       {/* Left Navigation Button */}
       <div className="absolute top-1/2 left-2 z-10 -translate-y-1/2">
         <button
           onClick={handlePrev}
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-[#555D73] text-white shadow-md transition-colors hover:bg-[#3F475D]"
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-[#555D73] text-white shadow-md"
           aria-label="Previous project"
         >
           <FaChevronLeft aria-hidden="true" className="text-xs" />
@@ -231,7 +228,7 @@ const GalleryCarousel = () => {
       <div className="absolute top-1/2 right-2 z-10 -translate-y-1/2">
         <button
           onClick={handleNext}
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-[#555D73] text-white shadow-md transition-colors hover:bg-[#3F475D]"
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-[#555D73] text-white shadow-md"
           aria-label="Next project"
         >
           <FaChevronRight aria-hidden="true" className="text-xs" />
@@ -263,7 +260,7 @@ const GalleryCarousel = () => {
               ref={refProp}
               className={`
                                 relative block aspect-[2/1] w-[80vw] min-w-0 max-w-[88vw]
-                                shrink-0 snap-center overflow-hidden rounded-xl border border-[#E2E6F0] bg-[#F5F7FC] shadow-sm transition-shadow duration-300 hover:shadow-lg
+                                shrink-0 snap-center overflow-hidden rounded-xl border border-[#E2E6F0] bg-[#F5F7FC] shadow-sm
                                 sm:w-[320px] sm:max-w-[340px]
                                 md:w-[calc((100%_-_3rem)_/_3)] md:max-w-[420px]
                             `}
@@ -276,13 +273,8 @@ const GalleryCarousel = () => {
                 loading="lazy"
                 decoding="async"
                 fetchPriority="low"
-                className="h-full w-full object-contain object-center p-2"
+                className="h-full w-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <span className="text-white font-medium text-lg">
-                  {projectTitle}
-                </span>
-              </div>
             </a>
           );
         })}
@@ -296,10 +288,11 @@ const CaseStudy = () => {
     <section className="relative isolate bg-[#FAFBFE] lg:py-15 py-9">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-0 bg-no-repeat opacity-70"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-full bg-no-repeat opacity-70"
         style={{
-          backgroundImage: "url('/Halloween%20Assets%20Task/image%2031.jpg')",
-          backgroundSize: "100% 100%",
+          backgroundImage: "url('/Halloween%20Assets%20Task/part-01.webp')",
+          backgroundSize: "100% auto",
+          backgroundPosition: "bottom",
         }}
       />
       <img

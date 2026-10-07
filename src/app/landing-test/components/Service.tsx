@@ -49,7 +49,7 @@ const Services = () => {
                     <Link
                       href={link}
                       key={id}
-                      className={`${serviceSlideClassName} group flex h-full flex-col items-center rounded-2xl border border-border bg-background p-6 text-center shadow-sm transition-all duration-300 hover:shadow-lg lg:p-8`}
+                      className={`${serviceSlideClassName} group flex h-full flex-col items-center rounded-2xl border border-white/70 bg-white/55 p-6 text-center shadow-[0_8px_32px_rgba(31,38,135,0.08)] ring-1 ring-white/40 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/90 hover:bg-white/75 hover:shadow-[0_16px_40px_rgba(31,38,135,0.14)] lg:p-8`}
                     >
                       <div className="md:w-[85px] md:h-[85px] w-16 h-16 md:p-6 p-4 rounded-full flex justify-center items-center mb-6 bg-[rgba(46,77,254,0.10)] icon">
                         <span className="transition-all duration-500 group-hover:scale-90">
@@ -72,7 +72,7 @@ const Services = () => {
       </div>
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-20 overflow-hidden"
+        className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
       >
         <Image
           src="/Halloween Assets Task/image 15.webp"

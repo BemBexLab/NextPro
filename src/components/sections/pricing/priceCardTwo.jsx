@@ -21,6 +21,7 @@ const PriceCardTwo = ({
   services = [],
   old_price,
   imageSrc = "/Halloween Assets Task/image 28.webp",
+  showImage = true,
 }) => {
   const planNameRef = useRef(null);
   const [animate, setAnimate] = useState(false);
@@ -60,11 +61,13 @@ const PriceCardTwo = ({
         >
           {plan_name}
         </h2>
-        <img
-          src={imageSrc}
-          alt={`${plan_name} image`}
-          className="absolute right-3 top-[-32px] z-20 h-24 w-24 object-contain"
-        />
+        {showImage && (
+          <img
+            src={imageSrc}
+            alt={`${plan_name} image`}
+            className="absolute right-3 top-[-32px] z-20 h-24 w-24 object-contain"
+          />
+        )}
       </div>
 
       <div className="flex h-full min-w-0 flex-col pt-16">
