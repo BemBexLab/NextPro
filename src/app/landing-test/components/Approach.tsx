@@ -105,7 +105,7 @@ const Approach = () => {
                   key={id}
                   value={id}
                   className={
-                    "h-16 w-fit shrink-0 items-center gap-3 overflow-hidden rounded-[10px] bg-[#F4F6FF] px-4 text-start whitespace-nowrap dark:bg-[#1c242b] xl:gap-5 xl:px-6 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:bg-primary"
+                    "h-16 w-fit shrink-0 items-center gap-3 overflow-hidden rounded-[10px] bg-[#F4F6FF] px-4 text-start whitespace-nowrap dark:bg-[#1c242b] xl:gap-5 xl:px-6 data-[state=active]:bg-red-700 data-[state=active]:text-white dark:data-[state=active]:bg-red-800"
                   }
                 >
                   <span
@@ -130,7 +130,7 @@ const Approach = () => {
                 <SlideUp>
                   <div className="flex w-full flex-col justify-between rounded-[30px] bg-[#F4F6FF] py-7.5 dark:bg-[#1c242b] lg:flex-row">
                     <div className="flex flex-col justify-center pl-7.5 pr-7.5 lg:max-w-[550px] lg:pl-[86px] lg:pr-0 xl:max-w-[660px]">
-                      <Title size={"4xl"}>{heading}</Title>
+                      <Title className="" size={"4xl"}>{heading}</Title>
                       <p className="pt-5 pb-7.5">{description}</p>
                       <Button asChild variant="outline">
                         <Link href="/about-us">
@@ -161,15 +161,22 @@ const Approach = () => {
           {tabList.map(({ id, tab_icon, tab_name, heading, description, tab_content }) => (
             <div key={id} className="mb-4 rounded-xl overflow-hidden shadow-sm bg-[#F4F6FF] dark:bg-[#1c242b]">
               <button
-                className="flex items-center w-full p-4 focus:outline-none"
+                className={`flex w-full items-center p-4 focus:outline-none ${mobileOpen === id ? "bg-red-700 text-white" : ""}`}
                 onClick={() => handleAccordion(id)}
                 aria-expanded={mobileOpen === id}
                 aria-controls={`accordion-content-${id}`}
               >
-                <span aria-hidden="true" className="mr-3 text-xl">
+                <span
+                  aria-hidden="true"
+                  className={`mr-3 text-xl ${mobileOpen === id ? "text-white" : ""}`}
+                >
                   {tab_icon}
                 </span>
-                <span className="font-semibold text-lg flex-1 text-left">{tab_name}</span>
+                <span
+                  className={`flex-1 text-left text-lg font-semibold ${mobileOpen === id ? "text-white" : ""}`}
+                >
+                  {tab_name}
+                </span>
                 <svg className={`transform transition-transform duration-200 ${mobileOpen === id ? "rotate-180" : ""}`} width={18} height={18} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
               </button>
               {mobileOpen === id && (

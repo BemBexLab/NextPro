@@ -1,4 +1,5 @@
 import Image from "next/image";
+import localFont from "next/font/local";
 import Hero from "./components/Hero";
 import HalloweenHeader from "@/components/sections/headers/HalloweenHeader";
 import InfiniteLogoSlider from "./components/InfiniteLogoSlider";
@@ -9,27 +10,40 @@ import CaseStudy from "./components/CaseStudy";
 import Pricing from "./components/Pricing";
 import Subscribe from "./components/Subscribe";
 import RequestAFreeAudit from "./components/RequestAFreeAudit";
+import FAQ from "./components/FAQs";
+
+const halloweenPhantom = localFont({
+  src: "../../../public/fonts/halloween-phantom-2026-04-07-06-18-34-utc/Halloween Phantom.ttf",
+  variable: "--font-halloween-phantom",
+  display: "swap",
+});
 
 export default function Page() {
   return (
-    <>
-      {/* <HalloweenHeader haveShadow={undefined} /> */}
-      <section
-        className="w-full bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/Halloween%20Assets%20Task/image%2032.jpg')",
-        }}
-      >
-        <Hero />
+    <div className={`landing-test-headings ${halloweenPhantom.variable}`}>
+      <HalloweenHeader haveShadow={undefined} />
+      <section className="relative isolate w-full bg-[#FAFBFE]">
+        <div
+          aria-hidden="true"
+          className="landing-test-image-fade pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/Halloween%20Assets%20Task/image%2032.jpg')",
+          }}
+        />
+        <div className="relative z-10">
+          <Hero />
+        </div>
       </section>
       <InfiniteLogoSlider />
       <Services />
       <div className="relative isolate bg-[#FAFBFE]">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          className="landing-test-image-fade pointer-events-none absolute inset-x-0 bottom-0 z-0 h-full bg-no-repeat"
           style={{
-            backgroundImage: "url('/Halloween%20Assets%20Task/image%2031.jpg')",
+            backgroundImage: "url('/Halloween Assets Task/part-01.webp')",
+            backgroundSize: "100% auto",
+            backgroundPosition: "center bottom",
           }}
         />
         <div
@@ -64,20 +78,6 @@ export default function Page() {
             alt=""
             className="absolute right-[28%] bottom-[18%] h-10 w-10 -rotate-12 scale-x-[-1] object-contain opacity-40 sm:h-14 sm:w-14"
           />
-          {/* <Image
-            src="/Halloween Assets Task/image 24.png"
-            width={256}
-            height={256}
-            alt=""
-            className="absolute bg-red-500 left-[12%] bottom-[6%] h-8 w-8 rotate-12 object-contain opacity-50 sm:h-12 sm:w-12 lg:h-16 lg:w-16"
-          /> */}
-          {/* <Image
-            src="/Halloween Assets Task/image 24.png"
-            width={256}
-            height={256}
-            alt=""
-            className="absolute right-[12%] bottom-[5%] h-10 w-10 -rotate-12 scale-x-[-1] object-contain opacity-45 sm:h-16 sm:w-16 lg:h-20 lg:w-20"
-          /> */}
           <Image
             src="/Halloween Assets Task/image 24.png"
             width={256}
@@ -92,10 +92,10 @@ export default function Page() {
         </div>
       </div>
       <CaseStudy />
-      <div className="relative isolate w-full bg-[#F0F5FF]">
+      <div className="relative isolate w-full bg-gradient-to-b from-[#FAFBFE] via-[#F5F7FD] to-[#F0F5FF]">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          className="landing-test-image-fade pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('/Halloween Assets Task/image 32.jpg')",
             backgroundSize: "cover",
@@ -124,6 +124,7 @@ export default function Page() {
         </div>
       </div>
       <RequestAFreeAudit />
-    </>
+      <FAQ />
+    </div>
   );
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -18,305 +17,110 @@ const navigationLinks = [
   { id: 1, path: "/", lable: "Home" },
   { id: 2, path: "/about-us", lable: "About Us" },
   { id: 4, path: "/service/seo-services/", lable: "SEO Services" },
-  { id: 3, path: "/service", lable: "Service" },
+  { id: 3, path: "/service", lable: "Services" },
   { id: 5, path: "/portfolio", lable: "Our Work" },
-  { id: 6, path: "/pricing", lable: "Pricing Plans" },
+  { id: 6, path: "/pricing", lable: "Pricing" },
   { id: 7, path: "/blog", lable: "Blog" },
   { id: 8, path: "/locations", lable: "Locations", children: locationNavigation },
 ];
 
 const HalloweenHeader = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
   const pathname = usePathname();
-  const [openDropdown, setOpenDropdown] = useState(null);
-  const mobileNavigationLinks = navigationLinks.map((link) =>
-    link.lable === "SEO Services"
-      ? { ...link, children: seoSubServices }
-      : link,
-  );
-
-  const isActive = (path) => {
-    if (path === "/") {
-      return pathname === "/";
+  const mobileNavigationLinks = navigationLinks.map((link) => {
+    if (link.lable === "SEO Services") {
+      return { ...link, children: seoSubServices };
     }
 
-    return pathname.startsWith(path);
-  };
+    if (link.lable === "Services") {
+      return { ...link, children: serviceLinks };
+    }
+
+    return link;
+  });
+
   return (
     <StickyHeader>
       <header
         id="header"
-        className="sticky top-0 z-40 w-full overflow-x-clip bg-[#F0F5FF] transition-[top] duration-300"
+        className="sticky top-0 z-40 w-full bg-[#F7F8FE] transition-[top] duration-300"
       >
         <div
           id="header-container"
-          className={`${
-            haveShadow
-              ? "shadow-3xl dark:shadow-[0px_14px_21px_0px_rgba(0,0,0,0.3)]"
+          className={`${haveShadow ? "shadow-3xl dark:shadow-[0px_14px_21px_0px_rgba(0,0,0,0.3)]" : ""} ${
+            pathname !== "/home-2"
+              ? "[.header-pinned_&]:shadow-[0_12px_32px_rgba(15,23,42,0.12)]"
               : ""
           }`}
         >
-          <div
-            className={`${
-              pathname !== "/home-2"
-                ? "[.header-pinned_&]:shadow-3xl dark:[.header-pinned_&]:shadow-[0px_14px_21px_0px_rgba(0,0,0,0.3)]"
-                : ""
-            }`}
-          >
-            <div className="relative mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8">
-              <span className="block border-t border-accent"></span>
-              <div className="flex min-h-[72px] items-center justify-between gap-3 sm:min-h-[80px] xl:gap-4">
-                <div className="w-[140px] shrink-0 py-2 sm:w-[170px] lg:w-[190px] xl:w-[150px] 2xl:w-[190px]">
-                  <Link
-                    href="/"
-                    className="block h-[56px] w-full sm:h-[64px] 2xl:h-[76px]"
-                    aria-label="Web Founders USA home"
-                  >
-                    <video
-                      className="block h-full w-full object-contain"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      preload="metadata"
-                      aria-label="Web Founders USA"
-                    >
-                      <source
-                        src="/videos/web founder logo animate 1.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                  </Link>
-                </div>
+          <div className="relative mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8">
+            <span className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[#072D7F] via-[#BF0B30] to-[#F59E0B]" />
+            <div className="flex min-h-[76px] items-center justify-between gap-3 sm:min-h-[86px] xl:gap-6">
+              <Link
+                href="/"
+                className="flex h-[58px] w-[136px] shrink-0 items-center rounded-xl outline-none transition-transform duration-200 hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 sm:h-[68px] sm:w-[166px] 2xl:h-[74px] 2xl:w-[184px]"
+                aria-label="Web Founders USA home"
+              >
+                <video
+                  className="block h-full w-full object-contain"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  aria-label="Web Founders USA"
+                >
+                  <source
+                    src="/videos/4a94f1c960b6437fa042633d91c2a2d9.webm"
+                    type="video/mp4"
+                  />
+                </video>
+              </Link>
 
-                <nav className="hidden min-w-0 xl:block">
-                  <ul className="flex items-center gap-3 whitespace-nowrap text-sm 2xl:gap-7 2xl:text-base">
-                    {navigationLinks.map(
-                      ({ id, lable, path, children = [] }) => {
-                        const active = isActive(path);
+              <div className="hidden shrink-0 items-center gap-3 xl:flex 2xl:gap-4">
+                <a
+                  href="tel:+14704707392"
+                  className="group flex items-center gap-2 rounded-full px-2 py-2 text-slate-700 outline-none transition-colors hover:text-[#072D7F] focus-visible:ring-2 focus-visible:ring-[#BF0B30] 2xl:gap-2.5"
+                  aria-label="Call +1 470-470-7392"
+                >
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#072D7F]/[0.07] text-[#072D7F] transition-colors group-hover:bg-[#072D7F] group-hover:text-white 2xl:h-10 2xl:w-10">
+                    <IoCall className="h-4 w-4 2xl:h-[18px] 2xl:w-[18px]" />
+                  </span>
+                  <span className="text-[12px] font-bold tabular-nums xl:text-[13px]">
+                    +1 470-470-7392
+                  </span>
+                </a>
 
-                        if (lable === "Service") {
-                          return (
-                            <li
-                              className="relative py-8 2xl:py-9"
-                              key={id}
-                              onMouseEnter={() => setOpenDropdown("service")}
-                              onMouseLeave={() => setOpenDropdown(null)}
-                            >
-                              <Link
-                                href={path}
-                                className={`relative flex items-center gap-0.5 font-semibold leading-[22px] transition-all duration-500 ${
-                                  active
-                                    ? "text-primary underline"
-                                    : "text-muted-foreground"
-                                } hover:text-primary-foreground`}
-                                onClick={() => setOpenDropdown(null)}
-                              >
-                                {lable}
-                                <svg
-                                  className="h-4 w-4 shrink-0 2xl:ml-0.5 2xl:h-5 2xl:w-5"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth={2}
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path d="M19 9l-7 7-7-7" />
-                                </svg>
-                              </Link>
+                <Button
+                  asChild
+                  className="h-11 rounded-full bg-[#BF0B30] px-5 text-sm font-bold text-white shadow-[0_7px_18px_rgba(191,11,48,0.2)] transition-all hover:-translate-y-0.5 hover:bg-[#A60929] hover:shadow-[0_10px_24px_rgba(191,11,48,0.27)] focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 2xl:px-6"
+                >
+                  <Link href="/contact-us">Let&apos;s Talk</Link>
+                </Button>
+              </div>
 
-                              <div
-                                className={`absolute left-0 top-full z-30 w-[840px] max-w-[calc(100vw-2rem)] rounded-xl bg-white shadow-2xl transition-all duration-200 ${
-                                  openDropdown === "service"
-                                    ? "pointer-events-auto translate-y-0 opacity-100"
-                                    : "pointer-events-none translate-y-2 opacity-0"
-                                }`}
-                              >
-                                <ul className="custom-scrollbar grid max-h-[min(70vh,420px)] grid-cols-3 gap-1 overflow-y-auto overflow-x-hidden whitespace-normal p-3">
-                                  {serviceLinks.map((service) => (
-                                    <li key={service.id}>
-                                      <Link
-                                        href={service.path}
-                                        title={service.title}
-                                        className="block w-full truncate rounded-lg px-4 py-2.5 text-left text-muted-foreground transition-colors hover:bg-gray-100 hover:text-primary-foreground"
-                                        onClick={() => setOpenDropdown(null)}
-                                      >
-                                        {service.title}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                  {!serviceLinks.length && (
-                                    <li className="col-span-3 px-4 py-2 text-muted-foreground">
-                                      View all services
-                                    </li>
-                                  )}
-                                </ul>
-                              </div>
-                            </li>
-                          );
-                        }
-
-                        if (lable === "SEO Services") {
-                          return (
-                            <li
-                              className="relative py-8 2xl:py-9"
-                              key={id}
-                              onMouseEnter={() =>
-                                setOpenDropdown("seo-services")
-                              }
-                              onMouseLeave={() => setOpenDropdown(null)}
-                            >
-                              <Link
-                                href={path}
-                                className={`relative flex items-center gap-0.5 font-semibold leading-[22px] transition-all duration-500 ${
-                                  active
-                                    ? "text-primary underline underline-offset-4"
-                                    : "text-muted-foreground"
-                                } hover:text-primary-foreground`}
-                                onClick={() => setOpenDropdown(null)}
-                              >
-                                {lable}
-                                <svg
-                                  className="h-4 w-4 shrink-0 2xl:ml-0.5 2xl:h-5 2xl:w-5"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth={2}
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path d="M19 9l-7 7-7-7" />
-                                </svg>
-                              </Link>
-
-                              <div
-                                className={`absolute left-0 top-full z-30 w-[840px] max-w-[calc(100vw-2rem)] rounded-xl bg-white shadow-2xl transition-all duration-200 ${
-                                  openDropdown === "seo-services"
-                                    ? "pointer-events-auto translate-y-0 opacity-100"
-                                    : "pointer-events-none translate-y-2 opacity-0"
-                                }`}
-                              >
-                                <ul className="custom-scrollbar grid max-h-[min(70vh,420px)] grid-cols-3 gap-1 overflow-y-auto overflow-x-hidden whitespace-normal p-3">
-                                  {seoSubServices.map((service) => (
-                                    <li key={service.id}>
-                                      <Link
-                                        href={service.path}
-                                        title={service.title}
-                                        className="block w-full truncate rounded-lg px-4 py-2.5 text-left text-muted-foreground transition-colors hover:bg-gray-100 hover:text-primary-foreground"
-                                        onClick={() => setOpenDropdown(null)}
-                                      >
-                                        {service.title}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                  {!seoSubServices.length && (
-                                    <li className="col-span-3 px-4 py-2 text-muted-foreground">
-                                      View SEO services
-                                    </li>
-                                  )}
-                                </ul>
-                              </div>
-                            </li>
-                          );
-                        }
-
-                        if (lable === "Locations") {
-                          return (
-                            <li
-                              className="relative py-8 2xl:py-9"
-                              key={id}
-                              onMouseEnter={() => setOpenDropdown("locations")}
-                              onMouseLeave={() => setOpenDropdown(null)}
-                            >
-                              <Link
-                                href={path}
-                                className={`relative flex items-center gap-0.5 font-semibold leading-[22px] transition-all duration-500 ${
-                                  active
-                                    ? "text-primary underline underline-offset-4"
-                                    : "text-muted-foreground"
-                                } hover:text-primary-foreground`}
-                                onClick={() => setOpenDropdown(null)}
-                              >
-                                {lable}
-                                <svg
-                                  className="h-4 w-4 shrink-0 2xl:ml-0.5 2xl:h-5 2xl:w-5"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth={2}
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path d="M19 9l-7 7-7-7" />
-                                </svg>
-                              </Link>
-
-                              <div
-                                className={`absolute right-0 top-full z-30 w-64 rounded-xl bg-white shadow-2xl transition-all duration-200 ${
-                                  openDropdown === "locations"
-                                    ? "pointer-events-auto translate-y-0 opacity-100"
-                                    : "pointer-events-none translate-y-2 opacity-0"
-                                }`}
-                              >
-                                <ul className="space-y-1 whitespace-normal p-3">
-                                  {children.map((location) => (
-                                    <li key={location.id}>
-                                      <Link
-                                        href={location.path}
-                                        title={location.title}
-                                        className="block w-full rounded-lg px-4 py-2.5 text-left text-muted-foreground transition-colors hover:bg-gray-100 hover:text-primary-foreground"
-                                        onClick={() => setOpenDropdown(null)}
-                                      >
-                                        {location.title}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            </li>
-                          );
-                        }
-
-                        return (
-                          <li className="py-8 2xl:py-9" key={id}>
-                            <Link
-                              href={path}
-                              className={`relative flex items-center gap-1 font-semibold leading-[22px] transition-all duration-500 ${
-                                active
-                                  ? "text-primary underline underline-offset-4"
-                                  : "text-muted-foreground"
-                              } hover:text-primary-foreground`}
-                            >
-                              {lable}
-                            </Link>
-                          </li>
-                        );
-                      },
-                    )}
-                  </ul>
-                </nav>
-
-                <div className="hidden shrink-0 items-center gap-2 xl:flex 2xl:gap-4">
-                  <a
-                    href="tel:+14704707392"
-                    className="group flex shrink-0 items-center gap-2 2xl:gap-3"
-                    aria-label="Call +1 470-470-7392"
-                  >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full border-primary bg-primary transition group-hover:bg-primary/80 2xl:h-12 2xl:w-12">
-                      <div className="flex items-center justify-center text-white">
-                        <IoCall className="h-5 w-5 2xl:h-6 2xl:w-6" />
-                      </div>
-                    </div>
-                    <span className="hidden text-sm font-semibold text-primary group-hover:underline 2xl:inline 2xl:text-base">
-                      +1 470-470-7392
-                    </span>
-                  </a>
-
-                  <Button
-                    asChild
-                    size="xl"
-                    className="px-4 py-3 text-sm 2xl:px-7 2xl:text-base"
-                  >
-                    <Link className="text-foreground" href="/contact-us">
-                      Contact Us
-                    </Link>
-                  </Button>
-                </div>
-
+              <div className="flex items-center gap-2 sm:gap-3 xl:hidden">
+                <a
+                  href="tel:+14704707392"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[#072D7F]/10 bg-white text-[#072D7F] shadow-sm transition-all hover:border-[#072D7F] hover:bg-[#072D7F] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30] sm:hidden"
+                  aria-label="Call +1 470-470-7392"
+                >
+                  <IoCall className="h-4 w-4" />
+                </a>
+                <a
+                  href="tel:+14704707392"
+                  className="hidden items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 text-[12px] font-bold tabular-nums text-slate-700 shadow-sm transition-colors hover:border-[#072D7F]/30 hover:text-[#072D7F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30] sm:flex"
+                  aria-label="Call +1 470-470-7392"
+                >
+                  <IoCall className="h-4 w-4 text-[#072D7F]" />
+                  <span className="hidden md:inline">+1 470-470-7392</span>
+                  <span className="md:hidden">Call</span>
+                </a>
+                <Button
+                  asChild
+                  className="hidden h-10 rounded-full bg-[#BF0B30] px-4 text-xs font-bold text-white shadow-[0_6px_16px_rgba(191,11,48,0.18)] transition-all hover:-translate-y-0.5 hover:bg-[#A60929] hover:shadow-[0_9px_22px_rgba(191,11,48,0.25)] focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 sm:inline-flex"
+                >
+                  <Link href="/contact-us">Let&apos;s Talk</Link>
+                </Button>
                 <MobileMenu data={mobileNavigationLinks} />
               </div>
             </div>

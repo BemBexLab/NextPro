@@ -288,7 +288,7 @@ const CaseStudy = () => {
     <section className="relative isolate bg-[#FAFBFE] lg:py-15 py-9">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-full bg-no-repeat opacity-70"
+        className="landing-test-image-fade pointer-events-none absolute inset-x-0 bottom-0 z-0 h-full bg-no-repeat opacity-70"
         style={{
           backgroundImage: "url('/Halloween%20Assets%20Task/part-01.webp')",
           backgroundSize: "100% auto",

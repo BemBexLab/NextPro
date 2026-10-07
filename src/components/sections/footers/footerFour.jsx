@@ -5,9 +5,9 @@ import ImportanceLinks from "./importanceLinks";
 
 const FooterFour = () => {
   return (
-    <footer className="relative w-full overflow-hidden rounded-t-[20px] bg-primary pt-12 sm:rounded-t-[30px] sm:pt-16 md:pt-20 lg:pt-28 xl:pt-40 2xl:pt-[200px]">
+    <footer className="relative w-full overflow-hidden bg-primary pt-12 sm:pt-16 md:pt-20 lg:pt-28 xl:pt-40 2xl:pt-[200px]">
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-full bg-contain bg-top bg-no-repeat opacity-20"
+        className="footer-four-background pointer-events-none absolute inset-x-0 top-0 h-full bg-contain bg-top bg-no-repeat opacity-20"
         style={{
           backgroundImage: "url(/images/background/services-bg1-1.webp)",
         }}

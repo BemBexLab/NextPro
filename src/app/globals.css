@@ -6,6 +6,34 @@ html {
   scroll-behavior: smooth;
 }
 
+.landing-test-headings :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-halloween-phantom), Georgia, serif;
+}
+
+.landing-test-image-fade {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 18%,
+    #000 82%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 18%,
+    #000 82%,
+    transparent 100%
+  );
+}
+
+body:has(.landing-test-headings) .footer-four-background {
+  background-image: url("/Halloween%20Assets%20Task/image%2030.jpg") !important;
+  background-position: center top;
+  background-size: 100% 100%;
+  opacity: 1;
+}
+
 @layer base {
   :root {
     --background: #fff;

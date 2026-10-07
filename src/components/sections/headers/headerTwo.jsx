@@ -36,9 +36,9 @@ const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
 
   const normalizedPathname = pathname?.replace(/\/+$/, "") || "";
 
-  // if (normalizedPathname === "/landing-test") {
-  //   return null;
-  // }
+  if (normalizedPathname === "/landing-test") {
+    return null;
+  }
 
   const isActive = (path) => {
     if (path === "/") {
