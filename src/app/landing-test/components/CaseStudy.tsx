@@ -288,11 +288,15 @@ const CaseStudy = () => {
     <section className="relative isolate bg-[#FAFBFE] lg:py-15 py-9">
       <div
         aria-hidden="true"
-        className="landing-test-image-fade pointer-events-none absolute inset-x-0 bottom-0 z-0 h-full bg-no-repeat opacity-70"
+        className="landing-test-image-fade pointer-events-none absolute inset-x-0 bottom-0 z-0 h-full bg-no-repeat opacity-100"
         style={{
-          backgroundImage: "url('/Halloween%20Assets%20Task/part-01.webp')",
+          backgroundImage: "url('/Halloween%20Assets%20Task/part-02.webp')",
           backgroundSize: "100% auto",
           backgroundPosition: "bottom",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, transparent 0%, #000 8%, #000 92%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to bottom, transparent 0%, #000 8%, #000 92%, transparent 100%)",
         }}
       />
       <img
