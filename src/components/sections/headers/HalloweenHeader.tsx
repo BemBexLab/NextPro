@@ -7,10 +7,6 @@ import { IoCall } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
 import StickyHeader from "@/components/ui/stickyHeader";
 
-const MobileMenu = dynamic(() => import("./mobileMenu"), {
-  ssr: false,
-});
-
 
 const HalloweenHeader = () => {
   const pathname = usePathname();
