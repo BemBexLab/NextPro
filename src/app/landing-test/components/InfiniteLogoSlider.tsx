@@ -5,7 +5,7 @@ const logos = Array.from({ length: 25 }, (_, index) => index);
 
 export default function InfiniteLogoSlider() {
   return (
-    <section aria-label="Partner logos" className="w-full overflow-hidden py-2">
+    <section aria-label="Partner logos" className="bg-[#FAFBFE] w-full overflow-hidden py-2">
       <div className="logo-marquee">
         <div className="logo-track flex w-max">
           {[0, 1].map((copy) => (

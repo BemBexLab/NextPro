@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <section className="container h-auto">
+    <section className="container h-auto py-10">
       <div className="overflow-x-clip overflow-y-visible rounded-[30px] border-2 border-[rgba(0,31,63,0.05)] bg-[rgba(226,231,255,0.4)] pl-4 pr-4 dark:bg-[#1c232a] lg:pl-[52px] lg:pr-0">
         <div className="relative grid grid-cols-1 lg:grid-cols-2">
           <div className="flex flex-col justify-center py-10">

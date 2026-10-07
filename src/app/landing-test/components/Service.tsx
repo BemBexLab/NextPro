@@ -12,20 +12,20 @@ const serviceSlideClassName =
 
 const Services = () => {
   return (
-    <section className="relative isolate pt-8 pb-9 lg:pb-15" id="services">
+    <section className="relative isolate bg-[#FAFBFE] pt-8 pb-2 overflow-x-hidden" id="services">
       <div className="relative mx-auto max-w-[1350px] px-[15px]">
         <div className="relative z-10">
           <SlideUp>
             <div className="flex flex-col items-center">
               <Button variant="secondary">Our Services</Button>
               <Title size={"5xl"} className="max-w-[869px] pt-2 text-center">
-                A Complete Ecosystem for Design, Development & Digital Marketing
+                A Complete Ecosystem for Design, Development & <span className="text-red-500">Digital Marketing</span>
               </Title>
             </div>
           </SlideUp>
           <div className="relative pt-2 lg:pt-7.5">
             <Image
-              src="/Halloween%20Assets%20Task/image%2019.png"
+              src="/Halloween Assets Task/image 14.png"
               width={240}
               height={240}
               alt=""
@@ -69,6 +69,60 @@ const Services = () => {
             </SlideUp>
           </div>
         </div>
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-20 overflow-hidden"
+      >
+        <Image
+          src="/Halloween Assets Task/image 15.webp"
+          width={960}
+          height={1600}
+          alt=""
+          className="absolute bottom-0 left-0 h-auto w-32 object-contain sm:w-48 lg:w-64"
+        />
+        <Image
+          src="/Halloween Assets Task/image 16.webp"
+          width={1210}
+          height={866}
+          alt=""
+          className="absolute bottom-0 right-0 h-auto w-40 object-contain sm:w-56 lg:w-80"
+        />
+        <Image
+          src="/Halloween Assets Task/image 24.png"
+          width={160}
+          height={160}
+          alt=""
+          className="absolute left-[4%] top-[18%] h-10 w-10 rotate-[-12deg] object-contain opacity-70 sm:h-12 sm:w-12"
+        />
+        <Image
+          src="/Halloween Assets Task/image 24.png"
+          width={160}
+          height={160}
+          alt=""
+          className="absolute left-[24%] top-[57%] h-12 w-12 scale-x-[-1] rotate-[15deg] object-contain opacity-45 sm:h-16 sm:w-16"
+        />
+        <Image
+          src="/Halloween Assets Task/image 24.png"
+          width={160}
+          height={160}
+          alt=""
+          className="absolute right-[8%] top-[50%] h-10 w-10 -rotate-6 object-contain opacity-50 sm:h-12 sm:w-12"
+        />
+        <Image
+          src="/Halloween Assets Task/image 24.png"
+          width={160}
+          height={160}
+          alt=""
+          className="absolute right-[26%] bottom-[8%] h-14 w-14 rotate-12 object-contain opacity-40 sm:h-20 sm:w-20"
+        />
+        <Image
+          src="/Halloween Assets Task/image 24.png"
+          width={160}
+          height={160}
+          alt=""
+          className="absolute left-[7%] bottom-[10%] h-12 w-12 -rotate-12 scale-x-[-1] object-contain opacity-50 sm:h-14 sm:w-14"
+        />
       </div>
     </section>
   );

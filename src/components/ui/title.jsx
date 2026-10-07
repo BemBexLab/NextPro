@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
 
-const Title = ({ children, size, className }) => {
+const Title = ({ children, size, className = "" }) => {
     const titleVariants = (size) => {
         const sizes = {
             "6xl": "lg:text-6xl md:text-5xl text-4xl lg:leading-[125%] md:leading-[120%]",

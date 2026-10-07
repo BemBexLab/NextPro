@@ -15,7 +15,13 @@ import { Button } from "@/components/ui/button";
 const dialogInputClassName =
   "h-11 min-w-0 w-full rounded border-2 border-gray-300 bg-white px-3 text-sm font-medium text-black outline-none placeholder:text-gray-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 sm:h-12 sm:text-base";
 
-const PriceCardTwo = ({ plan_name, price, services = [], old_price }) => {
+const PriceCardTwo = ({
+  plan_name,
+  price,
+  services = [],
+  old_price,
+  imageSrc = "/Halloween Assets Task/image 28.webp",
+}) => {
   const planNameRef = useRef(null);
   const [animate, setAnimate] = useState(false);
 
@@ -42,18 +48,23 @@ const PriceCardTwo = ({ plan_name, price, services = [], old_price }) => {
   }, []);
 
   return (
-    <article className="group relative mx-auto flex h-full min-h-[560px] w-full max-w-[390px] min-w-0 flex-col overflow-hidden rounded-[22px] border-2 border-black bg-[#ffe6e9] p-5 pt-0 shadow-sm transition hover:shadow-md sm:min-h-[600px] sm:p-8 sm:pt-0">
+    <article className="group relative mx-auto flex h-full min-h-[560px] w-full max-w-[390px] min-w-0 flex-col overflow-visible rounded-[22px] border-2 border-black bg-[#ffe6e9] p-5 pt-0 shadow-sm transition hover:shadow-md sm:min-h-[600px] sm:p-8 sm:pt-0">
       <div
-        className="absolute inset-x-0 top-0 z-10 flex min-h-16 items-center rounded-t-[20px] bg-[#BF0B30] px-4 py-3"
+        className="absolute inset-x-0 top-0 z-10 flex h-16 items-center justify-center rounded-t-[20px] bg-[#BF0B30] px-4 py-0"
         ref={planNameRef}
       >
         <h2
-          className={`w-full break-words text-center text-base font-bold uppercase leading-tight tracking-wider text-white sm:text-lg ${
+          className={`absolute inset-x-0 inset-y-0 flex w-full items-center justify-center break-words px-4 text-center text-base font-bold uppercase leading-tight tracking-wider text-white sm:text-lg ${
             animate ? "price-card-animate" : ""
           }`}
         >
           {plan_name}
         </h2>
+        <img
+          src={imageSrc}
+          alt={`${plan_name} image`}
+          className="absolute right-3 top-[-32px] z-20 h-24 w-24 object-contain"
+        />
       </div>
 
       <div className="flex h-full min-w-0 flex-col pt-16">
