@@ -33,8 +33,7 @@ const HalloweenHeader = () => {
           <div className="relative mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8">
             
             <div className="flex min-h-[76px] items-center justify-between gap-3 sm:min-h-[86px] xl:gap-6">
-              <Link
-                href="/"
+              <div
                 className="flex h-[58px] w-[136px] shrink-0 items-center rounded-xl outline-none transition-transform duration-200 hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 sm:h-[68px] sm:w-[166px] 2xl:h-[74px] 2xl:w-[184px]"
                 aria-label="Web Founders USA home"
               >
@@ -52,7 +51,7 @@ const HalloweenHeader = () => {
                     type="video/mp4"
                   />
                 </video>
-              </Link>
+              </div>
 
               <div className="hidden shrink-0 items-center gap-3 xl:flex 2xl:gap-4">
                 <a
