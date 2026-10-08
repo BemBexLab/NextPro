@@ -68,8 +68,8 @@ const ImportanceLinks = ({
         <div
             className={`grid min-w-0 gap-y-8 ${
                 excludeGroups.length
-                    ? "grid-cols-[max-content_max-content] justify-end gap-x-4"
-                    : "grid-cols-1 gap-x-5 min-[420px]:grid-cols-2 lg:grid-cols-4 lg:gap-x-6"
+                    ? "w-fit max-w-full grid-cols-2 justify-start gap-x-5 sm:gap-x-8"
+                    : "grid-cols-2 gap-x-5 lg:grid-cols-2 lg:gap-x-8 xl:grid-cols-4 xl:gap-x-6"
             }`}
         >
             {visibleLinks.map(({ id, links, title }) => {
@@ -81,14 +81,14 @@ const ImportanceLinks = ({
                     <h3 className={cn(`font-semibold text-1xl text-muted-foreground lg:pb-5 pb-3`, color)}>{title}</h3>
                     <ul>
                         {groupLinks.map(({ id: linkId, label, path }) => (
-                            <li key={linkId} className='mt-2.5'>
+                            <li key={linkId} className='mt-2.5 min-w-0'>
                                 {title === "Social" ? (
                                     <a
                                         href={path}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={cn(
-                                            `break-words font-semibold hover:text-primary-foreground transition-all duration-500`,
+                                            `block min-w-0 break-words font-semibold hover:text-primary-foreground transition-all duration-500`,
                                             color,
                                             linkHoverColor
                                         )}
@@ -99,7 +99,7 @@ const ImportanceLinks = ({
                                     <Link
                                         href={path}
                                         className={cn(
-                                            `break-words font-semibold hover:text-primary-foreground transition-all duration-500`,
+                                            `block min-w-0 break-words font-semibold hover:text-primary-foreground transition-all duration-500`,
                                             color,
                                             linkHoverColor
                                         )}
