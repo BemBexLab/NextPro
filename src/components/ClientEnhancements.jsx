@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import { usePathname } from "next/navigation";
 
 const AutoFaqJsonLd = dynamic(() => import("@/components/seo/AutoFaqJsonLd"));
 const ContactPopup = dynamic(() => import("@/components/popupform/ContactPopup"));
@@ -11,6 +12,7 @@ const Setting = dynamic(() => import("@/components/ui/setting"));
 
 export default function ClientEnhancements() {
   const [isReady, setIsReady] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const start = () => setIsReady(true);
@@ -39,7 +41,7 @@ export default function ClientEnhancements() {
   return (
     <>
       <AutoFaqJsonLd />
-      <ContactPopup />
+      {pathname !== "/landing-test" && <ContactPopup />}
       <Setting />
       {!isTouchDevice && <ScrollCircle />}
       {!isTouchDevice && <CustomCursor />}
