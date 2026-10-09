@@ -81,4 +81,9 @@ export const locationNavigation = [
     path: "/locations/alexandria-search-engine-optimization/",
     title: "Alexandria Search Engine Optimization",
   },
+  {
+    id: "county-6",
+    path: "/locations/prescott-search-engine-optimization/",
+    title: "Prescott Search Engine Optimization",
+  },
 ];
