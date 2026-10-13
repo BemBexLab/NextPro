@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import SlideUp from "@/components/animations/slideUp";
+import Reveal from "./Reveal";
 import { Button } from "@/components/ui/button";
 import { pricingData } from "@/lib/fackData/pricingData2";
 import PriceCardTwo from "@/components/sections/pricing/priceCardTwo";
@@ -82,7 +82,7 @@ const Pricing = () => {
         />
       </div>
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SlideUp>
+        <Reveal>
           <div className="flex min-w-0 flex-col items-center">
             <Button variant="secondary" className="mb-3">
               Pricing
@@ -120,7 +120,7 @@ const Pricing = () => {
               })}
             </div>
           </div>
-        </SlideUp>
+        </Reveal>
 
         {/* Pricing Cards Container */}
         <div className="relative pt-8 sm:pt-10 lg:pt-12">

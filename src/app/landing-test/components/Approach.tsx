@@ -14,7 +14,7 @@ import {
   FaSearch,
   FaTools,
 } from "react-icons/fa";
-import SlideUp from "@/components/animations/slideUp";
+import Reveal from "./Reveal";
 import { FaArrowRight } from "react-icons/fa6";
 
 const tabList = [
@@ -86,7 +86,7 @@ const Approach = () => {
   return (
     <section className="relative isolate py-10 sm:py-12 lg:py-15">
       <div className="relative z-10 mx-auto max-w-[1500px] px-[15px]">
-        <SlideUp>
+        <Reveal>
           <div className="flex flex-col items-center">
             <Button variant="secondary">Our Approach</Button>
             {/* <Title size={"5xl"} className="max-w-[872px] pt-6 text-center">
@@ -94,7 +94,7 @@ const Approach = () => {
               <Highlight>Client-Centered</Highlight> Philosophy: Personalized Strategies for Your Success
             </Title> */}
           </div>
-        </SlideUp>
+        </Reveal>
 
         {/* Tabs are shown on wide screens; the accordion stays easier to use on tablets. */}
         <div className="hidden pt-8 min-[1238px]:block">
@@ -127,7 +127,7 @@ const Approach = () => {
                 value={id}
                 className="w-full pt-6 lg:pt-8"
               >
-                <SlideUp>
+                <Reveal>
                   <div className="grid w-full grid-cols-1 gap-7 rounded-[24px] bg-[#F4F6FF] p-5 dark:bg-[#1c242b] sm:rounded-[30px] sm:p-7.5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-8 lg:p-10 xl:gap-12 xl:p-12">
                     <div className="flex min-w-0 flex-col justify-center">
                       <Title className="" size={"4xl"}>{heading}</Title>
@@ -149,7 +149,7 @@ const Approach = () => {
                       />
                     </div>
                   </div>
-                </SlideUp>
+                </Reveal>
               </TabsContent>
             ))}
           </Tabs>

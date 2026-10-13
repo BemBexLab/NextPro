@@ -1,22 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
-import SlideUp from "@/components/animations/slideUp";
+import Reveal from "./Reveal";
 import { Button } from "@/components/ui/button";
 import Title from "@/components/ui/title";
 import { servicesDataTwo } from "@/lib/fackData/servicesDataTwo";
 
-// Mobile: horizontal scroll carousel. Tablet+: responsive grid.
+// The grid grows with the available width without forcing narrow cards.
 const servicesCarouselClassName =
-  "flex flex-nowrap snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-6 pt-2 sm:grid sm:grid-cols-2 sm:overflow-visible sm:snap-none sm:pb-0 sm:pt-0 lg:grid-cols-3 xl:grid-cols-4 [&::-webkit-scrollbar]:hidden";
+  "grid grid-cols-1 gap-4 pt-2 min-[480px]:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:gap-6 xl:grid-cols-4 sm:pt-0";
 
-// Mobile: 85vw width to show a "peek" of the next card. Tablet+: full column width.
 const serviceSlideClassName =
-  "w-[85vw] max-w-[340px] snap-center sm:w-full sm:max-w-none sm:snap-none group flex h-full flex-col items-center rounded-2xl border border-white/70 bg-white/55 p-5 text-center shadow-[0_8px_32px_rgba(31,38,135,0.08)] ring-1 ring-white/40 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/90 hover:bg-white/75 hover:shadow-[0_16px_40px_rgba(31,38,135,0.14)] dark:bg-gray-800/50 dark:border-gray-700/50 dark:ring-gray-700/30 dark:hover:bg-gray-800/70 dark:hover:border-gray-600 sm:p-6 lg:p-8";
+  "group flex h-full min-h-44 min-w-0 flex-col items-center justify-center rounded-2xl border border-white/70 bg-white/55 p-5 text-center shadow-[0_8px_32px_rgba(31,38,135,0.08)] ring-1 ring-white/40 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/90 hover:bg-white/75 hover:shadow-[0_16px_40px_rgba(31,38,135,0.14)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 dark:border-gray-700/50 dark:bg-gray-800/50 dark:ring-gray-700/30 dark:hover:border-gray-600 dark:hover:bg-gray-800/70 sm:p-6 lg:p-7";
 
 const Services = () => {
   return (
-    <section 
-      className="relative isolate overflow-x-hidden bg-[#FAFBFE] py-12 dark:bg-gray-900 sm:py-16 lg:py-20" 
+    <section
+      className="relative isolate overflow-hidden bg-[#FAFBFE] py-[clamp(3rem,7vw,5.5rem)] dark:bg-gray-900"
       id="services"
     >
       {/* <div
@@ -29,21 +28,21 @@ const Services = () => {
         }}
       /> */}
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative z-10">
           {/* Header Section */}
-          <SlideUp>
+          <Reveal>
             <div className="flex flex-col items-center">
               <Button variant="secondary" className="mb-3">Our Services</Button>
-              <Title 
-                size={"5xl"} 
-                className="max-w-[869px] text-center text-3xl leading-tight sm:text-4xl lg:text-5xl dark:text-white"
+              <Title
+                size={"5xl"}
+                className="mx-auto max-w-[54rem] text-center leading-tight dark:text-white"
               >
                 A Complete Ecosystem for Design, Development &{" "}
                 <span className="text-red-500">Digital Marketing</span>
               </Title>
             </div>
-          </SlideUp>
+          </Reveal>
 
           {/* Services Grid / Carousel */}
           <div className="relative pt-6 lg:pt-10">
@@ -54,10 +53,10 @@ const Services = () => {
               height={240}
               alt=""
               aria-hidden="true"
-              className="pointer-events-none absolute -right-4 -top-4 z-20 hidden h-32 w-32 object-contain sm:block sm:-right-10 sm:-top-10 sm:h-48 sm:w-48 lg:-right-32 lg:-top-32 lg:h-64 lg:w-64"
+              className="pointer-events-none absolute -right-14 -top-16 z-0 hidden h-48 w-48 object-contain 2xl:block"
             />
             
-            <SlideUp>
+            <Reveal>
               <div
                 className={`${servicesCarouselClassName}
                   [&>*:nth-child(2)_.icon]:bg-[#32A5521A] [&>*:nth-child(2)_.icon]:text-green-600 
@@ -70,22 +69,19 @@ const Services = () => {
                 `}
               >
                 {servicesDataTwo.map(({ id, icon_1, service_name, link }) => (
-                  <div
-                    key={id}
-                    className={serviceSlideClassName}
-                  >
+                  <div key={id} className={serviceSlideClassName}>
                     <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[rgba(46,77,254,0.10)] p-4 icon transition-colors dark:bg-blue-500/10 sm:h-20 sm:w-20 sm:p-5 md:h-[85px] md:w-[85px] md:p-6">
                       <span className="text-2xl transition-all duration-500 group-hover:scale-90 sm:text-3xl">
                         {icon_1}
                       </span>
                     </div>
-                    <span className="text-lg font-extrabold leading-[140%] text-muted-foreground multiline-hover dark:text-gray-200 sm:text-xl">
+                    <span className="max-w-full break-words text-base font-extrabold leading-snug text-muted-foreground multiline-hover sm:text-lg lg:text-xl dark:text-gray-200">
                       {service_name}
                     </span>
                   </div>
                 ))}
               </div>
-            </SlideUp>
+            </Reveal>
           </div>
         </div>
       </div>

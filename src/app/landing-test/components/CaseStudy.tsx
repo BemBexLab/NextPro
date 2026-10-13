@@ -3,36 +3,35 @@ import React, { useState, useEffect, useRef } from "react";
 import Highlight from "@/components/ui/highlight";
 import Title from "@/components/ui/title";
 import { Button } from "@/components/ui/button";
-import SlideUp from "@/components/animations/slideUp";
+import Reveal from "./Reveal";
 import { isInvalidLegacyProjectHref } from "@/lib/invalidLegacyProjectSlugs";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const DRAG_THRESHOLD = 30;
 const PROJECTS_API_BASE = "https://projects-api-bembexlab.vercel.app";
 const PROJECTS_API_URL = `${PROJECTS_API_BASE}/api/images/`;
 
-const resolveProjectImageUrl = (path) => {
+type Project = {
+  id: string | number;
+  cover_image_url?: string;
+  images?: Array<{ image_url?: string }>;
+  category?: string;
+  alt?: string;
+  href_url?: string;
+};
+
+const resolveProjectImageUrl = (path?: string) => {
   if (!path) return "/images/servicebanner/portfolio-image.webp";
   if (path.startsWith("http://") || path.startsWith("https://")) return path;
   return `${PROJECTS_API_BASE}${path}`;
 };
 
 const GalleryCarousel = () => {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState<Project[]>([]);
   const [isVisible, setIsVisible] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0); // Will be set on data load
-  const [shouldSmoothScroll, setShouldSmoothScroll] = useState(true);
+  const [loadState, setLoadState] = useState<"loading" | "ready" | "empty" | "error">("loading");
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
-  const carouselRef = useRef(null);
-  const sectionRef = useRef(null);
-  const itemsRef = useRef([]);
-  const isDragging = useRef(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
-  const dragDelta = useRef(0);
-
-  // Start loading shortly before the carousel enters the viewport instead of
-  // competing with the hero and above-the-fold resources on page load.
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return undefined;
@@ -56,7 +55,6 @@ const GalleryCarousel = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Fetch projects only when the section is near the viewport.
   useEffect(() => {
     if (!isVisible) return undefined;
 
@@ -64,207 +62,112 @@ const GalleryCarousel = () => {
 
     const fetchProjects = async () => {
       try {
-        const res = await fetch(PROJECTS_API_URL, {
-          signal: controller.signal,
-        });
-        const data = await res.json();
-        const filtered = (data.projects || []).filter((project) => {
-          const hasImage =
-            project.cover_image_url || project.images?.[0]?.image_url;
+        const response = await fetch(PROJECTS_API_URL, { signal: controller.signal });
+        if (!response.ok) throw new Error(`Projects request failed: ${response.status}`);
+
+        const data = await response.json();
+        const filtered = (data.projects || []).filter((project: Project) => {
+          const hasImage = project.cover_image_url || project.images?.[0]?.image_url;
           const category = project.category?.toLowerCase() || "";
           const isWebDev =
             category.includes("website development") ||
             category.includes("web development");
-          return (
-            hasImage &&
-            isWebDev &&
-            !isInvalidLegacyProjectHref(project.href_url)
-          );
+
+          return hasImage && isWebDev && !isInvalidLegacyProjectHref(project.href_url);
         });
+
         setProjects(filtered);
-        setActiveIndex(filtered.length);
-      } catch (err) {
-        if (err?.name !== "AbortError") {
-          console.error("Failed to load projects", err);
-        }
+        setLoadState(filtered.length ? "ready" : "empty");
+      } catch (error) {
+        if (error instanceof Error && error.name === "AbortError") return;
+        console.error("Failed to load projects", error);
+        setLoadState("error");
       }
     };
-    fetchProjects();
 
+    fetchProjects();
     return () => controller.abort();
   }, [isVisible]);
 
-  // 2. Triple your projects for infinite effect
-  const tripleProjects = [...projects, ...projects, ...projects];
-  const projectsCount = projects.length;
-
-  // 3. Auto-play
-  useEffect(() => {
-    if (projectsCount === 0) return;
-    const interval = setInterval(() => {
-      handleNext();
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [projectsCount, activeIndex]);
-
-  // 4. Smooth scroll to active index, or instant if shouldSmoothScroll === false
-  useEffect(() => {
-    if (!carouselRef.current || itemsRef.current.length === 0) return;
-    const activeItem = itemsRef.current[activeIndex];
-    if (activeItem) {
-      const scrollPosition =
-        activeItem.offsetLeft -
-        carouselRef.current.offsetWidth / 2 +
-        activeItem.offsetWidth / 2;
-      carouselRef.current.scrollTo({
-        left: scrollPosition,
-        behavior: shouldSmoothScroll ? "smooth" : "auto",
-      });
-    }
-  }, [activeIndex, shouldSmoothScroll]);
-
-  // 5. Looping logic: teleport to center set when you reach either end
-  useEffect(() => {
-    if (projectsCount === 0) return;
-
-    // If at the last card of the last set, teleport to middle set
-    if (activeIndex >= projectsCount * 2) {
-      setTimeout(() => {
-        setShouldSmoothScroll(false);
-        setActiveIndex(activeIndex - projectsCount);
-      }, 400);
-    }
-    // If at the first card of the first set, teleport to middle set
-    else if (activeIndex < projectsCount) {
-      setTimeout(() => {
-        setShouldSmoothScroll(false);
-        setActiveIndex(activeIndex + projectsCount);
-      }, 400);
-    }
-  }, [activeIndex, projectsCount]);
-
-  // 6. Mouse drag navigation
-  useEffect(() => {
+  const scrollCarousel = (direction: -1 | 1) => {
     const carousel = carouselRef.current;
     if (!carousel) return;
 
-    const handleMouseDown = (e) => {
-      if (e.button !== 0) return;
-      isDragging.current = true;
-      startX.current = e.pageX - carousel.offsetLeft;
-      scrollLeft.current = carousel.scrollLeft;
-      dragDelta.current = 0;
-      carousel.classList.add("dragging");
-    };
-    const handleMouseUp = () => {
-      if (!isDragging.current) return;
-      isDragging.current = false;
-      carousel.classList.remove("dragging");
+    const firstCard = carousel.querySelector<HTMLElement>("[data-project-card]");
+    const distance = firstCard
+      ? firstCard.getBoundingClientRect().width + 24
+      : carousel.clientWidth * 0.85;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-      const moved = dragDelta.current;
-      if (Math.abs(moved) > DRAG_THRESHOLD) {
-        if (moved < 0) handleNext();
-        else handlePrev();
-      }
-    };
-    const handleMouseMove = (e) => {
-      if (!isDragging.current) return;
-      e.preventDefault();
-      const x = e.pageX - carousel.offsetLeft;
-      const walk = x - startX.current;
-      dragDelta.current = walk;
-      carousel.scrollLeft = scrollLeft.current - walk;
-    };
-    const handleMouseLeave = () => {
-      isDragging.current = false;
-      carousel.classList.remove("dragging");
-    };
-    carousel.addEventListener("mousedown", handleMouseDown);
-    carousel.addEventListener("mouseup", handleMouseUp);
-    carousel.addEventListener("mouseleave", handleMouseLeave);
-    carousel.addEventListener("mousemove", handleMouseMove);
-    return () => {
-      carousel.removeEventListener("mousedown", handleMouseDown);
-      carousel.removeEventListener("mouseup", handleMouseUp);
-      carousel.removeEventListener("mouseleave", handleMouseLeave);
-      carousel.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [projectsCount, activeIndex]);
+    carousel.scrollBy({
+      left: direction * distance,
+      behavior: reduceMotion ? "auto" : "smooth",
+    });
+  };
 
-  // --- NAVIGATION ---
-  function handleNext() {
-    setShouldSmoothScroll(true);
-    setActiveIndex((prev) => prev + 1);
-  }
-  function handlePrev() {
-    setShouldSmoothScroll(true);
-    setActiveIndex((prev) => prev - 1);
-  }
+  if (loadState !== "ready") {
+    const message =
+      loadState === "loading"
+        ? "Loading projects…"
+        : loadState === "error"
+          ? "Projects are temporarily unavailable."
+          : "New projects are coming soon.";
 
-  if (projectsCount === 0) {
     return (
-      <div ref={sectionRef} className="text-center py-10">
-        <div className="text-lg text-gray-600">Loading Projects...</div>
+      <div
+        ref={sectionRef}
+        className="min-h-24 py-10 text-center text-base font-medium text-slate-600"
+        role="status"
+        aria-live="polite"
+      >
+        {message}
       </div>
     );
   }
 
   return (
-    <div
-      ref={sectionRef}
-      className="relative w-full overflow-hidden"
-    >
-      {/* Left Navigation Button */}
-      <div className="absolute top-1/2 left-2 z-10 -translate-y-1/2">
+    <div ref={sectionRef} className="relative w-full">
+      <div className="mb-2 flex justify-end gap-2">
         <button
-          onClick={handlePrev}
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-[#555D73] text-white shadow-md"
-          aria-label="Previous project"
+          type="button"
+          onClick={() => scrollCarousel(-1)}
+          disabled={projects.length < 2}
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-[#072D7F]/15 bg-white/80 text-[#072D7F] shadow-sm transition-colors hover:bg-[#072D7F] hover:text-white disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2"
+          aria-label="Scroll to previous projects"
+          aria-controls="landing-test-projects"
         >
-          <FaChevronLeft aria-hidden="true" className="text-xs" />
+          <FaChevronLeft aria-hidden="true" />
+        </button>
+        <button
+          type="button"
+          onClick={() => scrollCarousel(1)}
+          disabled={projects.length < 2}
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-[#072D7F]/15 bg-white/80 text-[#072D7F] shadow-sm transition-colors hover:bg-[#072D7F] hover:text-white disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2"
+          aria-label="Scroll to next projects"
+          aria-controls="landing-test-projects"
+        >
+          <FaChevronRight aria-hidden="true" />
         </button>
       </div>
-      {/* Right Navigation Button */}
-      <div className="absolute top-1/2 right-2 z-10 -translate-y-1/2">
-        <button
-          onClick={handleNext}
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-[#555D73] text-white shadow-md"
-          aria-label="Next project"
-        >
-          <FaChevronRight aria-hidden="true" className="text-xs" />
-        </button>
-      </div>
-      {/* Carousel Container */}
+
       <div
+        id="landing-test-projects"
         ref={carouselRef}
-        className="flex gap-6 overflow-x-hidden scrollbar-hide snap-x snap-mandatory py-4 px-2 cursor-grab active:cursor-grabbing select-none"
+        role="region"
+        aria-label="Web development project gallery"
+        tabIndex={0}
+        className="flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain px-1 py-4 sm:gap-6 sm:px-2 [scrollbar-color:rgba(7,45,127,.35)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-blue-900/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30]"
       >
-        {tripleProjects.map((project, index) => {
+        {projects.map((project) => {
           const imageUrl = resolveProjectImageUrl(
             project.cover_image_url || project.images?.[0]?.image_url,
           );
-          const projectTitle = project.alt || project.category || "Project";
-          const projectHref = project.href_url || undefined;
-          // Only use refs for items in the middle set
-          const refProp =
-            index >= projectsCount && index < projectsCount * 2
-              ? (el) => {
-                  itemsRef.current[index] = el;
-                }
-              : null;
+          const projectTitle = project.alt || project.category || "Web development project";
+          const cardClassName =
+            "group relative block aspect-[2/1] w-[min(84vw,360px)] shrink-0 snap-center overflow-hidden rounded-2xl border border-white/70 bg-slate-100 shadow-[0_10px_30px_rgba(7,45,127,0.10)] sm:w-[min(68vw,400px)] lg:w-[calc((100%_-_3rem)/3)] lg:max-w-[420px]";
 
-          return (
-            <a
-              key={`${project.id}-${index}`}
-              href={projectHref}
-              ref={refProp}
-              className={`
-                                relative block aspect-[2/1] w-[80vw] min-w-0 max-w-[88vw]
-                                shrink-0 snap-center overflow-hidden rounded-xl border border-[#E2E6F0] bg-[#F5F7FC] shadow-sm
-                                sm:w-[320px] sm:max-w-[340px]
-                                md:w-[calc((100%_-_3rem)_/_3)] md:max-w-[420px]
-                            `}
-            >
+          const image = (
+            <>
               <img
                 src={imageUrl}
                 alt={projectTitle}
@@ -273,9 +176,27 @@ const GalleryCarousel = () => {
                 loading="lazy"
                 decoding="async"
                 fetchPriority="low"
-                className="h-full w-full object-cover object-center"
+                draggable={false}
+                className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.025] motion-reduce:transition-none"
               />
+              <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/55 via-transparent to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
+            </>
+          );
+
+          return project.href_url ? (
+            <a
+              key={project.id}
+              data-project-card
+              href={project.href_url}
+              aria-label={`View project: ${projectTitle}`}
+              className={`${cardClassName} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2`}
+            >
+              {image}
             </a>
+          ) : (
+            <div key={project.id} data-project-card className={cardClassName}>
+              {image}
+            </div>
           );
         })}
       </div>
@@ -306,14 +227,14 @@ const CaseStudy = () => {
         className="pointer-events-none absolute bottom-0 left-0 z-[1] hidden w-[142px] object-contain opacity-90 md:block md:w-[206px] lg:w-[270px]"
       />
       <div className="relative z-10 mx-auto max-w-[1350px] px-[15px]">
-        <SlideUp>
+        <Reveal>
           <div className="flex flex-col items-center">
             <Button variant="secondary">Case Study</Button>
             <Title size={"5xl"} className="max-w-[872px] pt-2 text-center">
               <Highlight>Success Stories:</Highlight><span className="text-red-500">Transformative Case</span> Studies
             </Title>
           </div>
-        </SlideUp>
+        </Reveal>
         <GalleryCarousel />
       </div>
     </section>

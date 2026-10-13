@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { FaArrowRight } from "react-icons/fa6";
@@ -10,11 +9,11 @@ const Hero = () => {
         <div className="grid grid-cols-1 items-center gap-2 px-4 py-6 sm:gap-4 sm:px-7 sm:py-8 md:px-9 md:py-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch lg:gap-0 lg:p-0">
           {/* Text Content */}
           <div className="flex min-w-0 flex-col justify-center lg:px-10 lg:py-10 xl:px-12 xl:py-12">
-            <h1 className="text-3xl font-bold leading-[1.1] text-[#001F3F] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl dark:text-white">
+            <h1 className="text-[clamp(2.125rem,5.1vw,4.5rem)] font-bold leading-[1.04] tracking-[-0.035em] text-[#001F3F] dark:text-white">
               Web Founders USA -{" "}
               <span className="text-red-500">No.1 Digital Marketing Agency in USA</span>
             </h1>
-            <p className="max-w-[689px] pt-4 text-sm font-semibold leading-relaxed sm:pt-5 sm:text-base md:pt-6 md:text-lg">
+            <p className="max-w-[42rem] pt-4 text-[clamp(0.9375rem,1.25vw,1.125rem)] font-medium leading-relaxed sm:pt-5 lg:pt-6">
               Brands lose customers every day to slow websites, weak visibility,
               and outdated design. Web Founders USA, a trusted Website Design
               and Development Company and full-service top Digital Marketing
