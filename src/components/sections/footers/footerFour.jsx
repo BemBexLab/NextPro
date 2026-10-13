@@ -31,6 +31,7 @@ const FooterFour = () => {
             white_logo={false}
             bgColor="bg-white"
             color="text-white"
+            logoLink={!isLandingTest}
           />
 
           <div className="my-8 h-px w-full bg-white/80 sm:my-10 lg:my-12" />

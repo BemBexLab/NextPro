@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const FooterContact = ({ bgColor, color, white_logo }) => {
+const FooterContact = ({ bgColor, color, white_logo, logoLink = true }) => {
     return (
         <div className='grid min-w-0 grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(160px,0.6fr)_minmax(0,2.4fr)] lg:gap-10'>
             <div className='w-full max-w-[150px] sm:max-w-[178px]'>
@@ -11,7 +11,7 @@ const FooterContact = ({ bgColor, color, white_logo }) => {
                     white_logo ?
                         <Image src={"/images/logo-light2.webp"} width={500} height={200} alt='logo-white' className='h-auto w-full' />
                         :
-                        <Logo2 />
+                        <Logo2 link={logoLink} />
                 }
             </div>
             <div className='grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8'>
