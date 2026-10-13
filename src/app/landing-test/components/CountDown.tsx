@@ -66,7 +66,7 @@ const CounterStat = ({ endPoint, number, title }: CounterStatProps) => {
   return (
     <div
       ref={statRef}
-      className="flex w-[75vw] min-w-[260px] max-w-[320px] shrink-0 snap-center flex-col items-center justify-center gap-2 rounded-2xl border border-gray-200/60 bg-white/60 px-5 py-6 text-center shadow-sm backdrop-blur-sm transition-all duration-300 hover:shadow-md md:w-auto md:min-w-0 md:max-w-none md:flex-row md:items-center md:gap-4 md:border-0 md:bg-transparent md:px-0 md:py-0 md:shadow-none md:backdrop-blur-0 md:hover:shadow-none lg:gap-5 dark:border-gray-700/40 dark:bg-white/5 dark:md:border-0 dark:md:bg-transparent"
+      className="flex h-full min-w-0 flex-col items-center justify-center gap-2 rounded-2xl border border-gray-200/60 bg-white/60 px-2 py-4 text-center shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:gap-3 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:border-0 lg:bg-transparent lg:px-2 lg:shadow-none lg:backdrop-blur-0 lg:hover:shadow-none dark:border-gray-700/40 dark:bg-white/5 dark:lg:border-0 dark:lg:bg-transparent"
     >
       <h2 className="flex items-baseline font-extrabold text-[#001F3F] text-4xl leading-none sm:text-5xl lg:text-6xl dark:text-white">
         <SlotCounter
@@ -75,11 +75,9 @@ const CounterStat = ({ endPoint, number, title }: CounterStatProps) => {
           duration={2}
           autoAnimationStart={isVisible}
         />
-        <span className="ml-1 text-red-500 text-4xl sm:text-5xl lg:text-6xl">
-          {endPoint}
-        </span>
+        <span className="ml-1 text-red-500">{endPoint}</span>
       </h2>
-      <p className="w-fit text-sm font-semibold text-muted-foreground sm:text-base md:max-w-[140px] md:text-left lg:max-w-none">
+      <p className="max-w-full break-words text-xs font-semibold leading-snug text-muted-foreground sm:text-sm md:text-base">
         {title}
       </p>
     </div>
@@ -88,15 +86,8 @@ const CounterStat = ({ endPoint, number, title }: CounterStatProps) => {
 
 const CountDown = () => {
   return (
-    <div className="relative isolate w-full overflow-hidden px-4 pb-9 sm:px-6 lg:px-8">
-      {/* Left Edge Fade - mobile only */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-6 bg-gradient-to-r from-white to-transparent md:hidden dark:from-gray-900" />
-      
-      {/* Right Edge Fade - mobile only */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-6 bg-gradient-to-l from-white to-transparent md:hidden dark:from-gray-900" />
-
-      {/* Scrollable container: horizontal scroll on mobile, flex-wrap on md+ */}
-      <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 [scrollbar-width:none] md:flex-wrap md:justify-center md:overflow-visible md:snap-none md:gap-6 lg:gap-10 [&::-webkit-scrollbar]:hidden">
+    <div className="relative isolate mx-auto w-full max-w-7xl px-4 pb-9 sm:px-6 lg:px-8">
+      <div className="grid w-full grid-cols-2 items-stretch gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-6">
         {counterData.map(({ endPoint, id, number, title }) => (
           <CounterStat
             key={id}
