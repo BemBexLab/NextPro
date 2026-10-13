@@ -84,7 +84,7 @@ const Approach = () => {
   };
 
   return (
-    <section className="relative isolate pt-15 pb-5">
+    <section className="relative isolate py-10 sm:py-12 lg:py-15">
       <div className="relative z-10 mx-auto max-w-[1500px] px-[15px]">
         <SlideUp>
           <div className="flex flex-col items-center">
@@ -96,25 +96,25 @@ const Approach = () => {
           </div>
         </SlideUp>
 
-        {/* Desktop Tabs - visible md+ */}
-        <div className="pt-8 hidden md:block">
+        {/* Tabs are shown on wide screens; the accordion stays easier to use on tablets. */}
+        <div className="hidden pt-8 min-[1238px]:block">
           <Tabs onValueChange={onTabChange} defaultValue="development">
-            <TabsList className="mx-auto flex h-auto w-fit max-w-full flex-wrap justify-center gap-2 bg-transparent">
+            <TabsList className="mx-auto grid h-auto w-full max-w-6xl grid-cols-3 gap-2 bg-transparent p-0 min-[1238px]:grid-cols-5">
               {tabList.map(({ id, tab_icon, tab_name }) => (
                 <TabsTrigger
                   key={id}
                   value={id}
                   className={
-                    "h-16 w-fit shrink-0 items-center gap-3 overflow-hidden rounded-[10px] bg-[#F4F6FF] px-4 text-start whitespace-nowrap dark:bg-[#1c242b] xl:gap-5 xl:px-6 data-[state=active]:bg-red-700 data-[state=active]:text-white dark:data-[state=active]:bg-red-800"
+                    "flex min-h-16 w-full min-w-0 items-center justify-start gap-2 rounded-[10px] bg-[#F4F6FF] px-3 py-3 text-left whitespace-normal dark:bg-[#1c242b] xl:justify-center xl:gap-3 xl:px-4 data-[state=active]:bg-red-700 data-[state=active]:text-white dark:data-[state=active]:bg-red-800"
                   }
                 >
                   <span
                     aria-hidden="true"
-                    className={`mr-3 text-xl xl:mr-0 ${id === tab ? "text-white" : "text-[#001F3F]"}`}
+                    className={`shrink-0 text-lg ${id === tab ? "text-white" : "text-[#001F3F]"}`}
                   >
                     {tab_icon}
                   </span>
-                  <span className="whitespace-nowrap text-lg font-semibold">
+                  <span className="min-w-0 text-sm font-semibold leading-snug sm:text-base">
                     {tab_name}
                   </span>
                 </TabsTrigger>
@@ -125,13 +125,13 @@ const Approach = () => {
               <TabsContent
                 key={id}
                 value={id}
-                className="w-full pt-[360px] sm:pt-[190px] md:pt-[110px] lg:pt-7.5"
+                className="w-full pt-6 lg:pt-8"
               >
                 <SlideUp>
-                  <div className="flex w-full flex-col justify-between rounded-[30px] bg-[#F4F6FF] py-7.5 dark:bg-[#1c242b] lg:flex-row">
-                    <div className="flex flex-col justify-center pl-7.5 pr-7.5 lg:max-w-[550px] lg:pl-[86px] lg:pr-0 xl:max-w-[660px]">
+                  <div className="grid w-full grid-cols-1 gap-7 rounded-[24px] bg-[#F4F6FF] p-5 dark:bg-[#1c242b] sm:rounded-[30px] sm:p-7.5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-8 lg:p-10 xl:gap-12 xl:p-12">
+                    <div className="flex min-w-0 flex-col justify-center">
                       <Title className="" size={"4xl"}>{heading}</Title>
-                      <p className="pt-5 pb-7.5">{description}</p>
+                      <p className="break-words pt-5 pb-7.5">{description}</p>
                       <Button asChild variant="outline">
                         <a href="#request-audit">
                           Discover more
@@ -139,14 +139,13 @@ const Approach = () => {
                         </a>
                       </Button>
                     </div>
-                    <div className="pr-7.5 pl-7.5 lg:pl-0 lg:max-w-[720px] w-full pt-7.5 lg:pt-0">
+                    <div className="w-full min-w-0">
                       <Image
                         src={tab_content}
                         width={720}
                         height={482}
                         alt="bg"
-                        style={{ width: "100%" }}
-                        className="rounded-2.5xl"
+                        className="h-auto w-full rounded-2xl object-cover sm:rounded-2.5xl"
                       />
                     </div>
                   </div>
@@ -156,24 +155,25 @@ const Approach = () => {
           </Tabs>
         </div>
 
-        {/* Mobile Accordion - visible only below md */}
-        <div className="block md:hidden pt-8">
+        {/* Accordion is used on phones and tablets. */}
+        <div className="block pt-8 min-[1238px]:hidden">
           {tabList.map(({ id, tab_icon, tab_name, heading, description, tab_content }) => (
             <div key={id} className="mb-4 rounded-xl overflow-hidden shadow-sm bg-[#F4F6FF] dark:bg-[#1c242b]">
               <button
-                className={`flex w-full items-center p-4 focus:outline-none ${mobileOpen === id ? "bg-red-700 text-white" : ""}`}
+                type="button"
+                className={`flex w-full min-w-0 items-center gap-2 p-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-red-700 focus-visible:ring-inset ${mobileOpen === id ? "bg-red-700 text-white" : ""}`}
                 onClick={() => handleAccordion(id)}
                 aria-expanded={mobileOpen === id}
                 aria-controls={`accordion-content-${id}`}
               >
                 <span
                   aria-hidden="true"
-                  className={`mr-3 text-xl ${mobileOpen === id ? "text-white" : ""}`}
+                  className={`shrink-0 text-xl ${mobileOpen === id ? "text-white" : ""}`}
                 >
                   {tab_icon}
                 </span>
                 <span
-                  className={`flex-1 text-left text-lg font-semibold ${mobileOpen === id ? "text-white" : ""}`}
+                  className={`min-w-0 flex-1 text-left text-base font-semibold leading-snug sm:text-lg ${mobileOpen === id ? "text-white" : ""}`}
                 >
                   {tab_name}
                 </span>
@@ -182,17 +182,16 @@ const Approach = () => {
               {mobileOpen === id && (
                 <div
                   id={`accordion-content-${id}`}
-                  className="p-4 border-t"
+                  className="min-w-0 border-t p-4 sm:p-6"
                 >
                   <Title size={"xl"}>{heading}</Title>
-                  <p className="py-3">{description}</p>
+                  <p className="break-words py-3">{description}</p>
                   <Image
                     src={tab_content}
                     width={540}
                     height={361}
                     alt="bg"
-                    style={{ width: "100%" }}
-                    className="rounded-2xl"
+                    className="h-auto w-full rounded-2xl object-cover"
                   />
                   <Button asChild variant="outline" className="mt-4">
                     <a href="#request-audit">

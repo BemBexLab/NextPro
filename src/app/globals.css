@@ -27,13 +27,6 @@ html {
   );
 }
 
-body:has(.landing-test-headings) .footer-four-background {
-  background-image: url("/Halloween%20Assets%20Task/image%2030.jpg") !important;
-  background-position: center top;
-  background-size: 100% 100%;
-  opacity: 1;
-}
-
 @layer base {
   :root {
     --background: #fff;

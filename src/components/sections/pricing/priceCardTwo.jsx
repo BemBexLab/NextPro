@@ -55,7 +55,7 @@ const PriceCardTwo = ({
         ref={planNameRef}
       >
         <h2
-          className={`absolute inset-x-0 inset-y-0 flex w-full items-center justify-center break-words px-4 text-center text-base font-bold uppercase leading-tight tracking-wider text-white sm:text-lg ${
+          className={`absolute inset-x-0 inset-y-0 flex w-full items-center justify-center break-words px-4 pr-20 text-center text-base font-bold uppercase leading-tight tracking-wider text-white sm:pr-24 sm:text-lg md:px-4 ${
             animate ? "price-card-animate" : ""
           }`}
         >
@@ -65,7 +65,7 @@ const PriceCardTwo = ({
           <img
             src={imageSrc}
             alt={`${plan_name} image`}
-            className="absolute right-3 top-[-32px] z-20 h-24 w-24 object-contain"
+            className="absolute right-2 top-0 z-20 h-16 w-16 object-contain md:right-3 md:top-[-32px] md:h-24 md:w-24"
           />
         )}
       </div>

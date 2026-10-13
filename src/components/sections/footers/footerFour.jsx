@@ -15,7 +15,12 @@ const FooterFour = () => {
       <div
         className="footer-four-background pointer-events-none absolute inset-x-0 top-0 h-full bg-contain bg-top bg-no-repeat opacity-20"
         style={{
-          backgroundImage: "url(/images/background/services-bg1-1.webp)",
+          backgroundImage: isLandingTest
+            ? "url('/Halloween%20Assets%20Task/image%2030.jpg')"
+            : "url(/images/background/services-bg1-1.webp)",
+          backgroundSize: isLandingTest ? "cover" : undefined,
+          backgroundPosition: "center top",
+          opacity: isLandingTest ? 1 : undefined,
         }}
         aria-hidden="true"
       />
@@ -57,12 +62,17 @@ const FooterFour = () => {
         </div>
       </div>
 
-      <div className="relative z-10 mt-10 bg-muted text-white dark:bg-accent sm:mt-12 lg:mt-[54px]">
+      <div
+        className={`relative z-10 mt-10 text-white sm:mt-12 lg:mt-[54px] ${
+          isLandingTest ? "bg-transparent" : "bg-muted dark:bg-accent"
+        }`}
+        style={isLandingTest ? { backgroundColor: "transparent" } : undefined}
+      >
         <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center justify-between gap-3 px-3 py-5 text-center text-xs sm:px-6 sm:py-6 sm:text-sm md:flex-row md:text-left lg:px-8 lg:py-7.5">
           <p className="min-w-0 break-words">
             Designed and Developed By{" "}
             {isLandingTest ? (
-              <span className="relative font-medium text-primary-foreground">
+              <span className="relative font-medium text-red-500">
                 WebFounders USA
               </span>
             ) : (

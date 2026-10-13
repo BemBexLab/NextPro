@@ -132,7 +132,7 @@ const Pricing = () => {
 
           {/* Mobile: Horizontal Scroll | Tablet+: Grid */}
           <div
-            className="flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 [scrollbar-width:none] md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:snap-none md:pb-0 xl:grid-cols-3 xl:gap-8 [&::-webkit-scrollbar]:hidden"
+            className="flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 [scrollbar-width:none] md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:snap-none md:pb-0 md:[&>*:last-child:nth-child(odd)]:col-span-2 lg:grid-cols-3 lg:gap-8 lg:[&>*:last-child:nth-child(odd)]:col-span-1 lg:[&>*:last-child:nth-child(3n+1)]:col-span-3 [&::-webkit-scrollbar]:hidden"
             aria-live="polite"
           >
             {filteredData.length > 0 ? (

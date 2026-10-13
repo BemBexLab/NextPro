@@ -220,7 +220,7 @@ const RequestAFreeAudit = () => {
               <div className="mt-2 flex w-full justify-stretch sm:justify-end">
                 <Button
                   type="submit"
-                  className="w-full min-h-[48px] bg-[#BF0B30] text-white transition-all hover:bg-[#a00928] disabled:opacity-70 sm:w-auto sm:min-h-[56px] sm:px-8"
+                  className="w-full min-h-[48px] bg-[#BF0B30] text-white transition-all hover:bg-[#a00928] hover:text-white disabled:opacity-70 sm:w-auto sm:min-h-[56px] sm:px-8"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (

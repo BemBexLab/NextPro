@@ -57,7 +57,7 @@ const CountDown = () => {
                   rootMargin: "0px 0px -100px 0px",
                 }}
               />
-              <span className="ml-1 text-red-500 text-2xl sm:text-3xl lg:text-4xl">{endPoint}</span>
+              <span className="ml-1 text-red-500 text-4xl sm:text-5xl lg:text-6xl">{endPoint}</span>
             </h2>
             <p className="w-fit text-sm font-semibold text-muted-foreground sm:text-base md:max-w-[140px] md:text-left lg:max-w-none">
               {title}
