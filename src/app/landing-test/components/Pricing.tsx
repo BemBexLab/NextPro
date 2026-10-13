@@ -149,6 +149,7 @@ const Pricing = () => {
                       services={services}
                       imageSrc={planImages[index % planImages.length]}
                       auditHref="#request-audit"
+                      planNameClassName="landing-test-plan-name"
                     />
                   </div>
                 ),

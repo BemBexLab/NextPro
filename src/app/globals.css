@@ -41,6 +41,11 @@ html {
   line-height: 1.2;
 }
 
+.landing-test-page .landing-test-plan-name {
+  font-size: clamp(0.875rem, 1.4vw, 1.25rem);
+  line-height: 1.15;
+}
+
 .landing-test-page :is(p, li) {
   text-wrap: pretty;
 }

@@ -22,6 +22,7 @@ const PriceCardTwo = ({
   imageSrc = "/Halloween Assets Task/image 28.webp",
   showImage = true,
   auditHref,
+  planNameClassName = "",
 }) => {
   const planNameRef = useRef(null);
   const [animate, setAnimate] = useState(false);
@@ -55,7 +56,7 @@ const PriceCardTwo = ({
         ref={planNameRef}
       >
         <h2
-          className={`absolute inset-x-0 inset-y-0 flex w-full items-center justify-center break-words px-4 pr-20 text-center text-base font-bold uppercase leading-tight tracking-wider text-white sm:pr-24 sm:text-lg md:px-4 ${
+          className={`absolute inset-x-0 inset-y-0 flex w-full items-center justify-center break-words px-4 pr-20 text-center text-base font-bold uppercase leading-tight tracking-wider text-white sm:pr-24 sm:text-lg md:px-4 ${planNameClassName} ${
             animate ? "price-card-animate" : ""
           }`}
         >

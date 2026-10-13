@@ -36,7 +36,7 @@ const Services = () => {
               <Button variant="secondary" className="mb-3">Our Services</Button>
               <Title
                 size={"5xl"}
-                className="mx-auto max-w-[54rem] text-center leading-tight dark:text-white"
+                className="mx-auto max-w-[60rem] text-center leading-tight dark:text-white"
               >
                 A Complete Ecosystem for Design, Development &{" "}
                 <span className="text-red-500">Digital Marketing</span>

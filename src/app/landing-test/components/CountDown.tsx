@@ -50,11 +50,10 @@ const CountDown = () => {
               <SlotCounter
                 startValue={0}
                 value={number}
-                debounceDelay={5000}
                 duration={2}
                 animateOnVisible={{
                   triggerOnce: true,
-                  rootMargin: "0px 0px -100px 0px",
+                  rootMargin: "0px",
                 }}
               />
               <span className="ml-1 text-red-500 text-4xl sm:text-5xl lg:text-6xl">{endPoint}</span>
