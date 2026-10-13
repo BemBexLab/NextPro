@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { useEffect, useRef, useState } from "react";
 import SlotCounter from "react-slot-counter";
 
 const counterData = [
@@ -30,6 +30,62 @@ const counterData = [
   },
 ];
 
+type CounterStatProps = {
+  endPoint: string;
+  number: number;
+  title: string;
+};
+
+const CounterStat = ({ endPoint, number, title }: CounterStatProps) => {
+  const statRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const stat = statRef.current;
+    if (!stat) return undefined;
+
+    if (typeof IntersectionObserver === "undefined") {
+      setIsVisible(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    observer.observe(stat);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={statRef}
+      className="flex w-[75vw] min-w-[260px] max-w-[320px] shrink-0 snap-center flex-col items-center justify-center gap-2 rounded-2xl border border-gray-200/60 bg-white/60 px-5 py-6 text-center shadow-sm backdrop-blur-sm transition-all duration-300 hover:shadow-md md:w-auto md:min-w-0 md:max-w-none md:flex-row md:items-center md:gap-4 md:border-0 md:bg-transparent md:px-0 md:py-0 md:shadow-none md:backdrop-blur-0 md:hover:shadow-none lg:gap-5 dark:border-gray-700/40 dark:bg-white/5 dark:md:border-0 dark:md:bg-transparent"
+    >
+      <h2 className="flex items-baseline font-extrabold text-[#001F3F] text-4xl leading-none sm:text-5xl lg:text-6xl dark:text-white">
+        <SlotCounter
+          startValue={0}
+          value={number}
+          duration={2}
+          autoAnimationStart={isVisible}
+        />
+        <span className="ml-1 text-red-500 text-4xl sm:text-5xl lg:text-6xl">
+          {endPoint}
+        </span>
+      </h2>
+      <p className="w-fit text-sm font-semibold text-muted-foreground sm:text-base md:max-w-[140px] md:text-left lg:max-w-none">
+        {title}
+      </p>
+    </div>
+  );
+};
+
 const CountDown = () => {
   return (
     <div className="relative isolate w-full overflow-hidden px-4 pb-9 sm:px-6 lg:px-8">
@@ -42,26 +98,12 @@ const CountDown = () => {
       {/* Scrollable container: horizontal scroll on mobile, flex-wrap on md+ */}
       <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 [scrollbar-width:none] md:flex-wrap md:justify-center md:overflow-visible md:snap-none md:gap-6 lg:gap-10 [&::-webkit-scrollbar]:hidden">
         {counterData.map(({ endPoint, id, number, title }) => (
-          <div
+          <CounterStat
             key={id}
-            className="flex w-[75vw] min-w-[260px] max-w-[320px] shrink-0 snap-center flex-col items-center justify-center gap-2 rounded-2xl border border-gray-200/60 bg-white/60 px-5 py-6 text-center shadow-sm backdrop-blur-sm transition-all duration-300 hover:shadow-md md:w-auto md:min-w-0 md:max-w-none md:flex-row md:items-center md:gap-4 md:border-0 md:bg-transparent md:px-0 md:py-0 md:shadow-none md:backdrop-blur-0 md:hover:shadow-none lg:gap-5 dark:border-gray-700/40 dark:bg-white/5 dark:md:border-0 dark:md:bg-transparent"
-          >
-            <h2 className="flex items-baseline font-extrabold text-[#001F3F] text-4xl leading-none sm:text-5xl lg:text-6xl dark:text-white">
-              <SlotCounter
-                startValue={0}
-                value={number}
-                duration={2}
-                animateOnVisible={{
-                  triggerOnce: true,
-                  rootMargin: "0px",
-                }}
-              />
-              <span className="ml-1 text-red-500 text-4xl sm:text-5xl lg:text-6xl">{endPoint}</span>
-            </h2>
-            <p className="w-fit text-sm font-semibold text-muted-foreground sm:text-base md:max-w-[140px] md:text-left lg:max-w-none">
-              {title}
-            </p>
-          </div>
+            endPoint={endPoint}
+            number={number}
+            title={title}
+          />
         ))}
       </div>
     </div>
