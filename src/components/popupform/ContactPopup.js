@@ -30,6 +30,11 @@ export default function ContactPopup() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
+    const timer = window.setTimeout(() => setOpen(true), 8000);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     if (!open) {
       document.body.style.overflow = "";
       return;
@@ -78,17 +83,7 @@ export default function ContactPopup() {
     }
   };
 
-  if (!open) {
-    return (
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="fixed bottom-20 right-4 z-40 rounded-full bg-[#BF0B30] px-4 py-3 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-[#a00928] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 sm:bottom-5 sm:right-20"
-      >
-        View special offer
-      </button>
-    );
-  }
+  if (!open) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 sm:p-6">
