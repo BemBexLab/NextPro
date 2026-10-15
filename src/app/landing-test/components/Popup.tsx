@@ -20,12 +20,13 @@ import {
   showSubmissionSuccess,
   submitSubmission,
 } from "@/lib/submission";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const fieldClassName =
-  "h-[40px] w-full min-w-0 rounded-md border border-slate-300 bg-white px-3 pl-9 text-[11px] text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-[#BF0B30] focus:ring-2 focus:ring-[#BF0B30]/15 sm:text-xs";
+  "h-12 w-full min-w-0 rounded-md border border-slate-300 bg-white px-3 pl-11 text-xs text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-[#BF0B30] focus:ring-2 focus:ring-[#BF0B30]/15 sm:text-sm";
 
 const iconClassName =
-  "pointer-events-none absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-slate-400";
+  "pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400";
 
 const services = [
   "Branding & Logo Design",
@@ -74,6 +75,7 @@ const Popup = () => {
 
     try {
       await submitSubmission({
+        source: "Halloween Offer Popup",
         name,
         email,
         website,
@@ -100,7 +102,7 @@ const Popup = () => {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-[#07111f]/80 p-3 backdrop-blur-[2px] sm:p-5"
+      className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-[#07111f]/80 p-3 backdrop-blur-[2px] sm:p-5"
       onMouseDown={(event) => {
         if (event.target === event.currentTarget) setIsOpen(false);
       }}
@@ -109,7 +111,7 @@ const Popup = () => {
         role="dialog"
         aria-modal="true"
         aria-labelledby="halloween-popup-title"
-        className="relative grid w-full max-w-[1360px] overflow-hidden rounded-2xl bg-white shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:min-h-[320px] lg:grid-cols-[60%_40%]"
+        className="relative my-auto grid max-h-[calc(100dvh-1.5rem)] w-full max-w-[1600px] grid-cols-1 overflow-x-hidden overflow-y-auto rounded-2xl bg-white shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:max-h-[calc(100dvh-2.5rem)] sm:min-h-[320px] lg:grid-cols-[55%_45%]"
       >
         <button
           type="button"
@@ -120,7 +122,7 @@ const Popup = () => {
           <FaTimes className="h-3 w-3" aria-hidden="true" />
         </button>
 
-        <div className="relative isolate flex min-h-[460px] flex-col overflow-hidden px-6 py-6 text-white sm:min-h-[500px] sm:px-9 sm:py-7 lg:min-h-[500px] lg:px-10 lg:py-6">
+        <div className="relative isolate flex min-h-[400px] flex-col overflow-hidden px-4 py-5 text-white sm:min-h-[440px] sm:px-6 sm:py-6 md:min-h-[460px] md:px-9 md:py-7 lg:min-h-[500px] lg:px-10 lg:py-6">
           <Image
             src="/Halloween Assets Task/image (9).png"
             alt=""
@@ -149,14 +151,14 @@ const Popup = () => {
             />
           </div>
 
-          <div className="relative z-10 mt-4 max-w-[430px] lg:mt-2">
+          <div className="relative z-10 mt-4 flex max-w-[430px] flex-1 flex-col justify-center lg:mt-2">
             <p className="text-xs font-semibold uppercase tracking-[0.27em] text-white/90">
               Limited - time Halloween offer
             </p>
             <span className="mt-2 block h-[2px] w-8 bg-[#BF0B30]" />
             <h2
               id="halloween-popup-title"
-              className="mt-3 text-3xl font-extrabold leading-none tracking-wide sm:max-w-md sm:text-4xl lg:mt-3"
+              className="mt-3 max-w-[calc(100%_-_5rem)] text-3xl font-bold leading-none tracking-wide sm:max-w-md sm:text-4xl md:text-5xl lg:mt-3"
             >
               Unlock exclusive
               <br />
@@ -189,21 +191,21 @@ const Popup = () => {
             </div>
           </div>
 
-          <div className="relative z-10 mt-auto grid max-w-[550px] grid-cols-3 gap-3 pt-6 text-xs font-semibold leading-tight sm:gap-5 sm:text-[13px] lg:pt-5">
-            <div className="flex items-center gap-2.5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#d50832] text-white shadow-[0_4px_10px_rgba(0,0,0,0.75)] sm:h-12 sm:w-12">
+          <div className="relative z-10 mt-auto grid max-w-[550px] grid-cols-1 gap-3 pt-6 text-xs font-semibold leading-tight min-[520px]:grid-cols-3 sm:gap-5 sm:text-[13px] lg:pt-5">
+            <div className="flex min-w-0 items-center gap-2.5">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#d50832] text-white shadow-[0_4px_10px_rgba(0,0,0,0.75)]">
                 <Tag className="h-5 w-5" strokeWidth={1.8} aria-hidden="true" />
               </span>
               <span className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">Exclusive Pricing</span>
             </div>
-            <div className="flex items-center gap-2.5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#d50832] text-white shadow-[0_4px_10px_rgba(0,0,0,0.75)] sm:h-12 sm:w-12">
+            <div className="flex min-w-0 items-center gap-2.5">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#d50832] text-white shadow-[0_4px_10px_rgba(0,0,0,0.75)]">
                 <Crown className="h-5 w-5" strokeWidth={1.8} aria-hidden="true" />
               </span>
               <span className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">Professional Design Experts</span>
             </div>
-            <div className="flex items-center gap-2.5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#d50832] text-white shadow-[0_4px_10px_rgba(0,0,0,0.75)] sm:h-12 sm:w-12">
+            <div className="flex min-w-0 items-center gap-2.5">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#d50832] text-white shadow-[0_4px_10px_rgba(0,0,0,0.75)]">
                 <Clock3 className="h-5 w-5" strokeWidth={1.8} aria-hidden="true" />
               </span>
               <span className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">Limited-Time Offer</span>
@@ -211,20 +213,20 @@ const Popup = () => {
           </div>
         </div>
 
-        <div className="flex min-w-0 flex-col justify-center px-5 pb-7 pt-14 sm:px-8 sm:pb-8 lg:px-9 lg:py-8">
-          <p className="text-base font-extrabold uppercase tracking-[0.3em] text-[#ed173e]">
+        <div className="flex min-w-0 flex-col justify-center px-4 pb-6 pt-10 sm:px-6 sm:pb-7 md:px-8 lg:px-9 lg:py-8">
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-[#ed173e]">
             Schedule a strategy call
           </p>
-          <h3 className="mt-2 text-[24px] font-semibold leading-[1.08] tracking-tight text-[#092650] sm:text-[29px] lg:text-[27px]">
+          <h3 className="mt-2 text-2xl font-semibold leading-[1.08] tracking-wider text-[#092650] sm:text-3xl sm:whitespace-nowrap sm:tracking-normal md:text-4xl lg:text-2xl lg:tracking-tight xl:text-3xl xl:tracking-normal 2xl:whitespace-nowrap">
             Wait! Looking for {""}
             <span className="text-[#ed173e]">exclusive discounts?</span>
           </h3>
-          <p className="mt-2 text-xs text-slate-500 drop-shadow-[0_1px_2px_rgba(0,0,0,0.55)] sm:text-sm">
+          <p className="mt-2 text-sm text-black">
             Get Your Perfect Branding Designed!
           </p>
 
           <form onSubmit={handleSubmit} className="mt-4 space-y-2">
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 gap-2 min-[480px]:grid-cols-2">
               <label className="relative block min-w-0">
                 <span className="sr-only">Name</span>
                 <FaUser className={iconClassName} aria-hidden="true" />
@@ -289,17 +291,17 @@ const Popup = () => {
                 <option value="" disabled>Select a Service</option>
                 {services.map((item) => <option key={item} value={item}>{item}</option>)}
               </select>
-              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">⌄</span>
+              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400"><MdKeyboardArrowDown /></span>
             </label>
 
             <label className="relative block min-w-0">
               <span className="sr-only">Message</span>
-              <FaCommentDots className="pointer-events-none absolute left-2.5 top-2.5 h-3 w-3 text-slate-400" aria-hidden="true" />
+              <FaCommentDots className="pointer-events-none absolute left-3 top-2.5 h-4 w-4 text-slate-400" aria-hidden="true" />
               <textarea
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
                 placeholder="Message"
-                className="h-[48px] w-full resize-y rounded-md border border-slate-300 bg-white px-3 py-2 pl-9 text-[11px] text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-[#BF0B30] focus:ring-2 focus:ring-[#BF0B30]/15 sm:text-xs"
+                className="h-16 w-full resize-y rounded-md border border-slate-300 bg-white px-3 py-2 pl-11 text-xs text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-[#BF0B30] focus:ring-2 focus:ring-[#BF0B30]/15 sm:text-sm"
                 required
               />
             </label>
@@ -307,7 +309,7 @@ const Popup = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex h-[42px] w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-[#ed173e] to-[#d9002f] text-sm font-bold text-white shadow-[0_5px_15px_rgba(217,0,47,0.22)] transition hover:from-[#d9002f] hover:to-[#bd0029] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-70"
+              className="flex h-12 w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-[#ed173e] to-[#d9002f] text-base font-bold text-white shadow-[0_5px_15px_rgba(217,0,47,0.22)] transition hover:from-[#d9002f] hover:to-[#bd0029] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-70"
             >
               {isSubmitting ? "Sending request…" : "Send request"}
               {!isSubmitting && <FaArrowRight className="h-3 w-3" aria-hidden="true" />}
