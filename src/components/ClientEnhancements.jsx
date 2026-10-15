@@ -38,11 +38,13 @@ export default function ClientEnhancements() {
     typeof window !== "undefined" &&
     window.matchMedia("(pointer: coarse)").matches;
   const normalizedPathname = pathname?.replace(/\/+$/, "") || "/";
+  const shouldShowContactPopup =
+    normalizedPathname !== "/halloween-sale";
 
   return (
     <>
       <AutoFaqJsonLd />
-      {normalizedPathname !== "/landing-test" && <ContactPopup />}
+      {shouldShowContactPopup && <ContactPopup />}
       <Setting />
       {!isTouchDevice && <ScrollCircle />}
       {!isTouchDevice && <CustomCursor />}

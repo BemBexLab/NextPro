@@ -13,6 +13,16 @@ import Popup from "./components/Popup";
 import RequestAFreeAudit from "./components/RequestAFreeAudit";
 import Services from "./components/Service";
 import Subscribe from "./components/Subscribe";
+import { withEnUsHreflang } from "@/lib/metadata";
+
+export const metadata = withEnUsHreflang({
+  title: "Halloween Sale 2026 | Web Founders USA",
+  description:
+    "Explore Halloween sale offers on website design, development, SEO, and digital marketing from Web Founders USA. Request a free audit for your next brand move.",
+  alternates: {
+    canonical: "https://www.webfoundersusa.com/halloween-sale",
+  },
+});
 
 const halloweenPhantom = localFont({
   src: "../../../public/fonts/halloween-phantom-2026-04-07-06-18-34-utc/Halloween Phantom.ttf",
