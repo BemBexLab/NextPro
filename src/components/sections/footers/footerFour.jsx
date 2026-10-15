@@ -74,24 +74,27 @@ const FooterFour = () => {
               : "gap-3 py-5 text-xs sm:py-6 sm:text-sm lg:py-7.5"
           }`}
         >
-          <p className="min-w-0 break-words">
-            Designed and Developed By{" "}
-            {isHalloweenSale ? (
-              <span className="relative font-medium text-red-500">
-                WebFounders USA
-              </span>
-            ) : (
+          {!isHalloweenSale && (
+            <p className="min-w-0 break-words">
+              Designed and Developed By{" "}
               <Link
                 href="/"
                 className="relative font-medium text-primary-foreground hover-underline after:h-px"
               >
                 WebFounders USA
               </Link>
-            )}
-          </p>
+            </p>
+          )}
 
-          <p className="min-w-0 break-words md:text-right">
-            Copyright: © 2026. All Rights Reserved
+          <p
+            className={`min-w-0 break-words ${
+              isHalloweenSale ? "w-full text-center" : "md:text-right"
+            }`}
+          >
+            Copyright: © 2026. {" "}
+            <span className={isHalloweenSale ? "text-red-500" : undefined}>
+              All Rights Reserved
+            </span>
           </p>
         </div>
       </div>
