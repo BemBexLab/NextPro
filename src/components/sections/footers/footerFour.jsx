@@ -16,7 +16,7 @@ const FooterFour = () => {
         className="footer-four-background pointer-events-none absolute inset-x-0 top-0 h-full bg-contain bg-top bg-no-repeat opacity-20"
         style={{
           backgroundImage: isLandingTest
-            ? "url('/Halloween%20Assets%20Task/image%2030.jpg')"
+            ? "url('/Halloween%20Assets%20Task/image-30-footer-optimized.webp')"
             : "url(/images/background/services-bg1-1.webp)",
           backgroundSize: isLandingTest ? "cover" : undefined,
           backgroundPosition: "center top",

@@ -1,10 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
-import { isInvalidLegacyProjectHref } from "@/lib/invalidLegacyProjectSlugs";
-
+import { useState, useRef } from "react";
 const PROJECTS_API_BASE = "https://projects-api-bembexlab.vercel.app";
-const PROJECTS_API_URL = `${PROJECTS_API_BASE}/api/images/`;
 
 const CATEGORY_MAP = {
   "LOGO DESIGN": ["logo"],
@@ -52,18 +49,6 @@ const getSegmentedPosts = (items, segmentIndex, segmentCount) => {
   return segment.length > 0 ? segment : items;
 };
 
-function SkeletonCard() {
-  return (
-    <div className="w-full h-[350px] bg-gradient-to-br from-[#10132b] to-[#1a1e38] rounded-2xl shadow-2xl border border-white/10 overflow-hidden flex flex-col animate-pulse relative">
-      <div className="flex-1 w-full h-[220px] skeleton-shimmer" />
-      <div className="p-4 flex flex-col gap-2">
-        <div className="h-6 w-2/3 bg-white/10 rounded" />
-        <div className="h-4 w-1/3 bg-white/5 rounded" />
-      </div>
-    </div>
-  );
-}
-
 const categories = [
   "LOGO DESIGN",
   "WEB DEVELOPMENT",
@@ -75,36 +60,15 @@ const categories = [
   "FIGMA DESIGN",
 ];
 
-const FIGMA_CARD_HEIGHT = 500; // px, adjust as needed
+const FIGMA_CARD_HEIGHT = 500;
 
-const ProjectsTab = () => {
-  const [posts, setPosts] = useState([]);
+const ProjectsTab = ({ initialPosts = [] }) => {
+  const posts = initialPosts;
   const [selectedCategory, setSelectedCategory] = useState("LOGO DESIGN");
   const [selectedLogoSubcategory, setSelectedLogoSubcategory] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [hoveredFigmaCard, setHoveredFigmaCard] = useState(null);
   const [scrollOffsets, setScrollOffsets] = useState({});
   const imgRefs = useRef({});
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const res = await fetch(PROJECTS_API_URL);
-        const data = await res.json();
-        const projectPosts = (data.projects || []).filter(
-          (post) =>
-            (post.cover_image_url || post.images?.[0]?.image_url) &&
-            !isInvalidLegacyProjectHref(post.href_url)
-        );
-        setPosts(projectPosts);
-      } catch (err) {
-        console.error("Error fetching posts", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchProjects();
-  }, []);
 
   const logoSubcategories = [
     ...new Set(
@@ -221,19 +185,13 @@ const ProjectsTab = () => {
       )}
 
       {/* Projects Grid or Message */}
-      {loading ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
-          {Array.from({ length: 6 }).map((_, idx) => (
-            <SkeletonCard key={idx} />
-          ))}
-        </div>
-      ) : filteredPosts.length === 0 ? (
+      {filteredPosts.length === 0 ? (
         <div className="w-full text-center text-lg py-16 text-white/80">
           No projects found in this category.
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
-          {filteredPosts.map((post) => {
+          {filteredPosts.map((post, index) => {
             const imageUrl = resolveProjectImageUrl(
               post.cover_image_url || post.images?.[0]?.image_url
             );
@@ -242,18 +200,22 @@ const ProjectsTab = () => {
             const projectTitle = post.alt || post.category || "Project";
             const projectHref = post.href_url?.trim();
             const cardClassName = `group relative w-full rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-primary/60 bg-black ${
-              figma ? `h-[${FIGMA_CARD_HEIGHT}px]` : "h-auto"
+              figma ? "h-[500px]" : "aspect-[4/3]"
             }`;
             const cardContent = (
               <>
-                <div className={`relative w-full ${figma ? "h-full overflow-hidden" : ""}`}>
+                <div className="relative h-full w-full overflow-hidden">
                   <img
                     ref={(el) => {
                       if (figma) imgRefs.current[post.id] = el;
                     }}
                     src={imageUrl}
                     alt={projectTitle}
-                    className={`w-full object-cover object-top transition-transform duration-[2500ms] ease-in-out`}
+                    width={figma ? undefined : 800}
+                    height={figma ? undefined : 600}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    fetchPriority={index === 0 ? "high" : "low"}
+                    className="h-full w-full object-cover object-top transition-transform duration-[2500ms] ease-in-out"
                     style={
                       figma
                         ? {
