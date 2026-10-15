@@ -309,10 +309,12 @@ const Popup = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex h-12 w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-[#ed173e] to-[#d9002f] text-base font-bold text-white shadow-[0_5px_15px_rgba(217,0,47,0.22)] transition hover:from-[#d9002f] hover:to-[#bd0029] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-70"
+              className="flex h-12 w-full items-center justify-center rounded-md bg-gradient-to-r from-[#ed173e] to-[#d9002f] text-center text-base font-bold text-white shadow-[0_5px_15px_rgba(217,0,47,0.22)] transition hover:from-[#d9002f] hover:to-[#bd0029] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30] focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-70"
             >
-              {isSubmitting ? "Sending request…" : "Send request"}
-              {!isSubmitting && <FaArrowRight className="h-3 w-3" aria-hidden="true" />}
+              <span className="flex items-center justify-center gap-2">
+                {isSubmitting ? "Sending request…" : "Send request"}
+                {!isSubmitting && <FaArrowRight className="h-3 w-3" aria-hidden="true" />}
+              </span>
             </button>
           </form>
         </div>
