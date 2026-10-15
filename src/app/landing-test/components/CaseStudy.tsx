@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Highlight from "@/components/ui/highlight";
 import Title from "@/components/ui/title";
 import { Button } from "@/components/ui/button";
@@ -211,7 +212,7 @@ const CaseStudy = () => {
         aria-hidden="true"
         className="landing-test-image-fade pointer-events-none absolute inset-x-0 bottom-0 z-0 h-full bg-no-repeat opacity-100"
         style={{
-          backgroundImage: "url('/Halloween%20Assets%20Task/part-02.webp')",
+          backgroundImage: "url('/Halloween%20Assets%20Task/part-02-bg-optimized.webp')",
           backgroundSize: "100% auto",
           backgroundPosition: "bottom",
           WebkitMaskImage:
@@ -220,10 +221,13 @@ const CaseStudy = () => {
             "linear-gradient(to bottom, transparent 0%, #000 8%, #000 92%, transparent 100%)",
         }}
       />
-      <img
+      <Image
         aria-hidden="true"
         src="/Halloween Assets Task/image 17.webp"
         alt=""
+        width={458}
+        height={678}
+        sizes="(max-width: 1023px) 206px, 270px"
         className="pointer-events-none absolute bottom-0 left-0 z-[1] hidden w-[142px] object-contain opacity-90 md:block md:w-[206px] lg:w-[270px]"
       />
       <div className="relative z-10 mx-auto max-w-[1350px] px-[15px]">

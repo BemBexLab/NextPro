@@ -56,7 +56,7 @@ export default function FAQ() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-full bg-no-repeat"
         style={{
-          backgroundImage: "url('/Halloween%20Assets%20Task/image%2033.png')",
+          backgroundImage: "url('/Halloween%20Assets%20Task/image-33-bg-optimized.webp')",
           backgroundSize: "100% auto",
           backgroundPosition: "center bottom",
         }}

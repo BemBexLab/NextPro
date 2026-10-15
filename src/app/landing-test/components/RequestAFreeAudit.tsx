@@ -67,7 +67,7 @@ const RequestAFreeAudit = () => {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-40 dark:opacity-10"
         style={{
-          backgroundImage: "url('/Halloween%20Assets%20Task/image%2033.png')",
+          backgroundImage: "url('/Halloween%20Assets%20Task/image-33-bg-optimized.webp')",
         }}
       />
       

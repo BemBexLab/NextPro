@@ -28,12 +28,14 @@ export default function Page() {
         <Popup />
         <main>
           <section className="relative isolate w-full bg-[#FAFBFE]">
-            <div
-              aria-hidden="true"
-              className="landing-test-image-fade pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-              style={{
-                backgroundImage: "url('/Halloween%20Assets%20Task/image%2032.jpg')",
-              }}
+            <Image
+              src="/Halloween Assets Task/image 32.jpg"
+              alt=""
+              fill
+              priority
+              fetchPriority="high"
+              sizes="100vw"
+              className="landing-test-image-fade pointer-events-none absolute inset-0 z-0 object-cover object-center"
             />
             <div className="relative z-10">
               <Hero />
@@ -48,7 +50,7 @@ export default function Page() {
               aria-hidden="true"
               className="landing-test-image-fade pointer-events-none absolute inset-x-0 bottom-0 z-0 h-full bg-no-repeat"
               style={{
-                backgroundImage: "url('/Halloween Assets Task/part-01.webp')",
+                backgroundImage: "url('/Halloween Assets Task/part-01-bg-optimized.webp')",
                 backgroundSize: "100% auto",
                 backgroundPosition: "center bottom",
               }}
@@ -102,14 +104,12 @@ export default function Page() {
           <CaseStudy />
 
           <div className="relative isolate w-full bg-gradient-to-b from-[#FAFBFE] via-[#F5F7FD] to-[#F0F5FF]">
-            <div
-              aria-hidden="true"
-              className="landing-test-image-fade pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-              style={{
-                backgroundImage: "url('/Halloween Assets Task/image 32.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
+            <Image
+              src="/Halloween Assets Task/image 32.jpg"
+              alt=""
+              fill
+              sizes="100vw"
+              className="landing-test-image-fade pointer-events-none absolute inset-0 z-0 object-cover object-center"
             />
             <Image
               src="/Halloween Assets Task/image 15.webp"

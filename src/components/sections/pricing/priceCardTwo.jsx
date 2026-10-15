@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { FaCircleCheck } from "react-icons/fa6";
 import {
   Dialog,
@@ -63,9 +64,12 @@ const PriceCardTwo = ({
           {plan_name}
         </h2>
         {showImage && (
-          <img
+          <Image
             src={imageSrc}
             alt={`${plan_name} image`}
+            width={256}
+            height={256}
+            sizes="(max-width: 767px) 64px, 96px"
             className="absolute right-2 top-0 z-20 h-16 w-16 object-contain md:right-3 md:top-[-32px] md:h-24 md:w-24"
           />
         )}
