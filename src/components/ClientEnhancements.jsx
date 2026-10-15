@@ -37,11 +37,12 @@ export default function ClientEnhancements() {
   const isTouchDevice =
     typeof window !== "undefined" &&
     window.matchMedia("(pointer: coarse)").matches;
+  const normalizedPathname = pathname?.replace(/\/+$/, "") || "/";
 
   return (
     <>
       <AutoFaqJsonLd />
-      {pathname !== "/landing-test" && <ContactPopup />}
+      {normalizedPathname !== "/landing-test" && <ContactPopup />}
       <Setting />
       {!isTouchDevice && <ScrollCircle />}
       {!isTouchDevice && <CustomCursor />}

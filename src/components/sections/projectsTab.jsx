@@ -246,7 +246,7 @@ const ProjectsTab = () => {
             }`;
             const cardContent = (
               <>
-                <div className={`w-full ${figma ? "h-full overflow-hidden relative" : ""}`}>
+                <div className={`relative w-full ${figma ? "h-full overflow-hidden" : ""}`}>
                   <img
                     ref={(el) => {
                       if (figma) imgRefs.current[post.id] = el;
@@ -270,11 +270,10 @@ const ProjectsTab = () => {
                     }
                     onLoad={() => figma && handleImageLoad(post.id)}
                   />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <span className="text-white font-medium text-lg text-center">
-                    {projectTitle}
-                  </span>
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 z-10 rounded-2xl border border-white/25 bg-gradient-to-br from-white/[0.08] via-transparent to-white/[0.03] shadow-[inset_0_1px_0_rgba(255,255,255,0.4),inset_0_-1px_0_rgba(255,255,255,0.12)] transition-colors duration-300 group-hover:from-white/[0.12]"
+                  />
                 </div>
               </>
             );

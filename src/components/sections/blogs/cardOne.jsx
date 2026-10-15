@@ -4,6 +4,8 @@ import Link from 'next/link'
 import Title from '@/components/ui/title'
 import ZoomIn from '@/components/animations/zoomIn'
 const CardOne = ({ id, title, date, thumb, author, category, url }) => {
+    const isRemoteImage = typeof thumb === 'string' && /^https?:\/\//i.test(thumb)
+
     return (
         <div className='group'>
             <ZoomIn id={id}>
@@ -12,7 +14,7 @@ const CardOne = ({ id, title, date, thumb, author, category, url }) => {
                         <Link key={id} href={`/blog/top-usa-digital-marketing-agencies-in-2026`} className='px-2.5 py-[5px] inline-block font-semibold text-primary-foreground rounded-lg text-sm bg-accent'>{category[0]}</Link>
                     </div> */}
                     <div className='relative'>
-                        <Image src={thumb} width={520} height={280} sizes='(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw' style={{ width: "100%" }} alt='thumb' className='group-hover:scale-110 transition-all duration-700 max-h-[285px] object-cover' />
+                        <Image src={thumb} unoptimized={isRemoteImage} width={520} height={280} sizes='(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw' style={{ width: "100%" }} alt='thumb' className='group-hover:scale-110 transition-all duration-700 max-h-[285px] object-cover' />
                     </div>
                 </div>
                 <div className='pt-[15px]'>

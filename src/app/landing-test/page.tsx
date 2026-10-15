@@ -9,6 +9,7 @@ import FAQ from "./components/FAQs";
 import Hero from "./components/Hero";
 import InfiniteLogoSlider from "./components/InfiniteLogoSlider";
 import Pricing from "./components/Pricing";
+import Popup from "./components/Popup";
 import RequestAFreeAudit from "./components/RequestAFreeAudit";
 import Services from "./components/Service";
 import Subscribe from "./components/Subscribe";
@@ -24,6 +25,7 @@ export default function Page() {
     <MotionConfig reducedMotion="user">
       <div className={`landing-test-page landing-test-headings ${halloweenPhantom.variable}`}>
         <HalloweenHeader />
+        <Popup />
         <main>
           <section className="relative isolate w-full bg-[#FAFBFE]">
             <div
