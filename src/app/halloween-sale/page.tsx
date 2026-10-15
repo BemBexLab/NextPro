@@ -23,7 +23,9 @@ const halloweenPhantom = localFont({
 export default function Page() {
   return (
     <MotionConfig reducedMotion="user">
-      <div className={`landing-test-page landing-test-headings ${halloweenPhantom.variable}`}>
+      <div
+        className={`landing-test-page landing-test-headings ${halloweenPhantom.variable}`}
+      >
         <HalloweenHeader />
         <Popup />
         <main>
@@ -39,10 +41,11 @@ export default function Page() {
             />
             <div className="relative z-10">
               <Hero />
+              <CountDown />
             </div>
           </section>
 
-          <InfiniteLogoSlider />
+          {/* <InfiniteLogoSlider /> */}
           <Services />
 
           <div className="relative isolate bg-[#FAFBFE]">
@@ -50,7 +53,8 @@ export default function Page() {
               aria-hidden="true"
               className="landing-test-image-fade pointer-events-none absolute inset-x-0 bottom-0 z-0 h-full bg-no-repeat"
               style={{
-                backgroundImage: "url('/Halloween Assets Task/part-01-bg-optimized.webp')",
+                backgroundImage:
+                  "url('/Halloween Assets Task/part-01-bg-optimized.webp')",
                 backgroundSize: "100% auto",
                 backgroundPosition: "center bottom",
               }}
@@ -97,7 +101,6 @@ export default function Page() {
             </div>
             <div className="relative z-10">
               <Approach />
-              <CountDown />
             </div>
           </div>
 

@@ -15,7 +15,7 @@ const serviceSlideClassName =
 const Services = () => {
   return (
     <section
-      className="relative isolate overflow-hidden bg-[#FAFBFE] py-[clamp(3rem,7vw,5.5rem)] dark:bg-gray-900"
+      className="relative isolate overflow-hidden bg-[#FAFBFE] py-[clamp(3rem,7vw,5.5rem)]"
       id="services"
     >
       {/* <div
@@ -66,6 +66,13 @@ const Services = () => {
                   [&>*:nth-child(6)_.icon]:bg-[#00A3FF1A] [&>*:nth-child(6)_.icon]:text-[#00A3FF] 
                   [&>*:nth-child(7)_.icon]:bg-[#FF00991A] [&>*:nth-child(7)_.icon]:text-[#FF0099] 
                   [&>*:nth-child(8)_.icon]:bg-[#009F961A] [&>*:nth-child(8)_.icon]:text-[#009F96]
+                  [&>*:nth-child(9)_.icon]:bg-[#32A5521A] [&>*:nth-child(9)_.icon]:text-green-600 
+                  [&>*:nth-child(10)_.icon]:bg-[#A22EFE1A] [&>*:nth-child(10)_.icon]:text-purple-600 
+                  [&>*:nth-child(11)_.icon]:bg-[#5A55791A] [&>*:nth-child(11)_.icon]:text-[#5A5579] dark:[&>*:nth-child(4)_.icon]:text-purple-400
+                  [&>*:nth-child(12)_.icon]:bg-[#FF00001A] [&>*:nth-child(12)_.icon]:text-red-600 
+                  [&>*:nth-child(13)_.icon]:bg-[#00A3FF1A] [&>*:nth-child(13)_.icon]:text-[#00A3FF] 
+                  [&>*:nth-child(14)_.icon]:bg-[#FF00991A] [&>*:nth-child(14)_.icon]:text-[#FF0099] 
+                  [&>*:nth-child(15)_.icon]:bg-[#009F961A] [&>*:nth-child(15)_.icon]:text-[#009F96]
                 `}
               >
                 {servicesDataTwo.map(({ id, icon_1, service_name, link }) => (

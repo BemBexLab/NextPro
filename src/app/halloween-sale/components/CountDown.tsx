@@ -86,7 +86,7 @@ const CounterStat = ({ endPoint, number, title }: CounterStatProps) => {
 
 const CountDown = () => {
   return (
-    <div className="relative isolate mx-auto w-full max-w-7xl px-4 pb-9 sm:px-6 lg:px-8">
+    <div className="relative isolate mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="grid w-full grid-cols-2 items-stretch gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-6">
         {counterData.map(({ endPoint, id, number, title }) => (
           <CounterStat

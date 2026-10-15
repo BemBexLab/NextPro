@@ -8,71 +8,69 @@ import ImportanceLinks from "./importanceLinks";
 
 const FooterFour = () => {
   const pathname = usePathname();
-  const isLandingTest = pathname?.replace(/\/+$/, "") === "/landing-test";
+  const isHalloweenSale = pathname?.replace(/\/+$/, "") === "/halloween-sale";
 
   return (
-    <footer className="relative w-full bg-primary pt-12 sm:pt-16 md:pt-20 lg:pt-28 xl:pt-36 2xl:pt-40">
-      <div
-        className="footer-four-background pointer-events-none absolute inset-x-0 top-0 h-full bg-contain bg-top bg-no-repeat opacity-20"
-        style={{
-          backgroundImage: isLandingTest
-            ? "url('/Halloween%20Assets%20Task/image-30-footer-optimized.webp')"
-            : "url(/images/background/services-bg1-1.webp)",
-          backgroundSize: isLandingTest ? "cover" : undefined,
-          backgroundPosition: "center top",
-          opacity: isLandingTest ? 1 : undefined,
-        }}
-        aria-hidden="true"
-      />
-
-      <div className="relative z-10 mx-auto w-full max-w-[1680px] px-3 min-[360px]:px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto w-full max-w-[1400px]">
-          <FooterContact
-            white_logo={false}
-            bgColor="bg-white"
-            color="text-white"
-            logoLink={!isLandingTest}
+    <footer
+      className={`relative w-full bg-primary ${
+        isHalloweenSale
+          ? "pt-0"
+          : "pt-12 sm:pt-16 md:pt-20 lg:pt-28 xl:pt-36 2xl:pt-40"
+      }`}
+    >
+      {!isHalloweenSale && (
+        <>
+          <div
+            className="footer-four-background pointer-events-none absolute inset-x-0 top-0 h-full bg-contain bg-top bg-no-repeat opacity-20"
+            style={{
+              backgroundImage: "url(/images/background/services-bg1-1.webp)",
+              backgroundPosition: "center top",
+            }}
+            aria-hidden="true"
           />
 
-          <div className="my-8 h-px w-full bg-white/80 sm:my-10 lg:my-12" />
-
-          <div className="grid min-w-0 grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-10 xl:gap-16">
-            <div className="min-w-0">
-              <p className="max-w-2xl break-words pb-6 text-sm leading-relaxed text-white sm:text-base lg:pb-8">
-                Web Founders USA - The No.1 Award-Winning Digital Marketing
-                Agency in the USA. We Don&apos;t Just Market - We Build Digital
-                Empires.
-              </p>
-              <SocialIcons
+          <div className="relative z-10 mx-auto w-full max-w-[1680px] px-3 min-[360px]:px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto w-full max-w-[1400px]">
+              <FooterContact
+                white_logo={false}
+                bgColor="bg-white"
                 color="text-white"
-                hoverColor="hover:text-white"
+                logoLink
               />
-            </div>
 
-            <div className="min-w-0">
-              <ImportanceLinks
-                color="text-white"
-                linkHoverColor="hover:text-white hover:underline"
-                excludeGroups={isLandingTest ? ["Company", "SEO links"] : []}
-                excludeLinksByGroup={
-                  isLandingTest ? { "Other links": ["SEO Services", "Blogs"] } : {}
-                }
-              />
+              <div className="my-8 h-px w-full bg-white/80 sm:my-10 lg:my-12" />
+
+              <div className="grid min-w-0 grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-10 xl:gap-16">
+                <div className="min-w-0">
+                  <p className="max-w-2xl break-words pb-6 text-sm leading-relaxed text-white sm:text-base lg:pb-8">
+                    Web Founders USA - The No.1 Award-Winning Digital Marketing
+                    Agency in the USA. We Don&apos;t Just Market - We Build Digital
+                    Empires.
+                  </p>
+                  <SocialIcons color="text-white" hoverColor="hover:text-white" />
+                </div>
+
+                <div className="min-w-0">
+                  <ImportanceLinks
+                    color="text-white"
+                    linkHoverColor="hover:text-white hover:underline"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
 
       <div
-        className={`relative z-10 mt-10 text-white sm:mt-12 lg:mt-[54px] ${
-          isLandingTest ? "bg-transparent" : "bg-muted dark:bg-accent"
+        className={`relative z-10 bg-muted text-white dark:bg-accent ${
+          isHalloweenSale ? "mt-0" : "mt-10 sm:mt-12 lg:mt-[54px]"
         }`}
-        style={isLandingTest ? { backgroundColor: "transparent" } : undefined}
       >
         <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center justify-between gap-3 px-3 py-5 text-center text-xs sm:px-6 sm:py-6 sm:text-sm md:flex-row md:text-left lg:px-8 lg:py-7.5">
           <p className="min-w-0 break-words">
             Designed and Developed By{" "}
-            {isLandingTest ? (
+            {isHalloweenSale ? (
               <span className="relative font-medium text-red-500">
                 WebFounders USA
               </span>
