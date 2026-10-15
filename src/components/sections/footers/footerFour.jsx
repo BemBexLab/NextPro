@@ -67,7 +67,13 @@ const FooterFour = () => {
           isHalloweenSale ? "mt-0" : "mt-10 sm:mt-12 lg:mt-[54px]"
         }`}
       >
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center justify-between gap-3 px-3 py-5 text-center text-xs sm:px-6 sm:py-6 sm:text-sm md:flex-row md:text-left lg:px-8 lg:py-7.5">
+        <div
+          className={`mx-auto flex w-full max-w-[1400px] flex-col items-center justify-between px-3 text-center md:flex-row md:text-left sm:px-6 lg:px-8 ${
+            isHalloweenSale
+              ? "gap-4 py-7 text-base sm:gap-6 sm:py-8 sm:text-lg lg:py-9"
+              : "gap-3 py-5 text-xs sm:py-6 sm:text-sm lg:py-7.5"
+          }`}
+        >
           <p className="min-w-0 break-words">
             Designed and Developed By{" "}
             {isHalloweenSale ? (

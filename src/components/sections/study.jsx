@@ -9,7 +9,7 @@ import SlideUp from "../animations/slideUp";
 import { isInvalidLegacyProjectHref } from "@/lib/invalidLegacyProjectSlugs";
 
 const PROJECTS_API_BASE = "https://projects-api-bembexlab.vercel.app";
-const PROJECTS_API_URL = PROJECTS_API_BASE + "/api/images/";
+const PROJECTS_API_URL = "/api/project-gallery";
 
 const resolveProjectImageUrl = (path) => {
   if (!path) return "/images/servicebanner/portfolio-image.webp";
@@ -62,7 +62,8 @@ const GalleryCarousel = () => {
         }
 
         const data = await response.json();
-        const filteredProjects = (data.projects || []).filter((project) => {
+        const apiProjects = Array.isArray(data.projects) ? data.projects : [];
+        const filteredProjects = apiProjects.filter((project) => {
           const hasImage =
             project.cover_image_url || project.images?.[0]?.image_url;
           const category = project.category?.toLowerCase() || "";

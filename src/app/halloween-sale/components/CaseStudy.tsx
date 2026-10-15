@@ -9,7 +9,7 @@ import { isInvalidLegacyProjectHref } from "@/lib/invalidLegacyProjectSlugs";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const PROJECTS_API_BASE = "https://projects-api-bembexlab.vercel.app";
-const PROJECTS_API_URL = `${PROJECTS_API_BASE}/api/images/`;
+const PROJECTS_API_URL = "/api/project-gallery";
 
 type Project = {
   id: string | number;
@@ -67,7 +67,8 @@ const GalleryCarousel = () => {
         if (!response.ok) throw new Error(`Projects request failed: ${response.status}`);
 
         const data = await response.json();
-        const filtered = (data.projects || []).filter((project: Project) => {
+        const apiProjects = Array.isArray(data.projects) ? data.projects : [];
+        const filtered = apiProjects.filter((project: Project) => {
           const hasImage = project.cover_image_url || project.images?.[0]?.image_url;
           const category = project.category?.toLowerCase() || "";
           const isWebDev =
