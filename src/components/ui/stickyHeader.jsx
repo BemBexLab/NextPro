@@ -19,7 +19,32 @@ const StickyHeader = ({ children, top = '0px' }) => {
         let topHeaderHeight = 0;
         let isPinned = null;
 
-        const measure = () => {
+        const measure = (entries = []) => {
+            const getObservedHeight = (element) => {
+                const entry = entries.find((item) => item.target === element);
+                const borderBox = entry?.borderBoxSize;
+                const observedHeight = Array.isArray(borderBox)
+                    ? borderBox[0]?.blockSize
+                    : borderBox?.blockSize;
+
+                return observedHeight ?? entry?.contentRect.height;
+            };
+
+            if (entries.length > 0) {
+                const observedHeaderHeight = getObservedHeight(header_container);
+                const observedTopHeaderHeight = top_header
+                    ? getObservedHeight(top_header)
+                    : 0;
+
+                if (observedHeaderHeight != null) {
+                    headerHeight = observedHeaderHeight;
+                }
+                if (top_header && observedTopHeaderHeight != null) {
+                    topHeaderHeight = observedTopHeaderHeight;
+                }
+                return;
+            }
+
             headerHeight = header_container.offsetHeight;
             topHeaderHeight = top_header ? top_header.offsetHeight : 0;
         };
@@ -71,9 +96,18 @@ const StickyHeader = ({ children, top = '0px' }) => {
             });
         };
 
-        const resizeObserver = new ResizeObserver(() => {
-            measure();
-            setPinnedState(isPinned, true);
+        const resizeObserver = new ResizeObserver((entries) => {
+            const previousHeaderHeight = headerHeight;
+            const previousTopHeaderHeight = topHeaderHeight;
+            measure(entries);
+
+            if (
+                headerHeight !== previousHeaderHeight ||
+                topHeaderHeight !== previousTopHeaderHeight
+            ) {
+                setPinnedState(isPinned, true);
+            }
+
             handleScroll();
         });
 

@@ -235,7 +235,7 @@ const CaseStudy = () => {
           <div className="flex flex-col items-center">
             <Button variant="secondary">Case Study</Button>
             <Title size={"5xl"} className="max-w-[872px] pt-2 text-center">
-              <Highlight>Success Stories:</Highlight><span className="text-red-500">Transformative Case</span> Studies
+              <Highlight>Success Stories:</Highlight><span className="text-red-500">Transformative Case Studies</span>
             </Title>
           </div>
         </Reveal>

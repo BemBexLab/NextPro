@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 items-center gap-2 px-4 py-6 sm:gap-4 sm:px-7 sm:py-8 md:px-9 md:py-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch lg:gap-0 lg:p-0">
           {/* Text Content */}
           <div className="flex min-w-0 flex-col justify-center lg:px-10 lg:py-10 xl:px-12 xl:py-12">
-            <h1 className="text-[clamp(2.125rem,5.1vw,4.5rem)] font-bold leading-[1.04] tracking-[-0.035em] text-[#001F3F] dark:text-white">
+            <h1 className="text-[clamp(2.125rem,5.1vw,4.5rem)] font-bold leading-[1.04] tracking-wide text-[#001F3F] dark:text-white">
               Web Founders USA -{" "}
               <span className="text-red-500">No.1 Digital Marketing Agency in USA</span>
             </h1>
