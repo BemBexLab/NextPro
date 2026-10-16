@@ -26,7 +26,7 @@ const counterData = [
     id: 4,
     number: 15,
     endPoint: "x",
-    title: "Growth in Performance",
+    title: "Website Performance Growth",
   },
 ];
 

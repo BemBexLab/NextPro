@@ -1,52 +1,35 @@
-import Link from 'next/link';
 import FaqJsonLd from '@/components/seo/FaqJsonLd';
 
 export default function FAQ() {
   // Embedded FAQs data
   const faqs = [
     {
-      question: "What services does Web Founders USA offer?",
-      answer: (
-        <>
-          Comprehensive web services are Website Design and Development, Digital Marketing Agency, SEO Optimization Services, Social Media Marketing, Email Marketing Services, and Custom Web Solutions that assist businesses in the online growth process.
-        </>
-      )
+      question: "What is included in your website design and development service?",
+      answer: "We plan, design, and build websites around your goals. Projects can include page layouts, responsive development, content structure, forms, and the custom features agreed in the project scope.",
     },
     {
-      question: "Can you build an eCommerce website for my business?",
-      answer: (
-        <>
-          We create eCommerce websites through WooCommerce development, Shopify website development, and <Link href="/service/ecommerce-web-design" className="text-blue-900 hover:underline transition-all duration-300">eCommerce website development</Link> for fast, secure, and mobile friendly online stores that have a high ratio of visitors converting into customers.
-        </>
-      )
+      question: "Can you build a new website or redesign my current one?",
+      answer: "Yes. We can design and develop a new website or update an existing site with clearer page structure, refreshed visual design, and responsive layouts.",
     },
     {
-      question: "Do you provide website maintenance and support?",
-      answer: (
-        <>
-          Absolutely, our <Link href="/service/website-maintenance" className="text-blue-900 hover:underline transition-all duration-300">Website Maintenance</Link> and Support, as well as WordPress Support Services, keep your site not only secure but also updated and with great performance. Moreover, we provide Website Security and Website Speed Optimization services.
-        </>
-      )
+      question: "Will my website work on phones and tablets?",
+      answer: "Responsive layouts are part of our website design and development process. We check pages across common screen sizes so visitors can use the site on phones, tablets, and desktop computers.",
     },
     {
-      question: "Can you redesign my existing Website?",
-      answer: "Certainly, by means of our Website Redesign Services, we not only change the look of your Website but also make it more functional. Our main areas of focus are Responsive Web Design, Mobile Friendly Website Design, and Interactive Web Design, which all together improve the user experience."
+      question: "Can you add custom features to my website?",
+      answer: "Yes. We can scope and build features such as custom forms, booking flows, payment steps, and other functionality that fits your website requirements."
     },
     {
-      question: "Are hosting services part of your offerings?",
-      answer: "Our Web Hosting Services are reliable and consist of Secure Website Hosting, Cloud Hosting Services, and Dedicated Server Hosting, all of which are fast, safe, and permanently available to your Website."
+      question: "Can you build an online store?",
+      answer: "Yes. E-commerce websites are part of our website design and development work. We can plan product pages, shopping flows, and the store features defined for your project."
     },
     {
-      question: "Will you be my partner in developing my online marketing strategy?",
-      answer: "Yes, our digital marketing agency takes care of Online Marketing Services, comprising PPC Marketing Services, Google Ads Management, Content Marketing Services, and SEO Optimization Services for the purpose of driving traffic and conversions."
+      question: "How long does a website project take?",
+      answer: "The timeline depends on the number of pages, the features involved, and how quickly content and feedback are available. We agree on milestones and timing during project planning.",
     },
     {
-      question: "Do you offer customized web solutions?",
-      answer: (
-        <>
-          We do offer Custom Web Solutions, including CMS Website Development, Custom PHP Development, Laravel Development Services, and Dynamic Web Application Development according to your business needs.
-        </>
-      )
+      question: "Will I be able to update my website content?",
+      answer: "We can build an agreed content management system into your website and show you how to make routine content updates after handoff.",
     }
   ];
 

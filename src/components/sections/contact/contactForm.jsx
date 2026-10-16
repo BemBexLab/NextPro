@@ -48,7 +48,7 @@ export default function FreelancerMatchForm() {
     }
 
     setIsSubmitting(true);
-    showSubmissionLoading();
+    await showSubmissionLoading();
 
     try {
       await submitSubmission({

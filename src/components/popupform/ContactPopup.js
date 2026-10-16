@@ -56,7 +56,7 @@ export default function ContactPopup() {
     }
 
     setIsSubmitting(true);
-    showSubmissionLoading();
+    await showSubmissionLoading();
 
     try {
       await submitSubmission({

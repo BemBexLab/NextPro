@@ -23,6 +23,7 @@ const PriceCardTwo = ({
   imageSrc = "/Halloween Assets Task/image 28.webp",
   showImage = true,
   auditHref,
+  onPopupOpen,
   planNameClassName = "",
 }) => {
   const planNameRef = useRef(null);
@@ -123,15 +124,33 @@ const PriceCardTwo = ({
               </a>
             </div>
 
-            <a
-              href={auditHref || "/contact-us"}
-              className="shrink-0 text-base font-extrabold leading-none text-primary hover:underline sm:text-lg"
-            >
-              Chat Now
-            </a>
+            {onPopupOpen ? (
+              <button
+                type="button"
+                onClick={onPopupOpen}
+                className="shrink-0 text-base font-extrabold leading-none text-primary hover:underline sm:text-lg"
+              >
+                Chat Now
+              </button>
+            ) : (
+              <a
+                href={auditHref || "/contact-us"}
+                className="shrink-0 text-base font-extrabold leading-none text-primary hover:underline sm:text-lg"
+              >
+                Chat Now
+              </a>
+            )}
           </div>
 
-          {auditHref ? (
+          {onPopupOpen ? (
+            <button
+              type="button"
+              onClick={onPopupOpen}
+              className="flex w-full items-center justify-center rounded-[7px] bg-[#BF0B30] px-4 py-3 text-base font-bold text-white shadow-md transition hover:bg-[#BF0B30]/90 sm:text-lg"
+            >
+              Request an Audit
+            </button>
+          ) : auditHref ? (
             <a
               href={auditHref}
               className="flex w-full items-center justify-center rounded-[7px] bg-[#BF0B30] px-4 py-3 text-base font-bold text-white shadow-md transition hover:bg-[#BF0B30]/90 sm:text-lg"

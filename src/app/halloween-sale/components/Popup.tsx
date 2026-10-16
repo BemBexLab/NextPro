@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { Clock3, Crown, Tag } from "lucide-react";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
+import { useCallback, useEffect, useState } from "react";
 import {
   FaArrowRight,
   FaCommentDots,
@@ -29,14 +29,13 @@ const iconClassName =
   "pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400";
 
 const services = [
-  "Branding & Logo Design",
-  "Website Design & Development",
-  "Search Engine Optimization",
-  "Digital Marketing",
+  "eCommerce Website Design & Development",
+  "Website Maintainance Services",
+  "Custom Website Design Services",
+  "Website Development Services",
 ];
 
-const Popup = () => {
-  const pathname = usePathname();
+const Popup = ({ onClose }: { onClose: () => void }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -45,12 +44,16 @@ const Popup = () => {
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [portalTarget, setPortalTarget] = useState<HTMLElement | null>(null);
+
+  const closePopup = useCallback(() => {
+    setIsOpen(false);
+    onClose();
+  }, [onClose]);
 
   useEffect(() => {
-    if (pathname?.replace(/\/+$/, "") === "/landing-test") {
-      setIsOpen(true);
-    }
-  }, [pathname]);
+    setPortalTarget(document.body);
+  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -58,7 +61,7 @@ const Popup = () => {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setIsOpen(false);
+      if (event.key === "Escape") closePopup();
     };
 
     window.addEventListener("keydown", handleKeyDown);
@@ -66,12 +69,12 @@ const Popup = () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isOpen]);
+  }, [closePopup, isOpen]);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
-    showSubmissionLoading();
+    await showSubmissionLoading();
 
     try {
       await submitSubmission({
@@ -90,7 +93,7 @@ const Popup = () => {
       setPhone("");
       setService("");
       setMessage("");
-      setIsOpen(false);
+      closePopup();
     } catch {
       await showSubmissionError();
     } finally {
@@ -98,13 +101,13 @@ const Popup = () => {
     }
   };
 
-  if (!isOpen) return null;
+  if (!isOpen || !portalTarget) return null;
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-[#07111f]/80 p-3 backdrop-blur-[2px] sm:p-5"
       onMouseDown={(event) => {
-        if (event.target === event.currentTarget) setIsOpen(false);
+        if (event.target === event.currentTarget) closePopup();
       }}
     >
       <section
@@ -115,7 +118,7 @@ const Popup = () => {
       >
         <button
           type="button"
-          onClick={() => setIsOpen(false)}
+          onClick={closePopup}
           aria-label="Close offer"
           className="absolute right-3 top-3 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700 shadow-sm transition hover:bg-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30]"
         >
@@ -163,7 +166,7 @@ const Popup = () => {
               Unlock exclusive
               <br />
               discounts for your {""}
-              <span className="text-[#f32145]">next brand move.</span>
+              <span className="text-[#f32145]">next website project.</span>
             </h2>
             <p
               className="mt-2 text-[12px] font-semibold text-white sm:text-sm"
@@ -172,7 +175,7 @@ const Popup = () => {
                   "0 2px 2px rgba(0,0,0,1), 0 3px 8px rgba(0,0,0,0.95), 0 0 14px rgba(0,0,0,0.8)",
               }}
             >
-              Get Your Perfect Branding Designed!
+              Get Your Website Designed & Built!
             </p>
           </div>
 
@@ -222,7 +225,7 @@ const Popup = () => {
             <span className="text-[#ed173e]">exclusive discounts?</span>
           </h3>
           <p className="mt-2 text-sm text-black">
-            Get Your Perfect Branding Designed!
+            Get Your Website Designed & Built!
           </p>
 
           <form onSubmit={handleSubmit} className="mt-4 space-y-2">
@@ -266,15 +269,16 @@ const Popup = () => {
                 />
               </label>
               <label className="relative block min-w-0">
-                <span className="sr-only">Phone number (optional)</span>
+                <span className="sr-only">Phone number</span>
                 <FaPhone className={iconClassName} aria-hidden="true" />
                 <input
                   type="tel"
-                  placeholder="Phone Number (optional)"
+                  placeholder="Phone Number"
                   autoComplete="tel"
                   className={fieldClassName}
                   value={phone}
                   onChange={(event) => setPhone(event.target.value)}
+                  required
                 />
               </label>
             </div>
@@ -319,7 +323,8 @@ const Popup = () => {
           </form>
         </div>
       </section>
-    </div>
+    </div>,
+    portalTarget,
   );
 };
 

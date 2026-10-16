@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import RevealOnScroll from "@/components/animations/RevealOnScroll";
 import type { ReactNode } from "react";
 
 type RevealProps = {
@@ -10,14 +8,12 @@ type RevealProps = {
 
 export default function Reveal({ children, className }: RevealProps) {
   return (
-    <motion.div
+    <RevealOnScroll
       className={className}
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.12 }}
-      transition={{ type: "spring", stiffness: 120, damping: 24, mass: 0.8 }}
+      direction="up"
+      threshold={0.12}
     >
       {children}
-    </motion.div>
+    </RevealOnScroll>
   );
 }

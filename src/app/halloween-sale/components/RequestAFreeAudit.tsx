@@ -34,7 +34,7 @@ const RequestAFreeAudit = () => {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     setIsSubmitting(true);
-    showSubmissionLoading();
+    await showSubmissionLoading();
 
     try {
       await submitSubmission({
@@ -73,7 +73,7 @@ const RequestAFreeAudit = () => {
       
       <div className="relative z-10 mx-auto w-full max-w-7xl rounded-2xl border border-white/40 bg-white/60 px-4 py-8 backdrop-blur-xl shadow-xl sm:rounded-3xl sm:px-8 sm:py-12 lg:px-12 lg:py-16 dark:border-gray-800 dark:bg-gray-900/60">
         {/* Simplified, robust grid layout */}
-        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+        <div className="grid grid-cols-1 items-start lg:grid-cols-2">
           
           {/* Left Content */}
           <div className="flex flex-col justify-center lg:pb-6 xl:pb-11">
@@ -85,11 +85,12 @@ const RequestAFreeAudit = () => {
               size="5xl"
               className="text-3xl font-extrabold leading-tight text-[#001F3F] sm:text-4xl lg:text-5xl dark:text-white"
             >
-              Request a free Audit of <span className="text-red-500">your website</span>
+              Request a Free <span className="text-red-500">Website Audit</span>
             </Title>
             <p className="mt-4 max-w-[449px] text-sm font-semibold leading-relaxed text-gray-600 sm:text-base dark:text-gray-300">
-              Find quick answers to common queries in our FAQ section, ensuring
-              a clear understanding of your digital journey with us.
+              Get a clearer picture of your website&apos;s design, usability,
+              responsiveness, and functionality. Share your goals and we&apos;ll
+              review the next steps for your website project.
             </p>
           </div>
 
@@ -146,16 +147,17 @@ const RequestAFreeAudit = () => {
 
                 {/* Phone */}
                 <div className="relative min-w-0">
-                  <label htmlFor="contact-form-phone" className="sr-only">Phone Number (optional)</label>
+                  <label htmlFor="contact-form-phone" className="sr-only">Phone Number</label>
                   <FaPhone aria-hidden="true" className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400 sm:left-4" />
                   <input
                     id="contact-form-phone"
                     type="tel"
-                    placeholder="Phone Number (optional)"
+                    placeholder="Phone Number"
                     autoComplete="tel"
                     className={inputClassName}
                     value={contactNumber}
                     onChange={(e) => setContactNumber(e.target.value)}
+                    required
                   />
                 </div>
               </div>
@@ -172,20 +174,8 @@ const RequestAFreeAudit = () => {
                   className={`${inputClassName} appearance-none truncate pr-10`}
                 >
                   <option value="" disabled>Select a Service</option>
-                  <option value="Search Engine Optimization">Search Engine Optimization</option>
-                  <option value="Social Media Marketing">Social Media Marketing</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Content Writing">Content Writing</option>
-                  <option value="Pay Per Click">Pay Per Click</option>
-                  <option value="Conversion Optimization Services">Conversion Optimization Services</option>
                   <option value="eCommerce Website Design & Development">eCommerce Website Design & Development</option>
-                  <option value="Graphics Design Services">Graphic Design Services</option>
-                  <option value="Brand Strategy Services">Brand Strategy Services</option>
                   <option value="Website Maintainance Services">Website Maintainance Services</option>
-                  <option value="eCommerce Marketing Services">eCommerce Marketing Services</option>
-                  <option value="Video Animation Services">Video Animation Services</option>
-                  <option value="Affiliate Marketing">Affiliate Marketing</option>
-                  <option value="Email Marketing">Email Marketing</option>
                   <option value="Custom Website Design Services">Custom Website Design Services</option>
                   <option value="Website Development Services">Website Development Services</option>
                 </select>

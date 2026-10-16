@@ -1,9 +1,13 @@
-import Swal from "sweetalert2";
-
 const successText = "Thanks for reaching out. We will get back to you shortly.";
 const errorText = "Your message could not be sent right now. Please try again.";
 
-export function showSubmissionLoading() {
+async function loadSweetAlert() {
+  const { default: Swal } = await import("sweetalert2");
+  return Swal;
+}
+
+export async function showSubmissionLoading() {
+  const Swal = await loadSweetAlert();
   Swal.fire({
     title: "Sending your request...",
     text: "Please wait while we deliver your message.",
@@ -36,6 +40,7 @@ export async function submitSubmission(payload) {
 }
 
 export async function showSubmissionSuccess(text = successText) {
+  const Swal = await loadSweetAlert();
   Swal.close();
 
   await Swal.fire({
@@ -54,6 +59,7 @@ export async function showSubmissionSuccess(text = successText) {
 }
 
 export async function showSubmissionError(text = errorText) {
+  const Swal = await loadSweetAlert();
   Swal.close();
 
   await Swal.fire({
@@ -72,6 +78,7 @@ export async function showSubmissionError(text = errorText) {
 }
 
 export async function showServiceRequiredWarning() {
+  const Swal = await loadSweetAlert();
   await Swal.fire({
     icon: "warning",
     title: "Select a service",

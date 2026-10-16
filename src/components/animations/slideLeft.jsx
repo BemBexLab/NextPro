@@ -1,32 +1,10 @@
-"use client"
-import React from 'react'
-import { motion } from "framer-motion"
+import RevealOnScroll from "./RevealOnScroll";
 
 const SlideLeft = ({ children, id }) => {
-    const slideLeftVariants = {
-        offscreen: {
-            x: -80,
-            opacity:0
-        },
-        onscreen: {
-            x: 0,
-            opacity:1,
-            transition: {
-                // type: "spring",
-                // bounce: 0.4,
-                duration: 0.8
-            }
-        }
-    };
     return (
-        <motion.div
-            variants={slideLeftVariants}
-            initial={false}
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.1 }}
-        >
+        <RevealOnScroll direction="left" threshold={0.1}>
             {children}
-        </motion.div>
+        </RevealOnScroll>
     )
 }
 

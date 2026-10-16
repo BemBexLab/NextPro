@@ -2,11 +2,9 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import Highlight from "@/components/ui/highlight";
 import Title from "@/components/ui/title";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
-import Link from "next/link";
 import {
   FaPaintBrush,
   FaRegCalendarAlt,
@@ -16,64 +14,55 @@ import {
 } from "react-icons/fa";
 import Reveal from "./Reveal";
 import { FaArrowRight } from "react-icons/fa6";
+import Popup from "./Popup";
 
 const tabList = [
   {
     id: "development",
-    tab_name: "Discovery & Planning",
+    tab_name: "Project Discovery",
     tab_icon: <FaSearch />,
     tab_content: "/images/resource/approach-image4-1.webp",
-    heading: "Discovery & Planning",
-    description: (
-      <>
-        At Web Founders USA, a dedicated and responsive Website Design and Development Company and <Link href="/service/digital-marketing" className="text-blue-900 hover:underline transition-all duration-300">Digital Marketing Agency</Link>, we first understand your business goals, challenges, and audience. Every business is different, so we ask insightful questions to develop custom web solutions that exactly meet your needs. We study your industry, analyze competitors, and discover what drives your customers. Whether you need SEO Optimization Services, the support of a Social Media Marketing Company, or Business Website Development, we provide a clear roadmap that is designed to save time, cost, and resources while maximizing results.
-      </>
-    ),
+    heading: "Project Discovery",
+    description: "We start by learning about your business, audience, and goals for the website. Together, we define what the site needs to do, which content it should include, and how visitors should move through it.",
   },
   {
     id: "partnership",
-    tab_name: "Proposal & Timeline",
+    tab_name: "Structure & Planning",
     tab_icon: <FaRegCalendarAlt />,
     tab_content: "/images/resource/proposal-&-timeline-2.webp",
-    heading: "Proposal & Timeline",
-    description: (
-      <>
-      "Your business deserves solutions that work for you. From WordPress Development and CMS <Link href="/service/web-development" className="text-blue-900 hover:underline transition-all duration-300"> Website Development </Link> to Ecommerce Website Development and <Link href="/service/custom-website-design" className="text-blue-900 hover:underline transition-all duration-300"> Custom Website Design </Link>, we recommend options that fit your team, budget, and timeline. Each Website that we develop includes Responsive Web Design and mobile friendly Website Design, assuring smooth performance across devices. Clearly defined deliverables, realistic timelines, and transparency are all parts of our commitments, no surprises, just professional results.",
-      </>
-    ) 
+    heading: "Structure & Planning",
+    description: "We map out the pages, content, and features your website needs, then agree on the scope and timeline. This gives the design and development work a clear direction from the start.",
   },
   {
     id: "decisions",
-    tab_name: "Creative Process",
+    tab_name: "Visual Design",
     tab_icon: <FaPaintBrush />,
     tab_content: "/images/resource/creative-process-1.webp",
-    heading: "Creative Process",
-    description:
-      "Our manufacturing web design agency builds websites that look great and perform even better. With our expertise in Interactive Web Design, UI/UX Design Company solutions, and fast, secure hosting, your site stays reliable, protected, and optimized for every user. From logo design services and branding services to professional web development, we handle the creative and technical aspects. We use several tools to improve user experience and increase conversions. These include website speed optimization, WooCommerce development, and Shopify website development. ",
+    heading: "Visual Design",
+    description: "We create a consistent visual direction for your pages, with clear navigation, readable layouts, and thoughtful details. Designs are tailored to your brand and prepared to work smoothly across screen sizes.",
   },
   {
     id: "execution",
-    tab_name: "Final Delivery",
+    tab_name: "Development & Testing",
     tab_icon: <FaRocket />,
     tab_content: "/images/resource/final-delivery-2.webp",
-    heading: "Final Delivery",
-    description:
-      "We make your vision a reality. From designing services for a landing page and lead generation websites to the development of an online booking system, we make sure your site drives results. Our digital marketing agency, including Email Marketing Services and PPC Marketing Services, will complement your Website in generating leads and growing revenue. We test each feature and then train you on how to manage the updates. With Custom Web Forms, Payment Gateway Integration, and Website Security Services, your business is both effective and secure from day one.",
+    heading: "Development & Testing",
+    description: "We build the approved designs into a responsive website, connect the agreed features and forms, and test the pages on common devices and browsers before launch.",
   },
   {
     id: "communication",
-    tab_name: "Maintenance",
+    tab_name: "Launch & Handoff",
     tab_icon: <FaTools />,
-    tab_content: "/service-deatil-images/website-maintenance.webp",
-    heading: "Maintenance",
-    description:
-      "Unlike others, we stay by your side after launch. Our Website Maintenance and Support keeps your site secure, updated, and running smoothly. Thinking of Website Redesign Services, Mobile Friendly Website Design, or Multi Lingual Website Development? We adapt as your business grows. Performance monitoring and strategy adjustment to maximize results are achieved through website analytics services, website traffic analysis, and revenue optimization services. Honesty in communication, measurability in growth, and dependability in support, that's the promise of Web Founders USA.",
+    tab_content: "/images/resource/final-delivery-2.webp",
+    heading: "Launch & Handoff",
+    description: "We prepare your finished website for launch, walk you through the completed pages and features, and provide the access and guidance you need to manage your new site.",
   },
 ];
 
 const Approach = () => {
   const [tab, setTab] = useState("development");
   const [mobileOpen, setMobileOpen] = useState(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const onTabChange = (value) => {
     setTab(value);
@@ -97,15 +86,15 @@ const Approach = () => {
         </Reveal>
 
         {/* Tabs are shown on wide screens; the accordion stays easier to use on tablets. */}
-        <div className="hidden pt-8 min-[1238px]:block">
+        <div className="hidden pt-8 min-[1338px]:block">
           <Tabs onValueChange={onTabChange} defaultValue="development">
-            <TabsList className="mx-auto grid h-auto w-full max-w-6xl grid-cols-3 gap-2 bg-transparent p-0 min-[1238px]:grid-cols-5">
+            <TabsList className="mx-auto flex h-auto w-full max-w-6xl justify-between gap-2 bg-transparent p-0">
               {tabList.map(({ id, tab_icon, tab_name }) => (
                 <TabsTrigger
                   key={id}
                   value={id}
                   className={
-                    "flex min-h-16 w-full min-w-0 items-center justify-start gap-2 rounded-[10px] bg-[#F4F6FF] px-3 py-3 text-left whitespace-normal dark:bg-[#1c242b] xl:justify-center xl:gap-3 xl:px-4 data-[state=active]:bg-red-700 data-[state=active]:text-white dark:data-[state=active]:bg-red-800"
+                    "flex min-h-16 w-max shrink-0 items-center justify-center gap-3 rounded-[10px] bg-[#F4F6FF] px-4 py-3 text-left whitespace-nowrap dark:bg-[#1c242b] data-[state=active]:bg-red-700 data-[state=active]:text-white dark:data-[state=active]:bg-red-800"
                   }
                 >
                   <span
@@ -114,7 +103,7 @@ const Approach = () => {
                   >
                     {tab_icon}
                   </span>
-                  <span className="min-w-0 text-sm font-semibold leading-snug sm:text-base">
+                  <span className="w-max text-sm font-semibold leading-snug whitespace-nowrap sm:text-base">
                     {tab_name}
                   </span>
                 </TabsTrigger>
@@ -132,11 +121,9 @@ const Approach = () => {
                     <div className="flex min-w-0 flex-col justify-center">
                       <Title className="" size={"4xl"}>{heading}</Title>
                       <p className="break-words pt-5 pb-7.5">{description}</p>
-                      <Button asChild variant="outline">
-                        <a href="#request-audit">
-                          Discover more
-                          <FaArrowRight aria-hidden="true" className="text-lg" />
-                        </a>
+                      <Button type="button" variant="outline" onClick={() => setIsPopupOpen(true)}>
+                        Discover more
+                        <FaArrowRight aria-hidden="true" className="text-lg" />
                       </Button>
                     </div>
                     <div className="w-full min-w-0">
@@ -193,11 +180,9 @@ const Approach = () => {
                     alt="bg"
                     className="h-auto w-full rounded-2xl object-cover"
                   />
-                  <Button asChild variant="outline" className="mt-4">
-                    <a href="#request-audit">
-                      Discover more
-                      <FaArrowRight aria-hidden="true" className="text-sm" />
-                    </a>
+                  <Button type="button" variant="outline" className="mt-4" onClick={() => setIsPopupOpen(true)}>
+                    Discover more
+                    <FaArrowRight aria-hidden="true" className="text-sm" />
                   </Button>
                 </div>
               )}
@@ -205,6 +190,7 @@ const Approach = () => {
           ))}
         </div>
       </div>
+      {isPopupOpen && <Popup onClose={() => setIsPopupOpen(false)} />}
     </section>
   );
 };

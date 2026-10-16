@@ -1,15 +1,15 @@
+import "country-flag-icons/3x2/flags.css";
 import Image from "next/image";
-import { MotionConfig } from "framer-motion";
 import localFont from "next/font/local";
 import HalloweenHeader from "@/components/sections/headers/HalloweenHeader";
 import Approach from "./components/Approach";
 import CaseStudy from "./components/CaseStudy";
 import CountDown from "./components/CountDown";
+import DelayedPopup from "./components/DelayedPopup";
 import FAQ from "./components/FAQs";
 import Hero from "./components/Hero";
 import InfiniteLogoSlider from "./components/InfiniteLogoSlider";
 import Pricing from "./components/Pricing";
-import Popup from "./components/Popup";
 import RequestAFreeAudit from "./components/RequestAFreeAudit";
 import Services from "./components/Service";
 import Subscribe from "./components/Subscribe";
@@ -18,7 +18,7 @@ import { withEnUsHreflang } from "@/lib/metadata";
 export const metadata = withEnUsHreflang({
   title: "Halloween Sale 2026 | Web Founders USA",
   description:
-    "Explore Halloween sale offers on website design, development, SEO, and digital marketing from Web Founders USA. Request a free audit for your next brand move.",
+    "Explore Halloween offers on professional website design and development from Web Founders USA. Request a free website audit and plan your next website project.",
   alternates: {
     canonical: "https://www.webfoundersusa.com/halloween-sale",
   },
@@ -32,12 +32,11 @@ const halloweenPhantom = localFont({
 
 export default function Page() {
   return (
-    <MotionConfig reducedMotion="user">
       <div
         className={`landing-test-page landing-test-headings ${halloweenPhantom.variable}`}
       >
         <HalloweenHeader />
-        <Popup />
+        <DelayedPopup />
         <main>
           <section className="relative isolate w-full bg-[#FAFBFE]">
             <Image
@@ -150,6 +149,5 @@ export default function Page() {
           <FAQ />
         </main>
       </div>
-    </MotionConfig>
   );
 }

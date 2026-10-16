@@ -26,7 +26,7 @@ const ContactFormTwo = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsSubmitting(true);
-    showSubmissionLoading();
+    await showSubmissionLoading();
 
     try {
       await submitSubmission({

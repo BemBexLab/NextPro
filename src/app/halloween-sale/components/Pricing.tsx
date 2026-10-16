@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -6,16 +6,10 @@ import Reveal from "./Reveal";
 import { Button } from "@/components/ui/button";
 import { pricingData } from "@/lib/fackData/pricingData2";
 import PriceCardTwo from "@/components/sections/pricing/priceCardTwo";
+import Popup from "./Popup";
 
 const categories = [
-  "Logo",
-  "E-Commerce",
-  "Website Design",
-  "SMM",
-  "Video Animation",
-  "SEO",
-  "Maintenance",
-  "Branding",
+  "Website Design & Development",
 ];
 
 const planImages = [
@@ -25,10 +19,19 @@ const planImages = [
 ];
 
 const Pricing = () => {
-  const [activeCategory, setActiveCategory] = useState("Logo");
-  const filteredData = pricingData.filter(
-    (plan) => plan.category === activeCategory,
-  );
+  const [activeCategory, setActiveCategory] = useState("Website Design & Development");
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const filteredData =
+    activeCategory === "Website Design & Development"
+      ? pricingData
+          .filter((plan) => plan.category === "Website Design")
+          .map((plan) => ({
+            ...plan,
+            services: plan.services.filter(
+              (item) => !/facebook|twitter|youtube|social media|social network|search engine|email/i.test(item),
+            ),
+          }))
+      : [];
 
   return (
     <section className="relative isolate w-full overflow-hidden bg-[#FAFBFE] py-10 dark:bg-gray-900 sm:py-12 lg:py-16">
@@ -88,14 +91,14 @@ const Pricing = () => {
               Pricing
             </Button>
             <h1 className="max-w-full break-words text-center text-3xl font-extrabold leading-[120%] text-[#001F3F] dark:text-white sm:text-4xl lg:text-5xl">
-              OUR <span className="text-red-500">PACKAGES</span>
+              WEBSITE <span className="text-red-500">PACKAGES</span>
             </h1>
             <p className="max-w-[757px] pt-3 text-center text-sm font-semibold leading-relaxed text-gray-600 dark:text-gray-300 sm:text-base">
-              No matter what budget type you have – we welcome you
+              Choose a website package based on the pages, design, and functionality your project needs.
             </p>
 
             {/* Category Filter Buttons */}
-            <div
+            {/* <div
               className="mt-6 flex w-full snap-x snap-mandatory gap-2 overflow-x-auto pb-2 [scrollbar-width:none] sm:mt-8 sm:flex-wrap sm:justify-center sm:overflow-visible sm:snap-none [&::-webkit-scrollbar]:hidden"
               aria-label="Pricing categories"
             >
@@ -118,7 +121,7 @@ const Pricing = () => {
                   </button>
                 );
               })}
-            </div>
+            </div> */}
           </div>
         </Reveal>
 
@@ -149,6 +152,7 @@ const Pricing = () => {
                       services={services}
                       imageSrc={planImages[index % planImages.length]}
                       auditHref="#request-audit"
+                      onPopupOpen={() => setIsPopupOpen(true)}
                       planNameClassName="landing-test-plan-name"
                     />
                   </div>
@@ -162,6 +166,7 @@ const Pricing = () => {
           </div>
         </div>
       </div>
+      {isPopupOpen && <Popup onClose={() => setIsPopupOpen(false)} />}
     </section>
   );
 };
