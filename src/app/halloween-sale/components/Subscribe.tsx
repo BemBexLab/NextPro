@@ -18,7 +18,7 @@ const Subscribe = () => {
         <Reveal>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="relative w-full overflow-hidden rounded-2xl border border-white/60 bg-white/50 p-6 backdrop-blur-xl sm:rounded-3xl sm:p-8 lg:flex lg:items-center lg:justify-between lg:p-12 dark:border-gray-800 dark:bg-gray-900/50">
-              <div className="relative mb-8 max-w-2xl lg:mb-0 lg:pr-8">
+              <div className="relative mb-8 max-w-4xl lg:mb-0 lg:pr-8">
                 <Title
                   size="5xl"
                   className="text-2xl font-extrabold leading-tight text-[#001F3F] sm:text-3xl lg:text-4xl dark:text-white"
