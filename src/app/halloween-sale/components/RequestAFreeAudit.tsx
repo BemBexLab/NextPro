@@ -121,12 +121,11 @@ const RequestAFreeAudit = () => {
                   <input
                     id="contact-form-email"
                     type="email"
-                    placeholder="Email"
+                    placeholder="Email (Optional)"
                     autoComplete="email"
                     className={inputClassName}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    required
                   />
                 </div>
 
@@ -137,7 +136,7 @@ const RequestAFreeAudit = () => {
                   <input
                     id="contact-form-website"
                     type="url"
-                    placeholder="Website (optional)"
+                    placeholder="Website (Optional)"
                     autoComplete="url"
                     className={inputClassName}
                     value={website}
@@ -170,7 +169,6 @@ const RequestAFreeAudit = () => {
                   id="contact-form-service"
                   value={service}
                   onChange={(e) => setService(e.target.value)}
-                  required
                   className={`${inputClassName} appearance-none truncate pr-10`}
                 >
                   <option value="" disabled>Select a Service</option>
@@ -197,11 +195,10 @@ const RequestAFreeAudit = () => {
                 <textarea
                   id="contact-form-message"
                   name="message"
-                  placeholder="Message"
+                  placeholder="Message (Optional)"
                   className="min-h-32 w-full min-w-0 resize-y rounded-lg border-2 border-[#C0C0C0] bg-white py-3 pl-11 pr-4 text-sm outline-none transition-colors placeholder:text-gray-500 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:bg-gray-900 dark:border-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500/20 sm:min-h-40 sm:pl-12 sm:pr-5 sm:text-base"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  required
                 />
                 <FaCommentDots aria-hidden="true" className="pointer-events-none absolute left-3.5 top-3.5 h-4 w-4 text-gray-400 sm:left-4 sm:top-4" />
               </div>

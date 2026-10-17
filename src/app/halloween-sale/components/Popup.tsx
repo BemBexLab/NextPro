@@ -52,7 +52,9 @@ const Popup = ({ onClose }: { onClose: () => void }) => {
   }, [onClose]);
 
   useEffect(() => {
-    setPortalTarget(document.body);
+    setPortalTarget(
+      document.querySelector<HTMLElement>(".landing-test-page") ?? document.body,
+    );
   }, []);
 
   useEffect(() => {
@@ -154,18 +156,16 @@ const Popup = ({ onClose }: { onClose: () => void }) => {
             />
           </div>
 
-          <div className="relative z-10 mt-4 flex max-w-[430px] flex-1 flex-col justify-center lg:mt-2">
+          <div className="relative z-10 mt-4 flex max-w-[570px] flex-1 flex-col justify-center lg:mt-2">
             <p className="text-xs font-semibold uppercase tracking-[0.27em] text-white/90">
               Limited - time Halloween offer
             </p>
             <span className="mt-2 block h-[2px] w-8 bg-[#BF0B30]" />
             <h2
               id="halloween-popup-title"
-              className="mt-3 max-w-[calc(100%_-_5rem)] text-3xl font-bold leading-none tracking-wide sm:max-w-md sm:text-4xl md:text-5xl lg:mt-3"
+              className="mt-3 max-w-[calc(100%_-_5rem)] text-3xl font-bold leading-none tracking-wide sm:max-w-xl sm:text-4xl lg:text-5xl lg:mt-3"
             >
-              Unlock exclusive
-              <br />
-              discounts for your {""}
+              Unlock exclusive discounts for your {""}
               <span className="text-[#f32145]">next website project.</span>
             </h2>
             <p
@@ -248,12 +248,11 @@ const Popup = ({ onClose }: { onClose: () => void }) => {
                 <FaEnvelope className={iconClassName} aria-hidden="true" />
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder="Email (Optional)"
                   autoComplete="email"
                   className={fieldClassName}
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
-                  required
                 />
               </label>
               <label className="relative block min-w-0">
@@ -261,7 +260,7 @@ const Popup = ({ onClose }: { onClose: () => void }) => {
                 <FaGlobe className={iconClassName} aria-hidden="true" />
                 <input
                   type="url"
-                  placeholder="Website (optional)"
+                  placeholder="Website (Optional)"
                   autoComplete="url"
                   className={fieldClassName}
                   value={website}
@@ -290,7 +289,6 @@ const Popup = ({ onClose }: { onClose: () => void }) => {
                 value={service}
                 onChange={(event) => setService(event.target.value)}
                 className={`${fieldClassName} appearance-none pr-8 font-semibold`}
-                required
               >
                 <option value="" disabled>Select a Service</option>
                 {services.map((item) => <option key={item} value={item}>{item}</option>)}
@@ -304,9 +302,8 @@ const Popup = ({ onClose }: { onClose: () => void }) => {
               <textarea
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
-                placeholder="Message"
+                placeholder="Message (Optional)"
                 className="h-16 w-full resize-y rounded-md border border-slate-300 bg-white px-3 py-2 pl-11 text-xs text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-[#BF0B30] focus:ring-2 focus:ring-[#BF0B30]/15 sm:text-sm"
-                required
               />
             </label>
 
