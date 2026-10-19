@@ -30,7 +30,7 @@ export const pricingData = [
     plan_name: "PROFESSIONAL",
     category: "Website Design",
     price: "699",
-    old_price: "1398",
+    old_price: "1399",
     services: [
       "6 Unique Pages Website",
       "5 Stock images",
