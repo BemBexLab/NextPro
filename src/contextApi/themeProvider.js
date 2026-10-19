@@ -59,11 +59,15 @@ export function ThemeProvider({
   const [systemTheme, setSystemTheme] = useState("light");
 
   useEffect(() => {
-    const storedTheme = window.localStorage.getItem(storageKey);
-    const nextTheme = storedTheme || defaultTheme;
+    const timeout = window.setTimeout(() => {
+      const storedTheme = window.localStorage.getItem(storageKey);
+      const nextTheme = storedTheme || defaultTheme;
 
-    setThemeState(nextTheme);
-    setSystemTheme(getSystemTheme());
+      setThemeState(nextTheme);
+      setSystemTheme(getSystemTheme());
+    }, 0);
+
+    return () => window.clearTimeout(timeout);
   }, [defaultTheme, storageKey]);
 
   useEffect(() => {

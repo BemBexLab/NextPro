@@ -170,7 +170,7 @@ const GalleryCarousel = () => {
 
           const image = (
             <>
-              <img
+              <Image
                 src={imageUrl}
                 alt={projectTitle}
                 width="800"
@@ -179,7 +179,7 @@ const GalleryCarousel = () => {
                 decoding="async"
                 fetchPriority="low"
                 draggable={false}
-                className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.025] motion-reduce:transition-none"
+                className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.025] motion-reduce:transition-none" unoptimized
               />
               <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/55 via-transparent to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
             </>

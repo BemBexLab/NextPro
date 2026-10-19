@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -39,7 +41,7 @@ const Blog8 = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight ">
             How Local SEO Helps For Dentists Get More Patients in 2026
           </h1>
-          <img
+          <Image
             src="/blogs/BLOG 8/blog 8.webp"
             alt="Best SEO Services in USA for 2026 Scalable SEO Optimization & Growth Solutions"
             className="w-full h-auto object-cover"
@@ -140,8 +142,8 @@ const Blog8 = () => {
               <p>
                 Finding new patients is not as easy as before. Today, most
                 people go online when they need a dentist. They search for
-                things like <b>"dentists near me," "family dentist near me,"</b>{" "}
-                or <b>"emergency dentist near me."</b>
+                things like <b>&quot;dentists near me,&quot; &quot;family dentist near me,&quot;</b>{" "}
+                or <b>&quot;emergency dentist near me.&quot;</b>
               </p>
               <br />
               <p>
@@ -149,7 +151,7 @@ const Blog8 = () => {
               </p>
               <br />
               <p>
-                <a className="hover:underline text-blue-500 font-semibold" href="/service/seo-services/local-seo-services/">Local SEO</a> allows your dental clinic to appear in Google search
+                <Link className="hover:underline text-blue-500 font-semibold" href="/service/seo-services/local-seo-services/">Local SEO</Link> allows your dental clinic to appear in Google search
                 results and on Google Maps when individuals in the area search
                 for dental services. When your clinic is visible in these
                 searches, it becomes easier for more people to discover you. A
@@ -160,7 +162,7 @@ const Blog8 = () => {
               <p>
                 In 2026, there is a lot of competition between dental clinics.
                 Clinics that use <b>local dental SEO</b> and{" "}
-                <b><a className="hover:underline text-blue-500 font-semibold" href="/blog/how-to-choose-digital-marketing-agency/">dental clinic digital marketing</a></b> often get more patients.
+                <b><Link className="hover:underline text-blue-500 font-semibold" href="/blog/how-to-choose-digital-marketing-agency/">dental clinic digital marketing</Link></b> often get more patients.
               </p>
               <p>
                 This guide explains how <b>local SEO helps dentists</b> bring in
@@ -227,9 +229,9 @@ const Blog8 = () => {
                     <li className="flex items-start gap-3">
                       <CheckCircle className="text-indigo-600 w-5 h-5 shrink-0 mt-0.5" />
                       <span>
-                        <a href="/blog/how-seo-works-in-2026/" className="text-blue-500 hover:underline">
+                        <Link href="/blog/how-seo-works-in-2026/" className="text-blue-500 hover:underline">
                           <b>Increase Google ranking for dentists</b>
-                        </a>
+                        </Link>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -274,16 +276,16 @@ const Blog8 = () => {
                 <p>For example, people search things like:</p>
                 <div className="flex flex-wrap gap-3 my-4">
                   <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-lg font-medium ">
-                    "best dentist near me"
+                    &quot;best dentist near me&quot;
                   </span>
                   <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-lg font-medium ">
-                    "emergency dentist open now"
+                    &quot;emergency dentist open now&quot;
                   </span>
                   <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-lg font-medium ">
-                    "cosmetic dentist in my area"
+                    &quot;cosmetic dentist in my area&quot;
                   </span>
                   <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-lg font-medium ">
-                    "family dental clinic near me"
+                    &quot;family dental clinic near me&quot;
                   </span>
                 </div>
                 <p>
@@ -350,7 +352,7 @@ const Blog8 = () => {
                     <a className="hover:underline text-blue-500 font-semibold" href="https://www.brightlocal.com/learn/google-local-pack/">Local pack results</a>
                   </span>
                   <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-lg font-medium ">
-                    "Dentist near me" searches
+                    &quot;Dentist near me&quot; searches
                   </span>
                 </div>
                 <p>
@@ -372,7 +374,7 @@ const Blog8 = () => {
                       <li>Address</li>
                       <li>Phone number</li>
                       <li>Business hours</li>
-                      <li><a className="hover:underline text-blue-500 font-semibold" href="/">Website link</a></li>
+                      <li><Link className="hover:underline text-blue-500 font-semibold" href="/">Website link</Link></li>
                     </ul>
                     <p className="mt-3">
                       This information is called{" "}
@@ -530,7 +532,7 @@ const Blog8 = () => {
                   Local Keywords Every Dentist Should Target for Better
                   Visibility
                 </h2>
-                <img
+                <Image
                   src="/blogs/BLOG 8/blog 8-2.webp"
                   alt="Best SEO Services in USA for 2026 Scalable SEO Optimization & Growth Solutions"
                   className="w-full h-auto object-cover"
@@ -544,7 +546,7 @@ const Blog8 = () => {
                 </p>
                 <p>
                   For example, if someone searches for{" "}
-                  <b>"teeth whitening dentist in USA"</b>, Google looks for
+                  <b>&quot;teeth whitening dentist in USA&quot;</b>, Google looks for
                   websites using related keywords.
                 </p>
                 <p>
@@ -603,7 +605,7 @@ const Blog8 = () => {
                   className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3"
                 >
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
-                  How Local Listings and Citations Improve Your Dental Clinic's
+                  How Local Listings and Citations Improve Your Dental Clinic&apos;s
                   Reach
                 </h2>
                 <p>
@@ -611,7 +613,7 @@ const Blog8 = () => {
                   real and trustworthy.
                 </p>
                 <p>
-                  A <b>citation</b> is any place online where your clinic's{" "}
+                  A <b>citation</b> is any place online where your clinic&apos;s{" "}
                   <b>NAP information</b> appears.
                 </p>
                 <p>Common examples include:</p>
@@ -666,7 +668,7 @@ const Blog8 = () => {
                   className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3"
                 >
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
-                  Mobile Search and "Dentist Near Me" Trends You Can't Ignore
+                  Mobile Search and &quot;Dentist Near Me&quot; Trends You Can&apos;t Ignore
                 </h2>
                 <p>Mobile search dominates local search.</p>
                 <p>Most people now search for dentists using smartphones.</p>
@@ -686,7 +688,7 @@ const Blog8 = () => {
                   </span>
                 </div>
                 <p>
-                  Google prioritizes <b><a className="text-blue-500 font-semibold hover:underline" href="/service/custom-website-design/">mobile-friendly websites</a></b>.
+                  Google prioritizes <b><Link className="text-blue-500 font-semibold hover:underline" href="/service/custom-website-design/">mobile-friendly websites</Link></b>.
                 </p>
                 <p>
                   If your <b>dental website SEO</b> is not optimized for mobile
@@ -742,9 +744,9 @@ const Blog8 = () => {
                 </p>
                 <p>For example, a dental clinic in Texas might write:</p>
                 <ul className="list-disc pl-6 space-y-2 my-4">
-                  <li>"Best Family Dentist in Houston"</li>
-                  <li>"Cost of Dental Implants in Texas"</li>
-                  <li>"How to Find an Emergency Dentist in Houston"</li>
+                  <li>&quot;Best Family Dentist in Houston&quot;</li>
+                  <li>&quot;Cost of Dental Implants in Texas&quot;</li>
+                  <li>&quot;How to Find an Emergency Dentist in Houston&quot;</li>
                 </ul>
                 <p>
                   This type of <b>location-based content</b> targets patients in
@@ -956,7 +958,7 @@ const Blog8 = () => {
                     <p>This often includes:</p>
                     <ul className="list-disc pl-6 space-y-1 mt-2">
                       <li>keyword research</li>
-                      <li><a className="text-blue-500 font-semibold hover:underline"  href="/blog/technical-seo-issues-that-kill-rankings/">technical SEO</a></li>
+                      <li><Link className="text-blue-500 font-semibold hover:underline"  href="/blog/technical-seo-issues-that-kill-rankings/">technical SEO</Link></li>
                       <li>citation building</li>
                       <li>content marketing</li>
                       <li>reputation management</li>
@@ -1020,8 +1022,8 @@ const Blog8 = () => {
                     </h3>
                     <p>
                       Many people search simple terms like{" "}
-                      <b>"dentist near me", "best dentist near me"</b>, or{" "}
-                      <b>"emergency dentist."</b>
+                      <b>&quot;dentist near me&quot;, &quot;best dentist near me&quot;</b>, or{" "}
+                      <b>&quot;emergency dentist.&quot;</b>
                     </p>
                   </div>
                 </div>

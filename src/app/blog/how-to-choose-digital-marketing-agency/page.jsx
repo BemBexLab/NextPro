@@ -136,7 +136,7 @@ export default function HowToChooseAgency() {
                   results.
                 </p>
                 <p className="mb-4">
-                  If you're researching how to choose a digital marketing
+                  If you&apos;re researching how to choose a digital marketing
                   agency, this guide will walk you step-by-step through the
                   exact evaluation process—from defining goals to reviewing
                   contracts.
@@ -325,7 +325,7 @@ export default function HowToChooseAgency() {
           <StepCard number="5" title="Evaluate Their Process">
             <p>
               Professional agencies follow a structured workflow. If an agency
-              jumps straight to execution without research, that's a warning
+              jumps straight to execution without research, that&apos;s a warning
               sign.
             </p>
             <div className="flex flex-wrap gap-2 my-6">

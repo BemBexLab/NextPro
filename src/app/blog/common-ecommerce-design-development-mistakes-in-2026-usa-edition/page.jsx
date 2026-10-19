@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -61,7 +63,7 @@ const Blog22 = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-slate-900">
             Common Ecommerce Design & Development Mistakes in 2026 – USA Edition
           </h1>
-          <img
+          <Image
             src="/blogs/blog 22.webp"
             alt="Common Ecommerce Design Development Mistakes 2026 USA"
             className="w-full h-auto object-cover rounded-xl shadow-2xl"
@@ -129,13 +131,13 @@ const Blog22 = () => {
               {/* Intro Section */}
               <div id="intro" className="space-y-6">
                 <p>
-                  Building an <b>ecommerce website</b> in 2026 is not just about looks. It's about speed, user experience, SEO, and trust. Many businesses in the USA still make simple mistakes that quietly hurt their sales.
+                  Building an <b>ecommerce website</b> in 2026 is not just about looks. It&apos;s about speed, user experience, SEO, and trust. Many businesses in the USA still make simple mistakes that quietly hurt their sales.
                 </p>
                 <p>
-                  A website may look good, but if it loads slow, feels confusing, or doesn't match what users want, people leave fast. That means lost traffic, lost trust, and lost revenue.
+                  A website may look good, but if it loads slow, feels confusing, or doesn&apos;t match what users want, people leave fast. That means lost traffic, lost trust, and lost revenue.
                 </p>
                 <p>
-                  In this guide, I'll walk you through the most common <b>ecommerce website design and development mistakes</b>. These are real issues I've seen again and again. Fixing them can help you build a <b>high-converting ecommerce website</b> that actually performs.
+                  In this guide, I&apos;ll walk you through the most common <b>ecommerce website design and development mistakes</b>. These are real issues I&apos;ve seen again and again. Fixing them can help you build a <b>high-converting ecommerce website</b> that actually performs.
                 </p>
               </div>
 
@@ -148,7 +150,7 @@ const Blog22 = () => {
                 
                 <div className="space-y-6">
                   <p>
-                    Most people in the USA now shop on their phones. If your <b>ecommerce website</b> is not mobile-friendly, you're already behind.
+                    Most people in the USA now shop on their phones. If your <b>ecommerce website</b> is not mobile-friendly, you&apos;re already behind.
                   </p>
                   <p>
                     Many businesses still design for desktop first. Then they try to adjust it for mobile later. This creates broken layouts, small buttons, and poor user experience.
@@ -196,7 +198,7 @@ const Blog22 = () => {
                   </ul>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
-                      If your site feels hard to use on a phone, people won't stay. They'll leave and go to a better ecommerce website.
+                      If your site feels hard to use on a phone, people won&apos;t stay. They&apos;ll leave and go to a better ecommerce website.
                     </p>
                   </div>
                 </div>
@@ -213,7 +215,7 @@ const Blog22 = () => {
                     Speed matters more than ever. A slow <b>ecommerce website</b> kills conversions.
                   </p>
                   <p>
-                    Many <a href="/service/ecommerce-web-design/" className="text-blue-700 underline">ecommerce website developers</a> add too many scripts, plugins, and heavy designs. It may look fancy, but it slows everything down.
+                    Many <Link href="/service/ecommerce-web-design/" className="text-blue-700 underline">ecommerce website developers</Link> add too many scripts, plugins, and heavy designs. It may look fancy, but it slows everything down.
                   </p>
                   <p>
                     Even a <b>2–3 second delay</b> can make users leave.
@@ -272,7 +274,7 @@ const Blog22 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    Your product page is where the sale happens. But many ecommerce websites don't optimize it properly.
+                    Your product page is where the sale happens. But many ecommerce websites don&apos;t optimize it properly.
                   </p>
                   <p>
                     They either use very little content or copy generic descriptions. This hurts both SEO and conversions.
@@ -315,7 +317,7 @@ const Blog22 = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <XCircle className="text-red-600 shrink-0 mt-1" size={20} />
-                      <span><b>Don't answer user questions</b></span>
+                      <span><b>Don&apos;t answer user questions</b></span>
                     </li>
                   </ul>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
@@ -337,7 +339,7 @@ const Blog22 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    If users can't find what they want, they leave. It's that simple.
+                    If users can&apos;t find what they want, they leave. It&apos;s that simple.
                   </p>
                   <p>
                     Some ecommerce websites try to add too many menus, filters, and categories. Instead of helping, it creates confusion.
@@ -423,7 +425,7 @@ const Blog22 = () => {
                     </li>
                   </ul>
                   <p>
-                    A lot of <b>ecommerce website development services</b> don't pay attention to this. They only care about how things look, not how well they work.
+                    A lot of <b>ecommerce website development services</b> don&apos;t pay attention to this. They only care about how things look, not how well they work.
                   </p>
                   <p className="font-semibold text-slate-900">What you should pay attention to:</p>
                   <ul className="space-y-3">
@@ -454,7 +456,7 @@ const Blog22 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Poor Checkout Experience Leading to Cart Abandonment
                 </h2>
-                <img
+                <Image
                   src="/blogs/blog 22-2.webp"
                   alt="Mobile-First UX for Ecommerce Websites USA"
                   className="w-full h-auto object-cover rounded-xl mb-6"
@@ -553,7 +555,7 @@ const Blog22 = () => {
                     Search engines can better understand your site when it has <b>structured data</b>.
                   </p>
                   <p>
-                    Your online store won't show up as much in search results without it.
+                    Your online store won&apos;t show up as much in search results without it.
                   </p>
                   <p className="font-semibold text-slate-900">Your products can show the following with structured data:</p>
                   <ul className="space-y-3">
@@ -574,7 +576,7 @@ const Blog22 = () => {
                     This makes your listing stand out.
                   </p>
                   <p>
-                    Many <b>ecommerce website design companies</b> ignore this step. But it's <a href="/service/seo-services" className="text-blue-700 underline">important for SEO</a>.
+                    Many <b>ecommerce website design companies</b> ignore this step. But it&apos;s <Link href="/service/seo-services" className="text-blue-700 underline">important for SEO</Link>.
                   </p>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
@@ -620,7 +622,7 @@ const Blog22 = () => {
                     </li>
                   </ul>
                   <p>
-                    It doesn't have to be hard. Even small changes can make people more interested.
+                    It doesn&apos;t have to be hard. Even small changes can make people more interested.
                   </p>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
@@ -638,13 +640,13 @@ const Blog22 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    People don't pay much attention to internal linking. But it is very important for SEO.
+                    People don&apos;t pay much attention to internal linking. But it is very important for SEO.
                   </p>
                   <p>
-                    Search engines have a hard time crawling your site if your pages aren't linked correctly.
+                    Search engines have a hard time crawling your site if your pages aren&apos;t linked correctly.
                   </p>
                   <p>
-                    It's also harder for users to explore.
+                    It&apos;s also harder for users to explore.
                   </p>
                   <p className="font-semibold text-slate-900">Some common problems are:</p>
                   <ul className="space-y-3">
@@ -654,7 +656,7 @@ const Blog22 = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <XCircle className="text-red-600 shrink-0 mt-1" size={20} />
-                      <span><b>Links that don't work</b></span>
+                      <span><b>Links that don&apos;t work</b></span>
                     </li>
                     <li className="flex items-start gap-3">
                       <XCircle className="text-red-600 shrink-0 mt-1" size={20} />
@@ -698,10 +700,10 @@ const Blog22 = () => {
                     In ecommerce, trust is everything.
                   </p>
                   <p>
-                    People won't buy from your site if they don't trust it.
+                    People won&apos;t buy from your site if they don&apos;t trust it.
                   </p>
                   <p>
-                    A lot of online stores don't make trust signals clear.
+                    A lot of online stores don&apos;t make trust signals clear.
                   </p>
                   <p className="font-semibold text-slate-900">Key parts of trust:</p>
                   <ul className="space-y-3">

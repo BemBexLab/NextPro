@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -32,13 +33,13 @@ const BlogPost = () => {
             Web Founders USA
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
-            2026's Most Trusted SEO Consulting & Optimization Services in the
+            2026&apos;s Most Trusted SEO Consulting & Optimization Services in the
             USA
           </h1>
           {/* <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Annual changes are made to search engines.. In 2026, the competition is stronger than ever. Businesses across the United States are fighting for the same online attention.
           </p> */}
-          <img
+          <Image
             src="/blogs/blog 7.webp"
             alt="2026's Most Trusted SEO Consulting & Optimization Services in the USA"
             className="w-full h-auto object-cover rounded-lg"
@@ -353,7 +354,7 @@ const BlogPost = () => {
                   Foundation
                 </h2>
                 <p>
-                  Technical SEO is the part of SEO that people usually don't
+                  Technical SEO is the part of SEO that people usually don&apos;t
                   see. Visitors may not notice it, but search engines pay a lot
                   of attention to it.
                 </p>
@@ -498,13 +499,13 @@ const BlogPost = () => {
                 </p>
                 <div className="flex flex-wrap gap-3 my-4">
                   <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-lg font-medium">
-                    "dentist near me"
+                    &quot;dentist near me&quot;
                   </span>
                   <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-lg font-medium">
-                    "best lawyer in New York"
+                    &quot;best lawyer in New York&quot;
                   </span>
                   <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-lg font-medium">
-                    "plumber in Los Angeles"
+                    &quot;plumber in Los Angeles&quot;
                   </span>
                 </div>
                 <p>Local SEO strategies usually include:</p>
@@ -533,7 +534,7 @@ const BlogPost = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Ecommerce SEO Optimization for Revenue-Focused Brands
                 </h2>
-                <img
+                <Image
                   src="/blogs/blog 7-1.webp"
                   alt="Tracking Vanity Metrics Instead of Revenue"
                   className="w-full h-auto object-cover mb-8 rounded-lg"
@@ -681,7 +682,7 @@ const BlogPost = () => {
               </div>
 
               <div className="my-12 bg-slate-50 p-8 rounded-2xl border border-slate-200">
-                <img
+                <Image
                   src="/blogs/blog 7-2.webp"
                   alt="2026's Most Trusted SEO Consulting & Optimization Services in the USA"
                   className="w-full h-auto object-cover rounded-lg mb-5"

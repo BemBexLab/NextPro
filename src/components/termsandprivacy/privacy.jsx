@@ -347,7 +347,7 @@ const Privacy = () => {
           </h1>
           <ul>
             <li>
-              "We recognize the importance of protecting your preferences and
+              &quot;We recognize the importance of protecting your preferences and
               consent related to texting and communication. Therefore, we
               explicitly assure all customers that consent information collected
               for texting purposes will not be shared with, sold to, or accessed
@@ -355,7 +355,7 @@ const Privacy = () => {
               external partners or service providers involved in the delivery of
               our products and services. We commit to safeguarding your consent
               preferences and ensure they are strictly used for the intended
-              communication purposes only."
+              communication purposes only.&quot;
             </li>
           </ul>
         </section>

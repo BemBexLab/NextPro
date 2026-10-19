@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import {
   CalendarDays,
   Filter,
@@ -44,6 +44,10 @@ function splitServices(value) {
     .filter(Boolean);
 }
 
+const subscribeToNothing = () => () => {};
+const getClientMountedSnapshot = () => true;
+const getServerMountedSnapshot = () => false;
+
 export default function AdminDashboard() {
   const [submissions, setSubmissions] = useState([]);
   const [selected, setSelected] = useState([]);
@@ -57,11 +61,11 @@ export default function AdminDashboard() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
-  const [hasMounted, setHasMounted] = useState(false);
-
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
+  const hasMounted = useSyncExternalStore(
+    subscribeToNothing,
+    getClientMountedSnapshot,
+    getServerMountedSnapshot,
+  );
 
   const fetchData = () => {
     setLoading(true);
@@ -87,7 +91,8 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     if (!isAuthenticated) return;
-    fetchData();
+    const request = window.setTimeout(fetchData, 0);
+    return () => window.clearTimeout(request);
   }, [isAuthenticated]);
 
   const filteredSubmissions = submissions.filter((submission) => {

@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+
 
 import Link from "next/link";
 import React from "react";
@@ -315,11 +317,11 @@ const Testimonials2 = () => {
                           className="min-h-0 overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-3 shadow-[0_2px_8px_rgba(15,23,42,0.08)] sm:p-4"
                         >
                           <div className="mb-2 flex items-center gap-2">
-                            <img
+                            <Image
                               src={testimonial.image}
                               alt=""
                               loading="lazy"
-                              className="h-11 w-11 shrink-0 rounded-full object-cover shadow-sm sm:h-12 sm:w-12"
+                              className="h-11 w-11 shrink-0 rounded-full object-cover shadow-sm sm:h-12 sm:w-12" width={48} height={48} unoptimized
                             />
                             <div className="min-w-0 flex-1">
                               <p className="truncate text-sm font-bold leading-tight text-[#174b91] sm:text-base">

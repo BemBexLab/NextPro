@@ -40,7 +40,7 @@ const Blog6: React.FC = () => {
       {/* Hero Image */}
       <div className="max-w-4xl mx-auto px-6 mt-16 relative z-20">
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
-          <img
+          <Image
             src="/blogs/blog 6.webp"
             alt="Best SEO Services in USA for 2026 Scalable SEO Optimization & Growth Solutions"
             className="w-full h-auto object-cover"
@@ -70,19 +70,19 @@ const Blog6: React.FC = () => {
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
               <p className="italic text-slate-700">
                 At{" "}
-                <a
+                <Link
                   className="text-blue-900 font-semibold hover:underline"
                   href="/"
                 >
                   Web Founders USA
-                </a>
+                </Link>
                 , we believe SEO should feel simple, clear, and result-driven.
                 Not confusing. Not technical for no reason. Just a smart
                 strategy built around your goals.
               </p>
             </div>
             <p className={bodyTextClass}>
-              Let's break it down in a way that actually makes sense.
+              Let&apos;s break it down in a way that actually makes sense.
             </p>
           </div>
         </section>
@@ -135,12 +135,12 @@ const Blog6: React.FC = () => {
           </p>
           <p className={`mb-4 font-semibold text-slate-800`}>
             Businesses now need{" "}
-            <a
+            <Link
               href="/service/seo-services/"
               className="text-blue-900 hover:underline"
             >
               professional seo services
-            </a>{" "}
+            </Link>{" "}
             that are:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -249,7 +249,7 @@ const Blog6: React.FC = () => {
             The best <b>SEO services</b> focus on building assets, not shortcuts.
           </p>
           <p className={`mb-8 ${bodyTextClass}`}>
-            Here's what truly separates them:
+            Here&apos;s what truly separates them:
           </p>
 
           {/* Point 1 */}
@@ -366,7 +366,7 @@ const Blog6: React.FC = () => {
             Core Elements of High-Performance SEO Optimization Services
           </h2>
           <p className={`mb-8 ${bodyTextClass}`}>
-            Let's simplify what strong SEO really includes.
+            Let&apos;s simplify what strong SEO really includes.
           </p>
 
           {/* Technical Foundation */}
@@ -798,7 +798,7 @@ const Blog6: React.FC = () => {
                 </li>
               </ul>
               <p className={`mb-2 ${bodyTextClass}`}>
-                SEO is not "set and forget."
+                SEO is not &quot;set and forget.&quot;
               </p>
               <p className={bodyTextClass}>It is continuous improvement.</p>
             </div>

@@ -1731,7 +1731,7 @@ export const services = [
                   <div>
                     <p>
                       Our Search Engine Optimization Audit Services cover the
-                      main areas that can affect your website's search
+                      main areas that can affect your website&apos;s search
                       performance.
                     </p>
                     <p>
@@ -1799,12 +1799,12 @@ export const services = [
                     <p>
                       If you need more help with local search after the audit,
                       our{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/local-seo-services/"
                         className="hover:text-blue-500 font-semibold underline"
                       >
                         Local SEO Services
-                      </a>{" "}
+                      </Link>{" "}
                       can help improve your local visibility.
                     </p>
                   </div>
@@ -1829,12 +1829,12 @@ export const services = [
                     </p>
                     <p>
                       If your store uses Shopify, our{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/shopify-seo/"
                         className="hover:text-blue-500 underline font-semibold"
                       >
                         Shopify SEO Services
-                      </a>{" "}
+                      </Link>{" "}
                       can also help improve your online store after the audit.
                     </p>
                   </div>
@@ -1908,12 +1908,12 @@ export const services = [
                     </p>
                     <p>
                       Our{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/seo-content-writing/"
                         className="font-semibold hover:text-blue-500 underline"
                       >
                         SEO Content Writing Services
-                      </a>{" "}
+                      </Link>{" "}
                       can help improve or create useful content after your
                       audit.
                     </p>
@@ -1923,12 +1923,12 @@ export const services = [
                     </p>
                     <p>
                       If your business serves customers in different languages,{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/multilingual-seo/"
                         className="font-semibold hover:text-blue-500 underline"
                       >
                         Multilingual SEO Services
-                      </a>{" "}
+                      </Link>{" "}
                       can also help you reach those users.
                     </p>
                   </div>
@@ -2049,12 +2049,12 @@ export const services = [
                     </p>
                     <p>
                       Our{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/ecommerce-seo/"
                         className="hover:text-blue-500 underline font-semibold"
                       >
                         E-commerce SEO Services
-                      </a>{" "}
+                      </Link>{" "}
                       can help improve your online store after the audit.
                     </p>
                     <p>
@@ -2450,12 +2450,12 @@ export const services = [
                 <p>A proper audit can help you find them.</p>
                 <p>
                   Our{" "}
-                  <a
+                  <Link
                     href="/service/seo-services/seo-audit/"
                     className="inline-flex rounded-full bg-[#0B5FCC] px-3 py-1 font-semibold leading-6 text-white no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#072d7f] hover:shadow-md"
                   >
                     SEO Audit Services
-                  </a>{" "}
+                  </Link>{" "}
                   give you a clear look at your website and show you where
                   improvements can be made.
                 </p>
@@ -2841,12 +2841,12 @@ export const services = [
                   <p>
                     <i>
                       For businesses that need a complete SEO plan, our{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/"
                         className="hover:text-blue-500 font-semibold underline"
                       >
                         SEO Services
-                      </a>{" "}
+                      </Link>{" "}
                       can cover many important parts of your website.
                     </i>
                   </p>
@@ -2961,12 +2961,12 @@ export const services = [
                     </p>
                     <p>
                       For these businesses,{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/local-seo-services/"
                         className="hover:text-blue-500 underline font-semibold"
                       >
                         Local SEO Services
-                      </a>{" "}
+                      </Link>{" "}
                       can be very helpful.
                     </p>
                     <p>
@@ -2989,12 +2989,12 @@ export const services = [
                     <p>Good content is a big part of multilingual SEO.</p>
                     <p>
                       Our{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/seo-content-writing/"
                         className="hover:text-blue-500 underline font-semibold"
                       >
                         SEO Content Writing Services
-                      </a>{" "}
+                      </Link>{" "}
                       help create clear and useful content for your website.
                     </p>
                     <p>We can create:</p>
@@ -3027,23 +3027,23 @@ export const services = [
                     <p>We can help businesses in many industries.</p>
                     <p>
                       For companies that sell to other businesses, our{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/b2b-seo/"
                         className="hover:text-blue-500 underline font-semibold"
                       >
                         B2B SEO Services
-                      </a>{" "}
+                      </Link>{" "}
                       can help bring the right business customers to their
                       website.
                     </p>
                     <p>
                       Larger companies can use our{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/enterprise-seo/"
                         className="hover:text-blue-500 underline font-semibold"
                       >
                         Enterprise SEO Services
-                      </a>{" "}
+                      </Link>{" "}
                       to manage SEO across many pages, products, or locations.
                     </p>
                     <p>We also work with different industries, including:</p>
@@ -3135,23 +3135,23 @@ export const services = [
                     </p>
                     <p>
                       Our{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/ecommerce-seo/"
                         className="font-semibold underline hover:text-blue-500"
                       >
                         E-commerce SEO Services
-                      </a>{" "}
+                      </Link>{" "}
                       can help online stores improve product pages, category
                       pages, website content, and site structure.
                     </p>
                     <p>
                       For stores using Shopify, our{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/shopify-seo/"
                         className="font-semibold underline hover:text-blue-500"
                       >
                         Shopify SEO Services
-                      </a>{" "}
+                      </Link>{" "}
                       can help improve the website and product pages for search.
                     </p>
                     <p>
@@ -3174,12 +3174,12 @@ export const services = [
                 </p>
                 <p>
                   Our{" "}
-                  <a
+                  <Link
                     href="/service/seo-services/seo-audit/"
                     className="font-semibold underline hover:text-blue-500"
                   >
                     SEO Audit Services
-                  </a>{" "}
+                  </Link>{" "}
                   can help check your website for common issues.
                 </p>
                 <p>We can look at:</p>
@@ -4343,7 +4343,7 @@ export const services = [
               <>
                 <b>
                   <i>
-                    Every service is selected according to your website's
+                    Every service is selected according to your website&apos;s
                     current needs. We do not recommend unnecessary work just to
                     make a package look bigger.
                   </i>
@@ -4600,9 +4600,9 @@ export const services = [
               tab_name: "E-commerce SEO Services",
               heading: (
                 <>
-                  <a href="/service/seo-services/ecommerce-seo/">
+                  <Link href="/service/seo-services/ecommerce-seo/">
                     E-commerce SEO Services
-                  </a>
+                  </Link>
                 </>
               ),
               description: "",
@@ -4612,7 +4612,7 @@ export const services = [
               tab_name: "B2B SEO Services",
               heading: (
                 <>
-                  <a href="/service/seo-services/b2b-seo/">B2B SEO Services</a>
+                  <Link href="/service/seo-services/b2b-seo/">B2B SEO Services</Link>
                 </>
               ),
               description: "",
@@ -4622,9 +4622,9 @@ export const services = [
               tab_name: "Enterprise SEO Services",
               heading: (
                 <>
-                  <a href="/service/seo-services/enterprise-seo/">
+                  <Link href="/service/seo-services/enterprise-seo/">
                     Enterprise SEO Services
-                  </a>
+                  </Link>
                 </>
               ),
               description: "",
@@ -4634,9 +4634,9 @@ export const services = [
               tab_name: "Dental SEO Services",
               heading: (
                 <>
-                  <a href="/service/seo-services/dental-seo/">
+                  <Link href="/service/seo-services/dental-seo/">
                     Dental SEO Services
-                  </a>
+                  </Link>
                 </>
               ),
               description: "",
@@ -4646,9 +4646,9 @@ export const services = [
               tab_name: "Healthcare SEO Services",
               heading: (
                 <>
-                  <a href="/service/seo-services/healthcare-seo/">
+                  <Link href="/service/seo-services/healthcare-seo/">
                     Healthcare SEO Services
-                  </a>
+                  </Link>
                 </>
               ),
               description: "",
@@ -4658,9 +4658,9 @@ export const services = [
               tab_name: "Shopify SEO Services",
               heading: (
                 <>
-                  <a href="/service/seo-services/shopify-seo/">
+                  <Link href="/service/seo-services/shopify-seo/">
                     Shopify SEO Services
-                  </a>
+                  </Link>
                 </>
               ),
               description: "",
@@ -4670,9 +4670,9 @@ export const services = [
               tab_name: "WooCommerce SEO Services",
               heading: (
                 <>
-                  <a href="/service/seo-services/woocommerce-seo/">
+                  <Link href="/service/seo-services/woocommerce-seo/">
                     WooCommerce SEO Services
-                  </a>
+                  </Link>
                 </>
               ),
               description: "",
@@ -4682,9 +4682,9 @@ export const services = [
               tab_name: "WordPress SEO Services",
               heading: (
                 <>
-                  <a href="/service/seo-services/">
+                  <Link href="/service/seo-services/">
                     WordPress SEO Services
-                  </a>
+                  </Link>
                 </>
               ),
               description: "",
@@ -4694,9 +4694,9 @@ export const services = [
               tab_name: "Local SEO Services",
               heading: (
                 <>
-                  <a href="/service/seo-services/local-seo-services/">
+                  <Link href="/service/seo-services/local-seo-services/">
                     Local SEO Services
-                  </a>
+                  </Link>
                 </>
               ),
               description: "",
@@ -5121,12 +5121,12 @@ export const services = [
             </>,
             <>
               From technical SEO and{" "}
-              <a
+              <Link
                 className="font-semibold text-blue-500 hover:underline"
                 href="/service/seo-services/local-seo-services/"
               >
                 Local SEO Services
-              </a>{" "}
+              </Link>{" "}
               to keyword research, content optimization, GEO, AEO, and LLM
               optimization, we build a strategy around your services, locations,
               customers, and growth goals.
@@ -5234,12 +5234,12 @@ export const services = [
                 <p className="">
                   <i>
                     Our comprehensive{" "}
-                    <a
+                    <Link
                       className="font-semibold text-blue-500 hover:underline"
                       href="/service/seo-services/"
                     >
                       SEO Services
-                    </a>{" "}
+                    </Link>{" "}
                     are built to improve visibility, traffic, and lead
                     generation through a structured search strategy.
                   </i>
@@ -5499,12 +5499,12 @@ export const services = [
                 We make sure your most important roofing service pages are easy
                 to find, understand, and navigate. <br />
                 Our{" "}
-                <a
+                <Link
                   className="font-semibold text-blue-500 hover:underline"
                   href="/service/seo-services/"
                 >
                   SEO Services
-                </a>{" "}
+                </Link>{" "}
                 include technical SEO, keyword strategy, on-page optimization,
                 authority building, and ongoing performance improvements.
               </>
@@ -5551,12 +5551,12 @@ export const services = [
                   focus on the locations that can actually generate business for
                   you. <br />
                   Web Founders USA specifically lists{" "}
-                  <a
+                  <Link
                     className="font-semibold text-blue-500 hover:underline"
                     href="/service/seo-services/local-seo-services/"
                   >
                     Local SEO Services
-                  </a>{" "}
+                  </Link>{" "}
                   as part of its SEO offerings.
                 </p>
               </div>
@@ -5928,12 +5928,12 @@ export const services = [
                   </ul>
                   <p className="mt-5">
                     We can also improve the conversion journey through{" "}
-                    <a
+                    <Link
                       className="font-semibold text-blue-500 hover:underline"
                       href="/service/conversion-optimization/"
                     >
                       Conversion Optimization Services
-                    </a>
+                    </Link>
                     , helping your website turn more of its existing traffic
                     into inquiries and leads.
                   </p>
@@ -5957,12 +5957,12 @@ export const services = [
                   and more than one decision-maker.
                   <br />
                   Our{" "}
-                  <a
+                  <Link
                     className="text-blue-500 font-semibold hover:underline"
                     href="/service/seo-services/b2b-seo/"
                   >
                     B2B SEO Services
-                  </a>{" "}
+                  </Link>{" "}
                   are designed for businesses that need to reach qualified
                   commercial audiences and generate leads through organic
                   search.
@@ -5997,12 +5997,12 @@ export const services = [
                   </ul>
                   <p className="mt-5">
                     For larger organizations, our{" "}
-                    <a
+                    <Link
                       className="font-semibold text-blue-500 hover:underline"
                       href="/service/seo-services/enterprise-seo/"
                     >
                       Enterprise SEO Services
-                    </a>{" "}
+                    </Link>{" "}
                     can support a more scalable search strategy. Web Founders
                     USA lists Enterprise SEO among its specialized SEO
                     offerings.
@@ -6641,7 +6641,7 @@ export const services = [
                 <p>
                   When someone searches for a wrongful termination attorney, a
                   discrimination lawyer, or an employment lawyer near them,
-                  they're usually searching after a serious workplace event.
+                  they&apos;re usually searching after a serious workplace event.
                   Your firm needs to be visible at exactly that moment.
                 </p>
                 <p>
@@ -6649,7 +6649,7 @@ export const services = [
                   improve your presence across local search, Google Maps, and
                   organic results. We focus on the searches that bring
                   qualified, high-intent clients to your firm not vanity
-                  rankings that don't contribute to case growth.
+                  rankings that don&apos;t contribute to case growth.
                 </p>
                 <p>
                   Whether you operate from one office or serve multiple markets,
@@ -6962,7 +6962,7 @@ export const services = [
               description: (
                 <>
                   <p>
-                    Relevant backlinks strengthen your website's authority and
+                    Relevant backlinks strengthen your website&apos;s authority and
                     credibility. We prioritize legitimate, relevant
                     opportunities instead of spammy link networks or
                     manipulative tactics:
@@ -7092,7 +7092,7 @@ export const services = [
               Choosing a specialized employment law SEO agency means your
               strategy is built around the unique way employment clients search.
               A firm handling wrongful termination and discrimination cases
-              doesn't need the same SEO strategy as a personal injury firm, a
+              doesn&apos;t need the same SEO strategy as a personal injury firm, a
               dentist, or an e-commerce store.
             </>
           ),
@@ -7217,14 +7217,14 @@ export const services = [
           gridClassName: "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4",
           paragraphs: [
             <>
-              Whether you're a boutique employment law practice, an established
+              Whether you&apos;re a boutique employment law practice, an established
               firm, or a multi-location operation, your SEO strategy should
               reflect how your firm actually works. <br />
               <i>
-                "SEO doesn't guarantee a specific outcome, but a well-executed
+                &quot;SEO doesn&apos;t guarantee a specific outcome, but a well-executed
                 strategy creates more opportunities for your firm to be
                 discovered by employees actively searching for legal
-                representation."
+                representation.&quot;
               </i>
             </>,
           ],
@@ -7408,7 +7408,7 @@ export const services = [
                   Our specialized <b>locksmith SEO services</b> are designed to
                   improve your presence across local search, Google Maps, and
                   organic results. We focus on the searches that bring qualified
-                  customers to your business, not vanity rankings that don't
+                  customers to your business, not vanity rankings that don&apos;t
                   contribute to growth.
                 </p>
                 <p>
@@ -7697,7 +7697,7 @@ export const services = [
                   We identify and fix crawlability, indexing, broken links,
                   redirects, site architecture, mobile performance, page speed,
                   Core Web Vitals, duplicate content, and structured data
-                  issues, creating a website that's easier for search engines to
+                  issues, creating a website that&apos;s easier for search engines to
                   crawl and easier for customers to use.
                 </>
               ),
@@ -7711,7 +7711,7 @@ export const services = [
               title: "Authority & Link Building",
               description: (
                 <>
-                  Relevant backlinks strengthen your website's authority and
+                  Relevant backlinks strengthen your website&apos;s authority and
                   credibility. We prioritize legitimate, relevant opportunities
                   local, <b>industry</b>, community, and editorial instead of
                   spammy link networks or manipulative tactics.
@@ -7833,7 +7833,7 @@ export const services = [
             <>
               Choosing a specialized locksmith SEO agency means your strategy is
               built around the unique way locksmith customers search. A
-              locksmith doesn't need the same SEO strategy as a dentist, law
+              locksmith doesn&apos;t need the same SEO strategy as a dentist, law
               firm, or e-commerce store.
             </>
           ),
@@ -8226,113 +8226,113 @@ export const services = [
                   >
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/">SEO Services</a>
+                        <Link href="/service/seo-services/">SEO Services</Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/local-seo-services/">
+                        <Link href="/service/seo-services/local-seo-services/">
                           Local SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/b2b-seo/">
+                        <Link href="/service/seo-services/b2b-seo/">
                           B2B SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/enterprise-seo/">
+                        <Link href="/service/seo-services/enterprise-seo/">
                           Enterprise SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/seo-audit/">
+                        <Link href="/service/seo-services/seo-audit/">
                           SEO Audit Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/seo-content-writing/">
+                        <Link href="/service/seo-services/seo-content-writing/">
                           SEO Content Writing Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/multilingual-seo/">
+                        <Link href="/service/seo-services/multilingual-seo/">
                           Multilingual SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
 
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/healthcare-seo/">
+                        <Link href="/service/seo-services/healthcare-seo/">
                           Healthcare SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/construction-seo/">
+                        <Link href="/service/seo-services/construction-seo/">
                           Construction SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/roofing-seo/">
+                        <Link href="/service/seo-services/roofing-seo/">
                           Roofing SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/dental-seo/">
+                        <Link href="/service/seo-services/dental-seo/">
                           Dental SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/medical-seo/">
+                        <Link href="/service/seo-services/medical-seo/">
                           Medical SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/ecommerce-seo/">
+                        <Link href="/service/seo-services/ecommerce-seo/">
                           E-commerce SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/shopify-seo/">
+                        <Link href="/service/seo-services/shopify-seo/">
                           Shopify SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/hotel-seo/">
+                        <Link href="/service/seo-services/hotel-seo/">
                           Hotel SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="experts-benefit-card flex min-h-32 min-w-[82%] snap-center items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5 text-center shadow-sm">
                       <div className="font-semibold text-gray-900">
-                        <a href="/service/seo-services/boutique-seo/">
+                        <Link href="/service/seo-services/boutique-seo/">
                           Boutique SEO Services
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -8456,7 +8456,7 @@ export const services = [
                     <h3 className="font-bold">What We Do:</h3>
                     <p>
                       We develop relevant authority and trust signals that
-                      support your website's long-term organic visibility.
+                      support your website&apos;s long-term organic visibility.
                     </p>
                     <h3 className="font-bold">Main Benefit:</h3>
                     <p>

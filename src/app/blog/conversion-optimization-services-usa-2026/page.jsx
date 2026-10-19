@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -53,7 +55,7 @@ const Blog18 = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-slate-900">
             Conversion Optimization Services USA 2026 – Boost Conversions, Not Just Visits
           </h1>
-          <img
+          <Image
             src="/blogs/blog 18.webp"
             alt="Conversion Optimization Services USA 2026"
             className="w-full h-auto object-cover rounded-xl shadow-2xl"
@@ -124,7 +126,7 @@ const Blog18 = () => {
               {/* Intro Section */}
               <div id="intro" className="space-y-6">
                 <p>
-                  It's good to get people to visit your website. But traffic alone won't help your business grow.
+                  It&apos;s good to get people to visit your website. But traffic alone won&apos;t help your business grow.
                 </p>
                 <p>
                   What really matters is what people do after they land on your site.
@@ -138,7 +140,7 @@ const Blog18 = () => {
                   This is where <b>conversion optimization</b> comes in.
                 </p>
                 <p>
-                  At <a href="https://webfoundersusa.com" className="text-blue-700 underline">Web Founders USA</a>, we focus on turning your visitors into real customers. Because more clicks mean nothing if they don't convert.
+                  At <a href="https://webfoundersusa.com" className="text-blue-700 underline">Web Founders USA</a>, we focus on turning your visitors into real customers. Because more clicks mean nothing if they don&apos;t convert.
                 </p>
               </div>
 
@@ -153,7 +155,7 @@ const Blog18 = () => {
                     Getting traffic will be easier than ever in 2026. You can post on social media, do SEO, or run ads.
                   </p>
                   <p>
-                    But here's the problem.
+                    But here&apos;s the problem.
                   </p>
                   <p>
                     Most websites lose visitors within seconds.
@@ -167,7 +169,7 @@ const Blog18 = () => {
                     </p>
                   </div>
                   <p>
-                    <a href="/service/conversion-optimization" className="text-blue-700 underline">Conversion optimization services</a> help you fix that.
+                    <Link href="/service/conversion-optimization" className="text-blue-700 underline">Conversion optimization services</Link> help you fix that.
                   </p>
                   <p>
                     Instead of chasing more visitors, you improve what you already have.
@@ -220,7 +222,7 @@ const Blog18 = () => {
                     </li>
                   </ul>
                   <p>
-                    Let's keep it simple.
+                    Let&apos;s keep it simple.
                   </p>
                   <div className="bg-slate-100 rounded-xl p-6 my-6 border border-slate-200">
                     <p className="font-bold text-slate-900 mb-2">Example:</p>
@@ -232,7 +234,7 @@ const Blog18 = () => {
                     </p>
                   </div>
                   <p>
-                    That's real growth.
+                    That&apos;s real growth.
                   </p>
                   <p>
                     A good <b>conversion rate optimization agency</b> does not guess. It studies user behavior and makes smart changes.
@@ -284,7 +286,7 @@ const Blog18 = () => {
                       <div>
                         <p className="font-bold text-slate-900">Strong Call-to-Action</p>
                         <p className="text-slate-700">
-                          Tell people what to do next. Don't mix them up.
+                          Tell people what to do next. Don&apos;t mix them up.
                         </p>
                       </div>
                     </li>
@@ -383,7 +385,7 @@ const Blog18 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Landing Page Optimization Techniques That Actually Convert
                 </h2>
-                <img
+                <Image
                   src="/blogs/blog 18-2.webp"
                   alt="Understanding Conversion Rate Optimization CRO for Modern Businesses"
                   className="w-full h-auto object-cover rounded-xl mb-6"
@@ -440,13 +442,13 @@ const Blog18 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    People don't like confusing websites.
+                    People don&apos;t like confusing websites.
                   </p>
                   <p>
                     If users have trouble, they leave.
                   </p>
                   <p>
-                    That's why it's so important to improve the <b>user experience</b>.
+                    That&apos;s why it&apos;s so important to improve the <b>user experience</b>.
                   </p>
                   <p className="font-semibold text-slate-900">What a smooth experience means:</p>
                   <ul className="space-y-3">
@@ -489,7 +491,7 @@ const Blog18 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    You don't need to guess what works.
+                    You don&apos;t need to guess what works.
                   </p>
                   <p>
                     You test it.
@@ -538,7 +540,7 @@ const Blog18 = () => {
                     Over time, these small tests lead to big results.
                   </p>
                   <p>
-                    That's how <b>conversion rate optimization experts</b> improve websites step by step.
+                    That&apos;s how <b>conversion rate optimization experts</b> improve websites step by step.
                   </p>
                 </div>
               </div>
@@ -554,7 +556,7 @@ const Blog18 = () => {
                     Your website is not just one page.
                   </p>
                   <p>
-                    It's a journey.
+                    It&apos;s a journey.
                   </p>
                   <p>
                     From first click to final action.
@@ -588,10 +590,10 @@ const Blog18 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    You can't improve what you don't measure.
+                    You can&apos;t improve what you don&apos;t measure.
                   </p>
                   <p>
-                    That's why <b>tracking</b> is important.
+                    That&apos;s why <b>tracking</b> is important.
                   </p>
                   <p className="font-semibold text-slate-900">A strong conversion tracking strategy uses tools like:</p>
                   <ul className="space-y-3">
@@ -676,7 +678,7 @@ const Blog18 = () => {
                       At Web Founders USA, we provide results-driven CRO services that are simple, practical, and focused on growth.
                     </p>
                     <p className="text-slate-700 mt-2">
-                      We don't just bring traffic. We help you convert it.
+                      We don&apos;t just bring traffic. We help you convert it.
                     </p>
                   </div>
                 </div>
@@ -696,7 +698,7 @@ const Blog18 = () => {
                     But conversions are everything.
                   </p>
                   <p>
-                    In 2026, smart businesses don't just chase visitors.
+                    In 2026, smart businesses don&apos;t just chase visitors.
                   </p>
                   <p>
                     They focus on <b>online sales optimization</b>, better user experience, and real results.
@@ -751,7 +753,7 @@ const Blog18 = () => {
                       Is CRO useful for ecommerce?
                     </h3>
                     <p>
-                      Yes, it's very important for improving the conversion rate of an online store.
+                      Yes, it&apos;s very important for improving the conversion rate of an online store.
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">

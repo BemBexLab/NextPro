@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -53,7 +55,7 @@ const Blog19 = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-slate-900">
             Custom Ecommerce Website Design & Development USA – 2026 Growth Solutions
           </h1>
-          <img
+          <Image
             src="/blogs/blog 19.webp"
             alt="Custom Ecommerce Website Design Development USA 2026"
             className="w-full h-auto object-cover rounded-xl shadow-2xl"
@@ -150,7 +152,7 @@ const Blog19 = () => {
                   </p>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
-                      A <a href="/service/ecommerce-web-design" className="text-blue-700 underline">custom ecommerce website development</a> gives you full control. You can design everything based on your business goals. From layout to checkout, everything is built for your customers.
+                      A <Link href="/service/ecommerce-web-design" className="text-blue-700 underline">custom ecommerce website development</Link> gives you full control. You can design everything based on your business goals. From layout to checkout, everything is built for your customers.
                     </p>
                   </div>
                   <p>
@@ -365,7 +367,7 @@ const Blog19 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   SEO-Friendly Ecommerce Development What Most Businesses Miss
                 </h2>
-                <img
+                <Image
                   src="/blogs/blog 19-2.webp"
                   alt="Custom Ecommerce Websites vs Templates 2026"
                   className="w-full h-auto object-cover rounded-xl mb-6"
@@ -437,7 +439,7 @@ const Blog19 = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <Layout className="text-indigo-600 shrink-0 mt-1" size={20} />
-                      <span><b>Use clear call-to-action buttons</b> like "Buy Now" or "Add to Cart"</span>
+                      <span><b>Use clear call-to-action buttons</b> like &quot;Buy Now&quot; or &quot;Add to Cart&quot;</span>
                     </li>
                   </ul>
                   <p>
@@ -477,7 +479,7 @@ const Blog19 = () => {
                     Security is one of the most important parts of ecommerce.
                   </p>
                   <p>
-                    Customers are giving out their personal and payment information. They won't trust you if your website isn't safe.
+                    Customers are giving out their personal and payment information. They won&apos;t trust you if your website isn&apos;t safe.
                   </p>
                   <p>
                     Using the right <b>payment gateway integration</b> makes sure that transactions are safe.
@@ -495,7 +497,7 @@ const Blog19 = () => {
                   </ul>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
-                      This is why it's important to develop ecommerce that can grow. It helps you grow without having to start over from scratch.
+                      This is why it&apos;s important to develop ecommerce that can grow. It helps you grow without having to start over from scratch.
                     </p>
                     <p className="text-slate-700 mt-2">
                       Think long-term when building your ecommerce website.
@@ -537,7 +539,7 @@ const Blog19 = () => {
                   </p>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
-                      The most important thing is to pick a platform that fits your business's size, budget, and plans for the future.
+                      The most important thing is to pick a platform that fits your business&apos;s size, budget, and plans for the future.
                     </p>
                     <p className="text-slate-700 mt-2">
                       A good company that builds ecommerce websites can help you choose the right one.

@@ -18,7 +18,7 @@ const ContactMap = () => {
         <div className="flex flex-col items-center">
           <Button variant="secondary">Contact Us</Button>
           <Title size={"5xl"} className="max-w-[832px] pt-6 text-center">
-            Get in Touch: <Highlight>We're Here to Help</Highlight>
+            Get in Touch: <Highlight>We&apos;re Here to Help</Highlight>
           </Title>
         </div>
         <FreelancerMatchForm />

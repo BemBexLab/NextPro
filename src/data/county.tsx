@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { isValidElement, type ReactNode } from "react";
 
 const countyListClassName = [
@@ -111,12 +112,12 @@ export const countyPosts: CountyPost[] = [
         </p>
         <p>
           Web Founders USA provides professional{" "}
-          <a
+          <Link
             href="/service/seo-services/"
             className={countyHeroLinkClassName}
           >
             SEO Services
-          </a>{" "}
+          </Link>{" "}
           for businesses in Union County, GA, helping improve search visibility,
           attract qualified local traffic, and turn website visitors into leads
           and customers. Our strategies combine technical SEO, content
@@ -147,7 +148,7 @@ export const countyPosts: CountyPost[] = [
           "A strong online presence is essential for businesses competing for local customers. People increasingly use search engines to compare businesses, find nearby services, read reviews, research solutions, and decide who to contact.",
           "Simply having a website is not enough. Your website needs to be technically sound, relevant to your target searches, easy to navigate, and optimized for the locations and services you want to promote.",
           "Our SEO strategies help businesses in Union County:",
-          <div>
+          <div key="county-content-151">
             <ul className={countyListClassName}>
               <li>Improve organic search visibility</li>
               <li>Reach customers searching for their services</li>
@@ -166,10 +167,10 @@ export const countyPosts: CountyPost[] = [
         heading: "Our SEO Services in Union County",
         paragraphs: [
           "We provide a complete SEO strategy rather than relying on a single optimization technique. Each part of the campaign works together to build a stronger and more visible website.",
-          <h3 className={countySubheadingClassName}>Technical SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-170">Technical SEO</h3>,
           "Technical SEO provides the foundation for your search visibility. We identify issues that may prevent search engines from crawling, understanding, or indexing important pages.",
           "Our technical SEO work may include:",
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-173">
             <li>Website crawling and indexing</li>
             <li>Site speed optimization</li>
             <li>Mobile usability</li>
@@ -185,10 +186,10 @@ export const countyPosts: CountyPost[] = [
             <li>Structured data</li>
           </ul>,
           "A technically healthy website makes it easier for search engines to discover and understand your most important content.",
-          <h3 className={countySubheadingClassName}>On-Page SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-189">On-Page SEO</h3>,
           "On-page SEO focuses on making individual pages more relevant to both search engines and users.",
           "We optimize:",
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-192">
             <li>Page titles</li>
             <li>Meta descriptions</li>
             <li>Headings</li>
@@ -201,20 +202,20 @@ export const countyPosts: CountyPost[] = [
             <li>Relevant topics and entities</li>
           </ul>,
           "Each page should have a clear purpose and match the search intent behind the keywords it targets.",
-          <h3 className={countySubheadingClassName}>Local SEO Services</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-205">Local SEO Services</h3>,
           "For businesses that serve customers in Union County, local search visibility can be extremely valuable.",
-          <p>
+          <p key="county-content-207">
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/local-seo-services/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Local SEO Services
-            </a>{" "}
+            </Link>{" "}
             help strengthen your presence for location-based searches and can
             include:
           </p>,
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-218">
             <li>Google Business Profile optimization</li>
             <li>Local keyword research</li>
             <li>Location page optimization</li>
@@ -232,9 +233,9 @@ export const countyPosts: CountyPost[] = [
           heading: "SEO Company Serving Canton, GA",
           paragraphs: [
             "Businesses targeting Canton and surrounding Georgia communities need a local SEO strategy that reflects their services, market, and customers.",
-            <p>Our <b>Canton SEO Services</b> help businesses build visibility around relevant searches made by customers looking for local products and services.</p>,
+            <p key="county-content-236">Our <b>Canton SEO Services</b> help businesses build visibility around relevant searches made by customers looking for local products and services.</p>,
             "Depending on your industry, your strategy may target searches involving:",
-            <ul className={countyListClassName}>
+            <ul className={countyListClassName} key="county-content-238">
               <li>Services in Canton</li>
               <li>Businesses near Canton</li>
               <li>Local service providers</li>
@@ -243,7 +244,7 @@ export const countyPosts: CountyPost[] = [
               <li>Location-based commercial searches</li>
             </ul>,
             "Instead of repeating “Canton” throughout a page, we build genuine local relevance through useful content, location signals, service pages, internal links, and local optimization.",
-            <p className="">If you're looking for an <b>SEO Company Canton GA</b> businesses can rely on for a strategic, long-term approach, our team can develop a campaign based on your goals and competitive landscape.</p>
+            <p className="" key="county-content-247">If you&apos;re looking for an <b>SEO Company Canton GA</b> businesses can rely on for a strategic, long-term approach, our team can develop a campaign based on your goals and competitive landscape.</p>
           ],
       },
       {
@@ -251,27 +252,27 @@ export const countyPosts: CountyPost[] = [
           paragraphs: [
             "SEO should reflect the type of business you operate. A roofing company does not need the same strategy as an e-commerce store, medical practice, or B2B organization.",
             "We develop industry-specific strategies for businesses across Union County and surrounding markets.",
-            <h3 className={countySubheadingClassName}>Construction and Local Contractors</h3>,
+            <h3 className={countySubheadingClassName} key="county-content-255">Construction and Local Contractors</h3>,
             "Construction companies and contractors often depend on local searches to generate new project opportunities. Targeted service pages, location pages, project-related content, and local SEO can help these businesses reach customers searching for their services.",
-            <p className="">Our <a href="/service/seo-services/construction-seo/" className="hover:text-blue-500 font-semibold">Construction SEO Services</a> can be tailored around specific construction services, project types, locations, and customer needs.</p>,
-            <p>Roofing businesses can also benefit from dedicated service and location strategies. Our <a href="/service/seo-services/roofing-seo/" className="hover:text-blue-500 font-semibold underline">Roofing SEO Services</a> focus on improving visibility for roofing-related searches, including repairs, replacements, inspections, and other high-intent services.</p>,
+            <p className="" key="county-content-257">Our <Link href="/service/seo-services/construction-seo/" className="hover:text-blue-500 font-semibold">Construction SEO Services</Link> can be tailored around specific construction services, project types, locations, and customer needs.</p>,
+            <p key="county-content-258">Roofing businesses can also benefit from dedicated service and location strategies. Our <Link href="/service/seo-services/roofing-seo/" className="hover:text-blue-500 font-semibold underline">Roofing SEO Services</Link> focus on improving visibility for roofing-related searches, including repairs, replacements, inspections, and other high-intent services.</p>,
 
-            <h3 className={countySubheadingClassName}>Healthcare and Medical Businesses</h3>,
+            <h3 className={countySubheadingClassName} key="county-content-260">Healthcare and Medical Businesses</h3>,
             "Healthcare businesses compete for highly specific service and location searches. Patients often research providers, treatments, services, and locations before making contact.",
-            <p className="">Our <a href="/service/seo-services/healthcare-seo/" className="hover:text-blue-500 font-semibold underline">Healthcare SEO Services</a> can help healthcare organizations build stronger search visibility through optimized service pages, local SEO, helpful content, and technical improvements.</p>,
-            <p>For medical practices, <a href="/service/seo-services/medical-seo/" className="hover:text-blue-500 font-semibold underline">Medical SEO Services</a> can support visibility around relevant medical services, locations, and patient questions while maintaining a clear and trustworthy content structure.</p>,
-            <p>Dental practices can also benefit from a focused strategy. <a href="/service/seo-services/dental-seo/" className="hover:text-blue-500 font-semibold underline">Dental SEO Services</a> can target dental services, local searches, patient questions, and practice-specific information.</p>,
+            <p className="" key="county-content-262">Our <Link href="/service/seo-services/healthcare-seo/" className="hover:text-blue-500 font-semibold underline">Healthcare SEO Services</Link> can help healthcare organizations build stronger search visibility through optimized service pages, local SEO, helpful content, and technical improvements.</p>,
+            <p key="county-content-263">For medical practices, <Link href="/service/seo-services/medical-seo/" className="hover:text-blue-500 font-semibold underline">Medical SEO Services</Link> can support visibility around relevant medical services, locations, and patient questions while maintaining a clear and trustworthy content structure.</p>,
+            <p key="county-content-264">Dental practices can also benefit from a focused strategy. <Link href="/service/seo-services/dental-seo/" className="hover:text-blue-500 font-semibold underline">Dental SEO Services</Link> can target dental services, local searches, patient questions, and practice-specific information.</p>,
 
 
-            <h3 className={countySubheadingClassName}>B2B Businesses</h3>,
+            <h3 className={countySubheadingClassName} key="county-content-267">B2B Businesses</h3>,
             "B2B companies often have longer customer journeys and more specialized search behavior. Potential clients may research solutions for weeks or months before contacting a provider.",
-            <p className="">Our <a href="/service/seo-services/b2b-seo/" className="hover:text-blue-500 font-semibold underline">B2B SEO Services</a> help businesses target decision-makers through commercial keywords, industry-specific content, service pages, and educational resources.</p>,
+            <p className="" key="county-content-269">Our <Link href="/service/seo-services/b2b-seo/" className="hover:text-blue-500 font-semibold underline">B2B SEO Services</Link> help businesses target decision-makers through commercial keywords, industry-specific content, service pages, and educational resources.</p>,
             "The strategy can focus on both high-intent searches and informational topics that support customers throughout the buying journey.",
 
-            <h3 className={countySubheadingClassName}>E-Commerce Businesses</h3>,
+            <h3 className={countySubheadingClassName} key="county-content-272">E-Commerce Businesses</h3>,
             "E-commerce websites require SEO strategies that account for products, categories, transactional searches, technical performance, and user experience.",
-            <p className="">Our <a href="/service/seo-services/ecommerce-seo/" className="hover:text-blue-500 font-semibold underline">E-commerce SEO Services</a> can help optimize:</p>,
-            <ul className={countyListClassName}>
+            <p className="" key="county-content-274">Our <Link href="/service/seo-services/ecommerce-seo/" className="hover:text-blue-500 font-semibold underline">E-commerce SEO Services</Link> can help optimize:</p>,
+            <ul className={countyListClassName} key="county-content-275">
               <li>Product pages</li>
               <li>Category pages</li>
               <li>Product descriptions</li>
@@ -281,15 +282,15 @@ export const countyPosts: CountyPost[] = [
               <li>Technical SEO</li>
               <li>Transactional keywords</li>
             </ul>,
-            <p>For businesses using Shopify, our <a href="/service/seo-services/shopify-seo/" className="hover:text-blue-500 font-semibold underline">Shopify SEO Services</a> can focus on technical configuration, product visibility, collection pages, site structure, and search optimization.</p>,
+            <p key="county-content-285">For businesses using Shopify, our <Link href="/service/seo-services/shopify-seo/" className="hover:text-blue-500 font-semibold underline">Shopify SEO Services</Link> can focus on technical configuration, product visibility, collection pages, site structure, and search optimization.</p>,
 
-            <h3 className={countySubheadingClassName}>Hospitality Businesses</h3>,
+            <h3 className={countySubheadingClassName} key="county-content-287">Hospitality Businesses</h3>,
             "Hotels and hospitality businesses compete for highly localized and travel-related searches. Customers may search for accommodations, destinations, amenities, nearby attractions, and booking options.",
-            <p className="">Our <a href="/service/seo-services/hotel-seo/" className="hover:text-blue-500 font-semibold underline">Hotel SEO Services</a> help hospitality businesses build visibility around relevant searches and create a stronger organic presence in their target markets.</p>,
+            <p className="" key="county-content-289">Our <Link href="/service/seo-services/hotel-seo/" className="hover:text-blue-500 font-semibold underline">Hotel SEO Services</Link> help hospitality businesses build visibility around relevant searches and create a stronger organic presence in their target markets.</p>,
 
-            <h3 className={countySubheadingClassName}>Specialized and Boutique Businesses</h3>,
+            <h3 className={countySubheadingClassName} key="county-content-291">Specialized and Boutique Businesses</h3>,
             "Smaller or specialized businesses often need a highly focused SEO strategy rather than a broad campaign.",
-            <p className="/service/seo-services/boutique-seo/">Our <a href="" className="hover:text-blue-500 font-semibold underline">Boutique SEO Services</a> can be customized around a specific niche, target audience, service area, and competitive environment.</p>,
+            <p className="/service/seo-services/boutique-seo/" key="county-content-293">Our <a href="" className="hover:text-blue-500 font-semibold underline">Boutique SEO Services</a> can be customized around a specific niche, target audience, service area, and competitive environment.</p>,
           ],
       },
       {
@@ -298,7 +299,7 @@ export const countyPosts: CountyPost[] = [
           "Content plays an important role in building topical relevance and answering the questions your customers search for.",
           "We create content based on actual search intent rather than writing articles simply to add more pages to your website.",
           "Potential content opportunities include:",
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-302">
             <li>Service guides</li>
             <li>Local business resources</li>
             <li>Frequently asked questions</li>
@@ -309,8 +310,8 @@ export const countyPosts: CountyPost[] = [
             <li>Location-specific content</li>
             <li>Product and service explanations</li>
           </ul>,
-          <p>Our <a href="/service/seo-services/seo-content-writing/" className="hover:text-blue-500 font-semibold underline">SEO Content Writing Services</a> focus on creating useful, easy-to-read content that supports your target keywords and broader website strategy.</p>,
-          <p>Good SEO content should answer the user's question first. Keywords should fit naturally into the content rather than interrupting the reading experience.</p>
+          <p key="county-content-313">Our <Link href="/service/seo-services/seo-content-writing/" className="hover:text-blue-500 font-semibold underline">SEO Content Writing Services</Link> focus on creating useful, easy-to-read content that supports your target keywords and broader website strategy.</p>,
+          <p key="county-content-314">Good SEO content should answer the user&apos;s question first. Keywords should fit naturally into the content rather than interrupting the reading experience.</p>
         ],
       },
       {
@@ -318,9 +319,9 @@ export const countyPosts: CountyPost[] = [
         paragraphs: [
           "Businesses serving diverse audiences may need content in more than one language.",
           "A multilingual website requires more than simply translating existing pages. Search behavior, keywords, language variations, page structures, and user expectations can differ between audiences.",
-          <p>Our <a href="/service/seo-services/multilingual-seo/" className="hover:text-blue-500 font-semibold underline">Multilingual SEO Services</a> can help businesses develop a more effective search strategy across multiple languages and markets.</p>,
+          <p key="county-content-322">Our <Link href="/service/seo-services/multilingual-seo/" className="hover:text-blue-500 font-semibold underline">Multilingual SEO Services</Link> can help businesses develop a more effective search strategy across multiple languages and markets.</p>,
           "This can include:",
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-324">
             <li>Multilingual keyword research</li>
             <li>Translated and optimized content</li>
             <li>International and language targeting</li>
@@ -335,10 +336,10 @@ export const countyPosts: CountyPost[] = [
         heading: "SEO Audit for Your Union County Website",
         paragraphs: [
           "Before starting an SEO campaign, it is important to understand what is already working and where opportunities exist.",
-          <p>Our <a href="/service/seo-services/seo-audit/" className="hover:text-blue-500 font-semibold">SEO Audit Services</a> evaluate the major factors that influence your website's organic performance.</p>,
-          <p>Our <a href="/service/seo-services/multilingual-seo/" className="hover:text-blue-500 font-semibold underline">Multilingual SEO Services</a> can help businesses develop a more effective search strategy across multiple languages and markets.</p>,
+          <p key="county-content-339">Our <Link href="/service/seo-services/seo-audit/" className="hover:text-blue-500 font-semibold">SEO Audit Services</Link> evaluate the major factors that influence your website&apos;s organic performance.</p>,
+          <p key="county-content-340">Our <Link href="/service/seo-services/multilingual-seo/" className="hover:text-blue-500 font-semibold underline">Multilingual SEO Services</Link> can help businesses develop a more effective search strategy across multiple languages and markets.</p>,
           "We may review:",
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-342">
             <li>Technical SEO</li>
             <li>Website structure</li>
             <li>Existing rankings</li>
@@ -352,15 +353,15 @@ export const countyPosts: CountyPost[] = [
             <li>Backlink profile</li>
             <li>Conversion opportunities</li>
           </ul>,
-          <p>The result is a clearer roadmap showing what should be fixed, improved, created, or prioritized.</p>
+          <p key="county-content-356">The result is a clearer roadmap showing what should be fixed, improved, created, or prioritized.</p>
         ],
       },
       {
         heading: "Competitor SEO Analysis",
         paragraphs: [
           "Your competitors can provide useful insights into the search landscape.",
-          <p>We analyze competing websites to understand:</p>,
-          <ul className={countyListClassName}>
+          <p key="county-content-363">We analyze competing websites to understand:</p>,
+          <ul className={countyListClassName} key="county-content-364">
             <li>Which keywords they target</li>
             <li>What services they promote</li>
             <li>Which pages attract visibility</li>
@@ -370,7 +371,7 @@ export const countyPosts: CountyPost[] = [
             <li>Where content gaps exist</li>
             <li>What opportunities may be available</li>
           </ul>,
-          <p>The goal is not to copy competitors. It is to understand the market and develop a stronger strategy that gives your business its own competitive advantage.</p>
+          <p key="county-content-374">The goal is not to copy competitors. It is to understand the market and develop a stronger strategy that gives your business its own competitive advantage.</p>
         ],
       },
       {
@@ -379,7 +380,7 @@ export const countyPosts: CountyPost[] = [
           "Businesses operating across multiple locations or markets need an SEO structure that can scale.",
           "Creating hundreds of similar pages can create problems if those pages provide little unique value. Instead, we build scalable structures around services, locations, industries, and customer needs.",
           "Our Enterprise SEO Services can support larger organizations with:",
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-383">
             <li>Large website architecture</li>
             <li>Multi-location SEO</li>
             <li>Technical SEO</li>
@@ -398,15 +399,15 @@ export const countyPosts: CountyPost[] = [
         paragraphs: [
           "Search is evolving beyond traditional Google results. Customers increasingly use AI-powered platforms to ask questions, research businesses, and compare solutions.",
           "Our modern SEO strategy considers:",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-402">
             Generative Engine Optimization
           </h3>,
           "We organize important business information so modern search systems can better understand your company, services, locations, and expertise.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-406">
             Answer Engine Optimization
           </h3>,
           "We create clear answers to questions your potential customers are asking.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-410">
             AI and LLM Searc
           </h3>,
           "We structure useful business and informational content in a way that provides clear context about your organization.",
@@ -419,7 +420,7 @@ export const countyPosts: CountyPost[] = [
           "More traffic does not automatically mean more business.",
           "Your website should make it easy for visitors to understand your services and take the next step.",
           "We can optimize:",
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-423">
             <li>Contact forms</li>
             <li>Quote requests</li>
             <li>Calls to action</li>
@@ -437,42 +438,42 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Our SEO Process",
         paragraphs: [
-          <h3 className={countySubheadingClassName}>1. Website Audit</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-441">1. Website Audit</h3>,
           "We evaluate your website's technical health, content, rankings, local visibility, and conversion opportunities.",
-          <h3 className={countySubheadingClassName}>2. Keyword Research</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-443">2. Keyword Research</h3>,
           "We identify valuable keywords based on your services, target locations, competition, and customer intent.",
-          <h3 className={countySubheadingClassName}>3. Competitor Analysis</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-445">3. Competitor Analysis</h3>,
           "We study competing businesses to identify keyword opportunities, content gaps, and areas where your website can improve.",
-          <h3 className={countySubheadingClassName}>4. SEO Strategy</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-447">4. SEO Strategy</h3>,
           "We create a customized roadmap based on your business goals, market, audience, and growth opportunities.",
-          <h3 className={countySubheadingClassName}>5. Technical Optimization</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-449">5. Technical Optimization</h3>,
           "We address technical issues involving crawling, indexing, performance, mobile usability, and website architecture.",
-          <h3 className={countySubheadingClassName}>6. On-Page Optimization</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-451">6. On-Page Optimization</h3>,
           "We optimize important pages, headings, metadata, content, images, URLs, and internal links.",
-          <h3 className={countySubheadingClassName}>7. Local SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-453">7. Local SEO</h3>,
           "We improve your local search presence across Union County, Canton, and other relevant service areas.",
-          <h3 className={countySubheadingClassName}>8. Content Development</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-455">8. Content Development</h3>,
           "We create and optimize content that supports your services, target keywords, and customers' questions.",
-          <h3 className={countySubheadingClassName}>9. Authority Building</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-457">9. Authority Building</h3>,
           "We develop relevant authority and trust signals to support long-term organic visibility.",
-          <h3 className={countySubheadingClassName}>10. Reporting and Optimization</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-459">10. Reporting and Optimization</h3>,
           "We monitor rankings, organic traffic, conversions, and other meaningful SEO metrics and use the data to continuously improve the campaign.",
         ],
       },
       {
         heading: "Why Choose Web Founders USA?",
         paragraphs: [
-          <h3 className={countySubheadingClassName}>Customized SEO Strategies</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-466">Customized SEO Strategies</h3>,
           "We don't use a one-size-fits-all approach. Your strategy is based on your business, industry, audience, location, and competition.",
-          <h3 className={countySubheadingClassName}>Local Search Expertise</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-468">Local Search Expertise</h3>,
           "We understand the importance of location-based visibility for businesses targeting Union County, Canton, and surrounding markets.",
-          <h3 className={countySubheadingClassName}>Technical and Content Expertise</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-470">Technical and Content Expertise</h3>,
           "We combine technical SEO with useful content, ensuring your website has both a strong foundation and valuable information.",
-          <h3 className={countySubheadingClassName}>Industry-Specific SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-472">Industry-Specific SEO</h3>,
           "From construction and roofing to healthcare, dental, B2B, e-commerce, and hospitality, we adapt our strategy to your business model.",
-          <h3 className={countySubheadingClassName}>Modern Search Optimization</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-474">Modern Search Optimization</h3>,
           "Our approach considers traditional SEO alongside local search, GEO, AEO, and AI-powered search experiences.",
-          <h3 className={countySubheadingClassName}>Long-Term Growth</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-476">Long-Term Growth</h3>,
           "Our focus is on building a sustainable organic presence rather than chasing short-term ranking changes.",
         ],
       },
@@ -488,7 +489,7 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Frequently Asked Questions",
         paragraphs: [
-          <div className="mx-auto w-full max-w-5xl space-y-4">
+          <div className="mx-auto w-full max-w-5xl space-y-4" key="county-content-492">
             <CountyFaqItem
               id="county-faq-1"
               question="What does an SEO company in Union County do?"
@@ -567,7 +568,7 @@ export const countyPosts: CountyPost[] = [
           From local SEO in Alpharetta GA and keyword research to technical SEO, on-page optimization, content optimization, and Google Business Profile optimization, we focus on the key factors that support stronger organic search visibility.
         </p>
         <p>
-          Whether you run a local service business, e-commerce store, healthcare practice, B2B company, or growing enterprise, <a href="/" className="hover:text-blue-500 underline font-semibold">Web Founders USA</a> can develop an SEO strategy designed around your specific needs.
+          Whether you run a local service business, e-commerce store, healthcare practice, B2B company, or growing enterprise, <Link href="/" className="hover:text-blue-500 underline font-semibold">Web Founders USA</Link> can develop an SEO strategy designed around your specific needs.
         </p>
       </div>
     ),
@@ -584,10 +585,10 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "SEO Services in Alpharetta GA",
         paragraphs: [
-          <>Our <b>SEO services in Alpharetta GA</b> are designed to improve your website's visibility for relevant searches and help potential customers find your business online.</>,
+          <>Our <b>SEO services in Alpharetta GA</b> are designed to improve your website&apos;s visibility for relevant searches and help potential customers find your business online.</>,
           "We look at your complete website and search presence rather than focusing on only one ranking factor.",
           "Our SEO services include:",
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-591">
             <li>Local SEO</li>
             <li>On-page SEO</li>
             <li>Technical SEO</li>
@@ -603,14 +604,14 @@ export const countyPosts: CountyPost[] = [
             <li>Website speed optimization</li>
             <li>Conversion-focused SEO</li>
           </ul>,
-          <p>
+          <p key="county-content-607">
             If your business serves customers in Alpharetta and nearby areas, our{" "}
-            <a
+            <Link
               href="/service/seo-services/local-seo-services/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Local SEO Services
-            </a>{" "}
+            </Link>{" "}
             can help build a stronger location focused search strategy.
           </p>,
         ],
@@ -621,7 +622,7 @@ export const countyPosts: CountyPost[] = [
           "Local SEO Alpharetta GA helps businesses improve their visibility when customers search for products and services in their local area.",
           "People may search for a service using terms such as “near me,” a specific service name, or a city name. A strong local SEO strategy helps your website and business profile provide relevant information for these searches.",
           "Our local SEO strategy may include:",
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-625">
             <li>Google Business Profile optimization</li>
             <li>Local keyword research</li>
             <li>Location page optimization</li>
@@ -639,7 +640,7 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Alpharetta SEO Expert",
         paragraphs: [
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-643">
             <div className="space-y-4">
               <p>
                 An Alpharetta SEO expert should understand that every website
@@ -658,39 +659,39 @@ export const countyPosts: CountyPost[] = [
               </p>
             </div>
           </div>,
-          <h3 className={countySubheadingClassName}>Keyword Research</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-662">Keyword Research</h3>,
           "We research relevant commercial, informational, local, branded, and long-tail keywords related to your products and services.",
-          <h3 className={countySubheadingClassName}>On-Page SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-664">On-Page SEO</h3>,
           "We optimize page titles, meta descriptions, headings, content, URLs, images, internal links, and other on-page elements around relevant search intent.",
-          <h3 className={countySubheadingClassName}>Technical SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-666">Technical SEO</h3>,
           "Technical SEO helps search engines crawl, understand, and index your website. We can identify issues involving broken links, redirects, crawlability, indexability, mobile usability, website speed, structured data, and Core Web Vitals.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-668">
             SEO Content Optimization
           </h3>,
-          <p>
+          <p key="county-content-671">
             Useful content can help answer customer questions and build
             topical relevance. Our{" "}
-            <a
+            <Link
               href="/service/seo-services/seo-content-writing/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               SEO Content Writing Services
-            </a>{" "}
+            </Link>{" "}
             focus on creating clear, useful, search focused content without
             unnecessary keyword stuffing.
           </p>,
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-683">
             SEO Audits
           </h3>,
-          <p>
-            Our <a href="/service/seo-services/seo-audit/" className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500">SEO Audit Services</a> can identify technical, content, on-page, keyword, and structural issues that may affect your website's organic performance.
+          <p key="county-content-686">
+            Our <Link href="/service/seo-services/seo-audit/" className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500">SEO Audit Services</Link> can identify technical, content, on-page, keyword, and structural issues that may affect your website&apos;s organic performance.
           </p>,
         ],
       },
       {
         heading: "SEO Company Alpharetta GA",
         paragraphs: [
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" key="county-content-694">
             <div className="space-y-4">
               <p>
                 Choosing an SEO company Alpharetta GA businesses can start
@@ -706,33 +707,33 @@ export const countyPosts: CountyPost[] = [
               <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
                 Depending on your business model, we also provide specialized
                 solutions such as{" "}
-                <a
+                <Link
                   href="/service/seo-services/b2b-seo/"
                   className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                 >
                   B2B SEO Services
-                </a>
+                </Link>
                 ,{" "}
-                <a
+                <Link
                   href="/service/seo-services/ecommerce-seo/"
                   className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                 >
                   E-commerce SEO Services
-                </a>
+                </Link>
                 ,{" "}
-                <a
+                <Link
                   href="/service/seo-services/healthcare-seo/"
                   className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                 >
                   Healthcare SEO Services
-                </a>
+                </Link>
                 , and{" "}
-                <a
+                <Link
                   href="/service/seo-services/enterprise-seo/"
                   className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                 >
                   Enterprise SEO Services
-                </a>
+                </Link>
                 .
               </p>
             </div>
@@ -742,183 +743,183 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "SEO for Alpharetta Businesses",
         paragraphs: [
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-746">
             <p>
               Different industries have different customers, search behavior,
               and levels of competition. That is why we provide industry
               specific SEO solutions.
             </p>
           </div>,
-          <h3 className={countySubheadingClassName}>E-commerce SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-753">E-commerce SEO</h3>,
           "Online stores need optimized product pages, category pages, useful content, technical SEO, and a strong internal linking structure.",
-          <p>
+          <p key="county-content-755">
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/ecommerce-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               E-commerce SEO Services
-            </a>{" "}
+            </Link>{" "}
             help online businesses improve their visibility for relevant
             product and commercial searches.
           </p>,
           "For businesses using specific platforms, we also provide:",
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-767">
             <li>
-              <a
+              <Link
                 href="/service/seo-services/shopify-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 Shopify SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/woocommerce-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 WooCommerce SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/magento-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 Magento SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/bigcommerce-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 BigCommerce SEO Services
-              </a>
+              </Link>
             </li>
           </ul>,
-          <h3 className={countySubheadingClassName}>B2B SEO</h3>,
-          <p>
+          <h3 className={countySubheadingClassName} key="county-content-801">B2B SEO</h3>,
+          <p key="county-content-802">
             B2B businesses often target specific services, industries, and
             decision-makers. Our{" "}
-            <a
+            <Link
               href="/service/seo-services/b2b-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               B2B SEO Services
-            </a>{" "}
+            </Link>{" "}
             focus on commercial keywords, service pages, educational content,
             and long-term organic visibility.
           </p>,
-          <h3 className={countySubheadingClassName}>Healthcare SEO</h3>,
-          <p>
+          <h3 className={countySubheadingClassName} key="county-content-814">Healthcare SEO</h3>,
+          <p key="county-content-815">
             Healthcare businesses need clear and useful information for
             patients and potential customers. Our{" "}
-            <a
+            <Link
               href="/service/seo-services/healthcare-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Healthcare SEO Services
-            </a>{" "}
+            </Link>{" "}
             can support clinics, healthcare organizations, and other healthcare
             businesses.
           </p>,
-          <p>
+          <p key="county-content-827">
             We also provide{" "}
-            <a
+            <Link
               href="/service/seo-services/medical-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Medical SEO Services
-            </a>{" "}
+            </Link>{" "}
             for businesses targeting medical services and related search terms.
           </p>,
-          <h3 className={countySubheadingClassName}>Dental SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-837">Dental SEO</h3>,
           "Dental practices can benefit from local service pages, treatment-related content, Google Business Profile optimization, and location-focused SEO.",
-          <p>
+          <p key="county-content-839">
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/dental-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Dental SEO Services
-            </a>{" "}
+            </Link>{" "}
             can be customized around the services, locations, and audience of
             your dental practice.
           </p>,
-          <h3 className={countySubheadingClassName}>Construction SEO</h3>,
-          <p>
+          <h3 className={countySubheadingClassName} key="county-content-850">Construction SEO</h3>,
+          <p key="county-content-851">
             Construction companies often compete for valuable local searches.
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/construction-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Construction SEO Services
-            </a>{" "}
+            </Link>{" "}
             focus on service keywords, location pages, useful content, local
             search optimization, and lead-generation opportunities.
           </p>,
-          <h3 className={countySubheadingClassName}>Roofing SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-863">Roofing SEO</h3>,
           "Roofing companies need visibility when homeowners search for roofing services, repairs, replacements, and related solutions.",
-          <p>
+          <p key="county-content-865">
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/roofing-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Roofing SEO Services
-            </a>{" "}
+            </Link>{" "}
             focus on relevant local and service-based search terms.
           </p>,
-          <h3 className={countySubheadingClassName}>Automotive SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-875">Automotive SEO</h3>,
           "Automotive businesses can target searches related to repairs, maintenance, dealerships, parts, and other vehicle services.",
-          <p>
+          <p key="county-content-877">
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/automotive-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Automotive SEO Services That Drive More Leads, Sales & Service
               Appointments
-            </a>{" "}
-            can be tailored to the business's services and target market.
+            </Link>{" "}
+            can be tailored to the business&apos;s services and target market.
           </p>,
-          <h3 className={countySubheadingClassName}>Legal SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-888">Legal SEO</h3>,
           "Law firms often need specific service and location pages to reach people searching for legal assistance.",
-          <p>
+          <p key="county-content-890">
             Web Founders USA provides specialized solutions such as{" "}
-            <a
+            <Link
               href="/service/seo-services/employment-lawyers-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Employment Lawyer SEO Services
-            </a>{" "}
+            </Link>{" "}
             Built on Strategy, Trust & Results.
           </p>,
-          <h3 className={countySubheadingClassName}>Insurance SEO</h3>,
-          <p>
+          <h3 className={countySubheadingClassName} key="county-content-900">Insurance SEO</h3>,
+          <p key="county-content-901">
             Insurance brokers and agencies operate in competitive search
             markets. Our{" "}
-            <a
+            <Link
               href="/service/seo-services/insurance-broker-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               SEO for Insurance Brokers
-            </a>{" "}
+            </Link>{" "}
             can focus on local search, service pages, informational content,
             keyword research, and relevant commercial searches.
           </p>,
-          <h3 className={countySubheadingClassName}>Hospitality SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-913">Hospitality SEO</h3>,
           "Hotels and hospitality businesses depend on online visibility when people search for accommodation and travel services.",
-          <p>
+          <p key="county-content-915">
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/hotel-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Hotel SEO Services
-            </a>{" "}
+            </Link>{" "}
             focus on relevant location, service, and hospitality-related search
             opportunities.
           </p>,
@@ -927,79 +928,79 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Specialized SEO Solutions",
         paragraphs: [
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-931">
             <p>
               Web Founders USA also provides SEO solutions for different
               website types, industries, and marketing requirements.
             </p>
           </div>,
-          <p className="font-semibold text-slate-800">These include:</p>,
-          <ul className={countyListClassName}>
+          <p className="font-semibold text-slate-800" key="county-content-937">These include:</p>,
+          <ul className={countyListClassName} key="county-content-938">
             <li>
-              <a
+              <Link
                 href="/service/seo-services/enterprise-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 Enterprise SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/white-label-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 White Label SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 WordPress SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/multilingual-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 Multilingual SEO Agency
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/youtube-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 YouTube SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/boutique-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 Boutique SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/outsource-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 Outsource SEO Services
-              </a>
+              </Link>
             </li>
           </ul>,
-          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700" key="county-content-996">
             Agencies can use our{" "}
-            <a
+            <Link
               href="/service/seo-services/white-label-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               White Label SEO Services
-            </a>{" "}
+            </Link>{" "}
             when they need additional SEO support for their clients. Businesses
             targeting multiple languages or markets can explore our
             multilingual SEO solutions.
@@ -1009,17 +1010,17 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Why Choose Our Alpharetta SEO Agency?",
         paragraphs: [
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1013">
             Customized SEO Strategy
           </h3>,
           "We do not use the same SEO strategy for every business. Your campaign is based on your website, industry, competition, audience, and goals.",
-          <h3 className={countySubheadingClassName}>Local SEO Knowledge</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-1017">Local SEO Knowledge</h3>,
           "For businesses targeting Alpharetta customers, we focus on local search optimization, location-based keywords, Google Business Profile signals, local content, and relevant local search factors.",
-          <h3 className={countySubheadingClassName}>SEO-Friendly Content</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-1019">SEO-Friendly Content</h3>,
           "We create content around user needs and search intent. The goal is to provide useful information while naturally targeting relevant keywords and topics.",
-          <h3 className={countySubheadingClassName}>Technical SEO Support</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-1021">Technical SEO Support</h3>,
           "Technical SEO provides an important foundation for organic search. We identify issues related to crawling, indexing, website performance, mobile usability, redirects, structured data, and site architecture.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1023">
             Data-Focused Optimization
           </h3>,
           "SEO requires ongoing monitoring and improvement. We review relevant performance data to identify opportunities and make informed optimization decisions.",
@@ -1028,31 +1029,31 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Our Alpharetta SEO Process",
         paragraphs: [
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1032">
             Step 1: Understand Your Business
           </h3>,
           "We learn about your business, services, target audience, competitors, locations, and marketing goals.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1036">
             Step 2: Website & SEO Audit
           </h3>,
           "We review your website's technical health, content, keywords, page structure, internal links, local SEO, and other important areas.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1040">
             Step 3: Keyword Research
           </h3>,
           "We identify relevant search terms, including local, commercial, informational, and long-tail keywords related to your business.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1044">
             Step 4: Competitor Analysis
           </h3>,
           "We research competing websites to understand their keyword targeting, content structure, website optimization, and local search presence.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1048">
             Step 5: SEO Implementation
           </h3>,
           "We optimize website pages, content, metadata, internal links, technical elements, and other relevant areas identified during the audit.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1052">
             Step 6: Content & Local Optimization
           </h3>,
           "We improve existing content and create new content where needed. Local SEO elements are also optimized for businesses targeting Alpharetta customers.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1056">
             Step 7: Monitor & Improve
           </h3>,
           "We monitor organic visibility, keyword performance, website health, traffic, and other relevant SEO metrics to identify opportunities for continued improvement.",
@@ -1061,7 +1062,7 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "SEO Services for Alpharetta & Nearby Areas",
         paragraphs: [
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-1065">
             <p>
               Many businesses in Alpharetta also serve customers in
               surrounding communities and counties. A local SEO strategy can
@@ -1069,25 +1070,25 @@ export const countyPosts: CountyPost[] = [
               than focusing on one location alone.
             </p>
           </div>,
-          <p>
+          <p key="county-content-1073">
             Web Founders USA also provides SEO solutions for businesses
             targeting other Georgia markets, including{" "}
-            <a
+            <Link
               href="/locations/seo-gwinnet/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Gwinnett County SEO Company
-            </a>{" "}
+            </Link>{" "}
             services and{" "}
-            <a
+            <Link
               href="/locations/seo-company-union-county-ga/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               SEO Company in Union County, GA
-            </a>{" "}
+            </Link>{" "}
             solutions.
           </p>,
-          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700" key="county-content-1091">
             Location focused SEO should be based on real service areas and
             useful local information rather than creating multiple pages with
             nearly identical content.
@@ -1097,7 +1098,7 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Frequently Asked Questions",
         paragraphs: [
-          <div className="mx-auto w-full max-w-5xl space-y-4">
+          <div className="mx-auto w-full max-w-5xl space-y-4" key="county-content-1101">
             <CountyFaqItem
               id="alpharetta-faq-1"
               question="What is Alpharetta SEO?"
@@ -1199,17 +1200,17 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "SEO Services in Suwanee GA",
         paragraphs: [
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-1203">
             <p>
               Our SEO services Suwanee GA are designed to improve your
-              website's relevance, technical health, local visibility, and
+              website&apos;s relevance, technical health, local visibility, and
               organic search performance.
             </p>
           </div>,
-          <p className="font-semibold text-slate-800">
+          <p className="font-semibold text-slate-800" key="county-content-1210">
             Our SEO solutions include:
           </p>,
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-1213">
             <li>Local SEO</li>
             <li>On-page SEO</li>
             <li>Technical SEO</li>
@@ -1225,15 +1226,15 @@ export const countyPosts: CountyPost[] = [
             <li>Website speed optimization</li>
             <li>Conversion-focused SEO</li>
           </ul>,
-          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700" key="county-content-1229">
             Businesses looking to strengthen their local search presence can
             also explore our{" "}
-            <a
+            <Link
               href="/service/seo-services/local-seo-services/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Local SEO Services
-            </a>{" "}
+            </Link>{" "}
             for a broader approach to location-based search optimization.
           </p>,
         ],
@@ -1241,7 +1242,7 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Local SEO Suwanee",
         paragraphs: [
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-1245">
             <div className="space-y-4">
               <p>
                 Local SEO Suwanee helps businesses improve their visibility
@@ -1256,10 +1257,10 @@ export const countyPosts: CountyPost[] = [
               </p>
             </div>
           </div>,
-          <p className="font-semibold text-slate-800">
+          <p className="font-semibold text-slate-800" key="county-content-1260">
             Our local SEO process may include:
           </p>,
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-1263">
             <li>Google Business Profile optimization</li>
             <li>Local keyword research</li>
             <li>Location page optimization</li>
@@ -1271,7 +1272,7 @@ export const countyPosts: CountyPost[] = [
             <li>Review strategy</li>
             <li>Local competitor research</li>
           </ul>,
-          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700" key="county-content-1275">
             We focus on accurate business information, relevant local content,
             and useful website pages to help search engines better understand
             your business and service area.
@@ -1281,7 +1282,7 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Suwanee SEO Company",
         paragraphs: [
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-1285">
             <div className="space-y-4">
               <p>
                 As a <b>Suwanee SEO company</b>, Web Founders USA takes a
@@ -1298,36 +1299,36 @@ export const countyPosts: CountyPost[] = [
               </p>
             </div>
           </div>,
-          <h3 className={countySubheadingClassName}>Keyword Research</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-1302">Keyword Research</h3>,
           "We identify relevant commercial, informational, local, branded, and long-tail keywords related to your products and services.",
-          <h3 className={countySubheadingClassName}>On-Page SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-1304">On-Page SEO</h3>,
           "We optimize page titles, meta descriptions, headings, content, URLs, images, internal links, and other important page elements.",
-          <h3 className={countySubheadingClassName}>Technical SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-1306">Technical SEO</h3>,
           "We identify technical issues that may affect crawling, indexing, performance, or user experience. This can include broken links, redirects, sitemap issues, mobile usability, website speed, structured data, and Core Web Vitals.",
-          <h3 className={countySubheadingClassName}>SEO Content</h3>,
-          <p>
+          <h3 className={countySubheadingClassName} key="county-content-1308">SEO Content</h3>,
+          <p key="county-content-1309">
             Useful content can help answer customer questions and build topical
             relevance. Our{" "}
-            <a
+            <Link
               href="/service/seo-services/seo-content-writing/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               SEO Content Writing Services
-            </a>{" "}
+            </Link>{" "}
             can support service pages, location pages, blogs, FAQs, and other
             search-focused content.
           </p>,
-          <h3 className={countySubheadingClassName}>SEO Audits</h3>,
-          <p>
+          <h3 className={countySubheadingClassName} key="county-content-1321">SEO Audits</h3>,
+          <p key="county-content-1322">
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/seo-audit/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               SEO Audit Services
-            </a>{" "}
+            </Link>{" "}
             can help identify technical, content, keyword, on-page, and
-            structural issues that may affect your website's organic
+            structural issues that may affect your website&apos;s organic
             performance.
           </p>,
         ],
@@ -1335,17 +1336,17 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "SEO Company Suwanee GA for Local Businesses",
         paragraphs: [
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-1339">
             <p>
               Local businesses need to reach people who are actively searching
               for their services. A strong SEO strategy can help connect your
               website with relevant searches.
             </p>
           </div>,
-          <p className="font-semibold text-slate-800">
+          <p className="font-semibold text-slate-800" key="county-content-1346">
             Web Founders USA can help businesses optimize for:
           </p>,
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-1349">
             <li>Local service keywords</li>
             <li>Suwanee-related searches</li>
             <li>Long-tail keywords</li>
@@ -1355,7 +1356,7 @@ export const countyPosts: CountyPost[] = [
             <li>Service-area keywords</li>
             <li>Google Maps searches</li>
           </ul>,
-          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700" key="county-content-1359">
             Our goal is to create useful pages that match what customers are
             looking for rather than simply repeating keywords.
           </p>,
@@ -1364,17 +1365,17 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Suwanee Web Design",
         paragraphs: [
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-1368">
             <p>
               SEO and web design should work together. A website should not
               only look professional but also be easy to use, mobile-friendly,
               fast, and structured in a way that supports search visibility.
             </p>
           </div>,
-          <p className="font-semibold text-slate-800">
+          <p className="font-semibold text-slate-800" key="county-content-1375">
             Our <span className="font-bold">Suwanee web design</span> services can include:
           </p>,
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-1378">
             <li>Custom website design</li>
             <li>Responsive web design</li>
             <li>Mobile-friendly websites</li>
@@ -1386,7 +1387,7 @@ export const countyPosts: CountyPost[] = [
             <li>Website navigation</li>
             <li>Page speed optimization</li>
           </ul>,
-          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700" key="county-content-1390">
             For businesses targeting local customers, website design Suwanee GA
             can be combined with SEO to create a website that supports both
             user experience and organic search visibility.
@@ -1396,16 +1397,16 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Web Design Suwanee GA",
         paragraphs: [
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-1400">
             <p>
               A properly designed website gives visitors a clear path to find
               your services, contact your business, or make a purchase.
             </p>
           </div>,
-          <p className="font-semibold text-slate-800">
+          <p className="font-semibold text-slate-800" key="county-content-1406">
             Our <span className="font-bold">web design Suwanee GA</span> solutions focus on:
           </p>,
-          <ul className={countyListClassName}>
+          <ul className={countyListClassName} key="county-content-1409">
             <li>Clear website structure</li>
             <li>Responsive layouts</li>
             <li>Easy navigation</li>
@@ -1415,7 +1416,7 @@ export const countyPosts: CountyPost[] = [
             <li>Strong calls to action</li>
             <li>Conversion-focused pages</li>
           </ul>,
-          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700" key="county-content-1419">
             We can also help businesses that already have a website but need a redesign, improved performance, or better SEO structure.
           </p>,
         ],
@@ -1423,171 +1424,171 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Industries We Serve",
         paragraphs: [
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-1427">
             <p>
               Our SEO strategies can be adapted to different industries and
               business models.
             </p>
           </div>,
-          <h3 className={countySubheadingClassName}>E-commerce SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-1433">E-commerce SEO</h3>,
           "Online stores need optimized product pages, category pages, content, internal links, and technical SEO.",
-          <p>
+          <p key="county-content-1435">
             Our E-commerce SEO Services help online businesses improve organic visibility for relevant product and commercial searches.
           </p>,
-          <p>
+          <p key="county-content-1438">
             We also provide specialized{" "}
-            <a
+            <Link
               href="/service/seo-services/shopify-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Shopify SEO Services
-            </a>
+            </Link>
             ,{" "}
-            <a
+            <Link
               href="/service/seo-services/woocommerce-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               WooCommerce SEO Services
-            </a>
+            </Link>
             ,{" "}
-            <a
+            <Link
               href="/service/seo-services/magento-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Magento SEO Services
-            </a>
+            </Link>
             , and{" "}
-            <a
+            <Link
               href="/service/seo-services/bigcommerce-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               BigCommerce SEO Services
-            </a>
+            </Link>
             .
           </p>,
-          <h3 className={countySubheadingClassName}>B2B SEO</h3>,
-          <p>
+          <h3 className={countySubheadingClassName} key="county-content-1469">B2B SEO</h3>,
+          <p key="county-content-1470">
             B2B businesses often target specific services, industries, and
             decision-makers. Our{" "}
-            <a
+            <Link
               href="/service/seo-services/b2b-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               B2B SEO Services
-            </a>{" "}
+            </Link>{" "}
             focus on commercial keywords, service pages, educational content,
             and organic search visibility.
           </p>,
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1482">
             Healthcare & Medical SEO
           </h3>,
-          <p>
+          <p key="county-content-1485">
             Healthcare organizations need clear and useful online information.
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/healthcare-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Healthcare SEO Services
-            </a>{" "}
+            </Link>{" "}
             can help healthcare businesses improve their search presence.
           </p>,
-          <p>
+          <p key="county-content-1496">
             We also offer{" "}
-            <a
+            <Link
               href="/service/seo-services/medical-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Medical SEO Services
-            </a>{" "}
+            </Link>{" "}
             for businesses targeting medical services and related searches.
           </p>,
-          <h3 className={countySubheadingClassName}>Dental SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-1506">Dental SEO</h3>,
           "Dental practices can benefit from location-focused service pages, treatment-related content, local keyword targeting, and Google Business Profile optimization.",
-          <p>
+          <p key="county-content-1508">
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/dental-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Dental SEO Services
-            </a>{" "}
+            </Link>{" "}
             are customized around the services and locations a dental practice
             wants to target.
           </p>,
-          <h3 className={countySubheadingClassName}>Construction SEO</h3>,
-          <p>
+          <h3 className={countySubheadingClassName} key="county-content-1519">Construction SEO</h3>,
+          <p key="county-content-1520">
             Construction companies often compete for local searches related to
             specific services. Our{" "}
-            <a
+            <Link
               href="/service/seo-services/construction-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Construction SEO Services
-            </a>{" "}
+            </Link>{" "}
             can focus on service pages, local keywords, content, and
             lead-generation opportunities.
           </p>,
-          <h3 className={countySubheadingClassName}>Roofing SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-1532">Roofing SEO</h3>,
           "Roofing businesses can target searches related to roof repair, replacement, installation, inspections, and other roofing services.",
-          <p>
+          <p key="county-content-1534">
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/roofing-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Roofing SEO Services
-            </a>{" "}
+            </Link>{" "}
             focus on relevant local and service-specific search terms.
           </p>,
-          <h3 className={countySubheadingClassName}>Automotive SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-1544">Automotive SEO</h3>,
           "Automotive businesses can target searches related to repairs, maintenance, dealerships, parts, and other vehicle services.",
-          <p>
+          <p key="county-content-1546">
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/automotive-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Automotive SEO Services That Drive More Leads, Sales & Service
               Appointments
-            </a>{" "}
-            can be customized around the business's services and target market.
+            </Link>{" "}
+            can be customized around the business&apos;s services and target market.
           </p>,
-          <h3 className={countySubheadingClassName}>Legal SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-1557">Legal SEO</h3>,
           "Law firms often need service-specific and location-specific SEO strategies.",
-          <p>
+          <p key="county-content-1559">
             Web Founders USA provides specialized solutions such as{" "}
-            <a
+            <Link
               href="/service/seo-services/employment-lawyers-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Employment Lawyer SEO Services
-            </a>{" "}
+            </Link>{" "}
             Built on Strategy, Trust & Results.
           </p>,
-          <h3 className={countySubheadingClassName}>Insurance SEO</h3>,
-          <p>
+          <h3 className={countySubheadingClassName} key="county-content-1569">Insurance SEO</h3>,
+          <p key="county-content-1570">
             Insurance businesses operate in highly competitive search markets.
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/insurance-broker-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               SEO for Insurance Brokers
-            </a>{" "}
+            </Link>{" "}
             can focus on local visibility, service pages, content, keyword
             research, and commercial search intent.
           </p>,
-          <h3 className={countySubheadingClassName}>Hospitality SEO</h3>,
+          <h3 className={countySubheadingClassName} key="county-content-1582">Hospitality SEO</h3>,
           "Hotels and hospitality businesses need strong online visibility when potential guests search for accommodation.",
-          <p>
+          <p key="county-content-1584">
             Our{" "}
-            <a
+            <Link
               href="/service/seo-services/hotel-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Hotel SEO Services
-            </a>{" "}
+            </Link>{" "}
             focus on relevant search terms, location information, content, and
             website optimization.
           </p>,
@@ -1596,85 +1597,85 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Specialized SEO Services",
         paragraphs: [
-          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-1600">
             <p>
               Web Founders USA also provides specialized{" "}
-              <a
+              <Link
                 href="/service/seo-services/"
                 className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 SEO solutions
-              </a>{" "}
+              </Link>{" "}
               for different platforms, industries, and business requirements.
             </p>
           </div>,
-          <p className="font-semibold text-slate-800">These include:</p>,
-          <ul className={countyListClassName}>
+          <p className="font-semibold text-slate-800" key="county-content-1612">These include:</p>,
+          <ul className={countyListClassName} key="county-content-1613">
             <li>
-              <a
+              <Link
                 href="/service/seo-services/enterprise-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 Enterprise SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/white-label-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 White Label SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 WordPress SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/multilingual-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 Multilingual SEO Agency
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/youtube-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 YouTube SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/boutique-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 Boutique SEO Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/service/seo-services/outsource-seo/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 Outsource SEO Services
-              </a>
+              </Link>
             </li>
           </ul>,
-          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700" key="county-content-1671">
             Agencies that need additional SEO support can explore our{" "}
-            <a
+            <Link
               href="/service/seo-services/white-label-seo/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               White Label SEO Services
-            </a>
+            </Link>
             , while businesses targeting multiple languages or markets can use
             our multilingual SEO solutions.
           </p>,
@@ -1683,23 +1684,23 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Why Choose Our Suwanee SEO Company?",
         paragraphs: [
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1687">
             Customized SEO Strategy
           </h3>,
           "Every business has different customers, competitors, services, and goals. We build your SEO strategy around those factors.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1691">
             Local Search Focus
           </h3>,
           "For businesses targeting Suwanee customers, we focus on local keywords, location relevance, Google Business Profile optimization, local content, and other local SEO factors.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1695">
             SEO-Friendly Content
           </h3>,
           "We create content around search intent and customer questions, helping your pages provide useful information while naturally targeting relevant topics.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1699">
             Technical SEO Support
           </h3>,
           "We work on technical areas such as crawlability, indexability, website speed, mobile usability, redirects, internal linking, structured data, and site architecture.",
-          <h3 className={countySubheadingClassName}>
+          <h3 className={countySubheadingClassName} key="county-content-1703">
             Conversion-Focused Approach
           </h3>,
           "SEO traffic is more useful when visitors can easily understand your services and take the next step. We consider user experience and conversion opportunities as part of website optimization.",
@@ -1708,7 +1709,7 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "Our SEO Process",
         paragraphs: [
-          <div className="relative overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-br from-slate-50 via-white to-blue-50/50 p-4 shadow-sm sm:p-6">
+          <div className="relative overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-br from-slate-50 via-white to-blue-50/50 p-4 shadow-sm sm:p-6" key="county-content-1712">
             <div
               aria-hidden="true"
               className="absolute bottom-8 left-[2.25rem] top-8 hidden w-px bg-blue-200 sm:block"
@@ -1756,7 +1757,7 @@ export const countyPosts: CountyPost[] = [
       {
         heading: "SEO Services for Suwanee & Nearby Areas",
         paragraphs: [
-          <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6">
+          <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-5 shadow-sm sm:p-6" key="county-content-1760">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-blue-700 shadow-sm">
               <span
                 aria-hidden="true"
@@ -1778,22 +1779,22 @@ export const countyPosts: CountyPost[] = [
               </p>
             </div>
           </div>,
-          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700">
+          <p className="rounded-xl border-l-4 border-blue-600 bg-blue-50/70 px-4 py-3 text-slate-700" key="county-content-1782">
             Web Founders USA can also support businesses targeting other
             Georgia markets, including{" "}
-            <a
+            <Link
               href="/locations/seo-gwinnet/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               Gwinnett County SEO Company
-            </a>{" "}
+            </Link>{" "}
             services and{" "}
-            <a
+            <Link
               href="/locations/seo-company-union-county-ga/"
               className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
             >
               SEO Company in Union County, GA
-            </a>{" "}
+            </Link>{" "}
             solutions.
           </p>,
         ],
@@ -1809,13 +1810,13 @@ export const countyPosts: CountyPost[] = [
     description: (
       <div className="space-y-3">
         <p>
-          Web Founders USA provides <a href="/service/seo-services/" className="hover:text-blue-500 font-semibold underline">professional SEO services</a> in Maryland to help businesses improve their online visibility, reach local customers, and build a stronger presence in organic search results.
+          Web Founders USA provides <Link href="/service/seo-services/" className="hover:text-blue-500 font-semibold underline">professional SEO services</Link> in Maryland to help businesses improve their online visibility, reach local customers, and build a stronger presence in organic search results.
         </p>
         <p>
           Our Maryland SEO company creates customized strategies based on your business, industry, target audience, competition, and service area. From keyword research and local SEO to technical optimization, content, and website improvements, we focus on the areas that can support long-term search visibility.
         </p>
         <p>
-          Ready to improve your visibility in Maryland? Contact <a href="/" className="hover:text-blue-500 underline font-semibold">Web Founders USA</a> today for a free SEO consultation.
+          Ready to improve your visibility in Maryland? Contact <Link href="/" className="hover:text-blue-500 underline font-semibold">Web Founders USA</Link> today for a free SEO consultation.
         </p>
         <p></p>
       </div>
@@ -1839,7 +1840,7 @@ export const countyPosts: CountyPost[] = [
           >
             <div className="grid gap-8 border-b border-slate-300 pb-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
               <p className="max-w-xl text-xl font-semibold leading-tight tracking-[-0.025em] text-slate-950 sm:text-2xl">
-                Our <a href="/service/seo-services/" className="hover:text-blue-500 underline ">SEO services</a>{" "}are designed to improve your website&apos;s
+                Our <Link href="/service/seo-services/" className="hover:text-blue-500 underline ">SEO services</Link>{" "}are designed to improve your website&apos;s
                 relevance, technical health, local visibility, and organic search
                 performance.
               </p>
@@ -1880,12 +1881,12 @@ export const countyPosts: CountyPost[] = [
             <p className="max-w-5xl border-l-2 border-blue-700 pl-5 font-medium text-slate-700 sm:pl-6">
               Businesses that want to improve their location-based visibility can
               also explore our{" "}
-              <a
+              <Link
                 href="/service/seo-services/local-seo-services/"
                 className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 Local SEO Services
-              </a>{" "}
+              </Link>{" "}
               for a broader local search strategy.
             </p>
           </div>,
@@ -2034,12 +2035,12 @@ export const countyPosts: CountyPost[] = [
                     </p>
                     <p>
                       Our{" "}
-                      <a
+                      <Link
                         href="/service/seo-services/seo-content-writing/"
                         className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                       >
                         SEO Content Writing Services
-                      </a>{" "}
+                      </Link>{" "}
                       can support service pages, location pages, blogs, FAQs, and
                       other search-focused content.
                     </p>
@@ -2059,12 +2060,12 @@ export const countyPosts: CountyPost[] = [
 
               <p className="border-t-2 border-blue-700 pt-6 text-[1.02rem] font-medium leading-8 text-slate-700 sm:text-lg">
                 Our{" "}
-                <a
+                <Link
                   href="/service/seo-services/seo-audit/"
                   className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                 >
                   SEO Audit Services
-                </a>{" "}
+                </Link>{" "}
                 can help identify areas that may need improvement before a larger
                 SEO campaign begins.
               </p>
@@ -2125,12 +2126,12 @@ export const countyPosts: CountyPost[] = [
             <p>
               For businesses targeting Elkton and nearby areas, search engine
               optimization Elkton MD can become an important part of a long term{" "}
-              <a
+              <Link
                 href="/service/digital-marketing/"
                 className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 digital marketing
-              </a>{" "}
+              </Link>{" "}
               strategy.
             </p>
           </div>,
@@ -2420,36 +2421,36 @@ export const countyPosts: CountyPost[] = [
                 </p>
                 <ul className="grid list-disc gap-x-10 gap-y-2 border-t border-slate-200 pt-4 pl-6 text-slate-700 sm:grid-cols-2">
                   <li>
-                    <a
+                    <Link
                       href="/service/seo-services/shopify-seo/"
                       className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                     >
                       Shopify SEO Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/service/seo-services/woocommerce-seo/"
                       className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                     >
                       WooCommerce SEO Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/service/seo-services/magento-seo/"
                       className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                     >
                       Magento SEO Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/service/seo-services/bigcommerce-seo/"
                       className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                     >
                       BigCommerce SEO Services
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </section>
@@ -2464,12 +2465,12 @@ export const countyPosts: CountyPost[] = [
                 </p>
                 <p>
                   Our{" "}
-                  <a
+                  <Link
                     href="/service/seo-services/b2b-seo/"
                     className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                   >
                     B2B SEO Services
-                  </a>{" "}
+                  </Link>{" "}
                   can focus on commercial keywords, service pages, educational
                   content, and organic search visibility.
                 </p>
@@ -2485,23 +2486,23 @@ export const countyPosts: CountyPost[] = [
                 </p>
                 <p>
                   Our{" "}
-                  <a
+                  <Link
                     href="/service/seo-services/healthcare-seo/"
                     className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                   >
                     Healthcare SEO Services
-                  </a>{" "}
+                  </Link>{" "}
                   can help healthcare organizations improve their online search
                   presence.
                 </p>
                 <p>
                   We also provide{" "}
-                  <a
+                  <Link
                     href="/service/seo-services/medical-seo/"
                     className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                   >
                     Medical SEO Services
-                  </a>{" "}
+                  </Link>{" "}
                   for businesses targeting medical services and related searches.
                 </p>
               </section>
@@ -2517,12 +2518,12 @@ export const countyPosts: CountyPost[] = [
                 </p>
                 <p>
                   Our{" "}
-                  <a
+                  <Link
                     href="/service/seo-services/dental-seo/"
                     className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                   >
                     Dental SEO Services
-                  </a>{" "}
+                  </Link>{" "}
                   can be customized around the treatments and locations a dental
                   practice wants to target.
                 </p>
@@ -2538,12 +2539,12 @@ export const countyPosts: CountyPost[] = [
                 </p>
                 <p>
                   Our{" "}
-                  <a
+                  <Link
                     href="/service/seo-services/construction-seo/"
                     className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                   >
                     Construction SEO Services
-                  </a>{" "}
+                  </Link>{" "}
                   can focus on service pages, local keywords, helpful content, and
                   lead-generation opportunities.
                 </p>
@@ -2560,12 +2561,12 @@ export const countyPosts: CountyPost[] = [
                 </p>
                 <p>
                   Our{" "}
-                  <a
+                  <Link
                     href="/service/seo-services/roofing-seo/"
                     className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                   >
                     Roofing SEO Services
-                  </a>{" "}
+                  </Link>{" "}
                   focus on relevant local and service-specific search terms.
                 </p>
               </section>
@@ -2580,12 +2581,12 @@ export const countyPosts: CountyPost[] = [
                 </p>
                 <p>
                   Our{" "}
-                  <a
+                  <Link
                     href="/service/seo-services/automotive-seo/"
                     className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                   >
                     Automotive SEO Services
-                  </a>{" "}
+                  </Link>{" "}
                   can be customized around your services and target market.
                 </p>
               </section>
@@ -2600,12 +2601,12 @@ export const countyPosts: CountyPost[] = [
                 </p>
                 <p>
                   Our{" "}
-                  <a
+                  <Link
                     href="/service/seo-services/employment-lawyers-seo/"
                     className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                   >
                     Employment Lawyer SEO Services
-                  </a>{" "}
+                  </Link>{" "}
                   can help employment law practices build content around relevant
                   legal services and search intent.
                 </p>
@@ -2620,12 +2621,12 @@ export const countyPosts: CountyPost[] = [
                 </p>
                 <p>
                   Our{" "}
-                  <a
+                  <Link
                     href="/service/seo-services/insurance-broker-seo/"
                     className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                   >
                     SEO for Insurance Brokers
-                  </a>{" "}
+                  </Link>{" "}
                   can focus on local visibility, service pages, content, keyword
                   research, and commercial search intent.
                 </p>
@@ -2641,12 +2642,12 @@ export const countyPosts: CountyPost[] = [
                 </p>
                 <p>
                   Our{" "}
-                  <a
+                  <Link
                     href="/service/seo-services/hotel-seo/"
                     className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
                   >
                     Hotel SEO Services
-                  </a>{" "}
+                  </Link>{" "}
                   focus on relevant search terms, location information, content,
                   and website optimization.
                 </p>
@@ -2809,19 +2810,19 @@ export const countyPosts: CountyPost[] = [
             <p className="max-w-5xl border-l-2 border-blue-700 pl-5 font-medium text-slate-700 sm:pl-6">
               Businesses looking to expand beyond Maryland can also explore
               location focused SEO solutions such as{" "}
-              <a
+              <Link
                 href="/locations/seo-gwinnet/"
                 className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 Gwinnett County SEO Company
-              </a>{" "}
+              </Link>{" "}
               and{" "}
-              <a
+              <Link
                 href="/locations/seo-company-union-county-ga/"
                 className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 SEO Company in Union County, GA
-              </a>
+              </Link>
               .
             </p>
           </div>,

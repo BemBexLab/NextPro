@@ -39,7 +39,7 @@ export default function AlexandriaSEOIntro() {
           <section className="border-l-4 border-[#0033CC] pl-6 md:pl-10">
             <p className="text-2xl font-medium leading-snug tracking-tight text-black md:text-3xl lg:text-4xl">
               Our SEO services in Alexandria VA are designed to improve your
-              website's visibility for relevant searches and connect your
+              website&apos;s visibility for relevant searches and connect your
               business with people actively looking for your products or
               services.
             </p>

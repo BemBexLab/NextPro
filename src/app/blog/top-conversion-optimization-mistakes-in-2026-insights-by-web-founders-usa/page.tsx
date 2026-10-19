@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -53,7 +55,7 @@ const Blog17 = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-slate-900">
             Top Conversion Optimization Mistakes in 2026 – Insights by Web Founders USA
           </h1>
-          <img
+          <Image
             src="/blogs/blog 17.webp"
             alt="Top Conversion Optimization Mistakes in 2026"
             className="w-full h-auto object-cover rounded-xl shadow-2xl"
@@ -133,7 +135,7 @@ const Blog17 = () => {
                   Many businesses invest in SEO and ads. But they forget one thing: <b>conversion optimization</b>.
                 </p>
                 <p>
-                  That's where real growth happens.
+                  That&apos;s where real growth happens.
                 </p>
                 <p>
                   At <a href="https://webfoundersusa.com" className="text-blue-700 hover:underline">Web Founders USA</a>, we work with brands that want results, not just clicks.
@@ -142,7 +144,7 @@ const Blog17 = () => {
                   And we see the same mistakes again and again.
                 </p>
                 <p>
-                  In this guide, I'll break down the most common <b>conversion rate optimization (CRO) mistakes</b>.
+                  In this guide, I&apos;ll break down the most common <b>conversion rate optimization (CRO) mistakes</b>.
                 </p>
                 <p>
                   And more importantly, how you can fix them.
@@ -166,7 +168,7 @@ const Blog17 = () => {
                     If your website is confusing or slow, people leave. Simple.
                   </p>
                   <p>
-                    That's why <a href="/service/conversion-optimization" className="text-blue-700 hover:underline">website conversion optimization</a> is now a must, not an option.
+                    That&apos;s why <Link href="/service/conversion-optimization" className="text-blue-700 hover:underline">website conversion optimization</Link> is now a must, not an option.
                   </p>
                   <p className="font-semibold text-slate-900">A well-optimized site can:</p>
                   <ul className="space-y-3">
@@ -207,7 +209,7 @@ const Blog17 = () => {
                     Many websites look good but fail to convert. Why?
                   </p>
                   <p>
-                    They don't match <b>user intent</b>.
+                    They don&apos;t match <b>user intent</b>.
                   </p>
                   <p>
                     If someone searches for a solution, they want a clear answer.
@@ -221,7 +223,7 @@ const Blog17 = () => {
                       For example:
                     </p>
                     <p className="text-slate-700">
-                      If a user lands on your page and can't understand what you offer in 5 seconds → they leave.
+                      If a user lands on your page and can&apos;t understand what you offer in 5 seconds → they leave.
                     </p>
                   </div>
                   <p className="font-semibold text-slate-900">Good conversion funnel optimization starts with understanding:</p>
@@ -242,7 +244,7 @@ const Blog17 = () => {
                   <p className="font-semibold text-slate-900">Always ask:</p>
                   <div className="bg-slate-100 rounded-xl p-6 my-6 border border-slate-200">
                     <p className="text-slate-700 font-medium">
-                      "Does this page solve the user's problem quickly?"
+                      &quot;Does this page solve the user&apos;s problem quickly?&quot;
                     </p>
                     <p className="text-slate-600 mt-2">If not, fix it.</p>
                   </div>
@@ -260,7 +262,7 @@ const Blog17 = () => {
                     Your landing page is your first impression.
                   </p>
                   <p>
-                    If it looks outdated, cluttered, or confusing → users don't trust it.
+                    If it looks outdated, cluttered, or confusing → users don&apos;t trust it.
                   </p>
                   <p className="font-semibold text-slate-900">Common issues we see:</p>
                   <ul className="space-y-3">
@@ -315,7 +317,7 @@ const Blog17 = () => {
                     Design is not just about looks.
                   </p>
                   <p>
-                    It's about guiding the user.
+                    It&apos;s about guiding the user.
                   </p>
                 </div>
               </div>
@@ -334,7 +336,7 @@ const Blog17 = () => {
                     If your website takes more than <b>3 seconds</b> to load, users leave.
                   </p>
                   <p>
-                    It's that simple.
+                    It&apos;s that simple.
                   </p>
                   <p className="font-semibold text-slate-900">Slow speed affects:</p>
                   <ul className="space-y-3">
@@ -395,25 +397,25 @@ const Blog17 = () => {
                     <ul className="space-y-2">
                       <li className="flex items-center gap-2 text-red-700">
                         <XCircle size={16} />
-                        <span>"Click Here"</span>
+                        <span>&quot;Click Here&quot;</span>
                       </li>
                       <li className="flex items-center gap-2 text-red-700">
                         <XCircle size={16} />
-                        <span>"Submit"</span>
+                        <span>&quot;Submit&quot;</span>
                       </li>
                     </ul>
-                    <p className="text-red-600 mt-3 text-sm">These don't create urgency or value.</p>
+                    <p className="text-red-600 mt-3 text-sm">These don&apos;t create urgency or value.</p>
                   </div>
                   <p className="font-semibold text-slate-900">Good CTAs:</p>
                   <div className="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
                     <ul className="space-y-2">
                       <li className="flex items-center gap-2 text-green-700">
                         <CheckCircle size={16} />
-                        <span>"Get Your Free Strategy"</span>
+                        <span>&quot;Get Your Free Strategy&quot;</span>
                       </li>
                       <li className="flex items-center gap-2 text-green-700">
                         <CheckCircle size={16} />
-                        <span>"Start Growing Today"</span>
+                        <span>&quot;Start Growing Today&quot;</span>
                       </li>
                     </ul>
                   </div>
@@ -444,7 +446,7 @@ const Blog17 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Not Using Data & Analytics to Guide Conversion Decisions
                 </h2>
-                <img
+                <Image
                   src="/blogs/blog 17-2.webp"
                   alt="Ignoring User Intent CRO Mistake"
                   className="w-full h-auto object-cover rounded-xl mb-6"
@@ -463,7 +465,7 @@ const Blog17 = () => {
                     Many businesses make changes based on opinion, not facts.
                   </p>
                   <p>
-                    That's a big mistake.
+                    That&apos;s a big mistake.
                   </p>
                   <p className="font-semibold text-slate-900">Use tools to track:</p>
                   <ul className="space-y-3">
@@ -609,11 +611,11 @@ const Blog17 = () => {
               <div className="my-12" id="trust-signals">
                 <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
-                  Trust Signals Missing – Why Users Don't Convert
+                  Trust Signals Missing – Why Users Don&apos;t Convert
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    People don't trust easily online.
+                    People don&apos;t trust easily online.
                   </p>
                   <p>
                     If your site lacks trust signals, users hesitate.
@@ -645,7 +647,7 @@ const Blog17 = () => {
                       Trust = conversions.
                     </p>
                     <p className="text-slate-700 mt-2">
-                      Without trust, even the best design won't work.
+                      Without trust, even the best design won&apos;t work.
                     </p>
                   </div>
                 </div>
@@ -701,13 +703,13 @@ const Blog17 = () => {
                     Conversion is not luck.
                   </p>
                   <p>
-                    It's a strategy.
+                    It&apos;s a strategy.
                   </p>
                   <p>
                     If your website is not converting, something is wrong.
                   </p>
                   <p>
-                    And most of the time, it's one of these mistakes.
+                    And most of the time, it&apos;s one of these mistakes.
                   </p>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">

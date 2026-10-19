@@ -1,5 +1,6 @@
 import "./globals.css";
 import Script from "next/script";
+import Image from "next/image";
 import { ThemeProvider } from "@/contextApi/themeProvider";
 import FooterFour from "@/components/sections/footers/footerFour";
 import HeaderTwo from "@/components/sections/headers/HeaderTwoServer";
@@ -101,12 +102,13 @@ fbq('track', 'PageView');
               }}
             />
             <noscript>
-              <img
+              <Image
                 height="1"
                 width="1"
                 style={{ display: "none" }}
                 src="https://www.facebook.com/tr?id=1460230578479668&ev=PageView&noscript=1"
                 alt=""
+                unoptimized
               />
             </noscript>
           </>

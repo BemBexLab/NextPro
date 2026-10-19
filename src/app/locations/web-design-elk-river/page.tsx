@@ -248,10 +248,10 @@ export default function WebsiteDesignElkRiverPage() {
               At Web Founders USA, we create high-performance websites for businesses that want a stronger digital presence in <b>Elk River, MN</b>. From custom business websites and WordPress development to conversion focused eCommerce stores, we combine creative design, smart development, user experience, and SEO friendly structure to build websites around your business goals.
             </p>
             <p>
-              Whether you're launching a new business or your current website feels outdated, slow, or difficult to use, we're ready to build something better.
+              Whether you&apos;re launching a new business or your current website feels outdated, slow, or difficult to use, we&apos;re ready to build something better.
             </p>
             <p>
-              <b>Let's turn your website into a growth focused business asset.</b>
+              <b>Let&apos;s turn your website into a growth focused business asset.</b>
             </p>
           </>
         }
@@ -416,7 +416,7 @@ export default function WebsiteDesignElkRiverPage() {
             Our Website Design Process
           </h2>
           <p className="mb-8 max-w-3xl break-words text-sm leading-relaxed text-white/90 [overflow-wrap:anywhere] sm:mb-10 sm:text-base lg:mb-14 lg:text-lg">
-            Great websites don't happen by accident. They start with a clear strategy.
+            Great websites don&apos;t happen by accident. They start with a clear strategy.
           </p>
 
           <div className="relative min-w-0">
@@ -456,10 +456,10 @@ export default function WebsiteDesignElkRiverPage() {
                 Built for Mobile, Speed & Search
               </h2>
               <div className="space-y-4 text-base leading-relaxed text-gray-600 sm:text-lg">
-                <p>Your customers aren't visiting your website from just one device. They may find you through a phone, tablet, laptop, or desktop. Your website needs to deliver a consistent experience wherever the visitor arrives.</p>
-                <p>That's why our approach to web development emphasizes responsive design, usability, performance, and SEO friendly architecture.</p>
+                <p>Your customers aren&apos;t visiting your website from just one device. They may find you through a phone, tablet, laptop, or desktop. Your website needs to deliver a consistent experience wherever the visitor arrives.</p>
+                <p>That&apos;s why our approach to web development emphasizes responsive design, usability, performance, and SEO friendly architecture.</p>
                 <p>We also structure content around what customers are actually looking for rather than forcing keywords into every sentence.</p>
-                <p className="font-semibold text-[#072d7f]">The goal isn't to create a website that simply gets indexed. The goal is to create a website people want to use.</p>
+                <p className="font-semibold text-[#072d7f]">The goal isn&apos;t to create a website that simply gets indexed. The goal is to create a website people want to use.</p>
               </div>
             </div>
 
@@ -475,8 +475,8 @@ export default function WebsiteDesignElkRiverPage() {
                 <p>
                   Our team brings <Link href="https://www.webfoundersusa.com/service/custom-website-design/" className="font-semibold text-[#0b63b8] hover:underline">web design</Link>, <Link href="https://www.webfoundersusa.com/service/web-development/" className="font-semibold text-[#0b63b8] hover:underline">web development</Link>, eCommerce, SEO, content, branding, and <Link href="https://www.webfoundersusa.com/service/digital-marketing/" className="font-semibold text-[#0b63b8] hover:underline">digital marketing</Link> together under one roof. This allows us to build your website with the bigger picture in mind from attracting the right audience to creating an online experience that turns visitors into customers.
                 </p>
-                <p>Whether you're launching a new website or improving an existing one, we focus on creating a digital presence that supports your brand, strengthens your online visibility, and helps your business grow.</p>
-                <p className="font-semibold text-[#072d7f]">You don't need a website that merely exists. You need one that supports your marketing, communicates your value, and creates opportunities for growth.</p>
+                <p>Whether you&apos;re launching a new website or improving an existing one, we focus on creating a digital presence that supports your brand, strengthens your online visibility, and helps your business grow.</p>
+                <p className="font-semibold text-[#072d7f]">You don&apos;t need a website that merely exists. You need one that supports your marketing, communicates your value, and creates opportunities for growth.</p>
               </div>
             </div>
           </div>
@@ -492,7 +492,7 @@ export default function WebsiteDesignElkRiverPage() {
             </h2>
             <div className="mx-auto mb-8 max-w-3xl space-y-4 text-pretty text-base leading-relaxed text-white/90 sm:text-lg">
               <p>Your website is one of the most important parts of your digital presence.</p>
-              <p>Don't settle for a site that simply looks good.</p>
+              <p>Don&apos;t settle for a site that simply looks good.</p>
               <p className="font-semibold text-white">Build one that looks professional, performs smoothly, communicates clearly, and gives your customers a reason to take action.</p>
             </div>
             <Link

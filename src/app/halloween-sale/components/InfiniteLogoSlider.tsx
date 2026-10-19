@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+
 
 const logos = [
   { src: "/images/slider/clients01.webp", alt: "IAQ-EMF Consulting Inc. logo" },
@@ -32,7 +34,7 @@ export default function InfiniteLogoSlider() {
               className="flex shrink-0 items-center gap-4 pr-4 sm:gap-6 sm:pr-6 md:gap-8 md:pr-8"
             >
               {logos.map(({ src, alt }) => (
-                <img
+                <Image
                   key={`${copy}-${src}`}
                   src={src}
                   alt={copy === 1 ? "" : alt}
@@ -41,7 +43,7 @@ export default function InfiniteLogoSlider() {
                   loading="lazy"
                   decoding="async"
                   draggable={false}
-                  className="h-16 w-32 shrink-0 object-contain opacity-70 transition-opacity duration-300 hover:opacity-100 sm:h-20 sm:w-44 md:h-[90px] md:w-[180px] dark:opacity-60 dark:hover:opacity-100"
+                  className="h-16 w-32 shrink-0 object-contain opacity-70 transition-opacity duration-300 hover:opacity-100 sm:h-20 sm:w-44 md:h-[90px] md:w-[180px] dark:opacity-60 dark:hover:opacity-100" unoptimized
                 />
               ))}
             </div>

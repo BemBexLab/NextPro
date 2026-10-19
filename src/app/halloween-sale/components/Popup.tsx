@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Clock3, Crown, Tag } from "lucide-react";
 import { createPortal } from "react-dom";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 import {
   FaArrowRight,
   FaCommentDots,
@@ -35,6 +35,10 @@ const services = [
   "Website Development Services",
 ];
 
+const subscribeToNothing = () => () => {};
+const getClientMountedSnapshot = () => true;
+const getServerMountedSnapshot = () => false;
+
 const Popup = ({ onClose }: { onClose: () => void }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [name, setName] = useState("");
@@ -44,18 +48,19 @@ const Popup = ({ onClose }: { onClose: () => void }) => {
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [portalTarget, setPortalTarget] = useState<HTMLElement | null>(null);
+  const hasMounted = useSyncExternalStore(
+    subscribeToNothing,
+    getClientMountedSnapshot,
+    getServerMountedSnapshot,
+  );
+  const portalTarget = hasMounted
+    ? document.querySelector<HTMLElement>(".landing-test-page") ?? document.body
+    : null;
 
   const closePopup = useCallback(() => {
     setIsOpen(false);
     onClose();
   }, [onClose]);
-
-  useEffect(() => {
-    setPortalTarget(
-      document.querySelector<HTMLElement>(".landing-test-page") ?? document.body,
-    );
-  }, []);
 
   useEffect(() => {
     if (!isOpen) return;

@@ -45,8 +45,8 @@ const CounterStat = ({ endPoint, number, title }: CounterStatProps) => {
     if (!stat) return undefined;
 
     if (typeof IntersectionObserver === "undefined") {
-      setIsVisible(true);
-      return undefined;
+      const frame = window.requestAnimationFrame(() => setIsVisible(true));
+      return () => window.cancelAnimationFrame(frame);
     }
 
     const observer = new IntersectionObserver(

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
 import { services } from "@/data/services";
@@ -51,10 +52,10 @@ export default function ServicesSection() {
                   {Icon ? (
                     <Icon className="h-6 w-6 text-[#f84318] md:h-8 md:w-8" />
                   ) : (
-                    <img
+                    <Image
                       src={service.img}
                       alt={service.title}
-                      className="h-6 w-6 object-contain md:h-8 md:w-8"
+                      className="h-6 w-6 object-contain md:h-8 md:w-8" width={32} height={32} unoptimized
                     />
                   )}
                 </div>

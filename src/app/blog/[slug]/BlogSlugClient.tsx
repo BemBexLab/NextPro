@@ -1,6 +1,8 @@
 "use client";
+import Image from "next/image";
 
-import { useEffect, useMemo, useState } from "react";
+
+import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import type { WPPost } from "../wpPosts";
 
 type TocItem = {
@@ -28,30 +30,40 @@ type BlogSlugPageProps = {
   post: WPPost;
 };
 
+const subscribeToNothing = () => () => {};
+const getClientMountedSnapshot = () => true;
+const getServerMountedSnapshot = () => false;
+
 export default function BlogSlugPage({ post }: BlogSlugPageProps) {
-  const [hasMounted, setHasMounted] = useState(false);
+  const hasMounted = useSyncExternalStore(
+    subscribeToNothing,
+    getClientMountedSnapshot,
+    getServerMountedSnapshot,
+  );
   const [activeSection, setActiveSection] = useState("");
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>(
     {}
   );
 
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
+  const postClassList = post.class_list;
+  const postContentHtml = post.content?.rendered;
+  const postExcerptHtml = post.excerpt?.rendered;
+  const featuredMedia = post._embedded?.["wp:featuredmedia"]?.[0];
+  const yoastFeaturedImage = post.yoast_head_json?.og_image?.[0];
 
   const articleClassName = useMemo(() => {
-    const wpClasses = post?.class_list?.join(" ") || "";
+    const wpClasses = postClassList?.join(" ") || "";
     return ["wp-post-shell", wpClasses].filter(Boolean).join(" ");
-  }, [post?.class_list]);
+  }, [postClassList]);
 
   const transformedPost = useMemo(() => {
-    const sourceHtml = post?.content?.rendered || post?.excerpt?.rendered || "";
+    const sourceHtml = postContentHtml || postExcerptHtml || "";
     const embeddedFeaturedImage =
-      post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-      post?.yoast_head_json?.og_image?.[0]?.url ||
+      featuredMedia?.source_url ||
+      yoastFeaturedImage?.url ||
       "";
     const embeddedFeaturedImageAlt =
-      post?._embedded?.["wp:featuredmedia"]?.[0]?.alt_text || "";
+      featuredMedia?.alt_text || "";
 
     if (!sourceHtml || !hasMounted) {
       return {
@@ -121,11 +133,11 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
       toc,
     };
   }, [
-    post?._embedded,
-    post?.content?.rendered,
-    post?.excerpt?.rendered,
+    featuredMedia,
+    postContentHtml,
+    postExcerptHtml,
     hasMounted,
-    post?.yoast_head_json?.og_image,
+    yoastFeaturedImage,
   ]);
 
   const tocGroups = useMemo<TocGroup[]>(() => {
@@ -152,7 +164,6 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
 
   useEffect(() => {
     if (!transformedPost.toc.length) {
-      setActiveSection("");
       return;
     }
 
@@ -190,45 +201,20 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
     };
   }, [transformedPost.toc]);
 
-  useEffect(() => {
-    setExpandedGroups((current) => {
-      const next = { ...current };
+  const activeGroupId = tocGroups.find(
+    (group) =>
+      group.parent.id === activeSection ||
+      group.children.some((child) => child.id === activeSection)
+  )?.parent.id;
 
-      tocGroups.forEach((group, index) => {
-        if (next[group.parent.id] === undefined) {
-          next[group.parent.id] = index === 0;
-        }
-      });
+  function isGroupExpanded(groupId: string, index: number) {
+    return expandedGroups[groupId] ?? (index === 0 || groupId === activeGroupId);
+  }
 
-      return next;
-    });
-  }, [tocGroups]);
-
-  useEffect(() => {
-    if (!activeSection) {
-      return;
-    }
-
-    const activeGroup = tocGroups.find(
-      (group) =>
-        group.parent.id === activeSection ||
-        group.children.some((child) => child.id === activeSection)
-    );
-
-    if (!activeGroup?.children.length) {
-      return;
-    }
-
+  function toggleGroup(groupId: string, index: number) {
     setExpandedGroups((current) => ({
       ...current,
-      [activeGroup.parent.id]: true,
-    }));
-  }, [activeSection, tocGroups]);
-
-  function toggleGroup(groupId: string) {
-    setExpandedGroups((current) => ({
-      ...current,
-      [groupId]: !current[groupId],
+      [groupId]: !isGroupExpanded(groupId, index),
     }));
   }
 
@@ -248,9 +234,9 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
 
           {transformedPost.featuredImage ? (
             <div className="wp-post-featured">
-              <img
+              <Image
                 src={transformedPost.featuredImage}
-                alt={transformedPost.featuredImageAlt || post.title?.rendered || "Featured image"}
+                alt={transformedPost.featuredImageAlt || post.title?.rendered || "Featured image"} width={1200} height={675} unoptimized
               />
             </div>
           ) : null}
@@ -262,7 +248,7 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
                 <nav aria-label="Table of contents">
                   {tocGroups.length ? (
                     <ul className="wp-post-toc-list">
-                      {tocGroups.map((group) => (
+                      {tocGroups.map((group, index) => (
                         <li key={group.parent.id} className="wp-post-toc-group">
                           <div
                             className={`wp-post-toc-item${
@@ -274,20 +260,20 @@ export default function BlogSlugPage({ post }: BlogSlugPageProps) {
                               <button
                                 type="button"
                                 className={`wp-post-toc-toggle${
-                                  expandedGroups[group.parent.id]
+                                  isGroupExpanded(group.parent.id, index)
                                     ? " is-expanded"
                                     : ""
                                 }`}
-                                onClick={() => toggleGroup(group.parent.id)}
+                                onClick={() => toggleGroup(group.parent.id, index)}
                                 aria-label={`Toggle ${group.parent.text} subsections`}
-                                aria-expanded={expandedGroups[group.parent.id] ? "true" : "false"}
+                                aria-expanded={isGroupExpanded(group.parent.id, index) ? "true" : "false"}
                               >
                                 <span />
                               </button>
                             ) : null}
                           </div>
 
-                          {group.children.length && expandedGroups[group.parent.id] ? (
+                          {group.children.length && isGroupExpanded(group.parent.id, index) ? (
                             <ul className="wp-post-toc-children">
                               {group.children.map((child) => (
                                 <li

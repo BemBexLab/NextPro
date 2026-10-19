@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useRef } from "react";
 const PROJECTS_API_BASE = "https://projects-api-bembexlab.vercel.app";
 
@@ -205,14 +206,15 @@ const ProjectsTab = ({ initialPosts = [] }) => {
             const cardContent = (
               <>
                 <div className="relative h-full w-full overflow-hidden">
-                  <img
+                  <Image
                     ref={(el) => {
                       if (figma) imgRefs.current[post.id] = el;
                     }}
                     src={imageUrl}
                     alt={projectTitle}
-                    width={figma ? undefined : 800}
-                    height={figma ? undefined : 600}
+                    width={800}
+                    height={600}
+                    unoptimized
                     loading={index === 0 ? "eager" : "lazy"}
                     fetchPriority={index === 0 ? "high" : "low"}
                     className="h-full w-full object-cover object-top transition-transform duration-[2500ms] ease-in-out"

@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -45,7 +47,7 @@ const Blog14 = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-slate-900">
             Pay Per Click Advertising Services in USA (2026) – Maximize ROI with Smart PPC
           </h1>
-          <img
+          <Image
             src="/blogs/blog 14.webp"
             alt="Pay Per Click Advertising Services USA 2026"
             className="w-full h-auto object-cover rounded-xl shadow-2xl"
@@ -116,7 +118,7 @@ const Blog14 = () => {
                   If you want fast results online, PPC is still one of the best ways to get them.
                 </p>
                 <p>
-                  SEO takes time. Social media needs patience. But pay per click advertising can bring traffic almost instantly. That's why many businesses in the USA still rely on it in 2026.
+                  SEO takes time. Social media needs patience. But pay per click advertising can bring traffic almost instantly. That&apos;s why many businesses in the USA still rely on it in 2026.
                 </p>
                 <p>
                   At <a href="https://www.webfoundersusa.com" className="text-blue-700 underline">Web Founders USA</a>, we help brands grow with simple, smart, and results-driven PPC strategies. No guesswork. Just clear actions that bring clicks, leads, and sales.
@@ -147,7 +149,7 @@ const Blog14 = () => {
                   </p>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
-                      Also, PPC gives control. You can start small, test ads, and scale what works. That's why many companies choose <a href="/service/pay-per-click" className="text-blue-700 underline">professional PPC services</a> instead of guessing on their own.
+                      Also, PPC gives control. You can start small, test ads, and scale what works. That&apos;s why many companies choose <Link href="/service/pay-per-click" className="text-blue-700 underline">professional PPC services</Link> instead of guessing on their own.
                     </p>
                   </div>
                 </div>
@@ -171,7 +173,7 @@ const Blog14 = () => {
                     But the real benefit is speed.
                   </p>
                   <p>
-                    Unlike SEO, you don't need to wait months. A well-structured campaign can bring traffic within hours. This is why businesses use <b>paid search advertising</b> for quick growth.
+                    Unlike SEO, you don&apos;t need to wait months. A well-structured campaign can bring traffic within hours. This is why businesses use <b>paid search advertising</b> for quick growth.
                   </p>
                   <p className="font-semibold text-slate-900">For example:</p>
                   <ul className="space-y-3">
@@ -185,7 +187,7 @@ const Blog14 = () => {
                     </li>
                   </ul>
                   <p>
-                    With the right <b>google ads management</b>, you don't just get traffic you get the right traffic.
+                    With the right <b>google ads management</b>, you don&apos;t just get traffic you get the right traffic.
                   </p>
                 </div>
               </div>
@@ -198,7 +200,7 @@ const Blog14 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    A good PPC campaign is not just about running ads. It's about doing the basics right.
+                    A good PPC campaign is not just about running ads. It&apos;s about doing the basics right.
                   </p>
                   <p className="font-semibold text-slate-900">Here are the main parts:</p>
                   <ul className="space-y-4">
@@ -231,7 +233,7 @@ const Blog14 = () => {
                       <div>
                         <p className="font-bold text-slate-900">Landing Page</p>
                         <p className="text-slate-700">
-                          Clicks don't matter if people leave. A clean page improves conversions.
+                          Clicks don&apos;t matter if people leave. A clean page improves conversions.
                         </p>
                       </div>
                     </li>
@@ -259,7 +261,7 @@ const Blog14 = () => {
                     </li>
                   </ul>
                   <p>
-                    At <b>Web Founders USA</b>, we focus on these basics first. That's what builds <b>high-converting PPC campaigns</b>.
+                    At <b>Web Founders USA</b>, we focus on these basics first. That&apos;s what builds <b>high-converting PPC campaigns</b>.
                   </p>
                 </div>
               </div>
@@ -283,8 +285,8 @@ const Blog14 = () => {
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900 mb-2">For example:</p>
                     <p className="text-slate-700">
-                      "buy now" keywords → <b>high conversion</b><br />
-                      "what is" keywords → <b>low intent</b>
+                      &quot;buy now&quot; keywords → <b>high conversion</b><br />
+                      &quot;what is&quot; keywords → <b>low intent</b>
                     </p>
                   </div>
                   <p>
@@ -371,7 +373,7 @@ const Blog14 = () => {
                     If your goal is leads and sales, Google usually wins.
                   </p>
                   <p>
-                    That's why services like <b>google local ads</b> and <b>google maps ads</b> are growing fast in 2026.
+                    That&apos;s why services like <b>google local ads</b> and <b>google maps ads</b> are growing fast in 2026.
                   </p>
                 </div>
               </div>
@@ -382,7 +384,7 @@ const Blog14 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Creating High-Converting Ad Copy That Gets Clicks
                 </h2>
-                <img
+                <Image
                   src="/blogs/blog 14-2.webp"
                   alt="PPC Advertising Drives Instant Traffic and Faster Results"
                   className="w-full h-auto object-cover rounded-xl mb-6"
@@ -395,7 +397,7 @@ const Blog14 = () => {
                     Your ad is the first impression.
                   </p>
                   <p>
-                    If it's boring, people scroll.
+                    If it&apos;s boring, people scroll.
                   </p>
                   <p className="font-semibold text-slate-900">Good ad copy is simple:</p>
                   <ul className="space-y-3">
@@ -415,7 +417,7 @@ const Blog14 = () => {
                   <div className="bg-slate-100 rounded-xl p-6 my-6 border border-slate-200">
                     <p className="font-bold text-slate-900 mb-2">Example:</p>
                     <p className="text-slate-700">
-                      "Get More Leads Today – Expert Google Ads Specialist"
+                      &quot;Get More Leads Today – Expert Google Ads Specialist&quot;
                     </p>
                     <p className="text-slate-600 mt-2 text-sm">
                       No complicated words. Just clear value.
@@ -444,7 +446,7 @@ const Blog14 = () => {
                     Getting conversions is harder.
                   </p>
                   <p>
-                    That's where your landing page matters.
+                    That&apos;s where your landing page matters.
                   </p>
                   <p className="font-semibold text-slate-900">A good landing page should:</p>
                   <ul className="space-y-3">
@@ -485,7 +487,7 @@ const Blog14 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    You don't need a huge budget to win.
+                    You don&apos;t need a huge budget to win.
                   </p>
                   <p>
                     You need a smart budget.
@@ -511,7 +513,7 @@ const Blog14 = () => {
                     Smart bidding helps reduce cost and increase ROI.
                   </p>
                   <p>
-                    It's also important to know <b>how much Google ads cost</b>. A lot of businesses spend too much because they don't keep track of their money.
+                    It&apos;s also important to know <b>how much Google ads cost</b>. A lot of businesses spend too much because they don&apos;t keep track of their money.
                   </p>
                   <p className="font-semibold text-slate-900">We focus on:</p>
                   <ul className="space-y-3">
@@ -567,7 +569,7 @@ const Blog14 = () => {
                     </li>
                   </ul>
                   <p>
-                    Using <b>conversion tracking PPC</b>, we know what's working and what's not.
+                    Using <b>conversion tracking PPC</b>, we know what&apos;s working and what&apos;s not.
                   </p>
                   <p>
                     Then we optimize.
@@ -591,7 +593,7 @@ const Blog14 = () => {
                     This is called <b>performance marketing services</b>.
                   </p>
                   <p>
-                    It's not about running ads. It's about improving them every day.
+                    It&apos;s not about running ads. It&apos;s about improving them every day.
                   </p>
                 </div>
               </div>
@@ -632,7 +634,7 @@ const Blog14 = () => {
                     At <b>Web Founders USA</b>, we keep things simple.
                   </p>
                   <p>
-                    We don't use hard-to-understand words. We make everything very clear. And our main goal is to get you results.
+                    We don&apos;t use hard-to-understand words. We make everything very clear. And our main goal is to get you results.
                   </p>
                   <p className="font-semibold text-slate-900">Whether you need:</p>
                   <ul className="space-y-3">
@@ -666,7 +668,7 @@ const Blog14 = () => {
                     </p>
                   </div>
                   <p>
-                    If you want <b>targeted paid advertising</b>, <b>paid traffic generation</b>, or <b>expert PPC management</b>, then it's time to take PPC seriously.
+                    If you want <b>targeted paid advertising</b>, <b>paid traffic generation</b>, or <b>expert PPC management</b>, then it&apos;s time to take PPC seriously.
                   </p>
                   <p>
                     At <b>Web Founders USA</b>, we help businesses grow with simple, clear, and effective PPC strategies.

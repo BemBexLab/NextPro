@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -41,7 +42,7 @@ const Blog12 = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-slate-900">
             Premium Content Writing Services USA 2026 – Built for Authority & Long-Term Growth
           </h1>
-          <img
+          <Image
             src="/blogs/blog 12.webp"
             alt="Premium Content Writing Services USA 2026"
             className="w-full h-auto object-cover rounded-xl shadow-2xl"
@@ -109,13 +110,13 @@ const Blog12 = () => {
               {/* Intro Section */}
               <div id="intro" className="space-y-6">
                 <p>
-                  In 2026, content is not just about filling pages. It's about building trust. It's about showing people that your brand knows what it's doing.
+                  In 2026, content is not just about filling pages. It&apos;s about building trust. It&apos;s about showing people that your brand knows what it&apos;s doing.
                 </p>
                 <p>
                   Most businesses today understand SEO. But many still struggle with one thing writing content that people actually want to read.
                 </p>
                 <p>
-                  That's where <a href="https://www.webfoundersusa.com/service/content-writing/" className="text-indigo-600 hover:underline">content writing services</a> make a real difference.
+                  That&apos;s where <a href="https://www.webfoundersusa.com/service/content-writing/" className="text-indigo-600 hover:underline">content writing services</a> make a real difference.
                 </p>
                 <p>
                   At <a href="https://www.webfoundersusa.com" className="text-indigo-600 hover:underline">Web Founders USA</a>, we focus on simple, clear, and results-driven content. Not fluff. Not keyword stuffing. Just real content that works.
@@ -130,7 +131,7 @@ const Blog12 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    People are smarter now. They don't trust random websites.
+                    People are smarter now. They don&apos;t trust random websites.
                   </p>
                   <p>
                     When someone lands on your page, they decide in seconds if you are worth their time.
@@ -158,10 +159,10 @@ const Blog12 = () => {
                     </li>
                   </ul>
                   <p>
-                    Good content is not loud. It's clear. It answers questions. It feels natural.
+                    Good content is not loud. It&apos;s clear. It answers questions. It feels natural.
                   </p>
                   <p>
-                    That's what builds authority.
+                    That&apos;s what builds authority.
                   </p>
                 </div>
               </div>
@@ -241,7 +242,7 @@ const Blog12 = () => {
                     But more importantly, it becomes easier to read.
                   </p>
                   <p>
-                    That's the balance most businesses miss.
+                    That&apos;s the balance most businesses miss.
                   </p>
                 </div>
               </div>
@@ -329,7 +330,7 @@ const Blog12 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   High-Quality Website Content That Reflects Brand Value
                 </h2>
-                <img
+                <Image
                   src="/blogs/blog 12-2.webp"
                   alt="SEO-Focused Content Writing Services"
                   className="w-full h-auto object-cover rounded-xl mb-6"
@@ -406,7 +407,7 @@ const Blog12 = () => {
                     Not just today, but for months and even years.
                   </p>
                   <p>
-                    That's long-term growth.
+                    That&apos;s long-term growth.
                   </p>
                 </div>
               </div>
@@ -446,7 +447,7 @@ const Blog12 = () => {
                     </li>
                   </ul>
                   <p>
-                    Simple words. Clear direction. That's what works.
+                    Simple words. Clear direction. That&apos;s what works.
                   </p>
                 </div>
               </div>
@@ -523,7 +524,7 @@ const Blog12 = () => {
                     </li>
                   </ul>
                   <p>
-                    We don't overcomplicate things.
+                    We don&apos;t overcomplicate things.
                   </p>
                   <p>
                     We create <b>custom written content</b> that fits your business.

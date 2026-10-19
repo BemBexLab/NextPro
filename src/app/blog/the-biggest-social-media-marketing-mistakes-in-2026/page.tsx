@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from 'next/image';
 import React from 'react';
 import { withEnUsHreflang } from "@/lib/metadata";
@@ -20,7 +21,7 @@ const SocialMediaMistakes2026: React.FC = () => {
           <h1 className="text-4xl text-center sm:text-5xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-white via-slate-200 to-slate-500 bg-clip-text">
             The Biggest Social Media Marketing Mistakes in 2026
           </h1>
-          <img
+          <Image
             src="/blogs/blog 5.webp"
             alt="The Biggest Social Media Marketing Mistakes in 2026"
             className="w-full h-auto object-cover rounded-lg"
@@ -55,7 +56,7 @@ const SocialMediaMistakes2026: React.FC = () => {
             But leads? Sales? Growth? Not really.
           </p>
           <p className="text-[#e6edf3] font-medium">
-            Let's talk honestly about the biggest mistakes businesses are making in social media marketing this year and how you can avoid them.
+            Let&apos;s talk honestly about the biggest mistakes businesses are making in social media marketing this year and how you can avoid them.
           </p>
         </section>
 
@@ -92,7 +93,7 @@ const SocialMediaMistakes2026: React.FC = () => {
             <p className="text-red-200">Without this, you are just posting and hoping.</p>
           </div>
           <p className="mb-4">
-            This happens a lot in social media marketing for small businesses. The owners are busy. They post when they remember. They boost a post sometimes. That's it.
+            This happens a lot in social media marketing for small businesses. The owners are busy. They post when they remember. They boost a post sometimes. That&apos;s it.
           </p>
           <p className="mb-4">
             Social media for small business marketing needs structure. Even a simple plan is better than none.
@@ -204,7 +205,7 @@ const SocialMediaMistakes2026: React.FC = () => {
           <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">
             Treating Social Media Like a Hobby Instead of a Sales Channel
           </h2>
-          <img
+          <Image
             src="/blogs/blog 5-1.webp"
             alt="The Biggest Social Media Marketing Mistakes in 2026"
             className="w-full h-auto object-cover rounded-lg"
@@ -214,7 +215,7 @@ const SocialMediaMistakes2026: React.FC = () => {
           />
           <p className="mb-4">If you treat social media like a side activity, it will give side results.</p>
           <p className="mb-4">In 2026, social media marketing services are directly connected to revenue.</p>
-          <p className="mb-4">It is no longer just "brand awareness."</p>
+          <p className="mb-4">It is no longer just &quot;brand awareness.&quot;</p>
           <p className="mb-4">Your pages should:</p>
           <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
             <li>Educate</li>
@@ -230,7 +231,7 @@ const SocialMediaMistakes2026: React.FC = () => {
             You are not using social media as a sales tool.
           </p>
           <p className="mb-4">
-            Many businesses search for a <a className='text-blue-900 font-semibold hover:underline' href="/service/social-media-marketing/">social media marketing agency that serves all types of businesses across the United States</a> because they realize its strategy.They need a clear structure an
+            Many businesses search for a <Link className='text-blue-900 font-semibold hover:underline' href="/service/social-media-marketing/">social media marketing agency that serves all types of businesses across the United States</Link> because they realize its strategy.They need a clear structure an
           </p>
           <div className="bg-blue-500/10 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
             <p className="text-blue-200">A professional approach turns social platforms into predictable lead systems.</p>
@@ -290,7 +291,7 @@ const SocialMediaMistakes2026: React.FC = () => {
             <li>Clear service descriptions</li>
           </ul>
           <p className="mb-4">When someone visits your page, they decide in seconds:</p>
-          <p className="mb-4">"Is this brand serious?"</p>
+          <p className="mb-4">&quot;Is this brand serious?&quot;</p>
           <p className="mb-4">Trust signals matter:</p>
           <ul className="list-disc list-inside space-y-1 mb-6 text-[#8b949e] marker:text-blue-500">
             <li>Testimonials</li>
@@ -334,11 +335,11 @@ const SocialMediaMistakes2026: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="bg-[#21262d] p-6 rounded-lg border border-[#30363d]">
               <span className="text-xs uppercase tracking-wider text-[#8b949e] block mb-2">Soft CTA</span>
-              <p className="text-[#e6edf3]">"Save this post for later."</p>
+              <p className="text-[#e6edf3]">&quot;Save this post for later.&quot;</p>
             </div>
             <div className="bg-[#21262d] p-6 rounded-lg border border-[#30363d]">
               <span className="text-xs uppercase tracking-wider text-green-500 font-bold block mb-2">Strong CTA</span>
-              <p className="text-[#e6edf3]">"Book your free strategy call today."</p>
+              <p className="text-[#e6edf3]">&quot;Book your free strategy call today.&quot;</p>
             </div>
           </div>
 
@@ -350,7 +351,7 @@ const SocialMediaMistakes2026: React.FC = () => {
           <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 border-blue-500 pl-4">
             Tracking Vanity Metrics Instead of Revenue
           </h2>
-          <img
+          <Image
             src="/blogs/blog 5-2.webp"
             alt="Tracking Vanity Metrics Instead of Revenue"
             className="w-full h-auto object-cover rounded-lg"
@@ -454,12 +455,12 @@ const SocialMediaMistakes2026: React.FC = () => {
         </div>
 
         {/* RELATED LINK */}
-        <a href="/blog/how-to-choose-digital-marketing-agency" className="block mt-16 bg-gradient-to-br from-[#1f252e] to-[#161b22] border border-[#30363d] p-8 rounded-2xl hover:border-blue-500 hover:-translate-y-1 transition-all duration-300 group">
+        <Link href="/blog/how-to-choose-digital-marketing-agency" className="block mt-16 bg-gradient-to-br from-[#1f252e] to-[#161b22] border border-[#30363d] p-8 rounded-2xl hover:border-blue-500 hover:-translate-y-1 transition-all duration-300 group">
           <span className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3 block">╰┈➤ More Relevant</span>
           <h4 className="text-xl font-semibold  group-hover:text-blue-300 transition-colors">
             How to Choose a Digital Marketing Agency (Complete 2026 Guide)
           </h4>
-        </a>
+        </Link>
 
       </div>
     </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
@@ -336,13 +337,13 @@ const pageContent = {
 
 const imageCard = (image: ImageData) => (
   <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
-    <img
+    <Image
       src={image.src}
       alt={image.alt}
       className="w-full h-auto object-cover"
       style={{ aspectRatio: `${image.width}/${image.height}` }}
       width={image.width}
-      height={image.height}
+      height={image.height} unoptimized
     />
   </div>
 );

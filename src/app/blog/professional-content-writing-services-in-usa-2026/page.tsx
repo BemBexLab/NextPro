@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -48,7 +49,7 @@ const Blog11 = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-slate-900">
             Professional Content Writing Services in USA (2026) – Built for Rankings & Conversions
           </h1>
-          <img
+          <Image
                   src="/blogs/blog 11.webp"
                   alt="Professional Content Writing vs Basic Content"
                   className="w-full h-auto object-cover rounded-xl mb-6"
@@ -122,7 +123,7 @@ const Blog11 = () => {
                   It helps people understand your brand. It builds trust. And it brings real results.
                 </p>
                 <p>
-                  In 2026, businesses in the USA need more than just words. They need smart, clear, and helpful content. That's where <b>content writing services</b> come in.
+                  In 2026, businesses in the USA need more than just words. They need smart, clear, and helpful content. That&apos;s where <b>content writing services</b> come in.
                 </p>
                 <p>
                   At <b>Web Founders USA</b>, we focus on writing that actually works. Simple, clean, and made for real people.
@@ -147,7 +148,7 @@ const Blog11 = () => {
                     If your content is helpful, they stay.
                   </p>
                   <p>
-                    That's the difference.
+                    That&apos;s the difference.
                   </p>
                   <p className="font-semibold text-slate-900">Good content writing services help you:</p>
                   <ul className="space-y-3">
@@ -169,7 +170,7 @@ const Blog11 = () => {
                     </li>
                   </ul>
                   <p>
-                    It's not about writing more. It's about writing better.
+                    It&apos;s not about writing more. It&apos;s about writing better.
                   </p>
                 </div>
               </div>
@@ -208,13 +209,13 @@ const Blog11 = () => {
                     </li>
                   </ul>
                   <p>
-                    At <b>Web Founders USA</b>, we don't write for search engines only.
+                    At <b>Web Founders USA</b>, we don&apos;t write for search engines only.
                   </p>
                   <p>
                     We write for people first. Google comes after that.
                   </p>
                   <p>
-                    That's why <b>professional content writing</b> always performs better.
+                    That&apos;s why <b>professional content writing</b> always performs better.
                   </p>
                 </div>
               </div>
@@ -274,7 +275,7 @@ const Blog11 = () => {
                     Traffic is good. But conversions matter more.
                   </p>
                   <p>
-                    If your content doesn't guide users, they leave.
+                    If your content doesn&apos;t guide users, they leave.
                   </p>
                   <p className="font-semibold text-slate-900">Good conversion-focused content does three things:</p>
                   <ul className="space-y-3">
@@ -295,7 +296,7 @@ const Blog11 = () => {
                     Simple words. Clear message. Strong value.
                   </p>
                   <p>
-                    That's how <b>content writing services</b> help you grow, not just rank.
+                    That&apos;s how <b>content writing services</b> help you grow, not just rank.
                   </p>
                 </div>
               </div>
@@ -306,7 +307,7 @@ const Blog11 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Industry-Specific Content Writing for Targeted USA Audiences
                 </h2>
-                <img
+                <Image
             src="/blogs/blog 11-2.webp"
             alt="Professional Content Writing Services USA 2026"
             className="w-full h-auto object-cover rounded-xl shadow-2xl"
@@ -323,7 +324,7 @@ const Blog11 = () => {
                     A local service page is not the same as a blog.
                   </p>
                   <p>
-                    That's why we create <b>custom written content</b> based on your niche.
+                    That&apos;s why we create <b>custom written content</b> based on your niche.
                   </p>
                   <p>
                     We understand your audience first.
@@ -348,7 +349,7 @@ const Blog11 = () => {
                     Before writing, planning matters.
                   </p>
                   <p>
-                    We don't guess keywords. We research them.
+                    We don&apos;t guess keywords. We research them.
                   </p>
                   <p className="font-semibold text-slate-900">A proper digital content strategy includes:</p>
                   <ul className="space-y-3">
@@ -389,7 +390,7 @@ const Blog11 = () => {
                     Your website is the first thing people see.
                   </p>
                   <p>
-                    People won't stay if it looks confusing.
+                    People won&apos;t stay if it looks confusing.
                   </p>
                   <p className="font-semibold text-slate-900">The best website content writing services focus on:</p>
                   <ul className="space-y-3">
@@ -468,7 +469,7 @@ const Blog11 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    Content is not "write once and forget."
+                    Content is not &quot;write once and forget.&quot;
                   </p>
                   <p>
                     It needs updates.
@@ -496,7 +497,7 @@ const Blog11 = () => {
                     This keeps your content active and relevant.
                   </p>
                   <p>
-                    That's how <b>long-term search engine optimization content writing</b> works.
+                    That&apos;s how <b>long-term search engine optimization content writing</b> works.
                   </p>
                 </div>
               </div>

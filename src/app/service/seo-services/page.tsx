@@ -29,7 +29,7 @@ const seoProcess = {
       description: (
         <>
           Start here see it all laid out. Your spot right now, who else is
-          playing, what's holding you back. Dive into real SEO work with{" "}
+          playing, what&apos;s holding you back. Dive into real SEO work with{" "}
           <strong>technical SEO consulting team:</strong> can search engines
           reach your pages? Are they saving them properly. What about those web
           performance markers people talk about in{" "}
@@ -75,33 +75,33 @@ const seoProcess = {
       title: "Content That Ranks & Converts",
       description: (
         <>
-          If visitors don't buy, rankings don't matter. We use{" "}
+          If visitors don&apos;t buy, rankings don&apos;t matter. We use{" "}
           <strong>seo copywriting services</strong> to make landing pages,
           service pages, and supporting articles that match what people are
           really looking for and get them to take action. We offer{" "}
-          <a
+          <Link
             href="/service/seo-services/shopify-seo/"
             className="font-bold text-blue-800 hover:underline"
             rel="noopener noreferrer"
           >
             seo shopify services
-          </a>{" "}
-          for collections and products if you're on{" "}
-          <a
+          </Link>{" "}
+          for collections and products if you&apos;re on{" "}
+          <Link
             href="/service/seo-services/ecommerce-seo/"
             className="text-blue-800 hover:underline"
             rel="noopener noreferrer"
           >
             eCommerce
-          </a>
-          . If you're on CMS, we offer{" "}
-          <a
+          </Link>
+          . If you&apos;re on CMS, we offer{" "}
+          <Link
             href="/service/seo-services/"
             className="font-bold text-blue-800 hover:underline"
             rel="noopener noreferrer"
           >
             seo wordpress services
-          </a>{" "}
+          </Link>{" "}
           that are built for clean structure and growth.
         </>
       ),
@@ -114,7 +114,7 @@ const seoProcess = {
           Start solid, then comes respect with{" "}
           <strong>Organic growth services</strong>. With steady effort, real
           visibility grows backed by genuine references and clear expertise.
-          Pages rise when they're seen as reliable, guided by consistent signals
+          Pages rise when they&apos;re seen as reliable, guided by consistent signals
           instead of shortcuts. Strength builds slowly, but it lasts, just like
           with <strong>best Digital visibility services</strong>.
         </>
@@ -169,93 +169,93 @@ const seoServiceFaqs = [
     answer: (
       <>
         We offer professional{" "}
-        <a
+        <Link
           href="/service/seo-services/b2b-seo/"
           className="font-bold text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           b2b seo services
-        </a>{" "}
+        </Link>{" "}
         and{" "}
-        <a
+        <Link
           href="/service/seo-services/dental-seo/"
           className="font-bold text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           dental seo services
-        </a>{" "}
+        </Link>{" "}
         for businesses in the{" "}
-        <a
+        <Link
           href="/service/seo-services/healthcare-seo/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           health
-        </a>
+        </Link>
         ,{" "}
-        <a
+        <Link
           href="/service/seo-services/dental-seo/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           dental
-        </a>
+        </Link>
         , law,{" "}
-        <a
+        <Link
           href="/service/seo-services/b2b-seo/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           B2B
-        </a>
+        </Link>
         ,{" "}
-        <a
+        <Link
           href="/service/seo-services/ecommerce-seo/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           eCommerce
-        </a>
+        </Link>
         ,{" "}
-        <a
+        <Link
           href="/service/seo-services/shopify-seo/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           shopify
-        </a>
+        </Link>
         ,{" "}
-        <a
+        <Link
           href="/service/seo-services/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           WordPress
-        </a>
+        </Link>
         ,{" "}
-        <a
+        <Link
           href="/service/seo-services/hotel-seo/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           hotels
-        </a>
+        </Link>
         ,{" "}
-        <a
+        <Link
           href="/service/seo-services/automotive-seo/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           automotive
-        </a>
+        </Link>
         ,{" "}
-        <a
+        <Link
           href="/service/seo-services/construction-seo/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           construction
-        </a>
+        </Link>
         , SaaS, and other areas.
       </>
     ),
@@ -280,29 +280,29 @@ const seoServiceFaqs = [
     answer: (
       <>
         Surely! Each platform&apos;s SEO services are personalized for Shopify,{" "}
-        <a
+        <Link
           href="/service/seo-services/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           WordPress
-        </a>
+        </Link>
         ,{" "}
-        <a
+        <Link
           href="/service/seo-services/woocommerce-seo/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           WooCommerce
-        </a>
+        </Link>
         , and{" "}
-        <a
+        <Link
           href="/service/seo-services/bigcommerce-seo/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
           BigCommerce
-        </a>
+        </Link>
         .
       </>
     ),

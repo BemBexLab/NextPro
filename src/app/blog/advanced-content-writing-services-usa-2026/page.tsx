@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -43,7 +44,7 @@ const Blog13 = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-slate-900">
             Advanced Content Writing Services USA (2026) – Strategy, SEO & Results Combined
           </h1>
-          <img
+          <Image
             src="/blogs/blog 13.webp"
             alt="Advanced Content Writing Services USA 2026"
             className="w-full h-auto object-cover rounded-xl shadow-2xl"
@@ -117,10 +118,10 @@ const Blog13 = () => {
                   Some websites look good but get no traffic. Some blogs get traffic but no leads. And some brands just stay invisible.
                 </p>
                 <p>
-                  That's where <b>content writing services</b> make the real difference.
+                  That&apos;s where <b>content writing services</b> make the real difference.
                 </p>
                 <p>
-                  At <a href="https://www.webfoundersusa.com" className="text-indigo-600 hover:text-indigo-800 transition-colors">Web Founders USA</a>, we don't just write words. We create content that helps your business grow. Simple, clear, and built for real results.
+                  At <a href="https://www.webfoundersusa.com" className="text-indigo-600 hover:text-indigo-800 transition-colors">Web Founders USA</a>, we don&apos;t just write words. We create content that helps your business grow. Simple, clear, and built for real results.
                 </p>
               </div>
 
@@ -135,20 +136,20 @@ const Blog13 = () => {
                     Content has changed a lot.
                   </p>
                   <p>
-                    In 2026, Google is smarter. Users are smarter too. People don't waste time on boring or confusing content.
+                    In 2026, Google is smarter. Users are smarter too. People don&apos;t waste time on boring or confusing content.
                   </p>
                   <p>
                     They want clear answers. Fast.
                   </p>
                   <p>
-                    If your content is not helpful, they leave. It's that simple.
+                    If your content is not helpful, they leave. It&apos;s that simple.
                   </p>
                   <p>
-                    That's why <a href="https://www.webfoundersusa.com/service/content-writing" className="text-indigo-600 hover:text-indigo-800 transition-colors">professional content writing</a> matters more than ever. It helps your brand look trusted. It keeps users on your site. And it turns visitors into customers.
+                    That&apos;s why <a href="https://www.webfoundersusa.com/service/content-writing" className="text-indigo-600 hover:text-indigo-800 transition-colors">professional content writing</a> matters more than ever. It helps your brand look trusted. It keeps users on your site. And it turns visitors into customers.
                   </p>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
-                      Good content is no longer optional. It's your online foundation.
+                      Good content is no longer optional. It&apos;s your online foundation.
                     </p>
                   </div>
                 </div>
@@ -175,7 +176,7 @@ const Blog13 = () => {
                     At <b>Web Founders USA</b>, we mix strategy with <b>SEO-friendly content</b>. This means your content is not only easy to read, but also easy to find on Google.
                   </p>
                   <p>
-                    That's how real growth happens.
+                    That&apos;s how real growth happens.
                   </p>
                 </div>
               </div>
@@ -212,7 +213,7 @@ const Blog13 = () => {
                     This helps us create <b>custom written content</b> that targets the right people.
                   </p>
                   <p>
-                    When your content is based on data, it performs better. You don't waste time. You don't waste money.
+                    When your content is based on data, it performs better. You don&apos;t waste time. You don&apos;t waste money.
                   </p>
                   <p>
                     You grow faster.
@@ -231,7 +232,7 @@ const Blog13 = () => {
                     Ranking on Google is not luck.
                   </p>
                   <p>
-                    It's structure, clarity, and relevance.
+                    It&apos;s structure, clarity, and relevance.
                   </p>
                   <p className="font-semibold text-slate-900">Our seo content writing services focus on:</p>
                   <ul className="space-y-3">
@@ -253,7 +254,7 @@ const Blog13 = () => {
                     </li>
                   </ul>
                   <p>
-                    We don't stuff keywords. We write naturally.
+                    We don&apos;t stuff keywords. We write naturally.
                   </p>
                   <p>
                     This makes your content strong for both users and search engines.
@@ -275,10 +276,10 @@ const Blog13 = () => {
                     Traffic is good. But engagement is better.
                   </p>
                   <p>
-                    If users don't stay, your rankings drop.
+                    If users don&apos;t stay, your rankings drop.
                   </p>
                   <p>
-                    That's why we focus on <b>user-friendly content</b>.
+                    That&apos;s why we focus on <b>user-friendly content</b>.
                   </p>
                   <p>
                     We write in simple English. Short sentences. Clear ideas.
@@ -298,7 +299,7 @@ const Blog13 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Creating Content That Aligns with Search Intent
                 </h2>
-                <img
+                <Image
                   src="/blogs/blog 13-2.webp"
                   alt="Combining Strategy SEO and Content for Better Results"
                   className="w-full h-auto object-cover rounded-xl mb-6"
@@ -378,7 +379,7 @@ const Blog13 = () => {
                     It answers their questions. Removes confusion. And builds trust.
                   </p>
                   <p>
-                    That's how visitors turn into leads.
+                    That&apos;s how visitors turn into leads.
                   </p>
                 </div>
               </div>
@@ -394,7 +395,7 @@ const Blog13 = () => {
                     Blogs are powerful.
                   </p>
                   <p>
-                    But random blogs don't work.
+                    But random blogs don&apos;t work.
                   </p>
                   <p>
                     You need a plan.
@@ -412,7 +413,7 @@ const Blog13 = () => {
                     And over time, your site becomes a trusted source.
                   </p>
                   <p>
-                    That's how <b>long-term SEO</b> works.
+                    That&apos;s how <b>long-term SEO</b> works.
                   </p>
                 </div>
               </div>

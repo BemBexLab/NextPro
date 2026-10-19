@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+
 
 import { useState, useEffect } from "react";
 import { Inter, JetBrains_Mono } from "next/font/google";
@@ -139,7 +141,7 @@ export default function CaseStudy01() {
                       index === currentImageIndex ? "opacity-100" : "opacity-0"
                     }`}
                   >
-                    <img
+                    <Image
                       src={image.src}
                       alt={image.alt}
                       className="h-full w-full object-contain grayscale-[30%] transition-transform duration-[8000ms] ease-linear hover:grayscale-0"
@@ -148,7 +150,7 @@ export default function CaseStudy01() {
                           index === currentImageIndex
                             ? ""
                             : "",
-                      }}
+                      }} width={800} height={500} unoptimized
                     />
                   </div>
                 ))}
@@ -186,7 +188,7 @@ export default function CaseStudy01() {
                 <div className="flex-1 h-px bg-black" />
               </div>
               <p className="max-w-3xl text-2xl font-medium leading-snug tracking-tight text-black md:text-3xl">
-                We conducted a detailed SEO audit and identified issues within the page's content optimization. After optimizing the content based on our findings, we requested a fresh crawl of the page to allow Google to process the updates.
+                We conducted a detailed SEO audit and identified issues within the page&apos;s content optimization. After optimizing the content based on our findings, we requested a fresh crawl of the page to allow Google to process the updates.
               </p>
             </section>
 

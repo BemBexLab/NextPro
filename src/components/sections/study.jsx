@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+
 
 import { useEffect, useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -29,8 +31,8 @@ const GalleryCarousel = () => {
     if (!section) return undefined;
 
     if (!("IntersectionObserver" in window)) {
-      setIsNearViewport(true);
-      return undefined;
+      const frame = window.requestAnimationFrame(() => setIsNearViewport(true));
+      return () => window.cancelAnimationFrame(frame);
     }
 
     const observer = new IntersectionObserver(
@@ -171,7 +173,7 @@ const GalleryCarousel = () => {
                 "group relative block aspect-[2/1] w-[min(84vw,360px)] shrink-0 snap-center overflow-hidden rounded-2xl border border-white/70 bg-slate-100 shadow-[0_10px_30px_rgba(7,45,127,0.10)] sm:w-[min(68vw,400px)] lg:w-[calc((100%_-_3rem)/3)] lg:max-w-[420px]";
               const image = (
                 <>
-                  <img
+                  <Image
                     src={imageUrl}
                     alt={projectTitle}
                     width="800"
@@ -180,7 +182,7 @@ const GalleryCarousel = () => {
                     decoding="async"
                     fetchPriority="low"
                     draggable={false}
-                    className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.025] motion-reduce:transition-none"
+                    className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.025] motion-reduce:transition-none" unoptimized
                   />
                   <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/45 via-transparent to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
                 </>

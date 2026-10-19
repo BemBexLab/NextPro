@@ -50,7 +50,7 @@ export default function AlexandriaPhilosophy() {
                 <div className="flex-1 h-px bg-black" />
               </div>
               <p className="max-w-4xl text-lg leading-relaxed tracking-tight text-[#222222] md:text-xl lg:text-2xl">
-                We don't promise guaranteed Google rankings because no legitimate SEO agency in Alexandria, VA can control Google's search results. Instead, we focus on the factors we can influence: website quality, technical SEO, content relevance, local optimization, search intent, and the overall user experience.
+                We don&apos;t promise guaranteed Google rankings because no legitimate SEO agency in Alexandria, VA can control Google&apos;s search results. Instead, we focus on the factors we can influence: website quality, technical SEO, content relevance, local optimization, search intent, and the overall user experience.
               </p>
             </section>
 

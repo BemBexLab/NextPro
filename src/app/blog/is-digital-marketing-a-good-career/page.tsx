@@ -1,3 +1,4 @@
+import Link from "next/link";
 ﻿import Image from "next/image";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -114,14 +115,14 @@ const Blog3 = () => {
           <h2 className="text-3xl font-bold text-slate-900 mb-6">What is Digital Marketing?</h2>
           <p className="mb-4 leading-relaxed">
             So,{" "}
-            <a className="text-blue-600 hover:underline" href="/service/digital-marketing/">
+            <Link className="text-blue-600 hover:underline" href="/service/digital-marketing/">
               <b>digital marketing</b>
-            </a>{" "}
+            </Link>{" "}
             basically means advertising your products or business online.
             Like, instead of putting up a billboard on the road or running
             an ad on TV, you use the internet to reach people. You can use
             your website, try to show up on Google search, send emails to
-            customers, or post on Instagram and Facebook. That's just
+            customers, or post on Instagram and Facebook. That&apos;s just
             marketing but on the internet.
             <br />
             <br />
@@ -135,7 +136,7 @@ const Blog3 = () => {
             <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Increase sales with measurable results</li>
           </ul>
           <p className="italic">
-            Now let's understand the major areas of digital marketing.
+            Now let&apos;s understand the major areas of digital marketing.
           </p>
         </section>
 
@@ -149,9 +150,9 @@ const Blog3 = () => {
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">SEO, or Search Engine Optimization</h3>
             <p className="mb-4 leading-relaxed">
-              <a className="text-blue-600 hover:underline" href="/service/seo-services/">
+              <Link className="text-blue-600 hover:underline" href="/service/seo-services/">
                 <b>Search engine optimization (SEO)</b>
-              </a>{" "}
+              </Link>{" "}
               is the process of making a website better so that it ranks higher on
               search engines like Google. <br />
               <br />
@@ -209,9 +210,9 @@ const Blog3 = () => {
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">Email Marketing</h3>
             <p className="mb-4 leading-relaxed">
-              <a className="text-blue-600 hover:underline" href="/service/email-marketing/">
+              <Link className="text-blue-600 hover:underline" href="/service/email-marketing/">
                 <b>Email marketing</b>
-              </a>{" "}
+              </Link>{" "}
               is one of the oldest and most effective ways to market online. It
               comprises communicating with subscribers through personalized email
               campaigns. <br />
@@ -288,10 +289,10 @@ const Blog3 = () => {
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">Affiliate Marketing</h3>
             <p className="mb-4 leading-relaxed">
-              <a className="text-blue-600 hover:underline" href="/service/affiliate-marketing-services/">
+              <Link className="text-blue-600 hover:underline" href="/service/affiliate-marketing-services/">
                 <b>Affiliate marketing</b>
-              </a>{" "}
-              allows individuals to earn commission by promoting other companies'
+              </Link>{" "}
+              allows individuals to earn commission by promoting other companies&apos;
               products. For example, bloggers promote products through programs
               like Amazon Associates. <br />
               <br />
@@ -390,9 +391,9 @@ const Blog3 = () => {
               <p className="mb-4 leading-relaxed">
                 Digital marketing is important because customers are online. Before
                 buying anything, most people search on Google or check{" "}
-                <a href="/service/social-media-marketing/" className="text-blue-600 hover:underline"><b>social media</b></a>
+                <Link href="/service/social-media-marketing/" className="text-blue-600 hover:underline"><b>social media</b></Link>
                 {" "}reviews. <br />
-                <br /> Here's why it matters:
+                <br /> Here&apos;s why it matters:
                 <br />
               </p>
               <ul className="list-disc list-inside space-y-1 mb-4">
@@ -715,7 +716,7 @@ const Blog3 = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <a 
+            <Link
               href="/blog/how-to-choose-digital-marketing-agency/" 
               className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 hover:border-blue-400 transition-all duration-300 hover:-translate-y-1"
             >
@@ -735,9 +736,9 @@ const Blog3 = () => {
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a 
+            <Link
               href="/blog/top-usa-digital-marketing-agencies-in-2026/" 
               className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 hover:border-purple-400 transition-all duration-300 hover:-translate-y-1"
             >
@@ -757,7 +758,7 @@ const Blog3 = () => {
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         </section>
 

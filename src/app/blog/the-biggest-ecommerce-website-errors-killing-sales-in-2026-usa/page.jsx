@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -57,7 +59,7 @@ const Blog20 = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-slate-900">
             The Biggest Ecommerce Website Errors Killing Sales in 2026 (USA)
           </h1>
-          <img
+          <Image
             src="/blogs/blog 20.webp"
             alt="Biggest Ecommerce Website Errors Killing Sales in 2026 USA"
             className="w-full h-auto object-cover rounded-xl shadow-2xl"
@@ -131,10 +133,10 @@ const Blog20 = () => {
                   Running an <b>ecommerce website</b> in 2026 is not as easy as it used to be. The market is crowded. Customers are smarter. And expectations are much higher.
                 </p>
                 <p>
-                  Many online stores look good on the surface, but still fail to convert visitors into buyers. Why? Because small mistakes in <a href="/service/ecommerce-web-design" className="text-blue-700 underline">ecommerce website design and development</a> quietly kill sales every day.
+                  Many online stores look good on the surface, but still fail to convert visitors into buyers. Why? Because small mistakes in <Link href="/service/ecommerce-web-design" className="text-blue-700 underline">ecommerce website design and development</Link> quietly kill sales every day.
                 </p>
                 <p>
-                  Let's go through the biggest errors and understand how you can fix them.
+                  Let&apos;s go through the biggest errors and understand how you can fix them.
                 </p>
               </div>
 
@@ -150,7 +152,7 @@ const Blog20 = () => {
                     Most people shop on their phones now. If your <b>ecommerce website</b> is slow on mobile, you are already losing customers.
                   </p>
                   <p>
-                    People don't wait anymore. If your site takes more than <b>2–3 seconds</b> to load, they leave.
+                    People don&apos;t wait anymore. If your site takes more than <b>2–3 seconds</b> to load, they leave.
                   </p>
                   <div className="bg-red-50 border-l-4 border-red-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900 flex items-center gap-2">
@@ -158,7 +160,7 @@ const Blog20 = () => {
                       A slow mobile-friendly ecommerce website creates frustration.
                     </p>
                     <p className="text-slate-700 mt-2">
-                      Buttons don't respond. Pages take time. Images load late. All this pushes users away.
+                      Buttons don&apos;t respond. Pages take time. Images load late. All this pushes users away.
                     </p>
                   </div>
                   <p className="font-semibold text-slate-900">To fix this:</p>
@@ -195,7 +197,7 @@ const Blog20 = () => {
                     Big brands use AI to suggest products. Smaller stores often ignore this.
                   </p>
                   <p>
-                    That's a mistake.
+                    That&apos;s a mistake.
                   </p>
                   <p>
                     When someone visits your <b>ecommerce clothing website</b> or any online store, they want help finding the right product.
@@ -203,10 +205,10 @@ const Blog20 = () => {
                   <p className="font-semibold text-slate-900">AI-based suggestions like:</p>
                   <div className="grid md:grid-cols-2 gap-4 my-6">
                     <div className="bg-indigo-50 p-4 rounded-xl border border-indigo-200">
-                      <p className="font-medium text-indigo-900">"You may also like"</p>
+                      <p className="font-medium text-indigo-900">&quot;You may also like&quot;</p>
                     </div>
                     <div className="bg-indigo-50 p-4 rounded-xl border border-indigo-200">
-                      <p className="font-medium text-indigo-900">"Frequently bought together"</p>
+                      <p className="font-medium text-indigo-900">&quot;Frequently bought together&quot;</p>
                     </div>
                   </div>
                   <p>
@@ -214,7 +216,7 @@ const Blog20 = () => {
                   </p>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
-                      If your ecommerce website builder or platform supports this, use it. It's one of the easiest ways to grow revenue.
+                      If your ecommerce website builder or platform supports this, use it. It&apos;s one of the easiest ways to grow revenue.
                     </p>
                   </div>
                 </div>
@@ -301,7 +303,7 @@ const Blog20 = () => {
                     Your product page is where the decision happens.
                   </p>
                   <p>
-                    If your <b>product page design</b> is weak, people won't buy.
+                    If your <b>product page design</b> is weak, people won&apos;t buy.
                   </p>
                   <p className="font-semibold text-slate-900">Common mistakes:</p>
                   <ul className="space-y-3">
@@ -319,7 +321,7 @@ const Blog20 = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <XCircle className="text-red-600 shrink-0 mt-1" size={20} />
-                      <span><b>No urgency</b> (like "Only 3 left")</span>
+                      <span><b>No urgency</b> (like &quot;Only 3 left&quot;)</span>
                     </li>
                   </ul>
                   <p className="font-semibold text-slate-900">A strong product page should:</p>
@@ -346,7 +348,7 @@ const Blog20 = () => {
                       Your product page should answer one question:
                     </p>
                     <p className="text-slate-700 mt-2 font-medium">
-                      "Why should I buy this right now?"
+                      &quot;Why should I buy this right now?&quot;
                     </p>
                   </div>
                 </div>
@@ -388,7 +390,7 @@ const Blog20 = () => {
                       If your ecommerce website development does not collect and use this data, you are missing a big opportunity.
                     </p>
                     <p className="text-slate-700 mt-2">
-                      Build your own audience. Don't depend only on platforms.
+                      Build your own audience. Don&apos;t depend only on platforms.
                     </p>
                   </div>
                 </div>
@@ -400,7 +402,7 @@ const Blog20 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Confusing Website Navigation That Drives Visitors Away
                 </h2>
-                <img
+                <Image
                   src="/blogs/blog 20-2.webp"
                   alt="Slow Mobile Experience Destroying Ecommerce Sales"
                   className="w-full h-auto object-cover rounded-xl mb-6"
@@ -450,7 +452,7 @@ const Blog20 = () => {
                   </ul>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
-                      Good UX/UI for ecommerce is not about fancy design. It's about making things easy.
+                      Good UX/UI for ecommerce is not about fancy design. It&apos;s about making things easy.
                     </p>
                   </div>
                 </div>
@@ -468,7 +470,7 @@ const Blog20 = () => {
                     When someone lands on your website, they should understand your value in seconds.
                   </p>
                   <p>
-                    If your homepage or landing page is confusing, people won't stay.
+                    If your homepage or landing page is confusing, people won&apos;t stay.
                   </p>
                   <p className="font-semibold text-slate-900">A strong value proposition tells:</p>
                   <ul className="space-y-3">
@@ -478,7 +480,7 @@ const Blog20 = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <Target className="text-indigo-600 shrink-0 mt-1" size={20} />
-                      <span><b>Why it's better</b></span>
+                      <span><b>Why it&apos;s better</b></span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Target className="text-indigo-600 shrink-0 mt-1" size={20} />
@@ -488,7 +490,7 @@ const Blog20 = () => {
                   <div className="bg-slate-100 rounded-xl p-6 my-6 border border-slate-200">
                     <p className="font-bold text-slate-900 mb-2">Example:</p>
                     <p className="text-slate-700">
-                      "Fast shipping across USA + premium quality products"
+                      &quot;Fast shipping across USA + premium quality products&quot;
                     </p>
                   </div>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
@@ -507,7 +509,7 @@ const Blog20 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    Even the best ecommerce website won't sell if people can't find it.
+                    Even the best ecommerce website won&apos;t sell if people can&apos;t find it.
                   </p>
                   <p>
                     Many businesses ignore <b>ecommerce SEO optimization</b>.
@@ -552,7 +554,7 @@ const Blog20 = () => {
                   </ul>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
-                      <a href="/service/seo-services/" className="text-blue-700 underline">SEO</a> brings free traffic. Without it, you depend only on ads.
+                      <Link href="/service/seo-services/" className="text-blue-700 underline">SEO</Link> brings free traffic. Without it, you depend only on ads.
                     </p>
                   </div>
                 </div>
@@ -623,10 +625,10 @@ const Blog20 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    If you don't track data, you are guessing.
+                    If you don&apos;t track data, you are guessing.
                   </p>
                   <p>
-                    Many ecommerce websites don't properly track:
+                    Many ecommerce websites don&apos;t properly track:
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
@@ -676,7 +678,7 @@ const Blog20 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    Building a successful ecommerce website in 2026 is not just about design. It's about performance, clarity, and user experience.
+                    Building a successful ecommerce website in 2026 is not just about design. It&apos;s about performance, clarity, and user experience.
                   </p>
                   <p className="font-semibold text-slate-900">A modern ecommerce website design company focuses on:</p>
                   <ul className="space-y-3">
@@ -777,7 +779,7 @@ const Blog20 = () => {
                       Is Shopify good for ecommerce?
                     </h3>
                     <p>
-                      Yes, it's one of the best platforms for setting up quickly.
+                      Yes, it&apos;s one of the best platforms for setting up quickly.
                     </p>
                   </div>
                 </div>

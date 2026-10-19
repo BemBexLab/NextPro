@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -59,7 +61,7 @@ const Blog21 = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-slate-900">
             Advanced Ecommerce Design & Development USA 2026 – Create High-Converting Online Stores
           </h1>
-          <img
+          <Image
             src="/blogs/blog 21.webp"
             alt="Advanced Ecommerce Design Development USA 2026"
             className="w-full h-auto object-cover rounded-xl shadow-2xl"
@@ -127,13 +129,13 @@ const Blog21 = () => {
               {/* Intro Section */}
               <div id="intro" className="space-y-6">
                 <p>
-                  Running an online store in 2026 is not just about selling products. It's about creating a smooth, fast, and enjoyable experience for your customers. People expect more now. If your site feels slow, confusing, or outdated, they will leave in seconds.
+                  Running an online store in 2026 is not just about selling products. It&apos;s about creating a smooth, fast, and enjoyable experience for your customers. People expect more now. If your site feels slow, confusing, or outdated, they will leave in seconds.
                 </p>
                 <p>
-                  That's why a strong <b>ecommerce website design</b> and smart <a href="/service/ecommerce-web-design" className="text-blue-700 underline">ecommerce website development</a> matter more than ever. At <b>Web Founders USA</b>, we focus on building stores that not only look good but also convert visitors into real buyers.
+                  That&apos;s why a strong <b>ecommerce website design</b> and smart <Link href="/service/ecommerce-web-design" className="text-blue-700 underline">ecommerce website development</Link> matter more than ever. At <b>Web Founders USA</b>, we focus on building stores that not only look good but also convert visitors into real buyers.
                 </p>
                 <p>
-                  Let's break everything down in a simple way.
+                  Let&apos;s break everything down in a simple way.
                 </p>
               </div>
 
@@ -149,7 +151,7 @@ const Blog21 = () => {
                     Online competition is growing every day. New stores are launching, and customers have endless options.
                   </p>
                   <p>
-                    If your <b>ecommerce website</b> is not easy to use, people won't stay. A clean layout, fast loading speed, and simple navigation can make a big difference.
+                    If your <b>ecommerce website</b> is not easy to use, people won&apos;t stay. A clean layout, fast loading speed, and simple navigation can make a big difference.
                   </p>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
@@ -301,7 +303,7 @@ const Blog21 = () => {
                   </ul>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
-                      Mobile-first design is no longer optional. It's a must.
+                      Mobile-first design is no longer optional. It&apos;s a must.
                     </p>
                   </div>
                 </div>
@@ -352,7 +354,7 @@ const Blog21 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Conversion-Focused Product Page Design Strategies
                 </h2>
-                <img
+                <Image
                   src="/blogs/blog 21-2.webp"
                   alt="Why Ecommerce Design Development Matters in 2026"
                   className="w-full h-auto object-cover rounded-xl mb-6"
@@ -384,12 +386,12 @@ const Blog21 = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <Package className="text-indigo-600 shrink-0 mt-1" size={20} />
-                      <span><b>Simple "Add to Cart" button</b></span>
+                      <span><b>Simple &quot;Add to Cart&quot; button</b></span>
                     </li>
                   </ul>
                   <div className="bg-slate-100 rounded-xl p-6 my-6 border border-slate-200">
                     <p className="font-bold text-slate-900">
-                      Keep it simple. Don't put too much on the page.
+                      Keep it simple. Don&apos;t put too much on the page.
                     </p>
                     <p className="text-slate-700 mt-2">
                       Good design helps users trust your product.
@@ -435,7 +437,7 @@ const Blog21 = () => {
                       Strong checkout optimization can quickly boost conversions.
                     </p>
                     <p className="text-slate-700 mt-2">
-                      Security is also important. If users don't feel safe, they won't buy.
+                      Security is also important. If users don&apos;t feel safe, they won&apos;t buy.
                     </p>
                   </div>
                 </div>
@@ -449,7 +451,7 @@ const Blog21 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    You don't want to rely only on ads.
+                    You don&apos;t want to rely only on ads.
                   </p>
                   <p>
                     Organic traffic is powerful.
@@ -482,7 +484,7 @@ const Blog21 = () => {
                   </ul>
                   <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl my-6">
                     <p className="font-semibold text-slate-900">
-                      A good <a href="/service/ecommerce-web-design" className="text-blue-700 underline">ecommerce website development</a> company always builds with SEO in mind.
+                      A good <Link href="/service/ecommerce-web-design" className="text-blue-700 underline">ecommerce website development</Link> company always builds with SEO in mind.
                     </p>
                   </div>
                 </div>

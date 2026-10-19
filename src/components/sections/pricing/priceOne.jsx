@@ -13,7 +13,7 @@ const PriceOne = () => {
                     <div className={`lg:sticky top-[var(--header-height)] transition-all duration-300`}>
                         <Button variant="secondary">Simple Pricing</Button>
                         <Title size={"5xl"} className="pt-6 max-w-full">Tailored Solutions for Every Business</Title>
-                        <p className='pt-[26px] text-muted-foreground'>Discover flexible and transparent pricing options designed to meet the diverse needs of businesses, whether you're a startup, small business, or enterprise.</p>
+                        <p className='pt-[26px] text-muted-foreground'>Discover flexible and transparent pricing options designed to meet the diverse needs of businesses, whether you&apos;re a startup, small business, or enterprise.</p>
 
                     </div>
                     <div>

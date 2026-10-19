@@ -19,7 +19,7 @@ export default function AuthorBox() {
         <p className="wp-post-author-description">
           Hi, I’m Penelope Scott. I have over 25 years of
           experience in digital marketing and have worked with well-known U.S.
-          companies, including McDonald's, Walgreens, American Airlines,
+          companies, including McDonald&apos;s, Walgreens, American Airlines,
           Healthline Media, and Entrepreneur. Over the years, I’ve gained
           experience in SEO, content marketing, brand growth, and other areas of
           digital marketing. I write these blogs based on what I’ve learned

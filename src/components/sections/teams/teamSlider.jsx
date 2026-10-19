@@ -55,7 +55,7 @@ const TeamSlider = () => {
                         modules={[Pagination, Navigation, Autoplay]}
                     >
                         {teamData.map(({ id, name, position, src }) => {
-                            return <SwiperSlide> <TeamCard key={id} id={id} name={name} position={position} src={src} bgColor={"bg-[rgba(0,31,63,0.35)]"} link={"/team-details"} /> </SwiperSlide>
+                            return <SwiperSlide key={id}> <TeamCard id={id} name={name} position={position} src={src} bgColor={"bg-[rgba(0,31,63,0.35)]"} link={"/team-details"} /> </SwiperSlide>
                         })}
                     </Swiper>
                     <div className='team-pagination flex items-center gap-2 absolute -bottom-6 left-1/2 -translate-x-1/2 z-10 [&_.swiper-pagination-bullet-active]:bg-primary'></div>

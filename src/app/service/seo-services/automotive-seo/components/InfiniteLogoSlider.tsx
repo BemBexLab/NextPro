@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 // 1. Update this array with your actual logo data
@@ -90,10 +91,10 @@ const InfiniteLogoSlider = () => {
               className="flex-shrink-0 flex items-center justify-center h-32 w-auto rounded-lg shadow-sm transition-all duration-300 ease-out px-8"
             >
               {/* Logo image: Increased max height to max-h-24, increased max width to max-w-64 */}
-              <img
+              <Image
                 src={logo.src}
                 alt={logo.name}
-                className="max-h-24 max-w-64 w-auto object-contain"
+                className="max-h-24 max-w-64 w-auto object-contain" width={256} height={96} unoptimized
               />
             </div>
           ))}

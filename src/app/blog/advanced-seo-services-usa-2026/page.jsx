@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { withEnUsHreflang } from "@/lib/metadata";
 import {
@@ -18,7 +20,7 @@ import {
   Smartphone,
   Target,
   Award,
-  Link,
+  Link as LinkIcon,
 } from "lucide-react";
 
 export const metadata = withEnUsHreflang({
@@ -47,7 +49,7 @@ const BlogSEO2026 = () => {
             Advanced SEO Services USA 2026 – Professional SEO Strategies for
             Long-Term Success
           </h1>
-          <img
+          <Image
             src="/blogs/blog 9.webp"
             alt="Advanced SEO Services USA 2026 Professional Strategies"
             className="w-full h-auto object-cover rounded-xl shadow-2xl"
@@ -172,12 +174,12 @@ const BlogSEO2026 = () => {
                 <div className="space-y-6">
                   <p>
                     Advanced{" "}
-                    <a
+                    <Link
                       href="/service/seo-services/"
                       className="text-blue-700 underline"
                     >
                       SEO services
-                    </a>{" "}
+                    </Link>{" "}
                     are becoming more important for businesses in the USA as
                     competition continues to grow in 2026. Search engines are
                     getting smarter every year, so basic SEO tactics are no
@@ -200,7 +202,7 @@ const BlogSEO2026 = () => {
                     services. Rather than just quick fixes, it builds
                     sustainable visibility that pays off over time. Plus, these
                     services are tailored to your unique business goals whether
-                    it's for e-commerce, law firms, or local SEO for small
+                    it&apos;s for e-commerce, law firms, or local SEO for small
                     businesses.
                   </p>
                 </div>
@@ -247,7 +249,7 @@ const BlogSEO2026 = () => {
                 </h2>
                 <div className="space-y-6">
                   <p>
-                    When it comes to boosting your website's performance,
+                    When it comes to boosting your website&apos;s performance,
                     technical SEO is a game changer. It goes beyond keywords and
                     focuses on the foundation of your site. Without this solid
                     base, all your content and SEO efforts can go to waste.
@@ -256,14 +258,14 @@ const BlogSEO2026 = () => {
                     Site speed is a key part of <b>technical SEO</b>. When a
                     website loads slowly, visitors often leave before they even
                     see the content. That also sends a bad signal to Google. An{" "}
-                    <b>SEO audit</b> helps identify what's causing the slowdown.
+                    <b>SEO audit</b> helps identify what&apos;s causing the slowdown.
                     Once those issues are fixed, your site can load faster and
                     perform better in search results.
                   </p>
                   <p>
                     Another key area is mobile optimization. More people search
-                    on their phones than desktops now. If your site doesn't work
-                    well on mobile, you're losing out. A good SEO consulting
+                    on their phones than desktops now. If your site doesn&apos;t work
+                    well on mobile, you&apos;re losing out. A good SEO consulting
                     team will make sure your site is mobile-friendly.
                   </p>
                   <p>
@@ -285,9 +287,9 @@ const BlogSEO2026 = () => {
                 <div className="space-y-6">
                   <p>
                     SEO that focuses on content goes beyond just optimizing
-                    keywords. It's about showing that you really know what
-                    you're doing in your field. When your website posts helpful
-                    information that answers people's questions, they will trust
+                    keywords. It&apos;s about showing that you really know what
+                    you&apos;re doing in your field. When your website posts helpful
+                    information that answers people&apos;s questions, they will trust
                     it more. Search engines start to view your site as an
                     authority, and visitors consider it as a trustworthy source
                     as well.
@@ -353,7 +355,7 @@ const BlogSEO2026 = () => {
                   Best SEO Services in USA for 2026 — Scalable SEO Optimization
                   &amp; Growth Solutions
                 </h2>
-                <img
+                <Image
                   src="/blogs/blog 6.webp"
                   alt="Best SEO Services in USA for 2026 Scalable SEO Optimization & Growth Solutions"
                   className="w-full h-auto object-cover"
@@ -379,7 +381,7 @@ const BlogSEO2026 = () => {
                     clear, and result-driven. Not confusing. Not technical for
                     no reason. Just a smart strategy built around your goals.
                   </p>
-                  <p>Let's break it down in a way that actually makes sense.</p>
+                  <p>Let&apos;s break it down in a way that actually makes sense.</p>
                 </div>
 
                 <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-5">
@@ -393,7 +395,7 @@ const BlogSEO2026 = () => {
                     The best <b>seo services</b> focus on building assets, not
                     shortcuts.
                   </p>
-                  <p>Here's what truly separates them:</p>
+                  <p>Here&apos;s what truly separates them:</p>
                 </div>
 
                 <div className="space-y-6">
@@ -473,7 +475,7 @@ const BlogSEO2026 = () => {
                   Core Elements of High-Performance SEO Optimization Services
                 </h2>
                 <p className="mb-8">
-                  Let's simplify what strong SEO really includes.
+                  Let&apos;s simplify what strong SEO really includes.
                 </p>
 
                 <div className="space-y-6">
@@ -792,7 +794,7 @@ const BlogSEO2026 = () => {
                       ))}
                     </div>
                     <p className="mt-4 italic text-slate-500">
-                      SEO is not "set and forget."
+                      SEO is not &quot;set and forget.&quot;
                     </p>
                     <p className="italic text-slate-500">
                       It is continuous improvement.
@@ -807,7 +809,7 @@ const BlogSEO2026 = () => {
                   <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
                   Ecommerce SEO Services That Increase Sales, Not Just Traffic
                 </h2>
-                <img
+                <Image
                   src="/blogs/blog 9-2.webp"
                   alt="Ecommerce SEO Services"
                   className="w-full h-auto object-cover rounded-xl mb-6"
@@ -1084,7 +1086,7 @@ const BlogSEO2026 = () => {
 
                 <div className="mt-8 space-y-6">
                   <p>
-                    It's not enough to just keep track of rankings to see how
+                    It&apos;s not enough to just keep track of rankings to see how
                     well SEO is working. To get real growth, you need to know
                     the Key Performance Indicators (KPIs) that will help your
                     business in the long run. First, organic traffic is a very
@@ -1093,20 +1095,20 @@ const BlogSEO2026 = () => {
                   </p>
                   <p>
                     Another important KPI is conversion rates. Traffic is great,
-                    but if it's not converting into leads or sales, there's a
-                    gap. Look at how many visitors take action—whether it's
+                    but if it&apos;s not converting into leads or sales, there&apos;s a
+                    gap. Look at how many visitors take action—whether it&apos;s
                     signing up for a newsletter or buying a product. This shows
                     your SEO strategy is attracting the right audience.
                   </p>
                   <p>
                     We move on to the bounce rate later on. A high bounce rate
-                    may indicate that users aren't getting what they're looking
+                    may indicate that users aren&apos;t getting what they&apos;re looking
                     for on your page. Creating useful and interesting
                     information that keeps people on your website longer is the
                     target.
                   </p>
                   <p>
-                    Lastly, keyword rankings matter too. But it's not just about
+                    Lastly, keyword rankings matter too. But it&apos;s not just about
                     top positions; you want to track how well your pages are
                     ranking for target keywords over time. This shows the real
                     impact of your SEO efforts.
@@ -1184,13 +1186,13 @@ const BlogSEO2026 = () => {
                     <p>
                       Content marketing makes useful, interesting content that
                       helps you rank higher in search engines and earn your
-                      audience's trust.
+                      audience&apos;s trust.
                     </p>
                   </div>
 
                   <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                     <h3 className="text-lg font-bold text-indigo-700 mb-3">
-                      6. What's the difference between local and national SEO?
+                      6. What&apos;s the difference between local and national SEO?
                     </h3>
                     <p>
                       Local SEO is all about getting customers in your area,
@@ -1215,7 +1217,7 @@ const BlogSEO2026 = () => {
               {/* ── More Relevant Posts ── */}
               <div className="my-12">
                 <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                  <Link className="text-indigo-600" size={20} />
+                  <LinkIcon className="text-indigo-600" size={20} />
                   More Relevant
                 </h2>
                 <div className="space-y-3">
