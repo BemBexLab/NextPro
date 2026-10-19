@@ -70,7 +70,7 @@ const page = () => {
         actions={[
           {
             label: "Get a Free SEO Consultation",
-            href: "#contact-form",
+            href: "/contact-us/",
             variant: "primary",
           },
         ]}

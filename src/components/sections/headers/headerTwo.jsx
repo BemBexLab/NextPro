@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoCall } from "react-icons/io5";
 
-import { locationNavigation } from "@/data/navigation";
 import { Button } from "@/components/ui/button";
 import StickyHeader from "@/components/ui/stickyHeader";
 
@@ -22,16 +21,26 @@ const navigationLinks = [
   { id: 5, path: "/portfolio", lable: "Our Work" },
   { id: 6, path: "/pricing", lable: "Pricing Plans" },
   { id: 7, path: "/blog", lable: "Blog" },
-  { id: 8, path: "/locations", lable: "Locations", children: locationNavigation },
+  { id: 8, path: "/locations", lable: "Locations" },
 ];
 
-const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
+const HeaderTwo = ({
+  haveShadow,
+  serviceLinks = [],
+  seoSubServices = [],
+  locationLinks = [],
+}) => {
   const pathname = usePathname();
   const [openDropdown, setOpenDropdown] = useState(null);
   const mobileNavigationLinks = navigationLinks.map((link) =>
     link.lable === "SEO Services"
       ? { ...link, children: seoSubServices }
-      : link,
+      : link.lable === "Locations"
+        ? { ...link, children: locationLinks }
+        : link,
+  );
+  const desktopNavigationLinks = navigationLinks.map((link) =>
+    link.lable === "Locations" ? { ...link, children: locationLinks } : link,
   );
 
   const normalizedPathname = pathname?.replace(/\/+$/, "") || "";
@@ -97,7 +106,7 @@ const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
 
                 <nav className="hidden min-w-0 xl:block">
                   <ul className="flex items-center gap-3 whitespace-nowrap text-sm 2xl:gap-7 2xl:text-base">
-                    {navigationLinks.map(({ id, lable, path, children = [] }) => {
+                    {desktopNavigationLinks.map(({ id, lable, path, children = [] }) => {
                       const active = isActive(path);
 
                       if (lable === "Service") {
@@ -254,7 +263,7 @@ const HeaderTwo = ({ haveShadow, serviceLinks = [], seoSubServices = [] }) => {
                                   : "pointer-events-none translate-y-2 opacity-0"
                               }`}
                             >
-                              <ul className="space-y-1 whitespace-normal p-3">
+                              <ul className="custom-scrollbar max-h-[min(70vh,520px)] space-y-1 overflow-y-auto whitespace-normal p-3">
                                 {children.map((location) => (
                                   <li key={location.id}>
                                     <Link
