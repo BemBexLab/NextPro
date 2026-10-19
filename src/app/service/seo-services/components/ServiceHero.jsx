@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
+import ServiceContactForm from "./ServiceContactForm";
 
 const actionStyles = {
   primary:
@@ -8,97 +9,6 @@ const actionStyles = {
   secondary:
     "inline-flex w-full items-center justify-center rounded-xl border border-white/40 bg-white/5 px-5 py-3.5 text-center font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent sm:w-auto sm:px-6",
 };
-
-function HeroField({ field }) {
-  const {
-    as = "input",
-    className = "",
-    colSpan = 2,
-    id,
-    label,
-    name,
-    placeholder,
-    required = false,
-    rows,
-    type = "text",
-    ...fieldProps
-  } = field;
-  const fieldId = id || name;
-  const widthClassName =
-    colSpan === 1 ? "col-span-1" : "col-span-1 sm:col-span-2";
-  const controlClassName = `min-w-0 rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3.5 text-base text-slate-900 outline-none transition duration-200 placeholder:text-slate-400 hover:border-slate-300 hover:bg-white focus:border-[#0b63b8] focus:bg-white focus:ring-4 focus:ring-[#0b63b8]/10 ${className}`;
-
-  return (
-    <div className={widthClassName}>
-      {label ? (
-        <label
-          htmlFor={fieldId}
-          className="mb-2 block text-sm font-semibold text-slate-700"
-        >
-          {label}
-        </label>
-      ) : null}
-
-      {as === "textarea" ? (
-        <textarea
-          {...fieldProps}
-          id={fieldId}
-          name={name}
-          rows={rows}
-          placeholder={placeholder}
-          required={required}
-          aria-label={label ? undefined : placeholder}
-          className={`min-h-32 w-full resize-y sm:min-h-36 ${controlClassName}`}
-        />
-      ) : (
-        <input
-          {...fieldProps}
-          id={fieldId}
-          name={name}
-          type={type}
-          placeholder={placeholder}
-          required={required}
-          aria-label={label ? undefined : placeholder}
-          className={`w-full ${controlClassName}`}
-        />
-      )}
-    </div>
-  );
-}
-
-export function ServiceContactForm({ form, className = "" }) {
-  if (!form) return null;
-
-  return (
-    <form
-      action={form.action}
-      method={form.method || "post"}
-      aria-label={form.ariaLabel || "Contact form"}
-      className={`relative mx-auto w-full max-w-[520px] rounded-3xl border border-white/80 bg-white p-5 shadow-[0_24px_70px_rgba(2,8,23,0.32)] sm:p-7 lg:max-w-[440px] ${className}`}
-    >
-      <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-4">
-        {(form.fields || []).map((field, index) => (
-          <HeroField
-            key={field.id || field.name || index}
-            field={field}
-          />
-        ))}
-      </div>
-
-      {form.submitLabel ? (
-        <button
-          type={form.action ? "submit" : "button"}
-          className={
-            form.submitClassName ||
-            "mt-6 w-full rounded-xl bg-[#0b63b8] px-6 py-3.5 font-semibold text-white shadow-md shadow-blue-900/15 transition duration-200 hover:-translate-y-0.5 hover:bg-[#075aa6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b63b8] focus-visible:ring-offset-2 sm:mt-7"
-          }
-        >
-          {form.submitLabel}
-        </button>
-      ) : null}
-    </form>
-  );
-}
 
 export default function ServiceHero({
   image,

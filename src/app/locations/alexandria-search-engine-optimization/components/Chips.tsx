@@ -20,7 +20,7 @@ const seoServices = [
   { label: "E-commerce SEO", href: "/service/seo-services/ecommerce-seo/" },
   { label: "Shopify SEO", href: "/service/seo-services/shopify-seo/" },
   { label: "WooCommerce SEO", href: "/service/seo-services/woocommerce-seo/" },
-  { label: "WordPress SEO", href: "/service/seo-services/wordpress-seo/" },
+  { label: "WordPress SEO", href: "/service/seo-services/" },
   { label: "Automotive SEO", href: "/service/seo-services/automotive-seo/" },
   { label: "Construction SEO", href: "/service/seo-services/construction-seo/" },
   { label: "Roofing SEO", href: "/service/seo-services/roofing-seo/" },

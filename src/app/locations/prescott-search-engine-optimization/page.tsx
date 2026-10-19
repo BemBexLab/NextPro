@@ -57,8 +57,6 @@ export default function PrescottSEOPage() {
           },
         ]}
         form={{
-          action: "/api/contact",
-          method: "post",
           ariaLabel: "SEO Contact Form",
           fields: [
             { id: "hero-name", name: "name", label: "Full Name", placeholder: "John Doe", required: true, colSpan: 1 },

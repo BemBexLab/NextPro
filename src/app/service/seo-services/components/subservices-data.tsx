@@ -2034,7 +2034,7 @@ export const services = [
                     </p>
                   </div>
                 ),
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
@@ -2063,7 +2063,7 @@ export const services = [
                     </p>
                   </div>
                 ),
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
@@ -2120,7 +2120,7 @@ export const services = [
                     </p>
                   </div>
                 ),
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
             ],
           },
@@ -3221,25 +3221,25 @@ export const services = [
                 // icon: FaSearch,
                 title: "Page titles",
                 description: <></>,
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Meta descriptions",
                 description: <></>,
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Internal links",
                 description: <></>,
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Mobile usability",
                 description: <></>,
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
             ],
             footnote:
@@ -4159,7 +4159,7 @@ export const services = [
                       { label: "B2B SEO Services", href: "/service/seo-services/b2b-seo/" },
                       { label: "Enterprise SEO Services", href: "/service/seo-services/enterprise-seo/" },
                       { label: "White Label SEO Services", href: "/service/seo-services/white-label-seo/" },
-                      { label: "WordPress SEO Services", href: "/service/seo-services/wordpress-seo/" },
+                      { label: "WordPress SEO Services", href: "/service/seo-services/" },
                       { label: "SEO Audit Services", href: "/service/seo-services/seo-audit/" },
                       { label: "Hotel SEO Services", href: "/service/seo-services/hotel-seo/" },
                       { label: "Magento SEO Services", href: "/service/seo-services/magento-seo/" },
@@ -4323,20 +4323,20 @@ export const services = [
                 title: "Local SEO Services",
                 description:
                   "Helps businesses reach customers in specific locations",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Authority & Link Building",
                 description: "Builds website authority and relevant links",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "SEO Consulting Services",
                 description:
                   "Provides expert guidance for SEO strategy and growth",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
             ],
             footnote: (
@@ -4682,7 +4682,7 @@ export const services = [
               tab_name: "WordPress SEO Services",
               heading: (
                 <>
-                  <a href="/service/seo-services/wordpress-seo/">
+                  <a href="/service/seo-services/">
                     WordPress SEO Services
                   </a>
                 </>
@@ -5431,67 +5431,67 @@ export const services = [
                 // icon: FaSearch,
                 title: "XML sitemap",
                 description: "",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Robots.txt",
                 description: "",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "URL structure",
                 description: "",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Broken links",
                 description: "",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Redirects",
                 description: "",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Internal linking",
                 description: "",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Duplicate content",
                 description: "",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Image optimization",
                 description: "",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Meta titles and descriptions",
                 description: "",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Heading structure",
                 description: "",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Website architecture",
                 description: "",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
             ],
             footnote: (
@@ -6796,7 +6796,7 @@ export const services = [
                 title: "Wordpress SEO Service",
                 description:
                   "Our WordPress SEO services are designed to help businesses and website owners optimize their WordPress websites for search engines, improve their online visibility, and drive organic traffic through effective SEO strategies.",
-                href: "/service/seo-services/wordpress-seo/ ",
+                href: "/service/seo-services/",
               },
             ],
           },
@@ -7556,7 +7556,7 @@ export const services = [
                 title: "Wordpress SEO Service",
                 description:
                   "Our WordPress SEO services are designed to help businesses and website owners optimize their WordPress websites for search engines, improve their online visibility, and drive organic traffic through effective SEO strategies.",
-                href: "/service/seo-services/wordpress-seo/ ",
+                href: "/service/seo-services/",
               },
             ],
           },
@@ -8543,63 +8543,63 @@ export const services = [
                 title: "XML Sitemap",
                 description:
                   "Reviewing sitemap configuration so search engines can efficiently discover important pages.",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Robots.txt",
                 description:
                   "Checking crawl directives and making sure important sections of your website are not accidentally restricted.",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "URL Structure",
                 description:
                   "Creating logical, descriptive URLs that support your website architecture and user navigation.",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Broken Links and Redirects",
                 description:
                   "Finding broken pages, incorrect redirects, and other navigation issues that can affect the user and search experience.",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Internal Linking",
                 description:
                   "Connecting relevant insurance services, locations, educational resources, and supporting pages to create a stronger website structure.",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Duplicate Content",
                 description:
                   "Identifying unnecessary duplication across insurance service, location, or product pages.",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Image Optimization",
                 description:
                   "Optimizing images for performance, accessibility, and relevance.",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Metadata",
                 description:
                   "Improving title tags and meta descriptions to better communicate page relevance in search results.",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
                 title: "Heading Structure",
                 description:
                   "Creating logical heading structures that make insurance content easier to understand.",
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
               {
                 // icon: FaSearch,
@@ -8614,7 +8614,7 @@ export const services = [
                     navigate.
                   </>
                 ),
-                // href: "/service/seo-services/wordpress-seo/ ",
+                // href: "/service/seo-services/",
               },
             ],
           },

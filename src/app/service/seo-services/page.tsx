@@ -96,7 +96,7 @@ const seoProcess = {
           </a>
           . If you're on CMS, we offer{" "}
           <a
-            href="/service/seo-services/wordpress-seo/"
+            href="/service/seo-services/"
             className="font-bold text-blue-800 hover:underline"
             rel="noopener noreferrer"
           >
@@ -226,7 +226,7 @@ const seoServiceFaqs = [
         </a>
         ,{" "}
         <a
-          href="/service/seo-services/wordpress-seo/"
+          href="/service/seo-services/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >
@@ -281,7 +281,7 @@ const seoServiceFaqs = [
       <>
         Surely! Each platform&apos;s SEO services are personalized for Shopify,{" "}
         <a
-          href="/service/seo-services/wordpress-seo/"
+          href="/service/seo-services/"
           className="text-blue-800 hover:underline"
           rel="noopener noreferrer"
         >

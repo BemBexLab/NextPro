@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const Section4 = () => {
   return (
     <section className="relative overflow-hidden bg-[#f7faff] px-5 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24">
@@ -70,13 +68,8 @@ const Section4 = () => {
               pages that match those search intents.
             </p>
             <p className="mt-6 text-base leading-8 text-slate-700 sm:text-lg">
-              Learn more about customer search behavior in{" "}
-              <Link
-                href="/blog/how-do-people-find-auto-repair-shops-on-google"
-                className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-900"
-              >
-                How Do People Find Auto Repair Shops on Google?
-              </Link>
+              Learn more about customer search behavior in our automotive SEO
+              strategy.
             </p>
           </div>
         </div>

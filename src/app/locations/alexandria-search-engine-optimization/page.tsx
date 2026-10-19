@@ -82,8 +82,6 @@ export default function AlexandriaSEOPage() {
           },
         ]}
         form={{
-          action: "/api/contact",
-          method: "post",
           ariaLabel: "SEO Contact Form",
           fields: [
             {

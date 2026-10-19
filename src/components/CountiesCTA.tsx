@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { ServiceContactForm } from "@/app/service/seo-services/components/ServiceHero";
+import ServiceContactForm from "@/app/service/seo-services/components/ServiceContactForm";
 
 type CountiesCTAForm = {
   action?: string;

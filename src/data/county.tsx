@@ -953,7 +953,7 @@ export const countyPosts: CountyPost[] = [
             </li>
             <li>
               <a
-                href="/service/seo-services/wordpress-seo/"
+                href="/service/seo-services/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 WordPress SEO Services
@@ -1628,7 +1628,7 @@ export const countyPosts: CountyPost[] = [
             </li>
             <li>
               <a
-                href="/service/seo-services/wordpress-seo/"
+                href="/service/seo-services/"
                 className="text-blue-700 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-500"
               >
                 WordPress SEO Services

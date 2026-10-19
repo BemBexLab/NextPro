@@ -4,6 +4,7 @@ import { FaArrowCircleRight } from "react-icons/fa";
 import type { Metadata } from "next";
 import { withEnUsHreflang } from "@/lib/metadata";
 import CountiesCTA from "@/components/CountiesCTA";
+import ServiceContactForm from "@/app/service/seo-services/components/ServiceContactForm";
 
 // --- Hero Section Components ---
 const actionStyles = {
@@ -12,59 +13,6 @@ const actionStyles = {
   secondary:
     "inline-flex w-full items-center justify-center rounded-lg border border-white/40 px-5 py-3 text-center font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent sm:w-auto sm:px-6",
 };
-
-function HeroField({ field }: { field: any }) {
-  const {
-    as = "input",
-    className = "",
-    colSpan = 2,
-    id,
-    label,
-    name,
-    placeholder,
-    required = false,
-    rows,
-    type = "text",
-    ...fieldProps
-  } = field;
-  const fieldId = id || name;
-  const widthClassName = colSpan === 1 ? "col-span-1" : "col-span-1 sm:col-span-2";
-  const controlClassName = `min-w-0 rounded-lg border border-gray-200 bg-white px-4 py-3 text-base text-gray-900 outline-none transition-colors placeholder:text-gray-400 focus:border-[#0b63b8] focus:ring-2 focus:ring-[#0b63b8]/20 ${className}`;
-
-  return (
-    <div className={widthClassName}>
-      {label ? (
-        <label htmlFor={fieldId} className="mb-2 block text-sm font-medium text-gray-700">
-          {label}
-        </label>
-      ) : null}
-
-      {as === "textarea" ? (
-        <textarea
-          {...fieldProps}
-          id={fieldId}
-          name={name}
-          rows={rows}
-          placeholder={placeholder}
-          required={required}
-          aria-label={label ? undefined : placeholder}
-          className={`min-h-32 w-full resize-y sm:min-h-36 ${controlClassName}`}
-        />
-      ) : (
-        <input
-          {...fieldProps}
-          id={fieldId}
-          name={name}
-          type={type}
-          placeholder={placeholder}
-          required={required}
-          aria-label={label ? undefined : placeholder}
-          className={`w-full ${controlClassName}`}
-        />
-      )}
-    </div>
-  );
-}
 
 function ServiceHero({
   image,
@@ -83,8 +31,6 @@ function ServiceHero({
   description: React.ReactNode;
   actions?: { label: string; href: string; variant?: "primary" | "secondary"; showArrow?: boolean; className?: string }[];
   form?: {
-    action: string;
-    method?: string;
     ariaLabel?: string;
     fields: any[];
     submitLabel: string;
@@ -165,27 +111,10 @@ function ServiceHero({
 
         {hasForm ? (
           <aside className="min-w-0 lg:col-span-5">
-            <form
-              action={form.action}
-              method={form.method || "post"}
-              aria-label={form.ariaLabel || "Contact form"}
-              className="mx-auto w-full max-w-[520px] rounded-2xl bg-[#F2F3F5] p-4 shadow-xl sm:p-6 lg:ml-auto lg:max-w-[420px]"
-            >
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
-                {(form.fields || []).map((field: any, index: number) => (
-                  <HeroField key={field.id || field.name || index} field={field} />
-                ))}
-              </div>
-
-              {form.submitLabel ? (
-                <button
-                  type={form.action ? "submit" : "button"}
-                  className="mt-6 w-full rounded-lg bg-[#0b63b8] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#075aa6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b63b8] focus-visible:ring-offset-2 sm:mt-8"
-                >
-                  {form.submitLabel}
-                </button>
-              ) : null}
-            </form>
+            <ServiceContactForm
+              form={form}
+              className="rounded-2xl bg-[#F2F3F5] p-4 shadow-xl sm:p-6 lg:ml-auto lg:max-w-[420px]"
+            />
           </aside>
         ) : null}
       </div>
@@ -377,8 +306,6 @@ export default function SEOGwinnettCountyPage() {
           },
         ]}
         form={{
-          action: "/api/contact",
-          method: "post",
           ariaLabel: "SEO Contact Form",
           fields: [
             { id: "hero-name", name: "name", label: "Full Name", placeholder: "John Doe", required: true, colSpan: 1 },

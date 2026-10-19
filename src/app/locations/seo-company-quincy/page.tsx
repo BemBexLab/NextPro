@@ -75,8 +75,6 @@ const page = () => {
           },
         ]}
         form={{
-          action: "/api/contact",
-          method: "post",
           ariaLabel: "SEO Contact Form",
           fields: [
             {
