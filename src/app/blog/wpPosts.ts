@@ -45,7 +45,7 @@ function buildEndpoint(params: Record<string, string>) {
 
 async function safeFetchJson<T>(
   url: string,
-  init?: RequestInit & { next?: { revalidate?: number } }
+  init?: RequestInit
 ): Promise<T | null> {
   try {
     const response = await fetch(url, init);
@@ -78,7 +78,7 @@ export const getAllWpPosts = cache(async (): Promise<WPPost[]> => {
       _embed: "",
     });
     const batch = await safeFetchJson<WPPost[]>(endpoint, {
-      next: { revalidate: 900 },
+      cache: "no-store",
     });
     if (!Array.isArray(batch) || batch.length === 0) {
       break;

@@ -10,6 +10,8 @@ import CardOne from '@/components/sections/blogs/cardOne'
 import { decodeHtmlEntities, formatDate, getAllWpPosts, getFeaturedImageFromPost } from './wpPosts'
 import { SITE_URL, toAbsoluteUrl, withEnUsHreflang } from "@/lib/metadata";
 
+export const dynamic = 'force-dynamic'
+
 const blogData = [
     {
         id: 1,

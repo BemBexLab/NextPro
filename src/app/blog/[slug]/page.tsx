@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import type { WPPost } from "../wpPosts";
-import { getAllWpPosts, getPostBySlug, getTextFromHtml } from "../wpPosts";
+import { getPostBySlug, getTextFromHtml } from "../wpPosts";
 import BlogSlugClient from "./BlogSlugClient";
 import { toAbsoluteUrl, withEnUsHreflang } from "@/lib/metadata";
 
@@ -11,7 +11,8 @@ type PageProps = {
   }>;
 };
 
-export const revalidate = 900;
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
 
 function getPlainText(html = "") {
   return getTextFromHtml(html)
@@ -57,14 +58,6 @@ function getClientPost(post: WPPost): WPPost {
         }
       : undefined,
   };
-}
-
-export async function generateStaticParams() {
-  const posts = await getAllWpPosts();
-
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
 }
 
 export async function generateMetadata({
