@@ -200,6 +200,15 @@ const blogData = [
         category: 'Ecommerce Website',
         url: '/blog/common-ecommerce-design-development-mistakes-in-2026-usa-edition'
     },
+    {
+        id: 23,
+        title: 'Affordable SEO Pricing, Packages & Cost! What Are You Waiting For?',
+        thumb: '/images/blog-images/Affordable SEO Pricing in Alexandria.png',
+        author: 'Web Founders USA',
+        date: 'Oct 21, 2026',
+        category: 'SEO',
+        url: '/blog/affordable-seo-pricing-packages-cost'
+    },
 ]
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
 
