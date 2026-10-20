@@ -1,15 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ArticleHero() {
   return (
     <header className="relative overflow-hidden bg-[#072d7f] text-white">
       <div aria-hidden="true" className="absolute inset-y-0 right-0 hidden w-[38%] border-l border-white/10 md:flex md:items-center md:justify-center">
-        <span className="select-none text-[9rem] font-black leading-none tracking-[0.08em] text-white/[0.08] lg:text-[14rem]">
-          SEO
-        </span>
-        {/* <div className="absolute inset-y-0 left-1/3 border-l border-white/10" />
-        <div className="absolute inset-y-0 left-2/3 border-l border-white/10" />
-        <div className="absolute bottom-0 left-0 h-1.5 w-2/3 bg-[#bf0b30]" /> */}
+        <Image
+          src="/images/blog-images/Affordable SEO Pricing in Alexandria.png"
+          alt=""
+          fill
+          sizes="(min-width: 1280px) 480px, 38vw"
+          className="object-cover object-[center_60%] mix-blend-screen"
+        />
       </div>
       <div className="relative mx-auto max-w-7xl px-6 pb-16 pt-12 md:px-10 md:pb-24 md:pt-20">
         <nav aria-label="Breadcrumb" className="mb-8 md:mb-10">
