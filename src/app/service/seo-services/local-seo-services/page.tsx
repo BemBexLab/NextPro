@@ -21,9 +21,9 @@ const Page = () => {
       <CustomerReviews />
       <ReviewGeneration />
       <OurLocalSEO />
-      <LocalSEOFAQs />
       <RecentBlogs />
       <ChipCarousel />
+      <LocalSEOFAQs />
     </main>
   );
 };
