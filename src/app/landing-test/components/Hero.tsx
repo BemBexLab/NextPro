@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ChangeEvent, type FormEvent } from "react";
+import { useEffect, useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import {
   ArrowRight,
   BriefcaseBusiness,
@@ -28,11 +28,85 @@ const inputClassName =
 const benefits = ["Professional Design", "Mobile Responsive", "SEO Optimized"];
 
 const metrics = [
-  { value: "5K+", label: "Projects Delivered", Icon: Rocket },
-  { value: "4.9K+", label: "Happy Clients", Icon: UsersRound },
-  { value: "95%", label: "Success Rate", Icon: ChartNoAxesColumnIncreasing },
-  { value: "15X", label: "Website Performance Growth", Icon: TrendingUp },
+  { value: 5, suffix: "K+", label: "Projects Delivered", Icon: Rocket },
+  { value: 4.9, suffix: "K+", label: "Happy Clients", Icon: UsersRound },
+  { value: 95, suffix: "%", label: "Success Rate", Icon: ChartNoAxesColumnIncreasing },
+  { value: 15, suffix: "X", label: "Website Performance Growth", Icon: TrendingUp },
 ];
+
+const AnimatedMetricValue = ({
+  value,
+  suffix,
+  delay,
+}: {
+  value: number;
+  suffix: string;
+  delay: number;
+}) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const metricRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const element = metricRef.current;
+    if (!element) return;
+
+    if (!("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.disconnect();
+      }
+    }, { threshold: 0.35 });
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCount(value);
+      return;
+    }
+
+    let frameId = 0;
+    let startTime: number | null = null;
+    const duration = 2600;
+
+    const animate = (timestamp: number) => {
+      if (startTime === null) startTime = timestamp + delay;
+      if (timestamp < startTime) {
+        frameId = window.requestAnimationFrame(animate);
+        return;
+      }
+
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const easedProgress =
+        progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+      setCount(value * easedProgress);
+
+      if (progress < 1) frameId = window.requestAnimationFrame(animate);
+    };
+
+    frameId = window.requestAnimationFrame(animate);
+    return () => window.cancelAnimationFrame(frameId);
+  }, [delay, isVisible, value]);
+
+  return (
+    <span ref={metricRef}>
+      {count.toFixed(Number.isInteger(value) ? 0 : 1)}
+      <span className="text-red-500">{suffix}</span>
+    </span>
+  );
+};
 
 const Hero = () => {
   const [form, setForm] = useState({
@@ -76,7 +150,7 @@ const Hero = () => {
     <section className="relative isolate overflow-hidden bg-[#f7f8fc] text-[#101820]">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-16 hidden h-[420px] w-[90%] bg-right bg-no-repeat md:block lg:h-[620px]"
+        className="pointer-events-none absolute right-0 top-16 hidden h-[624px] w-[min(980px,52vw)] bg-contain bg-right bg-no-repeat min-[1400px]:block"
         style={{
           backgroundImage:
             "url('/Assets/High%20res/234fdd58-c30f-4ded-afb4-7f5fbafc7923.png')",
@@ -84,14 +158,14 @@ const Hero = () => {
         }}
       />
 
-      <div className="relative mx-auto w-[90%] max-w-[1440px] pb-10 pt-16 sm:pb-12 sm:pt-20 lg:pb-14 lg:pt-16">
-        <div className="relative md:min-h-[500px] lg:min-h-[520px]">
-          <div className="relative z-10 max-w-[700px] pt-1 sm:pt-3 md:max-w-[54%] md:pt-5">
+      <div className="relative mx-auto w-[90%] max-w-[1440px] pb-4 pt-16 sm:pb-5 sm:pt-20 lg:pb-4 lg:pt-16">
+        <div className="relative grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_clamp(18rem,30vw,28rem)] lg:items-start lg:gap-10">
+          <div className="relative z-10 w-full max-w-[700px] pt-1 sm:pt-5">
             <div className="mb-5 inline-flex rounded-full bg-[#101820] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white sm:text-xs">
               Black Friday - Limited Time Offer
             </div>
 
-            <h1 className="max-w-[680px] text-[3rem] font-black uppercase leading-[0.96] tracking-[-0.045em] text-[#101820] sm:text-[3.6rem] md:text-[3.35rem] lg:text-[4rem] xl:text-[4.4rem]">
+            <h1 className="max-w-[680px] text-[clamp(2.25rem,10vw,3rem)] font-black uppercase leading-[0.96] tracking-[-0.045em] text-[#101820] sm:text-[3.6rem] md:text-[3.35rem] lg:text-[4rem] xl:text-[4.4rem]">
               Website Design &amp; Development{" "}
               <span className="text-[#d71920]">Deals</span>
             </h1>
@@ -104,17 +178,17 @@ const Hero = () => {
 
             <a
               href="#request-audit"
-              className="mt-6 inline-flex min-h-14 items-center justify-center gap-2.5 rounded-lg bg-[#e31824] px-7 text-base font-bold text-white shadow-[0_5px_14px_rgba(211,24,36,0.2)] transition-colors hover:bg-[#bd111b] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e31824] focus-visible:ring-offset-2 sm:min-h-16 sm:px-8 sm:text-lg"
+              className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-b from-[#E90C14] to-[#A60607] px-3 text-sm font-bold text-white shadow-[0_5px_14px_rgba(211,24,36,0.2)] transition duration-200 hover:brightness-95 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e31824] focus-visible:ring-offset-2 sm:min-h-14 sm:w-auto sm:gap-2.5 sm:px-8 sm:text-lg"
             >
               Claim My Black Friday Deal
               <ArrowRight aria-hidden="true" className="h-5 w-5" />
             </a>
 
-            <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-xs font-semibold text-slate-800 sm:gap-x-7 sm:text-sm">
+            <ul className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3 text-[13px] font-semibold leading-none text-slate-800 sm:gap-x-6 sm:text-sm">
               {benefits.map((benefit) => (
-                <li key={benefit} className="inline-flex items-center gap-1.5">
-                  <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#e31824] text-white">
-                    <Check aria-hidden="true" className="h-3 w-3" strokeWidth={3} />
+                <li key={benefit} className="inline-flex items-center gap-2 whitespace-nowrap">
+                  <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e31824] text-white shadow-sm ring-2 ring-red-100">
+                    <Check aria-hidden="true" className="h-4 w-4" strokeWidth={3} />
                   </span>
                   {benefit}
                 </li>
@@ -122,7 +196,7 @@ const Hero = () => {
             </ul>
           </div>
 
-          <div className="relative z-20 mx-auto mt-10 w-full max-w-[440px] md:absolute md:right-0 md:top-1 md:mt-0 md:w-[clamp(18rem,30vw,28rem)] md:max-w-none">
+          <div className="relative z-20 mx-auto mt-0 w-full max-w-[448px] lg:max-w-none">
             <form
               id="request-audit"
               onSubmit={handleSubmit}
@@ -131,7 +205,7 @@ const Hero = () => {
               <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#e31824] sm:text-xs">
                 Limited Time Offer
               </p>
-              <h2 className="mt-1.5 text-2xl font-black uppercase leading-tight tracking-[-0.035em] text-[#101820] sm:text-[1.9rem]">
+              <h2 className="mt-1.5 text-2xl font-black uppercase leading-tight tracking-[-0.035em] text-[#101820] sm:text-[1.9rem] lg:text-[1.65rem] xl:text-[1.9rem]">
                 Get a Free Quote
               </h2>
               <p className="mt-2 text-sm leading-[1.45] text-slate-600">
@@ -251,7 +325,7 @@ const Hero = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="mt-3 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-[#e31824] px-4 text-sm font-bold text-white transition-colors hover:bg-[#bd111b] disabled:cursor-wait disabled:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e31824] focus-visible:ring-offset-2 sm:min-h-14 sm:text-base"
+                className="mt-3 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-b from-[#E90C14] to-[#A60607] px-4 text-sm font-bold text-white transition hover:brightness-95 disabled:cursor-wait disabled:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e31824] focus-visible:ring-offset-2 sm:min-h-14 sm:text-base"
               >
                 {isSubmitting ? "Sending..." : "Get My Free Quote"}
                 {!isSubmitting && <ArrowRight aria-hidden="true" className="h-4 w-4" />}
@@ -265,8 +339,8 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative z-30 mx-auto mt-14 grid max-w-7xl grid-cols-2 gap-y-6 rounded-2xl border border-white bg-white px-5 py-5 shadow-[0_10px_32px_rgba(15,23,42,0.12)] sm:mt-16 sm:px-9 sm:py-7 md:mt-24 lg:mt-24 lg:grid-cols-4 lg:gap-0 lg:px-10">
-          {metrics.map(({ value, label, Icon }, index) => (
+        <div className="relative z-30 mx-auto mt-16 grid max-w-7xl grid-cols-2 gap-y-6 rounded-2xl border border-white bg-white px-5 py-5 sm:mt-16 sm:px-9 sm:py-7 lg:mt-16 lg:grid-cols-4 lg:gap-0 lg:px-10">
+          {metrics.map(({ value, suffix, label, Icon }, index) => (
             <div
               key={label}
               className={`flex items-center justify-center gap-3 px-2 sm:gap-4 ${
@@ -280,7 +354,7 @@ const Hero = () => {
               />
               <div className="min-w-0">
                 <p className="text-2xl font-black leading-none tracking-[-0.04em] text-[#101820] sm:text-3xl">
-                  {value}
+                  <AnimatedMetricValue value={value} suffix={suffix} delay={index * 220} />
                 </p>
                 <p className="mt-1.5 text-[10px] font-semibold leading-tight text-slate-600 sm:text-xs">
                   {label}
