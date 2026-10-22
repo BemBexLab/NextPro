@@ -261,25 +261,61 @@ const HeaderTwo = ({
                             </Link>
 
                             <div
-                              className={`absolute right-0 top-full z-30 w-64 rounded-xl bg-white shadow-2xl transition-all duration-200 ${
+                              className={`absolute right-0 top-full z-30 w-[min(560px,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-[0_24px_64px_rgba(15,23,42,0.18)] ring-1 ring-black/[0.03] transition-all duration-200 ${
                                 openDropdown === "locations"
                                   ? "pointer-events-auto translate-y-0 opacity-100"
                                   : "pointer-events-none translate-y-2 opacity-0"
                               }`}
                             >
-                              <ul className="custom-scrollbar max-h-[min(70vh,520px)] space-y-1 overflow-y-auto whitespace-normal p-3">
-                                {children.map((location) => (
-                                  <li key={location.id}>
-                                    <Link
-                                      href={location.path}
-                                      title={location.title}
-                                      className="block w-full rounded-lg px-4 py-2.5 text-left text-muted-foreground transition-colors hover:bg-gray-100 hover:text-primary-foreground"
-                                      onClick={() => setOpenDropdown(null)}
-                                    >
-                                      {location.title}
-                                    </Link>
-                                  </li>
-                                ))}
+                              <ul className="custom-scrollbar grid max-h-[min(65vh,440px)] grid-cols-2 gap-1.5 overflow-y-auto whitespace-normal p-3">
+                                {children.map((location) => {
+                                  const locationActive =
+                                    normalizedPathname ===
+                                    location.path.replace(/\/+$/, "");
+
+                                  return (
+                                    <li key={location.id}>
+                                      <Link
+                                        href={location.path}
+                                        title={location.title}
+                                        aria-current={locationActive ? "page" : undefined}
+                                        className={`group flex min-h-[54px] w-full items-center gap-3 rounded-xl border px-3 py-2.5 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#BF0B30] ${
+                                          locationActive
+                                            ? "border-[#BF0B30]/20 bg-[#BF0B30]/[0.06] text-[#9f0b28]"
+                                            : "border-transparent text-slate-700 hover:border-slate-200 hover:bg-slate-50 hover:text-slate-950"
+                                        }`}
+                                        onClick={() => setOpenDropdown(null)}
+                                      >
+                                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#BF0B30]/[0.07] text-[#BF0B30] transition-colors group-hover:bg-[#BF0B30]/[0.12]">
+                                          <svg
+                                            aria-hidden="true"
+                                            viewBox="0 0 20 20"
+                                            fill="none"
+                                            className="h-4 w-4"
+                                          >
+                                            <path
+                                              d="M16 8.3c0 4.2-6 9-6 9s-6-4.8-6-9a6 6 0 1 1 12 0Z"
+                                              stroke="currentColor"
+                                              strokeWidth="1.5"
+                                            />
+                                            <circle cx="10" cy="8" r="2" stroke="currentColor" strokeWidth="1.5" />
+                                          </svg>
+                                        </span>
+                                        <span className="min-w-0 flex-1 text-[13px] font-semibold leading-snug">
+                                          {location.title}
+                                        </span>
+                                        <svg
+                                          aria-hidden="true"
+                                          viewBox="0 0 20 20"
+                                          fill="none"
+                                          className="h-4 w-4 shrink-0 text-slate-300 transition duration-200 group-hover:translate-x-0.5 group-hover:text-[#BF0B30]"
+                                        >
+                                          <path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                      </Link>
+                                    </li>
+                                  );
+                                })}
                               </ul>
                             </div>
                           </li>

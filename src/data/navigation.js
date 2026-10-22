@@ -86,4 +86,9 @@ export const locationNavigation = [
     path: "/locations/prescott-search-engine-optimization/",
     title: "Prescott Search Engine Optimization",
   },
+  {
+    id: "fredericksburg-va",
+    path: "/locations/seo-company-fredericksburg-va/",
+    title: "SEO Company Fredericksburg, VA",
+  },
 ];
