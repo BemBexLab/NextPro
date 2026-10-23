@@ -8,7 +8,11 @@ import ImportanceLinks from "./importanceLinks";
 
 const FooterFour = () => {
   const pathname = usePathname();
-  const isHalloweenSale = pathname?.replace(/\/+$/, "") === "/halloween-sale";
+  const normalizedPathname = pathname?.replace(/\/+$/, "");
+  const isHalloweenSale = normalizedPathname === "/halloween-sale";
+  const isLandingTest = normalizedPathname === "/landing-test";
+
+  if (isLandingTest) return null;
 
   return (
     <footer

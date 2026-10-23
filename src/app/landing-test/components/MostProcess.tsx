@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { FileText, MessageCircleMore, Rocket, Megaphone } from 'lucide-react'
 
 const steps = [
@@ -23,13 +24,55 @@ const steps = [
   },
 ]
 
+const decorativeImages = [
+  {
+    src: '/Assets/High%20res/0dfaa056-ea22-4de3-97eb-261590f9d661.png',
+    width: 1365,
+    height: 1140,
+    className:
+      'left-[2%] top-8 w-20 -rotate-12 xl:block 2xl:left-[5%] 2xl:top-12 2xl:w-32',
+  },
+  {
+    src: '/Assets/High%20res/90962928-d583-46b1-99eb-89a9013feaa2.png',
+    width: 1000,
+    height: 1150,
+    className:
+      'right-[2%] top-[16%] w-16 rotate-12 xl:block 2xl:right-[5%] 2xl:top-[20%] 2xl:w-28',
+  },
+  {
+    src: '/Assets/High%20res/90962928-d583-46b1-99eb-89a9013feaa2.png',
+    width: 1000,
+    height: 1150,
+    className:
+      'bottom-8 left-[7%] hidden w-16 rotate-6 min-[1800px]:block 2xl:w-24',
+  },
+  {
+    src: '/Assets/High%20res/0dfaa056-ea22-4de3-97eb-261590f9d661.png',
+    width: 1365,
+    height: 1140,
+    className:
+      'right-[8%] bottom-10 hidden w-20 -rotate-6 min-[1800px]:block 2xl:w-28',
+  },
+]
+
 const MostProcess = () => {
   return (
     <section
       aria-labelledby="process-heading"
-      className="bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] px-4 py-12 text-[#101820] sm:px-6 sm:py-16 lg:px-10 lg:py-20"
+      className="relative isolate overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] px-4 py-12 text-[#101820] sm:px-6 sm:py-16 lg:px-10 lg:py-20"
     >
-      <div className="mx-auto max-w-7xl">
+      {decorativeImages.map(({ src, width, height, className }, index) => (
+        <Image
+          key={`${src}-${index}`}
+          src={src}
+          alt=""
+          aria-hidden="true"
+          width={width}
+          height={height}
+          className={`process-decoration-float process-decoration-float-${index + 1} pointer-events-none absolute z-0 hidden object-contain select-none ${className}`}
+        />
+      ))}
+      <div className="relative z-10 mx-auto max-w-7xl">
         <header className="text-center">
           <span className="inline-flex rounded-full bg-[#e90c14] px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-wide text-white sm:text-xs">
             Most Process

@@ -65,14 +65,14 @@ const PricingPackages = () => {
           alt=""
           width={150}
           height={150}
-          className="absolute -left-5 top-0 hidden h-24 w-28 -rotate-12 object-contain sm:left-0 sm:top-0 sm:h-28 sm:w-32 lg:left-5 lg:block lg:h-40 lg:w-44"
+          className="process-decoration-float process-decoration-float-1 absolute -left-5 top-0 hidden h-24 w-28 -rotate-12 object-contain sm:left-0 sm:top-0 sm:h-28 sm:w-32 lg:left-5 lg:block lg:h-40 lg:w-44"
         />
         <Image
           src={giftImage}
           alt=""
           width={120}
           height={120}
-          className="absolute -right-4 top-2 hidden h-14 w-16 rotate-[12deg] object-contain sm:right-0 sm:top-1 sm:h-16 sm:w-20 lg:right-6 lg:block lg:h-24 lg:w-28"
+          className="process-decoration-float process-decoration-float-2 absolute -right-4 top-2 hidden h-14 w-16 rotate-[12deg] object-contain sm:right-0 sm:top-1 sm:h-16 sm:w-20 lg:right-6 lg:block lg:h-24 lg:w-28"
         />
         <Image
           src={accentGiftImage}
@@ -80,7 +80,7 @@ const PricingPackages = () => {
           aria-hidden="true"
           width={96}
           height={96}
-          className="absolute left-0 top-[29%] hidden h-12 w-12 -rotate-[16deg] object-contain lg:block"
+          className="process-decoration-float process-decoration-float-3 absolute left-[calc(50%_-_728px)] top-[29%] hidden h-12 w-12 -rotate-[16deg] object-contain min-[1800px]:block"
         />
         <Image
           src={accentGiftImage}
@@ -88,7 +88,7 @@ const PricingPackages = () => {
           aria-hidden="true"
           width={128}
           height={128}
-          className="absolute right-0 top-[48%] hidden h-16 w-16 rotate-[18deg] object-contain lg:block"
+          className="process-decoration-float process-decoration-float-4 absolute right-[calc(50%_-_744px)] top-[48%] hidden h-16 w-16 rotate-[18deg] object-contain min-[1800px]:block"
         />
         <Image
           src={accentGiftImage}
@@ -96,7 +96,7 @@ const PricingPackages = () => {
           aria-hidden="true"
           width={80}
           height={80}
-          className="absolute left-[3%] top-[68%] hidden h-10 w-10 rotate-[8deg] object-contain lg:block"
+          className="process-decoration-float process-decoration-float-5 absolute left-[calc(50%_-_900px)] top-[68%] hidden h-10 w-10 rotate-[8deg] object-contain min-[1800px]:block"
         />
         <Image
           src={accentGiftImage}
@@ -104,7 +104,23 @@ const PricingPackages = () => {
           aria-hidden="true"
           width={112}
           height={112}
-          className="absolute right-[3%] top-[82%] hidden h-14 w-14 -rotate-[13deg] object-contain lg:block"
+          className="process-decoration-float process-decoration-float-6 absolute right-[calc(50%_-_880px)] top-[82%] hidden h-14 w-14 -rotate-[13deg] object-contain min-[1800px]:block"
+        />
+        <Image
+          src={accentGiftImage}
+          alt=""
+          aria-hidden="true"
+          width={80}
+          height={80}
+          className="process-decoration-float process-decoration-float-9 absolute left-[calc(50%_-_870px)] top-[56%] hidden h-10 w-10 -rotate-[18deg] object-contain min-[1800px]:block"
+        />
+        <Image
+          src={accentGiftImage}
+          alt=""
+          aria-hidden="true"
+          width={96}
+          height={96}
+          className="process-decoration-float process-decoration-float-10 absolute right-[calc(50%_-_900px)] top-[68%] hidden h-12 w-12 rotate-[11deg] object-contain min-[1800px]:block"
         />
       </div>
 
@@ -195,7 +211,7 @@ const PricingPackages = () => {
           </div>
           <a
             href="#request-audit"
-            className="inline-flex min-h-12 w-full shrink-0 items-center justify-center gap-2 rounded-lg bg-gradient-to-b from-[#E90C14] to-[#A60607] px-5 text-sm font-extrabold text-white transition hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#101820] sm:min-h-11 sm:w-auto sm:px-4 sm:text-xs lg:min-h-12 lg:px-5 lg:text-sm"
+            className="inline-flex min-h-12 w-full shrink-0 items-center justify-center gap-2 rounded-lg bg-gradient-to-b from-[#E90C14] to-[#A60607] px-5 text-sm font-bold text-white transition hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#101820] sm:min-h-11 sm:w-auto sm:px-4 sm:text-xs lg:min-h-12 lg:px-5 lg:text-sm"
           >
             Claim My Black Friday Deal
             <FaArrowRight aria-hidden="true" className="h-4 w-4 shrink-0" />

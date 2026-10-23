@@ -5,6 +5,8 @@ import MoreThanJustWebsite from './components/MoreThanJustWebsite'
 import MostProcess from './components/MostProcess'
 import PricingPackages from './components/PricingPackages'
 import RecentProjects from './components/RecentProjects'
+import FAQs from './components/FAQs'
+import Footer from './components/Footer'
 
 const page = () => {
   return (
@@ -12,10 +14,12 @@ const page = () => {
         <Header />
         <Hero />
         <OurServices />
-        <MoreThanJustWebsite />
         <PricingPackages />
         <MostProcess />
         <RecentProjects />
+        <MoreThanJustWebsite />
+        <FAQs />
+        <Footer />
     </section>
   )
 }

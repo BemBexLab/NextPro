@@ -67,6 +67,54 @@ html {
   will-change: transform;
 }
 
+.process-decoration-float {
+  animation: process-decoration-rise 6.8s cubic-bezier(0.45, 0, 0.55, 1) var(--float-delay, 0s) infinite;
+  will-change: transform;
+}
+
+.process-decoration-float-1 {
+  --float-delay: -1.2s;
+}
+
+.process-decoration-float-2 {
+  --float-delay: -3.4s;
+}
+
+.process-decoration-float-3 {
+  --float-delay: -2.1s;
+}
+
+.process-decoration-float-4 {
+  --float-delay: -4.6s;
+}
+
+.process-decoration-float-5 {
+  --float-delay: -0.8s;
+}
+
+.process-decoration-float-6 {
+  --float-delay: -5.2s;
+}
+
+.process-decoration-float-9 {
+  --float-delay: -0.4s;
+}
+
+.process-decoration-float-10 {
+  --float-delay: -3.1s;
+}
+
+@keyframes process-decoration-rise {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
 .hero-pumpkin-float-1 {
   --pumpkin-duration: 7.2s;
   --pumpkin-delay: -2.1s;
