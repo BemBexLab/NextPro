@@ -91,4 +91,9 @@ export const locationNavigation = [
     path: "/locations/seo-company-fredericksburg-va/",
     title: "SEO Company Fredericksburg, VA",
   },
+  {
+    id: "bergen-nj",
+    path: "/locations/seo-company-bergen-county-nj/",
+    title: "SEO Company Bergen County, NJ",
+  },
 ];
