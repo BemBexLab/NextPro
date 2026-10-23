@@ -209,6 +209,13 @@ const faqs = [
   },
 ];
 
+const results = [
+  { value: "#1", label: "Local SEO Focus" },
+  { value: "100+", label: "Local SEO Campaigns" },
+  { value: "50+", label: "Local Markets Served" },
+  { value: "3X", label: "Potential Lead Growth" },
+];
+
 export const metadata: Metadata = withEnUsHreflang({
   title: "Bergen County SEO Company | Web Founders USA",
   description:
@@ -246,22 +253,23 @@ export default function BergenCountySeoPage() {
                 Contact Us
               </Link>
             </div>
-
-            <div
-              aria-hidden="true"
-              className="relative mx-auto aspect-square w-full max-w-[27rem] overflow-hidden rounded-full bg-[#f4f7fb]"
-            >
-              <div className="absolute inset-[10%] rounded-full border border-[#0b63b8]/15" />
-              <div className="absolute inset-[24%] rounded-full border border-[#0b63b8]/20" />
-              <div className="absolute inset-[38%] rounded-full border border-[#0b63b8]/25" />
-              <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#c8102e] shadow-[0_0_0_12px_rgba(200,16,46,0.08)]" />
-              <div className="absolute left-[24%] top-[31%] h-2 w-2 rounded-full bg-[#0b63b8]" />
-              <div className="absolute right-[25%] top-[26%] h-2 w-2 rounded-full bg-[#0b63b8]" />
-              <div className="absolute bottom-[25%] left-[30%] h-2 w-2 rounded-full bg-[#0b63b8]" />
-              <div className="absolute bottom-[31%] right-[24%] h-2 w-2 rounded-full bg-[#0b63b8]" />
-              <div className="absolute left-0 top-1/2 h-px w-full bg-[#0b63b8]/10" />
-              <div className="absolute left-1/2 top-0 h-full w-px bg-[#0b63b8]/10" />
-            </div>
+            <dl className="grid grid-cols-2 border-y border-l-2 border-slate-200 border-l-[#c8102e] lg:ml-2">
+              {results.map((result, index) => (
+                <div
+                  key={result.label}
+                  className={`flex min-h-36 flex-col justify-center px-5 py-6 sm:min-h-40 sm:px-7 sm:py-8 ${
+                    index < 2 ? "border-b border-slate-200" : ""
+                  } ${index % 2 === 0 ? "border-r border-slate-200" : ""}`}
+                >
+                  <dt className="text-4xl font-bold leading-none tracking-[-0.045em] text-[#0b63b8] sm:text-5xl lg:text-[3.5rem]">
+                    {result.value}
+                  </dt>
+                  <dd className="mt-3 max-w-44 text-[0.7rem] font-semibold leading-5 tracking-[0.09em] text-slate-600 sm:text-xs sm:tracking-[0.1em]">
+                    {result.label}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </section>
