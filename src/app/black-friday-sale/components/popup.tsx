@@ -309,7 +309,6 @@ const Popup = () => {
                     name="service"
                     value={form.service}
                     onChange={updateField}
-                    required
                     className={inputClassName + " appearance-none pr-10 font-medium"}
                   >
                     <option value="Business Website Design">

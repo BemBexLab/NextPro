@@ -253,7 +253,6 @@ const Hero = () => {
                     value={form.email}
                     onChange={updateField}
                     className={inputClassName}
-                    required
                   />
                 </div>
 
@@ -292,7 +291,6 @@ const Hero = () => {
                     value={form.service}
                     onChange={updateField}
                     className={`${inputClassName} appearance-none pr-9 text-slate-500`}
-                    required
                   >
                     <option value="" disabled>
                       Select a Service

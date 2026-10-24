@@ -104,7 +104,7 @@ const PricingPackages = () => {
           >
             Exclusive <span className="text-[#e31824]">Black Friday Offers</span>
           </h2>
-          <p className="mx-auto mt-1.5 max-w-[560px] text-[9px] leading-relaxed text-slate-600 sm:text-[10px] lg:mt-3 lg:max-w-4xl lg:text-base">
+          <p className="mx-auto mt-1.5 max-w-[560px] text-[9px] leading-relaxed text-slate-800 sm:text-[10px] lg:mt-3 lg:max-w-4xl lg:text-base font-medium">
             Choose the right package for your business. All packages include modern design,
             responsive development and SEO basics.
           </p>
@@ -174,7 +174,7 @@ const PricingPackages = () => {
           />
           <div className="min-w-0 flex-1 text-center sm:text-left">
             <h3 className="text-base font-extrabold sm:text-base lg:text-lg">Black Friday pricing ends soon!</h3>
-            <p className="mt-1.5 text-xs leading-relaxed text-slate-300 sm:text-xs lg:text-sm">
+            <p className="mt-1.5 text-xs leading-relaxed text-white sm:text-xs lg:text-sm">
               Limited project slots available. Secure your spot now and take advantage of our exclusive offers.
             </p>
           </div>
