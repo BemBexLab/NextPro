@@ -131,11 +131,12 @@ const Hero = () => {
     try {
       await showSubmissionLoading();
       await submitSubmission({
+        source: "Landing Test Hero Quote Form",
         name: form.name,
         email: form.email,
         contactNumber: form.phone,
         service: form.service,
-        message: form.message,
+        message: form.message.trim() || "No additional project details provided.",
       });
       await showSubmissionSuccess();
       setForm({ name: "", email: "", phone: "", service: "", message: "" });
@@ -159,8 +160,8 @@ const Hero = () => {
       />
 
       <div className="relative mx-auto w-[90%] max-w-[1440px] pb-4 pt-16 sm:pb-5 sm:pt-20 lg:pb-4 lg:pt-16">
-        <div className="relative grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_clamp(18rem,30vw,28rem)] lg:items-start lg:gap-10">
-          <div className="relative z-10 w-full max-w-[700px] pt-1 sm:pt-5">
+        <div className="relative grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_clamp(18rem,30vw,28rem)] lg:items-center lg:gap-10">
+          <div className="relative z-10 w-full max-w-[700px] pt-1 sm:pt-5 lg:pt-0">
             <div className="mb-5 inline-flex rounded-full bg-[#101820] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white sm:text-xs">
               Black Friday - Limited Time Offer
             </div>
@@ -170,7 +171,7 @@ const Hero = () => {
               <span className="text-[#d71920]">Deals</span>
             </h1>
 
-            <p className="mt-5 max-w-[600px] text-base leading-[1.55] text-slate-700 sm:text-lg">
+            <p className="mt-5 max-w-[600px] font-medium text-base leading-[1.55] text-slate-800 sm:text-lg">
               Turn your ideas into a powerful, high-converting website. Get a
               modern design, faster performance, and more sales at an exclusive
               Black Friday price.
@@ -208,7 +209,7 @@ const Hero = () => {
               <h2 className="mt-1.5 text-2xl font-black uppercase leading-tight tracking-[-0.035em] text-[#101820] sm:text-[1.9rem] lg:text-[1.65rem] xl:text-[1.9rem]">
                 Get a Free Quote
               </h2>
-              <p className="mt-2 text-sm leading-[1.45] text-slate-600">
+              <p className="mt-2 text-sm font-medium leading-[1.45] text-slate-600">
                 Fill out the form and we&apos;ll get back to you with a custom
                 Black Friday offer.
               </p>
@@ -296,9 +297,10 @@ const Hero = () => {
                     <option value="" disabled>
                       Select a Service
                     </option>
-                    <option value="Website Design">Website Design</option>
-                    <option value="Website Development">Website Development</option>
-                    <option value="E-commerce Website">E-commerce Website</option>
+                    <option value="Business Website Design">Business Website Design</option>
+                    <option value="E-Commerce Websites">E-Commerce Websites</option>
+                    <option value="Website Redesign">Website Redesign</option>
+                    <option value={"Custom Web Development"}>Custom Web Development</option>
                     <option value="Other">Other</option>
                   </select>
                   <ChevronDown
@@ -324,6 +326,7 @@ const Hero = () => {
 
               <button
                 type="submit"
+                data-popup-trigger-ignore="true"
                 disabled={isSubmitting}
                 className="mt-3 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-b from-[#E90C14] to-[#A60607] px-4 text-sm font-bold text-white transition hover:brightness-95 disabled:cursor-wait disabled:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e31824] focus-visible:ring-offset-2 sm:min-h-14 sm:text-base"
               >
@@ -339,24 +342,24 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative z-30 mx-auto mt-16 grid max-w-7xl grid-cols-2 gap-y-6 rounded-2xl border border-white bg-white px-5 py-5 sm:mt-16 sm:px-9 sm:py-7 lg:mt-16 lg:grid-cols-4 lg:gap-0 lg:px-10">
+        <div className="relative z-30 mx-auto mt-10 grid w-full max-w-7xl grid-cols-1 gap-y-2 rounded-2xl border border-white bg-white px-4 py-4 shadow-[0_12px_36px_rgba(15,23,42,0.08)] min-[420px]:grid-cols-2 sm:mt-12 sm:px-7 sm:py-6 md:grid-cols-4 md:gap-y-0 lg:mt-16 lg:px-10">
           {metrics.map(({ value, suffix, label, Icon }, index) => (
             <div
               key={label}
-              className={`flex items-center justify-center gap-3 px-2 sm:gap-4 ${
-                index > 0 ? "lg:border-l lg:border-slate-100" : ""
+              className={`flex min-w-0 items-center justify-center gap-2.5 px-2 py-2 sm:gap-3 md:px-3 md:py-1 ${
+                index > 0 ? "md:border-l md:border-slate-100" : ""
               }`}
             >
               <Icon
                 aria-hidden="true"
-                className="h-10 w-10 shrink-0 text-[#101820] sm:h-12 sm:w-12"
+                className="h-8 w-8 shrink-0 text-[#101820] sm:h-10 sm:w-10 lg:h-12 lg:w-12"
                 strokeWidth={2.6}
               />
               <div className="min-w-0">
-                <p className="text-2xl font-black leading-none tracking-[-0.04em] text-[#101820] sm:text-3xl">
+                <div className="whitespace-nowrap text-xl font-black leading-none tracking-[-0.04em] text-[#101820] sm:text-2xl lg:text-3xl">
                   <AnimatedMetricValue value={value} suffix={suffix} delay={index * 220} />
-                </p>
-                <p className="mt-1.5 text-[10px] font-semibold leading-tight text-slate-600 sm:text-xs">
+                </div>
+                <p className="mt-1 text-[10px] font-semibold text-slate-600 sm:text-xs">
                   {label}
                 </p>
               </div>

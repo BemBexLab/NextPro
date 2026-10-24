@@ -83,7 +83,7 @@ const MostProcess = () => {
           >
             A Simple Process. Great Results.
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-slate-700 sm:text-base">
+          <p className="mt-2 text-sm font-medium leading-relaxed text-slate-800 sm:text-base">
             We make it easy to get your new website up and running.
           </p>
         </header>
@@ -106,7 +106,7 @@ const MostProcess = () => {
               <h3 className="mt-4 text-sm font-extrabold leading-snug min-[720px]:mt-5 min-[720px]:text-[13px] lg:text-base">
                 {title}
               </h3>
-              <p className="mt-1.5 max-w-[240px] text-[13px] leading-relaxed text-slate-600 min-[720px]:text-xs lg:mt-2 lg:text-sm">
+              <p className="mt-1.5 max-w-[240px] text-[13px] font-medium leading-relaxed text-slate-800 min-[720px]:text-xs lg:mt-2 lg:text-sm">
                 {description}
               </p>
             </li>

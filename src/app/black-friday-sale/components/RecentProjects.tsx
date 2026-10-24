@@ -64,7 +64,7 @@ const RecentProjects = async () => {
           >
             Websites We&apos;ve Built
           </h2>
-          <p className="mx-auto mt-2 max-w-3xl text-xs leading-relaxed text-slate-600 sm:text-sm lg:text-base">
+          <p className="mx-auto mt-2 max-w-3xl text-xs font-medium leading-relaxed text-slate-800 sm:text-sm lg:text-base">
             A look at some of our recent website designs and development projects.
           </p>
         </header>

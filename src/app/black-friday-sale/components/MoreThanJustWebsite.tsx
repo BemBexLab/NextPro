@@ -40,7 +40,7 @@ const MoreThanJustWebsite = () => {
         className="process-decoration-float process-decoration-float-2 pointer-events-none absolute right-[4%] top-[18%] z-0 hidden w-20 rotate-[14deg] object-contain select-none min-[1800px]:block 2xl:right-[5%] 2xl:top-[62%] 2xl:w-32"
       />
 
-      <div className="mx-auto grid max-w-[1360px] items-center gap-9 sm:grid-cols-[0.9fr_1.1fr] sm:gap-8 lg:gap-16">
+      <div className="mx-auto grid max-w-[1360px] grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-12 xl:gap-16">
         <div className="relative z-10 max-w-[540px]">
           <span className="inline-flex rounded-full bg-[#e90c14] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.08em] text-white shadow-sm sm:text-xs">
             Why Choose Us
@@ -48,17 +48,15 @@ const MoreThanJustWebsite = () => {
 
           <h2
             id="more-than-website-heading"
-            className="mt-4 text-[clamp(1.35rem,3.2vw,3.2rem)] font-black uppercase leading-[0.99] tracking-[-0.045em]"
+            className="mt-4 text-[clamp(1rem,3.1vw,2.25rem)] font-black uppercase leading-[1.05] tracking-[-0.045em]"
           >
-            More Than Just
-            <br />
-            A Website
-            <span className="mt-1.5 block text-[#e31824]">
+            <span className="block whitespace-nowrap">More Than Just A Website</span>
+            <span className="mt-1.5 block whitespace-nowrap text-[#e31824]">
               A Partner in Your Success
             </span>
           </h2>
 
-          <p className="mt-4 max-w-[500px] text-sm leading-[1.6] text-slate-600 sm:mt-5 sm:text-base">
+          <p className="mt-4 max-w-[500px] text-sm leading-[1.6] font-medium text-slate-800 sm:mt-5 sm:text-base">
             We don&apos;t just build websites, we create digital experiences that
             help your business grow. Here&apos;s why businesses choose
             WebFoundersUSA:
@@ -84,9 +82,9 @@ const MoreThanJustWebsite = () => {
           </a>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[760px] pb-4 pr-3 sm:pb-6 sm:pr-5 md:ml-auto">
+        <div className="relative mx-auto w-full max-w-[760px] pb-4 pr-3 sm:pb-6 sm:pr-5 lg:ml-auto">
           <div aria-hidden="true" className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-slate-200/60 via-transparent to-red-100/70 blur-xl sm:-inset-5" />
-          <div className="relative aspect-[1.5/1] min-h-[260px] overflow-hidden rounded-[1.5rem] bg-slate-200 shadow-[0_20px_55px_rgba(15,23,42,0.16)] sm:aspect-[1.62/1] sm:min-h-[280px] sm:rounded-[1.75rem]">
+          <div className="relative aspect-[1.35/1] min-h-[200px] overflow-hidden rounded-[1.25rem] bg-slate-200 shadow-[0_20px_55px_rgba(15,23,42,0.16)] sm:aspect-[1.62/1] sm:min-h-[260px] sm:rounded-[1.75rem]">
             <Image
               src="/images/resource/approach-image4-1.webp"
               alt="Business team collaborating around a laptop"
@@ -114,7 +112,7 @@ const MoreThanJustWebsite = () => {
             />
           </div>
 
-          <div className="absolute -bottom-1 left-1 z-10 flex min-h-[64px] max-w-[250px] items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-[0_12px_32px_rgba(15,23,42,0.16)] sm:bottom-0 sm:left-5 sm:min-h-[82px] sm:max-w-[320px] sm:gap-4 sm:px-5">
+          <div className="absolute -bottom-1 left-1 z-10 flex min-h-[64px] max-w-[205px] items-center gap-3 rounded-2xl border border-slate-100 bg-white px-3.5 py-3 shadow-[0_12px_32px_rgba(15,23,42,0.16)] sm:bottom-0 sm:left-5 sm:min-h-[82px] sm:max-w-[320px] sm:gap-4 sm:px-5">
             <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-red-50 text-[#e31824] sm:h-12 sm:w-12">
               <ChartNoAxesColumnIncreasing aria-hidden="true" className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={3} />
             </span>

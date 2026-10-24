@@ -68,7 +68,7 @@ const OurServices = () => {
   return (
     <section
       aria-labelledby="our-services-heading"
-      className="relative isolate overflow-hidden bg-[linear-gradient(to_bottom,#f7f8fc_0%,rgba(247,248,252,0.6)_25%,rgba(255,255,255,0)_75%),radial-gradient(ellipse_at_top,_#f6f8fb_0%,_#ffffff_66%)] px-4 py-10 text-[#101820] sm:px-8 sm:py-14 lg:px-12 lg:py-16 xl:px-14"
+      className="relative isolate overflow-hidden bg-[linear-gradient(to_bottom,#f7f8fc_0%,rgba(247,248,252,0.96)_14%,rgba(250,250,252,0.82)_38%,rgba(255,255,255,0.5)_68%,#ffffff_100%)] px-4 py-10 text-[#101820] sm:px-8 sm:py-14 lg:px-12 lg:py-16 xl:px-14"
     >
       <div
         aria-hidden="true"
@@ -102,7 +102,7 @@ const OurServices = () => {
               <span className="text-[#e31824]">Grow Your Business</span>
             </span>
           </h2>
-          <p className="mx-auto mt-4 max-w-[740px] text-sm leading-relaxed text-slate-600 sm:mt-5 sm:text-base lg:text-lg">
+          <p className="mx-auto mt-4 max-w-[740px] font-medium text-sm leading-relaxed text-slate-800 sm:mt-5 sm:text-base lg:text-lg">
             From new websites to redesigns and online stores, we create modern,
             high-performing websites that help you attract more customers and
             increase sales.
@@ -137,11 +137,12 @@ const OurServices = () => {
               <h3 className="mt-4 text-base font-extrabold leading-tight text-[#101820] sm:text-lg lg:text-xl">
                 {title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
+              <p className="mt-3 text-sm leading-relaxed font-medium text-slate-800 sm:text-base">
                 {description}
               </p>
               <a
                 href="#request-audit"
+                data-no-hover-animation="true"
                 className="mt-auto inline-flex min-h-11 items-center gap-2 whitespace-nowrap pt-3 text-sm font-bold text-[#e31824] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e31824] focus-visible:ring-offset-2"
               >
                 Learn More

@@ -38,8 +38,10 @@ export default function ClientEnhancements() {
     typeof window !== "undefined" &&
     window.matchMedia("(pointer: coarse)").matches;
   const normalizedPathname = pathname?.replace(/\/+$/, "") || "/";
-  const shouldShowContactPopup =
-    normalizedPathname !== "/halloween-sale";
+  const shouldShowContactPopup = ![
+    "/halloween-sale",
+    "/black-friday-sale",
+  ].includes(normalizedPathname);
 
   return (
     <>

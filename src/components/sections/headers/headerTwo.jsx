@@ -45,7 +45,7 @@ const HeaderTwo = ({
 
   const normalizedPathname = pathname?.replace(/\/+$/, "") || "";
 
-  if (normalizedPathname === "/landing-test") {
+  if (normalizedPathname === "/black-friday-sale") {
     return null;
   }
 

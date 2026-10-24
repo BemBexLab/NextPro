@@ -1,54 +1,23 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { FaArrowRight } from "react-icons/fa6";
+import { pricingData } from "@/lib/fackData/pricingData3";
 
-const packages = [
-  {
-    name: "Startup",
-    discount: "30%",
-    price: "$249",
-    oldPrice: "$349",
-    description: "Perfect for small businesses and startups.",
-    features: [
-      "Custom Website Design",
-      "Up to 5 Pages",
-      "Mobile Responsive",
-      "Basic On-Page SEO",
-      "Contact Form Integration",
-    ],
-  },
-  {
-    name: "Professional",
-    discount: "35%",
-    price: "$599",
-    oldPrice: "$899",
-    description: "Ideal for growing businesses that need more features.",
-    features: [
-      "Custom Website Design",
-      "Up to 10 Pages",
-      "Advanced SEO Setup",
-      "Lead Generation Features",
-      "Speed Optimization",
-      "Training & Support",
-    ],
-    popular: true,
-  },
-  {
-    name: "Ecommerce",
-    discount: "40%",
-    price: "$899",
-    oldPrice: "$1,499",
-    description: "Complete online store solution to sell and scale.",
-    features: [
-      "Custom WooCommerce Design",
-      "Product Pages Setup",
-      "Secure Payment Integration",
-      "Inventory & Shipping Setup",
-      "Advanced SEO Setup",
-      "Training & Support",
-    ],
-  },
+const descriptions = [
+  "Perfect for small businesses and startups.",
+  "Ideal for growing businesses that need more features.",
+  "Complete online store solution to sell and scale.",
 ];
+
+const packages = pricingData.map((plan, index) => ({
+  name: plan.plan_name,
+  discount: `${Math.round((1 - Number(plan.price) / Number(plan.old_price)) * 100)}%`,
+  price: `$${plan.price}`,
+  oldPrice: `$${plan.old_price}`,
+  description: descriptions[index],
+  features: plan.services,
+  popular: index === 1,
+}));
 
 const giftImage = "/Assets/High%20res/db407df9-4411-428d-91dd-3e3bd9d88bf6.png";
 const accentGiftImage = "/Assets/High%20res/ad1b2b5b-63d6-4f3b-a22a-28c45457cb72.png";
@@ -172,7 +141,7 @@ const PricingPackages = () => {
                 <p className="mt-1.5 mb-2 max-w-full text-[11px] leading-snug text-slate-800 lg:mt-2 lg:text-sm lg:leading-relaxed">
                   {plan.description}
                 </p>
-                <ul className="mb-2 space-y-1.5 lg:space-y-2.5">
+                <ul className="mb-2 h-[clamp(180px,30vh,280px)] space-y-1.5 overflow-y-auto overscroll-contain pr-2 [scrollbar-color:#e31824_#f1f5f9] [scrollbar-width:thin] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#e31824] lg:space-y-2.5">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-1.5 text-[10px] leading-tight font-medium lg:gap-2 lg:text-[13px] lg:leading-snug">
                       <span className="mt-px inline-flex h-3 w-3 shrink-0 items-center justify-center rounded-full bg-[#e31824] text-white lg:h-4 lg:w-4">

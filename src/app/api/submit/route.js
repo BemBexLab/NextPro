@@ -18,7 +18,7 @@ const escapeHtml = (value) =>
 export async function POST(req) {
   const body = await req.json();
   const name = body.name?.trim();
-  const email = body.email?.trim();
+  const email = body.email?.trim() || null;
   const website = body.website?.trim() || null;
   const contactNumber = body.contactNumber?.trim() || body.phone?.trim() || null;
   const message = body.message?.trim();
@@ -27,7 +27,7 @@ export async function POST(req) {
     ? body.service.filter(Boolean).join(", ")
     : body.service?.trim();
 
-  if (!name || !email || !service || !message) {
+  if (!name || !service || !message) {
     return NextResponse.json(
       { error: "Please fill all required fields." },
       { status: 400 }
@@ -78,12 +78,12 @@ export async function POST(req) {
     await transporter.sendMail({
       from: `"Website Contact" <${smtpUser}>`,
       to: emailTo,
-      replyTo: email,
+      ...(email ? { replyTo: email } : {}),
       subject: `New Contact Form Submission: ${source}`,
       text: [
         `Source: ${source}`,
         `Name: ${name}`,
-        `Email: ${email}`,
+        `Email: ${email || "Not provided"}`,
         `Website: ${website || "N/A"}`,
         `Phone: ${contactNumber || "N/A"}`,
         `Service: ${service}`,
@@ -93,7 +93,7 @@ export async function POST(req) {
         <h2>New Contact Form Submission</h2>
         <p><strong>Source:</strong> ${escapeHtml(source)}</p>
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email || "Not provided")}</p>
         <p><strong>Website:</strong> ${escapeHtml(website || "N/A")}</p>
         <p><strong>Phone:</strong> ${escapeHtml(contactNumber || "N/A")}</p>
         <p><strong>Service:</strong> ${escapeHtml(service)}</p>

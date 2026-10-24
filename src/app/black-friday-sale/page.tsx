@@ -7,10 +7,11 @@ import PricingPackages from './components/PricingPackages'
 import RecentProjects from './components/RecentProjects'
 import FAQs from './components/FAQs'
 import Footer from './components/Footer'
+import Popup from './components/popup'
 
 const page = () => {
   return (
-    <section>
+    <section className="black-friday-sale">
         <Header />
         <Hero />
         <OurServices />
@@ -20,6 +21,7 @@ const page = () => {
         <MoreThanJustWebsite />
         <FAQs />
         <Footer />
+        <Popup />
     </section>
   )
 }

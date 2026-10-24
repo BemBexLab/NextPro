@@ -10,7 +10,7 @@ const FooterFour = () => {
   const pathname = usePathname();
   const normalizedPathname = pathname?.replace(/\/+$/, "");
   const isHalloweenSale = normalizedPathname === "/halloween-sale";
-  const isLandingTest = normalizedPathname === "/landing-test";
+  const isLandingTest = normalizedPathname === "/black-friday-sale";
 
   if (isLandingTest) return null;
 

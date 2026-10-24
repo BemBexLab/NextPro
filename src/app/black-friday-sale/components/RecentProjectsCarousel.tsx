@@ -17,11 +17,29 @@ const RecentProjectsCarousel = ({ projects }: { projects: RecentProject[] }) => 
     const track = trackRef.current;
     if (!track) return;
 
-    const firstCard = track.querySelector<HTMLElement>("[data-project-card]");
-    const gap = Number.parseFloat(getComputedStyle(track).columnGap) || 16;
-    const distance = firstCard ? firstCard.offsetWidth + gap : track.clientWidth;
+    const cards = Array.from(
+      track.querySelectorAll<HTMLElement>("[data-project-card]"),
+    );
+    if (cards.length === 0) return;
 
-    track.scrollBy({ left: direction * distance, behavior: "smooth" });
+    const trackLeft = track.getBoundingClientRect().left;
+    const cardPositions = cards.map(
+      (card) => card.getBoundingClientRect().left - trackLeft + track.scrollLeft,
+    );
+    const currentIndex = cardPositions.reduce(
+      (nearestIndex, position, index) =>
+        Math.abs(position - track.scrollLeft) <
+        Math.abs(cardPositions[nearestIndex] - track.scrollLeft)
+          ? index
+          : nearestIndex,
+      0,
+    );
+    const nextIndex = Math.max(
+      0,
+      Math.min(cards.length - 1, currentIndex + direction),
+    );
+
+    track.scrollTo({ left: cardPositions[nextIndex], behavior: "smooth" });
   };
 
   if (projects.length === 0) {
@@ -37,6 +55,7 @@ const RecentProjectsCarousel = ({ projects }: { projects: RecentProject[] }) => 
       <button
         type="button"
         aria-label="Show previous projects"
+        data-popup-trigger-ignore="true"
         onClick={() => move(-1)}
         className="absolute -left-3 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-slate-100 bg-white text-slate-700 transition hover:text-[#e31824] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e31824] sm:inline-flex lg:-left-6 lg:h-12 lg:w-12"
       >
@@ -73,6 +92,7 @@ const RecentProjectsCarousel = ({ projects }: { projects: RecentProject[] }) => 
       <button
         type="button"
         aria-label="Show more projects"
+        data-popup-trigger-ignore="true"
         onClick={() => move(1)}
         className="absolute -right-3 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-slate-100 bg-white text-slate-700 transition hover:text-[#e31824] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e31824] sm:inline-flex lg:-right-6 lg:h-12 lg:w-12"
       >
