@@ -6,7 +6,7 @@ export const pricingData = [
     plan_name: "Startup",
     category: "Website Design",
     price: "249",
-    old_price: "622.50",
+    old_price: "623",
     services: [
       "2 Stock Photos",
       "3 Page Website",
@@ -30,7 +30,7 @@ export const pricingData = [
     plan_name: "PROFESSIONAL",
     category: "Website Design",
     price: "699",
-    old_price: "1747.50",
+    old_price: "1748",
     services: [
       "6 Unique Pages Website",
       "5 Stock images",
@@ -55,7 +55,7 @@ export const pricingData = [
     plan_name: "Elite",
     category: "Website Design",
     price: "999",
-    old_price: "2497.50",
+    old_price: "2498",
     services: [
       "Upto 10 Unique Pages Website",
       "Conceptual and Dynamic Website",
