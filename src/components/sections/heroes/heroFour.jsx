@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Calendar, ArrowRight } from "lucide-react";
 
 export default function HeroFour() {
   return (
@@ -8,18 +9,19 @@ export default function HeroFour() {
       <div className="overflow-x-hidden overflow-y-hidden rounded-[30px] border-2 border-[rgba(0,31,63,0.05)] bg-[rgba(226,231,255,0.4)] pl-4 pr-4 dark:bg-[#1c232a] lg:pl-[52px] lg:pr-0">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="pb-12 pt-12 lg:pb-[120px] lg:pt-[132px]">
-            <h1 className="text-6xl font-bold text-[#001F3F]">
-              Web Founders USA - No.1 Digital Marketing Agency in USA
+            <h1 className="text-5xl font-bold text-[#001F3F]">
+              Complete 360°<span className="text-[#0033CC]"> Digital Growth Agency</span> for Web Design, SEO & Performance Marketing - <span className="text-[#0033CC]">Web Founders USA</span>
             </h1>
             <p className="max-w-[689px] pt-7.5 font-semibold">
-              Brands lose customers every day to slow websites, weak visibility, and
-              outdated design. Web Founders USA, a trusted Website Design and
-              Development Company and full-service top Digital Marketing Agencies in
-              USA, rebuilds that momentum with powerful solutions.
+              Web Founders USA provides complete multi-channel digital marketing services designed to maximize visibility and revenue for modern businesses. From search engine optimization (SEO) and paid search ads to high-converting website design and content marketing, we handle your entire digital pipeline under one roof. Claim your custom digital growth blueprint within 24 hours.
             </p>
             <div className="flex flex-col gap-[32px] pb-[22px] pt-[55px] sm:flex-row sm:items-center">
-              <Button asChild>
-                <Link href="/contact-us"> Contact Us </Link>
+              <Button asChild className="group">
+                <Link href="/contact-us">
+                  <Calendar className="h-5 w-5 shrink-0" />
+                  <span>Book a 1-on-1 Strategy Session With Our Seniors</span>
+                  <ArrowRight className="h-5 w-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>
