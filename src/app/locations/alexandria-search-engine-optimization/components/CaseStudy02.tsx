@@ -80,13 +80,13 @@ export default function CaseStudy02() {
                   Client Website
                 </span>
                 <Link
-                  href="https://www.fairmounttire.com"
+                  href="https://www.alexandriaautocare.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-black transition-colors hover:text-[#0033CC] hover:underline"
                 >
                   <span className="font-sans text-base font-medium normal-case tracking-normal">
-                    fairmounttire.com
+                    alexandriaautocare.com
                   </span>
                 </Link>
               </div>

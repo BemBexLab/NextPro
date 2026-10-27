@@ -85,13 +85,13 @@ export default function CaseStudy01() {
                   Client Website
                 </span>
                 <Link
-                  href="https://www.sunlightmedia.org"
+                  href="https://lentheplumber.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-black transition-colors hover:text-[#0033CC] hover:underline"
                 >
                   <span className="font-sans text-base font-medium normal-case tracking-normal">
-                    sunlightmedia.org
+                    lentheplumber.com
                   </span>
                 </Link>
               </div>
@@ -106,7 +106,7 @@ export default function CaseStudy01() {
               <div className="border-b border-black pb-4">
                 <span className="mb-2 block text-[#666666]">Location</span>
                 <span className="font-sans text-base font-medium normal-case tracking-normal text-black">
-                  USA, Los Angeles
+                  6598B Fleet Dr, Alexandria, VA 22310, United States
                 </span>
               </div>
 
