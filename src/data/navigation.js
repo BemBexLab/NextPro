@@ -74,7 +74,7 @@ export const locationNavigation = [
   {
     id: "county-4",
     path: "/locations/maryland-seo-company/",
-    title: "Maryland SEO Company",
+    title: "Maryland, MD SEO Company",
   },
   {
     id: "county-5",
