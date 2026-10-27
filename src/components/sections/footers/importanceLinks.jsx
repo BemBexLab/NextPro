@@ -49,16 +49,16 @@ const ImportanceLinks = ({
                 { id: 4, path: "/blog/", label: "Blogs" },
             ]
         },
-        {
-            id: 5,
-            title: "SEO links",
-            links: [
-                { id: 1, path: "/service/seo-services/local-seo-services/", label: "Local SEO Services" },
-                { id: 2, path: "/service/seo-services/b2b-seo/", label: "B2B SEO Services" },
-                { id: 3, path: "/service/seo-services/enterprise-seo/", label: "Enterprise SEO Services" },
-                { id: 4, path: "/service/seo-services/woocommerce-seo/", label: "WooCommerce SEO Services" },
-            ]
-        },
+        // {
+        //     id: 5,
+        //     title: "SEO links",
+        //     links: [
+        //         { id: 1, path: "/service/seo-services/local-seo-services/", label: "Local SEO Services" },
+        //         { id: 2, path: "/service/seo-services/b2b-seo/", label: "B2B SEO Services" },
+        //         { id: 3, path: "/service/seo-services/enterprise-seo/", label: "Enterprise SEO Services" },
+        //         { id: 4, path: "/service/seo-services/woocommerce-seo/", label: "WooCommerce SEO Services" },
+        //     ]
+        // },
     ]
     const visibleLinks = importanceLinks.filter(
         ({ title }) => !excludeGroups.includes(title),
