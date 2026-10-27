@@ -101,7 +101,7 @@ export default function CaseStudy02() {
               <div className="border-b border-black pb-4">
                 <span className="mb-2 block text-[#666666]">Location</span>
                 <span className="font-sans text-base font-medium normal-case tracking-normal text-black">
-                  USA, California
+                  725 N Henry St, Alexandria, VA 22314, United States
                 </span>
               </div>
 
