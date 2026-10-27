@@ -556,7 +556,7 @@ export const countyPosts: CountyPost[] = [
   {
     id: 2,
     slug: "alpharetta-seo-services",
-    metaTitle: "SEO Company Alpharetta | Web Founders USA",
+    metaTitle: "SEO Company Alpharetta, GA | Web Founders USA",
     metaDescription: "Grow your Alpharetta business with expert SEO services. Improve local rankings, attract qualified traffic, and generate more leads in Canton and beyond.",
     title: "Alpharetta SEO Services",
     description: (
