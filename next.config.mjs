@@ -32,6 +32,15 @@ const nextConfig = {
       },
     ],
   },
+    async redirects() {
+    return [
+      {
+        source: '/blog/how-local-seo-helps-small-businesses-in-alexandria-va',
+        destination: '/locations/alexandria-search-engine-optimization',
+        permanent: true, // 308 permanent redirect
+      },
+    ];
+  },
 };
 
 export default nextConfig;
