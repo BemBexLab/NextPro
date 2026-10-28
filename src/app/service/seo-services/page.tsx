@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getServiceById } from "@/data/services";
+import {
+  countyPosts,
+  getCountyPostDescriptionText,
+} from "@/data/county";
 import { withEnUsHreflang } from "@/lib/metadata";
 
 import ContactFormTwo from "@/components/sections/ContactFormTwo";
@@ -19,6 +23,142 @@ import { getServiceById as getSeoServiceById } from "./components/subservices";
 
 const SERVICE_ID = "seo-services";
 const seoServiceDetails = getSeoServiceById(SERVICE_ID);
+
+const nonDynamicSeoServices = [
+  {
+    id: "automotive-seo",
+    title: "Automotive SEO Services",
+    href: "/service/seo-services/automotive-seo/",
+    descriptionHtml:
+      "Specialized SEO strategies for dealerships, repair shops, auto parts businesses, and other automotive brands.",
+  },
+  {
+    id: "local-seo-services",
+    title: "Local SEO Services",
+    href: "/service/seo-services/local-seo-services/",
+    descriptionHtml:
+      "Local search strategies that improve Google visibility, attract nearby customers, and grow local businesses.",
+  },
+];
+
+const seoRelatedServices = [
+  ...(seoServiceDetails?.sub_categories || []).map((subService) => ({
+    id: subService.id,
+    title: subService.title,
+    href: `/service/${seoServiceDetails.id}/${subService.id}/`,
+    descriptionHtml: String(
+      subService.desc || subService.introParagraphs?.[0] || "",
+    ).replace(/\n/g, "<br/>"),
+    icon:
+      ("icon" in subService ? subService.icon : undefined) ||
+      ("icon" in seoServiceDetails ? seoServiceDetails.icon : undefined),
+    image: {
+      src: subService.hero?.image || seoServiceDetails.hero?.image,
+      alt: subService.title,
+    },
+  })),
+  ...nonDynamicSeoServices.map((service) => ({
+    ...service,
+    icon: "icon" in seoServiceDetails ? seoServiceDetails.icon : undefined,
+    image: {
+      src: seoServiceDetails?.hero?.image,
+      alt: service.title,
+    },
+  })),
+];
+
+const nonDynamicLocationServices = [
+  {
+    id: "alexandria-search-engine-optimization",
+    title: "Alexandria Search Engine Optimization",
+    href: "/locations/alexandria-search-engine-optimization/",
+    descriptionHtml:
+      "Search engine optimization services for businesses that want to grow their visibility in Alexandria.",
+  },
+  {
+    id: "prescott-search-engine-optimization",
+    title: "Prescott Search Engine Optimization Services",
+    href: "/locations/prescott-search-engine-optimization/",
+    descriptionHtml:
+      "Local SEO strategies that help Prescott businesses attract more qualified customers from search.",
+  },
+  {
+    id: "seo-company-bergen-county-nj",
+    title: "Bergen County SEO Company",
+    href: "/locations/seo-company-bergen-county-nj/",
+    descriptionHtml:
+      "SEO solutions for Bergen County businesses looking to improve rankings, traffic, and leads.",
+  },
+  {
+    id: "seo-company-fredericksburg-va",
+    title: "SEO Company Fredericksburg, VA",
+    href: "/locations/seo-company-fredericksburg-va/",
+    descriptionHtml:
+      "Custom SEO strategies for Fredericksburg businesses and local service companies.",
+  },
+  {
+    id: "seo-company-quincy-ma",
+    title: "SEO Company Quincy, MA",
+    href: "/locations/seo-company-quincy-ma/",
+    descriptionHtml:
+      "Local search optimization for Quincy businesses that want stronger online visibility.",
+  },
+  {
+    id: "seo-gwinnet",
+    title: "Gwinnett County SEO Company",
+    href: "/locations/seo-gwinnet/",
+    descriptionHtml:
+      "SEO services that help Gwinnett County businesses reach more local customers.",
+  },
+  {
+    id: "web-design-elk-river",
+    title: "Website Design in Elk River",
+    href: "/locations/web-design-elk-river/",
+    descriptionHtml:
+      "Website design and digital growth services for businesses in Elk River.",
+  },
+  {
+    id: "web-design-gainesville-ga",
+    title: "Web Design Gainesville GA",
+    href: "/locations/web-design-gainesville-ga/",
+    descriptionHtml:
+      "Web design services built to help Gainesville businesses attract and convert customers.",
+  },
+];
+
+const locationRelatedServices = {
+  title: "All over USA Served SEO Services",
+  description: "Find SEO and web design services for specific locations and markets.",
+  exploreLabel: "Explore location",
+  initialVisibleCount: 12,
+  loadMoreCount: 8,
+  loadMoreLabel: "Load More",
+  items: [
+    ...countyPosts.map((countyPost) => ({
+      id: countyPost.slug,
+      title: countyPost.cardTitle || countyPost.title,
+      href: `/locations/${countyPost.slug}/`,
+      descriptionHtml:
+        countyPost.metaDescription ||
+        getCountyPostDescriptionText(countyPost.description),
+      icon:
+        ("icon" in seoServiceDetails ? seoServiceDetails.icon : undefined),
+      image: {
+        src: "/service-testing/Local-SEO-Agency-LocalMighty.webp",
+        alt: countyPost.cardTitle || countyPost.title,
+      },
+    })),
+    ...nonDynamicLocationServices.map((location) => ({
+      ...location,
+      icon:
+        ("icon" in seoServiceDetails ? seoServiceDetails.icon : undefined),
+      image: {
+        src: "/service-testing/Local-SEO-Agency-LocalMighty.webp",
+        alt: location.title,
+      },
+    })),
+  ],
+};
 
 const seoProcess = {
   title: "Our SEO Framework: Built for Consistent, Trackable Results",
@@ -517,25 +657,9 @@ export default function SeoServicesPage() {
             initialVisibleCount: 12,
             loadMoreCount: 8,
             loadMoreLabel: "Load More",
-            items:
-              seoServiceDetails?.sub_categories?.map((subService) => ({
-                id: subService.id,
-                title: subService.title,
-                href: `/service/${seoServiceDetails.id}/${subService.id}`,
-                descriptionHtml: String(
-                  subService.desc || subService.introParagraphs?.[0] || "",
-                ).replace(/\n/g, "<br/>"),
-                icon:
-                  ("icon" in subService ? subService.icon : undefined) ||
-                  ("icon" in seoServiceDetails
-                    ? seoServiceDetails.icon
-                    : undefined),
-                image: {
-                  src: subService.hero?.image || seoServiceDetails.hero?.image,
-                  alt: subService.title,
-                },
-              })) || [],
+            items: seoRelatedServices,
           }}
+          subrelatedServices={locationRelatedServices}
           results={{
             title: "Real SEO Results Not Just Rankings",
             description: (
